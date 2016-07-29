@@ -368,6 +368,7 @@ $(document).ready(function () {
 	/*Socials*/
 	/*Like*/
 	(function(){
+		/*facebook*/
 		(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
@@ -375,8 +376,13 @@ $(document).ready(function () {
 				js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
+
+		/*vkontakt*/
+		<!-- Put this script tag to the <head> of your page -->
+		(function(){
+			VK.init({apiId: 5567897, onlyWidgets: true});
+			VK.Widgets.Like("vk_like", {redesign: 1, type: "mini", height: 20});
+		})();
 	})();
-
-
 
 });
