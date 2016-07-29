@@ -162,7 +162,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function () {
-	/*ScrollToAnchor*/
+	/*ScrollToAnchor && mobile menu*/
 	(function(){
 		/*ScrollToAnchor class*/
 		function ScrollToAnchor(options) {
@@ -200,8 +200,55 @@ $(document).ready(function () {
 			);
 		};
 
-		var pageScroll = new ScrollToAnchor({});
-		pageScroll.init();
+		/*page scroll*/
+		(function(){
+			var pageScroll = new ScrollToAnchor({});
+			pageScroll.init();
+		})();
+
+		/*mobile menu*/
+		(function(){
+			var mmenuScroll = new ScrollToAnchor({
+				listenedBlock: document.getElementById('#m-menu'),
+				translation:  document.querySelector('#m-menu-btn-wrapper').offsetHeight
+			});
+
+			setUpMmenu();
+
+			function setUpMmenu() {
+				var $menu = $('nav#m-menu');
+				var $openMenuBtn = $('#hamburger');
+
+				$menu.mmenu({
+					"extensions": ["theme-dark"]
+				});
+
+				var selector = false;
+
+				$menu.find( 'li > a' ).on(
+					'click',
+					function( e )
+					{
+						selector = this.hash;
+					}
+				);
+
+				var api = $menu.data( 'mmenu' );
+				api.bind( 'closed',
+					function() {
+						if (selector) {
+							mmenuScroll.smoothScroll(selector, mmenuScroll._translation);
+							selector = false;
+						}
+					}
+
+				);
+				$openMenuBtn.click(function () {
+					api.open();
+				});
+
+			}
+		})();
 	})();
 
 	/*ScrollUp button*/
