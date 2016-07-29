@@ -350,6 +350,8 @@ $(document).ready(function () {
 				searchControlProvider: 'yandex#search'
 			});
 
+			myMap.behaviors.disable('scrollZoom');
+
 			for (var key in placemarks) {
 				myMap.geoObjects.add(new ymaps.Placemark(placemarks[key].coords, {
 					hintContent: placemarks[key].hintContent
