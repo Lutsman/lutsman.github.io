@@ -58,45 +58,45 @@ $(document).ready(function() {
 
 
 	$('.owl-carousel').owlCarousel({
-	    loop:true,
-	    margin:-1,
-	    responsiveClass:true,
-	    responsive:{
-	        0:{
-	            items:1,
-	            nav:true
-	        },
-	        600:{
-	            items:3,
-	            nav:false
-	        },
-	        1000:{
-	            items:6,
-	            nav:true,
-	            loop:false
-	        }
-	    }
+		loop:true,
+		margin:-1,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:6,
+				nav:true,
+				loop:false
+			}
+		}
 	});
 
 	$('.owl-carousel2').owlCarousel({
-	    loop:true,
-	    margin:0,
-	    responsiveClass:true,
-	    responsive:{
-	        0:{
-	            items:1,
-	            nav:true
-	        },
-	        600:{
-	            items:3,
-	            nav:false
-	        },
-	        1000:{
-	            items:4,
-	            nav:true,
-	            loop:false
-	        }
-	    }
+		loop:true,
+		margin:0,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:4,
+				nav:true,
+				loop:false
+			}
+		}
 	});
 
 	$('.toogle a.toogle-title').click(function() {
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
 	$('.select').fancySelect();
 
-	//$('.pgwSlideshow').pgwSlideshow();
+	$('.pgwSlideshow').pgwSlideshow();
 
 	$( ".tabs a" ).first().addClass( "current" );
     $('.tab').eq(0).show();
@@ -176,8 +176,6 @@ $(document).ready(function () {
 			var elem = e.target;
 			var anchorWithHash = elem.closest('a[href^="#"]');
 
-			//console.log(anchorWithHash.hash.length);
-
 			if (!anchorWithHash || !anchorWithHash.hash.length) return;
 
 			e.preventDefault();
@@ -237,7 +235,10 @@ $(document).ready(function () {
 
 	/*input type = number*/
 	(function(){
-		$('input[type = "number"]').stepper({
+		var $inputNumber =$('input[type = "number"]');
+		if (!$inputNumber.length) return;
+
+		$inputNumber.stepper({
 			labels: {
 				up: "+",
 				down: "&minus;"
@@ -247,6 +248,8 @@ $(document).ready(function () {
 
 	/*Yandex map*/
 	(function(){
+		if (!document.getElementById('map')) return;
+
 		var placemarks = {
 			0: {
 				coords: [55.7385,37.4821],
