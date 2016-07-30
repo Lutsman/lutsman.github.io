@@ -378,6 +378,7 @@ $(document).ready(function () {
 			}(document, 'script', 'facebook-jssdk'));
 
 		/*vkontakt*/
+		<!-- Put this script tag to the <head> of your page -->
 		(function(){
 			VK.init({apiId: 5567897, onlyWidgets: true});
 			VK.Widgets.Like("vk_like", {redesign: 1, type: "mini", height: 20});
