@@ -87,9 +87,13 @@ $(document).ready(function() {
 				items:1,
 				nav:true
 			},
-			600:{
+            400:{
+                items:2,
+                nav:true
+            },
+			800:{
 				items:3,
-				nav:false
+				nav:true
 			},
 			1000:{
 				items:4,
@@ -367,8 +371,8 @@ $(document).ready(function () {
 	
 	/*Socials*/
 	/*Like*/
-	/*(function(){
-		/!*facebook*!/
+	(function(){
+		/*facebook*/
 		(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
@@ -377,14 +381,14 @@ $(document).ready(function () {
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 
-		/!*vkontakt*!/
+		/*vkontakt*/
 		<!-- Put this script tag to the <head> of your page -->
 		(function(){
 			VK.init({apiId: 5567897, onlyWidgets: true});
 			VK.Widgets.Like("vk_like", {redesign: 1, type: "mini", height: 20});
 		})();
 
-		/!*tweeter*!/
+		/*tweeter*/
 		(function (d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
 			if (!d.getElementById(id)) {
@@ -395,13 +399,13 @@ $(document).ready(function () {
 			}
 		})(document, 'script', 'twitter-wjs');
 
-		/!*google*!/
+		/*google*/
 		(function() {
 			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 			po.src = 'https://apis.google.com/js/plusone.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 		})();
 
-	})();*/
+	})();
 
 });

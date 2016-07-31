@@ -35,7 +35,7 @@
             </nav><!-- mobile menu -->
             <div class="lvl1">
                 <div class="inner in-row-mid">
-                    <a href="#">
+                    <a class="logo" href="#">
                         <img src="images/logo.png" alt="">
                     </a>
                     <div class="col2 in-row-mid">
@@ -84,11 +84,6 @@
                         <a href="#" class="cart">2 товара <span>438 руб.</span></a>
                         <a href="#" class="btn-order">Оформить заказ</a>
                     </div>
-                    <form id="get-present" class="get-present" method="get" action="/search">
-                        <p class="title-form">Заполните форму и получите ценный подарок!</p>
-                        <input class="email" name="email" maxlength="50" placeholder="E-mail" required="" type="email">
-                        <label class="label-present"><input id="submit-present" type="submit" class="submit btn" value="Получить подарок"></label>
-                    </form>
                 </div>
             </div>
         </div>
@@ -96,63 +91,65 @@
 
         <div class="content landing">
 
-            <div class="slider1">
-                <ul class="bxslider-land">
-                    <li class="slide2">
-                        <div class="container">
-                            <div class="inner">
-                                <div class="title">Картина из фотографий</div>
-                                <div class="title2">Цифровая фотопечать от 1 дня</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slide2">
-                        <div class="container">
-                            <div class="inner">
-                                <div class="title">Картина из фотографий</div>
-                                <div class="title2">Цифровая фотопечать от 1 дня</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slide2">
-                        <div class="container">
-                            <div class="inner">
-                                <div class="title">Картина из фотографий</div>
-                                <div class="title2">Цифровая фотопечать от 1 дня</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slide2">
-                        <div class="container">
-                            <div class="inner">
-                                <div class="title">Картина из фотографий</div>
-                                <div class="title2">Цифровая фотопечать от 1 дня</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <section class="pageheader">
+                <div class="inner">
+                    <form id="get-present" class="get-present" method="get" action="">
+                        <p class="title-form">Заполните форму и получите ценный подарок!</p>
+                        <input class="email" name="email" maxlength="50" placeholder="E-mail" required="" type="email">
+                        <label class="label-present"><input id="submit-present" type="submit" class="submit btn" value="Получить подарок"></label>
+                    </form>
+                </div>
 
-            </div>
+                <div class="slider1">
+                    <ul class="bxslider-land">
+                        <li class="slide2">
+                            <div class="container">
+                                <div class="inner">
+                                    <div class="title">Картина из фотографий</div>
+                                    <div class="title2">Цифровая фотопечать от 1 дня</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2">
+                            <div class="container">
+                                <div class="inner">
+                                    <div class="title">Картина из фотографий</div>
+                                    <div class="title2">Цифровая фотопечать от 1 дня</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2">
+                            <div class="container">
+                                <div class="inner">
+                                    <div class="title">Картина из фотографий</div>
+                                    <div class="title2">Цифровая фотопечать от 1 дня</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2">
+                            <div class="container">
+                                <div class="inner">
+                                    <div class="title">Картина из фотографий</div>
+                                    <div class="title2">Цифровая фотопечать от 1 дня</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
 
             <section class="photo-standard">
                 <div class="inner">
                     <div class="col1">
-                        <img src="images/img3.jpg" alt="">
+                        <ul class="pgwSlideshow">
+                            <li><img src="images/img3.jpg" alt=""></li>
+                            <li><img src="images/img3.jpg" alt=""></li>
+                            <li><img src="images/img3.jpg" alt=""></li>
+                        </ul>
                         <div class="in-row-mid share-block">
                             <span>Рассказать друзьям:</span>
-                           <!-- <a href="#" target="blank">
-                                <img src="images/soc1.png" alt="">
-                            </a>
-                            <a href="#" target="blank">
-                                <img src="images/soc2.png" alt="">
-                            </a>
-                            <a href="#" target="blank">
-                                <img src="images/soc3.png" alt="">
-                            </a>
-                            <a href="#" target="blank">
-                                <img src="images/soc4.png" alt="">
-                            </a>-->
-
                             <div class="social-block social-likes social-likes_light" data-counters="no">
                                 <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
                                 <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках"></div>
@@ -166,11 +163,8 @@
                             <div class="fb-like" data-href="https://lutsman.github.io/landing.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
                             <div id="vk_like"></div>
                             <div class="tweet-btn">
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://https://lutsman.github.io" data-dnt="true">Tweet</a>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://https://lutsman.github.io" data-dnt="true"></a>
                             </div>
-                            <!--<div class="social-likes">
-                                <div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
-                            </div>-->
                             <div class="g-plusone" data-size="medium"></div>
                         </div>
                     </div>
@@ -311,6 +305,8 @@
                                 <p>Где бы вы не находились вы сможете порадовать себя и своих близкиз напечатанной продукцией.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="in-row blocks2">
                         <div class="in-row mb0">
                             <div class="img">
                                 <span class="icon icon-clock-pink"></span>
@@ -339,6 +335,7 @@
                             </div>
                         </div>
                     </div>
+                    <br class="clear">
 
                     <a href="#" class="btn btn5">Заказать печать фотографий</a>
 
@@ -700,6 +697,8 @@
                                 <p>Где бы вы не находились вы сможете порадовать себя и своих близкиз напечатанной продукцией.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="in-row blocks2">
                         <div class="in-row mb0">
                             <div class="img">
                                 <span class="icon icon-clock-yell"></span>
