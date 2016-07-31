@@ -787,6 +787,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .slide1 {text-align: center; background-position: left 0;}
 
     .blocks1 > a {width: 40%; margin: 0 5% 22px; float: left;}
+    .blocks1 .img {display: inline-block;}
 
     .blocks3 > div {width: 100%; margin: 0; padding: 0 10px; box-sizing: border-box;}
 
