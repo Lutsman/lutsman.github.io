@@ -612,11 +612,10 @@ span._49vh {display: none;}
 
 #m-menu-btn-wrapper {
     padding: 0;
-    background-color: #fff;
-    width: 100%;
     visibility: hidden;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 82px;
+    right: 0;
     z-index: 50; }
 
 .menu-button {
@@ -637,7 +636,7 @@ span._49vh {display: none;}
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #666;
+    background-color: #c41275;
     border-radius: 4px;
     position: absolute; }
 
@@ -839,5 +838,8 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .slide1 {text-align: center; background-position: left 0;}
 
     .blocks3 > div {width: 100%; margin: 0; padding: 0 10px; box-sizing: border-box;}
+
+   .hide700 {display: none !important;}
+    #m-menu-btn-wrapper {visibility: visible;}
 
 }

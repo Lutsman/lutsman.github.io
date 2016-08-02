@@ -225,6 +225,13 @@ $(document).ready(function () {
 
 				$menu.mmenu({
 					"extensions": ["theme-dark"]
+				},{
+					offCanvas: {
+						//pageNodetype: 'div',
+						//pageSelector: '#page',
+						position: "bottom",
+						zposition: "front"
+					}
 				});
 
 				var selector = false;
