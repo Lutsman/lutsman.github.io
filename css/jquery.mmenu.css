@@ -1,11 +1,11 @@
-.mm-menu,.mm-panels,.mm-panels>.mm-panel{margin:0;left:0;right:0;top:0;bottom:0;z-index:0;box-sizing:border-box}
+.mm-menu,.mm-panels,.mm-panels>.mm-panel{margin:0;right:0;top:0;bottom:0;z-index:0;box-sizing:border-box}
 .mm-btn,.mm-menu{box-sizing:border-box}
 .mm-listview a,.mm-listview a:hover,.mm-navbar a,.mm-navbar a:hover{text-decoration:none}
 .mm-hidden{display:none!important}
 .mm-menu,.mm-panels>.mm-panel:not(.mm-hidden){display:block}
 .mm-wrapper{overflow-x:hidden;position:relative}
 .mm-menu{padding:0;position:absolute}
-.mm-panels,.mm-panels>.mm-panel{background:inherit;border-color:inherit;position:absolute}
+.mm-panels,.mm-panels>.mm-panel{background:inherit;border-color:inherit;position:absolute; left:0}
 .mm-btn,.mm-panel.mm-highest{z-index:1}
 .mm-panels{overflow:hidden}
 .mm-panel{-webkit-transition:-webkit-transform .4s ease;transition:-webkit-transform .4s ease;transition:transform .4s ease;transition:transform .4s ease,-webkit-transform .4s ease;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
@@ -73,8 +73,8 @@ html.mm-background .mm-page{background:inherit}
 html.mm-blocking #mm-blocker{display:block}
 .mm-menu.mm-offcanvas{z-index:0;display:none;position:fixed;width:80%;min-width:140px;max-width:440px}
 .mm-menu.mm-offcanvas.mm-current{display:block}
-html.mm-opening .mm-slideout{-webkit-transform:translate3d(80%,0,0);transform:translate3d(80%,0,0)}
+html.mm-opening .mm-slideout{-webkit-transform:translate3d(-80%,0,0);transform:translate3d(-80%,0,0)}
 @media all and (max-width:175px){html.mm-opening .mm-slideout{-webkit-transform:translate3d(140px,0,0);transform:translate3d(140px,0,0)}
 }
-@media all and (min-width:550px){html.mm-opening .mm-slideout{-webkit-transform:translate3d(440px,0,0);transform:translate3d(440px,0,0)}
+@media all and (min-width:550px){html.mm-opening .mm-slideout{-webkit-transform:translate3d(-440px,0,0);transform:translate3d(-440px,0,0)}
 }

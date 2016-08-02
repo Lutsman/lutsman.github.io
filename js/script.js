@@ -224,14 +224,13 @@ $(document).ready(function () {
 				var $openMenuBtn = $('#hamburger');
 
 				$menu.mmenu({
-					"extensions": ["theme-dark"]
-				},{
-					offCanvas: {
-						//pageNodetype: 'div',
-						//pageSelector: '#page',
+					"extensions": ["theme-dark"],
+				/*	offCanvas: {
+						pageNodetype: 'div',
+						pageSelector: '#page',
 						position: "bottom",
 						zposition: "front"
-					}
+					}*/
 				});
 
 				var selector = false;
@@ -418,7 +417,7 @@ $(document).ready(function () {
 	/*Lightbox (https://github.com/fancyapps/fancyBox)*/
 	(function(){
 		$('.fancybox').fancybox({
-			padding: 0
+			padding: 10
 			//aspectRatio: true
 			//margin: 0
 		});
