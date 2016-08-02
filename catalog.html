@@ -36,7 +36,7 @@
 			</nav><!-- mobile menu -->
 			<div class="lvl1">
 				<div class="inner in-row-mid">
-					<a href="#">
+					<a class="logo" href="#">
 						<img src="images/logo.png" alt="">
 					</a>
 					<div class="col2 in-row-mid">
@@ -67,7 +67,12 @@
 			<div class="lvl2">
 				<div class="inner clearfix">
 					<div class="fll in-row-mid">
-						<a href="#" class="search"></a>
+						<a href="#" class="search" data-action="open" data-target="#landing-search"></a>
+						<form id="landing-search" class="landing-search" method="get" action="/search">
+							<input type="submit" class="search" value="">
+							<input class="search-input" placeholder="Поиск по сайту" required="" name="landing-search" type="text">
+							<a href="#" class="search-cancel" data-action="close" data-target="#landing-search"></a>
+						</form>
 						<div class="col2">
 							<a href="#">Главная</a>
 							<a href="#">Каталог</a>
@@ -290,6 +295,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div>
@@ -321,6 +327,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-margin">
@@ -350,6 +357,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-available">
@@ -378,6 +386,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div>
@@ -406,6 +415,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-margin">
@@ -432,6 +442,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-available">
@@ -460,6 +471,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div>
@@ -488,6 +500,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-margin">
@@ -514,6 +527,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-available">
@@ -542,6 +556,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div>
@@ -570,6 +585,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 							<div class="no-margin">
@@ -596,6 +612,7 @@
 											<div>Нет в<br>наличии</div>
 										</div>
 									</div>
+									<br>
 								</div>
 							</div>
 						</div>
@@ -666,282 +683,277 @@
 					<div class="blocks5">
 						<div class="no-available">
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span class="color3 lt">5.9</span>
-												<span class="color5">3.9 руб.</span>
-											</div>
-											<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div>
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span class="color3 lt">5.9</span>
-												<span class="color5">3.9 руб.</span>
-											</div>
-											<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div>
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span>3.9 руб.</span>
+										</div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span>3.9 руб.</span>
-											</div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div class="no-available">
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span class="color3 lt">5.9</span>
-												<span class="color5">3.9 руб.</span>
-											</div>
-											<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div>
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span class="color3 lt">5.9</span>
-												<span class="color5">3.9 руб.</span>
-											</div>
-											<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div>
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span>3.9 руб.</span>
-											</div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div class="no-available">
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span class="color3 lt">5.9</span>
-												<span class="color5">3.9 руб.</span>
-											</div>
-											<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div>
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span class="color3 lt">5.9</span>
-												<span class="color5">3.9 руб.</span>
-											</div>
-											<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
 					<div class="blocks5">
 						<div>
 							<div>
-								<div>
-									<div class="hid">
-										<img src="images/img2.png" alt="">
+								<div class="hid">
+									<img src="images/img2.png" alt="">
+								</div>
+								<div class="title-block">Фотографии Стандарт</div>
+								<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
+								<ul>
+									<li>Параметр 1</li>
+									<li>Параметр 2</li>
+									<li>Параметр 3</li>
+									<li>Параметр 4</li>
+								</ul>
+								<div class="in-row-mid">
+									<div class="col1">
+										<div class="lvl1">
+											<span class="color3 lt">5.9</span>
+											<span class="color5">3.9 руб.</span>
+										</div>
+										<div class="lvl2 color4">2.9 руб. <span>(от 3 шт.)</span></div>
 									</div>
-									<div class="title-block">Фотографии Стандарт</div>
-									<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-									<ul>
-										<li>Параметр 1</li>
-										<li>Параметр 2</li>
-										<li>Параметр 3</li>
-										<li>Параметр 4</li>
-									</ul>
-									<div class="in-row-mid">
-										<div class="col1">
-											<div class="lvl1">
-												<span>3.9 руб.</span>
-											</div>
-										</div>
-										<div class="col2">
-											<a href="#" class="btn btn5">Выбрать</a>
-											<div>Нет в<br>наличии</div>
-										</div>
+									<div class="col2">
+										<a href="#" class="btn btn5">Выбрать</a>
+										<div>Нет в<br>наличии</div>
 									</div>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>

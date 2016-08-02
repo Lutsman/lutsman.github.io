@@ -36,7 +36,7 @@
 			</nav><!-- mobile menu -->
 			<div class="lvl1">
 				<div class="inner in-row-mid">
-					<a href="#">
+					<a class="logo" href="#">
 						<img src="images/logo.png" alt="">
 					</a>
 					<div class="col2 in-row-mid">
@@ -67,7 +67,12 @@
 			<div class="lvl2">
 				<div class="inner clearfix">
 					<div class="fll in-row-mid">
-						<a href="#" class="search"></a>
+						<a href="#" class="search" data-action="open" data-target="#landing-search"></a>
+						<form id="landing-search" class="landing-search" method="get" action="/search">
+							<input type="submit" class="search" value="">
+							<input class="search-input" placeholder="Поиск по сайту" required="" name="landing-search" type="text">
+							<a href="#" class="search-cancel" data-action="close" data-target="#landing-search"></a>
+						</form>
 						<div class="col2">
 							<a href="#">Главная</a>
 							<a href="#">Каталог</a>
