@@ -408,4 +408,14 @@ $(document).ready(function () {
 
 	})();
 
+	/*Lightbox (https://github.com/fancyapps/fancyBox)*/
+	(function(){
+		$('.fancybox').fancybox({
+			padding: 0
+			//aspectRatio: true
+			//margin: 0
+		});
+	})();
+
+
 });
