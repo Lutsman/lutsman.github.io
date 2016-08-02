@@ -417,5 +417,40 @@ $(document).ready(function () {
 		});
 	})();
 
+	/*Show/hide block*/
+	(function(){
+		function FadeBlock(options) {
+			this._listenedBlock = options.listenedBlock || 'body'
+		}
+		FadeBlock.prototype.init = function () {
+			var self = this;
+
+			$(self._listenedBlock).click(function (e) {
+				self.showBlock(e);
+				self.hideBlock(e);
+			});
+		};
+		FadeBlock.prototype.showBlock = function (e) {
+			var elem = e.target;
+			var openBtn = elem.closest('[data-action="open"]');
+
+			if (!openBtn) return;
+
+			$(openBtn.getAttribute('data-target')).fadeIn();
+		};
+		FadeBlock.prototype.hideBlock = function (e) {
+			var elem = e.target;
+			var closeBtn = elem.closest('[data-action="close"]');
+
+			if (!closeBtn) return;
+
+			$(closeBtn.getAttribute('data-target')).fadeOut();
+		};
+
+		var searchBlockToggler = new FadeBlock({});
+		searchBlockToggler.init();
+	})();
+
+
 
 });
