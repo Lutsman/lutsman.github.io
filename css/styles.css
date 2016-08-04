@@ -849,7 +849,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .width3 {width: 100%;}
 
     .slide-form .width1, .slide-form .width2 {width: 100%;}
-    .checkbox {font-size: 34px; text-align: left; margin: 10px 0;}
+    .checkbox {text-align: left; margin: 10px 0;}
 
     .slide1 {text-align: center; background-position: left 0;}
 
