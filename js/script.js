@@ -8,6 +8,7 @@ $(document).ready(function() {
 	  pause:14000,
 	  speed:1200
 	});
+
 	$('.bxslider-land').bxSlider({
 		mode: 'fade',
 		pager: true,
@@ -35,26 +36,6 @@ $(document).ready(function() {
 		pause: 6000,
 		speed: 1200
 	});
-	/*$('.bxslider-masters').owlCarousel({
-		loop:true,
-		margin:0,
-		responsiveClass:true,
-		responsive:{
-			0:{
-				items:1,
-				nav:true
-			},
-			600:{
-				items:3,
-				nav:false
-			},
-			1000:{
-				items:4,
-				nav:true,
-				loop:false
-			}
-		}
-	});*/
 
 
 	$('.owl-carousel').owlCarousel({
