@@ -405,11 +405,6 @@ $(document).ready(function () {
 				s.parentNode.insertBefore(po, s);
 			})();
 		})();
-
-
-
-
-
 	})();
 
 	/*Lightbox (https://github.com/fancyapps/fancyBox)*/
@@ -475,7 +470,4 @@ $(document).ready(function () {
 		var slidingPanels = new SlideToggler({});
 		slidingPanels.init();
 	})();
-
-
-
 });
