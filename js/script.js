@@ -209,56 +209,6 @@ $(document).ready(function () {
 			var pageScroll = new ScrollToAnchor({});
 			pageScroll.init();
 		})();
-
-		/*mobile menu*/
-		(function(){
-			var mmenuScroll = new ScrollToAnchor({
-				listenedBlock: document.getElementById('#m-menu'),
-				translation:  document.querySelector('#m-menu-btn-wrapper').offsetHeight
-			});
-
-			setUpMmenu();
-
-			function setUpMmenu() {
-				var $menu = $('nav#m-menu');
-				var $openMenuBtn = $('#hamburger');
-
-				$menu.mmenu({
-					"extensions": ["theme-dark"],
-				/*	offCanvas: {
-						pageNodetype: 'div',
-						pageSelector: '#page',
-						position: "bottom",
-						zposition: "front"
-					}*/
-				});
-
-				var selector = false;
-
-				$menu.find( 'li > a' ).on(
-					'click',
-					function( e )
-					{
-						selector = this.hash;
-					}
-				);
-
-				var api = $menu.data( 'mmenu' );
-				api.bind( 'closed',
-					function() {
-						if (selector) {
-							mmenuScroll.smoothScroll(selector, mmenuScroll._translation);
-							selector = false;
-						}
-					}
-
-				);
-				$openMenuBtn.click(function () {
-					api.open();
-				});
-
-			}
-		})();
 	})();
 
 	/*ScrollUp button*/
@@ -307,6 +257,8 @@ $(document).ready(function () {
 	(function(){
 		if (!document.getElementById('map')) return;
 
+		var firstScript = document.querySelectorAll('script')[0];
+		var script = document.createElement('script');
 		var placemarks = {
 			0: {
 				coords: [55.7385,37.4821],
@@ -350,7 +302,13 @@ $(document).ready(function () {
 			}
 		};
 
-		ymaps.ready(init);
+		script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+		script.async = true;
+		firstScript.parentNode.insertBefore(script, firstScript);
+
+		script.addEventListener('load', function () {
+			ymaps.ready(init);
+		});
 
 		function init(){
 			var myMap = new ymaps.Map('map', {
@@ -362,9 +320,9 @@ $(document).ready(function () {
 
 			myMap.behaviors.disable('scrollZoom');
 
-			for (var key in placemarks) {
-				myMap.geoObjects.add(new ymaps.Placemark(placemarks[key].coords, {
-					hintContent: placemarks[key].hintContent
+			for (var currPlacemark in placemarks) {
+				myMap.geoObjects.add(new ymaps.Placemark(placemarks[currPlacemark].coords, {
+					hintContent: placemarks[currPlacemark].hintContent
 				}, {
 					iconLayout: 'default#image',
 					iconImageHref: 'images/baloon.png',
@@ -376,10 +334,35 @@ $(document).ready(function () {
 	})();
 	
 	/*Socials*/
-	/*Like*/
 	(function(){
-		/*facebook*/
-		(function(d, s, id) {
+
+		/*share buttons*/
+		(function(){
+			/*if no social block with class "social-block" no need to download social scripts*/
+			if (!$('.social-block').length) return;
+
+			var firstScript = document.querySelectorAll('script')[0];
+			var script = document.createElement('script');
+
+			script.src = 'js/social-likes.min.js';
+			script.async = true;
+			firstScript.parentNode.insertBefore(script, firstScript);
+
+			var firstCss = document.querySelectorAll('link')[0];
+			var css = document.createElement('link');
+
+			css.rel = "stylesheet";
+			css.href = "css/social-likes_flat.css";
+			firstCss.parentNode.insertBefore(css, firstCss);
+		})();
+
+		/*like buttons*/
+		(function(){
+			/*if no social block with class "social-like" no need to download social scripts*/
+			if (!$('.social-like').length) return;
+
+			/*facebook*/
+			(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
 				js = d.createElement(s); js.id = id;
@@ -387,30 +370,45 @@ $(document).ready(function () {
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 
-		/*vkontakt*/
-		<!-- Put this script tag to the <head> of your page -->
-		(function(){
-			VK.init({apiId: 5567897, onlyWidgets: true});
-			VK.Widgets.Like("vk_like", {redesign: 1, type: "mini", height: 20});
+			/*vkontakt*/
+			(function(){
+				var firstScript = document.querySelectorAll('script')[0];
+				var script = document.createElement('script');
+
+				script.src = '//vk.com/js/api/openapi.js?125';
+				script.async = true;
+				firstScript.parentNode.insertBefore(script, firstScript);
+
+				script.addEventListener('load', function () {
+					VK.init({apiId: 5567897, onlyWidgets: true});
+					VK.Widgets.Like("vk_like", {redesign: 1, type: "mini", height: 20});
+				});
+			})();
+
+			/*tweeter*/
+			(function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + '://platform.twitter.com/widgets.js';
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			})(document, 'script', 'twitter-wjs');
+
+			/*google*/
+			(function() {
+				var po = document.createElement('script');
+				po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(po, s);
+			})();
 		})();
 
-		/*tweeter*/
-		(function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-			if (!d.getElementById(id)) {
-				js = d.createElement(s);
-				js.id = id;
-				js.src = p + '://platform.twitter.com/widgets.js';
-				fjs.parentNode.insertBefore(js, fjs);
-			}
-		})(document, 'script', 'twitter-wjs');
 
-		/*google*/
-		(function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		})();
+
+
 
 	})();
 
@@ -418,12 +416,10 @@ $(document).ready(function () {
 	(function(){
 		$('.fancybox').fancybox({
 			padding: 10
-			//aspectRatio: true
-			//margin: 0
 		});
 	})();
 
-	/*Show/hide block*/
+	/*Fade block*/
 	(function(){
 		function FadeBlock(options) {
 			this._listenedBlock = options.listenedBlock || 'body'
@@ -455,6 +451,29 @@ $(document).ready(function () {
 
 		var searchBlockToggler = new FadeBlock({});
 		searchBlockToggler.init();
+	})();
+
+	/*Slide block*/
+	(function(){
+		function SlideToggler(options) {
+			this._listenedBlock = options.listenedBlock || 'body'
+		}
+		SlideToggler.prototype.init = function () {
+			var self = this;
+
+			$(self._listenedBlock).click(this.toggler);
+		};
+		SlideToggler.prototype.toggler = function (e) {
+			var elem = e.target;
+			var toggleBtn = elem.closest('[data-action="slide-toggler"]');
+
+			if (!toggleBtn) return;
+
+			$(toggleBtn.getAttribute('data-target')).slideToggle();
+		};
+
+		var slidingPanels = new SlideToggler({});
+		slidingPanels.init();
 	})();
 
 
