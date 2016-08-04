@@ -413,16 +413,26 @@ $(document).ready(function () {
 			var openBtn = elem.closest('[data-action="open"]');
 
 			if (!openBtn) return;
+			e.preventDefault();
 
-			$(openBtn.getAttribute('data-target')).fadeIn();
+			var targetSelector = openBtn.getAttribute('data-target');
+			var $openBtnAll = $('[data-action="open"][data-target="' + targetSelector + '"]')
+
+			$openBtnAll.addClass('active');
+			$(targetSelector).fadeIn();
 		};
 		FadeBlock.prototype.hideBlock = function (e) {
 			var elem = e.target;
 			var closeBtn = elem.closest('[data-action="close"]');
 
 			if (!closeBtn) return;
+			e.preventDefault();
 
-			$(closeBtn.getAttribute('data-target')).fadeOut();
+			var targetSelector = closeBtn.getAttribute('data-target');
+			var $openBtnAll = $('[data-action="open"][data-target="' + targetSelector + '"]');
+
+			$openBtnAll.removeClass('active');
+			$(targetSelector).fadeOut();
 		};
 
 		var searchBlockToggler = new FadeBlock({});
@@ -444,11 +454,27 @@ $(document).ready(function () {
 			var toggleBtn = elem.closest('[data-action="slide-toggler"]');
 
 			if (!toggleBtn) return;
+			e.preventDefault();
 
+			$(toggleBtn).toggleClass('active');
 			$(toggleBtn.getAttribute('data-target')).slideToggle();
 		};
 
 		var slidingPanels = new SlideToggler({});
 		slidingPanels.init();
 	})();
+
+	/*blocks extra behavior*/
+	(function(){
+		/*Basket*/
+		(function(){
+			$('.cart').click(function () {
+				var parent = this.closest('.basket-cont');
+
+				$(parent).toggleClass('basket-open');
+			});
+		})();
+	})();
+	
+	
 });

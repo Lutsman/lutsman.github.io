@@ -15,18 +15,6 @@
 	<div class="wrapper">
 
 		<div class="header">
-			<nav id="m-menu-btn-wrapper">
-				<div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-action="slide-toggler" data-target="#m-menu">
-					<div class="hamburger-box">
-						<div class="hamburger-inner"></div>
-					</div>
-				</div>
-			</nav>
-			<nav id="m-menu"> <!-- mobile menu -->
-				<ul>
-					<li><a href="#contacts">Контакты</a></li>
-				</ul>
-			</nav><!-- mobile menu -->
 			<div class="lvl1">
 				<div class="inner in-row-mid">
 					<a class="logo" href="#">
@@ -74,11 +62,64 @@
 							<a class="hide700" href="#">Контакты</a>
 						</div>
 					</div>
-					<div class="flr in-row-miв">
-						<a href="#" class="cart">2 товара <span>438 руб.</span></a>
+					<div class="flr in-row-miв basket-cont">
+						<a href="#" data-action="slide-toggler" data-target=".basket" class="cart">2 товара <span>438 руб.</span></a>
 						<a href="#" class="btn-order">Оформить заказ</a>
+						<div class="basket">
+							<ul>
+								<li>
+									<img src="images/img2.png" alt="">
+									<p class="title-basket">Фотографии стандарт
+										<br>
+										<span>35 фотографий 23х10</span>
+									</p>
+									<p>305 руб.
+										<span><a href="#">Удалить</a></span>
+									</p>
+								</li>
+								<li>
+									<img src="images/img2.png" alt="">
+									<p class="title-basket">Фотографии стандарт
+										<br>
+										<span>35 фотографий 23х10</span>
+									</p>
+									<p>305 руб.
+										<span><a href="#">Удалить</a></span>
+									</p>
+								</li>
+								<li>
+									<img src="images/img2.png" alt="">
+									<p class="title-basket">Фотографии стандарт
+										<br>
+										<span>35 фотографий 23х10</span>
+									</p>
+									<p>305 руб.
+										<span><a href="#">Удалить</a></span>
+									</p>
+								</li>
+							</ul>
+							<div class="basket-footer">
+								<a href="#">Перейти в корзину</a>
+								<p>
+									<span>Итого:</span>
+									915 руб.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
+				<nav id="m-menu-btn-wrapper">
+					<div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-action="slide-toggler" data-target="#m-menu">
+						<div class="hamburger-box">
+							<!--<div class="hamburger-inner"></div>-->
+						</div>
+					</div>
+				</nav>
+				<nav id="m-menu"> <!-- mobile menu -->
+					<ul>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+				</nav><!-- mobile menu -->
 			</div>
 		</div>
 		<!-- .header -->
@@ -88,7 +129,7 @@
 				<div class="inner in-row-mid">
 					<img src="images/gift.png" alt="">
 					<p><span>Подождите!</span>Заполните форму и получите подарок!</p>
-					<a href="#" class="btn btn3">Получить подарок!</a>
+					<a href="#" class="btn btn3 popbutton" data-window="1">Получить подарок!</a>
 					<a class="gift-close"></a>
 				</div>
 			</div>
@@ -152,6 +193,22 @@
 									</li>
 								</ul>
 							</div>
+						</div>
+						<div>
+							<form class="login">
+								<p>Вход</p>
+								<div>
+									<input class="email" name="email" maxlength="50" placeholder="E-mail" required="" type="email">
+								</div>
+								<div>
+									<input type="text" placeholder="Пароль">
+									<a class="support" href="#">?</a>
+								</div>
+								<div>
+									<a href="#">Регистрация</a>
+									<input type="submit" value="Вход" class="btn btn5">
+								</div>
+							</form>
 						</div>
 						<div class="left-bar">
 							<div class="blocks4">
@@ -234,6 +291,12 @@
 						</div>
 					</div>
 					<div class="col2">
+						<div class="block-grey">
+							<img src="images/img2.png" alt="">
+							<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с
+								негатива. Основной способ тиражирования фотографий и диапозитивов до появления цифровых
+								принтеров. Различают ручную и машинную фотопечать.</p>
+						</div>
 						<div class="in-row selects">
 							<div>
 								<select class="select">
@@ -619,6 +682,27 @@
 							</div>
 							<a href="#">Следующая</a>
 						</div>
+						<div class="block-grey">
+							<p>Проявление позитива происходило непосредственно во время печати, поскольку
+								экспонированные участки бумаги темнели под действием света. По окончании процесса
+								снимок фиксировался в растворе гипосульфита, удалявшем неэкспонированные соли серебра.
+								Из-за недостатков и невысокого качества изображения калотипия не получила
+								распространения, и ей на смену пришла альбуминовая печать. Новая фотобумага готовилась
+								на основе яичных белков, связывающих светочувствительное хлористое серебро. Альбуминовая
+								бумага также была «дневной», то есть проявлялась непосредственно в процессе
+								экспонирования, длившегося 25—30 минут. Появление альбуминовой печати в 1850 году
+								совпало по времени с изобретением мокрого коллодионного процесса, с помощью которого
+								изготавливались негативы на стеклянных фотопластинках. Лист фотобумаги накрывался
+								сверху негативом, который плотно прижимался к эмульсии, и в таком виде выставлялся на
+								солнечный свет. Для плотного контакта использовались специальные копировальные рамки с
+								прижимом. Высокое качество коллодионных негативов сочеталось с тонкими тональными
+								переходами альбуминовых фотобумаг, давая отличный отпечаток. Такая технология печати
+								доминировала около 30 лет, пока не был устранён главный недостаток бумаг с яичным
+								белком: завершение процесса их изготовления производилось самими фотографами, поскольку
+								светочувствительность сохранялась в течение нескольких часов. Более совершенными
+								оказались целлоидиновые фотобумаги, изготавливавшиеся на основе коллодия, заменившего
+								альбумин.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -978,10 +1062,6 @@
 		</div>
 	</div>
 	<!-- .footer -->
-</div>
-
-<div class="inner">
-	<a class="popbutton" data-window="1">Модальное окно</a>
 </div>
 
 <div id="1" class="popwindow" data-title="" data-height="auto">

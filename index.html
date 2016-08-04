@@ -15,18 +15,6 @@
 	<div class="wrapper">
 
 		<div class="header">
-			<nav id="m-menu-btn-wrapper">
-				<div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-action="slide-toggler" data-target="#m-menu">
-					<div class="hamburger-box">
-						<div class="hamburger-inner"></div>
-					</div>
-				</div>
-			</nav>
-			<nav id="m-menu"> <!-- mobile menu -->
-				<ul>
-					<li><a href="#contacts">Контакты</a></li>
-				</ul>
-			</nav><!-- mobile menu -->
 			<div class="lvl1">
 				<div class="inner in-row-mid">
 					<a class="logo" href="#">
@@ -74,11 +62,64 @@
 							<a  class="hide700" href="#">Контакты</a>
 						</div>
 					</div>
-					<div class="flr in-row-miв">
-						<a href="#" class="cart">2 товара <span>438 руб.</span></a>
+					<div class="flr in-row-miв basket-cont">
+						<a href="#" data-action="slide-toggler" data-target=".basket" class="cart">2 товара <span>438 руб.</span></a>
 						<a href="#" class="btn-order">Оформить заказ</a>
+						<div class="basket">
+							<ul>
+								<li>
+									<img src="images/img2.png" alt="">
+									<p class="title-basket">Фотографии стандарт
+										<br>
+										<span>35 фотографий 23х10</span>
+									</p>
+									<p>305 руб.
+										<span><a href="#">Удалить</a></span>
+									</p>
+								</li>
+								<li>
+									<img src="images/img2.png" alt="">
+									<p class="title-basket">Фотографии стандарт
+										<br>
+										<span>35 фотографий 23х10</span>
+									</p>
+									<p>305 руб.
+										<span><a href="#">Удалить</a></span>
+									</p>
+								</li>
+								<li>
+									<img src="images/img2.png" alt="">
+									<p class="title-basket">Фотографии стандарт
+										<br>
+										<span>35 фотографий 23х10</span>
+									</p>
+									<p>305 руб.
+										<span><a href="#">Удалить</a></span>
+									</p>
+								</li>
+							</ul>
+							<div class="basket-footer">
+								<a href="#">Перейти в корзину</a>
+								<p>
+									<span>Итого:</span>
+									915 руб.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
+				<nav id="m-menu-btn-wrapper">
+					<div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-action="slide-toggler" data-target="#m-menu">
+						<div class="hamburger-box">
+						<!--	<div class="hamburger-inner"></div>-->
+						</div>
+					</div>
+				</nav>
+				<nav id="m-menu"> <!-- mobile menu -->
+					<ul>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+				</nav><!-- mobile menu -->
 			</div>
 		</div>
 		<!-- .header -->
