@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=980, minimum-scale=0.1, maximum-scale=1.0">
+    <meta name="keywords" content="биола, салон красоты">  <!--Ключевые слова-->
+    <meta name="description" content="Профессиональные услуги салона красоты."> <!--Описание-->
+
+    <title>Салон красоты Биола</title>
+
+    <link rel="shortcut icon" href="images/favicon-1.ico" type="image/x-icon">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <!--Scripts-->
+    <script src="scripts/firstInit.js" async></script>
+    <script src="scripts/jquery-2.1.3.min.js" defer></script>
+    <script src="scripts/jquery.maskedinput.min.js" defer></script>
+    <script src="scripts/slick.min.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer> </script>
+    <script src="scripts/jquery.fancybox.pack.js" defer></script>
+    <script src="scripts/lateInit.js" defer></script>
+</head>
+<body class="business">
+<!-- /Yandex.Metrika counter -->
+<noscript><div><img src="https://mc.yandex.ru/watch/38158930" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div class="page-wrap">
+
+    <section class="pageheader">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index-business.html#choosen_">
+                        <p class="logo__name">БиОЛа</p>
+                        <p>Салон Красоты</p>
+                    </a>
+                </div>
+
+                <div class="slogan">
+                    <p><b>Профессиональные услуги</b></p>
+                    <p>салона красоты &laquo;БиОЛа&raquo; в Печатниках!</p>
+                </div>
+
+                <div class="call-us">
+                    <p class="call-us__title">Позвоните нам!</p>
+                    <p>+7(499) <b>777-88-77</b></p>
+                    <p>+7(499) <b>777-88-77</b></p>
+                </div>
+
+                <div class="work-time">
+                    <p>Работаем ежедневно</p>
+                    <p>с <span>10<sup>00</sup></span>-<span>19<sup>00</sup></span> часов</p>
+                    <a class="button order-call" data-action="open" href="#call-request">Заказать звонок</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="top-menu">
+            <div class="container">
+                <ul>
+                    <li><a href="#hairdresser">Парикмахер</a></li>
+                    <li><a href="#manicure">Маникюр/Педикюр</a></li>
+                    <li><a href="#massage">Массаж</a></li>
+                    <li><a href="#solarium">Солярий</a></li>
+                    <li><a href="#master">Мастера</a></li>
+                    <li><a href="#honors">Сертификаты</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </section><!--top-menu-->
+
+        <section class="order">
+            <div class="container">
+                <p class="order__title">Профессиональные услуги салона красоты</p>
+
+                <div class="order__form">
+                    <p class="top-line">Введите ваше имя и телефон.</p>
+                    <p class="second-line">Наш администратор свяжется с вами, чтобы записать вас на сеанс.</p>
+
+                    <form id="order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                        <p>Введите ваше имя</p>
+                        <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                        <p>Введите ваш телефон <sup>*</sup></p>
+                        <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                        <input class="hidden" name="subject" value="Заявка на сеанс" type="text">
+                        <div class="button order__submit" data-yaTarget="FORMA1BIZ">Записаться</div>
+                    </form>
+
+                    <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                </div>
+
+            </div>
+        </section><!--order-->
+    </section>
+
+    <section class="hairdresser" id="hairdresser">
+        <div class="container">
+            <h2><span>Мы предлагаем</span></h2>
+
+            <div class="title-block">
+                <div class="title-icon hairdresser-icon"></div>
+                <h3>Услуги парикмахера</h3>
+            </div>
+
+            <div class="content">
+                <div class="content__block">
+                    <img src="images/barbershop/barbershop_1.jpg" alt="Прическа вечерняя">
+                    <div>
+                        <div>
+                            <p>Прическа вечерняя</p>
+                            <p class="price">от <span>990</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/barbershop/barbershop_2.jpg" alt="Укладка">
+                    <div>
+                        <div>
+                            <p>Укладка</p>
+                            <p class="price">от <span>390</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/barbershop/barbershop_3.jpg" alt="Стрижка">
+                    <div>
+                        <div>
+                            <p>Стрижка</p>
+                            <p class="price">от <span>200</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/barbershop/barbershop_4.jpg" alt="Наращивание волос">
+                    <div>
+                        <div>
+                            <p>Наращивание волос</p>
+                            <p class="price">по записи</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/barbershop/barbershop_5.jpg" alt="Керотинин">
+                    <div>
+                        <div>
+                            <p>Керотинин</p>
+                            <p class="price">от <span>2 890</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/barbershop/barbershop_6.jpg" alt="Окраска волос">
+                    <div>
+                        <div>
+                            <p>Окраска волос</p>
+                            <p class="price">от <span>690</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+
+            </div>
+
+            <a class="button propose__submit" data-action="open" href="#hairdresser-request">Записаться к парикмахеру</a>
+
+        </div>
+    </section><!--hairdresser-->
+
+    <section class="manicure" id="manicure">
+        <div class="container">
+            <div class="title-block">
+                <div class="title-icon manicure-icon"></div>
+                <h3>Ногтевой сервис</h3>
+            </div>
+
+            <div class="content">
+                <div class="content__block">
+                    <img src="images/manicure/manicure_1.jpg" alt="Маникюр">
+                    <div>
+                        <div>
+                            <p>Маникюр</p>
+                            <p class="price">от <span>390</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/manicure/manicure_2.jpg" alt="Педикюр">
+                    <div>
+                        <div>
+                            <p>Педикюр</p>
+                            <p class="price">от <span>890</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/manicure/manicure_3.jpg" alt="Гель лак">
+                    <div>
+                        <div>
+                            <p>Гель лак</p>
+                            <p class="price">от <span>390</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/manicure/manicure_4.jpg" alt="СПА уход">
+                    <div>
+                        <div>
+                            <p>СПА уход</p>
+                            <p class="price">от <span>490</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/manicure/manicure_5.jpg" alt="Парафино-терапия">
+                    <div>
+                        <div>
+                            <p>Парафино-терапия</p>
+                            <p class="price">от <span>390</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/manicure/manicure_6.jpg" alt="Покрытие френч">
+                    <div>
+                        <div>
+                            <p>Покрытие френч</p>
+                            <p class="price">от <span>790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+
+            </div>
+
+            <a class="button propose__submit" data-action="open" href="#manicure-request">Записаться на маникюр</a>
+
+        </div>
+    </section><!--manicure-->
+
+    <section class="massage" id="massage">
+        <div class="container">
+            <div class="title-block">
+                <div class="title-icon massage-icon"></div>
+                <h3>Услуги массажиста</h3>
+            </div>
+
+            <div class="content">
+                <div class="content__block">
+                    <img src="images/massage/massage_1.jpg" alt="SPA обертывание">
+                    <div>
+                        <div>
+                            <p>SPA обертывание</p>
+                            <p class="price">от <span>2 990</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_2.jpg" alt="Массаж спины">
+                    <div>
+                        <div>
+                            <p>Массаж спины</p>
+                            <p class="price">от <span>1 590</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_3.jpg" alt="Общий массаж">
+                    <div>
+                        <div>
+                            <p>Общий массаж</p>
+                            <p class="price">от <span>1 790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_4.jpg" alt="Анти-целлюлитный массаж">
+                    <div>
+                        <div>
+                            <p>Анти-целлюлитный массаж</p>
+                            <p class="price">от <span>1 790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_5.jpg" alt="Медовый массаж">
+                    <div>
+                        <div>
+                            <p>Медовый массаж (30 минут)</p>
+                            <p class="price">от <span>1 190</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_6.jpg" alt="Лимфо-дренажный массаж">
+                    <div>
+                        <div>
+                            <p>Лимфо-дренажный массаж</p>
+                            <p class="price">от <span>1 790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_7.jpg" alt="Эпиляция воском">
+                    <div>
+                        <div>
+                            <p>Эпиляция воском</p>
+                            <p class="price">от <span>1 790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_8.jpg" alt="Эпиляция сахаром">
+                    <div>
+                        <div>
+                            <p>Эпиляция сахаром</p>
+                            <p class="price">от <span>1 790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/massage/massage_9.jpg" alt="Электро-эпиляция">
+                    <div>
+                        <div>
+                            <p>Электро-эпиляция</p>
+                            <p class="price">от <span>25</span> руб/минута</p>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+
+            </div>
+
+            <a class="button propose__submit" data-action="open" href="#massage-request">Записаться к массажисту</a>
+
+        </div>
+    </section><!--massage-->
+
+    <section class="solarium">
+        <div class="container">
+            <div class="title-block">
+                <div class="title-icon solarium-icon"></div>
+                <h3>Солярий</h3>
+            </div>
+
+            <div class="content">
+                <div class="content__block">
+                    <img src="images/solarium/solarium_1.jpg" alt="Горизонтальный солярий">
+                    <div>
+                        <div>
+                            <p>Горизонтальный солярий</p>
+                            <p class="price">от <span>19</span> руб/минута</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/solarium/solarium_2.jpg" alt="Вертикальный солярий">
+                    <div>
+                        <div>
+                            <p>Вертикальный солярий</p>
+                            <p class="price">от <span>19</span> руб/минута</p>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+
+            </div>
+
+            <a class="button propose__submit" data-action="open" href="#solarium-request">Записаться в солярий</a>
+
+        </div>
+    </section><!--solarium-->
+
+    <section class="stylist hidden">
+        <div class="container">
+            <div class="title-block">
+                <div class="title-icon stylist-icon"></div>
+                <h3>Услуги имиджмейкера-стилиста</h3>
+            </div>
+
+            <div class="content">
+                <div class="content__block">
+                    <img src="images/stylist/stylist_1.jpg" alt="Имидж под ключ">
+                    <div>
+                        <div>
+                            <p>Имидж под ключ</p>
+                            <p class="price">от <span>2 500</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/stylist/stylist_2.jpg" alt="Шоппинг сопровождение">
+                    <div>
+                        <div>
+                            <p>Шоппинг сопровождение</p>
+                            <p class="price">от <span>340</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/stylist/stylist_3.jpg" alt="Цветовой анализ">
+                    <div>
+                        <div>
+                            <p>Цветовой анализ</p>
+                            <p class="price">от <span>390</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/stylist/stylist_4.jpg" alt="Разбор гардероба">
+                    <div>
+                        <div>
+                            <p>Разбор гардероба</p>
+                            <p class="price">от <span>340</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/stylist/stylist_5.jpg" alt="Создание образа невесты">
+                    <div>
+                        <div>
+                            <p>Создание образа невесты</p>
+                            <p class="price">от <span>350</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/stylist/stylist_6.jpg" alt="Комплект по случаю">
+                    <div>
+                        <div>
+                            <p>Комплект по случаю</p>
+                            <p class="price">от <span>790</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+
+            </div>
+
+            <a class="button propose__submit" data-action="open" href="#stylist-request">Записаться к стилисту</a>
+
+        </div>
+    </section><!--stylist-->
+
+    <section class="portfolio">
+        <div id="slider">
+            <div class="slide">
+                <img src="images/slider/slide_1.jpg" alt="">
+                <caption>Очень крутая тетка!</caption>
+            </div>
+            <div class="slide">
+                <img src="images/slider/slide_1.jpg" alt="">
+                <caption>Макияж бомба!</caption>
+            </div>
+            <div class="slide">
+                <img src="images/slider/slide_1.jpg" alt="">
+                <caption>Прератите ее показывать!</caption>
+            </div>
+        </div>
+    </section>
+
+    <section class="master" id="master">
+        <div class="container">
+            <h2><span>Наши мастера</span></h2>
+
+            <div class="master__block">
+                <img src="images/artisan/artisan_1.jpg" alt="Светлана Федюнина">
+                <div></div>
+                <p class="master__name">Светлана Федюнина</p>
+                <p>Маникюр</p>
+            </div>
+            <div class="master__block">
+                <img src="images/artisan/artisan_2.jpg" alt="Анна Пахоменкова">
+                <div></div>
+                <p class="master__name">Анна Пахоменкова</p>
+                <p>Массажист</p>
+            </div>
+            <div class="master__block">
+                <img src="images/artisan/artisan_3.jpg" alt="Светлана Зарубина">
+                <div></div>
+                <p class="master__name">Светлана Зарубина</p>
+                <p>Парикмахер</p>
+            </div>
+
+        </div>
+    </section><!--master-->
+
+    <section class="honors" id="honors">
+        <div class="container">
+            <h2><span>Награды и сертификаты</span></h2>
+
+            <div class="honors__block">
+                <a href="#honors__block-1" data-action="open">
+                    <img src="images/honors/honors_1.jpg" alt="сертификат 1">
+                </a>
+            </div>
+            <div class="honors__block">
+                <a href="#honors__block-2" data-action="open">
+                    <img src="images/honors/honors_2.jpg" alt="сертификат 2">
+                </a>
+            </div>
+            <div class="honors__block">
+                <a href="#honors__block-3" data-action="open">
+                    <img src="images/honors/honors_3.jpg" alt="сертификат 3">
+                </a>
+            </div>
+            <div class="honors__block">
+                <a href="#honors__block-4" data-action="open">
+                    <img src="images/honors/honors_4.jpg" alt="сертификат 4">
+                </a>
+            </div>
+            <div class="honors__block">
+                <a href="#honors__block-5" data-action="open">
+                    <img src="images/honors/honors_5.jpg" alt="сертификат 5">
+                </a>
+            </div>
+
+        </div>
+    </section><!--honors-->
+
+    <section class="multipurpose-order">
+        <div class="container">
+            <p class="multipurpose-order__title">При заказе комплексных услуг <span>скидка - 10%</span></p>
+
+            <div class="order__form">
+                <p class="top-line">Введите ваше имя и телефон.</p>
+                <p class="second-line">Наш администратор свяжется с вами, чтобы записать вас на сеанс.</p>
+
+                <form id="multipurpose-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                    <p>Введите ваше имя</p>
+                    <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                    <p>Введите ваш телефон <sup>*</sup></p>
+                    <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                    <input class="hidden" name="subject" value="Заявка на комплексный сеанс" type="text">
+                    <div class="button order__submit" data-yaTarget="KOMPLEKS10BIZ">Получить скидку</div>
+                </form>
+
+                <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+            </div>
+
+        </div>
+    </section><!--multipurpose-order-->
+
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2><span>Отзывы наших довольных клиентов</span></h2>
+
+            <div class="reviews__block">
+                <div class="image-design"></div>
+                <img src="images/feedback/avatar_1.jpg" alt="Марина Завьялова">
+
+                <h3 class="client-name">Марина Завьялова</h3>
+
+                <p>Просто проходила мимо салона и решила: <br> пора сделать наконец-то коррекцию <br> бровей! Это же дело на 15 минут,
+                    <br> так зачем откладывать и ждать <br> подходящего момента?</p>
+                <p>Мастер Станислава сразу же поняла, <br> что мне не нужны остроконечные <br> брови-запятые, еще и выкрашенные
+                    <br> черным. Я за естественность <br> и натуральность во всем! Придали <br> аккуратную форму моим бровям, <br> расчесали.</p>
+                <p>Вошли в положение, что я тороплюсь <br> и сделали все четко и быстро. Ценю <br> такое отношение, мои рекомендации!</p>
+            </div>
+
+            <div class="reviews__block">
+                <div class="image-design"></div>
+                <img src="images/feedback/avatar_2.jpg" alt="Наталья Олишина">
+
+                <h3 class="client-name">Наталья Олишина</h3>
+
+                <p>Вообще, до недавнего времени я <br> пользовалась услугами соседнего салона <br> красоты, но после неудачного
+                    <br> окрашивания нет настроения туда <br> возвращаться.</p>
+                <p>Мастер салона «БиОЛа» Елена помогла <br> исправить это недоразумение, которое <br> устроили с моими волосами :)</p>
+                <p>Думаю, что теперь буду обращаться <br> только к ней в ваш салон. Не хочу больше <br> рисковать своими волосами.</p>
+            </div>
+
+            <div class="reviews__block">
+                <div class="image-design"></div>
+                <img src="images/feedback/avatar_3.jpg" alt="Ирина Афонькина">
+
+                <h3 class="client-name">Ирина Афонькина</h3>
+
+                <p>По причине постоянных разъездов <br> я часто меняла мастеров, но ни разу <br> не оставалась абсолютно довольна
+                    <br> их работой. В салоне «Брандо» <br> топ-стилист Ирина поняла меня <br> с полуслова и подстригла именно <br> так, как я
+                    хотела. Спасибо Вам, Ира.</p>
+                <p>Теперь я буду ходить только к Вам. <br> Очень радует, что каждый раз, когда <br> я прихожу в ваш салон, у вас много
+                    акций <br> и скидок на услуги и косметику для ухода! <br> Свой выбор я сделала — я остаюсь <br> в «БиОЛа»! Огромное
+                    спасибо Ирине <br> и администратору Татьяне.</p>
+            </div>
+
+            <div class="reviews__block">
+                <div class="image-design"></div>
+                <img src="images/feedback/avatar_4.jpg" alt="Анастасия Сафонова">
+
+                <h3 class="client-name">Анастасия Сафонова</h3>
+
+                <p>Абсолютно всем осталась довольна. <br> Мастер Елена занималась моей прической, <br> а Нелли делала маникюр!
+                    Я пришла чуть <br> раньше назначенного времени, успела <br> еще сходить в солярий. Сама я живу <br> в Дюссельдорфе
+                    и там посещаю салоны <br> высокого уровня.</p>
+                <p>Могу сказать, что мастера салона <br> «БиОЛа» могут с легкостью <br> конкурировать с мастерами тех салонов.
+                    <br> Уровень по-настоящему высокий! <br> Огромное спасибо, девочки! </p>
+            </div>
+
+        </div>
+    </section><!--reviews-->
+
+    <section class="contacts" id="contacts">
+        <h2><span>Контакты</span></h2>
+
+        <div class="wrap-info">
+            <div class="info">
+                <div>
+                    <div>
+                        <p class="info__title">Адрес:</p>
+                        <p>101000, Россия, Москва, м. Печатники, ул. Гурьянова, д. 55</p>
+                    </div>
+                    <div>
+                        <p class="info__title">Телефоны:</p>
+                        <p>+7(499) <b>777-88-77</b></p>
+                        <p>+7(499) <b>777-88-77</b></p>
+                    </div>
+                    <div>
+                        <p class="info__title">Email:</p>
+                        <p class="info__email">salonbiola.ru@yandex.ru</p>
+                    </div>
+                    <p class="question">Остались вопросы?</p>
+                    <p class="ask-question"><a data-action="open" href="#manager-request">Задайте их нашему менеджеру!</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="yaMap" class="map"></div>
+
+    </section><!--contacts-->
+
+    <footer>
+        <div class="container">
+            <div class="footer__top">
+                <div class="logo">
+                    <a href="index-business.html#choosen_">
+                        <p class="logo__name">БиОЛа</p>
+                        <p>Салон Красоты</p>
+                    </a>
+                </div>
+
+                <div class="requisites">
+                    <p>ООО &laquo;Салон Красоты&raquo;</p>
+                    <p>ИНН 57533322251414</p>
+                    <p>ОГРН 1519515916516119</p>
+                </div>
+
+                <div class="call-us">
+                    <p class="call-us__title">Позвоните нам!</p>
+                    <p>+7(499) <b>777-88-77</b></p>
+                    <p>+7(499) <b>777-88-77</b></p>
+                </div>
+
+                <div class="work-time">
+                    <p>Работаем ежедневно</p>
+                    <p>с 10<sup>00</sup>-19<sup>00</sup> часов</p>
+                    <a class="button order-call" data-action="open" href="#call-request">Заказать звонок</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="private"><a href="privacypolicy.html">Политика конфиденциальности</a></p>
+                <p class="develop">Разработка сайта:
+                    <a href="http://ultraconsulting.ru/?utm_medium=cpc&utm_source=salonbiola.ru">Ultraconsulting.ru</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Pop up  start -->
+
+    <siction id="honor-bg" class="pop-up-bg" data-action="close">
+        <div id="honor-wrapper">
+            <div id="honors__block-1" class="pop-up__honors__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <img src="images/honors/honors_1.jpg" alt="сертификат 1">
+                <div class="next" data-action="next"></div>
+            </div>
+            <div id="honors__block-2" class="pop-up__honors__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="prev" data-action="prev"></div>
+                <img src="images/honors/honors_2.jpg" alt="сертификат 2">
+                <div class="next" data-action="next"></div>
+            </div>
+            <div id="honors__block-3" class="pop-up__honors__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="prev" data-action="prev"></div>
+                <img src="images/honors/honors_3.jpg" alt="сертификат 3">
+                <div class="next" data-action="next"></div>
+            </div>
+            <div id="honors__block-4" class="pop-up__honors__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="prev" data-action="prev"></div>
+                <img src="images/honors/honors_4.jpg" alt="сертификат 4">
+                <div class="next" data-action="next"></div>
+            </div>
+            <div id="honors__block-5" class="pop-up__honors__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="prev" data-action="prev"></div>
+                <img src="images/honors/honors_5.jpg" alt="сертификат 5">
+            </div>
+        </div>
+    </siction>
+    <section id="pop-up-bg" class="pop-up-bg" data-action="close">
+        <div id="form-wrapper">
+            <!-- всплывающее окно Заказать звонок -->
+
+            <div id="call-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Заказать звонок</h2>
+                    <div class="order__form">
+
+                        <form id="call-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка на звонок" type="text">
+                            <div class="button order__submit" data-yaTarget="ZVONOKBIZ" data-action="submit">Заказать звонок</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Записаться на маникюр -->
+
+            <div id="manicure-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Записаться на маникюр</h2>
+                    <div class="order__form">
+
+                        <form id="manicure-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка на маникюр" type="text">
+                            <div class="button order__submit" data-yaTarget="MANICURBIZ" data-action="submit">Записаться</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Записаться к парикмахеру -->
+
+            <div id="hairdresser-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Записаться к парикмахеру</h2>
+                    <div class="order__form">
+
+                        <form id="hairdresser-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка к парикмахеру" type="text">
+                            <div class="button order__submit" data-yaTarget="PARIKMAXERBIZ" data-action="submit">Записаться</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Записаться к массажисту -->
+
+            <div id="massage-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Записаться к массажисту</h2>
+                    <div class="order__form">
+
+                        <form id="massage-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка к массажисту" type="text">
+                            <div class="button order__submit" data-yaTarget="MASSAZHBIZ" data-action="submit">Записаться</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Записаться в солярий -->
+
+            <div id="solarium-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Записаться в солярий</h2>
+                    <div class="order__form">
+
+                        <form id="solarium-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка в солярий" type="text">
+                            <div class="button order__submit" data-yaTarget="SOLYARIYBIZ" data-action="submit">Записаться</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Записаться к стилисту -->
+
+            <div id="stylist-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Записаться к стилисту</h2>
+                    <div class="order__form">
+
+                        <form id="stylist-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка к стилисту" type="text">
+                            <div class="button order__submit" data-yaTarget="" data-action="submit">Записаться</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Задать вопрос -->
+
+            <div id="manager-request" class="pop-up__block big__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content big__content">
+                    <h2 class="form-request__h2">Задать вопрос</h2>
+                    <div class="order__form">
+
+                        <form class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <p>Ваш вопрос <sup>*</sup></p>
+                            <textarea name="message" placeholder="Введите ваш вопрос" required=""></textarea>
+                            <input class="hidden" name="subject" value="Вопрос менеджеру" type="text">
+                            <div class="button order__submit" data-yaTarget="VOPROSBIZ" data-action="submit">Задать вопрос</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="intro-bg" class="pop-up-bg">
+        <div id="introwrapper">
+            <div id="intro" class="pop-up__block">
+                <div class="pop-up__content intro__content">
+                    <h2 class="wellcome">Добро пожаловать!</h2>
+                    <p>Пожалуйста выберите категорию услуг:</p>
+                    <a href="/index.html#choosen_">
+                        <div class="econom-choice">
+                            <div class="choice-icon"></div>
+                            <p><span>Эконом</span></p>
+                        </div>
+                    </a>
+                    <a href="#" data-action="close">
+                        <div class="business-choice" data-action="close">
+                            <div class="choice-icon" data-action="close"></div>
+                            <p><span data-action="close">Бизнес</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div><!--page-wrap-->
+
+</body>
+</html>

@@ -1,0 +1,1465 @@
+@charset "UTF-8";
+// mixin //
+
+@mixin box-sizing($box-sizing) {
+  -moz-box-sizing: $box-sizing;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+@mixin border-radius($rads...) {
+  -moz-border-radius: $rads;
+  -webkit-border-radius: $rads;
+  border-radius: $rads;
+}
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+@mixin transition($transitions...) {
+  -webkit-transition: $transitions;
+  -moz-transition: $transitions;
+  -o-transition: $transitions;
+  transition: $transitions;
+}
+@mixin transform($transform) {
+  -ms-transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+} /*
+@mixin animation-delay($animation-delay) {
+  -webkit-animation-delay: $animation-delay;
+  animation-delay: $animation-delay;
+}
+@mixin animation-name($animation-name) {
+  -webkit-animation-name: $animation-name;
+  animation-name: $animation-name;
+}
+*/
+
+/* ----------------------------------------------
+ Connect fonts
+ ---------------------------------------------- */
+
+/*Import fonts from Google fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&subset=latin,cyrillic);
+
+/* font-family: "Klementina"; */
+
+@font-face {
+  font-family: 'klementina';
+  src: url("fonts/klementina.otf") format("opentype");
+  src: url('fonts/klementina.eot');
+  src: url('fonts/klementina.eot') format('embedded-opentype'),
+  url('fonts/klementina.woff2') format('woff2'),
+  url('fonts/klementina.woff') format('woff'),
+  url('fonts/klementina.ttf') format('truetype'),
+  url('fonts/klementina.svg#klementina') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* font-family: "Philosopher-Bold"; */
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("fonts/Philosopher-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "Philosopher-BoldItalic"; */
+@font-face {
+  font-family: "Philosopher-BoldItalic";
+  src: url("fonts/Philosopher-BoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "Philosopher-Italic"; */
+@font-face {
+  font-family: "Philosopher-Italic";
+  src: url("fonts/Philosopher-Italic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+// color and fonts variable //
+
+$background: #f4f5ec;
+$main-pink: #e0008c;
+$hover-pink: #be0077;
+
+$business-pink: #e837e9;
+$business-hover-pink: #ab2dab;
+
+$klementina: "Klementina";
+$openSans: 'Open Sans', sans-serif;;
+$philosopher-Bold: "Philosopher-Bold";
+$philosopher-BoldItalic: "Philosopher-BoldItalic";
+$philosopher-Italic: "Philosopher-Italic";
+
+
+
+
+/* ----------------------------------------------
+ Reset
+ ---------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------
+ Main
+ ---------------------------------------------- */
+
+html, body {
+  height: auto;
+  font: 14px $openSans;
+  font-weight: lighter;
+  color: #333;
+}
+html, body, section {
+  width: 100%;
+  min-width: 960px;
+}
+.thanks-page {
+  height: 100%;
+}
+body {
+  position: relative;
+  float: left;
+  background-color: #fff;
+}
+.container {
+  width: 960px;
+}
+section, header, div, input, textarea {
+  @include box-sizing(border-box);
+}
+
+.hidden {
+  display: none;
+}
+.clear {
+  clear: both;
+}
+
+
+/* ----------------------------------------------
+ Fonts Paragrahps
+ ---------------------------------------------- */
+
+h2 {
+  padding: 40px 0 20px;
+  font: 48px $philosopher-Bold;
+  color: #666;
+  text-align: center;
+  span {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 2px;
+      top: 31px;
+      left: -63px;
+      background-color: $main-pink;
+    }
+    &:after {
+      left: auto;
+      right: -62px;
+    }
+  }
+}
+.business h2 span {
+  &:before, &:after {
+    background-color: $business-pink;
+  }
+}
+h3 {
+  margin: 15px 0 20px;
+  font-size: 30px;
+  color: $main-pink;
+  text-align: center;
+  font-weight: lighter;
+}
+.business h3 {
+  color: $business-pink;
+}
+
+
+/* ----------------------------------------------
+ Form Buttons Inputs Links Img
+ ---------------------------------------------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+}
+
+.button {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background-color: $main-pink;
+  @include border-radius(5px);
+  cursor: pointer;
+  &:hover {
+    background-color: $hover-pink;
+  }
+}
+.business .button {
+  background-color: $business-pink;
+  &:hover {
+    background-color: $business-hover-pink;
+  }
+}
+
+.order-call {
+  width: 140px;
+  height: 28px;
+  line-height: 26px;
+}
+.order__submit {
+  height: 44px;
+  margin: 10px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 1px;
+}
+.propose__submit {
+  width: 340px;
+  height: 46px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 46px;
+  letter-spacing: 1px;
+}
+
+input, textarea {
+  width: 300px;
+  font: 16px $philosopher-Italic;
+  color: #999;
+  text-align: center;
+  border: 1px solid #a7a98f;
+  @include border-radius(5px);
+}
+
+input {
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.902);
+}
+::-webkit-input-placeholder {
+  text-align:center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align:center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align:center;
+}
+
+:-ms-input-placeholder {
+  text-align:center;
+}
+
+textarea {
+  height: 120px;
+  padding: 10px;
+  background-color: #fbfbf4;
+}
+
+
+
+/* button scroll up */
+/*
+#scrlup {
+  position: fixed;
+  opacity: 0.8;
+  background: $main-pink;
+  @include border-radius(5px);
+  right: 10px;  bottom: -40px;
+  display: none;
+  cursor: pointer;
+  z-index: 20;
+}
+.business #scrlup {
+  background: $business-pink;
+}
+.upButton {
+  padding: 10px 15px;
+  opacity: 1;
+  display: block;
+  color: #fff;
+}
+*/
+
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+
+.pageheader {
+  position: relative;
+  height: 750px;
+}
+header {
+  height: 167px;
+  padding: 20px 0;
+  font-size: 16px;
+  div > div {float: left;}
+  b {
+    font-weight: bold;
+  }
+  .container {
+    padding: 0 10px;
+  }
+}
+.logo {
+  width: 235px;
+  font-size: 18px;
+  line-height: 3.7;
+  letter-spacing: 1px;
+  &:hover .logo__name {
+    color: $hover-pink;
+  }
+}
+.logo__name {
+  font: 60px $klementina;
+  color: $main-pink;
+  line-height: 0.5;
+  letter-spacing: normal;
+}
+.business .logo:hover .logo__name {
+  color: $business-hover-pink;
+}
+.business .logo__name {
+  color: $business-pink;
+}
+.slogan {
+  width: 395px;
+  padding: 7px 0;
+  line-height: 1.875;
+}
+.call-us {
+  width: 170px;
+  b {
+    font-size: 20px;
+  }
+  p:last-child {margin-top: -2px;}
+}
+.call-us__title {
+  padding-right: 20px;
+  font-size: 14px;
+  color: $main-pink;
+  text-align: right;
+}
+.business .call-us__title {
+  color: $business-pink;
+}
+.work-time {
+  width: 140px;
+  font-size: 14px;
+  text-align: right;
+  p + p {
+    margin-bottom: 10px;
+    line-height: 8px;
+  }
+  span {
+    font-size: 16px;
+    letter-spacing: -1px;
+  }
+}
+
+
+
+
+/* ----------------------------------------------
+ Footer
+ ---------------------------------------------- */
+
+footer {
+  height: 170px;
+  font-size: 16px;
+  background-color: #c3c5b2;
+  b {
+    font-weight: bold;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .logo {
+    width: 295px;
+  }
+}
+.footer__top{
+  height: 120px;
+  padding-top: 30px;
+  > div {
+    float: left;
+  }
+}
+.footer__bottom {
+  height: 50px;
+  padding-top: 15px;
+  border-top: 1px solid #d5d7c9;
+}
+.requisites {
+  width: 335px;
+  margin-top: 5px;
+  font-size: 15px;
+  line-height: 23px;
+}
+.private {
+  float: left;
+  font-size: 14px;
+  &:hover {
+    color: $hover-pink;
+  }
+}
+.business .private:hover {
+  color: $business-hover-pink;
+}
+.develop {
+  float: right;
+  font-size: 14px;
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: $hover-pink;
+    }
+  }
+}
+.business .develop a:hover {
+  color: $business-hover-pink;
+}
+
+/* ----------------------------------------------
+ Navigation
+ ---------------------------------------------- */
+
+.top-menu {
+  position: absolute;
+  height: 51px;
+  left: 0;
+  top: 116px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.251);
+  border: 1px solid $main-pink;
+  border-right: none;
+  border-left: none;
+  @include box-shadow(2.5px 4.33px 10px 0 rgba(1, 3, 3, 0.098));
+  li {
+    position: relative;
+    float: left;
+    margin-right: 1px;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 17px;
+      top: 17px;
+      right: -1px;
+      background-color: #fff;
+      z-index: 1;
+    }
+    &:before {
+      left: -1px;
+    }
+    &:hover {
+      color: $main-pink;
+      &:before, &:after {
+        background-color: $main-pink;
+        z-index: 2;
+      }
+    }
+    &.active {
+      color: $main-pink;
+      &:before, &:after {
+        background-color: $main-pink;
+        z-index: 2;
+      }
+    }
+  }
+  li:first-child:before {
+    display: none;
+  }
+  li:last-child {
+    margin-right: 0;
+    a {padding-right: 8px;}
+    &:after {
+      display: none;
+    }
+  }
+  a {
+    display: block;
+    padding: 13px 17px 14px;
+  }
+}
+.business .top-menu {
+  border-color: $business-pink;
+  li:hover {
+    color: $business-pink;
+    &:before, &:after {
+      background-color: $business-pink;
+    }
+  }
+}
+
+/* ----------------------------------------------
+Order
+---------------------------------------------- */
+
+.order .container {
+  padding: 0 10px;
+}
+.order__title {
+  float: left;
+  width: 640px;
+  margin-top: 340px;
+  font-size: 40px;
+  font-weight: bold;
+  color: $main-pink;
+  line-height: 50px;
+}
+.business .order__title {
+  color: $business-pink;
+}
+.order__form {
+  float: right;
+  width: 300px;
+  margin-top: 140px;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  > p {
+    position: relative;
+    margin-bottom: 1px;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 1px;
+      margin-left: -9px;
+      bottom: 3px;
+      left: 50%;
+      background-color: $main-pink;
+    }
+  }
+}
+.business .order__form > p:after {
+  background-color: $business-pink;
+}
+.top-line {
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+.second-line {
+  padding: 3px 0 15px;
+}
+
+.order-form {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
+  > p {
+    margin-bottom: 2px;
+  }
+  input {
+    margin-bottom: 8px;
+  }
+  textarea {
+    margin-bottom: 10px;
+  }
+  sup {
+    color: $main-pink;
+  }
+}
+.business .order-form sup {
+  color: $business-pink;
+}
+.phone {
+  font: 16px $openSans;
+}
+.confidentiality {
+  font-size: 12px;
+  color: #fff;
+  &:after {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------
+Section
+---------------------------------------------- */
+
+.hairdresser {
+  height: 1011px;
+}
+.content__block {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  color: #fff;
+  text-align: center;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > div {
+    display: table;
+    position: relative;
+    width: 280px;
+    height: 280px;
+    padding: 0 5px;
+    margin: 10px;
+    border: 3px solid #fff;
+    div {
+      display: table-cell;
+      vertical-align: middle;
+      p:first-child {
+        position: relative;
+        padding-bottom: 10px;
+        font: 30px $philosopher-BoldItalic;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 18px;
+          height: 1px;
+          margin-left: -9px;
+          bottom: -1px;
+          left: 50%;
+          background-color: $main-pink;
+        }
+      }
+    }
+  }
+  &:hover {
+    > div {
+      border-color: $main-pink;
+    }
+  }
+}
+.business .content__block {
+  > div p:first-child:after {
+    background-color: $business-pink;
+  }
+  &:hover > div {
+    border-color: $business-pink;
+  }
+}
+.price {
+  padding-top: 5px;
+  font-size: 18px;
+  span {
+    font-size: 24px;
+  }
+}
+
+.manicure {
+  height: 938px;
+  padding-top: 40px;
+}
+
+.massage {
+  height: 1270px;
+  padding-top: 50px;
+}
+
+.solarium {
+  height: 618px;
+  padding-top: 40px;
+  .content {
+    padding: 0 160px;
+  }
+  h3 {
+    margin-top: 12px;
+  }
+}
+
+.stylist {
+  height: 949px;
+  padding-top: 50px;
+  h3 {
+    margin-top: 12px;
+  }
+}
+
+.master {
+  height: 500px;
+}
+.master__block {
+  position: relative;
+  float: left;
+  width: 220px;
+  height: 220px;
+  margin: 10px;
+  @include box-shadow(10px 10px #c3c5b2);
+  p {
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border: 3px solid $main-pink;
+    z-index: 1;
+  }
+  &::before {
+    top: 7px;
+    left: 7px;
+    border-right: none;
+    border-bottom: none;
+  }
+  &::after {
+    bottom: 7px;
+    right: 7px;
+    border-left: none;
+    border-top: none;
+  }
+  &:hover::before, &:hover::after {
+    border-color: $hover-pink;
+  }
+  > div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      border: 3px solid #f4f5ec;
+      z-index: 1;
+    }
+    &::before {
+      bottom: -3px;
+      left: -3px;
+      border-right: none;
+      border-top: none;
+    }
+    &::after {
+      top: -3px;
+      right: -3px;
+      border-left: none;
+      border-bottom: none;
+    }
+  }
+  &:hover > div {
+    &::before, &::after {
+      border-color: $main-pink;
+    }
+  }
+}
+.business .master__block {
+  &:before, &:after {
+    border-color: $business-pink;
+  }
+  &:hover::before, &:hover::after {
+    border-color: $business-hover-pink;
+  }
+  &:hover > div {
+    &::before, &::after {
+      border-color: $business-pink;
+    }
+  }
+}
+.master__block + .master__block {
+  margin-left: 130px;
+}
+.master__name {
+  position: relative;
+  padding-top: 14px !important;
+  padding-bottom: 10px;
+  font: 24px $philosopher-BoldItalic !important;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    margin-left: -9px;
+    bottom: -1px;
+    left: 50%;
+    background-color: $main-pink;
+  }
+}
+.business .master__name:after {
+  background-color: $business-pink;
+}
+
+.honors {
+  height: 842px;
+}
+.honors__block {
+  float: left;
+  width: 221px;
+  height: 295px;
+  margin: 10px 10px 50px;
+  @include box-shadow(20px 20px 20px rgba(0, 0, 0, 0.2));
+}
+.honors__block + .honors__block {
+  margin-left: 128px;
+}
+.honors__block:nth-child(5) {
+  margin-left: 170px;
+}
+
+.multipurpose-order {
+  height: 608px;
+  .container {
+    padding-right: 10px;
+  }
+  .order__form {
+    margin-top: 30px;
+  }
+}
+.multipurpose-order__title {
+  float: right;
+  width: 470px;
+  margin-top: 37px;
+  margin-left: 490px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 52px;
+  span {
+    color: $main-pink;
+    letter-spacing: 3px;
+  }
+}
+.business .multipurpose-order__title span {
+  color: $business-pink;
+}
+
+.reviews {
+  height: 846px;
+  h2 {
+    padding-top: 50px;
+  }
+}
+.reviews__block {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 49.5%;
+  padding: 15px 20px 14px 170px;
+  img {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 20px;
+    left: 10px;
+    @include border-radius(50%);
+    @include box-shadow(10px 10px #c3c5b2);
+  }
+  p {
+    margin: 5px 0 15px;
+    line-height: 17px;
+  }
+}
+.image-design {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 25px;
+  left: 15px;
+  border: 2px solid $main-pink;
+  @include border-radius(50%);
+  z-index: 1;
+  &:hover {
+    border-color: $hover-pink;
+  }
+}
+.business .image-design {
+  border-color: $business-pink;
+  &:hover {
+    border-color: $business-hover-pink;
+  }
+}
+.client-name {
+  position: relative;
+  margin: 0;
+  padding-bottom: 15px;
+  font: 18px $philosopher-Bold;
+  text-align: left;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 1px;
+    bottom: 2px;
+    left: 0;
+    background-color: $main-pink;
+  }
+}
+.business .client-name:after {
+  background-color: $business-pink;
+}
+
+.contacts {
+  height: 712px;
+  h2{
+    padding-bottom: 40px;
+  }
+}
+.map {
+  height: 580px;
+  background-color: grey;
+}
+.wrap-info {
+  position: relative;
+  width: 960px;
+  height: 0;
+}
+.info {
+  position: absolute;
+  width: 380px;
+  height: 416px;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  @include box-shadow(10px 10px #c3c5b2);
+  z-index: 10;
+  > div {
+    height: 395px;
+    padding: 15.5px 19px;
+    margin: 10px;
+    border: 2px solid $main-pink;
+    div {
+      margin-bottom: 21px;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  b {
+    font-size: 20px;
+  }
+}
+.business .info > div {
+  border-color: $business-pink;
+}
+.info__title {
+  margin-bottom: 10px;
+  font: 20px $philosopher-BoldItalic;
+  color: $main-pink;
+  letter-spacing: 2px;
+}
+.business .info__title {
+  color: $business-pink;
+}
+.info__email {
+  font-family: $philosopher-Italic;
+}
+.question {
+  padding-top: 14px;
+  font: 30px $philosopher-BoldItalic !important;
+}
+.ask-question {
+  padding-top: 3px;
+  font-size: 19px !important;
+  color: $main-pink;
+  a {
+    border-bottom: 1px dashed $main-pink;
+  }
+  &:hover {
+    color: $hover-pink;
+    a {
+      border-bottom-color: $hover-pink;
+    }
+  }
+}
+.business .ask-question {
+  color: $business-pink;
+  a {
+    border-bottom-color: $business-pink;
+  }
+  &:hover {
+    color: $business-hover-pink;
+    a {
+      border-bottom-color: $business-hover-pink;
+    }
+  }
+}
+
+
+
+/* ----------------------------------------------
+Thanks-page
+---------------------------------------------- */
+
+.thanks-page {
+  .pageheader {
+    position: relative;
+    height: 100%;
+    min-height: 550px;
+    padding-bottom: 170px;
+    margin-bottom: -170px; /* высота футера */
+  }
+  .page-wrap {
+    height: 100%;
+  }
+  footer {
+    position: relative;
+  }
+}
+.thanks__title {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 40px;
+  font-size: 60px;
+  color: $main-pink;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 1px;
+    margin-left: -14px;
+    bottom: 20px;
+    left: 50%;
+    background-color: $main-pink;
+  }
+  p {
+    font-size: 36px;
+  }
+}
+.business .thanks__title {
+  padding-bottom: 40px;
+  color: $business-pink;
+}
+.thanks__text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+.thanks__content {
+  position: relative;
+  height: 200px;
+  margin-top: -182px;
+  top: 50%;
+  right: 0;
+  text-align: center;
+  .container {
+    position: relative;
+    > div {
+      position: absolute;
+      width: 480px;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+/*
+.thanks {
+  height: inherit;
+  div {
+    width: 510px;
+    height: 120px;
+    margin-top: -60px;
+    position: relative;
+    top: 50%;
+    right: -219px;
+    text-align: center;
+  }
+  h2 {
+    padding-bottom: 22px;
+    font: 38px $cuprum-bold;
+    color: #6e4947;
+  }
+  b {
+    padding-left: 11px;
+    color: #4a4a4a;
+  }
+}
+*/
+
+/* ----------------------------------------------
+ Colors Backgrounds
+ ---------------------------------------------- */
+
+.pageheader {
+  background: url("../images/big_blocks/top_econom.jpg") no-repeat center top;
+  background-size: cover;
+}
+.business .pageheader {
+  background: url("../images/big_blocks/top.jpg") no-repeat center top;
+  background-size: cover;
+}
+.manicure, .solarium, .master {background-color: $background;}
+.multipurpose-order {
+  background: url("../images/big_blocks/discount.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.title-icon {
+  width: 58px;
+  height: 58px;
+  background: url("../images/sprite_econom.png") no-repeat;
+}
+.business .title-icon {
+  background: url("../images/sprite.png") no-repeat;
+}
+.hairdresser-icon {
+  background-position: 0 0 !important;
+}
+.manicure-icon {
+  background-position: -72px -72px !important;
+}
+.massage-icon {
+  background-position: -144px -144px !important;
+}
+.solarium-icon {
+  background-position: -216px -216px !important;
+}
+.stylist-icon {
+  background-position: -288px -288px !important;
+}
+
+
+
+/* ----------------------------------------------
+Pop up
+---------------------------------------------- */
+
+/*.pop-up-bg {
+  position: fixed;
+  display: none;
+  width:100%;
+  min-height:100%;
+  height: 100%;
+  top:0;
+  background-color: rgba(0,0,0,0.8);
+  overflow:hidden;
+  z-index: 99;
+}*/
+
+.pop-up-bg {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  z-index: 50;
+  .pop-up__block {
+    position: fixed;
+    display: none;
+    width: 500px;
+    height: 406px;
+    margin-top: -203px;
+    margin-left: -250px;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+  }
+  .big__block {
+    height: 560px;
+    margin-top: -280px;
+  }
+}
+.pop-up__honors__block {
+  position: fixed;
+  display: none;
+  width: 442px;
+  height: 590px;
+  margin-top: -295px;
+  margin-left: -221px;
+  top: 50%;
+  left: 50%;
+  .prev, .next {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    margin-top: -125px;
+    top: 50%;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      margin-top: -25px;
+      top: 50%;
+      left: 50%;
+      border-top: 5px solid $main-pink;
+      border-right: 5px solid $main-pink;
+      @include transform(rotate(225deg));
+    }
+    &:hover::before {
+      border-color: $hover-pink;
+    }
+  }
+  .prev {
+    left: -100px;
+    &::before {
+      margin-left: -50px;
+    }
+  }
+  .next {
+    right: - 100px;
+    &::before {
+      margin-right: -50px;
+      @include transform(rotate(45deg));
+    }
+  }
+}
+.business .pop-up__honors__block {
+  .prev, .next {
+    &::before {
+      border-color: $business-pink;
+    }
+    &:hover::before {
+      border-color: $business-hover-pink;
+    }
+  }
+}
+
+.pop-up__content {
+  width: 460px;
+  height: 366px;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid $main-pink;
+}
+.big__content {
+  height: 520px;
+}
+.business .pop-up__content {
+  border-color: $business-pink;
+}
+
+.intro__content {
+  border-color: $main-pink !important;
+  > p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  > a{
+    float: left;
+    width: 50%;
+    font: 24px $philosopher-Bold;
+    cursor: pointer;
+    span {
+      text-decoration: underline;
+    }
+    &:hover span {
+      text-decoration: none;
+    }
+  }
+}
+.wellcome {
+  position: relative;
+  padding-top: 30px;
+  font-size: 30px;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    margin-left: -8px;
+    bottom: 10px;
+    left: 50%;
+    background-color: #333;
+  }
+}
+.choice-icon {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 25px;
+  background: url("../images/sprite.png") no-repeat;
+  @include border-radius(50%);
+  @include box-shadow(10px 10px #c3c5b2);
+}
+.econom-choice {
+  color: $main-pink;
+  .choice-icon {
+    background-position: -288px -576px;
+  }
+  &:hover .choice-icon {
+    background-position: -432px -720px;
+  }
+}
+.business-choice {
+  color: $business-hover-pink;
+  .choice-icon {
+    background-position: 0 -288px;
+  }
+  &:hover .choice-icon {
+    background-position: -144px -432px;
+  }
+}
+
+
+.form-request__h2 {
+  position: relative;
+  padding-top: 30px;
+  font-size: 36px;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    margin-left: -9px;
+    bottom: 10px;
+    left: 50%;
+    background-color: $main-pink;
+  }
+}
+.business .form-request__h2:after {
+  background-color: $business-pink;
+}
+
+.form-request__content {
+  .order__form {
+    float: none;
+    margin-top: 10px;
+  }
+  .order-form {
+    margin-top: 0;
+  }
+  input {
+    background-color: rgba(251, 251, 243, 0.902);
+  }
+  .confidentiality {
+    color: #666;
+  }
+}
+
+.close {
+  position: absolute;
+  top: -25px;
+  right: -28px;
+  a {
+    width: 26px;
+    height: 26px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #404040;
+    line-height: 26px;
+    text-align: center;
+    background-color: #ff9dda;
+    @include border-radius(50%);
+    &:hover {
+      background-color: $main-pink;
+    }
+  }
+}
+.business .close a {
+  background-color: #ffaefd;
+  &:hover {
+    background-color: #ea37ea;
+  }
+}
+
+
+
+/*js Classes*/
+
+.js-top-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+#scrollUp {
+  position: fixed;
+  width: 44px;
+  height: 36px;
+  background-color: $main-pink;
+  @include border-radius(5px);
+  right: 10px;
+  bottom: -40px;
+  display: none;
+  @include transition(background-color 0.2s ease-in-out);
+  cursor: pointer;
+  z-index: 20;
+  &:hover {
+    background: $hover-pink;
+  }
+  .upButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    opacity: 1;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    @include transform(rotate(45deg));
+  }
+}
+.business #scrollUp {
+  background-color: $business-pink;
+  &:hover {
+    background-color: $business-hover-pink;
+  }
+}
+
+/*Forms*/
+.form-success {
+  border-color: green !important;
+}
+.form-fail {
+  border-color: red !important;
+}
+
+/* ----------------------------------------------
+Media queries
+---------------------------------------------- */
+
+/*
+@media screen and (min-width: 1070px) {
+  .container div:hover {
+    @include transform(scale(1.2));
+    z-index: 5;
+    p {
+      margin-top: 15px;
+    }
+  }
+  .reviews-client .container div:hover p {
+    margin-top: -14px;
+  }
+}
+*/
