@@ -42,6 +42,8 @@ jQuery(document).ready(function ($) {
                 zoom: zoomT
             });
 
+            myMap.behaviors.disable('scrollZoom');
+
             var myPlacemark = new ymaps.Placemark(myPlacemark, {
                 balloonContent: 'Профессиональные услуги салона красоты «БиОЛа» в Печатниках!'
             }, {
