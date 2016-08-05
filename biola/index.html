@@ -8,25 +8,30 @@
 
     <title>Салон красоты Биола</title>
 
-    <link rel="shortcut icon" href="images/favicon-2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon-1.ico" type="image/x-icon">
 
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/styles.css">
+
 
     <!--Scripts-->
     <script src="scripts/firstInit.js" async></script>
     <script src="scripts/jquery-2.1.3.min.js" defer></script>
     <script src="scripts/jquery.maskedinput.min.js" defer></script>
+    <script src="scripts/slick.min.js" defer></script>
     <script src="scripts/app.js" defer></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer> </script>
     <script src="scripts/jquery.fancybox.pack.js" defer></script>
     <script src="scripts/lateInit.js" defer></script>
 </head>
-<body class="econom">
+<body class="business">
 <!-- /Yandex.Metrika counter -->
 <noscript><div><img src="https://mc.yandex.ru/watch/38158930" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
 <div class="page-wrap">
 
     <section class="pageheader">
@@ -87,10 +92,10 @@
                         <p>Введите ваш телефон <sup>*</sup></p>
                         <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                         <input class="hidden" name="subject" value="Заявка на сеанс" type="text">
-                        <div class="button order__submit" data-yaTarget="FORMA1ECONOM" data-action="submit">Записаться</div>
+                        <div class="button order__submit" data-yaTarget="FORMA1BIZ">Записаться</div>
                     </form>
 
-                    <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                    <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                 </div>
 
             </div>
@@ -339,7 +344,7 @@
         </div>
     </section><!--massage-->
 
-    <section class="solarium" id="solarium">
+    <section class="solarium">
         <div class="container">
             <div class="title-block">
                 <div class="title-icon solarium-icon"></div>
@@ -374,7 +379,7 @@
         </div>
     </section><!--solarium-->
 
-    <section class="stylist hidden">
+    <section class="stylist">
         <div class="container">
             <div class="title-block">
                 <div class="title-icon stylist-icon"></div>
@@ -444,6 +449,149 @@
 
         </div>
     </section><!--stylist-->
+
+    <section class="visagiste" id="visagiste">
+        <div class="container">
+            <div class="title-block">
+                <div class="title-icon visagiste-icon"></div>
+                <h3>Услуги визажиста</h3>
+            </div>
+
+            <div class="content">
+                <div class="content__block">
+                    <img src="images/visage/visage_1.jpg" alt="Маникюр">
+                    <div>
+                        <div>
+                            <p>Дневной макияж</p>
+                            <p class="price">от <span>990</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/visage/visage_2.jpg" alt="Педикюр">
+                    <div>
+                        <div>
+                            <p>Вечерний макияж</p>
+                            <p class="price">от <span>390</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/visage/visage_3.jpg" alt="Гель лак">
+                    <div>
+                        <div>
+                            <p>Smoky Eyes</p>
+                            <p class="price">от <span>200</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/visage/visage_4.jpg" alt="СПА уход">
+                    <div>
+                        <div>
+                            <p>Свадебный макияж</p>
+                            <p class="price">от <span>2 890</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/visage/visage_5.jpg" alt="Парафино-терапия">
+                    <div>
+                        <div>
+                            <p>Деловой макияж</p>
+                            <p class="price">от <span>2 980</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <img src="images/visage/visage_6.jpg" alt="Покрытие френч">
+                    <div>
+                        <div>
+                            <p>Лифтинг макияж</p>
+                            <p class="price">от <span>690</span> руб</p>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+
+            </div>
+
+            <a class="button propose__submit" data-action="open" href="#visagiste-request">Записаться к визажисту</a>
+
+        </div>
+    </section><!--visagiste-->
+
+    <section class="how-work" id="how-work">
+        <div class="container">
+            <h2><span>Как мы работаем</span></h2>
+
+            <div class="content">
+                <div class="how-work__block">
+                    <div class="how-work-icon phone-icon"></div>
+                    <div>
+                        <p>01.</p>
+                        <p>Вы оставляете заказ по телефону или онлайн</p>
+                        <p><a href="#">Оставить заявку</a></p>
+                    </div>
+                </div>
+                <div class="how-work__block">
+                    <div class="how-work-icon headphones-icon"></div>
+                    <div>
+                        <p>02.</p>
+                        <p>Мы связываемся с Вами
+                            и договариваемся
+                            о месте и времени</p>
+                    </div>
+                </div>
+                <div class="how-work__block">
+                    <div class="how-work-icon clock-icon"></div>
+                    <div>
+                        <p>03.</p>
+                        <p>Мастер приезжает к Вам домой / в офис
+                            в назначенное время</p>
+                    </div>
+                </div>
+                <div class="how-work__block">
+                    <div class="how-work-icon scissors-icon"></div>
+                    <div>
+                        <p>04.</p>
+                        <p>Оказывает Вам заказанную услугу</p>
+                    </div>
+                </div>
+                <div class="how-work__block">
+                    <div class="how-work-icon star-icon"></div>
+                    <div>
+                        <p>05.</p>
+                        <p>Вы КРАСОТКА! Вы выглядите превосходно и готовы покорять мир!</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!--how-work-->
+
+    <section class="portfolio">
+        <div class="container">
+            <h2><span>Портфолио</span></h2>
+
+            <div id="slider" class="slider">
+                <div class="slide">
+                    <img src="images/slider/slide_1.jpg" alt="">
+                    <p>Сделан дневной макияж и укладка</p>
+                </div>
+                <div class="slide">
+                    <img src="images/slider/slide_1.jpg" alt="">
+                    <p>Макияж бомба!</p>
+                </div>
+                <div class="slide">
+                    <img src="images/slider/slide_1.jpg" alt="">
+                    <p>Сделан дневной макияж и не только</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <section class="master" id="master">
         <div class="container">
@@ -518,10 +666,10 @@
                     <p>Введите ваш телефон <sup>*</sup></p>
                     <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                     <input class="hidden" name="subject" value="Заявка на комплексный сеанс" type="text">
-                    <div class="button order__submit" data-yaTarget="KOMPLEKS10ECONOM" data-action="submit">Получить скидку</div>
+                    <div class="button order__submit" data-yaTarget="KOMPLEKS10BIZ">Получить скидку</div>
                 </form>
 
-                <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
             </div>
 
         </div>
@@ -704,10 +852,10 @@
                             <p>Введите ваш телефон <sup>*</sup></p>
                             <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                             <input class="hidden" name="subject" value="Заявка на звонок" type="text">
-                            <div class="button order__submit" data-yaTarget="ZVONOKECONOM" data-action="submit">Заказать звонок</div>
+                            <div class="button order__submit" data-yaTarget="ZVONOKBIZ" data-action="submit">Заказать звонок</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -726,10 +874,10 @@
                             <p>Введите ваш телефон <sup>*</sup></p>
                             <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                             <input class="hidden" name="subject" value="Заявка на маникюр" type="text">
-                            <div class="button order__submit" data-yaTarget="MANICURECONOM" data-action="submit">Записаться</div>
+                            <div class="button order__submit" data-yaTarget="MANICURBIZ" data-action="submit">Записаться</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -748,10 +896,10 @@
                             <p>Введите ваш телефон <sup>*</sup></p>
                             <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                             <input class="hidden" name="subject" value="Заявка к парикмахеру" type="text">
-                            <div class="button order__submit" data-yaTarget="PARIKMAXERECONOM" data-action="submit">Записаться</div>
+                            <div class="button order__submit" data-yaTarget="PARIKMAXERBIZ" data-action="submit">Записаться</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -770,10 +918,10 @@
                             <p>Введите ваш телефон <sup>*</sup></p>
                             <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                             <input class="hidden" name="subject" value="Заявка к массажисту" type="text">
-                            <div class="button order__submit" data-yaTarget="MASSAZHECONOM" data-action="submit">Записаться</div>
+                            <div class="button order__submit" data-yaTarget="MASSAZHBIZ" data-action="submit">Записаться</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -792,10 +940,32 @@
                             <p>Введите ваш телефон <sup>*</sup></p>
                             <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
                             <input class="hidden" name="subject" value="Заявка в солярий" type="text">
-                            <div class="button order__submit" data-yaTarget="SOLYARIYECONOM" data-action="submit">Записаться</div>
+                            <div class="button order__submit" data-yaTarget="SOLYARIYBIZ" data-action="submit">Записаться</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- всплывающее окно Записаться к визажисту -->
+
+            <div id="visagiste-request" class="pop-up__block">
+                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
+                <div class="pop-up__content form-request__content">
+                    <h2 class="form-request__h2">Записаться к визажисту</h2>
+                    <div class="order__form">
+
+                        <form id="visagiste-order" class="order-form" action="mail/mailer.php" method="post" novalidate="novalidate">
+                            <p>Введите ваше имя</p>
+                            <input name="name" maxlength="50" placeholder="Анна Иванова" type="text">
+                            <p>Введите ваш телефон <sup>*</sup></p>
+                            <input class="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel">
+                            <input class="hidden" name="subject" value="Заявка к визажисту" type="text">
+                            <div class="button order__submit" data-yaTarget="SOLYARIYBIZ" data-action="submit">Записаться</div>
+                        </form>
+
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -817,7 +987,7 @@
                             <div class="button order__submit" data-yaTarget="" data-action="submit">Записаться</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -838,10 +1008,10 @@
                             <p>Ваш вопрос <sup>*</sup></p>
                             <textarea name="message" placeholder="Введите ваш вопрос" required=""></textarea>
                             <input class="hidden" name="subject" value="Вопрос менеджеру" type="text">
-                            <div class="button order__submit" data-yaTarget="VOPROSECONOM" data-action="submit">Задать вопрос</div>
+                            <div class="button order__submit" data-yaTarget="VOPROSBIZ" data-action="submit">Задать вопрос</div>
                         </form>
 
-                        <p class="confidentiality">Ваши контактные данные в бесопасности и не будут переданы третьим лицам</p>
+                        <p class="confidentiality">Ваши контактные данные в безопасности и не будут переданы третьим лицам</p>
                     </div>
                 </div>
             </div>
@@ -853,16 +1023,16 @@
                 <div class="pop-up__content intro__content">
                     <h2 class="wellcome">Добро пожаловать!</h2>
                     <p>Пожалуйста выберите категорию услуг:</p>
-                    <a href="#" data-action="close">
-                        <div class="econom-choice" data-action="close">
-                            <div class="choice-icon" data-action="close"></div>
-                            <p><span data-action="close">Эконом</span></p>
+                    <a href="/index.html#choosen_">
+                        <div class="econom-choice">
+                            <div class="choice-icon"></div>
+                            <p><span>Эконом</span></p>
                         </div>
                     </a>
-                    <a href="index-business.html#choosen_">
-                        <div class="business-choice">
-                            <div class="choice-icon"></div>
-                            <p><span>Бизнес</span></p>
+                    <a href="#" data-action="close">
+                        <div class="business-choice" data-action="close">
+                            <div class="choice-icon" data-action="close"></div>
+                            <p><span data-action="close">Бизнес</span></p>
                         </div>
                     </a>
                 </div>

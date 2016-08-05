@@ -91,11 +91,8 @@
 // color and fonts variable //
 
 $background: #f4f5ec;
-$main-pink: #e0008c;
-$hover-pink: #be0077;
-
-$business-pink: #e837e9;
-$business-hover-pink: #ab2dab;
+$main-pink: #e837e9;
+$hover-pink: #ab2dab;
 
 $klementina: "Klementina";
 $openSans: 'Open Sans', sans-serif;;
@@ -177,20 +174,12 @@ h2 {
     }
   }
 }
-.business h2 span {
-  &:before, &:after {
-    background-color: $business-pink;
-  }
-}
 h3 {
   margin: 15px 0 20px;
   font-size: 30px;
   color: $main-pink;
   text-align: center;
   font-weight: lighter;
-}
-.business h3 {
-  color: $business-pink;
 }
 
 
@@ -218,12 +207,6 @@ img {
   cursor: pointer;
   &:hover {
     background-color: $hover-pink;
-  }
-}
-.business .button {
-  background-color: $business-pink;
-  &:hover {
-    background-color: $business-hover-pink;
   }
 }
 
@@ -300,9 +283,6 @@ textarea {
   cursor: pointer;
   z-index: 20;
 }
-.business #scrlup {
-  background: $business-pink;
-}
 .upButton {
   padding: 10px 15px;
   opacity: 1;
@@ -347,12 +327,6 @@ header {
   line-height: 0.5;
   letter-spacing: normal;
 }
-.business .logo:hover .logo__name {
-  color: $business-hover-pink;
-}
-.business .logo__name {
-  color: $business-pink;
-}
 .slogan {
   width: 395px;
   padding: 7px 0;
@@ -370,9 +344,6 @@ header {
   font-size: 14px;
   color: $main-pink;
   text-align: right;
-}
-.business .call-us__title {
-  color: $business-pink;
 }
 .work-time {
   width: 140px;
@@ -434,9 +405,6 @@ footer {
     color: $hover-pink;
   }
 }
-.business .private:hover {
-  color: $business-hover-pink;
-}
 .develop {
   float: right;
   font-size: 14px;
@@ -446,9 +414,6 @@ footer {
       color: $hover-pink;
     }
   }
-}
-.business .develop a:hover {
-  color: $business-hover-pink;
 }
 
 /* ----------------------------------------------
@@ -515,15 +480,6 @@ footer {
     padding: 13px 17px 14px;
   }
 }
-.business .top-menu {
-  border-color: $business-pink;
-  li:hover {
-    color: $business-pink;
-    &:before, &:after {
-      background-color: $business-pink;
-    }
-  }
-}
 
 /* ----------------------------------------------
 Order
@@ -540,9 +496,6 @@ Order
   font-weight: bold;
   color: $main-pink;
   line-height: 50px;
-}
-.business .order__title {
-  color: $business-pink;
 }
 .order__form {
   float: right;
@@ -565,9 +518,6 @@ Order
       background-color: $main-pink;
     }
   }
-}
-.business .order__form > p:after {
-  background-color: $business-pink;
 }
 .top-line {
   padding-bottom: 15px;
@@ -593,9 +543,6 @@ Order
   sup {
     color: $main-pink;
   }
-}
-.business .order-form sup {
-  color: $business-pink;
 }
 .phone {
   font: 16px $openSans;
@@ -660,14 +607,6 @@ Section
     > div {
       border-color: $main-pink;
     }
-  }
-}
-.business .content__block {
-  > div p:first-child:after {
-    background-color: $business-pink;
-  }
-  &:hover > div {
-    border-color: $business-pink;
   }
 }
 .price {
@@ -737,14 +676,14 @@ Section
       height: 1px;
       bottom: -1px;
       left: 0;
-      background-color: $business-pink;
+      background-color: $main-pink;
     }
   }
   a {
-    color: $business-pink;
+    color: $main-pink;
     text-decoration: underline;
     &:hover {
-      color: $business-hover-pink;
+      color: $hover-pink;
     }
   }
 }
@@ -790,7 +729,7 @@ Section
       top: -1px;
       left: 50%;
       margin-left: -9px;
-      background-color: $business-pink;
+      background-color: $main-pink;
     }
   }
 }
@@ -885,19 +824,6 @@ Section
     }
   }
 }
-.business .master__block {
-  &:before, &:after {
-    border-color: $business-pink;
-  }
-  &:hover::before, &:hover::after {
-    border-color: $business-hover-pink;
-  }
-  &:hover > div {
-    &::before, &::after {
-      border-color: $business-pink;
-    }
-  }
-}
 .master__block + .master__block {
   margin-left: 130px;
 }
@@ -916,9 +842,6 @@ Section
     left: 50%;
     background-color: $main-pink;
   }
-}
-.business .master__name:after {
-  background-color: $business-pink;
 }
 
 .honors {
@@ -961,9 +884,6 @@ Section
     letter-spacing: 3px;
   }
 }
-.business .multipurpose-order__title span {
-  color: $business-pink;
-}
 
 .reviews {
   height: 846px;
@@ -1004,12 +924,6 @@ Section
     border-color: $hover-pink;
   }
 }
-.business .image-design {
-  border-color: $business-pink;
-  &:hover {
-    border-color: $business-hover-pink;
-  }
-}
 .client-name {
   position: relative;
   margin: 0;
@@ -1025,9 +939,6 @@ Section
     left: 0;
     background-color: $main-pink;
   }
-}
-.business .client-name:after {
-  background-color: $business-pink;
 }
 
 .contacts {
@@ -1071,17 +982,11 @@ Section
     font-size: 20px;
   }
 }
-.business .info > div {
-  border-color: $business-pink;
-}
 .info__title {
   margin-bottom: 10px;
   font: 20px $philosopher-BoldItalic;
   color: $main-pink;
   letter-spacing: 2px;
-}
-.business .info__title {
-  color: $business-pink;
 }
 .info__email {
   font-family: $philosopher-Italic;
@@ -1101,18 +1006,6 @@ Section
     color: $hover-pink;
     a {
       border-bottom-color: $hover-pink;
-    }
-  }
-}
-.business .ask-question {
-  color: $business-pink;
-  a {
-    border-bottom-color: $business-pink;
-  }
-  &:hover {
-    color: $business-hover-pink;
-    a {
-      border-bottom-color: $business-hover-pink;
     }
   }
 }
@@ -1157,10 +1050,6 @@ Thanks-page
   p {
     font-size: 36px;
   }
-}
-.business .thanks__title {
-  padding-bottom: 40px;
-  color: $business-pink;
 }
 .thanks__text {
   font-size: 18px;
@@ -1215,11 +1104,8 @@ Thanks-page
  Colors Backgrounds
  ---------------------------------------------- */
 
+
 .pageheader {
-  background: url("../images/big_blocks/top_econom.jpg") no-repeat center top;
-  background-size: cover;
-}
-.business .pageheader {
   background: url("../images/big_blocks/top.jpg") no-repeat center top;
   background-size: cover;
 }
@@ -1232,9 +1118,6 @@ Thanks-page
 .title-icon {
   width: 58px;
   height: 58px;
-  background: url("../images/sprite_econom.png") no-repeat;
-}
-.business .title-icon {
   background: url("../images/sprite.png") no-repeat;
 }
 .hairdresser-icon {
@@ -1369,16 +1252,6 @@ Pop up
     }
   }
 }
-.business .pop-up__honors__block {
-  .prev, .next {
-    &::before {
-      border-color: $business-pink;
-    }
-    &:hover::before {
-      border-color: $business-hover-pink;
-    }
-  }
-}
 
 .pop-up__content {
   width: 460px;
@@ -1389,9 +1262,6 @@ Pop up
 }
 .big__content {
   height: 520px;
-}
-.business .pop-up__content {
-  border-color: $business-pink;
 }
 
 .intro__content {
@@ -1437,17 +1307,8 @@ Pop up
   @include border-radius(50%);
   @include box-shadow(10px 10px #c3c5b2);
 }
-.econom-choice {
-  color: $main-pink;
-  .choice-icon {
-    background-position: -288px -576px;
-  }
-  &:hover .choice-icon {
-    background-position: -432px -720px;
-  }
-}
 .business-choice {
-  color: $business-hover-pink;
+  color: $main-pink;;
   .choice-icon {
     background-position: 0 -288px;
   }
@@ -1471,9 +1332,6 @@ Pop up
     left: 50%;
     background-color: $main-pink;
   }
-}
-.business .form-request__h2:after {
-  background-color: $business-pink;
 }
 
 .form-request__content {
@@ -1505,17 +1363,11 @@ Pop up
     color: #404040;
     line-height: 26px;
     text-align: center;
-    background-color: #ff9dda;
+    background-color: #ffaefd;
     @include border-radius(50%);
     &:hover {
-      background-color: $main-pink;
+      background-color: #ea37ea;
     }
-  }
-}
-.business .close a {
-  background-color: #ffaefd;
-  &:hover {
-    background-color: #ea37ea;
   }
 }
 
@@ -1559,12 +1411,7 @@ Pop up
     @include transform(rotate(45deg));
   }
 }
-.business #scrollUp {
-  background-color: $business-pink;
-  &:hover {
-    background-color: $business-hover-pink;
-  }
-}
+
 
 /*Forms*/
 .form-success {

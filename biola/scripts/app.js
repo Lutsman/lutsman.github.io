@@ -547,15 +547,13 @@ jQuery(document).ready(function ($) {
         var formsListControl = new FormController({
             submitCelector: '.button.order__submit',
             resolve: function () {
-                if($('body').hasClass('business')) {
-                    goToNewUrl('thanks-business.html');
-                } else {
-                    goToNewUrl('thanks-econom.html');
-                }
+                goToNewUrl('thanks.html');
             },
             reject: function (status) {
-                throw new Error(status);
-                console.log('Error');
+                var error = new Error(status);
+
+                throw error;
+                console.log(error);
             },
             beforeSend: function (formData, form) {
                 if($('body').hasClass('business')) {
