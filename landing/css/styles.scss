@@ -1,0 +1,762 @@
+@charset "UTF-8";
+
+// mixin //
+
+@mixin border-radius($rads...) {
+  -moz-border-radius: $rads;
+  -webkit-border-radius: $rads;
+  border-radius: $rads;
+}
+@mixin transition($transitions...) {
+  -webkit-transition: $transitions;
+  -moz-transition: $transitions;
+  -o-transition: $transitions;
+  transition: $transitions;
+}
+@mixin transform($transform) {
+  -ms-transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+
+/* ----------------------------------------------
+ Connect fonts
+ ---------------------------------------------- */
+
+@font-face {
+  font-family: 'MuseoSans100';
+  src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans300';
+  src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl_0.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans500';
+  src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl_1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans700';
+  src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl_2.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans900';
+  src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl_3.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FedraSansProBookItalic';
+  src: url("fonts/Fedra-Sans-Pro-Book-Italic_17237.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FedraSansProBoldItalic';
+  src: url("fonts/Fedra-Sans-Pro-Bold-Italic_17236.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionProBoldCn';
+  src: url("fonts/minion_pro/MinionPro-BoldCn.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// color and fonts variable //
+
+$main-green: #0c8412;
+$text-grey: #333;
+$hover-green: lighten($main-green, 10%);
+$hover-black: lighten(#000, 30%);
+$hover-grey: lighten(#333, 30%);
+/*$bg-grey: #706969;*/
+
+
+$museoSans100: "MuseoSans100";
+$museoSans300: "MuseoSans300";
+$museoSans500: "MuseoSans500";
+$museoSans700: "MuseoSans700";
+$museoSans900: "MuseoSans900";
+
+$fedraSansProBookItalic: "FedraSansProBookItalic";
+$fedraSansProBoldItalic: "FedraSansProBoldItalic";
+
+$minionProBoldCn: "MinionProBoldCn";
+
+/* ----------------------------------------------
+ Reset
+ ---------------------------------------------- */
+
+* {
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------
+ Main
+ ---------------------------------------------- */
+
+body {
+  max-width: 2000px;
+  margin: 0 auto;
+  font: 17px $museoSans100;
+  color: #000;
+  background-color: #fff;
+}
+section {
+  position: relative;
+}
+section:not(.pageheader) {
+  min-height: 1080px;
+}
+
+
+/* ----------------------------------------------
+ Fonts Paragrahps
+ ---------------------------------------------- */
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 45px;
+  font: 70px $museoSans900;
+  color: $main-green;
+  text-align: center;
+}
+h2 {
+  margin-top: 90px;
+  font-size: 107px;
+}
+h3 {
+  font: 47px $museoSans700;
+}
+h4 {
+  margin-top: 40px;
+  font: 30px $museoSans700;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* ----------------------------------------------
+ Form Buttons Inputs Links Img
+ ---------------------------------------------- */
+a {
+  color:inherit;
+}
+
+.login-btn {
+  float: right;
+  width: 173px;
+  height: 37px;
+  padding: 0;
+  margin: 25px 45px 25px 30px;
+  font: 21px $museoSans700;
+  color: #fff;
+  background-color: $main-green;
+  &:hover {
+    color: #fff;
+    background-color: $hover-green;
+  }
+}
+.create-wallet-btn {
+  width: 300px;
+  height: 80px;
+  font: 37px $museoSans700;
+  color: #fff;
+  background-color: $main-green;
+  &:hover {
+    color: #fff;
+    background-color: $hover-green;
+  }
+}
+.start-using-btn {
+  width: 261px;
+  height: 80px;
+  margin-left: 5px;
+  font: 37px $museoSans700;
+  color: #fff;
+  background-color: #000;
+  &:hover {
+    color: #fff;
+    background-color: $hover-black;
+  }
+}
+.mouse-scroll {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  margin: 0 20px;
+  bottom: -16px;
+  background: url("../img/sprite.png") no-repeat -254px 0;
+  &:hover {
+    opacity: 0.7;
+  }
+
+}
+.roadmap-btn {
+  position: relative;
+  width: 192px;
+  height: 59px;
+  padding-left: 60px;
+  font: 24px $museoSans700;
+  color: #fff;
+  background-color: $main-green;
+  span {
+    position: absolute;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    top: 50%;
+    left: 18px;
+    background: url("../img/sprite.png") no-repeat -384px 0;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $hover-green;
+  }
+}
+.splitter-contract-btn {
+  position: relative;
+  float: right;
+  width: 186px;
+  height: 35px;
+  font: 13px $museoSans900;
+  background-color: #e9f565;
+  border: 2px solid #000;
+  z-index: 20;
+  &:hover {
+    color: #e9f565;
+    background-color: #000;
+  }
+}
+.add-project {
+  width: 227px;
+  height: 71px;
+  font: 26px $museoSans700;
+  color: #4fc56d;
+  background-color: #000;
+  @include box-shadow(0 12px 5px 0 rgba(0, 0, 0, 0.02));
+  span {
+    padding-right: 10px;
+    font: 32px $museoSans900;
+    color: #fff;
+  }
+  &:hover {
+    color: #4fc56d;
+    background-color: $hover-black;
+  }
+}
+
+
+/* ---------------------------------------------- /*
+ Transition elsements
+/* ---------------------------------------------- */
+
+a, .btn {
+  @include transition(all 0.2s ease-in-out 0s);
+}
+
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+header {
+  background-color: #fff;
+}
+.pageheader {
+  min-height: 100vh;
+  padding-bottom: 102px;
+  background: url("../img/bg_1.jpg") no-repeat fixed 50% -88px;
+  background-size: cover;
+}
+.pageheader__content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  @include transform(translate(0%, -50%));
+}
+.pageheader__btn {
+  text-align: center;
+}
+
+.top-menu {
+  margin-bottom: 0;
+  border: 0;
+  li {
+    font: 21px $museoSans700;
+    color: $text-grey;
+    a {
+      padding: 33px 20px;
+      line-height: 21px;
+      &:focus, &:hover {
+        background: none;
+        color: $hover-grey;
+      }
+    }
+  }
+}
+.logo {
+  position: relative;
+  height: auto;
+  padding-top: 25px;
+  padding-bottom: 12px;
+  padding-left: 115px;
+  font: 31px $museoSans900;
+  text-transform: uppercase;
+  line-height: 20px;
+  span {
+    display: block;
+    font: 25px $museoSans300;
+  }
+  &:hover {
+    color: $hover-black;
+  }
+}
+.logo-icon {
+  position: absolute;
+  width: 64px;
+  height: 115px;
+  top: 15px;
+  left: 31px;
+  background: url("../img/sprite.png") no-repeat -128px 0;
+}
+.slogan {
+  margin: 33px 100px;
+  font-family: $fedraSansProBookItalic;
+  color: #a1a1a1;
+}
+
+.company-icon {
+  width: 105px;
+  height: 191px;
+  margin-bottom: 45px;
+  background: url("../img/sprite.png") no-repeat 0 0;
+}
+.company-name {
+  font: 68px $museoSans900;
+  text-align: center;
+  line-height: 42px;
+  span {
+    font: 42px $museoSans300;
+    text-transform: uppercase;
+  }
+}
+
+.pageheader__footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 25px;
+  text-align: center;
+  span {
+    font: 16px $fedraSansProBoldItalic;
+    line-height: 77px;
+  }
+  .row > div:first-child span {
+    font: 24px $museoSans700;
+    color: $text-grey;
+    line-height: 57px;
+  }
+}
+
+/* ----------------------------------------------
+ Footer
+ ---------------------------------------------- */
+
+
+/* ----------------------------------------------
+ Sections
+ ---------------------------------------------- */
+
+.about {
+  border-top: 1px solid #eaeaea;
+  font: 14px $museoSans300;
+  .container-fluid {
+    padding: 0;
+  }
+  h2 {
+    padding-left: 20%;
+    font: 79px $museoSans300;
+    span {
+      font-family: $museoSans700;
+    }
+  }
+  span {
+    font-family: $museoSans700;
+  }
+  a {
+    font-size: 18px;
+    text-decoration: underline;
+    z-index: 20;
+    &:hover {
+      color: $hover-black;
+      text-decoration: none;
+    }
+  }
+  .link-git {
+    font-size: 13px;
+    color: #858585;
+    text-decoration: none;
+    &:hover {
+      color: lighten(#858585, 20%);
+    }
+  }
+}
+
+.data {
+  font-size: 19px;
+}
+.small{
+  font-size: 12px;
+  color: #757575;
+}
+
+.about__scroll {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.about__content{
+  width: 2000px;
+  height: 585px;
+  overflow: auto;
+  position: relative;
+}
+.about__diagram > div {
+  position: absolute;
+  top: 220px;
+}
+
+.diagram-bg {
+  width: 2000px;
+  height: 250px;
+  top: 275px !important;
+  left: 0;
+  background: url("../img/sprite.png") no-repeat 0 -256px;
+  z-index: 10;
+}
+
+.bitcoin {
+  width: 190px;
+  left: 145px;
+  font-size: 38px;
+}
+.ethereum {
+  width: 230px;
+  left: 410px;
+  font-size: 22px;
+  p {
+    margin-bottom: 10px;
+  }
+  span {
+    font-size: 42px;
+  }
+}
+.dao {
+  width: 240px;
+  left: 730px;
+  font-size: 55px;
+  line-height: 30px;
+  span {
+    font-size: 26px;
+  }
+  .dao__number {
+    display: block;
+    margin-top: 40px;
+    font-size: 32px;
+  }
+  .data {
+    line-height: 23px;
+  }
+}
+.hack {
+  width: 240px;
+  left: 1128px;
+  p {
+    margin-bottom: 0;
+  }
+  span {
+    font: 34px $minionProBoldCn;
+  }
+  .data {
+    margin-bottom: 10px;
+  }
+}
+.replay {
+  position: relative;
+  width: 363px;
+  height: 166px;
+  padding: 20px 16px 20px 55px;
+  margin-top: 20px;
+  margin-left: -55px;
+  background-color: #e9f565;
+  p {
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  span {
+    font: 20px $museoSans700;
+  }
+}
+.replay-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 25px;
+  right: 21px;
+  background: url("../img/sprite.png") no-repeat -512px 0;
+}
+
+.hard-fork{
+  width: 300px;
+  left: 1465px;
+  font-size: 23px;
+  p {
+    margin-bottom: 0;
+  }
+  span {
+    font: 50px $museoSans900;
+    text-transform: uppercase;
+    line-height: 23px;
+  }
+  .data {
+    margin-bottom: 20px;
+  }
+}
+.percentage {
+  margin-top: 50px;
+  .small {
+    margin-top: 10px;
+  }
+}
+.choose-site {
+  width: 200px;
+  left: 1732px;
+  p {
+    margin-bottom: 0;
+  }
+  .data {
+    margin-bottom: 75px;
+  }
+  > div {
+    padding-left: 40px;
+  }
+}
+.original {
+  margin-bottom: 50px;
+  span {
+    font: 20px $museoSans900;
+    text-transform: uppercase;
+    line-height: 18px;
+  }
+  p:first-child span {
+    font-size: 15px;
+  }
+}
+.classic {
+  font-size: 21px;
+  span {
+    font-size: 28px;
+    line-height: 18px;
+  }
+  p:first-child span {
+    font-size: 15px;
+  }
+}
+
+.ideology {
+  padding: 0 15px 0 60px;
+}
+.motivation {
+  padding: 0 20px 0 50px;
+}
+.road-map {
+  padding: 0 70px 0 25px;
+}
+
+
+.features {
+  font: 19px $museoSans300;
+  color: #fff;
+  background-color: #706969;
+  h2 {
+    padding-left: 20%;
+    margin-top: 140px;
+    font-size: 177px;
+  }
+}
+.features__block {
+  padding: 0 30px 0 60px;
+}
+.features__title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font: 29px $museoSans700;
+}
+.features__text {
+  margin-left: 160px;
+}
+.ft-1 {
+  color: #d9f4cc;
+}
+.ft-2 {
+  color: #e8b97d;
+}
+.ft-3 {
+  color: #fff;
+}
+.ft-4 {
+  color: #f4e2cc;
+}
+
+.projects {
+  background-color: #e2e2e2;
+  h2 {
+    margin-top: 130px;
+    font-size: 95px;
+    color: #3aaa57;
+  }
+}
+.projects__content {
+  padding: 0 60px;
+}
+.projects__header {
+  position: relative;
+  margin-bottom: 30px;
+}
+.projects__menu {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font: 21px $museoSans300;
+  li a {
+    border: 1px solid transparent;
+  }
+  li.active a, li a:hover, li.active a:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+  }
+}
+.projects__block {
+  position: relative;
+  float: left;
+  width: 220px;
+  height: 258px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  font: 24px $museoSans700;
+  background-color: #fff;
+  @include border-radius(4px);
+  @include box-shadow(0 12px 5px 0 rgba(0, 0, 0, 0.02));
+  p {
+    margin-bottom: 0;
+  }
+  span {
+    font: 25px $museoSans300;
+    color: #a9afa7;
+  }
+  a {
+    font-size: 20px;
+    color: #4b5649;
+  }
+  .live-link {
+    color: #2b9446;
+  }
+  .links {
+    width: 180px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+.projects__block:nth-child(5) {
+  margin-right: 0;
+}
+.github {
+  float: right;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../img/sprite.png") no-repeat -640px 0;
+  &:hover {
+  opacity: 0.7;
+}
+}
+
+
+
+
+
+
+.roadmap {
+
+}
+
+.community {
+  background-color: #504942;
+}
+
+.miners {
+  background-color: #090909;
+}
+
+.metrics {
+  background-color: #4b4b4b;
+}
+
+.traders {
+  background-color: #ececec;
+}
+
+
+
+/*Backgrounds-icon*/
+
+.icon {
+  position: absolute;
+  background: url("../img/sprite.png") no-repeat;
+}
+
+.features__icon1, .features__icon2, .features__icon3, .features__icon4 {
+  width: 135px;
+  height: 135px;
+  left: 75px;
+}
+.features__icon1 {
+  background-position: 0 -576px;
+}
+.features__icon2 {
+  background-position: -192px -576px;
+}
+.features__icon3 {
+  background-position: -384px -576px;
+}
+.features__icon4 {
+  background-position: -576px -576px;
+}
