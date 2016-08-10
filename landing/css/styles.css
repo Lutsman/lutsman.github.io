@@ -64,6 +64,9 @@ section {
 section:not(.pageheader) {
   min-height: 1080px; }
 
+.incontainer {
+  padding: 0 45px; }
+
 /* ----------------------------------------------
  Fonts Paragrahps
  ---------------------------------------------- */
@@ -75,7 +78,7 @@ h1 {
   text-align: center; }
 
 h2 {
-  margin-top: 90px;
+  margin-top: 140px;
   font-size: 107px; }
 
 h3 {
@@ -93,6 +96,12 @@ p {
  ---------------------------------------------- */
 a {
   color: inherit; }
+
+ul {
+  padding: 0; }
+
+li {
+  list-style: none; }
 
 .login-btn {
   float: right;
@@ -176,6 +185,7 @@ a {
 .add-project {
   width: 227px;
   height: 71px;
+  margin-top: 50px;
   font: 26px "MuseoSans700";
   color: #4fc56d;
   background-color: #000;
@@ -203,7 +213,9 @@ a, .btn {
  Header
  ---------------------------------------------- */
 header {
-  background-color: #fff; }
+  position: relative;
+  background-color: #fff;
+  z-index: 50; }
 
 .pageheader {
   min-height: 100vh;
@@ -298,16 +310,35 @@ header {
 /* ----------------------------------------------
  Footer
  ---------------------------------------------- */
+footer {
+  font: 18px "MuseoSans700";
+  text-transform: uppercase; }
+  footer span {
+    font: 11px "MuseoSans300"; }
+
+.pagefooter {
+  font: 26px "MuseoSans300"; }
+  .pagefooter h2 {
+    text-align: center; }
+  .pagefooter input {
+    font: 22px "MuseoSans300"; }
+
+.social-submit {
+  font: 27px "MuseoSans700";
+  color: #fff; }
+
 /* ----------------------------------------------
  Sections
  ---------------------------------------------- */
 .about {
+  overflow: hidden;
   border-top: 1px solid #eaeaea;
   font: 14px "MuseoSans300"; }
   .about .container-fluid {
     padding: 0; }
   .about h2 {
     padding-left: 20%;
+    margin-top: 90px;
     font: 79px "MuseoSans300"; }
     .about h2 span {
       font-family: "MuseoSans700"; }
@@ -475,12 +506,10 @@ header {
   color: #fff;
   background-color: #706969; }
   .features h2 {
-    padding-left: 20%;
-    margin-top: 140px;
     font-size: 177px; }
 
 .features__block {
-  padding: 0 30px 0 60px; }
+  padding-right: 20px; }
 
 .features__title {
   margin-top: 50px;
@@ -505,12 +534,8 @@ header {
 .projects {
   background-color: #e2e2e2; }
   .projects h2 {
-    margin-top: 130px;
     font-size: 95px;
     color: #3aaa57; }
-
-.projects__content {
-  padding: 0 60px; }
 
 .projects__header {
   position: relative;
@@ -518,7 +543,7 @@ header {
 
 .projects__menu {
   position: absolute;
-  right: 0;
+  right: 32px;
   bottom: 10px;
   font: 21px "MuseoSans300"; }
   .projects__menu li a {
@@ -572,17 +597,370 @@ header {
   .github:hover {
     opacity: 0.7; }
 
+.roadmap {
+  font: 25px "MuseoSans300"; }
+  .roadmap h2 {
+    font-size: 95px;
+    color: #3aaa57; }
+  .roadmap p {
+    margin-bottom: 30px; }
+  .roadmap span {
+    font: 29px "MuseoSans700"; }
+  .roadmap a {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    font: 27px "MuseoSans500";
+    text-decoration: underline; }
+    .roadmap a:hover {
+      color: #4d4d4d;
+      text-decoration: none; }
+
+.roadmap__block {
+  position: relative;
+  width: 1180px;
+  height: 492px;
+  padding: 40px 720px 40px 50px;
+  margin-top: 60px;
+  margin-left: 0;
+  background: url("../img/bg_2.jpg") no-repeat; }
+
+.roadmap__img {
+  position: absolute;
+  width: 725px;
+  height: 375px;
+  right: -177px;
+  bottom: -68px;
+  background: url("../img/broshure.png") no-repeat; }
+
 .community {
+  color: #fff;
   background-color: #504942; }
+  .community h2 {
+    margin-bottom: 50px; }
+  .community h3 {
+    font: 37px "MuseoSans700";
+    color: #d6be7f; }
+
+.community__header {
+  position: relative; }
+
+.community__links {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  font: 16px "MuseoSans300"; }
+  .community__links a {
+    float: left;
+    margin-left: 20px; }
+    .community__links a:hover {
+      color: #fff;
+      text-decoration: underline; }
+  .community__links span {
+    font-size: 36px; }
+  .community__links > div {
+    float: left; }
+    .community__links > div + div {
+      margin-left: 50px; }
+
+.community__left {
+  font-size: 34px; }
+  .community__left p {
+    margin-bottom: 10px; }
+
+.community__right li {
+  font: 16px "MuseoSans300"; }
+  .community__right li span {
+    font-size: 14px;
+    color: #747474; }
+  .community__right li a {
+    color: #fff;
+    text-decoration: underline; }
+    .community__right li a:hover {
+      text-decoration: none; }
+.community__right > a {
+  font: 17px "MuseoSans700"; }
+  .community__right > a:hover {
+    color: #fff; }
+
+.news-block {
+  position: relative;
+  width: 320px;
+  height: 192px;
+  padding: 20px;
+  margin: 0 0 20px;
+  font: 25px "MinionProBoldCn";
+  border: 2px solid #d6be7f; }
+  .news-block p:first-child {
+    font: 23px "MuseoSans700";
+    color: #d6be7f; }
+  .news-block p:last-child {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    bottom: 0;
+    left: 0; }
+
+.news-date {
+  position: absolute;
+  right: 20px;
+  bottom: 29px;
+  font: 9px "MuseoSans700";
+  color: #efefef; }
+
+.news-list {
+  font-size: 24px; }
+  .news-list li {
+    position: relative;
+    width: 320px;
+    height: 115px;
+    padding: 15px 0;
+    margin: 0;
+    line-height: 17px;
+    border-top: 1px solid #5a5551; }
+    .news-list li:last-child {
+      border-bottom: 1px solid #5a5551; }
+  .news-list span {
+    font: 17px "MuseoSans700"; }
+  .news-list > a {
+    font: 17px "MuseoSans700";
+    color: #fff; }
+  .news-list .news-date {
+    bottom: 20px;
+    font: 9px "MuseoSans700";
+    color: #6d6d6d; }
+
+.category-link {
+  position: absolute;
+  left: 80px;
+  bottom: 20px;
+  font: 15px "MuseoSans300";
+  color: #d6be7f; }
+  .category-link:hover {
+    color: #d6be7f; }
+
+.community__right ul {
+  margin-bottom: 20px; }
+.community__right li {
+  width: 780px;
+  height: 58px;
+  padding: 15px 0;
+  margin: 0;
+  line-height: 17px;
+  border-top: 1px solid #625d57; }
+  .community__right li:last-child {
+    border-bottom: 1px solid #625d57; }
+  .community__right li span {
+    float: right; }
 
 .miners {
+  color: #fff;
   background-color: #090909; }
+  .miners h2 {
+    margin-bottom: 50px;
+    color: #504942; }
+  .miners h3 {
+    font: 25px "MuseoSans700";
+    color: #c5a789; }
+    .miners h3 a {
+      text-decoration: underline; }
+      .miners h3 a:hover {
+        color: #c5a789;
+        text-decoration: none; }
+  .miners li {
+    font: 36px "MinionProBoldCn"; }
+    .miners li span {
+      font-size: 20px;
+      color: #aaa; }
+
+.miners__list {
+  margin: 0 -300px 80px; }
+  .miners__list li {
+    position: relative;
+    float: left;
+    padding-left: 80px;
+    margin-right: 70px; }
+    .miners__list li .small {
+      display: block;
+      text-align: right; }
+
+.miners__right {
+  padding-right: 85px; }
+  .miners__right span {
+    font: 23px "MuseoSans700"; }
+
+.miners-left h3 {
+  margin-bottom: 40px;
+  font-size: 27px; }
+.miners-left li {
+  margin-bottom: 17px;
+  font: 15px "MuseoSans900";
+  text-transform: uppercase; }
+
+.voting h2 {
+  margin-bottom: 100px;
+  color: #040404; }
+.voting h3 {
+  font: 28px "MuseoSans500"; }
+
+.voting__content {
+  padding: 0 50px 0 100px; }
+  .voting__content p {
+    float: left;
+    margin-bottom: 10px; }
+
+.voting__top-list {
+  font: 14px "MuseoSans500";
+  color: #424242;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dbdbdb; }
+  .voting__top-list p {
+    width: 160px;
+    padding-left: 20px; }
+  .voting__top-list .voting__name {
+    width: 260px;
+    padding-left: 0; }
+
+.voting__list {
+  position: relative;
+  padding: 18px 0;
+  font: 16px "MuseoSans500";
+  color: #424242;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dbdbdb; }
+  .voting__list span {
+    display: block;
+    font: 12px "MuseoSans500";
+    text-transform: none;
+    color: #787878; }
+  .voting__list .small {
+    text-transform: uppercase; }
+  .voting__list .voting__name {
+    width: 260px;
+    padding-left: 70px;
+    font: 20px "MuseoSans900"; }
+  .voting__list input[type='checkbox'] {
+    display: none; }
+  .voting__list label {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ececec;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 3px 3px rgba(16, 16, 16, 0.15);
+    -webkit-box-shadow: 0 3px 3px rgba(16, 16, 16, 0.15);
+    box-shadow: 0 3px 3px rgba(16, 16, 16, 0.15); }
+
+.voting__name2 {
+  width: 560px;
+  padding-left: 70px;
+  margin-top: 10px;
+  font: 30px "MuseoSans900"; }
+
+.voting__graph-bottom {
+  font: 30px "MuseoSans500"; }
+  .voting__graph-bottom span {
+    font-size: 14px;
+    color: #787878; }
+
+.voting-btn-1, .voting-btn-3 {
+  font: 20px "MuseoSans900";
+  text-transform: uppercase; }
+
+.voting-btn-2 {
+  font: 17px "MuseoSans900"; }
 
 .metrics {
+  font: 23px "MuseoSans300";
+  color: #fff;
   background-color: #4b4b4b; }
 
+.metrics__content {
+  text-transform: uppercase; }
+
+.metrics__top-list {
+  font-size: 11px;
+  border-bottom: 1px solid #5a5a5a; }
+  .metrics__top-list p:first-child {
+    font-size: 18px;
+    text-transform: none; }
+
+.metrics__list {
+  border-bottom: 1px solid #5a5a5a; }
+
+.metrics__legend {
+  font-size: 11px; }
+
+.developers h2 {
+  color: #c38f44; }
+.developers h3 {
+  font: 67px "MuseoSans700";
+  color: #c38f44; }
+  .developers h3 span {
+    font-size: 37px; }
+.developers p {
+  font: 20px "MuseoSans700";
+  color: #3a3a3a; }
+.developers .small {
+  font: 15px "MuseoSans100"; }
+
+.developers-links p {
+  font-size: 34px;
+  color: #000; }
+.developers-links a {
+  font: 17px "MuseoSans300";
+  color: #000;
+  text-decoration: underline; }
+  .developers-links a:hover {
+    text-decoration: none; }
+
+.developers__video p {
+  font-size: 22px;
+  color: #000; }
+
+.developers__learn > p a {
+  font-size: 13px;
+  color: #c38f44; }
+
 .traders {
+  font-family: "MuseoSans300";
   background-color: #ececec; }
+  .traders h2 {
+    font-family: "MuseoSans100";
+    color: #5f4428; }
+
+.traders__left p:first-child {
+  font: 33px "MuseoSans700"; }
+
+.traders__right p {
+  font: 27px "MuseoSans700";
+  color: #5f4428; }
+.traders__right li {
+  font: 15px "MuseoSans900";
+  color: #070707;
+  text-transform: uppercase; }
+
+.blue {
+  color: #10a0de; }
+
+.orange {
+  color: #fd8800; }
+
+.yellow {
+  color: #ffd162; }
+
+.red {
+  color: #f74b4b; }
+
+.green {
+  color: #33cb2f; }
+
+.grey {
+  color: #898989; }
 
 /*Backgrounds-icon*/
 .icon {
@@ -592,7 +970,7 @@ header {
 .features__icon1, .features__icon2, .features__icon3, .features__icon4 {
   width: 135px;
   height: 135px;
-  left: 75px; }
+  left: 15px; }
 
 .features__icon1 {
   background-position: 0 -576px; }
@@ -605,5 +983,68 @@ header {
 
 .features__icon4 {
   background-position: -576px -576px; }
+
+.miners1, .miners2, .miners3, .miners4, .miners5, .miners6 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0;
+  left: 0; }
+
+.miners1 {
+  background-position: 0 -832px; }
+
+.miners2 {
+  background-position: -128px -832px; }
+
+.miners3 {
+  background-position: -256px -832px; }
+
+.miners4 {
+  background-position: -384px -832px; }
+
+.miners5 {
+  background-position: -512px -832px; }
+
+.miners6 {
+  background-position: -640px -832px; }
+
+.slack-chanel-icon, .gitter-chanel-icon {
+  display: block;
+  float: left;
+  width: 70px;
+  height: 70px;
+  background: url("../img/sprite.png") no-repeat; }
+
+.slack-chanel-icon {
+  background-position: -768px 0; }
+
+.gitter-chanel-icon {
+  background-position: -896px 0; }
+
+.news-icon {
+  display: block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+  margin-right: 20px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+.new1 {
+  background: url("../img/news_icon_1.png") no-repeat;
+  background-size: cover; }
+
+.new2 {
+  background: url("../img/news_icon_2.png") no-repeat;
+  background-size: cover; }
+
+.voting-graph-icon {
+  width: 107px;
+  height: 40px;
+  margin-right: 60px;
+  background: url("../img/vote_graph_small.png") no-repeat; }
 
 /*# sourceMappingURL=styles.css.map */
