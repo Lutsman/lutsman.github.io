@@ -217,6 +217,11 @@ header {
   background-color: #fff;
   z-index: 50; }
 
+.navbar-toggle {
+  border-color: #333; }
+  .navbar-toggle .icon-bar {
+    background-color: #333; }
+
 .pageheader {
   min-height: 100vh;
   padding-bottom: 102px;
@@ -311,21 +316,74 @@ header {
  Footer
  ---------------------------------------------- */
 footer {
+  position: absolute;
+  width: 100%;
+  height: 125px;
+  bottom: 0;
+  left: 0;
   font: 18px "MuseoSans700";
   text-transform: uppercase; }
   footer span {
     font: 11px "MuseoSans300"; }
+  footer .incontainer > div {
+    float: left; }
+  footer .footer__left {
+    width: 65%;
+    padding-right: 250px; }
+  footer .footer__right {
+    width: 35%; }
+    footer .footer__right p {
+      margin-bottom: 0;
+      line-height: 15px; }
+    footer .footer__right p:first-child {
+      margin-bottom: 10px; }
 
 .pagefooter {
+  padding-bottom: 135px;
   font: 26px "MuseoSans300"; }
   .pagefooter h2 {
+    margin-top: 260px;
+    margin-bottom: 70px;
     text-align: center; }
+  .pagefooter form {
+    width: 1210px;
+    height: 114px;
+    padding: 30px 245px 0 140px;
+    margin-top: 60px;
+    border: 2px solid #33ccff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+    .pagefooter form p {
+      float: left;
+      margin-right: 40px;
+      line-height: 50px; }
   .pagefooter input {
-    font: 22px "MuseoSans300"; }
+    width: 540px;
+    height: 50px;
+    font: 22px "MuseoSans300";
+    background-color: #e9e9e9;
+    border: 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+  .pagefooter input[type="email"] {
+    padding: 10px 174px 10px 20px; }
+  .pagefooter .social-submit {
+    position: relative;
+    float: right;
+    margin-top: -50px;
+    width: 154px;
+    font: 27px "MuseoSans700";
+    color: #fff;
+    background-color: #33ccff; }
+    .pagefooter .social-submit:hover {
+      background-color: #00ace6; }
 
-.social-submit {
-  font: 27px "MuseoSans700";
-  color: #fff; }
+.pagefooter__social {
+  padding: 0 120px; }
+  .pagefooter__social div {
+    float: left; }
 
 /* ----------------------------------------------
  Sections
@@ -802,10 +860,11 @@ footer {
   margin-bottom: 100px;
   color: #040404; }
 .voting h3 {
+  margin-bottom: 30px;
   font: 28px "MuseoSans500"; }
 
 .voting__content {
-  padding: 0 50px 0 100px; }
+  padding: 0 90px 0 60px; }
   .voting__content p {
     float: left;
     margin-bottom: 10px; }
@@ -829,17 +888,32 @@ footer {
   color: #424242;
   text-transform: uppercase;
   border-bottom: 1px solid #dbdbdb; }
+  .voting__list p {
+    width: 160px;
+    padding-top: 5px;
+    padding-left: 20px; }
   .voting__list span {
     display: block;
+    margin-top: 10px;
     font: 12px "MuseoSans500";
     text-transform: none;
     color: #787878; }
   .voting__list .small {
+    display: inline;
     text-transform: uppercase; }
   .voting__list .voting__name {
     width: 260px;
+    padding-top: 0;
     padding-left: 70px;
     font: 20px "MuseoSans900"; }
+    .voting__list .voting__name span {
+      margin-top: 0; }
+  .voting__list .voting__name2 {
+    width: 580px;
+    padding-top: 0;
+    padding-left: 70px;
+    margin-top: 10px;
+    font: 30px "MuseoSans900"; }
   .voting__list input[type='checkbox'] {
     display: none; }
   .voting__list label {
@@ -855,51 +929,116 @@ footer {
     -webkit-box-shadow: 0 3px 3px rgba(16, 16, 16, 0.15);
     box-shadow: 0 3px 3px rgba(16, 16, 16, 0.15); }
 
-.voting__name2 {
-  width: 560px;
-  padding-left: 70px;
-  margin-top: 10px;
-  font: 30px "MuseoSans900"; }
+.voting__graph-img {
+  width: 1066px;
+  height: 55px;
+  background: url("../img/vote_graph_big.png") no-repeat; }
 
 .voting__graph-bottom {
-  font: 30px "MuseoSans500"; }
+  margin-top: 35px;
+  font: 30px "MuseoSans500";
+  text-align: center; }
+  .voting__graph-bottom p:last-child {
+    float: right; }
   .voting__graph-bottom span {
+    margin: 0 40px;
     font-size: 14px;
     color: #787878; }
 
+.voting-btn-1, .voting-btn-2, .voting-btn-3 {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  -moz-box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04);
+  -webkit-box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04);
+  box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04); }
+  .voting-btn-1:hover, .voting-btn-2:hover, .voting-btn-3:hover {
+    background-color: #dbdbdb; }
+
 .voting-btn-1, .voting-btn-3 {
+  padding: 10px 25px;
   font: 20px "MuseoSans900";
   text-transform: uppercase; }
 
+.voting-btn-1 {
+  float: left;
+  margin-right: 35px; }
+
 .voting-btn-2 {
+  float: right;
+  padding: 7px;
   font: 17px "MuseoSans900"; }
 
 .metrics {
   font: 23px "MuseoSans300";
   color: #fff;
   background-color: #4b4b4b; }
+  .metrics h2 {
+    margin-top: 120px;
+    margin-bottom: 60px; }
+  .metrics p {
+    float: left;
+    margin-top: 20px; }
+  .metrics .cell-1 {
+    width: 235px; }
+  .metrics .cell-2 {
+    width: 215px; }
+  .metrics .cell-3 {
+    width: 185px; }
+  .metrics .cell-4 {
+    width: 135px; }
+  .metrics .cell-5 {
+    width: 165px; }
+  .metrics .cell-6 {
+    width: 190px; }
+  .metrics .cell-7 {
+    width: 80px; }
 
 .metrics__content {
   text-transform: uppercase; }
 
 .metrics__top-list {
   font-size: 11px;
+  line-height: 27px;
   border-bottom: 1px solid #5a5a5a; }
   .metrics__top-list p:first-child {
     font-size: 18px;
+    line-height: normal;
     text-transform: none; }
+  .metrics__top-list input[type='checkbox'] {
+    display: none; }
+  .metrics__top-list label {
+    display: inline-block;
+    height: 22px;
+    padding-left: 25px;
+    margin: 0 5px;
+    background: url("../img/sprite.png") no-repeat -1152px 3px; }
+  .metrics__top-list .label-checked {
+    background-position: -1024px 3px; }
 
 .metrics__list {
   border-bottom: 1px solid #5a5a5a; }
 
 .metrics__legend {
+  width: 280px;
+  margin-bottom: 60px;
   font-size: 11px; }
+  .metrics__legend p {
+    margin: 20px; }
+
+.metrics__graph-img {
+  width: 1089px;
+  height: 289px;
+  background: url("../img/graph_bg.png") no-repeat; }
 
 .developers h2 {
+  margin: 120px auto 40px;
   color: #c38f44; }
 .developers h3 {
+  margin-top: 40px;
+  margin-bottom: 30px;
   font: 67px "MuseoSans700";
-  color: #c38f44; }
+  color: #c38f44;
+  line-height: 37px; }
   .developers h3 span {
     font-size: 37px; }
 .developers p {
@@ -908,41 +1047,71 @@ footer {
 .developers .small {
   font: 15px "MuseoSans100"; }
 
-.developers-links p {
-  font-size: 34px;
-  color: #000; }
-.developers-links a {
-  font: 17px "MuseoSans300";
-  color: #000;
-  text-decoration: underline; }
-  .developers-links a:hover {
-    text-decoration: none; }
+.developers__left {
+  padding-right: 40px; }
 
-.developers__video p {
-  font-size: 22px;
-  color: #000; }
+.developers__right > p {
+  padding-right: 30px; }
+  .developers__right > p a {
+    font-size: 13px;
+    color: #c38f44; }
 
-.developers__learn > p a {
-  font-size: 13px;
-  color: #c38f44; }
+.developers-links {
+  margin-top: 40px; }
+  .developers-links p {
+    margin-bottom: 30px;
+    font-size: 34px;
+    color: #000;
+    line-height: 20px; }
+  .developers-links a {
+    font: 17px "MuseoSans300";
+    color: #000;
+    text-decoration: underline; }
+    .developers-links a:hover {
+      text-decoration: none; }
+
+.developers__video {
+  float: left;
+  width: 50%; }
+  .developers__video p {
+    margin: 30px 0;
+    font-size: 22px;
+    color: #000; }
+
+.developers__learn {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5; }
 
 .traders {
   font-family: "MuseoSans300";
-  background-color: #ececec; }
+  background: url("../img/bg_3.jpg") no-repeat #ececec;
+  background-size: cover; }
   .traders h2 {
+    margin-bottom: 40px;
     font-family: "MuseoSans100";
     color: #5f4428; }
+
+.traders__left {
+  padding-right: 50px; }
+  .traders__left p {
+    margin-bottom: 30px; }
 
 .traders__left p:first-child {
   font: 33px "MuseoSans700"; }
 
-.traders__right p {
-  font: 27px "MuseoSans700";
-  color: #5f4428; }
-.traders__right li {
-  font: 15px "MuseoSans900";
-  color: #070707;
-  text-transform: uppercase; }
+.traders__right {
+  padding-top: 130px;
+  padding-left: 80px; }
+  .traders__right p {
+    font: 27px "MuseoSans700";
+    color: #5f4428; }
+  .traders__right ul {
+    margin-top: 60px; }
+  .traders__right li {
+    margin-bottom: 20px;
+    font: 15px "MuseoSans900";
+    color: #070707;
+    text-transform: uppercase; }
 
 .blue {
   color: #10a0de; }
@@ -1044,7 +1213,56 @@ footer {
 .voting-graph-icon {
   width: 107px;
   height: 40px;
-  margin-right: 60px;
+  margin: 5px 0 10px 20px;
   background: url("../img/vote_graph_small.png") no-repeat; }
+
+.metrics-price-icon, .metrics-volume-icon {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-bottom: -2px;
+  margin-right: 5px;
+  background-color: #33cc2f;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+.metrics-price-icon {
+  background-color: #33cc2f;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+.metrics-volume-icon {
+  background: url("../img/sprite.png") no-repeat -1280px 0; }
+
+.reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+  height: 70px;
+  margin: 0 35px;
+  background: url("../img/sprite.png") no-repeat; }
+
+.reddit-icon {
+  width: 180px;
+  background-position: 0 -1024px; }
+
+.slack-icon {
+  width: 245px;
+  background-position: -256px -1024px; }
+
+.fb-icon {
+  width: 210px;
+  background-position: -576px -1014px; }
+
+.github-icon {
+  width: 180px;
+  background-position: -896px -1024px; }
+
+.gitter-icon {
+  width: 240px;
+  background-position: -1152px -1010px; }
+
+.twitter-icon {
+  width: 240px;
+  background-position: -1472px -1010px; }
 
 /*# sourceMappingURL=styles.css.map */

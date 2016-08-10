@@ -608,8 +608,9 @@
                                 <p>12/23/2016 <span>4 days left</span></p>
                             </div>
                             <div class="voting__graph-block  clearfix">
-                                <h3>Lorem Ipsum is simply dummy text  of the printing and ty?</h3>
-                                <button type="button" class="btn voting-btn-2">Show Full text</button>
+                                <h3>Lorem Ipsum is simply dummy text  of the printing and ty?
+                                    <button type="button" class="btn voting-btn-2">Show Full text</button>
+                                </h3>
                                 <div class="voting__graph-img"></div>
                                 <div class="voting__graph-bottom">
                                     <p>3,421 <span>83% Negative</span></p>
@@ -634,40 +635,40 @@
                         <h2>Metrics</h2>
 
                         <div class="metrics__content">
-                            <div class="metrics__top-list">
-                                <p>Show
-                                    <input type="checkbox" id="metrics-check1"><label for="metrics-check1">Usd</label>
+                            <div class="metrics__top-list clearfix">
+                                <p class="cell-1">Show
+                                    <input type="checkbox" id="metrics-check1"><label class="label-checked" for="metrics-check1">Usd</label>
                                     <input type="checkbox" id="metrics-check2"><label for="metrics-check2">Btc</label>
                                 </p>
-                                <p>market cap</p>
-                                <p>price</p>
-                                <p>24H vwap</p>
-                                <p>avaliable supply</p>
-                                <p>24h volume</p>
-                                <p>%24</p>
+                                <p class="cell-2">market cap</p>
+                                <p class="cell-3">price</p>
+                                <p class="cell-4">24H vwap</p>
+                                <p class="cell-5">avaliable supply</p>
+                                <p class="cell-6">24h volume</p>
+                                <p class="cell-7">%24</p>
                             </div>
-                            <div class="metrics__list">
-                                <p class="green">etc/usd</p>
-                                <p>$141 004 055</p>
-                                <p>$1.71334653</p>
-                                <p>$1.7524</p>
-                                <p>82 297 453</p>
-                                <p>$40 844 900</p>
-                                <p>11.54%</p>
+                            <div class="metrics__list clearfix">
+                                <p class="green cell-1">etc/usd</p>
+                                <p class="cell-2">$141 004 055</p>
+                                <p class="cell-3">$1.71334653</p>
+                                <p class="cell-4">$1.7524</p>
+                                <p class="cell-5">82 297 453</p>
+                                <p class="cell-6">$40 844 900</p>
+                                <p class="cell-7">11.54%</p>
                             </div>
-                            <div class="metrics__list">
-                                <p class="grey">etc/usd</p>
-                                <p>$1 046 644 628</p>
-                                <p>$12.69277501</p>
-                                <p>$12.7865</p>
-                                <p>82 459 874</p>
-                                <p>$17 293 800</p>
-                                <p class="grey">0.10%</p>
+                            <div class="metrics__list clearfix">
+                                <p class="grey cell-1">etc/usd</p>
+                                <p class="cell-2">$1 046 644 628</p>
+                                <p class="cell-3">$12.69277501</p>
+                                <p class="cell-4">$12.7865</p>
+                                <p class="cell-5">82 459 874</p>
+                                <p class="cell-6">$17 293 800</p>
+                                <p class="grey cell-7">0.10%</p>
                             </div>
                             <div class="metrics__graph-block">
-                                <div class="metrics__legend">
-                                    <p><span></span> market price</p>
-                                    <p><span></span> trade volume</p>
+                                <div class="metrics__legend clearfix">
+                                    <p><span class="metrics-price-icon"></span> market price</p>
+                                    <p><span class="metrics-volume-icon"></span> trade volume</p>
                                 </div>
                                 <div class="metrics__graph-img"></div>
                             </div>
@@ -720,7 +721,7 @@
                                     <p class="small">We plan to follow ethereum development except for any features they
                                         introduce into existing clients that violate the key principles of openness,
                                         neutrality and immutability.</p>
-                                    <div class="developers__learn">
+                                    <div class="developers__learn clearfix">
                                         <h3>Learn how to build <br> <span>with the Ethereum Classic</span></h3>
 
                                         <div class="developers__video">
@@ -728,19 +729,18 @@
                                                 <!--<source src="" type="video/webm">
                                                 <source src="" type="video/mp4">-->
                                             </video>
-                                            <p>Ethereum ÐΞVcon-0: Solidity, Vision and Roadmap</p>
+                                            <p>Ethereum ÐΞVcon-0: Solidity, <br> Vision and Roadmap</p>
                                         </div>
                                         <div class="developers__video">
                                             <video controls="" poster="img/video_bg_2.jpg">
                                                 <!--<source src="" type="video/webm">
                                                 <source src="" type="video/mp4">-->
                                             </video>
-                                            <p>Ethereum's Two Ethereums Explained</p>
+                                            <p>Ethereum's Two Ethereums <br> Explained</p>
                                         </div>
-
-                                        <p><a href="#">Read more</a></p>
-
                                     </div>
+                                    <p><a href="#">Read more</a></p>
+
                                 </div>
                             </div>
                         </div>
@@ -805,7 +805,7 @@
     <section class="pagefooter">
         <div class="container-fluid">
             <h2>Stay tuned</h2>
-            <div class="pagefooter__social">
+            <div class="pagefooter__social clearfix">
                 <div class="reddit-icon"></div>
                 <div class="slack-icon"></div>
                 <div class="fb-icon"></div>
@@ -816,7 +816,7 @@
             <form action="" method="">
                 <p>Subsctibe to news</p>
                 <input type="email" name="email" placeholder="Your Email" required="">
-                <input class="social-submit" type="submit" value="Subscribe">
+                <input class="btn social-submit" type="submit" value="Subscribe">
             </form>
 
         </div><!-- /.container-fluid -->
@@ -825,12 +825,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <div class="incontainer">
-                            <div>
+                        <div class="incontainer clearfix">
+                            <div class="footer__left">
                                 <p>Let's make sure original Ethereum vision doesn't just
                                     "go gentle into that good night"!</p>
                             </div>
-                            <div>
+                            <div div class="footer__right">
                                 <p>Donations</p>
                                 <p><span>ETC: 0x0xe9a7e26bf5c05fe3bae272d4c940bd7158611ce9</span></p>
                                 <p><span>ETH: 0xda99c6385e7ec0a7b4031c393dac01b600341fc3</span></p>
