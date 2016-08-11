@@ -181,20 +181,28 @@ $(document).ready(function () {
             }
         }
     })();
-    
-    
+
+
     /*Sorting*/
     (function(){
-    	$('.projects__menu').on('click', function (e) {
+        $('.projects__menu').on('click', function (e) {
             var target = e.target;
             var sortBtn = target.closest('[data-sort-by]');
+
 
             if (!sortBtn) return;
             e.preventDefault();
 
-            var $sortingWrapper = $('[data-role="sorting-wrapper-projects"]');
+            var sortingWrapperSelector = '[data-role="sorting-wrapper-projects"]';
+
+            sortBlocks(sortBtn, sortingWrapperSelector);
+            setActiveButton(sortBtn);
+        });
+
+        function sortBlocks(sortBtn, sortingWrapperSelector) {
+            var $sortingWrapper = $(sortingWrapperSelector);
             var $sortableBlocks = $sortingWrapper.find('[data-sortable-by]');
-            var sortingSelector = $(sortBtn).attr('[data-sort-by]');
+            var sortingSelector = $(sortBtn).attr('data-sort-by');
 
             if ( sortingSelector === 'all') {
                 $sortableBlocks.show();
@@ -207,8 +215,18 @@ $(document).ready(function () {
                     }
                 })
             }
-        });
+        }
+
+        function setActiveButton(button) {
+            var activeBtn = button.parentNode.querySelectorAll('.active');
+
+            $(activeBtn).each(function () {
+                $(this).removeClass('active');
+            });
+
+            $(button).addClass('active');
+        }
     })();
-    
-    
+
+
 });
