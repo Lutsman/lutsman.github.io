@@ -62,10 +62,15 @@ section {
   position: relative; }
 
 section:not(.pageheader) {
-  min-height: 1080px; }
+  min-height: 1080px;
+  padding-bottom: 50px; }
 
 .incontainer {
   padding: 0 45px; }
+
+.section__content {
+  width: 100%;
+  max-width: 1335px; }
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -127,7 +132,7 @@ li {
     background-color: #10b318; }
 
 .start-using-btn {
-  width: 261px;
+  width: 290px;
   height: 80px;
   margin-left: 5px;
   font: 37px "MuseoSans700";
@@ -186,6 +191,7 @@ li {
   width: 227px;
   height: 71px;
   margin-top: 50px;
+  margin-left: 10px;
   font: 26px "MuseoSans700";
   color: #4fc56d;
   background-color: #000;
@@ -199,6 +205,29 @@ li {
   .add-project:hover {
     color: #4fc56d;
     background-color: #4d4d4d; }
+
+.voting-btn-1, .voting-btn-2, .voting-btn-3 {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  -moz-box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04);
+  -webkit-box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04);
+  box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04); }
+  .voting-btn-1:hover, .voting-btn-2:hover, .voting-btn-3:hover {
+    background-color: #dbdbdb; }
+
+.voting-btn-1, .voting-btn-3 {
+  padding: 10px 25px;
+  font: 20px "MuseoSans900";
+  text-transform: uppercase; }
+
+.voting-btn-1 {
+  float: left;
+  margin-right: 35px; }
+
+.voting-btn-2 {
+  float: right;
+  padding: 7px;
+  font: 17px "MuseoSans900"; }
 
 /* ---------------------------------------------- /*
  Transition elsements
@@ -218,9 +247,9 @@ header {
   z-index: 50; }
 
 .navbar-toggle {
-  border-color: #333; }
+  border-color: #dbdbdb; }
   .navbar-toggle .icon-bar {
-    background-color: #333; }
+    background-color: #dbdbdb; }
 
 .pageheader {
   min-height: 100vh;
@@ -276,10 +305,11 @@ header {
   height: 115px;
   top: 15px;
   left: 31px;
-  background: url("../img/sprite.png") no-repeat -128px 0; }
+  background: url("../img/logo_icon_small.png") no-repeat;
+  background-size: contain; }
 
 .slogan {
-  margin: 33px 100px;
+  margin: 33px 40px 33px 100px;
   font-family: "FedraSansProBookItalic";
   color: #a1a1a1; }
 
@@ -287,7 +317,8 @@ header {
   width: 105px;
   height: 191px;
   margin-bottom: 45px;
-  background: url("../img/sprite.png") no-repeat 0 0; }
+  background: url("../img/logo_icon_big.png") no-repeat;
+  background-size: contain; }
 
 .company-name {
   font: 68px "MuseoSans900";
@@ -312,6 +343,12 @@ header {
     color: #333;
     line-height: 57px; }
 
+.pageheader__right {
+  float: right; }
+
+.status span + span {
+  margin-left: 60px; }
+
 /* ----------------------------------------------
  Footer
  ---------------------------------------------- */
@@ -327,16 +364,11 @@ footer {
     font: 11px "MuseoSans300"; }
   footer .incontainer > div {
     float: left; }
-  footer .footer__left {
-    width: 65%;
-    padding-right: 250px; }
-  footer .footer__right {
-    width: 35%; }
-    footer .footer__right p {
-      margin-bottom: 0;
-      line-height: 15px; }
-    footer .footer__right p:first-child {
-      margin-bottom: 10px; }
+  footer .footer__right p {
+    margin-bottom: 0;
+    line-height: 15px; }
+  footer .footer__right p:first-child {
+    margin-bottom: 10px; }
 
 .pagefooter {
   padding-bottom: 135px;
@@ -382,7 +414,7 @@ footer {
 
 .pagefooter__social {
   padding: 0 120px; }
-  .pagefooter__social div {
+  .pagefooter__social a {
     float: left; }
 
 /* ----------------------------------------------
@@ -551,12 +583,18 @@ footer {
     font-size: 15px; }
 
 .ideology {
+  float: right;
+  width: 100%;
+  max-width: 325px;
   padding: 0 15px 0 60px; }
 
 .motivation {
   padding: 0 20px 0 50px; }
 
 .road-map {
+  float: left;
+  width: 100%;
+  max-width: 325px;
   padding: 0 70px 0 25px; }
 
 .features {
@@ -617,8 +655,7 @@ footer {
   width: 220px;
   height: 258px;
   padding: 20px;
-  margin-right: 20px;
-  margin-bottom: 25px;
+  margin: 0 20px 25px 0;
   font: 24px "MuseoSans700";
   background-color: #fff;
   -moz-border-radius: 4px;
@@ -642,9 +679,6 @@ footer {
     position: absolute;
     bottom: 20px;
     left: 20px; }
-
-.projects__block:nth-child(5) {
-  margin-right: 0; }
 
 .github {
   float: right;
@@ -676,12 +710,14 @@ footer {
 
 .roadmap__block {
   position: relative;
-  width: 1180px;
+  width: 100%;
+  max-width: 1180px;
   height: 492px;
   padding: 40px 720px 40px 50px;
   margin-top: 60px;
   margin-left: 0;
-  background: url("../img/bg_2.jpg") no-repeat; }
+  background: url("../img/bg_2.jpg") no-repeat;
+  background-size: cover; }
 
 .roadmap__img {
   position: absolute;
@@ -689,7 +725,8 @@ footer {
   height: 375px;
   right: -177px;
   bottom: -68px;
-  background: url("../img/broshure.png") no-repeat; }
+  background: url("../img/broshure.png") no-repeat;
+  background-size: contain; }
 
 .community {
   color: #fff;
@@ -932,7 +969,8 @@ footer {
 .voting__graph-img {
   width: 1066px;
   height: 55px;
-  background: url("../img/vote_graph_big.png") no-repeat; }
+  background: url("../img/vote_graph_big.png") no-repeat;
+  background-size: contain; }
 
 .voting__graph-bottom {
   margin-top: 35px;
@@ -944,29 +982,6 @@ footer {
     margin: 0 40px;
     font-size: 14px;
     color: #787878; }
-
-.voting-btn-1, .voting-btn-2, .voting-btn-3 {
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-  -moz-box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04);
-  -webkit-box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04);
-  box-shadow: inset 0 -3px 3px rgba(16, 16, 16, 0.04); }
-  .voting-btn-1:hover, .voting-btn-2:hover, .voting-btn-3:hover {
-    background-color: #dbdbdb; }
-
-.voting-btn-1, .voting-btn-3 {
-  padding: 10px 25px;
-  font: 20px "MuseoSans900";
-  text-transform: uppercase; }
-
-.voting-btn-1 {
-  float: left;
-  margin-right: 35px; }
-
-.voting-btn-2 {
-  float: right;
-  padding: 7px;
-  font: 17px "MuseoSans900"; }
 
 .metrics {
   font: 23px "MuseoSans300";
@@ -1028,7 +1043,8 @@ footer {
 .metrics__graph-img {
   width: 1089px;
   height: 289px;
-  background: url("../img/graph_bg.png") no-repeat; }
+  background: url("../img/graph_bg.png") no-repeat;
+  background-size: contain; }
 
 .developers h2 {
   margin: 120px auto 40px;
@@ -1085,7 +1101,7 @@ footer {
 .traders {
   font-family: "MuseoSans300";
   background: url("../img/bg_3.jpg") no-repeat #ececec;
-  background-size: cover; }
+  background-size: contain; }
   .traders h2 {
     margin-bottom: 40px;
     font-family: "MuseoSans100";
@@ -1237,32 +1253,329 @@ footer {
   background: url("../img/sprite.png") no-repeat -1280px 0; }
 
 .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+  display: block;
   height: 70px;
   margin: 0 35px;
-  background: url("../img/sprite.png") no-repeat; }
+  background-size: contain; }
+  .reddit-icon:hover, .slack-icon:hover, .fb-icon:hover, .github-icon:hover, .gitter-icon:hover, .twitter-icon:hover {
+    opacity: 0.7; }
 
 .reddit-icon {
   width: 180px;
-  background-position: 0 -1024px; }
+  background: url("../img/reddit_logo.png") no-repeat center; }
 
 .slack-icon {
   width: 245px;
-  background-position: -256px -1024px; }
+  background: url("../img/slack_logo.png") no-repeat center; }
 
 .fb-icon {
   width: 210px;
-  background-position: -576px -1014px; }
+  background: url("../img/facebook_logo.png") no-repeat center; }
 
 .github-icon {
   width: 180px;
-  background-position: -896px -1024px; }
+  background: url("../img/git_logo.png") no-repeat center; }
 
 .gitter-icon {
   width: 240px;
-  background-position: -1152px -1010px; }
+  background: url("../img/gitter_logo.png") no-repeat center; }
 
 .twitter-icon {
   width: 240px;
-  background-position: -1472px -1010px; }
+  background: url("../img/twitter_logo.png") no-repeat center; }
+
+@media (max-height: 849px) {
+  .company-icon {
+    display: none; } }
+@media (max-height: 699px) {
+  h1 {
+    font-size: 50px; }
+
+  .company-name {
+    font-size: 48px; }
+    .company-name span {
+      font-size: 22px; }
+
+  .start-using-btn {
+    height: 60px;
+    font-size: 30px; }
+
+  .create-wallet-btn {
+    height: 60px;
+    font-size: 30px; }
+
+  .pageheader__footer {
+    padding-bottom: 0; } }
+@media (max-height: 549px) {
+  h1 {
+    margin: 0 0 10px; }
+
+  .pageheader__content {
+    padding-top: 40px; }
+
+  .company-name {
+    margin-bottom: 0;
+    line-height: 30px; } }
+/* Large devices */
+@media (max-width: 1899px) {
+  .slogan {
+    margin: 33px 20px; } }
+@media (max-width: 1799px) {
+  .top-menu li a {
+    padding: 33px 10px; }
+
+  .login-btn {
+    margin: 25px 0 25px 20px; } }
+@media (max-width: 1599px) {
+  .logo {
+    padding-top: 30px; }
+
+  .top-menu li a {
+    padding: 20px 10px; }
+
+  .login-btn {
+    margin: 10px 0 0; }
+
+  .slogan {
+    width: 40%;
+    margin: 20px 0 0 30px; }
+
+  h1 {
+    font-size: 50px; }
+
+  .company-name {
+    font-size: 48px; }
+    .company-name span {
+      font-size: 22px; }
+
+  .start-using-btn, .create-wallet-btn {
+    height: 60px;
+    font-size: 30px; }
+
+  .company-icon {
+    margin-bottom: 20px; }
+
+  .pageheader__footer .row > div:first-child span {
+    font-size: 20px; }
+
+  .status span + span {
+    margin-left: 20px; }
+
+  .roadmap-btn {
+    width: 170px;
+    font-size: 20px; }
+
+  .motivation {
+    padding: 0 20px; }
+
+  .roadmap__block {
+    padding-right: 600px; }
+
+  .roadmap__img {
+    width: 600px;
+    height: 320px;
+    right: -30px; } }
+/* Medium devices */
+@media (max-width: 1199px) {
+  section:not(.pageheader) {
+    min-height: 0; }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px; }
+
+  h2 {
+    margin-top: 50px; }
+
+  .incontainer {
+    padding: 0 30px; }
+
+  .company-name {
+    margin-bottom: 0; }
+
+  .logo {
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-size: 26px; }
+    .logo span {
+      font-size: 20px; }
+
+  .pageheader__footer span {
+    font-size: 14px; }
+
+  .ideology {
+    padding-left: 30px; }
+
+  .road-map {
+    padding-right: 40px; }
+
+  .features h2 {
+    font-size: 150px; }
+
+  .projects__menu {
+    right: 0;
+    font-size: 18px; }
+
+  .roadmap {
+    font-size: 20px; }
+    .roadmap span {
+      font-size: 24px; }
+
+  .roadmap__img {
+    bottom: -30px; } }
+/* Small devices */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 36px; }
+
+  .company-name {
+    font-size: 34px;
+    line-height: 28px; }
+    .company-name span {
+      font-size: 18px; }
+
+  .top-menu li {
+    font-size: 16px; }
+
+  .slogan {
+    width: auto; }
+
+  .start-using-btn, .create-wallet-btn {
+    height: 60px;
+    font-size: 24px; }
+
+  .pageheader__scroll {
+    clear: both; }
+
+  .pageheader__content {
+    padding-top: 0; }
+
+  .ideology {
+    float: left; }
+
+  .motivation {
+    padding-left: 350px; }
+
+  .road-map {
+    max-width: 100%; }
+
+  .features h2 {
+    font-size: 107px; }
+
+  .features__block {
+    min-height: 200px; }
+
+  .projects__menu {
+    position: relative;
+    margin-top: 20px; }
+
+  .roadmap__block {
+    padding-right: 50px; }
+
+  .roadmap__img {
+    width: 400px;
+    height: 220px;
+    bottom: 80px; }
+
+  .roadmap a {
+    font-size: 22px; } }
+/* Extra small devices */
+@media (max-width: 767px) {
+  .incontainer {
+    padding: 0 20px; }
+
+  h1 {
+    font-size: 28px; }
+
+  h2, .features h2, .projects h2, .roadmap h2 {
+    font-size: 60px; }
+
+  .logo {
+    padding: 10px 15px 5px 90px; }
+
+  .logo-icon {
+    width: 50px;
+    height: 90px;
+    top: 5px; }
+
+  .slogan {
+    display: none; }
+
+  .top-menu li {
+    border-top: 1px solid #dbdbdb; }
+    .top-menu li a {
+      background-color: #fff; }
+      .top-menu li a:hover {
+        background-color: #fff; }
+
+  .company-icon {
+    display: none; }
+
+  .company-name {
+    font-size: 28px;
+    line-height: 22px; }
+
+  .start-using-btn, .create-wallet-btn {
+    max-width: 100%;
+    height: 50px;
+    margin: 0 0 20px;
+    font-size: 20px; }
+
+  .pageheader {
+    min-height: 480px; }
+
+  .pageheader__footer .row > div:first-child span {
+    font-size: 12px; }
+
+  .roadmap-btn {
+    max-width: 100%;
+    height: 49px;
+    font-size: 18px; }
+
+  .pageheader__scroll {
+    display: none; }
+
+  .status span + span {
+    margin-left: 10px; }
+
+  .ideology, .motivation, .road-map {
+    max-width: 100%;
+    padding: 0 20px; }
+
+  .features__block {
+    padding: 0; }
+
+  .features__title {
+    margin-top: 40px; }
+
+  .features__text {
+    margin-left: auto; }
+
+  .features__icon1, .features__icon2, .features__icon3, .features__icon4 {
+    position: relative;
+    margin: 0 0 20px;
+    left: 0; }
+
+  .projects__menu > li {
+    margin-bottom: 10px;
+    margin-right: 10px; }
+
+  .roadmap {
+    font-size: 18px; }
+    .roadmap span {
+      font-size: 20px; }
+    .roadmap a {
+      bottom: 20px;
+      font-size: 18px; }
+
+  .roadmap__block {
+    padding: 40px 20px; }
+
+  .roadmap__img {
+    width: 250px;
+    height: 140px;
+    bottom: 20px;
+    position: relative;
+    right: 0; } }
 
 /*# sourceMappingURL=styles.css.map */
