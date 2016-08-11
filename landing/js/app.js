@@ -303,7 +303,7 @@ $(document).ready(function () {
 
 
                 if (vVal.length === 0 && requiredField) {
-                    placeholderMess = 'Заполните ' + ($(this).attr('data-validate-empty') ? $(this).attr('data-validate-empty') : 'поле') + '!';
+                    placeholderMess = 'Field ' + ($(this).attr('data-validate-empty') ? '"' + $(this).attr('data-validate-empty') + '" ' : 'is required') + '!';
                     vResult = false;
                 } else if ($(this).attr('name') == 'email' && vVal.length) {
                     pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
@@ -311,7 +311,7 @@ $(document).ready(function () {
                     if (pattern.test($(this).val())) {
                         $(this).addClass('form-success');
                     } else {
-                        placeholderMess = 'Введите корректный E-mail!';
+                        placeholderMess = 'Enter a valid E-mail!';
                         vResult = false;
                     }
                 } else if ($(this).attr('name') == 'phone' && vVal.length) {
@@ -320,21 +320,21 @@ $(document).ready(function () {
                     if (pattern.test($(this).val())) {
                         $(this).addClass('form-success');
                     } else {
-                        placeholderMess = 'Введите корректный телефон!';
+                        placeholderMess = 'Enter a valid phone number!';
                         vResult = false;
                     }
                 } else if ($(this).attr('name') === 'passCurr' && vVal.length) {
                     passCurr = this;
                 } else if ($(this).attr('name') === 'passNew' && vVal.length) {
                     if (vVal === $(passCurr).val()) {
-                        $(passCurr).val('').addClass('form-fail').attr('placeholder', 'Новый пароль, не должен совпадать с текущим!');
-                        placeholderMess = 'Новый пароль, не должен совпадать с текущим!';
+                        $(passCurr).val('').addClass('form-fail').attr('placeholder', 'New password should be really new!');
+                        placeholderMess = 'New password should be really new!';
                     } else {
                         $(this).addClass('form-success');
                         $(passCurr).addClass('form-success');
                     }
                 }else if($(this).is('textarea') && vVal.length < 10 && vVal.length > 0  && requiredField) {
-                    placeholderMess = 'Вопрос слишком короткий!';
+                    placeholderMess = 'Message is too short!';
                     vResult = false;
                 } else if (requiredField && vVal.length) {
                     $(this).addClass('form-success');
