@@ -872,7 +872,7 @@ footer {
         color: #c5a789;
         text-decoration: none; }
   .miners li {
-    font: 36px "MinionProBoldCn"; }
+    font: 36px "MuseoSans300"; }
     .miners li span {
       font-size: 20px;
       color: #aaa; }
@@ -885,6 +885,7 @@ footer {
     padding-left: 80px;
     margin-right: 70px; }
     .miners__list li .small {
+      font-family: "MuseoSans500";
       display: block; }
 
 .miners__right {

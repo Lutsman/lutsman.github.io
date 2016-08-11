@@ -1061,7 +1061,7 @@ footer {
     }
   }
   li {
-    font: 36px $minionProBoldCn;
+    font: 36px $museoSans300;
     span {
       font-size: 20px;
       color: #aaa;
@@ -1076,6 +1076,7 @@ footer {
     padding-left: 80px;
     margin-right: 70px;
     .small {
+      font-family: $museoSans500;
       display: block;
     }
   }
