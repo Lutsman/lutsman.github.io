@@ -1201,7 +1201,6 @@ footer {
     font-size: 14px;
     color: #787878;
   }
-
 }
 
 
@@ -1262,17 +1261,18 @@ footer {
     font-size: 18px;
     text-transform: none;
     background: url("../img/sprite.png") no-repeat -1152px 23px;
+    @include transition(none);
     &:hover {
       color: #fff;
       text-decoration: underline;
       background-color: transparent;
     }
   }
-  .active .metrics-active {
-    background-color: transparent;
+  .active a {
+    background-color: transparent !important;
     background-position: -1024px 23px;
     &:hover {
-      background-color: transparent;
+      background-color: transparent !important;
     }
   }
 }
@@ -1288,8 +1288,10 @@ footer {
   }
 }
 .metrics__graph-img {
-  width: 1089px;
-  height: 289px;
+  width: 100%;
+  max-width: 1089px;
+  height: 100%;
+  min-height: 289px;
   background: url("../img/graph_bg.png") no-repeat;
   background-size: contain;
 }
@@ -1679,6 +1681,12 @@ footer {
   .voting__content {
     padding: 0;
   }
+  .metrics {
+    font-size: 16px;
+    .cell-2, .cell-3, .cell-4, .cell-5, .cell-6 {
+      width: 150px;
+    }
+  }
 }
 
 /* Medium devices */
@@ -1824,6 +1832,53 @@ footer {
   .news-list {
     width: 50%;
     float: right;
+  }
+  .voting {
+    h3 {
+      font-size: 20px;
+    }
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+  .voting__top-list {
+    p {
+      width: 100px;
+      padding-left: 0;
+    }
+    .voting__name {
+      width: 170px;
+      padding-left: 0;
+    }
+  }
+  .voting__list {
+    font-size: 14px;
+    p {
+      width: 100px;
+      padding-left: 0;
+    }
+    label {
+      width: 40px;
+      height: 40px
+    }
+    .voting__name {
+      width: 170px;
+      padding-left: 50px;
+      font-size: 14px;
+    }
+    .voting-graph-icon {
+      width: 107px;
+      margin-left: 0;
+    }
+    .voting__name2 {
+      width: 370px;
+      font-size: 24px;
+    }
+  }
+  .voting-btn-1 {
+    padding: 10px 15px;
+    margin: 0 9px;
+    font-size: 16px;
   }
 }
 
@@ -1989,6 +2044,50 @@ footer {
   }
   .miners__list li {
     font-size: 24px;
+  }
+  .voting__top-list {
+    display: none;
+  }
+  .voting__list {
+    font-size: 12px;
+    .voting__name, .voting__name2 {
+      width: 100%;
+    }
+    .voting__name2 {
+      font-size: 20px;
+    }
+    p {
+      width: 33%;
+      padding-left: 0;
+    }
+    span {
+      font-size: 10px;
+    }
+  }
+  .voting-btn-1 {
+    position: relative;
+    float: right;
+    padding: 10px 25px;
+    margin: -50px 0 0;
+    clear: both;
+  }
+  .voting-btn-2 {
+    float: none;
+    display: block;
+    margin-top: 10px;
+  }
+  .voting__graph-bottom {
+    margin-top: 20px;
+    font-size: 16px;
+    span {
+      display: block;
+      margin: 0;
+      font-size: 10px;
+    }
+  }
+  .voting-btn-3 {
+    padding: 10px;
+    font-size: 16px;
   }
 }
 

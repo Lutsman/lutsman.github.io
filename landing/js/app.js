@@ -181,11 +181,11 @@ $(document).ready(function () {
             }
         }
     })();
-
-
+    
+    
     /*Sorting*/
     (function(){
-        $('.projects__menu').on('click', function (e) {
+    	$('.projects__menu').on('click', function (e) {
             var target = e.target;
             var sortBtn = target.closest('[data-sort-by]');
 
@@ -226,6 +226,13 @@ $(document).ready(function () {
 
             $(button).addClass('active');
         }
+    })();
+    
+    /*Metrics Pills*/
+    (function(){
+        $('.nav-tabs a').click(function(){
+            $(this).tab('show');
+        })
     })();
 
 

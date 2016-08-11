@@ -1035,16 +1035,20 @@ footer {
     margin: 0 5px;
     font-size: 18px;
     text-transform: none;
-    background: url("../img/sprite.png") no-repeat -1152px 23px; }
+    background: url("../img/sprite.png") no-repeat -1152px 23px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; }
     .metrics__top-list .metrics-pill:hover {
       color: #fff;
       text-decoration: underline;
       background-color: transparent; }
-  .metrics__top-list .active .metrics-active {
-    background-color: transparent;
+  .metrics__top-list .active a {
+    background-color: transparent !important;
     background-position: -1024px 23px; }
-    .metrics__top-list .active .metrics-active:hover {
-      background-color: transparent; }
+    .metrics__top-list .active a:hover {
+      background-color: transparent !important; }
 
 .metrics__list {
   border-bottom: 1px solid #5a5a5a; }
@@ -1057,8 +1061,10 @@ footer {
     margin: 20px; }
 
 .metrics__graph-img {
-  width: 1089px;
-  height: 289px;
+  width: 100%;
+  max-width: 1089px;
+  height: 100%;
+  min-height: 289px;
   background: url("../img/graph_bg.png") no-repeat;
   background-size: contain; }
 
@@ -1404,7 +1410,12 @@ footer {
     margin-left: 20px; }
 
   .voting__content {
-    padding: 0; } }
+    padding: 0; }
+
+  .metrics {
+    font-size: 16px; }
+    .metrics .cell-2, .metrics .cell-3, .metrics .cell-4, .metrics .cell-5, .metrics .cell-6 {
+      width: 150px; } }
 /* Medium devices */
 @media (max-width: 1199px) {
   section:not(.pageheader) {
@@ -1538,7 +1549,43 @@ footer {
 
   .news-list {
     width: 50%;
-    float: right; } }
+    float: right; }
+
+  .voting h3 {
+    font-size: 20px; }
+  .voting h2 {
+    margin-bottom: 50px; }
+
+  .voting__top-list p {
+    width: 100px;
+    padding-left: 0; }
+  .voting__top-list .voting__name {
+    width: 170px;
+    padding-left: 0; }
+
+  .voting__list {
+    font-size: 14px; }
+    .voting__list p {
+      width: 100px;
+      padding-left: 0; }
+    .voting__list label {
+      width: 40px;
+      height: 40px; }
+    .voting__list .voting__name {
+      width: 170px;
+      padding-left: 50px;
+      font-size: 14px; }
+    .voting__list .voting-graph-icon {
+      width: 107px;
+      margin-left: 0; }
+    .voting__list .voting__name2 {
+      width: 370px;
+      font-size: 24px; }
+
+  .voting-btn-1 {
+    padding: 10px 15px;
+    margin: 0 9px;
+    font-size: 16px; } }
 /* Extra small devices */
 @media (max-width: 767px) {
   .incontainer {
@@ -1683,6 +1730,45 @@ footer {
       font-size: 25px; }
 
   .miners__list li {
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  .voting__top-list {
+    display: none; }
+
+  .voting__list {
+    font-size: 12px; }
+    .voting__list .voting__name, .voting__list .voting__name2 {
+      width: 100%; }
+    .voting__list .voting__name2 {
+      font-size: 20px; }
+    .voting__list p {
+      width: 33%;
+      padding-left: 0; }
+    .voting__list span {
+      font-size: 10px; }
+
+  .voting-btn-1 {
+    position: relative;
+    float: right;
+    padding: 10px 25px;
+    margin: -50px 0 0;
+    clear: both; }
+
+  .voting-btn-2 {
+    float: none;
+    display: block;
+    margin-top: 10px; }
+
+  .voting__graph-bottom {
+    margin-top: 20px;
+    font-size: 16px; }
+    .voting__graph-bottom span {
+      display: block;
+      margin: 0;
+      font-size: 10px; }
+
+  .voting-btn-3 {
+    padding: 10px;
+    font-size: 16px; } }
 
 /*# sourceMappingURL=styles.css.map */
