@@ -303,7 +303,7 @@ $(document).ready(function () {
 
 
                 if (vVal.length === 0 && requiredField) {
-                    placeholderMess = 'Field ' + ($(this).attr('data-validate-empty') ? '"' + $(this).attr('data-validate-empty') + '" ' : 'is required') + '!';
+                    placeholderMess = 'Field ' + ($(this).attr('data-validate-empty') ? '"' + $(this).attr('data-validate-empty') + '" ' : '') + 'is required!';
                     vResult = false;
                 } else if ($(this).attr('name') == 'email' && vVal.length) {
                     pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
