@@ -117,11 +117,14 @@ $minionProBoldCn: "MinionProBoldCn";
  ---------------------------------------------- */
 
 body {
-  max-width: 2000px;
+  min-width: 320px;
   margin: 0 auto;
   font: 17px $museoSans100;
   color: #000;
   background-color: #fff;
+}
+.top-menu, .pageheader__content, .container-fluid {
+  max-width: 2000px;
 }
 section {
   position: relative;
@@ -899,7 +902,7 @@ footer {
 }
 .community__links {
   position: absolute;
-  bottom: 10px;
+  bottom: 60px;
   right: 0;
   font: 16px $museoSans300;
   a {
@@ -951,7 +954,8 @@ footer {
 
 .news-block {
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 192px;
   padding: 20px;
   margin: 0 0 20px;
@@ -981,8 +985,9 @@ footer {
   font-size: 24px;
   li {
     position: relative;
-    width: 320px;
-    height: 115px;
+    width: 100%;
+    max-width: 320px;
+    min-height: 115px;
     padding: 15px 0;
     margin: 0;
     line-height: 17px;
@@ -1019,8 +1024,9 @@ footer {
     margin-bottom: 20px;
   }
   li {
-    width: 780px;
-    height: 58px;
+    width: 100%;
+    max-width: 780px;
+    min-height: 58px;
     padding: 15px 0;
     margin: 0;
     line-height: 17px;
@@ -1069,7 +1075,6 @@ footer {
     margin-right: 70px;
     .small {
       display: block;
-      text-align: right;
     }
   }
 }
@@ -1177,8 +1182,10 @@ footer {
 }
 
 .voting__graph-img {
-  width: 1066px;
-  height: 55px;
+  width: 100%;
+  max-width: 1066px;
+  height: 100%;
+  min-height: 55px;
   background: url("../img/vote_graph_big.png") no-repeat;
   background-size: contain;
 }
@@ -1212,6 +1219,10 @@ footer {
   }
   .cell-1 {
     width: 235px;
+    float: left;
+    p {
+      margin-right: 10px;
+    }
   }
   .cell-2 {
     width: 215px;
@@ -1244,18 +1255,25 @@ footer {
     line-height: normal;
     text-transform: none;
   }
-  input[type='checkbox'] {
-    display: none;
-  }
-  label {
+  .metrics-pill {
     display: inline-block;
-    height: 22px;
-    padding-left: 25px;
+    padding: 18px 15px 18px 25px;
     margin: 0 5px;
-    background: url("../img/sprite.png") no-repeat -1152px 3px;
+    font-size: 18px;
+    text-transform: none;
+    background: url("../img/sprite.png") no-repeat -1152px 23px;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+      background-color: transparent;
+    }
   }
-  .label-checked {
-    background-position: -1024px 3px;
+  .active .metrics-active {
+    background-color: transparent;
+    background-position: -1024px 23px;
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 .metrics__list {
@@ -1345,8 +1363,8 @@ footer {
 
 .traders {
   font-family: $museoSans300;
-  background: url("../img/bg_3.jpg") no-repeat #ececec;
-  background-size: contain;
+  background: url("../img/bg_3.jpg") no-repeat;
+  background-size: cover;
   h2 {
     margin-bottom: 40px;
     font-family: $museoSans100;
@@ -1586,6 +1604,9 @@ footer {
   .slogan {
     margin: 33px 20px;
   }
+  .miners__list {
+    margin: 0 -250px 80px;
+  }
 }
 @media (max-width: 1799px) {
   .top-menu li a {
@@ -1593,6 +1614,12 @@ footer {
   }
   .login-btn {
     margin: 25px 0 25px 20px;
+  }
+  .miners__list {
+    margin: 0;
+    li {
+      margin-bottom: 40px;
+    }
   }
 }
 @media (max-width: 1599px) {
@@ -1646,6 +1673,12 @@ footer {
     height: 320px;
     right: -30px;
   }
+  .community__links > div + div {
+    margin-left: 20px;
+  }
+  .voting__content {
+    padding: 0;
+  }
 }
 
 /* Medium devices */
@@ -1698,6 +1731,25 @@ footer {
   }
   .roadmap__img {
     bottom: -30px;
+  }
+  .community__links {
+    float: right;
+    position: relative;
+    bottom: 30px;
+  }
+  .voting__top-list p {
+    width: 125px;
+  }
+  .voting__list {
+    p {
+      width: 125px;
+    }
+    .voting__name2 {
+      width: 510px;
+    }
+  }
+  .voting-btn-1 {
+    margin-right: 0;
   }
 }
 
@@ -1759,6 +1811,20 @@ footer {
   .roadmap a {
     font-size: 22px;
   }
+  .community__links {
+    float: left;
+  }
+  .community__left {
+    margin-top: 40px;
+  }
+  .news-block {
+    float: left;
+    margin-top: 10px;
+  }
+  .news-list {
+    width: 50%;
+    float: right;
+  }
 }
 
 /* Extra small devices */
@@ -1771,6 +1837,14 @@ footer {
   }
   h2, .features h2, .projects h2, .roadmap h2 {
     font-size: 60px;
+  }
+  .community {
+    h2 {
+      font-size: 46px;
+    }
+    h3 {
+      font-size: 30px;
+    }
   }
   .logo {
     padding: 10px 15px 5px 90px;
@@ -1863,6 +1937,58 @@ footer {
     bottom: 20px;
     position: relative;
     right: 0;
+  }
+  .community__links {
+    span {
+      font-size: 30px;
+      line-height: 42px;
+    }
+    > div {
+      width: 100%;
+      margin-top: 20px;
+      + div {
+        margin-left: 0;
+      }
+    }
+  }
+  .community__left {
+    margin-top: 0;
+  }
+  .news-list {
+    width: 100%;
+    span {
+      font-size: 14px;
+    }
+    .news-date {
+      display: none;
+    }
+  }
+  .category-link {
+    bottom: 10px;
+  }
+  .miners li {
+    font-size: 14px;
+    span {
+      font-size: 16px;
+    }
+  }
+  .miners__right {
+    padding-right: 0;
+    h3 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+  .miners-left {
+    margin-top: 40px;
+    h3 {
+      font-size: 25px;
+    }
+  }
+  .miners__list li {
+    font-size: 24px;
   }
 }
 

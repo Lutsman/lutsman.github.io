@@ -15,7 +15,7 @@
 
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="css/extra-styles.css">
 </head>
 <body>
 
@@ -410,7 +410,7 @@
         <div class="container-fluid">
             <div class="section__content">
                 <div class="incontainer">
-                    <div class="community__header">
+                    <div class="community__header clearfix">
                         <h2>Community</h2>
                         <div class="community__links">
                             <div>
@@ -426,7 +426,7 @@
 
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="community__left">
+                            <div class="community__left clearfix">
                                 <p>News Feed</p>
                                 <div class="news-block">
                                     <p>Etherium: <br>
@@ -618,10 +618,13 @@
 
                     <div class="metrics__content">
                         <div class="metrics__top-list clearfix">
-                            <p class="cell-1">Show
-                                <input type="checkbox" id="metrics-check1"><label class="label-checked" for="metrics-check1">Usd</label>
-                                <input type="checkbox" id="metrics-check2"><label for="metrics-check2">Btc</label>
-                            </p>
+                            <div class="cell-1">
+                                <p>Show</p>
+                                <ul class="nav nav-pills">
+                                    <li role="presentation" class="active"><a class="metrics-pill metrics-active" href="#">Usd</a></li>
+                                    <li role="presentation"><a class="metrics-pill" href="#">Btc</a></li>
+                                </ul>
+                            </div>
                             <p class="cell-2">market cap</p>
                             <p class="cell-3">price</p>
                             <p class="cell-4">24H vwap</p>
@@ -639,7 +642,7 @@
                             <p class="cell-7">11.54%</p>
                         </div>
                         <div class="metrics__list clearfix">
-                            <p class="grey cell-1">etc/usd</p>
+                            <p class="grey cell-1">eth/usd</p>
                             <p class="cell-2">$1 046 644 628</p>
                             <p class="cell-3">$12.69277501</p>
                             <p class="cell-4">$12.7865</p>
@@ -828,6 +831,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
+    <script src="https://noxonfund.com/js/highstock.js"></script>
+    <script src="https://noxonfund.com/js/etcchart.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

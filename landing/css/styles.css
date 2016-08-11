@@ -52,11 +52,14 @@
  Main
  ---------------------------------------------- */
 body {
-  max-width: 2000px;
+  min-width: 320px;
   margin: 0 auto;
   font: 17px "MuseoSans100";
   color: #000;
   background-color: #fff; }
+
+.top-menu, .pageheader__content, .container-fluid {
+  max-width: 2000px; }
 
 section {
   position: relative; }
@@ -742,7 +745,7 @@ footer {
 
 .community__links {
   position: absolute;
-  bottom: 10px;
+  bottom: 60px;
   right: 0;
   font: 16px "MuseoSans300"; }
   .community__links a {
@@ -780,7 +783,8 @@ footer {
 
 .news-block {
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 192px;
   padding: 20px;
   margin: 0 0 20px;
@@ -808,8 +812,9 @@ footer {
   font-size: 24px; }
   .news-list li {
     position: relative;
-    width: 320px;
-    height: 115px;
+    width: 100%;
+    max-width: 320px;
+    min-height: 115px;
     padding: 15px 0;
     margin: 0;
     line-height: 17px;
@@ -838,8 +843,9 @@ footer {
 .community__right ul {
   margin-bottom: 20px; }
 .community__right li {
-  width: 780px;
-  height: 58px;
+  width: 100%;
+  max-width: 780px;
+  min-height: 58px;
   padding: 15px 0;
   margin: 0;
   line-height: 17px;
@@ -877,8 +883,7 @@ footer {
     padding-left: 80px;
     margin-right: 70px; }
     .miners__list li .small {
-      display: block;
-      text-align: right; }
+      display: block; }
 
 .miners__right {
   padding-right: 85px; }
@@ -967,8 +972,10 @@ footer {
     box-shadow: 0 3px 3px rgba(16, 16, 16, 0.15); }
 
 .voting__graph-img {
-  width: 1066px;
-  height: 55px;
+  width: 100%;
+  max-width: 1066px;
+  height: 100%;
+  min-height: 55px;
   background: url("../img/vote_graph_big.png") no-repeat;
   background-size: contain; }
 
@@ -994,7 +1001,10 @@ footer {
     float: left;
     margin-top: 20px; }
   .metrics .cell-1 {
-    width: 235px; }
+    width: 235px;
+    float: left; }
+    .metrics .cell-1 p {
+      margin-right: 10px; }
   .metrics .cell-2 {
     width: 215px; }
   .metrics .cell-3 {
@@ -1019,16 +1029,22 @@ footer {
     font-size: 18px;
     line-height: normal;
     text-transform: none; }
-  .metrics__top-list input[type='checkbox'] {
-    display: none; }
-  .metrics__top-list label {
+  .metrics__top-list .metrics-pill {
     display: inline-block;
-    height: 22px;
-    padding-left: 25px;
+    padding: 18px 15px 18px 25px;
     margin: 0 5px;
-    background: url("../img/sprite.png") no-repeat -1152px 3px; }
-  .metrics__top-list .label-checked {
-    background-position: -1024px 3px; }
+    font-size: 18px;
+    text-transform: none;
+    background: url("../img/sprite.png") no-repeat -1152px 23px; }
+    .metrics__top-list .metrics-pill:hover {
+      color: #fff;
+      text-decoration: underline;
+      background-color: transparent; }
+  .metrics__top-list .active .metrics-active {
+    background-color: transparent;
+    background-position: -1024px 23px; }
+    .metrics__top-list .active .metrics-active:hover {
+      background-color: transparent; }
 
 .metrics__list {
   border-bottom: 1px solid #5a5a5a; }
@@ -1100,8 +1116,8 @@ footer {
 
 .traders {
   font-family: "MuseoSans300";
-  background: url("../img/bg_3.jpg") no-repeat #ececec;
-  background-size: contain; }
+  background: url("../img/bg_3.jpg") no-repeat;
+  background-size: cover; }
   .traders h2 {
     margin-bottom: 40px;
     font-family: "MuseoSans100";
@@ -1319,13 +1335,21 @@ footer {
 /* Large devices */
 @media (max-width: 1899px) {
   .slogan {
-    margin: 33px 20px; } }
+    margin: 33px 20px; }
+
+  .miners__list {
+    margin: 0 -250px 80px; } }
 @media (max-width: 1799px) {
   .top-menu li a {
     padding: 33px 10px; }
 
   .login-btn {
-    margin: 25px 0 25px 20px; } }
+    margin: 25px 0 25px 20px; }
+
+  .miners__list {
+    margin: 0; }
+    .miners__list li {
+      margin-bottom: 40px; } }
 @media (max-width: 1599px) {
   .logo {
     padding-top: 30px; }
@@ -1374,7 +1398,13 @@ footer {
   .roadmap__img {
     width: 600px;
     height: 320px;
-    right: -30px; } }
+    right: -30px; }
+
+  .community__links > div + div {
+    margin-left: 20px; }
+
+  .voting__content {
+    padding: 0; } }
 /* Medium devices */
 @media (max-width: 1199px) {
   section:not(.pageheader) {
@@ -1422,7 +1452,23 @@ footer {
       font-size: 24px; }
 
   .roadmap__img {
-    bottom: -30px; } }
+    bottom: -30px; }
+
+  .community__links {
+    float: right;
+    position: relative;
+    bottom: 30px; }
+
+  .voting__top-list p {
+    width: 125px; }
+
+  .voting__list p {
+    width: 125px; }
+  .voting__list .voting__name2 {
+    width: 510px; }
+
+  .voting-btn-1 {
+    margin-right: 0; } }
 /* Small devices */
 @media (max-width: 991px) {
   h1 {
@@ -1478,7 +1524,21 @@ footer {
     bottom: 80px; }
 
   .roadmap a {
-    font-size: 22px; } }
+    font-size: 22px; }
+
+  .community__links {
+    float: left; }
+
+  .community__left {
+    margin-top: 40px; }
+
+  .news-block {
+    float: left;
+    margin-top: 10px; }
+
+  .news-list {
+    width: 50%;
+    float: right; } }
 /* Extra small devices */
 @media (max-width: 767px) {
   .incontainer {
@@ -1489,6 +1549,11 @@ footer {
 
   h2, .features h2, .projects h2, .roadmap h2 {
     font-size: 60px; }
+
+  .community h2 {
+    font-size: 46px; }
+  .community h3 {
+    font-size: 30px; }
 
   .logo {
     padding: 10px 15px 5px 90px; }
@@ -1576,6 +1641,48 @@ footer {
     height: 140px;
     bottom: 20px;
     position: relative;
-    right: 0; } }
+    right: 0; }
+
+  .community__links span {
+    font-size: 30px;
+    line-height: 42px; }
+  .community__links > div {
+    width: 100%;
+    margin-top: 20px; }
+    .community__links > div + div {
+      margin-left: 0; }
+
+  .community__left {
+    margin-top: 0; }
+
+  .news-list {
+    width: 100%; }
+    .news-list span {
+      font-size: 14px; }
+    .news-list .news-date {
+      display: none; }
+
+  .category-link {
+    bottom: 10px; }
+
+  .miners li {
+    font-size: 14px; }
+    .miners li span {
+      font-size: 16px; }
+
+  .miners__right {
+    padding-right: 0; }
+    .miners__right h3 {
+      font-size: 20px; }
+    .miners__right span {
+      font-size: 20px; }
+
+  .miners-left {
+    margin-top: 40px; }
+    .miners-left h3 {
+      font-size: 25px; }
+
+  .miners__list li {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=styles.css.map */
