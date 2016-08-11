@@ -1528,6 +1528,9 @@ footer {
   .pagefooter form {
     padding: 30px 20px 0 20px; }
 
+  .pagefooter input {
+    width: 70%; }
+
   footer {
     position: relative;
     margin-top: 100px; } }
@@ -1871,7 +1874,7 @@ footer {
       float: left;
       margin: 20px 10px 20px 0; }
     .metrics__top-list .metrics-pill {
-      padding: 18px 15px 18px 25px; }
+      padding: 24px 15px 18px 25px; }
 
   .metrics__graph-img {
     min-height: 180px; }
@@ -1917,7 +1920,7 @@ footer {
       margin-top: 20px; }
 
   .pagefooter__social {
-    max-width: 100%; }
+    max-width: 680px; }
 
   .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
     width: 40%;
