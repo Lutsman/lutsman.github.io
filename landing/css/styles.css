@@ -381,7 +381,8 @@ footer {
     margin-bottom: 70px;
     text-align: center; }
   .pagefooter form {
-    width: 1210px;
+    width: 100%;
+    max-width: 1210px;
     height: 114px;
     padding: 30px 245px 0 140px;
     margin-top: 60px;
@@ -416,7 +417,8 @@ footer {
       background-color: #00ace6; }
 
 .pagefooter__social {
-  padding: 0 120px; }
+  width: 100%;
+  max-width: 1730px; }
   .pagefooter__social a {
     float: left; }
 
@@ -1278,7 +1280,7 @@ footer {
   display: block;
   height: 70px;
   margin: 0 35px;
-  background-size: contain; }
+  background-size: contain !important; }
   .reddit-icon:hover, .slack-icon:hover, .fb-icon:hover, .github-icon:hover, .gitter-icon:hover, .twitter-icon:hover {
     opacity: 0.7; }
 
@@ -1355,7 +1357,13 @@ footer {
   .miners__list {
     margin: 0; }
     .miners__list li {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px; }
+
+  .pagefooter__social {
+    max-width: 1550px; }
+
+  .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+    margin: 0 20px; } }
 @media (max-width: 1599px) {
   .logo {
     padding-top: 30px; }
@@ -1415,7 +1423,17 @@ footer {
   .metrics {
     font-size: 16px; }
     .metrics .cell-2, .metrics .cell-3, .metrics .cell-4, .metrics .cell-5, .metrics .cell-6 {
-      width: 150px; } }
+      width: 150px; }
+
+  .developers__video video {
+    width: 90%; }
+
+  .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+    width: 14%;
+    margin: 0 15px; }
+
+  .pagefooter form {
+    padding-right: 200px; } }
 /* Medium devices */
 @media (max-width: 1199px) {
   section:not(.pageheader) {
@@ -1486,7 +1504,33 @@ footer {
     .metrics .cell-2, .metrics .cell-3, .metrics .cell-4, .metrics .cell-5, .metrics .cell-6 {
       width: 120px; }
     .metrics .cell-7 {
-      width: 60px; } }
+      width: 60px; }
+
+  .developers h3 {
+    font-size: 50px; }
+
+  .developers__left {
+    padding-right: 0; }
+
+  .traders__right {
+    padding-left: 0; }
+
+  .pagefooter h2 {
+    margin-top: 150px;
+    margin-bottom: 50px; }
+
+  .pagefooter__social {
+    max-width: 940px; }
+
+  .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+    margin: 0 10px; }
+
+  .pagefooter form {
+    padding: 30px 20px 0 20px; }
+
+  footer {
+    position: relative;
+    margin-top: 100px; } }
 /* Small devices */
 @media (max-width: 991px) {
   h1 {
@@ -1607,7 +1651,25 @@ footer {
     float: none;
     margin: 0; }
   .metrics__top-list .metrics-pill {
-    padding: 10px 5px 10px 25px; } }
+    padding: 10px 5px 10px 25px; }
+
+  .developers-links p {
+    font-size: 26px; }
+
+  .traders__right {
+    padding-top: 30px; }
+
+  .traders__left {
+    padding-right: 0; }
+
+  .pagefooter__social {
+    max-width: 730px; }
+
+  .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+    width: 13%; }
+
+  .pagefooter input {
+    width: 60%; } }
 /* Extra small devices */
 @media (max-width: 767px) {
   .incontainer {
@@ -1623,6 +1685,9 @@ footer {
     font-size: 46px; }
   .community h3 {
     font-size: 30px; }
+
+  .developers h2 {
+    font-size: 50px; }
 
   .logo {
     padding: 10px 15px 5px 90px; }
@@ -1794,7 +1859,7 @@ footer {
     font-size: 16px; }
 
   .metrics {
-    font-size: 12px; }
+    font-size: 10px; }
     .metrics .cell-1 {
       width: 100%; }
     .metrics .cell-2, .metrics .cell-3, .metrics .cell-4, .metrics .cell-5, .metrics .cell-6, .metrics .cell-7 {
@@ -1806,6 +1871,63 @@ footer {
       float: left;
       margin: 20px 10px 20px 0; }
     .metrics__top-list .metrics-pill {
-      padding: 18px 15px 18px 25px; } }
+      padding: 18px 15px 18px 25px; }
+
+  .metrics__graph-img {
+    min-height: 180px; }
+
+  .metrics__legend p {
+    margin: 20px 10px; }
+
+  .developers p {
+    font-size: 18px; }
+  .developers h3 {
+    font-size: 30px; }
+    .developers h3 span {
+      font-size: 24px; }
+
+  .developers__right > p {
+    padding-right: 0; }
+
+  .developers__video {
+    width: 100%; }
+    .developers__video video {
+      width: 100%; }
+
+  .traders__left p:first-child, .traders__right p {
+    font-size: 24px; }
+
+  .traders__right ul {
+    margin-top: 20px; }
+
+  .pagefooter {
+    font-size: 22px; }
+    .pagefooter form {
+      height: auto;
+      padding: 20px; }
+      .pagefooter form p {
+        line-height: 40px; }
+    .pagefooter input {
+      width: 100%; }
+    .pagefooter input[type="email"] {
+      padding: 10px 20px; }
+    .pagefooter .social-submit {
+      float: none;
+      width: 100%;
+      margin-top: 20px; }
+
+  .pagefooter__social {
+    max-width: 100%; }
+
+  .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
+    width: 40%;
+    max-width: 150px;
+    margin: 10px 5%; }
+
+  footer {
+    height: auto;
+    font-size: 14px; }
+    footer span {
+      font-size: 8px; } }
 
 /*# sourceMappingURL=styles.css.map */
