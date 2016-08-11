@@ -181,8 +181,7 @@ $(document).ready(function () {
             }
         }
     })();
-    
-    
+
     /*Sorting*/
     (function(){
     	$('.projects__menu').on('click', function (e) {
@@ -227,13 +226,44 @@ $(document).ready(function () {
             $(button).addClass('active');
         }
     })();
-    
-    /*Metrics Pills*/
+
+    /*Beauty Scroll*/
     (function(){
-        $('.nav-tabs a').click(function(){
-            $(this).tab('show');
-        })
+    	var aboutScrollObj = $('.about__scroll').jScrollPane().data('jsp');
+        var throttledScrollReinit = throttle(aboutScrollObj.reinitialise, 300);
+
+        function throttle(func, ms) {
+
+            var isThrottled = false,
+                savedArgs,
+                savedThis;
+
+            function wrapper() {
+
+                if (isThrottled) { // (2)
+                    savedArgs = arguments;
+                    savedThis = this;
+                    return;
+                }
+
+                func.apply(this, arguments); // (1)
+
+                isThrottled = true;
+
+                setTimeout(function() {
+                    isThrottled = false; // (3)
+                    if (savedArgs) {
+                        wrapper.apply(savedThis, savedArgs);
+                        savedArgs = savedThis = null;
+                    }
+                }, ms);
+            }
+
+            return wrapper;
+        }
+
+        $(window).on('resize', function () {
+            throttledScrollReinit();
+        });
     })();
-
-
 });
