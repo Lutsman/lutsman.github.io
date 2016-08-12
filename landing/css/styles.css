@@ -1063,13 +1063,15 @@ footer {
   .metrics__legend p {
     margin: 20px; }
 
-.metrics__graph-img {
+.metrics__graph {
   width: 100%;
   max-width: 1089px;
   height: 100%;
-  min-height: 289px;
-  background: url("../img/graph_bg.png") no-repeat;
-  background-size: contain; }
+  min-height: 289px; }
+
+.chart2 {
+  width: 100%;
+  height: 100%; }
 
 .developers h2 {
   margin: 120px auto 40px;
@@ -1877,7 +1879,7 @@ footer {
     .metrics__top-list .metrics-pill {
       padding: 24px 15px 18px 25px; }
 
-  .metrics__graph-img {
+  .metrics__graph {
     min-height: 180px; }
 
   .metrics__legend p {
