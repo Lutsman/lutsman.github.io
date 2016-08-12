@@ -1061,11 +1061,7 @@ footer {
     }
   }
   li {
-    font: 36px $museoSans300;
-    span {
-      font-size: 20px;
-      color: #aaa;
-    }
+    font: 30px $museoSans300;
   }
 }
 .miners__list {
@@ -1073,11 +1069,27 @@ footer {
   li {
     position: relative;
     float: left;
-    padding-left: 80px;
-    margin-right: 70px;
-    .small {
-      font-family: $museoSans500;
-      display: block;
+    width: 16.6%;
+    text-align: center;
+    span {
+      display: inline-block;
+      vertical-align: middle;;
+      font-size: 12px;
+    }
+    > span {
+      text-align: left;
+      .small {
+        font-family: $museoSans500;
+        color: #aaa;
+        text-transform: uppercase;
+      }
+      .dark {
+        font-size: 10px;
+        color: #757575;
+      }
+    }
+    .list-text {
+      font: 30px $museoSans300;
     }
   }
 }
@@ -1302,6 +1314,7 @@ footer {
 }
 
 
+
 .developers {
   h2 {
     margin: 120px auto 40px;
@@ -1450,19 +1463,20 @@ footer {
   background-position: -576px -576px;
 }
 .miners1, .miners2, .miners3, .miners4, .miners5, .miners6 {
-  position: absolute;
+  position: relative;
   width: 70px;
   height: 70px;
-  top: 0;
-  left: 0;
+  margin-right: 10px;
 }
 .miners1 {
   background-position: 0 -832px;
 }
 .miners2 {
+  width: 58px;
   background-position: -128px -832px;
 }
 .miners3 {
+  width: 48px;
   background-position: -256px -832px;
 }
 .miners4 {
@@ -1564,6 +1578,39 @@ footer {
   background: url("../img/twitter_logo.png") no-repeat center;
 }
 
+/*Scroll up button*/
+#scrollUp {
+  position: fixed;
+  width: 44px;
+  height: 36px;
+  background-color: $main-green;
+  @include border-radius(5px);
+  right: 10px;
+  bottom: -40px;
+  display: none;
+  @include transition(background-color 0.2s ease-in-out);
+  cursor: pointer;
+  z-index: 20;
+  &:hover {
+    background: $hover-green;
+  }
+  .upButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    opacity: 1;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    @include transform(rotate(45deg));
+  }
+}
+
+/*MEDIA*/
 
 @media (max-height: 849px) {
   .company-icon {
@@ -1622,7 +1669,7 @@ footer {
     margin: 25px 0 25px 20px;
   }
   .miners__list {
-    margin: 0;
+    margin: 0 -120px;
     li {
       margin-bottom: 40px;
     }
@@ -1684,6 +1731,12 @@ footer {
     width: 600px;
     height: 320px;
     right: -30px;
+  }
+  .miners__list {
+    margin: 0;
+    li {
+      width: 33.3%;
+    }
   }
   .community__links > div + div {
     margin-left: 20px;
@@ -1890,6 +1943,17 @@ footer {
   .news-list {
     width: 50%;
     float: right;
+  }
+  .miners__list li {
+    .list-text {
+      font-size: 24px;
+    }
+    span {
+      font-size: 10px;
+    }
+    > span .dark {
+      font-size: 8px;
+    }
   }
   .voting {
     h3 {
@@ -2123,9 +2187,6 @@ footer {
   }
   .miners li {
     font-size: 14px;
-    span {
-      font-size: 16px;
-    }
   }
   .miners__right {
     padding-right: 0;
@@ -2143,7 +2204,10 @@ footer {
     }
   }
   .miners__list li {
-    font-size: 24px;
+    width: 50%;
+    .list-text {
+      font-size: 20px;
+    }
   }
   .voting__top-list {
     display: none;
@@ -2266,9 +2330,8 @@ footer {
     max-width: 680px;
   }
   .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
-    width: 40%;
-    max-width: 150px;
-    margin: 10px 5%;
+    width: 30%;
+    margin: 10px 1.5%;
   }
   footer {
     height: auto;
@@ -2276,6 +2339,12 @@ footer {
     span {
       font-size: 8px;
     }
+  }
+}
+
+@media (max-width: 499px) {
+  .miners__list li {
+    width: 100%;
   }
 }
 
