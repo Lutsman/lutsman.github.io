@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ethereum</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--For improved cross-browser rendering-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--Plugins-->
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar top-menu">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="#">
+                    <span class="logo-icon"></span>
+                    Ethereum <span>classic</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <p class="navbar-text slogan">Classic Blockchain Since 2016!</p>
+
+                <button type="button" class="btn navbar-btn login-btn">Member Login</button>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Explorer</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Proposals</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#metrics">Metrics</a></li>
+                    <li><a href="#developers">Developers</a></li>
+                    <li><a href="#">Statistics</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+<section class="projects">
+    <div class="container-fluid">
+        <div class="section__content">
+            <div class="incontainer">
+                <div class="projects__header">
+                    <h2>Projects</h2>
+                    <ul class="nav nav-pills projects__menu">
+                        <li data-sort-by="all"><a href="#">Show all</a></li>
+                        <li data-sort-by="projects"><a href="#">Projects</a></li>
+                        <li data-sort-by="wallets"><a href="#">Wallets</a></li>
+                        <li data-sort-by="service"><a href="#">Service</a></li>
+                        <li data-sort-by="mining"><a href="#">Mining</a></li>
+                        <li data-sort-by="trade" class="active"><a href="#">Trade</a></li>
+                    </ul>
+                </div>
+
+                <div data-role="sorting-wrapper-projects" class="clearfix">
+                    <div data-sortable-by="projects" class="projects__block">
+                        <p><span>etcstats.net</span></p>
+                        <p>Ethereum Classic Network Status</p>
+                        <div class="links">
+                            <a class="live-link" href="#">Live</a>
+                            <a href="#" class="github"></a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="projects" class="projects__block">
+                        <p><span>etcminer</span></p>
+                        <p>Ethereum Classic Miner</p>
+                        <div class="links">
+                            <a href="#">Demo</a>
+                            <a href="#" class="github"></a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="projects" class="projects__block">
+                        <p><span>etcwallet</span></p>
+                        <p>Ethereum Classic Wallet</p>
+                        <div class="links">
+                            <a href="#">Concept</a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="wallets" class="projects__block">
+                        <p><span>etcexchange</span></p>
+                        <p>Ethereum Classic Exchange</p>
+                        <div class="links">
+                            <a href="#">Concept</a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="wallets" class="projects__block">
+                        <p><span>etcbook</span></p>
+                        <p>Ethereum Classic Tools</p>
+                        <div class="links">
+                            <a href="#">Concept</a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="service" class="projects__block">
+                        <p><span>etcstats.net</span></p>
+                        <p>Ethereum Classic Network Status</p>
+                        <div class="links">
+                            <a class="live-link" href="#">Live</a>
+                            <a href="#" class="github"></a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="service" class="projects__block">
+                        <p><span>etcminer</span></p>
+                        <p>Ethereum Classic Miner</p>
+                        <div class="links">
+                            <a href="#">Demo</a>
+                            <a href="#" class="github"></a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="mining" class="projects__block">
+                        <p><span>etcwallet</span></p>
+                        <p>Ethereum Classic Wallet</p>
+                        <div class="links">
+                            <a href="#">Concept</a>
+                        </div>
+                    </div>
+                    <div data-sortable-by="trade" class="projects__block">
+                        <p><span>etcexchange</span></p>
+                        <p>Ethereum Classic Exchange</p>
+                        <div class="links">
+                            <a href="#">Concept</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn add-project"><span>+</span>Add Project</button>
+            </div>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</section><!--projects-->
+
+<section class="voting">
+    <div class="container-fluid">
+        <div class="section__content">
+            <div class="incontainer">
+                <h2>Voting</h2>
+
+                <div class="voting__content">
+                    <div class="voting__top-list clearfix">
+                        <p class="voting__name">proposal name</p>
+                        <p>quotes</p>
+                        <p>action</p>
+                        <p>review</p>
+                        <p>amount</p>
+                        <p>end date</p>
+                    </div>
+                    <div class="voting__list  clearfix">
+                        <input type="checkbox" id="voting-check1"><label for="voting-check1"></label>
+                        <p class="voting__name">Project name
+                            <span>Lorem Ipsum is simply dummy text of the printing and ty...</span>
+                        </p>
+                        <p class="voting-graph-icon"></p>
+                        <button type="button" class="btn voting-btn-1">vote</button>
+                        <p>3,421 <span>83% Positive</span></p>
+                        <p>482,424 <span class="small">etc</span> <span>4 days left</span></p>
+                        <p>12/23/2016 <span>4 days left</span></p>
+                    </div>
+                    <div class="voting__list  clearfix">
+                        <input type="checkbox" id="voting-check2"><label for="voting-check2"></label>
+                        <p class="voting__name2">Project name</p>
+
+                        <p>3,421 <span>83% Positive</span></p>
+                        <p>482,424 <span class="small">etc</span> <span>4 days left</span></p>
+                        <p>12/23/2016 <span>4 days left</span></p>
+                    </div>
+                    <div class="voting__graph-block  clearfix">
+                        <h3>Lorem Ipsum is simply dummy text  of the printing and ty?
+                            <button type="button" class="btn voting-btn-2">Show Full text</button>
+                        </h3>
+                        <div class="voting__graph-img"></div>
+                        <div class="voting__graph-bottom">
+                            <p>3,421 <span>83% Negative</span></p>
+                            <button type="button" class="btn voting-btn-3">vote-yes</button>
+                            <p><span>17% Positive</span> 1,024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.container-fluid -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="section__content">
+                <div class="incontainer clearfix">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footer__left">
+                                <p>Let's make sure original Ethereum vision doesn't just
+                                    "go gentle into that good night"!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-2 col-sm-6">
+                            <div div class="footer__right">
+                                <p>Donations</p>
+                                <p><span>ETC: 0x0xe9a7e26bf5c05fe3bae272d4c940bd7158611ce9</span></p>
+                                <p><span>ETH: 0xda99c6385e7ec0a7b4031c393dac01b600341fc3</span></p>
+                                <p><span>BTC: 1953UK8Y849SZqfDEnn3Zu4AM98hwWk3Kw</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+    </footer>
+</section><!--voting-->
+
+<section class="pagefooter">
+    <div class="container-fluid">
+        <h2>Stay tuned</h2>
+        <div class="pagefooter__social clearfix">
+            <a href="#" class="reddit-icon"></a>
+            <a href="#" class="slack-icon"></a>
+            <a href="#" class="fb-icon"></a>
+            <a href="#" class="github-icon"></a>
+            <a href="#" class="gitter-icon"></a>
+            <a href="#" class="twitter-icon"></a>
+        </div>
+        <form action="" method="">
+            <p>Subsctibe to news</p>
+            <input type="email" name="email" placeholder="Your Email" required="" data-validate-empty="Email">
+            <input class="btn social-submit" type="submit" value="Subscribe">
+        </form>
+
+    </div><!-- /.container-fluid -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="section__content">
+                <div class="incontainer clearfix">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footer__left">
+                                <p>Let's make sure original Ethereum vision doesn't just
+                                    "go gentle into that good night"!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-2 col-sm-6">
+                            <div div class="footer__right">
+                                <p>Donations</p>
+                                <p><span>ETC: 0x0xe9a7e26bf5c05fe3bae272d4c940bd7158611ce9</span></p>
+                                <p><span>ETH: 0xda99c6385e7ec0a7b4031c393dac01b600341fc3</span></p>
+                                <p><span>BTC: 1953UK8Y849SZqfDEnn3Zu4AM98hwWk3Kw</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+    </footer>
+</section><!--pagefooter-->
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
+<script src="https://noxonfund.com/js/highstock.js"></script>
+<script src="https://noxonfund.com/js/etcchart.js"></script>
+<script src="js/jquery.jscrollpane.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

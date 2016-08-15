@@ -188,7 +188,6 @@ $(document).ready(function () {
             var target = e.target;
             var sortBtn = target.closest('[data-sort-by]');
 
-
             if (!sortBtn) return;
             e.preventDefault();
 
@@ -229,6 +228,9 @@ $(document).ready(function () {
 
     /*Beauty Scroll*/
     (function(){
+        if(!$('.about__scroll').length) return;
+
+
     	var aboutScrollObj = $('.about__scroll').jScrollPane().data('jsp');
         var throttledScrollReinit = throttle(aboutScrollObj.reinitialise, 300);
 
