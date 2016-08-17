@@ -183,7 +183,7 @@ a {
 img {
   max-width: 100%;
 }
-ul {
+ul, ol {
   padding: 0;
 }
 li {
@@ -264,14 +264,13 @@ li {
   }
 }
 .splitter-contract-btn {
-  position: relative;
-  float: right;
-  width: 186px;
-  height: 35px;
-  font: 13px $museoSans900;
+  max-width: 164px;
+  min-height: 57px;
+  font: 15px $museoSans900;
+  text-align: left;
+  white-space: normal;
   background-color: #e9f565;
-  border: 2px solid #000;
-  z-index: 20;
+  border: 2px solid #959d41;
   &:hover {
     color: #e9f565;
     background-color: #000;
@@ -400,13 +399,14 @@ header {
   height: auto;
   padding-top: 25px;
   padding-bottom: 12px;
-  padding-left: 115px;
-  font: 31px $museoSans900;
-  text-transform: uppercase;
-  line-height: 20px;
+  padding-left: 70px;
+  font-size: 27px;
+  line-height: 27px;
   span {
     display: block;
-    font: 25px $museoSans300;
+    font: 12px $museoSans300;
+    color: #128045;
+    text-transform: uppercase;
   }
   &:hover {
     color: $hover-black;
@@ -414,9 +414,9 @@ header {
 }
 .logo-icon {
   position: absolute;
-  width: 64px;
-  height: 115px;
-  top: 15px;
+  width: 27px;
+  height: 49px;
+  top: 20px;
   left: 31px;
   background: url("../img/logo_icon_small.png") no-repeat;
   background-size: contain;
@@ -435,12 +435,13 @@ header {
   background-size: contain;
 }
 .company-name {
-  font: 68px $museoSans900;
+  font-size: 68px;
   text-align: center;
   line-height: 42px;
   span {
-    font: 42px $museoSans300;
+    font: 31px $museoSans300;
     text-transform: uppercase;
+    color: #128045;
   }
 }
 
@@ -561,15 +562,10 @@ footer {
  ---------------------------------------------- */
 
 .about {
-  overflow: hidden;
   border-top: 1px solid #eaeaea;
   font: 14px $museoSans300;
-  .container-fluid {
-    padding: 0;
-  }
   h2 {
-    padding-left: 20%;
-    margin-top: 90px;
+    margin: 90px auto;
     font: 79px $museoSans300;
     span {
       font-family: $museoSans700;
@@ -597,6 +593,75 @@ footer {
   }
 }
 
+.about__block {
+  padding: 0;
+  font-size: 37px;
+  + .about__block {
+    border-left: 1px solid #e7e7e7;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  > div {
+    padding: 40px;
+  }
+  .dao__number {
+    font-size: 27px;
+  }
+  .data {
+    position: relative;
+    padding-bottom: 40px;
+    padding-left: 100px;
+    border-bottom: 1px solid #e7e7e7;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 40px;
+      background: url("../img/sprite.png") no-repeat;
+    }
+  }
+  .no-icon {
+    padding-left: 40px;
+  }
+}
+
+.accent {
+  font-size: 27px;
+  span {
+    font-size: 37px;
+    font-family: $museoSans900;
+    text-transform: uppercase;
+  }
+}
+.percentage {
+  margin-top: 20px;
+  span {
+    font-size: 50px;
+  }
+  .small {
+    margin-top: 10px;
+  }
+}
+.original, .classic {
+  position: relative;
+  padding-left: 60px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    background: url("../img/sprite.png") no-repeat;
+  }
+}
+.original {
+  margin-bottom: 30px;
+}
+.classic {
+  font: 14px $museoSans900;
+  text-transform: uppercase;
+  span {
+    font: 17px $museoSans900;
+  }
+}
 .data {
   font-size: 19px;
 }
@@ -604,88 +669,20 @@ footer {
   font-size: 12px;
   color: #757575;
 }
-
-.about__scroll {
-  max-width: 100%;
-  overflow-x: scroll;
-}
-.about__content{
-  width: 2000px;
-  height: 585px;
-  overflow: auto;
-  position: relative;
-}
-.about__diagram > div {
-  position: absolute;
-  top: 220px;
+.hack .small {
+  font-size: 19px;
 }
 
-.diagram-bg {
-  width: 2000px;
-  height: 250px;
-  top: 275px !important;
-  left: 0;
-  background: url("../img/sprite.png") no-repeat 0 -256px;
-  z-index: 10;
-}
 
-.bitcoin {
-  width: 190px;
-  left: 145px;
-  font-size: 38px;
-}
-.ethereum {
-  width: 230px;
-  left: 410px;
-  font-size: 22px;
-  p {
-    margin-bottom: 10px;
-  }
-  span {
-    font-size: 42px;
-  }
-}
-.dao {
-  width: 240px;
-  left: 730px;
-  font-size: 55px;
-  line-height: 30px;
-  span {
-    font-size: 26px;
-  }
-  .dao__number {
-    display: block;
-    margin-top: 40px;
-    font-size: 32px;
-  }
-  .data {
-    line-height: 23px;
-  }
-}
-.hack {
-  width: 240px;
-  left: 1128px;
-  p {
-    margin-bottom: 0;
-  }
-  span {
-    font: 34px $minionProBoldCn;
-  }
-  .data {
-    margin-bottom: 10px;
-  }
-}
 .replay {
   position: relative;
-  width: 363px;
-  height: 166px;
-  padding: 20px 16px 20px 55px;
+  max-width: 220px;
+  height: 303px;
+  padding: 27px 35px 31px 21px;
   margin-top: 20px;
-  margin-left: -55px;
   background-color: #e9f565;
   p {
-    width: 200px;
-    margin-bottom: 15px;
+    margin: 65px 0 30px;
   }
   span {
     font: 20px $museoSans700;
@@ -695,67 +692,11 @@ footer {
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 25px;
-  right: 21px;
+  top: 28px;
+  left: 23px;
   background: url("../img/sprite.png") no-repeat -512px 0;
 }
 
-.hard-fork{
-  width: 300px;
-  left: 1465px;
-  font-size: 23px;
-  p {
-    margin-bottom: 0;
-  }
-  span {
-    font: 50px $museoSans900;
-    text-transform: uppercase;
-    line-height: 23px;
-  }
-  .data {
-    margin-bottom: 20px;
-  }
-}
-.percentage {
-  margin-top: 50px;
-  .small {
-    margin-top: 10px;
-  }
-}
-.choose-site {
-  width: 200px;
-  left: 1732px;
-  p {
-    margin-bottom: 0;
-  }
-  .data {
-    margin-bottom: 75px;
-  }
-  > div {
-    padding-left: 40px;
-  }
-}
-.original {
-  margin-bottom: 50px;
-  span {
-    font: 20px $museoSans900;
-    text-transform: uppercase;
-    line-height: 18px;
-  }
-  p:first-child span {
-    font-size: 15px;
-  }
-}
-.classic {
-  font-size: 21px;
-  span {
-    font-size: 28px;
-    line-height: 18px;
-  }
-  p:first-child span {
-    font-size: 15px;
-  }
-}
 
 .ideology {
   float: right;
@@ -766,7 +707,7 @@ footer {
 .motivation {
   padding: 0 20px 0 50px;
 }
-.road-map {
+.replay-block {
   float: left;
   width: 100%;
   max-width: 325px;
@@ -825,7 +766,7 @@ footer {
   li a {
     border: 1px solid transparent;
   }
-  li.active a, li a:hover, li.active a:hover {
+  li.active a, li a:hover, li.active a:hover, li.active a:focus {
     color: #000;
     background-color: #fff;
     border-color: #000;
@@ -878,8 +819,41 @@ footer {
 .roadmap {
   font: 25px $museoSans300;
   h2 {
+    margin-bottom: 40px;
     font-size: 95px;
     color: #3aaa57;
+  }
+  h3 {
+    font-size: 37px;
+    line-height: 66px;
+  }
+  ol li {
+    list-style: decimal;
+  }
+  ul li {
+    position:relative;
+    &:before {
+      content: '—';
+      position: absolute;
+      top: 3px;
+      left: -20px;
+    }
+  }
+  li {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font: 15px $museoSans500;
+    color: #3aaa57;
+    line-height: 13px;
+    span {
+      font: 13px $museoSans300;
+      color: #000;
+    }
+  }
+  .year {
+    margin: 0;
+    font: 29px $museoSans700;
+    line-height: 66px;
   }
   p {
     margin-bottom: 30px;
@@ -899,12 +873,40 @@ footer {
     }
   }
 }
+.roadmap__table {
+  border-bottom: 1px solid #e0e0e0;
+}
+.roadmap__table-block {
+  min-height: 335px;
+  padding: 0;
+  border-right: 1px solid #e0e0e0;
+  > div {
+    min-height: 67px;
+    border-bottom: 1px solid #e0e0e0;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  h3, p, ol, ul {
+    padding-left: 58px;
+    margin: 0;
+  }
+  ol, ul {
+    padding-right: 20px;
+    margin: 30px 0 20px;
+  }
+  p {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+}
 .roadmap__block {
   position: relative;
   width: 100%;
   max-width: 1180px;
   height: 492px;
   padding: 40px 720px 40px 50px;
+  margin-bottom: 100px;
   margin-top: 60px;
   margin-left: 0;
   background: url("../img/bg_2.jpg") no-repeat;
@@ -1121,7 +1123,7 @@ footer {
         color: #757575;
       }
     }
-    .list-text {
+    .miners-number, .list-text {
       font: 30px $museoSans300;
     }
   }
@@ -1496,6 +1498,14 @@ footer {
     width: 70%;
   }
 }
+.support__description {
+  p {
+    margin-bottom: 30px;
+  }
+  span {
+    font: 27px $museoSans500;
+  }
+}
 .support__list {
   padding: 15px 0;
   border-bottom: 1px solid #e2e2e2;
@@ -1519,6 +1529,13 @@ footer {
       color: inherit;
     }
   }
+  .projects__menu {
+    position: static;
+    margin-top: 20px;
+    > li {
+      margin-right: 20px;
+    }
+  }
 }
 .support__right {
   font: 15px $museoSans900;
@@ -1539,7 +1556,12 @@ footer {
   }
 }
 
-
+.upper-alpha li {
+  list-style: upper-alpha !important;
+}
+.no-border {
+  border: 0;
+}
 
 .blue {
   color: #10a0de;
@@ -1565,6 +1587,51 @@ footer {
 .icon {
   position: absolute;
   background: url("../img/sprite.png") no-repeat;
+}
+
+.about__block {
+  .about__icon1:after {
+    width: 34px;
+    height: 34px;
+    top: -7px;
+    background-position: 0 -256px;
+  }
+  .about__icon2:after {
+    width: 24px;
+    height: 40px;
+    top: -10px;
+    background-position: -256px -256px;
+  }
+  .about__icon3:after {
+    width: 26px;
+    height: 26px;
+    top: 0;
+    background-position: -384px -256px;
+  }
+  .about__icon4:after {
+    width: 36px;
+    height: 45px;
+    top: -12px;
+    background-position: -512px -256px;
+  }
+  .about__icon5:after {
+    width: 41px;
+    height: 31px;
+    top: -8px;
+    background-position: -640px -256px;
+  }
+  .about__icon6:after {
+    width: 55px;
+    height: 100px;
+    top: -20px;
+    background-position: -128px 0;
+  }
+  .about__icon7:after {
+    width: 34px;
+    height: 54px;
+    top: -11px;
+    background-position: -128px -256px;
+  }
 }
 
 .features__icon1, .features__icon2, .features__icon3, .features__icon4 {
@@ -1802,11 +1869,25 @@ footer {
   .reddit-icon, .slack-icon, .fb-icon, .github-icon, .gitter-icon, .twitter-icon {
     margin: 0 20px;
   }
+  .about__block {
+    > div {
+      padding: 40px 20px;
+    }
+    .data {
+      padding-left: 80px;
+      &::after {
+        left: 20px;
+      }
+    }
+    .no-icon {
+      padding-left: 20px;
+    }
+  }
+  .accent span {
+    font-size: 32px;
+  }
 }
 @media (max-width: 1599px) {
-  .logo {
-    padding-top: 30px;
-  }
   .top-menu li a {
     padding: 20px 10px;
   }
@@ -1858,6 +1939,7 @@ footer {
     margin: 0;
     li {
       width: 33.3%;
+      text-align: left;
     }
   }
   .community__links > div + div {
@@ -1882,6 +1964,30 @@ footer {
   .pagefooter form {
     padding-right: 200px;
   }
+  .about__block {
+    > div {
+      padding: 40px 10px;
+    }
+    .data {
+      padding-left: 70px;
+      font-size: 16px;
+    }
+    .dao__number {
+      font-size: 25px;
+    }
+  }
+  .accent span {
+    font-size: 32px;
+  }
+  .original::after, .classic::after {
+    left: 0;
+  }
+  .original.accent span {
+    font-size: 22px;
+  }
+  .roadmap__table-block {
+    min-height: 350px;
+  }
 }
 
 /* Medium devices */
@@ -1905,10 +2011,6 @@ footer {
   .logo {
     padding-top: 20px;
     padding-bottom: 0;
-    font-size: 26px;
-    span {
-      font-size: 20px;
-    }
   }
   .pageheader__footer span {
     font-size: 14px;
@@ -1916,7 +2018,7 @@ footer {
   .ideology {
     padding-left: 30px;
   }
-  .road-map {
+  .replay-block {
     padding-right: 40px;
   }
   .features h2 {
@@ -1928,12 +2030,21 @@ footer {
   }
   .roadmap {
     font-size: 20px;
+    h3 {
+      font-size: 30px;
+    }
     span {
       font-size: 24px;
     }
   }
   .roadmap__img {
     bottom: -30px;
+  }
+  .roadmap__table-block {
+    min-height: 400px;
+    h3, p, ol, ul {
+      padding-left: 20px;
+    }
   }
   .community__links {
     float: right;
@@ -1995,6 +2106,9 @@ footer {
   .support__right span {
     margin-left: 10px;
   }
+  .replay-block {
+    padding: 0;
+  }
 }
 
 /* Small devices */
@@ -2031,7 +2145,7 @@ footer {
   .motivation {
     padding-left: 350px;
   }
-  .road-map {
+  .replay-block {
     max-width: 100%;
   }
   .features h2 {
@@ -2052,8 +2166,13 @@ footer {
     height: 220px;
     bottom: 80px;
   }
-  .roadmap a {
-    font-size: 22px;
+  .roadmap {
+    a {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 26px;
+    }
   }
   .community__links {
     float: left;
@@ -2070,7 +2189,7 @@ footer {
     float: right;
   }
   .miners__list li {
-    .list-text {
+    .miners-number, .list-text {
       font-size: 24px;
     }
     span {
@@ -2188,7 +2307,7 @@ footer {
   h1 {
     font-size: 28px;
   }
-  h2, .features h2, .projects h2, .roadmap h2 {
+  h2, .features h2, .projects h2, .roadmap h2, .about h2 {
     font-size: 60px;
   }
   .community {
@@ -2203,11 +2322,9 @@ footer {
     font-size: 50px;
   }
   .logo {
-    padding: 10px 15px 5px 90px;
+    padding: 10px 15px 5px 70px;
   }
   .logo-icon {
-    width: 50px;
-    height: 90px;
     top: 5px;
   }
   .slogan {
@@ -2252,7 +2369,7 @@ footer {
   .status span + span {
     margin-left: 10px;
   }
-  .ideology, .motivation, .road-map {
+  .ideology, .motivation, .replay-block {
     max-width: 100%;
     padding: 0 20px;
   }
@@ -2283,6 +2400,10 @@ footer {
       bottom: 20px;
       font-size: 18px;
     }
+  }
+  .roadmap__table-block {
+    min-height: 0;
+    border-right: 0;
   }
   .roadmap__block {
     padding: 40px 20px;
@@ -2341,7 +2462,7 @@ footer {
   }
   .miners__list li {
     width: 50%;
-    .list-text {
+    .miners-number, .list-text{
       font-size: 20px;
     }
   }

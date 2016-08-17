@@ -129,8 +129,6 @@ $(document).ready(function () {
             var elem = e.target;
             var anchorWithHash = elem.closest('a[href^="#"]');
 
-            //console.log(anchorWithHash.hash.length);
-
             if (!anchorWithHash || !anchorWithHash.hash.length) return;
 
             e.preventDefault();
@@ -184,20 +182,28 @@ $(document).ready(function () {
 
     /*Sorting*/
     (function(){
-    	$('.projects__menu').on('click', function (e) {
+        function Sorting(options) {
+            this._listenedBlockSelector = options.listenedBlockSelector;
+            this._sotingBtnSelector = options.sotingBtnSelector || '[data-sort-by]';
+            this._sortingWrapperSelector = options.sortingWrapperSelector;
+            this._CLASSES = {
+                active: options.activeClass || 'active'
+            };
+        }
+        Sorting.prototype.init = function () {
+            $(this._listenedBlockSelector).on('click', this.eventListener.bind(this));
+        };
+        Sorting.prototype.eventListener = function (e) {
             var target = e.target;
-            var sortBtn = target.closest('[data-sort-by]');
+            var sortBtn = target.closest(this._sotingBtnSelector);
 
             if (!sortBtn) return;
             e.preventDefault();
 
-            var sortingWrapperSelector = '[data-role="sorting-wrapper-projects"]';
-
-            sortBlocks(sortBtn, sortingWrapperSelector);
-            setActiveButton(sortBtn);
-        });
-
-        function sortBlocks(sortBtn, sortingWrapperSelector) {
+            this.sortBlocks(sortBtn, this._sortingWrapperSelector);
+            this.setActiveButton(sortBtn);
+        };
+        Sorting.prototype.sortBlocks = function (sortBtn, sortingWrapperSelector) {
             var $sortingWrapper = $(sortingWrapperSelector);
             var $sortableBlocks = $sortingWrapper.find('[data-sortable-by]');
             var sortingSelector = $(sortBtn).attr('data-sort-by');
@@ -213,17 +219,25 @@ $(document).ready(function () {
                     }
                 })
             }
-        }
+        };
+        Sorting.prototype.setActiveButton = function (button) {
+            var self = this;
+            var activeBtn = button.parentNode.querySelectorAll('.' + self._CLASSES.active);
 
-        function setActiveButton(button) {
-            var activeBtn = button.parentNode.querySelectorAll('.active');
 
             $(activeBtn).each(function () {
-                $(this).removeClass('active');
+                $(this).removeClass(self._CLASSES.active);
             });
 
-            $(button).addClass('active');
-        }
+            $(button).addClass(self._CLASSES.active);
+        };
+
+        var sortProjects = new Sorting({
+            listenedBlockSelector: '.projects__menu',
+            sortingWrapperSelector: '[data-role="sorting-wrapper-projects"]'
+        });
+        sortProjects.init();
+
     })();
 
     /*Beauty Scroll*/
@@ -231,7 +245,7 @@ $(document).ready(function () {
         if(!$('.about__scroll').length) return;
 
 
-    	var aboutScrollObj = $('.about__scroll').jScrollPane().data('jsp');
+        var aboutScrollObj = $('.about__scroll').jScrollPane().data('jsp');
         var throttledScrollReinit = throttle(aboutScrollObj.reinitialise, 300);
 
         function throttle(func, ms) {
@@ -268,7 +282,7 @@ $(document).ready(function () {
             throttledScrollReinit();
         });
     })();
-    
+
     /*Form*/
     (function(){
         function FormController(options) {
@@ -537,6 +551,6 @@ $(document).ready(function () {
         var anyForm = new FormController({});
         anyForm.init();
     })();
-    
-    
+
+
 });
