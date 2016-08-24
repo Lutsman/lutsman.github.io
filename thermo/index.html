@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/placeholder_polyfill.css">
 
+    <!--Plugins-->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.themes.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -63,7 +70,7 @@
             </div><!--container-->
         </header>
 
-        <div id="top-menu" class="top-menu">
+        <div id="top-menu" class="top-menu Fixed">
             <div class="container">
                 <nav>
                     <ul>
@@ -77,6 +84,22 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
+                <nav id="m-menu-btn-wrapper">
+                    <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </nav>
+                <nav id="m-menu"> <!-- mobile menu -->
+                    <ul>
+                        <li><a href="#home" data-translation="0">Главная</a></li>
+                        <li><a href="#portfolio">Наши работы</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav><!-- mobile menu -->
             </div><!--container-->
         </div>
 
@@ -98,7 +121,7 @@
                             <input id="form-name1" type="text" name="name" maxlength="50" placeholder="Иванов Иван">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone1"></label>
-                            <input id="form-phone1" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone1" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
                         <input class="btn submit" type="submit" value="Получить">
@@ -438,12 +461,12 @@
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
                             <label for="form-name2"></label>
-                            <input id="form-name2" type="text" name="name" maxlength="50" placeholder="Иванов Иван" required="">
+                            <input id="form-name2" type="text" data-validate-empty="имя" name="name" maxlength="50" placeholder="Иванов Иван" required="">
                         </div>
                         <div class="form__block">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone2"></label>
-                            <input id="form-phone2" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone2" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
                         <input class="btn submit" type="submit" value="Получить прайс-лист">
@@ -508,7 +531,7 @@
 
         <section class="bestsellers">
             <div class="container">
-                <h2><span>Хиты продаж</span> термопанелей</h2>
+                <h2><span>Хиты продаж</span> клинкерной плитки</h2>
 
                 <div class="bestsellers__block">
                     <div>
@@ -793,7 +816,7 @@
                             <input id="form-name3" type="text" name="name" maxlength="50" placeholder="Иванов Иван">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone3"></label>
-                            <input id="form-phone3" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone3" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
                         <input class="btn submit" type="submit" value="Вызвать">
@@ -828,7 +851,7 @@
                         <div class="form__block">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone4"></label>
-                            <input id="form-phone4" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone4" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
                         <input class="btn submit" type="submit" value="Заказать 3D проект">
@@ -936,7 +959,7 @@
                         <div class="form__block">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone5"></label>
-                            <input id="form-phone5" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone5" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
                         <div class="form__block form__block-time">
                             <p>Удобное время для звонка: <sup>*</sup></p>
@@ -1241,7 +1264,7 @@
                                 <div class="form__block">
                                     <p>Введите ваш телефон: <sup>*</sup></p>
                                     <label for="form-phone6"></label>
-                                    <input id="form-phone6" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                                    <input id="form-phone6" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                                     <p>Чем мы можем вам помочь:</p>
                                     <label for="form-message6"></label>
                                     <textarea id="form-message6" name="message" placeholder="Ваше сообщение..." required></textarea>
@@ -1288,7 +1311,7 @@
 
             </div><!--container-->
             
-            <div class="map"></div>
+            <div id="map" class="map"></div>
 
         </section>
 
@@ -1418,7 +1441,7 @@
                             <input id="form-name7" type="text" name="name" maxlength="50" placeholder="Иванов Иван">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone1"></label>
-                            <input id="form-phone7" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone7" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
                         <input class="btn submit" type="submit" value="Получить">
@@ -1440,7 +1463,7 @@
                             <input id="form-name8" type="text" name="name" maxlength="50" placeholder="Иванов Иван">
                             <p>Введите ваш телефон: <sup>*</sup></p>
                             <label for="form-phone1"></label>
-                            <input id="form-phone8" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="">
+                            <input id="form-phone8" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
                         <input class="btn submit" type="submit" value="Получить">
@@ -1455,5 +1478,15 @@
     </div><!--page-wrap-->
 
 
+<!--Scripts-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.mmenu.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/app.js"></script>
+<!--[if lt IE 9]>
+<script src="js/placeholder_polyfill.jquery.min.combo.js"></script>
+<![endif]-->
 </body>
 </html>

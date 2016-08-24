@@ -113,6 +113,9 @@ section {
     clear: both;
   }
 }
+.thanks-page {
+  height: 100%;
+}
 .hidden {
   display: none;
 }
@@ -1664,6 +1667,36 @@ footer {
 
 
 
+/* ----------------------------------------------
+Thanks-page
+---------------------------------------------- */
+.thanks-page {
+  .pageheader {
+    height: 100%;
+    min-height: 550px;
+    padding-bottom: 213px;
+    margin-bottom: -213px; /* высота футера */
+  }
+  .page-wrap {
+    height: 100%;
+  }
+  footer {
+    position: absolute;
+    width: 100%;
+    height: 213px;
+  }
+  .container {
+    height: 100%;
+  }
+  .pageheader__text {
+    position: absolute;
+    margin-top: 0;
+    top: 50%;
+    left: 0;
+    @include transform(translate(0%, -50%));
+  }
+}
+
 
 /* ----------------------------------------------
  Colors Backgrounds
@@ -2007,6 +2040,48 @@ Pop up
     padding: 20px 40px;
     border: 1px solid $main-color;
     border-top: none;
+  }
+}
+
+/* ----------------------------------------------
+ JS
+ ---------------------------------------------- */
+/*Fixed menu*/
+.js-top-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+/*Scroll Up Btn*/
+#scrollUp {
+  position: fixed;
+  width: 44px;
+  height: 36px;
+  background-color: $btn-color;
+  @include border-radius(5px);
+  right: 10px;
+  bottom: -40px;
+  display: none;
+  @include transition(background-color 0.2s ease-in-out);
+  cursor: pointer;
+  z-index: 20;
+  &:hover {
+    background: $hover-menu;
+  }
+  .upButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    opacity: 1;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    @include transform(rotate(45deg));
   }
 }
 
@@ -2529,6 +2604,16 @@ Placeholder
       bottom: 184px;
     }
   }
+  .thanks-page {
+    footer {
+      height: 250px;
+    }
+    .pageheader {
+      min-height: 590px;
+      padding-bottom: 250px;
+      margin-bottom: -250px;
+    }
+  }
 }
 
 /* Extra small devices */
@@ -2772,6 +2857,16 @@ Placeholder
   .model-marker {
     display: none;
   }
+  .thanks-page {
+    footer {
+      height: 300px;
+    }
+    .pageheader {
+      min-height: 660px;
+      padding-bottom: 300px;
+      margin-bottom: -300px;
+    }
+  }
   /* swich-off animation */
   .animated.zoomIn {
     @include animation-name(none);
@@ -2883,5 +2978,15 @@ Placeholder
   }
   .footer__contacts {
     width: 50%;
+  }
+  .thanks-page {
+    footer {
+      height: 330px;
+    }
+    .pageheader {
+      min-height: 730px;
+      padding-bottom: 330px;
+      margin-bottom: -330px;
+    }
   }
 }
