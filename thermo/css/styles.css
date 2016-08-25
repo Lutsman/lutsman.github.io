@@ -1735,6 +1735,10 @@ Pop up
     -o-transform: rotate(45deg);
     transform: rotate(45deg); }
 
+/*Fancybox*/
+.order-form.fancybox-margin {
+  margin-right: 0 !important; }
+
 /* ----------------------------------------------
  Animation
  ---------------------------------------------- */

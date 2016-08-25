@@ -11,15 +11,20 @@ $(document).ready(function () {
         }
         FixedMenu.prototype.init = function () {
             var self = this;
+            var setActiveLi = self.pageScrollListener.call(self);
+
 
             $(window).load(function () {
                 self._staticMenuPosition = self.getCoords(self._menu).top;
                 self.toggleMenuPosition();
+                setActiveLi();
 
-                $(window).scroll(self.toggleMenuPosition.bind(self));
+                $(window)
+                    .scroll(self.toggleMenuPosition.bind(self))
+                    .scroll(setActiveLi);
             });
 
-            self.pageScrollListener();
+
         };
         FixedMenu.prototype.getCoords = function (elem) {
             var box = elem.getBoundingClientRect();
@@ -39,7 +44,6 @@ $(document).ready(function () {
             }
         };
         FixedMenu.prototype.pageScrollListener = function () {
-            var isActive = false;
             var activeLink = null;
             var activeSection = null;
             var links = this._menu.querySelectorAll('a[href^="#"]');
@@ -47,7 +51,7 @@ $(document).ready(function () {
 
             var checkMenuPos = function () {
                 var coordsMenu = self._menu.getBoundingClientRect();
-                var elem = document.elementFromPoint(self._menu.offsetWidth/2, coordsMenu.bottom + 10);
+                var elem = document.elementFromPoint(self._menu.offsetWidth/2, coordsMenu.bottom + 50);
 
                 if (!elem && activeLink) {
                     activeLink.closest('li').classList.remove('active');
@@ -88,9 +92,9 @@ $(document).ready(function () {
 
             };
 
-            $(document).on('scroll', checkMenuPos);
-            checkMenuPos();
+            return checkMenuPos;
         };
+
 
         var topMenu = new FixedMenu({
             menu: document.getElementById('top-menu')
@@ -416,7 +420,7 @@ $(document).ready(function () {
         };
         ScrollToAnchor.prototype.anchorClickListener = function (e) {
             var elem = e.target;
-            var anchorWithHash = elem.closest('a[href^="#"]');
+            var anchorWithHash = elem.closest('a[href^="#"]:not([data-scroll="disable"])');
 
             if (!anchorWithHash || !anchorWithHash.hash.length) return;
 
@@ -444,7 +448,9 @@ $(document).ready(function () {
 
         /*page scroll*/
         (function(){
-            var pageScroll = new ScrollToAnchor({});
+            var pageScroll = new ScrollToAnchor({
+                translation: '#top-menu'
+            });
             pageScroll.init();
         })();
 
@@ -544,4 +550,88 @@ $(document).ready(function () {
             }
         }
     })();
+    
+    /*Fancybox*/
+    (function(){
+        var fancyOpen = 'fancy-open';
+        var fancyFrameOpen = 'fancy-frame-open';
+        var fancyRender = 'fancy-render';
+        var fancyClose = 'fancy-close';
+        var fancyCloseBtn = '<p class="close"><a href="javascript:void(0)" data-action="close">×</a></p>';
+        var $fancyGallery = $('[data-fancybox-group="gallery"]');
+        var $fancyHonorsGal = $('[data-fancybox-group="honors"]');
+
+        $fancyGallery.fancybox({
+            padding: [0, 0, 0, 0],
+            margin: [0, 0, 0, 0],
+            tpl: {
+                closeBtn: fancyCloseBtn
+            }
+        });
+
+        $fancyHonorsGal.fancybox({
+            padding: [0, 0, 0, 0],
+            margin: [0, 0, 0, 0],
+            tpl: {
+                closeBtn: fancyCloseBtn
+            }
+        });
+
+        $('body').click(function (e) {
+            var target = e.target;
+            var actionBtn = target.closest('[data-action]');
+
+            if (!actionBtn) return;
+            e.preventDefault();
+            //console.log(actionBtn);
+            
+            var href = actionBtn.getAttribute('data-target') || actionBtn.getAttribute('href');
+
+            switch (actionBtn.getAttribute('data-action')) {
+                case fancyOpen :
+                    //console.log('fancy open');
+                    //console.log(href);
+                    $.fancybox.open({
+                        href: href,
+                        padding: [0, 0, 0, 0],
+                        margin: [0, 0, 0, 0],
+                        tpl: {
+                            closeBtn: fancyCloseBtn
+                        }
+                    });
+                    break;
+                case fancyFrameOpen :
+                    $.fancybox.open({
+                        href: href,
+                        type: 'iframe',
+                        padding: [0, 0, 0, 0],
+                        margin: [0, 0, 0, 0],
+                        tpl: {
+                            closeBtn: fancyCloseBtn
+                        }
+                    });
+                    break;
+                case fancyRender :
+                    var prodName = target.parentNode.querySelector('.title').textContent;
+                    $(href).find('.prod-name').text(prodName);
+                    $(href).find('input[name="subject"]')[0].value += ' ' + prodName;
+                    console.log($(href).find('input[name="subject"]')[0].value);
+
+                    $.fancybox.open({
+                        href: href,
+                        padding: [0, 0, 0, 0],
+                        margin: [0, 0, 0, 0],
+                        tpl: {
+                            closeBtn: fancyCloseBtn
+                        }
+                    });
+                    break;
+                case fancyClose :
+                    $.fancybox.close();
+                    break;
+            }
+        });
+    })();
+    
+    
 });
