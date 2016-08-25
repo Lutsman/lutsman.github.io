@@ -572,6 +572,7 @@ $(document).ready(function () {
         $fancyHonorsGal.fancybox({
             padding: [0, 0, 0, 0],
             margin: [0, 0, 0, 0],
+            minHeight: '80%',
             tpl: {
                 closeBtn: fancyCloseBtn
             }
@@ -604,6 +605,7 @@ $(document).ready(function () {
                     $.fancybox.open({
                         href: href,
                         type: 'iframe',
+                        maxHeight: '90%',
                         padding: [0, 0, 0, 0],
                         margin: [0, 0, 0, 0],
                         tpl: {
@@ -632,6 +634,14 @@ $(document).ready(function () {
             }
         });
     })();
+
+    /*Slider*/
+    (function(){
+    	/*feedback*/
+    	$('.feedback-slider').slick();
+    })();
+
+
     
     
 });
