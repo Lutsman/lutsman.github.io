@@ -560,6 +560,7 @@ $(document).ready(function () {
         var fancyCloseBtn = '<p class="close"><a href="javascript:void(0)" data-action="close">×</a></p>';
         var $fancyGallery = $('[data-fancybox-group="gallery"]');
         var $fancyHonorsGal = $('[data-fancybox-group="honors"]');
+        var $fancyPortfolio = $('[data-fancybox-group="honors_portfolio"]');
 
         $fancyGallery.fancybox({
             padding: [0, 0, 0, 0],
@@ -578,20 +579,26 @@ $(document).ready(function () {
             }
         });
 
+        $fancyPortfolio.fancybox({
+            padding: [0, 0, 0, 0],
+            margin: [0, 0, 0, 0],
+            minHeight: '80%',
+            tpl: {
+                closeBtn: fancyCloseBtn
+            }
+        });
+
         $('body').click(function (e) {
             var target = e.target;
             var actionBtn = target.closest('[data-action]');
 
             if (!actionBtn) return;
             e.preventDefault();
-            //console.log(actionBtn);
             
             var href = actionBtn.getAttribute('data-target') || actionBtn.getAttribute('href');
 
             switch (actionBtn.getAttribute('data-action')) {
                 case fancyOpen :
-                    //console.log('fancy open');
-                    //console.log(href);
                     $.fancybox.open({
                         href: href,
                         padding: [0, 0, 0, 0],
@@ -640,6 +647,30 @@ $(document).ready(function () {
     	/*feedback*/
     	$('.feedback-slider').slick();
     })();
+
+
+
+    /*BlockToggler*/
+   (function(){
+       var $toggleBtn = $('[data-action="block-toggle"]');
+
+       $toggleBtn.click(function (e) {
+           var targetSelector = $(this).attr('data-target');
+           var $target = $(this).parent().find(targetSelector);
+           e.preventDefault();
+
+           $(this).toggleClass('active');
+           //$target.slideToggle();
+
+           if ($(this).hasClass('active')) {
+               $target.slideDown();
+           } else {
+               $target.slideUp();
+           }
+       })
+   })();
+
+
 
 
     

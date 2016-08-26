@@ -828,6 +828,10 @@ footer {
     width: 25%;
     height: 297px;
     text-align: center; }
+    .bestsellers__block > div p:not(.title) {
+      position: absolute;
+      bottom: 60px;
+      width: 100%; }
 
 /*work-scheme*/
 .work-scheme {
@@ -936,15 +940,17 @@ footer {
 .honors {
   min-height: 475px; }
 
-.honors__block > div {
-  position: relative;
-  float: left;
-  width: 50%;
-  text-align: center;
-  cursor: pointer; }
-  .honors__block > div:hover .hover-img {
-    visibility: visible;
-    opacity: 1; }
+.honors__block {
+  text-align: center; }
+  .honors__block > div {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    cursor: pointer; }
+    .honors__block > div:hover .hover-img {
+      visibility: visible;
+      opacity: 1; }
 
 .hover-img {
   position: absolute;
@@ -1691,6 +1697,9 @@ Pop up
     border: 1px solid #ff8b1b;
     border-top: none; }
 
+.order-thermopanel {
+  height: auto; }
+
 /* ----------------------------------------------
  JS
  ---------------------------------------------- */
@@ -1809,36 +1818,36 @@ Pop up
 Placeholder
 ---------------------------------------------- */
 ::-webkit-input-placeholder {
-  color: #999; }
+  color: #666; }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #999; }
+  color: #666; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #999; }
+  color: #666; }
 
 :-ms-input-placeholder {
-  color: #999; }
+  color: #666; }
 
 .form-fail::-webkit-input-placeholder {
   font-family: "Roboto", sans-serif;
-  color: #999; }
+  color: #666; }
 
 .form-fail:-moz-placeholder {
   /* Firefox 18- */
   font-family: "Roboto", sans-serif;
-  color: #999; }
+  color: #666; }
 
 .form-fail::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Roboto", sans-serif;
-  color: #999; }
+  color: #666; }
 
 .form-fail:-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
-  color: #999; }
+  color: #666; }
 
 /* ----------------------------------------------
  Media
@@ -2070,9 +2079,6 @@ Placeholder
     top: -70px;
     right: -230px; }
 
-  .honors__block > div {
-    width: 33.3%; }
-
   .order-consultation .submit {
     float: right;
     margin-right: 30px; }
@@ -2296,9 +2302,6 @@ Placeholder
   .call-gager-bg, .tape-bg, .consultation-bg {
     display: none; }
 
-  .honors__block > div {
-    width: 50%; }
-
   .order-consultation .submit {
     float: none;
     margin: 0 auto 10px; }
@@ -2449,9 +2452,6 @@ Placeholder
 
   .order-3D p.order-3D-text {
     line-height: 20px; }
-
-  .honors__block > div {
-    width: 100%; }
 
   .compare__table .column-2, .compare__table .column-3 {
     width: 100%; }

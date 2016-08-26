@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@mixin transform($transform) {
+    -ms-transform: $transform;
+    -moz-transform: $transform;
+    -webkit-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
 // Default Variables
 
 // Slick icon entity codes outputs the following
@@ -10,14 +17,14 @@
 $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
-$slick-arrow-color: #666 !default;
+$slick-arrow-color: #adaba8 !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
 
@@ -64,8 +71,8 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
@@ -84,17 +91,21 @@ $slick-opacity-not-active: 0.25 !default;
         background: transparent;
         color: transparent;
         &:before {
-            color: #e7746f;
+            border-color: #ff8b1b;
         }
     }
     &.slick-disabled:before {
         opacity: $slick-opacity-not-active;
     }
     &:before {
-        font-family: $slick-font-family;
-        font-size: 40px;
-        line-height: 1;
-        color: $slick-arrow-color;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7px;
+        width: 40px;
+        height: 40px;
+        border-top: 3px solid $slick-arrow-color;
+        border-right: 3px solid $slick-arrow-color;
         opacity: $slick-opacity-default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -108,7 +119,8 @@ $slick-opacity-not-active: 0.25 !default;
         right: -50px;
     }
     &:before {
-        content: $slick-prev-character;
+        left: 15px;
+        @include transform(rotate(225deg));
         [dir="rtl"] & {
             content: $slick-next-character;
         }
@@ -122,7 +134,8 @@ $slick-opacity-not-active: 0.25 !default;
         right: auto;
     }
     &:before {
-        content: $slick-next-character;
+        right: 15px;
+        @include transform(rotate(45deg));
         [dir="rtl"] & {
             content: $slick-prev-character;
         }

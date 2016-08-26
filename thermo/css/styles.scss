@@ -66,7 +66,7 @@ $main-color: #ff8b1b;
 $hover-menu: #66380b;
 
 $btn-color: #ff7d00;
-$placeholder-color: #999;
+$placeholder-color: #666;
 
 $request-color: #c43434;
 
@@ -1013,6 +1013,11 @@ footer {
     width: 25%;
     height: 297px;
     text-align: center;
+    p:not(.title) {
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+    }
   }
 }
 
@@ -1148,10 +1153,11 @@ footer {
   min-height: 475px;
 }
 .honors__block {
+  text-align: center;
   > div {
     position: relative;
-    float: left;
-    width: 50%;
+    display: inline-block;
+    width: 250px;
     text-align: center;
     cursor: pointer;
     &:hover {
@@ -2046,6 +2052,9 @@ Pop up
     border-top: none;
   }
 }
+.order-thermopanel {
+  height: auto;
+}
 
 /* ----------------------------------------------
  JS
@@ -2487,9 +2496,6 @@ Placeholder
     top: -70px;
     right: -230px;
   }
-  .honors__block > div {
-    width: 33.3%;
-  }
   .order-consultation {
     .submit {
       float: right;
@@ -2756,9 +2762,6 @@ Placeholder
   .call-gager-bg, .tape-bg, .consultation-bg {
     display: none;
   }
-  .honors__block > div {
-    width: 50%;
-  }
   .order-consultation {
     .submit {
       float: none;
@@ -2943,9 +2946,6 @@ Placeholder
   }
   .order-3D p.order-3D-text {
     line-height: 20px;
-  }
-  .honors__block > div {
-    width: 100%;
   }
   .compare__table {
     .column-2, .column-3 {

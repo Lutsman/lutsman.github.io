@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("./../service_img/img_slick/ajax-loader.gif") center no-repeat; }
+  background: #fff url("./../images/img_lib/slick/ajax-loader.gif") center no-repeat; }
 
 /* Icons */
 @font-face {
@@ -15,8 +15,8 @@
 .slick-next {
   position: absolute;
   display: block;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   line-height: 0;
   font-size: 0;
   cursor: pointer;
@@ -37,17 +37,21 @@
     color: transparent; }
     .slick-prev:hover:before,
     .slick-next:hover:before {
-      color: #e7746f; }
+      border-color: #ff8b1b; }
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
     opacity: 0.25; }
   .slick-prev:before,
   .slick-next:before {
-    font-family: "slick";
-    font-size: 40px;
-    line-height: 1;
-    color: #666;
-    opacity: 0.75;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    width: 40px;
+    height: 40px;
+    border-top: 3px solid #adaba8;
+    border-right: 3px solid #adaba8;
+    opacity: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
@@ -57,7 +61,12 @@
     left: auto;
     right: -50px; }
   .slick-prev:before {
-    content: "←"; }
+    left: 15px;
+    -ms-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg); }
     [dir="rtl"] .slick-prev:before {
       content: "→"; }
 
@@ -67,7 +76,12 @@
     left: -50px;
     right: auto; }
   .slick-next:before {
-    content: "→"; }
+    right: 15px;
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
     [dir="rtl"] .slick-next:before {
       content: "←"; }
 
@@ -123,6 +137,6 @@
         -moz-osx-font-smoothing: grayscale; }
     .slick-dots li.slick-active button:before {
       color: black;
-      opacity: 0.75; }
+      opacity: 1; }
 
 /*# sourceMappingURL=slick-theme.css.map */

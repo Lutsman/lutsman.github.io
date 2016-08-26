@@ -463,7 +463,7 @@
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
                             <label for="form-name2"></label>
-                            <input id="form-name2" type="text" data-validate-empty="имя" name="name" maxlength="50" placeholder="Иванов Иван" required="">
+                            <input id="form-name2" type="text" data-validate-empty="имя" name="name" maxlength="50" placeholder="Иванов Иван">
                         </div>
                         <div class="form__block">
                             <p>Введите ваш телефон: <sup>*</sup></p>
@@ -848,7 +848,7 @@
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
                             <label for="form-name4"></label>
-                            <input id="form-name4" type="text" name="name" maxlength="50" placeholder="Иванов Иван" required="">
+                            <input id="form-name4" type="text" name="name" maxlength="50" placeholder="Иванов Иван">
                         </div>
                         <div class="form__block">
                             <p>Введите ваш телефон: <sup>*</sup></p>
@@ -987,7 +987,7 @@
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
                             <label for="form-name5"></label>
-                            <input id="form-name5" type="text" name="name" maxlength="50" placeholder="Иванов Иван" required="">
+                            <input id="form-name5" type="text" name="name" maxlength="50" placeholder="Иванов Иван">
                         </div>
                         <div class="form__block">
                             <p>Введите ваш телефон: <sup>*</sup></p>
@@ -1128,52 +1128,68 @@
                 
                 <div class="portfolio__block">
                     <div>
-                        <img src="images/portfolio_1.jpg" alt="Фото 1">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_1.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_1.jpg" alt="Фото 1">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_2.jpg" alt="Фото 2">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_2.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_2.jpg" alt="Фото 2">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_3.jpg" alt="Фото 3">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_3.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_3.jpg" alt="Фото 3">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_4.jpg" alt="Фото 4">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_4.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_4.jpg" alt="Фото 4">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_5.jpg" alt="Фото 5">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_5.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_5.jpg" alt="Фото 5">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_6.jpg" alt="Фото 6">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_6.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_6.jpg" alt="Фото 6">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_7.jpg" alt="Фото 7">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_7.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_7.jpg" alt="Фото 7">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img src="images/portfolio_8.jpg" alt="Фото 8">
-                        <div class="hover-img">
-                            <div class="icon hover-img-icon"></div>
-                        </div>
+                        <a href="images/portfolio_8.jpg" data-fancybox-group="honors_portfolio">
+                            <img src="images/portfolio_8.jpg" alt="Фото 8">
+                            <div class="hover-img">
+                                <div class="icon hover-img-icon"></div>
+                            </div>
+                        </a>
                     </div>
 
                 </div>
@@ -1354,7 +1370,7 @@
 
                 <div class="questions__block">
                     <div>
-                        <p class="question-text">Подскажите, а термопанели можно использовать в качестве отделочного материала и какие они
+                        <p class="question-text" data-action="block-toggle" data-target=".answer">Подскажите, а термопанели можно использовать в качестве отделочного материала и какие они
                             бывают, как крепятся и можно ли ими облицевать брусовой дом?</p>
 
                         <div class="answer">
@@ -1367,7 +1383,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="question-text">Можно использовать в качестве отделочного материала и какие они бывают, как крепятся и можно
+                        <p class="question-text" data-action="block-toggle" data-target=".answer">Можно использовать в качестве отделочного материала и какие они бывают, как крепятся и можно
                             ли ими облицевать брусовой дом?</p>
 
                         <div class="answer">
@@ -1380,7 +1396,7 @@
                         </div>
                     </div>
                     <div class="active">
-                        <p class="question-text">Материала и какие они бывают, как крепятся и можно ли ими облицевать брусовой дом?</p>
+                        <p class="question-text" data-action="block-toggle" data-target=".answer">Материала и какие они бывают, как крепятся и можно ли ими облицевать брусовой дом?</p>
 
                         <div class="answer">
                             <p>Термопанель – это целостная панель, площадью около одного квадратного метра, состоящая из
@@ -1392,7 +1408,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="question-text">Можно использовать в качестве отделочного материала и какие они бывают, как крепятся и можно
+                        <p class="question-text" data-action="block-toggle" data-target=".answer">Можно использовать в качестве отделочного материала и какие они бывают, как крепятся и можно
                             ли ими облицевать брусовой дом?</p>
 
                         <div class="answer">
@@ -1405,7 +1421,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="question-text">Какие они бывают, как крепятся и можно ли ими облицевать брусовой дом?</p>
+                        <p class="question-text" data-action="block-toggle" data-target=".answer">Какие они бывают, как крепятся и можно ли ими облицевать брусовой дом?</p>
 
                         <div class="answer">
                             <p>Термопанель – это целостная панель, площадью около одного квадратного метра, состоящая из
@@ -1483,7 +1499,7 @@
                 </div>
 
                 <!-- всплывающее окно Заказать термопанели-->
-                <div id="order-thermopanel" class="order-form">
+                <div id="order-thermopanel" class="order-form order-thermopanel">
                     <form class="form" method="post" action="">
                         <h3>Заказать</h3>
                         <p>термопанели</p>
