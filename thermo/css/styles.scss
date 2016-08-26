@@ -2188,6 +2188,14 @@ Placeholder
   color: $placeholder-color;
 }
 
+.form-success {
+  border-color: green;
+}
+.form-fail {
+  border-color: red;
+}
+
+
 .form-fail::-webkit-input-placeholder {
   font-family: $roboto;
   color: $placeholder-color;

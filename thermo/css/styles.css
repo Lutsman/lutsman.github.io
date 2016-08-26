@@ -1829,6 +1829,12 @@ Placeholder
 :-ms-input-placeholder {
   color: #666; }
 
+.form-success {
+  border-color: green; }
+
+.form-fail {
+  border-color: red; }
+
 .form-fail::-webkit-input-placeholder {
   font-family: "Roboto", sans-serif;
   color: #666; }
