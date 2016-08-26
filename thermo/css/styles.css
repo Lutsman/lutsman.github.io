@@ -1314,11 +1314,9 @@ footer {
   font-weight: 700; }
   .questions h2 {
     margin-bottom: 40px; }
-  .questions .active .question-text {
+  .questions .active.question-text {
     color: #999; }
-  .questions .active .answer {
-    display: block; }
-  .questions .active .question-text:before {
+  .questions .active.question-text:before {
     background-position: -438px 14px; }
   .questions .answer {
     display: none;
@@ -1350,7 +1348,7 @@ footer {
       color: #ff8b1b; }
 
 .questions__block > div {
-  margin-bottom: 40px; }
+  padding-bottom: 20px; }
 .questions__block p {
   padding-left: 80px; }
 

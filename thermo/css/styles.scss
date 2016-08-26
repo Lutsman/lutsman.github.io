@@ -1628,13 +1628,10 @@ footer {
     margin-bottom: 40px;
   }
   .active {
-    .question-text {
+    &.question-text {
       color: #999;
     }
-    .answer {
-      display: block;
-    }
-    .question-text:before {
+    &.question-text:before {
       background-position: -438px 14px;
     }
   }
@@ -1668,7 +1665,7 @@ footer {
 }
 .questions__block {
   > div {
-    margin-bottom: 40px;
+    padding-bottom: 20px;
   }
   p {
     padding-left: 80px;
