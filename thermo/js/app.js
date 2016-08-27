@@ -398,7 +398,8 @@ $(document).ready(function () {
         };
 
         //init mask
-        $('[name="phone"]').mask("+7 (999) 999-99-99");
+        $('input[name="phone"]').mask("+7 (999) 999-99-99");
+        $('input[name="time"]').mask("99:99");
 
         var anyForm = new FormController({
             beforeSend: function () {
@@ -583,7 +584,10 @@ $(document).ready(function () {
         $fancyPortfolio.fancybox({
             padding: [0, 0, 0, 0],
             margin: [0, 0, 0, 0],
-            minHeight: '80%',
+            type: 'image',
+            autoSize: true,
+            //height: '80%',
+            //width: '80%',
             tpl: {
                 closeBtn: fancyCloseBtn
             }
@@ -597,9 +601,13 @@ $(document).ready(function () {
             e.preventDefault();
             
             var href = actionBtn.getAttribute('data-target') || actionBtn.getAttribute('href');
+            var subjectInput = $(href).find('input[name="subject"]')[0];
 
             switch (actionBtn.getAttribute('data-action')) {
                 case fancyOpen :
+                    if (actionBtn.getAttribute('data-subject')) {
+                        subjectInput.value = actionBtn.getAttribute('data-subject');
+                    }
                     $.fancybox.open({
                         href: href,
                         padding: [0, 0, 0, 0],
@@ -624,8 +632,8 @@ $(document).ready(function () {
                 case fancyRender :
                     var prodName = target.parentNode.querySelector('.title').textContent;
                     $(href).find('.prod-name').text(prodName);
-                    $(href).find('input[name="subject"]')[0].value += ' ' + prodName;
-                    console.log($(href).find('input[name="subject"]')[0].value);
+                    subjectInput.value += ' ' + prodName;
+                    //console.log($(href).find('input[name="subject"]')[0].value);
 
                     $.fancybox.open({
                         href: href,
@@ -647,6 +655,22 @@ $(document).ready(function () {
     (function(){
     	/*feedback*/
     	$('.feedback-slider').slick();
+
+        /*portfolio*/
+        $('.portfolio-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            /*responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+            ]*/
+        });
     })();
 
 

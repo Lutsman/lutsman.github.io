@@ -309,10 +309,104 @@ header {
       background-color: #66380b; }
   .top-menu a {
     display: block;
-    padding: 8px 14px 10px;
+    padding: 8px 11px 10px;
     background-color: #ff8b1b; }
     .top-menu a:hover {
       background-color: #66380b; }
+
+/*Mobile menu*/
+#m-menu:not(.mm-menu) {
+  display: none; }
+
+.mobile-nav {
+  visibility: hidden; }
+
+#m-menu-btn-wrapper {
+  padding: 0;
+  background-color: #ff8b1b;
+  width: 100%;
+  top: 0;
+  z-index: 50; }
+
+.menu-button {
+  cursor: pointer;
+  padding: 0; }
+
+.hamburger {
+  padding: 9px 15px;
+  background-color: #ff8b1b;
+  width: 70px;
+  margin: 0; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  position: relative; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute; }
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; }
+.hamburger-inner::before {
+  top: -10px; }
+.hamburger-inner::after {
+  bottom: -10px; }
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  -webkit-transition: transform 0.15s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: transform 0.15s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: transform 0.15s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.15s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    -webkit-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+    -moz-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+    -o-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+    transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+  .hamburger--collapse .hamburger-inner::before {
+    -webkit-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -moz-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -o-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+html.mm-opening .hamburger--collapse .hamburger-inner {
+  -ms-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -moz-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -o-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition: transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+html.mm-opening .hamburger--collapse .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+  -moz-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+  -o-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear; }
+
+html.mm-opening .hamburger--collapse .hamburger-inner::before {
+  top: 0;
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 /* ----------------------------------------------
  Footer
@@ -1117,26 +1211,26 @@ footer {
   color: #ff8b1b; }
 
 /*portfolio*/
+.portfolio-slider {
+  width: 100%; }
+  .portfolio-slider .slide > div {
+    position: relative;
+    font-size: 0;
+    cursor: pointer; }
+    .portfolio-slider .slide > div:hover .hover-img {
+      visibility: visible;
+      opacity: 1; }
+  .portfolio-slider .slide .hover-img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    top: 0;
+    left: 0; }
+
 .portfolio {
   min-height: 575px; }
   .portfolio h2 {
     margin-bottom: 40px; }
-
-.portfolio__block > div {
-  position: relative;
-  float: left;
-  width: 25%;
-  font-size: 0;
-  cursor: pointer; }
-  .portfolio__block > div:hover .hover-img {
-    visibility: visible;
-    opacity: 1; }
-.portfolio__block .hover-img {
-  width: 100%;
-  height: 100%;
-  margin-left: 0;
-  top: 0;
-  left: 0; }
 
 /*installation*/
 .installation__block > div {
@@ -1400,7 +1494,7 @@ Thanks-page
   height: 548px;
   top: 100px;
   left: 225px;
-  background: url("../images/panel_1.jpg") no-repeat; }
+  background: url("../images/panel_1.png") no-repeat; }
 
 .structure-bg {
   display: block;
@@ -1426,7 +1520,7 @@ Thanks-page
   height: 275px;
   top: -25px;
   left: -40px;
-  background: url("../images/panel_3.jpg") no-repeat; }
+  background: url("../images/panel_3.png") no-repeat; }
 
 .call-gager-bg {
   position: absolute;
@@ -1454,8 +1548,8 @@ Thanks-page
 
 .contact-us-bg {
   position: absolute;
-  width: 304px;
-  height: 227px;
+  width: 279px;
+  height: 289px;
   top: 100px;
   left: -15px;
   background: url("../images/panel_4.png") no-repeat; }
@@ -1867,7 +1961,7 @@ Placeholder
   .top-menu nav {
     margin-left: 0; }
   .top-menu a {
-    padding: 8px 12px 10px; }
+    padding: 8px 9.5px; }
 
   .description-bg {
     width: 490px; }
@@ -1942,8 +2036,10 @@ Placeholder
   header span {
     font-size: 18px; }
 
-  .top-menu nav {
+  .top-menu .desctop-nav {
     display: none; }
+  .top-menu .mobile-nav {
+    visibility: visible; }
 
   .description {
     font-size: 12px; }
@@ -2332,11 +2428,6 @@ Placeholder
       left: -14px; }
     .compare-table-icon:after {
       left: -14px; }
-
-  .portfolio__block > div {
-    width: 50%; }
-    .portfolio__block > div img {
-      width: 100%; }
 
   .installation__block .side-panel {
     width: 100%;

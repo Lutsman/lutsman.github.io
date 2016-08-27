@@ -56,7 +56,7 @@
                 <div class="order-call">
                     <p>Есть вопросы? Звоните!</p>
                     <p>+7(499) <span>777-88-77</span></p>
-                    <a href="#call-request" class="btn order-call-btn" data-action="fancy-open" data-scroll="disable">заказать звонок</a>
+                    <a href="#call-request" class="btn order-call-btn" data-action="fancy-open" data-scroll="disable" data-yaTarget="ZVONOK1" data-subject="Заявка на обратный звонок ( Шапка )">заказать звонок</a>
                     <p class="work-time">Пн. - Сб.: с 9<sup>00</sup> до 20<sup>00</sup>; Вс.: выходной</p>
                     <div class="icon phone-icon"></div>
                 </div>
@@ -72,9 +72,8 @@
 
         <div id="top-menu" class="top-menu Fixed">
             <div class="container">
-                <nav>
-                    <ul> <!-- - Меню: О термопанелях|О компании|Каталог|Схема|Визуализация|Сертификаты|Сравнение|Монтаж|FAQ-->
-                        <!--<li><a href="/">Главная</a></li>-->
+                <nav class="desctop-nav">
+                    <ul>
                         <li><a href="#description">О термопанелях</a></li>
                         <li><a href="#privilege">О компании</a></li>
                         <li><a href="#bestsellers">Каталог</a></li>
@@ -83,10 +82,10 @@
                         <li><a href="#honors">Сертификаты</a></li>
                         <li><a href="#compare">Сравнение</a></li>
                         <li><a href="#installation">Монтаж</a></li>
-                        <!--<li><a href="#questions">FAQ</a></li>-->
+                        <li><a href="#questions">FAQ</a></li>
                     </ul>
                 </nav>
-                <nav id="m-menu-btn-wrapper">
+                <nav id="m-menu-btn-wrapper" class="mobile-nav">
                     <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
                         <div class="hamburger-box">
                             <div class="hamburger-inner"></div>
@@ -95,11 +94,15 @@
                 </nav>
                 <nav id="m-menu"> <!-- mobile menu -->
                     <ul>
-                        <li><a href="#home" data-translation="0">Главная</a></li>
-                        <li><a href="#portfolio">Наши работы</a></li>
-                        <li><a href="#skills">Навыки</a></li>
-                        <li><a href="#about">О нас</a></li>
-                        <li><a href="#contacts">Контакты</a></li>
+                        <li><a href="#description">О термопанелях</a></li>
+                        <li><a href="#privilege">О компании</a></li>
+                        <li><a href="#bestsellers">Каталог</a></li>
+                        <li><a href="#work-scheme">Схема</a></li>
+                        <li><a href="#visualization">Визуализация</a></li>
+                        <li><a href="#honors">Сертификаты</a></li>
+                        <li><a href="#compare">Сравнение</a></li>
+                        <li><a href="#installation">Монтаж</a></li>
+                        <li><a href="#questions">FAQ</a></li>
                     </ul>
                 </nav><!-- mobile menu -->
             </div><!--container-->
@@ -112,7 +115,7 @@
                     <p>Идеальная защита фасада или систем утепления</p>
                 </div>
                 <div class="order-form">
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
                         <div class="icon pageheader-form-icon"></div>
                         <h3>Получите полный</h3>
                         <p>каталог термоплитки</p>
@@ -126,8 +129,8 @@
                             <input id="form-phone1" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
-                        <input class="btn submit" type="submit" value="Получить">
-                        <input class="hidden" type="text" name="subject" value="Заявка на получение каталога">
+                        <input class="btn submit" type="submit" value="Получить" data-yaTarget="FORMA1">
+                        <input class="hidden" type="text" name="subject" value="Заявка на полный список термоплитки 1 форма">
                         <p><span>Ваши контактные данные в безопасности и не будут переданы третьим лицам</span></p>
                     </form>
                 </div>
@@ -458,7 +461,7 @@
             <div class="container">
 
                 <div>
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
 
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
@@ -471,8 +474,8 @@
                             <input id="form-phone2" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
-                        <input class="btn submit" type="submit" value="Получить прайс-лист">
-                        <input class="hidden" type="text" name="subject" value="Заявка на получение прайс-листа">
+                        <input class="btn submit" type="submit" value="Получить прайс-лист" data-yaTarget="450 PRYCE">
+                        <input class="hidden" type="text" name="subject" value="Заявка на полный список из более 450 термопанелей 2 форма">
 
                         <p><span>Мы перезвоним Вам в течении 20 минут и поможем определиться с выбором термопанелей</span></p>
                     </form>
@@ -811,7 +814,7 @@
                 </div>
 
                 <div class="order-form">
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
                             <label for="form-name3"></label>
@@ -821,7 +824,7 @@
                             <input id="form-phone3" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
-                        <input class="btn submit" type="submit" value="Вызвать">
+                        <input class="btn submit" type="submit" value="Вызвать" data-yaTarget="ZAMERSHIK">
                         <input class="hidden" type="text" name="subject" value="Заявка на вызов замерщика">
                         <p><span>Ваши контактные данные в безопасности и не будут переданы третьим лицам</span></p>
                     </form>
@@ -843,7 +846,7 @@
             <div class="container">
 
                 <div>
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
 
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
@@ -856,8 +859,8 @@
                             <input id="form-phone4" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
-                        <input class="btn submit" type="submit" value="Заказать 3D проект">
-                        <input class="hidden" type="text" name="subject" value="Заявка на 3D проект">
+                        <input class="btn submit" type="submit" value="Заказать 3D проект" data-yaTarget="3DPROEKT">
+                        <input class="hidden" type="text" name="subject" value="Заявка на заказ 3D проекта">
 
                         <p class="order-3D-text"><b>Стоимость</b> разработки 3D дизайн-проекта составляет<span> <b>4990</b> руб</span>, <b>срок</b> разработки<span> <b>3</b> дня</span></p>
 
@@ -982,7 +985,7 @@
             <div class="container">
 
                 <div>
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
 
                         <div class="form__block">
                             <p>Введите ваше имя:</p>
@@ -998,14 +1001,13 @@
                             <p>Удобное время для звонка: <sup>*</sup></p>
                             <div class="time-block">
                                 <p>с</p>
-                                <input type="text" name="time" value="10:00" min="10:00" max="17:59" required="">
-                                <p>до</p>
-                                <input type="text" name="time" value="18:00" min="10:01" max="18:00" required="">
+                                <input type="text" name="time" placeholder="10:00" required="">
+                                Получите полный                                <input type="text" name="time" placeholder="18:00" required="">
                             </div>
                         </div>
 
-                        <input class="btn submit" type="submit" value="Получить консультацию">
-                        <input class="hidden" type="text" name="subject" value="Заявка на получение консультации">
+                        <input class="btn submit" type="submit" value="Получить консультацию" data-yaTarget="KONSULTACIYA">
+                        <input class="hidden" type="text" name="subject" value="Заявка на консультацию по термопанелям">
 
                         <p><span><sup>*</sup> Ваши контактные данные в безопасности и не будут переданы третьим лицам</span></p>
                     </form>
@@ -1127,71 +1129,116 @@
                 <h2><span>Фотографии</span> термопанелей</h2>
                 
                 <div class="portfolio__block">
-                    <div>
-                        <a href="images/portfolio_1.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_1.jpg" alt="Фото 1">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                    <div class="portfolio-slider">
+                        <div class="slide">
+                            <div>
+                                <a href="images/portfolio_1.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_1.jpg" alt="Фото 1">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_2.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_2.jpg" alt="Фото 2">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                            <div>
+                                <a href="images/portfolio_5.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_5.jpg" alt="Фото 5">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_3.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_3.jpg" alt="Фото 3">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <a href="images/portfolio_2.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_2.jpg" alt="Фото 2">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_4.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_4.jpg" alt="Фото 4">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                            <div>
+                                <a href="images/portfolio_6.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_6.jpg" alt="Фото 6">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_5.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_5.jpg" alt="Фото 5">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <a href="images/portfolio_3.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_3.jpg" alt="Фото 3">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_6.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_6.jpg" alt="Фото 6">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                            <div>
+                                <a href="images/portfolio_7.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_7.jpg" alt="Фото 7">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_7.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_7.jpg" alt="Фото 7">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <a href="images/portfolio_4.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_4.jpg" alt="Фото 4">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="images/portfolio_8.jpg" data-fancybox-group="honors_portfolio">
-                            <img src="images/portfolio_8.jpg" alt="Фото 8">
-                            <div class="hover-img">
-                                <div class="icon hover-img-icon"></div>
+                            <div>
+                                <a href="images/portfolio_8.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_8.jpg" alt="Фото 8">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <a href="images/portfolio_8.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_8.jpg" alt="Фото 8">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="images/portfolio_3.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_3.jpg" alt="Фото 3">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <a href="images/portfolio_5.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_5.jpg" alt="Фото 5">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="images/portfolio_3.jpg" data-fancybox-group="honors_portfolio">
+                                    <img src="images/portfolio_3.jpg" alt="Фото 3">
+                                    <div class="hover-img">
+                                        <div class="icon hover-img-icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
 
             </div><!--container-->
@@ -1306,7 +1353,7 @@
                     </div>
                     <div>
                         <div class="order-form">
-                            <form class="form" method="post" action="">
+                            <form class="form" method="post" action="mail/mailer.php">
                                 <h3>Остались вопросы?</h3>
                                 <p>Задайте их нам!</p>
 
@@ -1319,8 +1366,8 @@
                                     <textarea id="form-message6" name="message" placeholder="Ваше сообщение..." required></textarea>
                                 </div>
 
-                                <input class="btn submit" type="submit" value="Получить ответ">
-                                <input class="hidden" type="text" name="subject" value="Заявка на получение ответа">
+                                <input class="btn submit" type="submit" value="Получить ответ" data-yaTarget="VOPROS">
+                                <input class="hidden" type="text" name="subject" value="Вопрос по термопанелям">
                                 <p><span>Мы свяжемся с вами <br> в течении</span><b>15 минут</b></p>
                             </form>
                         </div>
@@ -1454,7 +1501,7 @@
                     <p>+7(499) <span>777-88-77</span></p>
                     <p>+7(499) <span>777-88-77</span></p>
                     <p>+7(499) <span>777-88-77</span></p>
-                    <a href="#call-request" class="btn order-call-btn" data-action="fancy-open" data-scroll="disable">заказать звонок</a>
+                    <a href="#call-request" class="btn order-call-btn" data-action="fancy-open" data-scroll="disable" data-yaTarget="ZVONOK2" data-subject="Заявка на обратный звонок ( Подвал )">заказать звонок</a>
                     <p class="work-time">Пн. - Сб.: с 9<sup>00</sup> до 20<sup>00</sup>; Вс.: выходной</p>
                     <div class="icon phone-icon"></div>
                 </div>
@@ -1479,7 +1526,7 @@
 
                 <!-- всплывающее окно Заказать звонок -->
                 <div id="call-request" class="order-form">
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
                         <h3>Заказать</h3>
                         <p>обратный звонок</p>
 
@@ -1500,9 +1547,9 @@
 
                 <!-- всплывающее окно Заказать термопанели-->
                 <div id="order-thermopanel" class="order-form order-thermopanel">
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
                         <h3>Заказать</h3>
-                        <p>термопанели</p>
+                        <p>клинкерную плитку</p>
                         <p class="prod-name"></p>
 
                         <div class="form__block">
@@ -1514,15 +1561,15 @@
                             <input id="form-phone8" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
-                        <input class="btn submit" type="submit" value="Заказать">
-                        <input class="hidden" type="text" name="subject" value="Заявка на заказ термопанелей">
+                        <input class="btn submit" type="submit" value="Заказать" data-yaTarget="HITSALES">
+                        <input class="hidden" type="text" name="subject" value="Заявка на клинкерную плитку">
                         <p><span>Ваши контактные данные в безопасности и не будут переданы третьим лицам</span></p>
                     </form>
                 </div>
 
                 <!-- всплывающее окно Оставить заявку (схема работы)-->
                 <div id="scheme-request" class="order-form">
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="mail/mailer.php">
                         <h3>Заказать</h3>
                         <p>термопанели</p>
 
@@ -1535,8 +1582,8 @@
                             <input id="form-phone9" type="tel" data-validate-empty="телефон" name="phone" placeholder="+7 (___) ___-__-__" required="">
                         </div>
 
-                        <input class="btn submit" type="submit" value="Получить">
-                        <input class="hidden" type="text" name="subject" value="Заявка на заказ термопанелей">
+                        <input class="btn submit" type="submit" value="Получить" data-yaTarget="SHEMA">
+                        <input class="hidden" type="text" name="subject" value="Заявка на звонок в блоке Схема работы">
                         <p><span>Ваши контактные данные в безопасности и не будут переданы третьим лицам</span></p>
                     </form>
                 </div>
