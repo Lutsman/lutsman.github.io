@@ -580,6 +580,11 @@ $(document).ready(function () {
             minHeight: '80%',
             tpl: {
                 closeBtn: fancyCloseBtn
+            },
+            helpers : {
+                overlay : {
+                    locked : false
+                }
             }
         });
 
@@ -587,13 +592,17 @@ $(document).ready(function () {
             padding: [0, 0, 0, 0],
             margin: [0, 0, 0, 0],
             type: 'image',
-            //autoSize: true,
             maxHeight: '80%',
-            //maxWidth: '80%',
+            maxWidth: '80%',
             nextEffect: 'fade',
             prevEffect: 'fade',
             tpl: {
                 closeBtn: fancyCloseBtn
+            },
+            helpers : {
+                overlay : {
+                    locked : false
+                }
             }
         });
 
@@ -618,6 +627,11 @@ $(document).ready(function () {
                         margin: [0, 0, 0, 0],
                         tpl: {
                             closeBtn: fancyCloseBtn
+                        },
+                        helpers : {
+                            overlay : {
+                                locked : false
+                            }
                         }
                     });
                     break;
@@ -630,6 +644,11 @@ $(document).ready(function () {
                         margin: [0, 0, 0, 0],
                         tpl: {
                             closeBtn: fancyCloseBtn
+                        },
+                        helpers : {
+                            overlay : {
+                                locked : false
+                            }
                         }
                     });
                     break;
@@ -637,7 +656,6 @@ $(document).ready(function () {
                     var prodName = target.parentNode.querySelector('.title').textContent;
                     $(href).find('.prod-name').text(prodName);
                     subjectInput.value += ' ' + prodName;
-                    //console.log($(href).find('input[name="subject"]')[0].value);
 
                     $.fancybox.open({
                         href: href,
@@ -645,6 +663,11 @@ $(document).ready(function () {
                         margin: [0, 0, 0, 0],
                         tpl: {
                             closeBtn: fancyCloseBtn
+                        },
+                        helpers : {
+                            overlay : {
+                                locked : false
+                            }
                         }
                     });
                     break;
@@ -653,13 +676,6 @@ $(document).ready(function () {
                     break;
             }
         });
-        
-        /*fancybox fix margin*/
-        (function(){
-
-        })();
-        
-        
     })();
 
     /*Slider*/
