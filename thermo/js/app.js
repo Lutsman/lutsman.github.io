@@ -460,10 +460,9 @@ $(document).ready(function () {
             /*mmenu scroll*/
             var mmenuScroll = new ScrollToAnchor({
                 listenedBlock: document.getElementById('#m-menu'),
-                translation:  document.querySelector('#m-menu-btn-wrapper').offsetHeight
+                translation:  '#top-menu'
             });
 
-            //console.log(document.querySelector('#m-menu-btn-wrapper').offsetHeight);
 
             setUpMmenu();
 
@@ -488,7 +487,7 @@ $(document).ready(function () {
                 api.bind( 'closed',
                     function() {
                         if (selector) {
-                            mmenuScroll.smoothScroll(selector, mmenuScroll._translation);
+                            mmenuScroll.smoothScroll(selector,  document.querySelector(mmenuScroll._translationElementSelector).offsetHeight);
                             selector = false;
                         }
                     }
