@@ -506,6 +506,7 @@ $(document).ready(function () {
     (function(){
         if (!document.getElementById('map')) return;
 
+        var winWidth = window.innerWidth;
         var firstScript = document.querySelectorAll('script')[0];
         var script = document.createElement('script');
         var placemarks = {
@@ -518,8 +519,15 @@ $(document).ready(function () {
                 hintContent: 'ООО “Цемстройлогистика”, Егорьевск!'
             }
         };
-        var center = [55.3383,38.8627];
+        var center = [];
         var zoom = 10;
+
+
+        if (winWidth > 992) {
+            center = [55.3383,38.55];
+        } else {
+            center = [55.3383,38.87];
+        }
 
         script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
         script.async = true;
@@ -542,12 +550,13 @@ $(document).ready(function () {
             for (var currPlacemark in placemarks) {
                 myMap.geoObjects.add(new ymaps.Placemark(placemarks[currPlacemark].coords, {
                     hintContent: placemarks[currPlacemark].hintContent
-                }/*, {
+                },
+                    {
                     iconLayout: 'default#image',
-                    iconImageHref: 'images/baloon.png',
-                    iconImageSize: [28, 40],
-                    iconImageOffset: [-30, -50]
-                }*/));
+                    iconImageHref: 'images/map_baloon.png',
+                    iconImageSize: [22, 22],
+                    iconImageOffset: [-15, -30]
+                }));
             }
         }
     })();
@@ -559,21 +568,14 @@ $(document).ready(function () {
         var fancyRender = 'fancy-render';
         var fancyClose = 'fancy-close';
         var fancyCloseBtn = '<p class="close"><a href="javascript:void(0)" data-action="close">×</a></p>';
-        var $fancyGallery = $('[data-fancybox-group="gallery"]');
         var $fancyHonorsGal = $('[data-fancybox-group="honors"]');
         var $fancyPortfolio = $('[data-fancybox-group="honors_portfolio"]');
-
-        $fancyGallery.fancybox({
-            padding: [0, 0, 0, 0],
-            margin: [0, 0, 0, 0],
-            tpl: {
-                closeBtn: fancyCloseBtn
-            }
-        });
 
         $fancyHonorsGal.fancybox({
             padding: [0, 0, 0, 0],
             margin: [0, 0, 0, 0],
+            nextEffect: 'fade',
+            prevEffect: 'fade',
             maxHeight: '80%',
             minHeight: '80%',
             tpl: {
@@ -585,9 +587,11 @@ $(document).ready(function () {
             padding: [0, 0, 0, 0],
             margin: [0, 0, 0, 0],
             type: 'image',
-            autoSize: true,
-            //height: '80%',
-            //width: '80%',
+            //autoSize: true,
+            maxHeight: '80%',
+            //maxWidth: '80%',
+            nextEffect: 'fade',
+            prevEffect: 'fade',
             tpl: {
                 closeBtn: fancyCloseBtn
             }
@@ -649,6 +653,13 @@ $(document).ready(function () {
                     break;
             }
         });
+        
+        /*fancybox fix margin*/
+        (function(){
+
+        })();
+        
+        
     })();
 
     /*Slider*/
@@ -726,7 +737,40 @@ $(document).ready(function () {
     })();
 
 
-
+    /**
+     *Animate
+     */
+    (function(){
+        $(".scroll").each(function () {
+            var block = $(this);
+            $(window).bind({
+                scroll : function() {
+                    var top = block.offset().top;
+                    var bottom = block.height()+top;
+                    top = top - $(window).height();
+                    var scroll_top = $(this).scrollTop();
+                    if ((scroll_top > top) && (scroll_top < bottom)) {
+                        if (!block.hasClass("animated")) {
+                            block.addClass("animated");
+                        }
+                    }
+                },
+                load : function() {
+                    var top = block.offset().top;
+                    var bottom = block.height()+top;
+                    top = top - $(window).height();
+                    var scroll_top = $(this).scrollTop();
+                    if ((scroll_top > top) && (scroll_top < bottom)) {
+                        if (!block.hasClass("animated")) { // если забыли добавить анимацию, все же добавляем
+                            //block.addClass("animated");
+                        }
+                    } else {
+                        block.removeClass("animated");
+                    }
+                }
+            });
+        });
+    })();
     
     
 });
