@@ -658,7 +658,7 @@ footer {
   .model__block p {
     margin-top: 10px;
     font-style: italic;
-    /*border-bottom: 2px solid $main-color;*/ }
+    white-space: nowrap; }
   .model__block > img {
     max-width: 490px;
     margin-top: 205px; }
@@ -948,7 +948,7 @@ footer {
     float: left;
     width: 33.3%;
     height: 201px;
-    padding: 0 49px;
+    padding: 0 40px;
     text-align: center; }
   .work-scheme__block .icon-block {
     position: relative;
@@ -2456,6 +2456,8 @@ Placeholder
   .model__block > img {
     max-width: 100%;
     margin: 25px auto; }
+  .model__block p {
+    white-space: normal; }
 
   .model-1, .model-3 {
     width: 50%; }
