@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="">  <!--Ключевые слова-->
+    <meta name="description" content=""> <!--Описание-->
+
+    <title>Bytewerk</title>
+
+    <!--Start Open Graph
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">   Заголовок
+    <meta property="og:description" content=""> Краткое описание, которое выводится при формировании превью ссылки
+    <meta property="og:url" content="http://"> Ссылка на страницу сайта
+    <meta property="og:image" content="http://"> Ссылка на картинку, которая будет отображаться в посте
+    End Open Graph-->
+
+    <!--Favicon-->
+    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
+
+    <!--For improved cross-browser rendering-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--Plugins-->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="main-page">
+
+    <div class="page-wrap">
+        <div class="header-wrap" data-offset="main-menu">
+            <header>
+                <div class="container">
+                    <a href="/" class="logo"></a>
+
+                    <div class="top-menu">
+                        <nav class="desktop-menu">
+                            <ul class="main-menu">
+                                <li class="dropdown" data-target="#technologies" data-group-name="main-menu"><a href="#">Technologies</a></li>
+                                <li class="dropdown" data-target="#services" data-group-name="main-menu"><a href="#">Services</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                            <ul id="technologies" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                            </ul>
+                            <ul id="services" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="mobile-nav">
+                            <div id="main-hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-target="[data-rel='main-mobile-menu']">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav class="mobile-menu" data-rel="main-mobile-menu">
+                            <ul class="main-menu">
+                                <li class="dropdown" data-group-name="main-mobile-menu">
+                                    <a href="#">Technologies</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                </ul>
+                                <li class="dropdown" data-group-name="main-mobile-menu">
+                                    <a href="#">Services</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                </ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div><!--container-->
+            </header>
+        </div>
+
+        <section class="content">
+            <div class="container">
+                <div class="grid-slider-index"></div>
+                <div class="grid-slider">
+                    <div class="content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>v</div>
+                                <div>t</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>v</div>
+                                <div>t</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>v</div>
+                                <div>t</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>v</div>
+                                <div>t</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>v</div>
+                                <div>t</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                                <div>b</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div><!--container-->
+        </section>
+
+        <section class="content">
+            <div class="container"></div><!--container-->
+        </section>
+
+    </div>
+
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

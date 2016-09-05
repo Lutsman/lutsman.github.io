@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="">  <!--Ключевые слова-->
+    <meta name="description" content=""> <!--Описание-->
+
+    <title>Bytewerk</title>
+
+    <!--Start Open Graph
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">   Заголовок
+    <meta property="og:description" content=""> Краткое описание, которое выводится при формировании превью ссылки
+    <meta property="og:url" content="http://"> Ссылка на страницу сайта
+    <meta property="og:image" content="http://"> Ссылка на картинку, которая будет отображаться в посте
+    End Open Graph-->
+
+    <!--Favicon-->
+    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
+
+    <!--For improved cross-browser rendering-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--Plugins-->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="inner-page">
+
+<div class="page-wrap">
+    <section class="pageheader">
+        <div class="header-wrap" data-offset="main-menu">
+            <header>
+                <div class="container">
+                    <a href="/" class="logo"></a>
+
+                    <div class="top-menu">
+                        <nav class="desktop-menu">
+                            <ul class="main-menu">
+                                <li class="dropdown" data-target="#technologies" data-group-name="main-menu"><a href="#">Technologies</a></li>
+                                <li class="dropdown" data-target="#services" data-group-name="main-menu"><a href="#">Services</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                            <ul id="technologies" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                            </ul>
+                            <ul id="services" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav id="main-m-menu-btn-wrapper" class="mobile-nav">
+                            <div id="main-hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-target="[data-rel='main-mobile-menu']">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav class="mobile-menu" data-rel="main-mobile-menu">
+                            <ul>
+                                <li class="dropdown" data-group-name="main-mobile-menu">
+                                    <a href="#">Technologies</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                </ul>
+                                <li class="dropdown" data-group-name="main-mobile-menu">
+                                    <a href="#">Services</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                </ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div><!--container-->
+            </header>
+        </div>
+
+        <div class="container">
+            <div class="pageheader-content">
+                <div class="pageheader-slider">
+                    <div class="slide" data-name="VOIP">
+                        <h1>Messaging</h1>
+                        <div>
+                            <div class="icon-chat-big"></div>
+                            <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                                much of their performances.</p>
+                        </div>
+                    </div>
+                    <div class="slide" data-name="Cryptography">
+                        <h1>Messaging</h1>
+                        <div>
+                            <div class="icon-chat-big"></div>
+                            <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                                much of their performances.</p>
+                        </div>
+                    </div>
+                    <div class="slide" data-name="Group messaging">
+                        <h1>Messaging</h1>
+                        <div>
+                            <div class="icon-chat-big"></div>
+                            <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                                much of their performances.</p>
+                        </div>
+                    </div>
+                    <div class="slide" data-name="XMPP">
+                        <h1>Messaging</h1>
+                        <div>
+                            <div class="icon-chat-big"></div>
+                            <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                                much of their performances.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#"></a>
+            </div>
+
+        </div><!--container-->
+    </section>
+
+    <section class="inner-content">
+        <div class="header-wrap">
+            <header>
+                <div class="container">
+                    <a href="/" class="logo logo-2"></a>
+
+                    <div class="top-menu">
+                        <nav class="desktop-menu">
+                            <ul class="main-menu">
+                                <li class="dropdown" data-target="#technologies2" data-group-name="secondary-menu"><a href="#">Technologies</a></li>
+                                <li class="dropdown" data-target="#services2" data-group-name="secondary-menu"><a href="#">Services</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                            <ul id="technologies2" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                            </ul>
+                            <ul id="services2" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav id="secondary-m-menu-btn-wrapper" class="mobile-nav">
+                            <div id="secondary-hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-target="[data-rel='secondary-mobile-menu']">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav class="mobile-menu" data-rel="secondary-mobile-menu">
+                            <ul>
+                                <li class="dropdown" data-group-name="secondary-mobile-menu">
+                                    <a href="#">Technologies</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                </ul>
+                                <li class="dropdown" data-group-name="secondary-mobile-menu">
+                                    <a href="#">Services</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>VOIP <br>
+                                        Cryptography <br>
+                                        Group messaging <br>
+                                        XMPP</span>
+                                </span>
+                                    </li>
+                                </ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div><!--container-->
+            </header>
+        </div>
+
+        <div class="container" data-offset="secondary-menu">
+            <div class="grey-block">
+                <div class="secondary-pageheader-slider">
+                    <div class="slide" data-name="VOIP">
+                        <div class="slide-index"></div>
+                        <h3>Cryptography</h3>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                            are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                            consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                            rock and psychedelic rock. </p>
+                        <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                            much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                            (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                            joined in late-2009, replacing John Frusciante. Red Hot Chili Peppers are one of the best-selling
+                            bands of all time with over 80 million records sold worldwide, have been nominated for sixteen
+                            Grammy Awards, of which they have won six and are the most successful band in alternative rock
+                            radio history currently holding the records for most number one singles.</p>
+                    </div>
+                    <div class="slide" data-name="Cryptography">
+                        <div class="slide-index"></div>
+                        <h3>Cryptography</h3>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                            are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                            consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                            rock and psychedelic rock. </p>
+                        <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                            much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                            (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                            joined in late-2009, replacing John Frusciante. Red Hot Chili Peppers are one of the best-selling
+                            bands of all time with over 80 million records sold worldwide, have been nominated for sixteen
+                            Grammy Awards, of which they have won six and are the most successful band in alternative rock
+                            radio history currently holding the records for most number one singles.</p>
+                    </div>
+                    <div class="slide" data-name="Group messaging">
+                        <div class="slide-index"></div>
+                        <h3>Cryptography</h3>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                            are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                            consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                            rock and psychedelic rock. </p>
+                        <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                            much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                            (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                            joined in late-2009, replacing John Frusciante. Red Hot Chili Peppers are one of the best-selling
+                            bands of all time with over 80 million records sold worldwide, have been nominated for sixteen
+                            Grammy Awards, of which they have won six and are the most successful band in alternative rock
+                            radio history currently holding the records for most number one singles.</p>
+                    </div>
+                    <div class="slide" data-name="XMPP">
+                        <div class="slide-index"></div>
+                        <h3>Cryptography</h3>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                            are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                            consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                            rock and psychedelic rock. </p>
+                        <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                            much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                            (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                            joined in late-2009, replacing John Frusciante. Red Hot Chili Peppers are one of the best-selling
+                            bands of all time with over 80 million records sold worldwide, have been nominated for sixteen
+                            Grammy Awards, of which they have won six and are the most successful band in alternative rock
+                            radio history currently holding the records for most number one singles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-block">
+                <div>
+                    <h4>Original</h4>
+                    <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                        are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                        consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                        rock and psychedelic rock. </p>
+                    <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                        much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                        (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                        joined in late-2009, replacing John Frusciante. </p>
+                </div>
+                <div>
+                    <h4>Commitments</h4>
+                    <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                        much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                        (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                        joined in late-2009, replacing John Frusciante. Red Hot Chili Peppers are one of the
+                        best-selling bands of all time with over 80 million records sold worldwide, have been nominated
+                        for sixteen Grammy Awards, of which they have won six and are the most successful band in
+                        alternative rock radio history currently holding the records for most number one singles.</p>
+                </div>
+            </div>
+
+            <div class="photo-block">
+                <div class="photo-block-slider-counter"></div>
+                <div class="photo-block-slider">
+                    <div>
+                        <img src="img/inner_slide_1.jpg" alt="slide 1">
+                    </div>
+                    <div>
+                        <img src="img/inner_slide_1.jpg" alt="slide 2">
+                    </div>
+                    <div>
+                        <img src="img/inner_slide_1.jpg" alt="slide 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-block">
+                <div>
+                    <h4>Replacing</h4>
+                    <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                        are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                        consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                        rock and psychedelic rock. </p>
+                    <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                        much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                        (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                        joined in late-2009, replacing John Frusciante. </p>
+                    <ol>
+                        <li>
+                            <span>Also sometimes shortened to "The Chili Peppers" or abbreviated</span>
+                        </li>
+                        <li>
+                            <span>Rock band formed in Los Angeles in 1983</span>
+                        </li>
+                        <li>
+                            <span>The group's musical style primarily consists of rock with an emphasis on funk</span>
+                        </li>
+                        <li>
+                            <span>As well as elements from other genres such as punk</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="photo-text-block">
+                <div class="text-right">
+                    <div class="inner-photo">
+                        <img src="img/inner_img_1.jpg" alt="img 1">
+                    </div>
+
+                    <div>
+                        <h5>Formed in Los Angeles</h5>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as
+                            "RHCP", are an American rock band formed in Los Angeles in 1983. The group's musical style
+                            primarily consists of rock with an emphasis on funk, as well as elements from other genres
+                            such as punk rock and psychedelic rock. When played live, their music incorporates elements
+                            of jam band due to the improvised nature of much of their performances. Currently, the band
+                            consists of founding members Anthony Kiedis (vocals) and Flea (bass), longtime drummer Chad
+                            Smith; and guitarist Josh Klinghoffer, who joined in late-2009, replacing John Frusciante.
+                            After two temporary guitarists, Dave Navarro of Jane's Addiction joined for the group's
+                            subsequent album, One Hot Minute (1995).</p>
+                    </div>
+                </div>
+
+                <div class="text-left">
+                    <div class="inner-photo">
+                        <img src="img/inner_img_2.jpg" alt="img 2">
+                    </div>
+
+                    <div>
+                        <h5>Subsequent album</h5>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as
+                            "RHCP", are an American rock band formed in Los Angeles in 1983. The group's musical style
+                            primarily consists of rock with an emphasis on funk, as well as elements from other genres
+                            such as punk rock and psychedelic rock. When played live, their music incorporates elements
+                            of jam band due to the improvised nature of much of their performances.</p>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <div class="inner-photo">
+                        <img src="img/inner_img_3.jpg" alt="img 3">
+                    </div>
+                    <div>
+                        <h5>Formed in Los Angeles</h5>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as
+                            "RHCP", are an American rock band formed in Los Angeles in 1983. The group's musical style
+                            primarily consists of rock with an emphasis on funk, as well as elements from other genres
+                            such as punk rock and psychedelic rock. When played live, their music incorporates elements
+                            of jam band due to the improvised nature of much of their performances. Currently, the band
+                            consists of founding members Anthony Kiedis (vocals) and Flea (bass), longtime drummer Chad
+                            Smith; and guitarist Josh Klinghoffer, who joined in late-2009, replacing John Frusciante.
+                            After two temporary guitarists, Dave Navarro of Jane's Addiction joined for the group's
+                            subsequent album, One Hot Minute (1995).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-block">
+                <div>
+                    <div>
+                        <h4>Replacing</h4>
+                        <p>Red Hot Chili Peppers, also sometimes shortened to "The Chili Peppers" or abbreviated as "RHCP",
+                            are an American rock band formed in Los Angeles in 1983. The group's musical style primarily
+                            consists of rock with an emphasis on funk, as well as elements from other genres such as punk
+                            rock and psychedelic rock.</p>
+                        <p>When played live, their music incorporates elements of jam band due to the improvised nature of
+                            much of their performances. Currently, the band consists of founding members Anthony Kiedis
+                            (vocals) and Flea (bass), longtime drummer Chad Smith; and guitarist Josh Klinghoffer, who
+                            joined in late-2009, replacing John Frusciante.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--container-->
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-menu">
+                    <nav>
+                        <ul class="main-menu">
+                            <li>
+                                <a href="#">Technologies</a>
+                                <ul id="technologies3" class="footer-submenu">
+                                    <li><a href="#">Payments</a></li>
+                                    <li><a href="#">Messaging</a></li>
+                                    <li><a href="#">Blockchain</a></li>
+                                    <li><a href="#">Embedded systems</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                                <ul id="services3" class="footer-submenu">
+                                    <li><a href="#">Research</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <a href="/" class="logo logo-3"></a>
+                    <p class="copyright">© All rights reserved, 2008—2016</p>
+                </div>
+            </div>
+
+        </div><!--container-->
+    </footer>
+
+</div>
+
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
+
