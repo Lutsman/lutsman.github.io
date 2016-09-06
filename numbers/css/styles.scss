@@ -380,8 +380,11 @@ header {
 
 .active-menu {
   height: auto;
+  min-height: 130px;
   header {
     background-color: #2a2826;
+    position: static;
+    height: inherit;
   }
 }
 /* ----------------------------------------------
@@ -758,10 +761,12 @@ footer {
 }
 .secondary-pageheader-slider-index {
   position: absolute;
-  top: -60px;
-  right: -320px;
+  top: 0;
+  left: 1000px;
   font: 303px $helveticaNeueCyr-Black;
   color: rgba(0, 0, 0, 0.078);
+  line-height: normal !important;
+  z-index: 2;
 }
 .secondary-pageheader-slider .slide {
   position: relative;
@@ -1136,6 +1141,9 @@ footer {
     top: 130px;
     right: 20px;
   }
+  .secondary-pageheader-slider-index {
+    left: 710px;
+  }
 }
 
 /* Medium devices */
@@ -1424,10 +1432,6 @@ footer {
     .logo {
       display: none;
     }
-    header {
-      position: static;
-      height: inherit;
-    }
   }
   .main-menu {
     float: none;
@@ -1454,6 +1458,11 @@ footer {
   }
   .menu-info {
     font-size: 14px;
+  }
+  .secondary-pageheader-slider-index {
+    left: 590px;
+    top: 20px;
+    font-size: 223px;
   }
 }
 
@@ -1593,6 +1602,11 @@ footer {
   .grid-slider-index {
     top: 210px;
     font-size: 310px;
+  }
+  .secondary-pageheader-slider-index {
+    left: 15px;
+    top: 10px;
+    font-size: 163px;
   }
 }
 

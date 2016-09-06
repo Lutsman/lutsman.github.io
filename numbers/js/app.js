@@ -8,16 +8,13 @@ $(document).ready(function () {
             this._getTarget = options.getTarget || null; //func arg block return target
             this._groupName = $(this._block).attr('data-group-name');
             this._isActive = false;
+            this._animate = options.animate || 'slide';  // 'none', 'slide', 'fade'
             this._onOpen = options.onOpen || null;
             this._onClose = options.onClose || null;
             this._onAfterOpen = options.onAfterOpen || null;
             this._onAfterClose = options.onAfterClose || null;
         }
         BlockToggler.prototype.init = function () {
-            if (!this._target && typeof this._getTarget === 'function') {
-                this._target = this._getTarget(this._block);
-            }
-
             $(this._block).on('click', this.toggler.bind(this));
 
             $('body').on('blockOpen',this.blockOpenListener.bind(this));
@@ -61,12 +58,46 @@ $(document).ready(function () {
             this.hideBlock();
         };
         BlockToggler.prototype.showBlock = function (callback) {
-            $(this._target).slideDown('normal', 'linear', callback);
-            this._isActive = true;
+            var target = this._target;
 
+            if (!this._target && typeof this._getTarget === 'function') {
+                target = this._getTarget(this._block);
+            }
+
+            switch (this._animate) {
+                case 'none':
+                    $(target).show();
+                    if (typeof callback === 'function') callback();
+                    break;
+                case 'slide':
+                    $(target).slideDown('normal', 'linear', callback);
+                    break;
+                case 'fade':
+                    $(target).fadeIn('normal', 'linear', callback);
+                    break;
+            }
+
+            this._isActive = true;
         };
         BlockToggler.prototype.hideBlock = function (callback) {
-            $(this._target).slideUp('normal', 'linear', callback);
+            var target = this._target;
+
+            if (!this._target && typeof this._getTarget === 'function') {
+                target = this._getTarget(this._block);
+            }
+
+            switch (this._animate) {
+                case 'none':
+                    $(target).hide();
+                    if (typeof callback === 'function') callback();
+                    break;
+                case 'slide':
+                    $(target).slideUp('normal', 'linear', callback);
+                    break;
+                case 'fade':
+                    $(target).fadeOut('normal', 'linear', callback);
+                    break;
+            }
             this._isActive = false;
         };
 
@@ -90,14 +121,72 @@ $(document).ready(function () {
         (function(){
             $('[data-group-name="main-menu"]').blockToggler({
                 onOpen: function () {
-                    $('[data-offset="main-menu"]').addClass('active-menu')
-                        .animate({height: '411px'}, "normal");
+                    $('[data-offset="main-menu"]').addClass('active-menu');
+                    //$('[data-offset="main-menu"]')[0].style.height = '';
+                        //.animate({height: '411px'}, "normal");
                 },
                 onClose: function () {
-                    $('[data-offset="main-menu"]').animate({height: '130px'}, "normal");
+                    //$('[data-offset="main-menu"]').animate({height: '130px'}, "normal");
                 },
                 onAfterClose: function () {
                     $('[data-offset="main-menu"]').removeClass('active-menu');
+                }
+            });
+        })();
+
+        /*Main mobile menu*/
+        (function(){
+            $('#main-hamburger').blockToggler({
+                animate: 'fade',
+                getTarget: function (block) {
+                    //data-target="[data-rel='main-mobile-menu']"
+                    //console.log(document.documentElement.clientWidth);
+
+                    /*if (document.documentElement.clientWidth > 767) {
+                     return $('.top-menu .desktop-menu');
+                     } else {
+                     return $('.top-menu .mobile-menu'); //[data-rel="main-mobile-menu"]
+                     }*/
+
+                    return $('.top-menu .mobile-menu');
+                },
+                onOpen: function () {
+                    //$('.logo').hide();
+                    $('[data-offset="main-menu"]').addClass('active-menu');
+
+                },
+                onClose: function () {
+                    var $offsetBlock = $('[data-offset="main-menu"]');
+                    $('body').trigger('blockOpen', ['', 'main-mobile-menu']);
+                    $offsetBlock.animate({height: '130px'}, "normal", function () {
+                        $offsetBlock.css('height', '');
+                    });
+                },
+                onAfterClose: function () {
+                    //$('.logo').show();
+                    $('[data-offset="main-menu"]').removeClass('active-menu');
+                }
+            });
+
+            $('[data-group-name="main-mobile-menu"]').blockToggler({
+                getTarget: function (block) {
+                    return block.nextElementSibling;
+                },
+                onOpen: function () {
+                    if (document.documentElement.clientWidth < 1024 && document.documentElement.clientWidth > 767) {
+                        $('[data-offset="main-menu"]').animate({height: '480px'}, "normal");
+                    }
+                    //$('[data-offset="main-menu"]').animate({height: '480px'}, "normal");
+                },
+                onClose: function () {
+                    var $offsetBlock = $('[data-offset="main-menu"]');
+
+                    if (document.documentElement.clientWidth < 1024 && document.documentElement.clientWidth > 767) {
+                        $offsetBlock.animate({height: '130px'}, "normal", function () {
+                            $offsetBlock.css('height', '');
+                        });
+                    }
+                    //$('[data-offset="main-menu"]').animate({height: '130px'}, "normal");
                 }
             });
         })();
@@ -114,29 +203,7 @@ $(document).ready(function () {
             });
         })();
 
-        /*Main mobile menu*/
-        (function(){
-            $('#main-hamburger').blockToggler({
-                onOpen: function () {
-                    $('[data-offset="main-menu"]').addClass('active-menu');
-                },
-                onAfterClose: function () {
-                    $('[data-offset="main-menu"]').removeClass('active-menu');
-                }
-            });
 
-            $('[data-group-name="main-mobile-menu"]').blockToggler({
-                getTarget: function (block) {
-                    return block.nextElementSibling;
-                },
-                onOpen: function () {
-                    //$('[data-offset="main-menu"]').animate({height: '480px'}, "normal");
-                },
-                onClose: function () {
-                    //$('[data-offset="main-menu"]').animate({height: '130px'}, "normal");
-                }
-            });
-        })();
 
         /*Secondary mobile menu*/
         (function(){
