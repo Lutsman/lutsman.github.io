@@ -277,7 +277,7 @@ header {
   height: 40px;
   background: url("../img/logo_1.png") no-repeat center/cover;
 }
-.main-menu {
+.main-menu, .secondary-menu {
   float: right;
   font: 18px $spaceMono-Bold;
   text-transform: uppercase;
@@ -305,6 +305,11 @@ header {
     }
   }
 }
+.secondary-menu {
+  .dropdown.active {
+    margin-bottom: 25px;
+  }
+}
 .dropdown {
   a {
     position: relative;
@@ -323,7 +328,6 @@ header {
   display: none;
   float: left;
   width: 100%;
-  margin-top: 25px;
   text-align: center;
   clear: both;
   li {
@@ -387,6 +391,10 @@ header {
     height: inherit;
   }
 }
+.inner-content .active-menu header {
+  background-color: #fff;
+}
+
 /* ----------------------------------------------
  Footer
  ---------------------------------------------- */
@@ -504,6 +512,8 @@ footer {
   font: 15px $spaceMono-Regular;
   li {
     position: relative;
+    @include transition(margin-left 0.2s ease-in-out);
+    margin-left: 0;
     margin-bottom: 10px;
     cursor: pointer;
     &:after {
@@ -519,7 +529,16 @@ footer {
       @include border-radius(50%);
     }
   }
+  .slick-active {
+    margin-left: -20px;
+    color: $accent-color;
+    &:after {
+      background-color: $accent-color !important;
+    }
+  }
 }
+
+
 
 .inner-content {
   h4 {
@@ -532,8 +551,14 @@ footer {
   .dropdown a::after {
     border-top-color: #000;
   }
+  header {
+    position: relative;
+  }
   .header-wrap {
     margin-bottom: 30px;
+    &.active-menu {
+      height: auto;
+    }
   }
   .submenu {
     color: #fff;
@@ -569,13 +594,13 @@ footer {
     li:after {
       background-color: #000;
     }
-    .slick-active {
+    /*.slick-active {
       margin-left: -20px;
       color: $accent-color;
       &:after {
         background-color: $accent-color;
       }
-    }
+    }*/
   }
 }
 
@@ -961,7 +986,7 @@ footer {
     width: 150px;
     height: 30px;
   }
-  .main-menu {
+  .main-menu,.secondary-menu {
     font-size: 13px;
     li {
       margin: 0 15px;
@@ -1433,12 +1458,14 @@ footer {
       display: none;
     }
   }
-  .main-menu {
+  .main-menu,.secondary-menu {
     float: none;
   }
   .submenu {
     position: absolute;
-    top: 40px;
+    top: 65px;
+    left: 0;
+    z-index: 5;
     img {
       height: 100px;
     }
@@ -1550,7 +1577,7 @@ footer {
     padding-top: 0;
     margin: 0 -20px;
   }
-  .main-menu {
+  .main-menu,.secondary-menu {
     font-size: 25px;
     > li {
       width: 70%;
@@ -1565,7 +1592,7 @@ footer {
     li + li {
       margin-left: 60px;
     }
-    .main-menu > li:nth-child(3) {
+    .main-menu > li:nth-child(3){
       margin-left: 0;
     }
   }

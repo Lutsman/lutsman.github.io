@@ -52,7 +52,7 @@ $(document).ready(function () {
             }
         };
         BlockToggler.prototype.blockOpenListener = function (e, block, groupName) {
-            if (block === this._block || groupName !== this._groupName || !this._isActive) return;
+            if (block === this._block || groupName !== this._groupName || groupName === undefined || !this._isActive) return;
 
             $(this._block).removeClass('active');
             this.hideBlock();
@@ -138,18 +138,6 @@ $(document).ready(function () {
         (function(){
             $('#main-hamburger').blockToggler({
                 animate: 'fade',
-                getTarget: function (block) {
-                    //data-target="[data-rel='main-mobile-menu']"
-                    //console.log(document.documentElement.clientWidth);
-
-                    /*if (document.documentElement.clientWidth > 767) {
-                     return $('.top-menu .desktop-menu');
-                     } else {
-                     return $('.top-menu .mobile-menu'); //[data-rel="main-mobile-menu"]
-                     }*/
-
-                    return $('.top-menu .mobile-menu');
-                },
                 onOpen: function () {
                     //$('.logo').hide();
                     $('[data-offset="main-menu"]').addClass('active-menu');
@@ -195,24 +183,64 @@ $(document).ready(function () {
         (function(){
             $('[data-group-name="secondary-menu"]').blockToggler({
                 onOpen: function () {
-                    $('[data-offset="secondary-menu"]').animate({marginTop: '236px'}, "normal");
+                    $('[data-offset="secondary-menu"]').addClass('active-menu');
+
+                    //$('[data-offset="secondary-menu"]').animate({height: '316px'}, "normal");
                 },
-                onClose: function () {
-                    $('[data-offset="secondary-menu"]').animate({marginTop: '0px'}, "normal");
+                onAfterClose: function () {
+                    $('[data-offset="secondary-menu"]').removeClass('active-menu');
+
+                    /*var $offsetBlock = $('[data-offset="secondary-menu"]');
+                    $offsetBlock.animate({height: '-=316px'}, "normal", function () {
+                        $offsetBlock.css('height', '');
+                    });*/
                 }
             });
         })();
 
-
-
         /*Secondary mobile menu*/
         (function(){
-            $('#secondary-hamburger').blockToggler();
+            $('#secondary-hamburger').blockToggler({
+                animate: 'fade',
+                onOpen: function () {
+                    //$('.logo').hide();
+                    $('[data-offset="secondary-menu"]').addClass('active-menu');
+
+                },
+                onClose: function () {
+                    var $offsetBlock = $('[data-offset="secondary-menu"]');
+                    $('body').trigger('blockOpen', ['', 'secondary-mobile-menu']);
+                    $offsetBlock.animate({height: '130px'}, "normal", function () {
+                        $offsetBlock.css('height', '');
+                    });
+                },
+                onAfterClose: function () {
+                    //$('.logo').show();
+                    $('[data-offset="secondary-menu"]').removeClass('active-menu');
+                }
+            });
 
             $('[data-group-name="secondary-mobile-menu"]').blockToggler({
                 getTarget: function (block) {
                     return block.nextElementSibling;
+                },
+                onOpen: function () {
+                    if (document.documentElement.clientWidth < 1024 && document.documentElement.clientWidth > 767) {
+                        $('[data-offset="secondary-menu"]').animate({height: '480px'}, "normal");
+                    }
+                    //$('[data-offset="main-menu"]').animate({height: '480px'}, "normal");
+                },
+                onClose: function () {
+                    var $offsetBlock = $('[data-offset="secondary-menu"]');
+
+                    if (document.documentElement.clientWidth < 1024 && document.documentElement.clientWidth > 767) {
+                        $offsetBlock.animate({height: '130px'}, "normal", function () {
+                            $offsetBlock.css('height', '');
+                        });
+                    }
+                    //$('[data-offset="main-menu"]').animate({height: '130px'}, "normal");
                 }
+
             });
         })();
     })();

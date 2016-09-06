@@ -200,25 +200,28 @@ header {
   height: 40px;
   background: url("../img/logo_1.png") no-repeat center/cover; }
 
-.main-menu {
+.main-menu, .secondary-menu {
   float: right;
   font: 18px "SpaceMono-Bold";
   text-transform: uppercase; }
-  .main-menu li {
+  .main-menu li, .secondary-menu li {
     float: left;
     margin: 0 20px;
     line-height: 40px; }
-    .main-menu li:hover > a, .main-menu li.active > a {
+    .main-menu li:hover > a, .main-menu li.active > a, .secondary-menu li:hover > a, .secondary-menu li.active > a {
       color: #cc2051; }
-      .main-menu li:hover > a:after, .main-menu li.active > a:after {
+      .main-menu li:hover > a:after, .main-menu li.active > a:after, .secondary-menu li:hover > a:after, .secondary-menu li.active > a:after {
         border-top-color: #cc2051; }
-    .main-menu li a {
+    .main-menu li a, .secondary-menu li a {
       padding-right: 20px;
       letter-spacing: 3px; }
-    .main-menu li:last-child {
+    .main-menu li:last-child, .secondary-menu li:last-child {
       margin-right: 0; }
-      .main-menu li:last-child a {
+      .main-menu li:last-child a, .secondary-menu li:last-child a {
         padding-right: 0; }
+
+.secondary-menu .dropdown.active {
+  margin-bottom: 25px; }
 
 .dropdown a {
   position: relative; }
@@ -238,7 +241,6 @@ header {
   display: none;
   float: left;
   width: 100%;
-  margin-top: 25px;
   text-align: center;
   clear: both; }
   .submenu li {
@@ -295,6 +297,9 @@ header {
     background-color: #2a2826;
     position: static;
     height: inherit; }
+
+.inner-content .active-menu header {
+  background-color: #fff; }
 
 /* ----------------------------------------------
  Footer
@@ -395,6 +400,11 @@ footer {
   font: 15px "SpaceMono-Regular"; }
   .category li {
     position: relative;
+    -webkit-transition: margin-left 0.2s ease-in-out;
+    -moz-transition: margin-left 0.2s ease-in-out;
+    -o-transition: margin-left 0.2s ease-in-out;
+    transition: margin-left 0.2s ease-in-out;
+    margin-left: 0;
     margin-bottom: 10px;
     cursor: pointer; }
     .category li:after {
@@ -410,6 +420,11 @@ footer {
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
+  .category .slick-active {
+    margin-left: -20px;
+    color: #cc2051; }
+    .category .slick-active:after {
+      background-color: #cc2051 !important; }
 
 .inner-content h4 {
   margin-bottom: 25px; }
@@ -418,8 +433,12 @@ footer {
   line-height: 24px; }
 .inner-content .dropdown a::after {
   border-top-color: #000; }
+.inner-content header {
+  position: relative; }
 .inner-content .header-wrap {
   margin-bottom: 30px; }
+  .inner-content .header-wrap.active-menu {
+    height: auto; }
 .inner-content .submenu {
   color: #fff;
   background-color: #2a2826; }
@@ -445,14 +464,16 @@ footer {
     padding-left: 50px; }
   .grey-block .category {
     top: 220px;
-    right: -430px; }
+    right: -430px;
+    /*.slick-active {
+      margin-left: -20px;
+      color: $accent-color;
+      &:after {
+        background-color: $accent-color;
+      }
+    }*/ }
     .grey-block .category li:after {
       background-color: #000; }
-    .grey-block .category .slick-active {
-      margin-left: -20px;
-      color: #cc2051; }
-      .grey-block .category .slick-active:after {
-        background-color: #cc2051; }
 
 .column-block {
   min-height: 520px;
@@ -823,11 +844,11 @@ footer {
     width: 150px;
     height: 30px; }
 
-  .main-menu {
+  .main-menu, .secondary-menu {
     font-size: 13px; }
-    .main-menu li {
+    .main-menu li, .secondary-menu li {
       margin: 0 15px; }
-      .main-menu li a {
+      .main-menu li a, .secondary-menu li a {
         letter-spacing: 1px; }
 
   .content__block h2 {
@@ -1203,12 +1224,14 @@ footer {
   .active-menu .logo {
     display: none; }
 
-  .main-menu {
+  .main-menu, .secondary-menu {
     float: none; }
 
   .submenu {
     position: absolute;
-    top: 40px; }
+    top: 65px;
+    left: 0;
+    z-index: 5; }
     .submenu img {
       height: 100px; }
     .submenu li {
@@ -1299,9 +1322,9 @@ footer {
     padding-top: 0;
     margin: 0 -20px; }
 
-  .main-menu {
+  .main-menu, .secondary-menu {
     font-size: 25px; }
-    .main-menu > li {
+    .main-menu > li, .secondary-menu > li {
       width: 70%;
       line-height: 60px; }
 
