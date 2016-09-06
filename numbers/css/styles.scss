@@ -729,6 +729,15 @@ footer {
 
 
 /*Js classes*/
+.grid-slider, .pageheader-slider, .secondary-pageheader-slider, .photo-block-slider {
+  .slide + .slide {
+    display: none;
+  }
+  &.slick-initialized .slide {
+    display: block;
+  }
+}
+
 
 .grid-slider {
   .slick-prev, .slick-next {

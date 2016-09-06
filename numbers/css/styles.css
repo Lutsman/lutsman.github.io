@@ -572,6 +572,11 @@ footer {
   background: url("../img/icon_chat_big.png") no-repeat center/contain; }
 
 /*Js classes*/
+.grid-slider .slide + .slide, .pageheader-slider .slide + .slide, .secondary-pageheader-slider .slide + .slide, .photo-block-slider .slide + .slide {
+  display: none; }
+.grid-slider.slick-initialized .slide, .pageheader-slider.slick-initialized .slide, .secondary-pageheader-slider.slick-initialized .slide, .photo-block-slider.slick-initialized .slide {
+  display: block; }
+
 .grid-slider .slick-prev, .grid-slider .slick-next {
   right: -100px; }
   .grid-slider .slick-prev::before, .grid-slider .slick-next::before {
