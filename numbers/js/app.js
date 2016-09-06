@@ -278,7 +278,7 @@ $(document).ready(function () {
                     return name;
                 },
                 responsive: [{
-                    breakpoint: 480,
+                    breakpoint: 767,
                     settings: {
                         dots: false
                     }

@@ -383,18 +383,21 @@ footer {
 .pageheader-content {
   padding-left: 155px;
   font: 33px "HelveticaNeueCyr-Thin"; }
-  .pageheader-content > div {
-    float: left;
-    width: 860px;
-    margin-bottom: 170px; }
   .pageheader-content p {
-    padding: 35px 30px 0 350px;
+    width: 830px;
+    padding: 35px 0 0 350px;
+    margin: 0;
     line-height: 40px; }
+
+.pageheader-slider {
+  float: left;
+  width: 100%;
+  margin-bottom: 170px; }
 
 .category {
   position: absolute;
   bottom: 55px;
-  right: -800px;
+  right: 5px;
   width: 180px;
   padding-top: 40px;
   font: 15px "SpaceMono-Regular"; }
@@ -869,13 +872,14 @@ footer {
   .pageheader-content {
     padding-left: 90px;
     font-size: 27px; }
-    .pageheader-content > div {
-      width: 665px;
-      margin-bottom: 155px; }
     .pageheader-content p {
+      width: 665px;
       padding-top: 25px;
       padding-left: 273px;
       line-height: 33px; }
+
+  .pageheader-slider {
+    margin-bottom: 155px; }
 
   .icon-chat-big {
     width: 233px;
@@ -887,8 +891,7 @@ footer {
     margin-bottom: 115px; }
 
   .category {
-    right: -570px;
-    bottom: 30px; }
+    bottom: 0; }
     .category li::after {
       right: 5px; }
 
@@ -1018,19 +1021,19 @@ footer {
       padding-top: 50px;
       padding-left: 0; }
     .pageheader-content p {
+      width: 540px;
       padding-left: 210px;
       line-height: 26px; }
-    .pageheader-content > div {
-      width: 530px;
-      margin-bottom: 190px; }
+
+  .pageheader-slider {
+    margin-bottom: 190px; }
 
   .icon-chat-big {
     width: 165px;
     height: 123px; }
 
   .category {
-    right: -410px;
-    bottom: 0; }
+    bottom: -10px; }
 
   .grey-block {
     padding: 0;
@@ -1127,16 +1130,15 @@ footer {
       padding-bottom: 75px;
       margin-bottom: 65px; }
     .pageheader-content p {
-      padding-right: 150px;
+      width: 350px;
       padding-left: 5px;
       margin-top: 25px;
       line-height: 30px; }
-    .pageheader-content > div {
-      width: 70%;
-      margin-bottom: 155px; }
     .pageheader-content .category {
-      right: -220px;
       bottom: 20px; }
+
+  .pageheader-slider {
+    margin-bottom: 155px; }
 
   .icon-chat-big {
     float: none;
@@ -1282,13 +1284,12 @@ footer {
     padding: 0 0 38px;
     margin-bottom: 40px; }
   .pageheader-content p {
-    padding-right: 120px;
     margin-top: 10px; }
-  .pageheader-content > div {
-    width: 100%;
-    margin-bottom: 145px; }
   .pageheader-content .category {
     display: none; }
+
+  .pageheader-slider {
+    margin-bottom: 145px; }
 
   .grey-block > div {
     padding: 190px 20px 70px; }
@@ -1388,7 +1389,7 @@ footer {
   h5 {
     font-size: 30px; }
 
-  .pageheader-content > div {
+  .pageheader-content p {
     width: 100%; }
 
   .footer-menu .main-menu > li {
