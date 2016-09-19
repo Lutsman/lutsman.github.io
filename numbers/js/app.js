@@ -412,26 +412,53 @@ $(document).ready(function () {
 
         /*menu on resize hidding*/
         (function(){
-            $(window).on('resize', function () {
+            var closeMenus = closeOnResize();
+            
+            $(window).on('resize', closeMenus);
+
+            function closeOnResize() {
                 var $mainDesktopMenu = $('[data-group-name="main-menu"]');
                 var $secondaryDesktopMenu = $('[data-group-name="secondary-menu"]');
-                var  $mainMobileMenuHam = $('#main-hamburger');
-                var  $mainMobileMenu = $('[data-group-name="main-mobile-menu"]');
-                var  $secondaryMobileMenuHam = $('#secondary-hamburger');
-                var  $secondaryMobileMenu = $('[data-group-name="secondary-mobile-menu"]');
+                var desktopMenus = [$mainDesktopMenu, $secondaryDesktopMenu];
 
-                var wWidth = document.documentElement.clientWidth;
-                var desctopWidth = 1024;
-                if(wWidth < desctopWidth) {
-                    $mainDesktopMenu.trigger('closeGroup', [$mainDesktopMenu.attr('data-group-name')]);
-                    $secondaryDesktopMenu.trigger('closeGroup', [$secondaryDesktopMenu.attr('data-group-name')]);
-                } else {
-                    $mainMobileMenuHam.trigger('closeGroup', [$mainMobileMenuHam.attr('data-group-name')]);
-                    $mainMobileMenu.trigger('closeGroup', [$mainMobileMenu.attr('data-group-name')]);
-                    $secondaryMobileMenuHam.trigger('closeGroup', [$secondaryMobileMenuHam.attr('data-group-name')]);
-                    $secondaryMobileMenu.trigger('closeGroup', [$secondaryMobileMenu.attr('data-group-name')]);
+                var $mainMobileMenuHam = $('#main-hamburger');
+                var $mainMobileMenu = $('[data-group-name="main-mobile-menu"]');
+                var $secondaryMobileMenuHam = $('#secondary-hamburger');
+                var $secondaryMobileMenu = $('[data-group-name="secondary-mobile-menu"]');
+                var mobileMenus = [$mainMobileMenuHam, $mainMobileMenu, $secondaryMobileMenuHam, $secondaryMobileMenu];
+
+                var savedWidth = 0;
+                var desktopWidth = 1024;
+                var tabletWidth = 767;
+
+                return function () {
+                    var wWidth = document.documentElement.clientWidth;
+
+                    if (!savedWidth) {
+                        savedWidth = wWidth;
+                        return;
+                    }
+                    
+                    if(wWidth > desktopWidth && savedWidth < desktopWidth) {
+                        closeGroup(mobileMenus);
+                    } else if (wWidth < desktopWidth && savedWidth >= desktopWidth) {
+                        closeGroup(desktopMenus);
+                    } else if (wWidth < desktopWidth && wWidth >= tabletWidth && savedWidth < tabletWidth) {
+                        closeGroup(mobileMenus);
+                    } else if (wWidth < tabletWidth && savedWidth >= tabletWidth) {
+                        closeGroup(mobileMenus);
+                        closeGroup(desktopMenus);
+                    }
+
+                    savedWidth = wWidth;
                 }
-            });
+            }
+
+            function closeGroup(toggler) {
+                $.each(toggler, function () {
+                    $(this).trigger('closeGroup', [$(this).attr('data-group-name')]);
+                });
+            }
         })();
     })();
 
@@ -666,12 +693,13 @@ $(document).ready(function () {
     /*Animate touch event mobile*/
     (function(){
         var scroller=false,
-            button = $('#scrollUp');
+            button = $('#scrollUp'),
+            clickable;
 
         $(button).bind({
             touchstart: function(event){
                 var elem=$(this);
-                var clickable=setTimeout(function () { elem.addClass('active');}, 100);
+                clickable = setTimeout(function () { elem.addClass('active');}, 100);
             },
 
             touchmove: function(event){
