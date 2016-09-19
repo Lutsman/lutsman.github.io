@@ -61,12 +61,7 @@
     left: auto;
     right: -50px; }
   .slick-prev:before {
-    left: 15px;
-    -ms-transform: rotate(225deg);
-    -moz-transform: rotate(225deg);
-    -webkit-transform: rotate(225deg);
-    -o-transform: rotate(225deg);
-    transform: rotate(225deg); }
+    left: 15px; }
     [dir="rtl"] .slick-prev:before {
       content: "→"; }
 
@@ -76,12 +71,7 @@
     left: -50px;
     right: auto; }
   .slick-next:before {
-    right: 15px;
-    -ms-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg); }
+    right: 15px; }
     [dir="rtl"] .slick-next:before {
       content: "←"; }
 
