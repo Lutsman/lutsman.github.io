@@ -5,1151 +5,1446 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ethereum</title>
+    <meta name="keywords" content="">  <!--Ключевые слова-->
+    <meta name="description" content=""> <!--Описание-->
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Bytewerk</title>
+
+    <!--Start Open Graph
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">   Заголовок
+    <meta property="og:description" content=""> Краткое описание, которое выводится при формировании превью ссылки
+    <meta property="og:url" content="http://"> Ссылка на страницу сайта
+    <meta property="og:image" content="http://"> Ссылка на картинку, которая будет отображаться в посте
+    End Open Graph-->
+
+    <!--Favicon-->
+    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
 
     <!--For improved cross-browser rendering-->
     <link rel="stylesheet" href="css/normalize.css">
 
     <!--Plugins-->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
 
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="main-page">
 
-    <section class="pageheader">
-        <header>
-            <nav class="navbar top-menu">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand logo" href="#">
-                            <span class="logo-icon"></span>
-                            ethereum <span>classic</span>
-                        </a>
+    <div class="page-wrap">
+        <div class="header-wrap" data-offset="main-menu">
+            <header>
+                <div class="container">
+                    <a href="/" class="logo"></a>
+
+                    <div class="top-menu">
+                        <nav class="desktop-menu">
+                            <ul class="main-menu">
+                                <li class="dropdown" data-target="#technologies" data-group-name="main-menu"><a href="#">Technologies</a></li>
+                                <li class="dropdown" data-target="#services" data-group-name="main-menu"><a href="#">Services</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                            <ul id="technologies" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                    <span class="submenu-title">MESSAGING</span>
+                                    <span>
+                                        <a href="#"><span>VOIP</span></a>
+                                        <a href="#"><span>Cryptography</span></a>
+                                        <a href="#"><span>Group messaging</span></a>
+                                        <a href="#"><span>XMPP</span></a>
+                                    </span>
+                                </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul id="services" class="submenu">
+                                <li>
+                                    <a class="icon-pocket" href="#">
+                                        <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                        <span class="submenu-title">PAYMENTS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a class="icon-chat" href="#">
+                                        <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                        <span class="submenu-title">MESSAGING</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a class="icon-cubes" href="#">
+                                        <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                        <span class="submenu-title">BLOCKCHAIN</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a class="icon-phones" href="#">
+                                        <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                        <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                    </a>
+                                    <span class="menu-info">
+                                        <span class="submenu-title">MESSAGING</span>
+                                        <span>
+                                            <a href="#"><span>VOIP</span></a>
+                                            <a href="#"><span>Cryptography</span></a>
+                                            <a href="#"><span>Group messaging</span></a>
+                                            <a href="#"><span>XMPP</span></a>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="mobile-nav">
+                            <div id="main-hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-group-name="main-ham" data-target="[data-rel='main-mobile-menu']">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav class="mobile-menu" data-rel="main-mobile-menu">
+                            <ul class="main-menu">
+                                <li class="dropdown" data-group-name="main-mobile-menu">
+                                    <a href="#">Technologies</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <li class="dropdown" data-group-name="main-mobile-menu">
+                                    <a href="#">Services</a>
+                                </li>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="icon-pocket" href="#">
+                                            <img src="img/menu_icon_pocket.png" alt="PAYMENTS">
+                                            <span class="submenu-title">PAYMENTS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-chat" href="#">
+                                            <img src="img/menu_icon_chat.png" alt="MESSAGING">
+                                            <span class="submenu-title">MESSAGING</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-cubes" href="#">
+                                            <img src="img/menu_icon_cubes.png" alt="BLOCKCHAIN">
+                                            <span class="submenu-title">BLOCKCHAIN</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="icon-phones" href="#">
+                                            <img src="img/menu_icon_phones.png" alt="EMBEDDED SYSTEMS">
+                                            <span class="submenu-title">EMBEDDED SYSTEMS</span>
+                                        </a>
+                                        <span class="menu-info">
+                                            <span class="submenu-title">MESSAGING</span>
+                                            <span>
+                                                <a href="#"><span>VOIP</span></a>
+                                                <a href="#"><span>Cryptography</span></a>
+                                                <a href="#"><span>Group messaging</span></a>
+                                                <a href="#"><span>XMPP</span></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </nav>
                     </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <p class="navbar-text slogan">Classic Blockchain Since 2016!</p>
-
-                        <button type="button" class="btn navbar-btn login-btn">Member Login</button>
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Explorer</a></li>
-                            <li><a href="#">Marketplace</a></li>
-                            <li><a href="#">Proposals</a></li>
-                            <li><a href="#community">Community</a></li>
-                            <li><a href="#metrics">Metrics</a></li>
-                            <li><a href="#developers">Developers</a></li>
-                            <li><a href="#">Statistics</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
-        </header>
-
-        <div class="pageheader__content">
-            <div class="container-fluid">
-                <div class="company-icon"></div>
-                <p class="company-name">ethereum <br>
-                    <span>classic</span>
-                </p>
-                <h1>Keep the original censorship-resistant <br>
-                    Ethereum going!</h1>
-                <div class="pageheader__btn">
-                    <button type="button" class="btn create-wallet-btn">Create Wallet </button>
-                    <button type="button" class="btn start-using-btn">Start Using</button>
-                </div>
-
-            </div><!-- /.container-fluid -->
+                </div><!--container-->
+            </header>
         </div>
 
-        <div class="pageheader__footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
-                        <div class="status">
-                            <span>Status</span>
-                            <span>Register</span>
+        <section class="content">
+            <div class="container">
+                <div class="grid-slider-index"></div>
+                <div class="grid-slider">
+                    <div class="slide content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-7 pageheader__right">
-                        <button type="button" class="btn roadmap-btn"><span></span>Roadmap</button>
-                    </div>
-                    <div class="col-lg-8 col-md-6 pageheader__scroll">
-                        <span>Classic Blockchain Since 2016</span>
-                        <a class="mouse-scroll" href="#about"></a>
-                        <span>Use mouse for watch more</span>
-                    </div>
+                    <div class="slide content__block">
+                        <h2>Scientific approach</h2>
 
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="slide content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide content__block">
+                        <h2>Scientific approach</h2>
+
+                        <div class="grid">
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-right">y</div>
+                                <div class="accent dot-bottom">s</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div>c</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div class="accent dot-bottom">t</div>
+                                <div>s</div>
+                                <div>l</div>
+                                <div>n</div>
+                                <div>u</div>
+                                <div>i</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div class="accent dot-bottom">e</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>d</div>
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>6</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div class="accent dot-none">m</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div class="accent dot-right">s</div>
+                                <div class="accent dot-bottom">m</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div>c</div>
+                                <div>4</div>
+                                <div>l</div>
+                                <div>a</div>
+                                <div>s</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>q</div>
+                                <div>e</div>
+                                <div>w</div>
+                                <div>2</div>
+                                <div>y</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div class="accent dot-right">a</div>
+                                <div class="accent dot-bottom">r</div>
+                                <div>o</div>
+                                <div>a</div>
+                                <div>d</div>
+                                <div>s</div>
+                                <div>f</div>
+                                <div>h</div>
+                                <div>g</div>
+                                <div>j</div>
+                                <div>7</div>
+                                <div>k</div>
+                                <div>l</div>
+                                <div>r</div>
+                                <div>y</div>
+                                <div>3</div>
+                                <div>d</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>b</div>
+                                <div>g</div>
+                                <div>s</div>
+                                <div>2</div>
+                                <div>4</div>
+                                <div>n</div>
+                                <div>l</div>
+                                <div>1</div>
+                                <div class="accent dot-none">t</div>
+                                <div>q</div>
+                                <div>x</div>
+                                <div>t</div>
+                                <div>n</div>
+                                <div>m</div>
+                                <div>7</div>
+                                <div>s</div>
+                                <div class="accent dot-right">c</div>
+                                <div class="accent dot-right">r</div>
+                                <div class="accent dot-right">e</div>
+                                <div class="accent dot-bottom">a</div>
+                                <div>e</div>
+                                <div>4</div>
+                                <div>w</div>
+                                <div>e</div>
+                            </div>
+
+                            <div class="grid-line">
+                                <div>g</div>
+                                <div>w</div>
+                                <div>u</div>
+                                <div>8</div>
+                                <div>d</div>
+                                <div>m</div>
+                                <div>z</div>
+                                <div>x</div>
+                                <div>r</div>
+                                <div>u</div>
+                                <div>1</div>
+                                <div>o</div>
+                                <div>h</div>
+                                <div>j</div>
+                                <div>d</div>
+                                <div>7</div>
+                                <div>y</div>
+                                <div>k</div>
+                                <div>v</div>
+                                <div class="accent dot-right">t</div>
+                                <div class="accent dot-right">i</div>
+                                <div class="accent dot-right">v</div>
+                                <div class="accent dot-none">e</div>
+                                <div>s</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </div><!-- /.container-fluid -->
-        </div>
+            </div><!--container-->
+        </section>
 
+    </div>
 
-    </section><!--pageheader-->
-
-    <section id="about" class="about">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>What is Ethereum <span>Classic</span>?</h2>
-                </div>
-            </div>
-
-            <div class="about__content">
-                <div class="row">
-                    <div class="col-sm-4 col-lg-2 about__block">
-                        <p class="data about__icon1">January 3, 2009</p>
-                        <div>
-                            <p>Satoshi Nakamoto created</p>
-                            <p><span>Bitcoin</span></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-2 about__block">
-                        <p class="data about__icon2">July 30, 2015</p>
-                        <div>
-                            <p>Vitalik Buterin created</p>
-                            <p><span>Ethereum</span></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-2 about__block">
-                        <p class="data about__icon3">July 20th, 2016</p>
-                        <div>
-                            <p>theDAO</p>
-                            <p><span>has been created</span></p>
-                            <p><span class="dao__number">11,950,000 Eth</span></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-2 about__block">
-                        <p class="data about__icon4">June 17, 2016</p>
-                        <div class="hack">
-                            <p><span>$50 Million Hack</span></p>
-                            <p class="small">theDAO was hacked <br>
-                                3.6 mil of ETH was stolen</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-2 about__block">
-                        <p class="data about__icon5">July 20th, 2016</p>
-                        <div class="accent">
-                            <p><span>Hard  Fork</span></p>
-                            <p>Completed</p>
-                            <div class="percentage">
-                                <p><span>22%</span></p>
-                                <p class="small">of Ethereum miners voted against the previous 'DAO softfork' and would
-                                    logically oppose hardfork as well</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-2 about__block">
-                        <p class="data no-icon">July 24th, 2009</p>
-                        <div>
-                            <div class="original accent about__icon6">
-                                <div>
-                                    <p><span>Ethereum</span></p>
-                                    <p>Classic</p>
-                                    <p class="small">theDAO was hacked
-                                        3.6 mil of ETH was stolen</p>
-                                </div>
-                            </div>
-                            <div class="classic about__icon7">
-                                <div>
-                                    <p><span>FORKED Ethereum</span></p>
-                                    <p>Go to WEBSITE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-3">
-                   <div class="ideology">
-                       <h3>Ideology</h3>
-                       <p>
-                        <span>We believe in decentralized, censorship-resistant, permissionless blockchains. We believe in the
-                        original vision of Ethereum as a world computer you can't shut down, running irreversible smart
-                        contracts.</span>
-                       </p>
-                       <p>We believe in a strong separation of concerns, where system forks are only possible in order to
-                           correct actual platform bugs, not to bail out failed contracts and special interests.</p>
-                   </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="motivation">
-                        <h3>Motivation</h3>
-                        <p>
-                        <span>Ethereum Foundation responded to DAO debacle in the worst way possible. Special interests
-                        controlling the Foundation are ramming through DAO bailout hardfork against principled
-                        opposition of a significant economic minority of Ethereum stakeholders. According to
-                        (diligently hidden, pro-fork) coin vote on Carbonvote, 13% of ETH holders oppose this hardfork.
-                        Also, about 22% of Ethereum miners voted against the previous 'DAO softfork' and would logically
-                        oppose hardfork as well. Such a significant minority of stakeholders should not be silenced or
-                        intimidated into submission - they should be given a clear choice.</span>
-                        </p>
-                        <p>
-                        <span>If we want to continue to move forward and guarantee survival of the original Ethereum vision,
-                        we must fork Ethereum. This will lay the foundation to build secure decentralized applications
-                        that are actually censorship resistant.</span>
-                        </p>
-                        <p>
-                            <a class="link-git" href="#"><span>Read more on Github</span></a> <br>
-                            <a href="#"><span>Free World Computer project</span></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-3">
-                    <div class="replay-block">
-                        <div class="replay">
-                            <p><span>How Safely Split your Ether to Avoid Replay Attack</span></p>
-                            <div class="replay-icon"></div>
-                            <button type="button" class="btn splitter-contract-btn">Use the splitter contract</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--about-->
-
-    <section class="features">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Features</h2>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="features__block">
-                                <p class="features__title ft-1">Build unstoppable applications</p>
-                                <div class="icon features__icon1"></div>
-                                <div class="features__text">
-                                    <p>We need your support to ensure original
-                                        Ethereum will be kept alive.</p>
-                                    <p>We need more developers, website designers, people who can write and advocate the
-                                        need for Ethereum Classic.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="features__block">
-                                <p class="features__title ft-2">Crowdfunding a Project</p>
-                                <div class="icon features__icon2"></div>
-                                <div class="features__text">
-                                    <p>We will maintain non-fork versions
-                                        of all major Ethereum clients (as well as other key software), so going
-                                        forwards all the improvements will be available to you.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="features__block">
-                                <p class="features__title ft-3">Easy & smart wallet for all</p>
-                                <div class="icon features__icon3"></div>
-                                <div class="features__text">
-                                    <p>We fork Ethereum and maintain upstream patches similar to the relation
-                                        between Redhat and CentOS, until a community can form around the project
-                                        and create a road map. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="features__block">
-                                <p class="features__title ft-4">Create Proposals and Voting</p>
-                                <div class="icon features__icon4"></div>
-                                <div class="features__text">
-                                    <p>Miners supporting the original chain should just keep mining with current
-                                        version of software for now, without upgrading to client version introducing
-                                        the hardfork code.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--features-->
-
-    <!--<section class="projects">
-        <div class="container-fluid">
-            <div class="section__content">
-               <div class="incontainer">
-                   <div class="projects__header">
-                       <h2>Projects</h2>
-                       <ul class="nav nav-pills projects__menu">
-                           <li data-sort-by="all"><a href="#">Show all</a></li>
-                           <li data-sort-by="projects"><a href="#">Projects</a></li>
-                           <li data-sort-by="wallets"><a href="#">Wallets</a></li>
-                           <li data-sort-by="service"><a href="#">Service</a></li>
-                           <li data-sort-by="mining"><a href="#">Mining</a></li>
-                           <li data-sort-by="trade" class="active"><a href="#">Trade</a></li>
-                       </ul>
-                   </div>
-
-                   <div data-role="sorting-wrapper-projects" class="clearfix">
-                       <div data-sortable-by="projects" class="projects__block">
-                           <p><span>etcstats.net</span></p>
-                           <p>Ethereum Classic Network Status</p>
-                           <div class="links">
-                               <a class="live-link" href="#">Live</a>
-                               <a href="#" class="github"></a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="projects" class="projects__block">
-                           <p><span>etcminer</span></p>
-                           <p>Ethereum Classic Miner</p>
-                           <div class="links">
-                               <a href="#">Demo</a>
-                               <a href="#" class="github"></a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="projects" class="projects__block">
-                           <p><span>etcwallet</span></p>
-                           <p>Ethereum Classic Wallet</p>
-                           <div class="links">
-                               <a href="#">Concept</a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="wallets" class="projects__block">
-                           <p><span>etcexchange</span></p>
-                           <p>Ethereum Classic Exchange</p>
-                           <div class="links">
-                               <a href="#">Concept</a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="wallets" class="projects__block">
-                           <p><span>etcbook</span></p>
-                           <p>Ethereum Classic Tools</p>
-                           <div class="links">
-                               <a href="#">Concept</a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="service" class="projects__block">
-                           <p><span>etcstats.net</span></p>
-                           <p>Ethereum Classic Network Status</p>
-                           <div class="links">
-                               <a class="live-link" href="#">Live</a>
-                               <a href="#" class="github"></a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="service" class="projects__block">
-                           <p><span>etcminer</span></p>
-                           <p>Ethereum Classic Miner</p>
-                           <div class="links">
-                               <a href="#">Demo</a>
-                               <a href="#" class="github"></a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="mining" class="projects__block">
-                           <p><span>etcwallet</span></p>
-                           <p>Ethereum Classic Wallet</p>
-                           <div class="links">
-                               <a href="#">Concept</a>
-                           </div>
-                       </div>
-                       <div data-sortable-by="trade" class="projects__block">
-                           <p><span>etcexchange</span></p>
-                           <p>Ethereum Classic Exchange</p>
-                           <div class="links">
-                               <a href="#">Concept</a>
-                           </div>
-                       </div>
-
-                   </div>
-
-                   <button type="button" class="btn add-project"><span>+</span>Add Project</button>
-               </div>
-            </div>
-
-        </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
-    </section>--><!--projects-->
-
-    <section class="roadmap">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Roadmap</h2>
-
-                    <div class="roadmap__block">
-                        <p><span>We need your support to ensure original Ethereum will be kept alive.</span></p>
-                        <p>We need more developers, website designers, people who can write and advocate the need for
-                            Ethereum Classic.</p>
-                        <a href="#">Download RoadMap</a>
-                        <div class="roadmap__img"></div>
-                    </div>
-
-                    <div class="row roadmap__table">
-                        <div class="col-sm-4 roadmap__table-block">
-                            <div>
-                                <p class="year">2016</p>
-                            </div>
-                            <div>
-                                <h3>Technology</h3>
-                            </div>
-                            <div>
-                                <ol>
-                                    <li><span>Core ETC dev team being established</span></li>
-                                    <li><span>Multiple clients ported</span></li>
-                                    <li><span>Execute removal of difficulty bomb</span></li>
-                                    <li><span>Fixing transaction replay issue</span></li>
-                                    <li><span>Deploying independently operated blockchain nodes</span></li>
-                                    <li><span>Gain developer and R&D  support from 3rd party companies</span></li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 roadmap__table-block">
-                            <div>
-                                <p class="year">2017</p>
-                            </div>
-                            <div></div>
-                            <div>
-                                <ul>
-                                    <li><span>Align with Core ETH dev team to design, dev and test standard protocol
-                                        updates</span></li>
-                                    <li><span>Research/test PoW/PoS mechanisms</span></li>
-                                    <li><span>Research/test appropriate maximally efficient monetary policy for chosen
-                                        consensus mechanism</span></li>
-                                    <li><span>ssess path to state Sharding
-                                        Assess improvements to VM and possible introduction of verified compiler</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 roadmap__table-block no-border">
-                            <div>
-                                <p class="year">2018</p>
-                            </div>
-                            <div></div>
-                            <div>
-                                <ul>
-                                    <li><span>Execute PoW, PoS or Hybrid consensus mechanism</span></li>
-                                    <li><span>Execute appropriate monetary policy</span></li>
-                                    <li><span>Test/implement state Sharding if deemed fit for implementation</span></li>
-                                    <li><span>Research/test VM improvements if deemed fit for implementation</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row roadmap__table">
-                        <div class="col-sm-4 roadmap__table-block">
-                            <div>
-                                <h3>Community</h3>
-                            </div>
-                            <div>
-                                <ol class="upper-alpha">
-                                    <li><span>Establishing communication channels for software and community development (Slack, Trello, Reddit)</span></li>
-                                    <li><span>Setup and schedule global meetups to begin deployment of decentralised  community network</span></li>
-                                    <li><span>Define framework for Dapp developers</span></li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 roadmap__table-block">
-                            <div></div>
-                            <div>
-                                <ul>
-                                    <li><span>Further outreach to miners</span></li>
-                                    <li><span>More meetups and conferences</span></li>
-                                    <li><span>Setup of overall Dev conference</span></li>
-                                    <li><span>Deployment of structured Dapp development ecosystem and support framework e.g. hackathons and 3rd party funding channels</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 roadmap__table-block no-border">
-                            <div></div>
-                            <div>
-                                <p>TBD</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row roadmap__table no-border">
-                        <div class="col-sm-4 roadmap__table-block">
-                            <div>
-                                <h3>Administration</h3>
-                            </div>
-                            <div>
-                                <ol>
-                                    <li><span>Defining core social contract</span></li>
-                                    <li><span>Defining  community-driven roadmap</span></li>
-                                    <li><span>Define  governance models</span></li>
-                                    <li><span>Deploying funding mechanisms for key infrastructure (build/testing servers, ETC-testnet, web hosting)</span></li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 roadmap__table-block">
-                            <div></div>
-                            <div>
-                                <p>TBD</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 roadmap__table-block no-border">
-                            <div></div>
-                            <div>
-                                <p>TBD</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--roadmap-->
-
-    <section id="community" class="community">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <div class="community__header clearfix">
-                        <h2>Community</h2>
-                        <div class="community__links">
-                            <div>
-                                <span class="slack-chanel-icon"></span>
-                                <a href="#"><span>Slack</span> <br> General Channel</a>
-                            </div>
-                            <div>
-                                <span class="gitter-chanel-icon"></span>
-                                <a href="#"><span>Gitter</span> <br> Developers Channel</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="community__left clearfix">
-                                <p>News Feed</p>
-                                <div class="news-block">
-                                    <p>Etherium: <br>
-                                        The Battle Of The Chains</p>
-                                    <p>Forbes
-                                        <span class="news-date">JUL 28, 2016 @ 01:43 PM</span>
-                                    </p>
-                                </div>
-                                <div class="news-list">
-                                    <p>Today:</p>
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="news-icon new1"></span>
-                                            <span>ETC Now Live on Bitwala, Ledger Support Coming Soon</span>
-                                            <br>
-                                            <span><a class="category-link" href="#">fintechist</a>
-                                                <span class="news-date">JUL 28, 2016 @ 01:43 PM</span>
-                                            </span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="news-icon new2"></span>
-                                            <span>ETC Now Live on Bitwala, Ledger Support Coming Soon</span>
-                                            <br>
-                                            <span><a class="category-link" href="#">eomfint</a>
-                                                <span class="news-date">JUL 28, 2016 @ 01:43 PM</span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-8">
-                           <div class="community__right">
-                               <h3>Topic discussion</h3>
-                               <ul>
-                                   <li>Advertising spam is not allowed <span>by <a href="#">Username</a></span></li>
-                                   <li>Unofficial list of (official) rules, guidelines, FAQ <span>by <a href="#">Username</a></span></li>
-                                   <li>Giveaway threads are not allowed <span>by <a href="#">Username</a></span></li>
-                                   <li>ICO CLOSED | WITHDRAWAL ENABLED | MAINNET LIVE | TRADING <span>by <a href="#">Username</a></span></li>
-                                   <li>[X11][Mining][NO ICO] <span>by <a href="#">Username</a></span></li>
-                                   <li>The currency of TheAltcoin <span>by <a href="#">Username</a></span></li>
-                                   <li>Instant Masternodes Swap <span>by <a href="#">Username</a></span></li>
-                               </ul>
-                               <a href="#">Read more</a>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--community-->
-
-    <section class="miners">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Miners</h2>
-                    <ul class="miners__list clearfix">
-                        <li>
-                            <span>
-                                <span class="icon miners1"></span>
-                                <span class="list-text blue">
-                                    <span class="small">best block</span>
-                                    <br>
-                                    <span class="miners-number">#1,971,808</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li class="blue">
-                            <span>
-                                <span class="icon miners2"></span>
-                                <span class="list-text blue">
-                                    <span class="small">uncles <span class="dark">(current/last 50)</span></span>
-                                    <br>
-                                    <span class="miners-number">0/8</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <span class="icon miners3"></span>
-                               <span class="list-text orange">
-                                    <span class="small">last block</span>
-                                   <br>
-                                    <span class="miners-number">26s ago</span>
-                               </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <span class="icon miners4"></span>
-                                <span class="list-text yellow">
-                                    <span class="small">avg block time</span>
-                                    <br>
-                                    <span class="miners-number">13.30s</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <span class="icon miners5"></span>
-                               <span class="list-text orange">
-                                   <span class="small">avg network hashrate</span>
-                                   <br>
-                                    <span class="miners-number">517.6GH/s</span>
-                               </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <span class="icon miners6"></span>
-                                <span class="list-text red">
-                                    <span class="small">difficulty</span>
-                                    <br>
-                                    <span class="miners-number">7.15TH</span>
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                    <div class="row">
-                        <div class="col-lg-7 col-md-8">
-                            <div class="miners__right">
-                                <p><span>Miners supporting the original chain should just keep mining with current version of
-                                    software for now, without upgrading to client version introducing the hardfork code. It will be
-                                    always possible to download and build latest non-fork version from http://github.com/ethereumclassic.</span></p>
-                                <p>The difficulty bump after the fork was huge, but overall the separation of the networks went
-                                    smoothly. Our miners stood strong and prevailed against long odds. We are past the initial
-                                    difficulty bump, nethash is about 30GH, making Ethereum Classic one of the most secure
-                                    blockchains (for comparison, original Ethereum started with just 16GH last August). </p>
-                                <p>Time between blocks is back to normal, network stable and ready for business. Mining is becoming
-                                    sustainable, even solo miners have a chance to make a classic block or two. It is now possible
-                                    to obtain decent mining rewards in classic ethers from mining. Join in on the fun!</p>
-                                <h3>Additional info on <a href="#">solo mining</a> and <a href="#">more mining</a> tips.</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-4">
-                            <div class="miners-left">
-                                <h3>We have mining pools
-                                    supporting Ethereum Classic:</h3>
-                                <ul>
-                                    <li>ethc.epool.io (support thread)</li>
-                                    <li>pool.ethereumclassic.com</li>
-                                    <li>etc.nanopool.org</li>
-                                    <li>etcpool.io</li>
-                                    <li>etc.suprnova.cc</li>
-                                    <li>minergate.com</li>
-                                    <li>ethclassic.tk</li>
-                                    <li>etc.altpool.net</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--miners-->
-
-    <!--<section class="voting">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Voting</h2>
-
-                    <div class="voting__content">
-                        <div class="voting__top-list clearfix">
-                            <p class="voting__name">proposal name</p>
-                            <p>quotes</p>
-                            <p>action</p>
-                            <p>review</p>
-                            <p>amount</p>
-                            <p>end date</p>
-                        </div>
-                        <div class="voting__list  clearfix">
-                            <input type="checkbox" id="voting-check1"><label for="voting-check1"></label>
-                            <p class="voting__name">Project name
-                                <span>Lorem Ipsum is simply dummy text of the printing and ty...</span>
-                            </p>
-                            <p class="voting-graph-icon"></p>
-                            <button type="button" class="btn voting-btn-1">vote</button>
-                            <p>3,421 <span>83% Positive</span></p>
-                            <p>482,424 <span class="small">etc</span> <span>4 days left</span></p>
-                            <p>12/23/2016 <span>4 days left</span></p>
-                        </div>
-                        <div class="voting__list  clearfix">
-                            <input type="checkbox" id="voting-check2"><label for="voting-check2"></label>
-                            <p class="voting__name2">Project name</p>
-
-                            <p>3,421 <span>83% Positive</span></p>
-                            <p>482,424 <span class="small">etc</span> <span>4 days left</span></p>
-                            <p>12/23/2016 <span>4 days left</span></p>
-                        </div>
-                        <div class="voting__graph-block  clearfix">
-                            <h3>Lorem Ipsum is simply dummy text  of the printing and ty?
-                                <button type="button" class="btn voting-btn-2">Show Full text</button>
-                            </h3>
-                            <div class="voting__graph-img"></div>
-                            <div class="voting__graph-bottom">
-                                <p>3,421 <span>83% Negative</span></p>
-                                <button type="button" class="btn voting-btn-3">vote-yes</button>
-                                <p><span>17% Positive</span> 1,024</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
-    </section>--><!--voting-->
-
-    <section id="metrics" class="metrics">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Metrics</h2>
-                    <div class="metrics__content">
-                        <div class="metrics__top-list clearfix">
-                            <div class="cell-1">
-                                <!-- <p>Show</p>
-								 <ul class="nav nav-pills">
-									 <li role="presentation" class="active"><a class="metrics-pill" href="#usd-panel" aria-controls="usd-panel" role="tab" data-toggle="tab">Usd</a></li>
-									 <li role="presentation"><a class="metrics-pill" href="#btc-panel" aria-controls="btc-panel" role="tab" data-toggle="tab">Btc</a></li>
-								 </ul>-->
-                            </div>
-                            <p class="cell-2">market cap</p>
-                            <p class="cell-3">price</p>
-                            <p class="cell-4">24H vwap</p>
-                            <p class="cell-5">avaliable supply</p>
-                            <p class="cell-6">24h volume</p>
-                            <p class="cell-7">%24</p>
-                        </div>
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="usd-panel">
-                                <div class="metrics__list clearfix">
-                                    <p class="green cell-1">etc/usd</p>
-                                    <p class="cell-2">$141 004 055</p>
-                                    <p class="cell-3">$1.71334653</p>
-                                    <p class="cell-4">$1.7524</p>
-                                    <p class="cell-5">82 297 453</p>
-                                    <p class="cell-6">$40 844 900</p>
-                                    <p class="cell-7">11.54%</p>
-                                </div>
-                                <div class="metrics__list clearfix">
-                                    <p class="grey cell-1">eth/usd</p>
-                                    <p class="cell-2">$1 046 644 628</p>
-                                    <p class="cell-3">$12.69277501</p>
-                                    <p class="cell-4">$12.7865</p>
-                                    <p class="cell-5">82 459 874</p>
-                                    <p class="cell-6">$17 293 800</p>
-                                    <p class="grey cell-7">0.10%</p>
-                                </div>
-                                <div class="metrics__graph-block">
-                                    <div class="metrics__legend clearfix">
-                                        <p><span class="metrics-price-icon"></span> market price</p>
-                                        <p><span class="metrics-volume-icon"></span> trade volume</p>
-                                    </div>
-
-                                    <div class="metrics__graph">
-                                        <div class="chart2"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="btc-panel">
-                                <div class="metrics__list clearfix">
-                                    <p class="green cell-1">etc/usd</p>
-                                    <p class="cell-2">$141 004 111</p>
-                                    <p class="cell-3">$1.555555</p>
-                                    <p class="cell-4">$1.66666</p>
-                                    <p class="cell-5">33333333</p>
-                                    <p class="cell-6">$40 844 900</p>
-                                    <p class="cell-7">11.54%</p>
-                                </div>
-                                <div class="metrics__list clearfix">
-                                    <p class="grey cell-1">eth/usd</p>
-                                    <p class="cell-2">$1 111 111 628</p>
-                                    <p class="cell-3">$12.69277501</p>
-                                    <p class="cell-4">$12.7865</p>
-                                    <p class="cell-5">82 459 874</p>
-                                    <p class="cell-6">$17 293 800</p>
-                                    <p class="grey cell-7">0.10%</p>
-                                </div>
-                                <div class="metrics__graph-block">
-                                    <div class="metrics__legend clearfix">
-                                        <p><span class="metrics-price-icon"></span> market price</p>
-                                        <p><span class="metrics-volume-icon"></span> trade volume</p>
-                                    </div>
-                                    <div class="metrics__graph">
-                                        <div class="chart2"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section><!--metrics-->
-
-    <section id="developers" class="developers">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Developers</h2>
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="developers__left">
-                                <p>We fork Ethereum and maintain upstream patches similar to the relation between
-                                    Redhat and CentOS, until a community can form around the project and create a
-                                    road map. </p>
-                                <p class="small">Until this happens we can fork multiple existing clients to help
-                                    prevent a monoculture of clients. </p>
-                                <p class="small">We plan to follow https://github.com/ethereum development except
-                                    for any features they introduce into existing clients that violate the key
-                                    principles of openness, neutrality and immutability.</p>
-                                <div class="developers-links">
-                                    <p>GitHub<br>
-                                        <a href="#">github.com/ethereumclassic</a>
-                                    </p>
-                                    <p>Telegram<br>
-                                        <a href="#">@etcdev</a>
-                                    </p>
-                                    <p>IRC<br>
-                                        <a href="#">#etc-dev @ reticulum.oftc.net</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="developers__right">
-                                <p>We fork Ethereum and maintain upstream patches similar to the relation  between
-                                    Redhat and CentOS, until a community can form around the project and create a
-                                    road map. Until this happens we can fork multiple existing  clients to help
-                                    prevent a monoculture of clients. </p>
-                                <p class="small">We plan to follow ethereum development except for any features they
-                                    introduce into existing clients that violate the key principles of openness,
-                                    neutrality and immutability.</p>
-                                <div class="developers__learn clearfix">
-                                    <h3>Learn how to build <br> <span>with the Ethereum Classic</span></h3>
-
-                                    <div class="developers__video">
-                                        <video controls="" poster="img/video_bg_1.jpg">
-                                            <!--<source src="" type="video/webm">
-                                            <source src="" type="video/mp4">-->
-                                        </video>
-                                        <p>Ethereum ÐΞVcon-0: Solidity, <br> Vision and Roadmap</p>
-                                    </div>
-                                    <div class="developers__video">
-                                        <video controls="" poster="img/video_bg_2.jpg">
-                                            <!--<source src="" type="video/webm">
-                                            <source src="" type="video/mp4">-->
-                                        </video>
-                                        <p>Ethereum's Two Ethereums <br> Explained</p>
-                                    </div>
-                                </div>
-                                <p><a href="#">Read more</a></p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--developers-->
-
-    <section class="traders">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Traders</h2>
-
-                    <div class="row">
-                        <div class="col-lg-7 col-md-8">
-                            <div class="traders__left">
-                                <p>Most important question for traders is 'will ETC have market price'? There are
-                                    all reasons to believe that it will.</p>
-                                <p>Essentially, ETC is an Ethereum 'spinoff coin' with a wide user base of all
-                                    current ETH users. Some of them will see the value of transacting on a
-                                    censorship-resistant chain, some won't.</p>
-                                <p>This creates interesting arbitrage opportunities for smart traders. Additional
-                                    reasoning why ETC is very unlikely to be 'worthless'.</p>
-                                <p>All the major exchanges announced that they will assign their users both ETH and
-                                    ETC after the fork. This is a step in the right direction, now it's up to these
-                                    major exchanges to enable ETH/ETC trading that will no doubt be demanded by
-                                    users. </p>
-                                <p>Decentralized exchange Bitsquare started ETC trading right after the fork. Other
-                                    trading venues will follow since there is a strong business case. We are in
-                                    touch with several other exchanges to add ETC trading to their platforms. If
-                                    your exchange is interested in ETC trading, please contact us.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-md-4">
-                            <div class="traders__right">
-                                <p>We have mining pools
-                                    supporting Ethereum Classic:</p>
-                                <ul>
-                                    <li>bitsquare.io</li>
-                                    <li>Kraken ETC/ETH, ETC/EUR, ETC/USD,  ETC/XBT</li>
-                                    <li>Poloniex ETC/BTC</li>
-                                    <li>BitMex futures contract ETC</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--traders-->
-
-    <section class="support">
-        <div class="container-fluid">
-            <div class="section__content">
-                <div class="incontainer">
-                    <h2>Support</h2>
-                    <p><span>You can buy our awesome t-shirts to speed up development of our site which will help bring
-                        ETC community altogether. We have lots of plans and ideas how to create website which will help
-                        us and ETC to develop rapidly. United we strong.</span></p>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="support__block">
-                                <img src="img/shirt_1.png" alt="shirt 1">
-                                <p>100 Avaliable</p>
-                                <h5>Limited Edition</h5>
-                                <p class="price">100$</p>
-                                <button type="button" class="btn get-goods"><span>+</span> Get T-Shirt</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="support__block">
-                                <img src="img/shirt_2.png" alt="shirt 2">
-                                <p>100 Avaliable</p>
-                                <h5>T Shirt name</h5>
-                                <p class="price">50$</p>
-                                <button type="button" class="btn get-goods"><span>+</span> Get T-Shirt</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="support__block">
-                                <img src="img/shirt_3.png" alt="shirt 3">
-                                <p>100 Avaliable</p>
-                                <h5>T Shirt name</h5>
-                                <p class="price">30$</p>
-                                <button type="button" class="btn get-goods"><span>+</span> Get T-Shirt</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="support__description">
-                            <p>Donators and buyers of our t-shirts will receive additional perks and a forum badge,
-                                which indicates their help and dedication to our community — everyone would see
-                                that you support the development of ETC network. </p>
-                            <p><span>People will obtain badges with different design, which depends on the amount of
-                                donations and purchased merchandise. The more you donate — the more perks and fancier badges you get.</span></p>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="support__left">
-                                <h3>DONATIONS</h3>
-                                <div>
-                                    <ul class="nav nav-pills projects__menu">
-                                        <li role="presentation" class="active"><a href="#donate-last" aria-controls="donate-last" role="tab" data-toggle="tab">Last DONATIONS</a></li>
-                                        <li role="presentation"><a href="#donate-top" aria-controls="donate-top" role="tab" data-toggle="tab">Top DONATIONS</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="donate-last">
-                                            <div class="support__table">
-                                                <div class="support__list clearfix">
-                                                    <div class="cell-1">1</div>
-                                                    <div class="cell-2">
-                                                        Username
-                                                        <p class="price">14 000$</p>
-                                                    </div>
-                                                    <div class="cell-3">Essentially, ETC is an Ethereum 'spinoff coin' with a wide
-                                                        user base of all current ETH users.</div>
-                                                </div>
-
-                                                <div class="support__list clearfix">
-                                                    <div class="cell-1">2</div>
-                                                    <div class="cell-2">
-                                                        Username
-                                                        <p class="price">1 000$</p>
-                                                    </div>
-                                                    <div class="cell-3">Essentially, ETC is an Ethereum 'spinoff coin' with a wide
-                                                        user base of all current ETH users.</div>
-                                                </div>
-
-                                                <div class="support__list clearfix">
-                                                    <div class="cell-1">2</div>
-                                                    <div class="cell-2">
-                                                        Username
-                                                        <p class="price">1 000$</p>
-                                                    </div>
-                                                    <div class="cell-3">Essentially, ETC is an Ethereum 'spinoff coin' with a wide
-                                                        user base of all current ETH users.</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="donate-top">
-                                            <div class="support__table">
-                                                <div class="support__list clearfix">
-                                                    <div class="cell-1">1</div>
-                                                    <div class="cell-2">
-                                                        Username
-                                                        <p class="price">200 000$</p>
-                                                    </div>
-                                                    <div class="cell-3">Essentially, ETC is an Ethereum 'spinoff coin' with a wide
-                                                        user base of all current ETH users.</div>
-                                                </div>
-
-                                                <div class="support__list clearfix">
-                                                    <div class="cell-1">2</div>
-                                                    <div class="cell-2">
-                                                        Username
-                                                        <p class="price">1 000 000$</p>
-                                                    </div>
-                                                    <div class="cell-3">Essentially, ETC is an Ethereum 'spinoff coin' with a wide
-                                                        user base of all current ETH users.</div>
-                                                </div>
-
-                                                <div class="support__list clearfix">
-                                                    <div class="cell-1">2</div>
-                                                    <div class="cell-2">
-                                                        Username
-                                                        <p class="price">1 000 000$</p>
-                                                    </div>
-                                                    <div class="cell-3">Essentially, ETC is an Ethereum 'spinoff coin' with a wide
-                                                        user base of all current ETH users.</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#">Show more</a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5">
-                            <div class="support__right">
-                                <h3>SUPPORT NOW</h3>
-                                <p>ETC <span>0x0xe9a7e26bf5c05fe3bae272d4c940bd7158611c</span></p>
-                                <p>ETH <span>0xda99c6385e7ec0a7b4031c393dac01b600341fc3</span></p>
-                                <p>BTC <span>1953UK8Y849SZqfDEnn3Zu4AM98hwWk3Kw</span></p>
-                                <p> What is more, you can make a donation with any cryptocurrency you want.You can
-                                    attach any message you want to a donation (no longer than 70 characters). Everybody will see it on our site.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /.container-fluid -->
-    </section><!--support-->
-
-    <section class="pagefooter">
-        <div class="container-fluid">
-            <h2>Stay tuned</h2>
-            <div class="pagefooter__social clearfix">
-                <a href="#" class="reddit-icon"></a>
-                <a href="#" class="slack-icon"></a>
-                <a href="#" class="fb-icon"></a>
-                <a href="#" class="github-icon"></a>
-                <a href="#" class="gitter-icon"></a>
-                <a href="#" class="twitter-icon"></a>
-            </div>
-            <form action="" method="">
-                <p>Subsctibe to news</p>
-                <input type="email" name="email" placeholder="Your Email" required="" data-validate-empty="Email">
-                <input class="btn social-submit" type="submit" value="Subscribe">
-            </form>
-
-        </div><!-- /.container-fluid -->
-
-        <footer>
-            <div class="container-fluid">
-                <div class="section__content">
-                    <div class="incontainer clearfix">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="footer__left">
-                                    <p>Let's make sure original Ethereum vision doesn't just
-                                        "go gentle into that good night"!</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-md-offset-2 col-sm-6">
-                                <div div class="footer__right">
-                                    <p>Donations</p>
-                                    <p><span>ETC: 0x0xe9a7e26bf5c05fe3bae272d4c940bd7158611ce9</span></p>
-                                    <p><span>ETH: 0xda99c6385e7ec0a7b4031c393dac01b600341fc3</span></p>
-                                    <p><span>BTC: 1953UK8Y849SZqfDEnn3Zu4AM98hwWk3Kw</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div><!-- /.container-fluid -->
-        </footer>
-    </section><!--pagefooter-->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
-    <script src="js/highstock.js"></script>
-    <script src="js/etcchart.js"></script>
-    <script src="js/miners.js"></script>
-    <script src="js/app.js"></script>
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
