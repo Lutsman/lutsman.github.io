@@ -497,5 +497,61 @@ $(document).ready(function () {
 
 
     })();
+    
+    /*Fancybox*/
+    (function(){
+        $('.fancy-gall').fancybox({
+            padding: [0, 0, 0, 0],
+            margin: [0, 0, 0, 0],
+            nextEffect: 'fade',
+            prevEffect: 'fade',
+            maxHeight: '80%',
+            minHeight: '80%'
+        });
+    })();
+
+    /*Yandex map*/
+    (function(){
+        if (!document.getElementById('map')) return;
+
+        var firstScript = document.querySelectorAll('script')[0];
+        var script = document.createElement('script');
+        var placemark = [55.7097,37.6336];
+        var center = [55.7097,37.6336];
+        var zoom = 15;
+
+        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+        script.async = true;
+        firstScript.parentNode.insertBefore(script, firstScript);
+
+        script.addEventListener('load', function () {
+            ymaps.ready(init.bind(this, placemark, center, zoom));
+        });
+
+        function init(placemark, center, zoom){
+            var myMap = new ymaps.Map('map', {
+                center: center,
+                zoom: zoom
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+            myMap.behaviors.disable('scrollZoom');
+
+            myMap.geoObjects.add(new ymaps.Placemark(placemark,
+                {
+                    hintContent: 'dolly',
+                    balloonContent: 'hello'
+                },
+                {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/hint.png',
+                iconImageSize: [45, 61],
+                iconImageOffset: [-22, -60]
+            }));
+        }
+    })();
+    
+    
 
 });
