@@ -1277,7 +1277,8 @@ footer {
   h2 {
     margin-bottom: 15px;
   }
-  > div {
+  > a {
+    display: block;
     position: relative;
     float: left;
     width: 31%;
@@ -1300,7 +1301,7 @@ footer {
       visibility: visible;
       opacity: 1;
     }
-    + div {
+    + a {
       margin-left: 3.5%;
     }
     &:nth-child(5n) {

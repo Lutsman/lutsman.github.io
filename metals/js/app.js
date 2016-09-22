@@ -500,14 +500,19 @@ $(document).ready(function () {
     
     /*Fancybox*/
     (function(){
-        $('.fancy-gall').fancybox({
-            padding: [0, 0, 0, 0],
-            margin: [0, 0, 0, 0],
-            nextEffect: 'fade',
-            prevEffect: 'fade',
-            maxHeight: '80%',
-            minHeight: '80%'
-        });
+        var $fancyGall = $('.fancy-gall');
+
+        if ($fancyGall.length) {
+            $fancyGall.fancybox({
+                padding: [0, 0, 0, 0],
+                margin: [0, 0, 0, 0],
+                nextEffect: 'fade',
+                prevEffect: 'fade',
+                maxHeight: '80%',
+                minHeight: '80%'
+            });
+        }
+
     })();
 
     /*Yandex map*/

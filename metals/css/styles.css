@@ -1098,12 +1098,13 @@ footer {
   color: #24221f; }
   .gallery h2 {
     margin-bottom: 15px; }
-  .gallery > div {
+  .gallery > a {
+    display: block;
     position: relative;
     float: left;
     width: 31%;
     margin-bottom: 27px; }
-    .gallery > div::before {
+    .gallery > a::before {
       content: '';
       display: block;
       position: absolute;
@@ -1121,12 +1122,12 @@ footer {
       -moz-transition: all 0.2s ease-in-out 0s;
       -o-transition: all 0.2s ease-in-out 0s;
       transition: all 0.2s ease-in-out 0s; }
-    .gallery > div:hover::before {
+    .gallery > a:hover::before {
       visibility: visible;
       opacity: 1; }
-    .gallery > div + div {
+    .gallery > a + a {
       margin-left: 3.5%; }
-    .gallery > div:nth-child(5n) {
+    .gallery > a:nth-child(5n) {
       margin-left: 0; }
 
 .prices {
