@@ -180,11 +180,10 @@ $(document).ready(function () {
         })();
 
         /*mmenu*/
-        /*(function(){
-            /!*mmenu scroll*!/
+        (function(){
+            /*mmenu scroll*/
             var mmenuScroll = new ScrollToAnchor({
-                listenedBlock: document.getElementById('#m-menu'),
-                translation:  '#top-menu'
+                listenedBlock: document.getElementById('#m-menu')
             });
 
 
@@ -195,7 +194,9 @@ $(document).ready(function () {
                 var $openMenuBtn = $('#hamburger');
 
                 $menu.mmenu({
-                    "extensions": ["theme-dark"]
+                    navbar: {
+                        title: 'Меню'
+                    }
                 });
 
                 var selector = false;
@@ -210,10 +211,11 @@ $(document).ready(function () {
                 var api = $menu.data( 'mmenu' );
                 api.bind( 'closed',
                     function() {
-                        if (selector) {
-                            mmenuScroll.smoothScroll(selector,  document.querySelector(mmenuScroll._translationElementSelector).offsetHeight);
-                            selector = false;
+                    console.log(selector);
+                        if (selector && $(selector).length) {
+                            mmenuScroll.smoothScroll(selector);
                         }
+                        selector = false;
                     }
 
                 );
@@ -222,7 +224,7 @@ $(document).ready(function () {
                 });
 
             }
-        })();*/
+        })();
     })();
 
     /*Form*/

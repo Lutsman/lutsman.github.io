@@ -29,6 +29,7 @@
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="inner-page">
@@ -69,13 +70,31 @@
                     <img src="img/bg3.jpg" alt="image">
 
                     <div class="top-menu">
-                        <ul>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Схема работы</a></li>
-                            <li><a href="#">Цены</a></li>
-                            <li><a href="#">Правила приема</a></li>
-                        </ul>
+                        <nav class="desktop-nav">
+                            <ul>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Схема работы</a></li>
+                                <li><a href="#">Цены</a></li>
+                                <li><a href="#">Правила приема</a></li>
+                            </ul>
+                        </nav>
+                        <nav id="m-menu-btn-wrapper" class="mobile-nav">
+                            <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav id="m-menu"> <!-- mobile menu -->
+                            <ul>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Схема работы</a></li>
+                                <li><a href="#">Цены</a></li>
+                                <li><a href="#">Правила приема</a></li>
+                            </ul>
+                        </nav><!-- mobile menu -->
                     </div>
 
                     <div class="bread-crumbs">
