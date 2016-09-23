@@ -39,6 +39,14 @@
         <div class="container">
             <a href="/" class="logo">Ресурс</a>
 
+            <nav id="m-menu-btn-wrapper" class="mobile-nav">
+                <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </nav>
+
             <div class="header__buttons">
                 <a href="#">
                     <span class="price-list-icon">Прайс-лист</span>
@@ -72,19 +80,12 @@
                     <div class="top-menu">
                         <nav class="desktop-nav">
                             <ul>
-                                <li><a href="#">О компании</a></li>
+                                <li><a class="active" href="#">О компании</a></li>
                                 <li><a href="#">Услуги</a></li>
                                 <li><a href="#">Схема работы</a></li>
                                 <li><a href="#">Цены</a></li>
                                 <li><a href="#">Правила приема</a></li>
                             </ul>
-                        </nav>
-                        <nav id="m-menu-btn-wrapper" class="mobile-nav">
-                            <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
-                                <div class="hamburger-box">
-                                    <div class="hamburger-inner"></div>
-                                </div>
-                            </div>
                         </nav>
                         <nav id="m-menu"> <!-- mobile menu -->
                             <ul>
@@ -263,6 +264,8 @@
                     <h3>Как нас найти</h3>
                     
                     <div class="map-wrap">
+                        <div id="map" class="map"></div>
+
                         <div class="map-info">
                             <h5>Контактная информация</h5>
 
@@ -271,14 +274,12 @@
 
                             <h6>Телeфон:</h6>
                             <p>+7 (495) 64-888-23 <br>
-                               +7 (901) 557-03-98</p>
+                                +7 (901) 557-03-98</p>
 
                             <h6>Электронная почта:</h6>
                             <p><a href="mailto:ask@amteo-l.ru">ask@amteo-l.ru</a></p>
 
                         </div>
-
-                        <div id="map" class="map"></div>
 
                     </div>
                     
@@ -350,7 +351,7 @@
                 </div>
             </div>
 
-            <div class="develop">Разработка сайта - Talanta</div>
+            <div class="develop"><a href="#">Разработка сайта - Talanta</a></div>
 
         </div><!--container-->
     </footer>

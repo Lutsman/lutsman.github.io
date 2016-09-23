@@ -190,7 +190,9 @@ h6 {
 
 a {
   color:inherit;
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 /*ul {
   padding: 0;
@@ -334,6 +336,7 @@ header {
   font-weight: 900;
   color: #333;
   line-height: 53px;
+  text-decoration: none;
   &::before {
     content: '';
     display: block;
@@ -354,6 +357,7 @@ header {
     float: left;
     width: 175px;
     height: 43px;
+    text-decoration: none;
     background-color: $nav-color;
     @include transform(skew(-30deg));
     &:hover {
@@ -424,10 +428,6 @@ footer {
     float: left;
     width: 43%;
     padding-left: 20px;
-    a {
-      color: #b6d5ff;
-      text-decoration: underline;
-    }
     > div {
       margin-bottom: 15px;
     }
@@ -544,6 +544,7 @@ footer {
       height: 43px;
       padding: 0 38px;
       line-height: 43px;
+      text-decoration: none;
       &::before {
         content: '';
         display: block;
@@ -561,6 +562,10 @@ footer {
         visibility: visible;
         opacity: 1;
       }
+    }
+    .active::before {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
@@ -661,7 +666,6 @@ footer {
   }
   .accent {
     color: #b6d5ff;
-    text-decoration: underline;
   }
 }
 
@@ -776,7 +780,6 @@ footer {
 .we-accept__list {
   h3 {
     color: $main-color-blue;
-    text-decoration: underline;
   }
   li {
     min-height: 70px;
@@ -886,11 +889,9 @@ footer {
   a {
     display: inline-block;
     padding: 0 5px 2px;
-    text-decoration: underline;
     @include border-radius(3px);
     &:hover {
       color: #fff;
-      text-decoration: none;
       background-color: $main-color-blue;
     }
   }
@@ -917,7 +918,6 @@ footer {
   font-size: 12px;
   a {
     color: $main-color-blue;
-    text-decoration: underline;
   }
   li {
     display: inline-block;
@@ -978,7 +978,6 @@ footer {
   }
   .accent {
     color: #b6d5ff;
-    text-decoration: underline;
   }
 }
 
@@ -1081,7 +1080,11 @@ footer {
   a:not(.fancy-gall) {
     font-size: 15px;
     color: $main-color-blue;
+    text-decoration: none;
     border-bottom: 1px dashed $main-color-blue;
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
   &::after {
     content: '';
@@ -1097,7 +1100,6 @@ footer {
   }
   a {
     color: $main-color-blue;
-    text-decoration: underline;
   }
 }
 
@@ -1112,7 +1114,11 @@ footer {
     color: $main-color-blue;
   }
   a {
+    text-decoration: none;
     border-bottom: 3px dashed $main-color-blue;
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
   i {
     font-size: 15px;
@@ -1161,7 +1167,6 @@ footer {
   }
   a {
     color: $main-color-blue;
-    text-decoration: underline;
   }
 }
 .map {
@@ -1228,14 +1233,15 @@ footer {
 
 .serv-menu {
   padding-right: 50px;
-  font-size: 14px;
-  color: #333;
-  a {
-    text-decoration: none;
-  }
+  /*font-size: 14px;
+  color: #333;*/
   .active {
-    font-weight: 700;
-    color: #000;
+    > a {
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      background-color: $main-color-blue;
+    }
     .support-menu {
       display: block;
     }
@@ -1243,11 +1249,9 @@ footer {
   .support-menu {
     display: none;
     padding-left: 10px;
-    font-weight: 400;
+    font-size: 14px;
+    color: #333;
    /* @include transition(all 0.2s ease-in-out 0s);*/
-    a {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -1275,7 +1279,6 @@ footer {
   }
   a {
     color: $main-color-blue;
-    text-decoration: underline;
   }
 }
 
@@ -1291,6 +1294,7 @@ footer {
     float: left;
     width: 31%;
     margin-bottom: 27px;
+    text-decoration: none;
     &::before {
       content: '';
       display: block;
@@ -1351,10 +1355,9 @@ footer {
 .table-line {
   > div {
     float: left;
-    height: 44px;
-    padding: 0 10px;
+    min-height: 44px;
+    padding: 12px 10px;
     margin-bottom: 3px;
-    line-height: 44px;
     + div {
       margin-left: 0.5%;
     }
@@ -1457,6 +1460,7 @@ Sliders
   background-color: $main-color-blue;
   @include transition(all 0.2s ease-in-out 0s);
   z-index: 5;
+  cursor: pointer;
   &::before {
     content: '';
     display: block;
@@ -1589,6 +1593,7 @@ Placeholder
   padding: 0;
 }
 .hamburger {
+  float: right;
   padding: 9px 15px;
   background-color: transparent;
   width: 70px;
@@ -1601,7 +1606,7 @@ Placeholder
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #fff;
+  background-color: $nav-color;
   border-radius: 4px;
   position: absolute;
 }
@@ -1987,12 +1992,13 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     right: 20px;
   }
   .top-menu {
+    display: none;
     .desktop-nav {
       display: none;
     }
-    .mobile-nav {
-      display: block;
-    }
+  }
+  .mobile-nav {
+    display: block;
   }
   .about {
     height: auto;
@@ -2124,6 +2130,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .certificates > div {
     width: 125px;
     margin-right: 20px;
+    margin-left: 0;
   }
   .contact-us {
     .left-img {
@@ -2133,8 +2140,12 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       width: 100%;
     }
   }
+  .map-wrap {
+    margin-bottom: 225px;
+  }
   .map-info {
-    display: none;
+    position: static;
+    margin: 0;
   }
   .feedback {
     .form {
@@ -2163,5 +2174,26 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       width: 100%;
       margin-top: 20px;
     }
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery > a {
+    width: 47%;
+    &:nth-child(2n) {
+    margin-left: 0;
+  }
+    + a, &:nth-child(5n) {
+      margin-left: 6%;
+    }
+  }
+  .cell1 {
+    width: 100%;
+  }
+  .cell2 {
+    width: 70%;
+  }
+  .cell3 {
+    width: 29%;
   }
 }
