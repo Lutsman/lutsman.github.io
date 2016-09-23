@@ -727,33 +727,22 @@ footer {
   .we-accept__block li:hover {
     color: #fff;
     font-weight: 700;
-    background-color: #375680; }
-    .we-accept__block li:hover .tooltip {
+    background-color: #375680;
+    /*.tooltip {
       opacity: 1;
-      visibility: visible; }
-.we-accept__block .tooltip {
+      visibility: visible;
+    }*/ }
+
+.tooltip {
   display: block;
   position: absolute;
-  bottom: -32px;
-  left: 50%;
-  padding: 0 30px;
+  padding: 0 15px;
   font-size: 14px;
   font-weight: normal;
   color: #fff;
   line-height: 23px;
-  background-color: #375680;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-  -o-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -ms-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0); }
-  .we-accept__block .tooltip::before {
+  background-color: #375680; }
+  .tooltip::before {
     content: '';
     display: block;
     position: absolute;
