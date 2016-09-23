@@ -1009,6 +1009,10 @@ footer {
     color: #375680;
     text-decoration: underline; }
 
+.map {
+  height: 100%;
+  width: 100%; }
+
 .feedback {
   padding: 30px 0 17px; }
   .feedback label {
