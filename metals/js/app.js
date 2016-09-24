@@ -194,6 +194,12 @@ $(document).ready(function () {
                 var $openMenuBtn = $('#hamburger');
 
                 $menu.mmenu({
+                    offCanvas: {
+                       /* pageNodetype: 'div',
+                        pageSelector: '#page',*/
+                        position: "bottom",
+                        zposition: "front"
+                    },
                     navbar: {
                         title: 'Меню'
                     }
