@@ -197,7 +197,13 @@ $(document).ready(function () {
                     navbar: {
                         title: 'Меню'
                     }
-                });
+                },
+                    {
+                        // configuration
+                        classNames: {
+                            selected: "active"
+                        }
+                    });
 
                 var selector = false;
                 $menu.find( 'li > a' ).on(
@@ -211,7 +217,6 @@ $(document).ready(function () {
                 var api = $menu.data( 'mmenu' );
                 api.bind( 'closed',
                     function() {
-                    console.log(selector);
                         if (selector && $(selector).length) {
                             mmenuScroll.smoothScroll(selector);
                         }
@@ -630,5 +635,68 @@ $(document).ready(function () {
         });
 
         pageTooltip.init();
+    })();
+
+    /*ScrollUp button*/
+    (function(){
+        var buttonUp = '<div id="scrollUp"><i class="upButton"></i></div>';
+        var flag = false;
+
+        $('body').append($(buttonUp));
+
+
+        $('#scrollUp').click( function(){
+            $("html, body").animate({scrollTop: 0}, 500);
+            return false;
+        });
+
+        $(window).scroll(scrollBtnToggler);
+        scrollBtnToggler();
+
+        function scrollBtnToggler() {
+            if ( $(document).scrollTop() > $(window).height() && !flag ) {
+                $('#scrollUp').fadeIn({queue : false, duration: 400});
+                $('#scrollUp').animate({'bottom' : '40px'}, 400);
+                flag = true;
+            } else if ( $(document).scrollTop() < $(window).height() && flag ) {
+                $('#scrollUp').fadeOut({queue : false, duration: 400});
+                $('#scrollUp').animate({'bottom' : '-20px'}, 400);
+                flag = false;
+            }
+        }
+    })();
+
+    /*Animate touch event mobile*/
+    (function(){
+        var scroller=false,
+            button = $('#scrollUp'),
+            clickable;
+
+        $(button).bind({
+            touchstart: function(event){
+                var elem=$(this);
+                clickable = setTimeout(function () { elem.addClass('active');}, 100);
+            },
+
+            touchmove: function(event){
+                clearTimeout(clickable);
+                scroller=true;
+            },
+
+            touchend: function(event){
+                var elem=$(this);
+                clearTimeout(clickable);
+
+                if(!scroller)
+                {
+                    elem.addClass('active');
+                    setTimeout(function () { elem.removeClass('active');}, 50);
+                }
+                else
+                {
+                    elem.removeClass('active');
+                }
+            }
+        });
     })();
 });

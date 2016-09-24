@@ -758,6 +758,58 @@ footer {
     -o-transform: rotate(45deg);
     transform: rotate(45deg); }
 
+/*Scroll up button*/
+#scrollUp {
+  position: fixed;
+  width: 44px;
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  right: 10px;
+  bottom: -40px;
+  display: none;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition-property: background, border;
+  -moz-transition-property: background, border;
+  -o-transition-property: background, border;
+  transition-property: background, border;
+  cursor: pointer;
+  z-index: 20; }
+  #scrollUp:hover {
+    border-color: #feb41c;
+    background: #feb41c; }
+    #scrollUp:hover .upButton {
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff; }
+  #scrollUp .upButton {
+    -webkit-transition: border 0.2s ease-in-out;
+    -moz-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    opacity: 1;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
 /* ----------------------------------------------
  Inner-pages
  ---------------------------------------------- */
@@ -1651,7 +1703,20 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     width: 55%;
     height: 163px; }
   .feedback .radio-block {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  #scrollUp:hover {
+    border-color: #000;
+    background-color: transparent; }
+    #scrollUp:hover .upButton {
+      border-top: 2px solid #000;
+      border-left: 2px solid #000; }
+  #scrollUp.active {
+    border-color: #feb41c;
+    background: #feb41c; }
+    #scrollUp.active .upButton {
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff; } }
 /* Extra small devices */
 @media (max-width: 767px) {
   header {

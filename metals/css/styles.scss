@@ -30,6 +30,12 @@
   -webkit-box-shadow: $shadows;
   box-shadow: $shadows;
 }
+@mixin transitionProperty($properties...) {
+  -webkit-transition-property: $properties;
+  -moz-transition-property: $properties;
+  -o-transition-property: $properties;
+  transition-property: $properties;
+}
 /*
 @mixin user-select($user-select) {
   -ms-user-select: $user-select;
@@ -859,7 +865,46 @@ footer {
   }
 }
 
-
+/*Scroll up button*/
+#scrollUp {
+  position: fixed;
+  width: 44px;
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  @include border-radius(5px);
+  right: 10px;
+  bottom: -40px;
+  display: none;
+  @include transition(0.2s ease-in-out);
+  @include transitionProperty(background, border);
+  cursor: pointer;
+  z-index: 20;
+  &:hover {
+    border-color: $main-color-orange;
+    background: $main-color-orange; //darken($accent-color, 20%);
+    .upButton {
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+    }
+  }
+  .upButton {
+    @include transition(border 0.2s ease-in-out);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    opacity: 1;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    @include transform(rotate(45deg));
+  }
+}
 /* ----------------------------------------------
  Inner-pages
  ---------------------------------------------- */
@@ -1903,6 +1948,24 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     }
     .radio-block {
       padding-left: 0;
+    }
+  }
+  #scrollUp {
+    &:hover {
+      border-color: #000;
+      background-color: transparent;
+      .upButton {
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+      }
+    }
+    &.active {
+      border-color: $main-color-orange;
+      background: $main-color-orange; //darken($accent-color, 20%);
+      .upButton {
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+      }
     }
   }
 }
