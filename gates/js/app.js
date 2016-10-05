@@ -564,4 +564,17 @@ $(document).ready(function () {
             }
         });
     })();
+
+    /*slider*/
+    (function(){
+        $('.pageheader-slider').slick({
+            autoplay: true,
+            autoplaySpeed: 7000,
+            speed: 2000,
+            fade: true,
+            dots: false,
+            prevArrow: '<span class="slick-prev"></span>',
+            nextArrow: '<span class="slick-next"></span>'
+        });
+    })();
 });
