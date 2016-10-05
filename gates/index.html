@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="css/placeholder_polyfill.css">
 
     <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -61,6 +64,32 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
+                <nav id="m-menu-btn-wrapper" class="mobile-nav">
+                    <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </nav>
+                <nav id="m-menu"> <!-- mobile menu -->
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li>
+                            <span>Услуги</span>
+                            <ul>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Наши лицензии</a></li>
+                                <li><a href="#">Наш пункт приема</a></li>
+                                <li><a href="#">Tехническое обеспечение</a></li>
+                                <li><a href="#">Наши партнеры</a></li>
+                                <li><a href="#">Контактная информация</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Схема работы</a></li>
+                        <li><a href="#">Цены</a></li>
+                        <li><a href="#">Правила приема</a></li>
+                    </ul>
+                </nav><!-- mobile menu -->
 
             </div><!--container-->
         </div>
@@ -189,27 +218,27 @@
             <div class="container">
                 <div class="col-48_7">
                     <h3>Наши работы</h3>
-                    <a href="#" class="works-img">
+                    <a href="img/portfolio_small_1.png" class="works-img" data-fancybox-group="portfolio-gall">
                         <img src="img/portfolio_small_1.png" alt="img">
                         <p class="title">Пример названия работы в две строки</p>
                     </a>
-                    <a href="#" class="works-img">
+                    <a href="img/portfolio_small_2.png" class="works-img" data-fancybox-group="portfolio-gall">
                         <img src="img/portfolio_small_2.png" alt="img">
                         <p class="title">Пример названия работы в две строки</p>
                     </a>
-                    <a href="#" class="works-img">
+                    <a href="img/portfolio_small_3.png" class="works-img" data-fancybox-group="portfolio-gall">
                         <img src="img/portfolio_small_3.png" alt="img">
                         <p class="title">Пример названия работы в две строки</p>
                     </a>
-                    <a href="#" class="works-img">
+                    <a href="img/portfolio_small_4.png" class="works-img" data-fancybox-group="portfolio-gall">
                         <img src="img/portfolio_small_4.png" alt="img">
                         <p class="title">Пример названия работы в две строки</p>
                     </a>
-                    <a href="#" class="works-img">
+                    <a href="img/portfolio_small_5.png" class="works-img" data-fancybox-group="portfolio-gall">
                         <img src="img/portfolio_small_5.png" alt="img">
                         <p class="title">Пример названия работы в две строки</p>
                     </a>
-                    <a href="#" class="works-img">
+                    <a href="img/portfolio_small_6.png" class="works-img" data-fancybox-group="portfolio-gall">
                         <img src="img/portfolio_small_6.png" alt="img">
                         <p class="title">Пример названия работы в две строки</p>
                     </a>
@@ -285,17 +314,17 @@
 
                 <form class="contact-form" method="post" action="mail/mailer.php">
                     <div>
-                        <label class="icon icom-human" for="form-name1">Представьтесь:</label>
+                        <label for="form-name1"><i class="icon icon-human"></i>Представьтесь:</label>
                         <input id="form-name1" type="text" name="name" placeholder="Андреев Андрей Андреевич" required>
                     </div>
 
                     <div>
-                        <label class="icon icom-phone" for="form-phone1">Мобильный телефон:</label>
+                        <label for="form-phone1"><i class="icon icon-phone"></i>Мобильный телефон:</label>
                         <input id="form-phone1" name="phone" placeholder="+7 (495) 777 77 77" required>
                     </div>
 
                     <div>
-                        <label class="icon icom-mail" for="form-email1">Электронная почта:</label>
+                        <label for="form-email1"><i class="icon icon-mail"></i>Электронная почта:</label>
                         <input id="form-email1" type="email" name="email" placeholder="andreev.andrey@gmail.ru" required>
                     </div>
 
@@ -330,8 +359,13 @@
     </div><!--page-wrap-->
 
 
-<!--scripts-->
-
-
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/placeholder_polyfill.jquery.min.combo.js" async></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.mmenu.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
