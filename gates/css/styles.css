@@ -180,7 +180,7 @@ input {
   position: relative;
   width: 180px;
   height: 46px;
-  padding: 10px 15px 5px 50px;
+  padding: 10px 10px 5px 50px;
   font-size: 12px;
   text-decoration: underline;
   text-align: left; }
@@ -339,8 +339,8 @@ header {
         border-left-color: #ffca08; }
 
 .bread-crumbs {
-  padding: 15px 0 10px;
-  margin-bottom: 30px;
+  padding-top: 15px;
+  margin-bottom: 20px;
   font-size: 13px; }
   .bread-crumbs::after {
     content: '';
@@ -348,9 +348,11 @@ header {
     clear: both; }
   .bread-crumbs li {
     float: left;
-    padding: 0 5px; }
-    .bread-crumbs li + li {
-      border-left: 2px solid #d3d3d3; }
+    padding: 0 5px;
+    margin-bottom: 10px;
+    border-right: 2px solid #d3d3d3; }
+    .bread-crumbs li:last-child {
+      border-right: 0; }
   .bread-crumbs a {
     padding: 4px 7px;
     color: #1976ac; }
@@ -700,7 +702,11 @@ footer {
       color: #fff;
       background-color: #36a2fd; }
     .pages-list li a {
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      transition: none; }
   .pages-list .active {
     color: #fff;
     background-color: #36a2fd; }
@@ -795,27 +801,22 @@ Sliders
 .pageheader-slider {
   position: relative;
   width: 100%;
-  height: 395px; }
+  overflow: hidden; }
 
 .text-box {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 600px;
-  height: 395px;
-  padding: 55px 30px 60px 70px;
+  left: -48px;
+  width: 60%;
+  height: 100%;
+  padding: 55px 30px 60px 120px;
   font-size: 20px;
-  background-color: rgba(252, 252, 241, 0.7); }
-  .text-box::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -100px;
-    border-top: 198px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 198px solid rgba(252, 252, 241, 0.7);
-    border-left: 50px solid rgba(252, 252, 241, 0.7); }
+  background-color: rgba(252, 252, 241, 0.7);
+  -ms-transform: skew(14deg);
+  -moz-transform: skew(14deg);
+  -webkit-transform: skew(14deg);
+  -o-transform: skew(14deg);
+  transform: skew(14deg); }
   .text-box h2 {
     margin-bottom: 25px; }
   .text-box p {
@@ -826,6 +827,12 @@ Sliders
     .text-box a:not(.btn):hover {
       color: #f37f00;
       text-decoration: underline; }
+  .text-box > div {
+    -ms-transform: skew(-14deg);
+    -moz-transform: skew(-14deg);
+    -webkit-transform: skew(-14deg);
+    -o-transform: skew(-14deg);
+    transform: skew(-14deg); }
 
 /* ----------------------------------------------
 Pop up 15
