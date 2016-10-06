@@ -805,8 +805,7 @@ Sliders
 ---------------------------------------------- */
 .pageheader-slider {
   position: relative;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
   .pageheader-slider .slide + .slide {
     display: none; }
   .pageheader-slider.slick-initialized .slide + .slide {

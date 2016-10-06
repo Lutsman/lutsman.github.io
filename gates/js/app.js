@@ -571,10 +571,11 @@ $(document).ready(function () {
             autoplay: true,
             autoplaySpeed: 7000,
             speed: 2000,
+            arrows: true,
             fade: true,
-            dots: false,
-            prevArrow: '<span class="slick-prev"></span>',
-            nextArrow: '<span class="slick-next"></span>'
+            dots: true//,
+            //prevArrow: '<span class="slick-prev"></span>',
+            //nextArrow: '<span class="slick-next"></span>'
         });
     })();
 });
