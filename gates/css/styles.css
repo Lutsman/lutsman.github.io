@@ -807,6 +807,10 @@ Sliders
   position: relative;
   width: 100%;
   overflow: hidden; }
+  .pageheader-slider .slide + .slide {
+    display: none; }
+  .pageheader-slider.slick-initialized .slide + .slide {
+    display: block; }
 
 .text-box {
   position: absolute;

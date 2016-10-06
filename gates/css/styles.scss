@@ -992,6 +992,12 @@ Sliders
   position: relative;
   width: 100%;
   overflow: hidden;
+  .slide + .slide {
+    display: none;
+  }
+  &.slick-initialized .slide + .slide {
+    display: block;
+  }
 }
 .text-box {
   position: absolute;
