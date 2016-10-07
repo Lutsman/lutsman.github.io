@@ -90,28 +90,39 @@ section, header {
     height: 6px;
     background-color: #559a3b; }
 
+.number-list {
+  counter-reset: item; }
+  .number-list li {
+    display: block;
+    line-height: 25px; }
+    .number-list li::before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      font-weight: 700;
+      color: #559a3b; }
+
 /* ----------------------------------------------
  Fonts Paragrahps
  ---------------------------------------------- */
 h1 {
   margin: 0;
-  font-size: 42px;
-  font-weight: 700; }
-
-h2 {
   font-size: 35px;
   font-weight: 700; }
 
-h3 {
+h2 {
   font-size: 30px;
   font-weight: 700; }
 
-h4 {
-  font-size: 23px;
+h3 {
+  font-size: 20px;
   font-weight: 700; }
 
-h5 {
+h4 {
   font-size: 18px;
+  font-weight: 700; }
+
+.big-title {
+  font-size: 42px;
   font-weight: 700; }
 
 /* ----------------------------------------------
@@ -389,10 +400,10 @@ footer {
 .products {
   background: linear-gradient(to top, #E2E6E8 0%, #F8FAFB 100%);
   border-bottom: 2px solid #c5c5c5; }
-  .products h3 {
+  .products h2 {
     padding: 20px 0;
     text-align: center; }
-  .products h4 {
+  .products h3 {
     margin-bottom: 10px; }
 
 .products-block > div {
@@ -421,7 +432,7 @@ footer {
   border-bottom: 2px solid #c5c5c5; }
   .about .col-31_6 {
     margin-right: 2.5%; }
-  .about h3 {
+  .about h2 {
     margin: 15px 0 10px; }
   .about p {
     line-height: 23px; }
@@ -456,7 +467,7 @@ footer {
 .works {
   padding: 35px 0 50px;
   background: url("../img/bg_2.png"); }
-  .works h3 {
+  .works h2 {
     margin-bottom: 10px; }
   .works .container > div + div {
     margin-left: 2.5%; }
@@ -525,7 +536,7 @@ footer {
 .privilege {
   padding: 25px 0 45px;
   border-bottom: 2px solid #d0d0d0; }
-  .privilege h3 {
+  .privilege h2 {
     margin-bottom: 20px;
     color: #559a3b;
     text-align: center; }
@@ -554,7 +565,7 @@ footer {
   min-height: 345px;
   padding: 35px 0;
   background: url("../img/bg_2.png"); }
-  .contact h3 {
+  .contact h2 {
     margin-bottom: 30px;
     color: #559a3b;
     text-align: center; }
@@ -575,18 +586,21 @@ footer {
     font-size: 18px;
     font-weight: 700; }
 
-.content h1 {
+.content .big-title {
+  width: 100%;
   margin-bottom: 5px; }
-.content h2 {
+.content h1 {
   width: 66%;
   margin: 0 0 15px; }
-.content h3 {
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  border-bottom: 9px solid #ffca08; }
+.content h2 {
+  margin-bottom: 15px; }
+.content h3, .content h4 {
+  margin-bottom: 10px; }
 .content p {
   line-height: 25px; }
 .content > p {
+  margin-bottom: 25px; }
+.content .list, .content .number-list {
   margin-bottom: 25px; }
 .content > div::after {
   content: '';
@@ -636,7 +650,13 @@ footer {
 .table-line {
   font-size: 13px;
   background-color: #f8f8f8;
-  border-bottom: 1px solid #b6b6b6; }
+  border-bottom: 1px solid #b6b6b6;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s; }
+  .table-line:hover {
+    background-color: #559a3b; }
   .table-line::after {
     content: '';
     display: table;
@@ -667,9 +687,9 @@ footer {
     border-bottom: 13px solid #ffca08; }
     .product-list > div:nth-child(3n) {
       margin-right: 0; }
-  .product-list h5 {
+  .product-list h4 {
     margin-bottom: 12px; }
-    .product-list h5 a:hover {
+    .product-list h4 a:hover {
       color: #1a95fd;
       text-decoration: underline; }
   .product-list p {
@@ -719,15 +739,66 @@ footer {
 .img-text-block > div {
   width: 65.5%;
   float: left; }
-  .img-text-block > div:first-child {
-    width: 31%;
-    margin-right: 3.5%; }
+.img-text-block .img-block {
+  width: 31%;
+  margin-right: 3.5%;
+  margin-bottom: 15px;
+  border: 0; }
+  .img-text-block .img-block .title {
+    position: static;
+    padding: 5px 0;
+    margin: 0;
+    height: auto;
+    font-size: 12px;
+    font-style: italic;
+    color: #333;
+    background-color: transparent; }
+    .img-text-block .img-block .title::before {
+      display: none; }
+.img-text-block .right-img {
+  float: right;
+  margin-right: 0;
+  margin-left: 3.5%; }
 .img-text-block p {
   margin-bottom: 30px; }
+
+.gallery {
+  margin-bottom: 30px; }
+  .gallery a {
+    float: left;
+    display: block;
+    position: relative;
+    width: 24.5%;
+    margin-right: 0.66%;
+    margin-bottom: 5px; }
+    .gallery a:nth-child(4n) {
+      margin-right: 0; }
+    .gallery a::before {
+      content: '';
+      visibility: hidden;
+      opacity: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(6, 121, 218, 0.6);
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      -moz-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s; }
+    .gallery a:hover::before {
+      visibility: visible;
+      opacity: 1; }
 
 /* ----------------------------------------------
  Colors Backgrounds
  ---------------------------------------------- */
+.yellow-border {
+  padding-bottom: 10px;
+  border-bottom: 9px solid #ffca08; }
+
 .yellow-line {
   border-left: 10px solid #ffca08 !important; }
 
@@ -826,7 +897,9 @@ Sliders
   -o-transform: skew(14deg);
   transform: skew(14deg); }
   .text-box h2 {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-size: 35px;
+    font-weight: 700; }
   .text-box p {
     max-width: 420px;
     margin: 0 0 30px; }
@@ -1053,7 +1126,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     padding-top: 25px;
     padding-left: 100px; }
 
-  .content h2 {
+  .content h1 {
     width: 75%; }
 
   /*Scroll Up Button*/
@@ -1094,7 +1167,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .secondary-menu a {
     padding-left: 30px; }
 
-  .content h2 {
+  .content h1 {
     width: 100%; }
 
   .product-list .price {
@@ -1190,10 +1263,18 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .img-text-block > div {
     width: 100% !important;
     margin-right: 0 !important; }
-    .img-text-block > div:first-child {
-      margin-bottom: 20px; } }
+
+  .img-block {
+    margin-bottom: 20px; }
+
+  .gallery a {
+    width: 49%; }
+    .gallery a:nth-child(odd) {
+      margin-right: 2%; }
+    .gallery a:nth-child(even) {
+      margin-right: 0; } }
 @media (max-width: 479px) {
-  h1 {
+  .big-title {
     font-size: 35px; }
 
   .header-middle-bg {
