@@ -407,6 +407,18 @@ header {
         background-color: $yellow-color;
       }
     }
+    /*.secondary-menu {
+      display: block;
+    }*/
+  }
+  .curr-page {
+    font-weight: 700;
+    > a {
+      text-decoration: none;
+      &::before {
+        background-color: $yellow-color;
+      }
+    }
     .secondary-menu {
       display: block;
     }
@@ -433,6 +445,21 @@ header {
     }
   }
   .active {
+    color: #000;
+    a {
+      font-weight: 700;
+      &::before {
+        display: block;
+        width: auto;
+        height: auto;
+        top: 9px;
+        background-color: transparent;
+        border: 5px solid transparent;
+        border-left-color: $yellow-color;
+      }
+    }
+  }
+  .curr-page {
     color: #000;
     a {
       font-weight: 700;
@@ -1073,6 +1100,10 @@ Sliders
   position: relative;
   width: 100%;
   //overflow: hidden;
+  .slide {
+    position: relative;
+    overflow: hidden;
+  }
   .slide + .slide {
     display: none;
   }
