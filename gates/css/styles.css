@@ -1165,7 +1165,11 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     background: #2c501f; }
     #scrollUp.active .upButton {
       border-top: 2px solid #fff;
-      border-left: 2px solid #fff; } }
+      border-left: 2px solid #fff; }
+
+  .slick-dots {
+    left: 45px;
+    bottom: 5px; } }
 /* Small devices */
 @media (max-width: 991px) {
   .header-middle-bg {
@@ -1199,7 +1203,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .product-list .price span {
       font-size: 16px; }
     .product-list .price sup span {
-      margin-right: 7px; } }
+      margin-right: 7px; }
+
+  .slick-dots {
+    left: 200px; } }
 @media (max-width: 930px) {
   .text-box h2 {
     font-size: 25px; } }
@@ -1250,7 +1257,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     margin-right: 5%;
     margin-bottom: 20px; }
   .contact .submit {
-    width: 45%; } }
+    width: 45%; }
+
+  .slick-dots {
+    left: 180px; } }
 @media (max-width: 599px) {
   .header-middle-bg {
     width: 13%;
@@ -1363,6 +1373,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 
   .product-list > div {
     width: 100%;
-    margin-left: 0 !important; } }
+    margin-left: 0 !important; }
+
+  .slick-dots {
+    left: 0;
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

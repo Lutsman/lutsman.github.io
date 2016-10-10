@@ -1354,6 +1354,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       }
     }
   }
+  .slick-dots {
+    left: 45px;
+    bottom: 5px;
+  }
 }
 
 /* Small devices */
@@ -1396,7 +1400,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       margin-right: 7px;
     }
   }
-
+  .slick-dots {
+    left: 200px;
+  }
 }
 @media (max-width: 930px) {
   .text-box h2 {
@@ -1466,7 +1472,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       width: 45%;
     }
   }
-
+  .slick-dots {
+    left: 180px;
+  }
 }
 
 @media (max-width: 599px) {
@@ -1611,5 +1619,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .product-list > div {
     width: 100%;
     margin-left: 0 !important;
+  }
+  .slick-dots {
+    left: 0;
+    width: 100%;
   }
 }
