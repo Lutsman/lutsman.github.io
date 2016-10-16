@@ -464,6 +464,7 @@ $(document).ready(function(){
 
                     //console.log(response);
                     //throw new Error(response.statusText);
+                    console.log(response);
                     self.hidePending(form, self.showError.bind(self, form));
                     self.resetForms(form);
 
