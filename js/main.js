@@ -251,7 +251,7 @@ $(document).ready(function(){
             $elem.each(function () {
                 var coords = this.getBoundingClientRect();
 
-                if(coords.bottom <= document.documentElement.clientHeight && coords.top >= 0) {
+                if(coords.bottom - this.offsetHeight / 2 <= document.documentElement.clientHeight && coords.top >= 0) {
                     
                     $(this).easyPieChart({
                         size: 200,
