@@ -1,369 +1,288 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page</title>
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/pgwslideshow.min.css">
-	<link rel="stylesheet" href="css/fancySelect.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/firstInit.js" async></script>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.themes.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--Script-->
+    <script src="js/firstLoad.js" async></script>
+
 </head>
 <body>
-<div id="page">
-	<div class="wrapper">
 
-		<div class="header">
-			<div class="lvl1">
-				<div class="inner in-row-mid">
-					<a class="logo" href="#">
-						<img src="images/logo.png" alt="">
-					</a>
-					<div class="col2 in-row-mid">
-						<div>
-							<img src="images/icon1-1.png" alt="">
-							<div>
-								90 000 довольных<br>клиентов
-							</div>
-						</div>
-						<div>
-							<img src="images/icon1-2.png" alt="">
-							<div>
-								Гарантия 100%<br>
-								<span>вернем деньги</span>
-							</div>
-						</div>
-					</div>
-					<a href="#" class="btn btn1">Наши магазины</a>
-					<div class="col3">
-						<a href="tel:84955454181"><span>8 (495)</span> 545-41-81</a>
-						<div class="in-row">
-							<span>9:00-18:00</span>
-							<a href="#" class="color1">Обратный звонок</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="lvl2">
-				<div class="inner clearfix">
-					<div class="fll in-row-mid">
-						<a href="#" class="search" data-action="open" data-target="#landing-search"></a>
-						<form id="landing-search" class="landing-search" method="get" action="/search">
-							<input type="submit" class="search" value="">
-							<input class="search-input" placeholder="Поиск по сайту" required="" name="landing-search" type="text">
-							<a href="#" class="search-cancel" data-action="close" data-target="#landing-search"></a>
-						</form>
-						<div class="col2">
-							<a href="#">Главная</a>
-							<a href="#">Каталог</a>
-							<a href="#">Полезная информация</a>
-							<a href="#">Отзывы</a>
-							<a  class="hide700" href="#">Контакты</a>
-						</div>
-					</div>
-					<div class="flr in-row-miв basket-cont">
-						<a href="#" data-action="slide-toggler" data-target=".basket" class="cart">2 товара <span>438 руб.</span></a>
-						<a href="#" class="btn-order">Оформить заказ</a>
-						<div class="basket">
-							<ul>
-								<li>
-									<img src="images/img2.png" alt="">
-									<p class="title-basket">Фотографии стандарт
-										<br>
-										<span>35 фотографий 23х10</span>
-									</p>
-									<p>305 руб.
-										<span><a href="#">Удалить</a></span>
-									</p>
-								</li>
-								<li>
-									<img src="images/img2.png" alt="">
-									<p class="title-basket">Фотографии стандарт
-										<br>
-										<span>35 фотографий 23х10</span>
-									</p>
-									<p>305 руб.
-										<span><a href="#">Удалить</a></span>
-									</p>
-								</li>
-								<li>
-									<img src="images/img2.png" alt="">
-									<p class="title-basket">Фотографии стандарт
-										<br>
-										<span>35 фотографий 23х10</span>
-									</p>
-									<p>305 руб.
-										<span><a href="#">Удалить</a></span>
-									</p>
-								</li>
-							</ul>
-							<div class="basket-footer">
-								<a href="#">Перейти в корзину</a>
-								<p>
-									<span>Итого:</span>
-									915 руб.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<nav id="m-menu-btn-wrapper">
-					<div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger" data-action="slide-toggler" data-target="#m-menu">
-						<div class="hamburger-box">
-						<!--	<div class="hamburger-inner"></div>-->
-						</div>
-					</div>
-				</nav>
-				<nav id="m-menu"> <!-- mobile menu -->
-					<ul>
-						<li><a href="#contacts">Контакты</a></li>
-					</ul>
-				</nav><!-- mobile menu -->
-			</div>
-		</div>
-		<!-- .header -->
+<div class="page-wrap">
+    <section id="home" class="home screen-height">
+        <div class="home-overlay"></div> <!-- Накладываем на фоновую картинку затемнение и текстуру -->
+        <div class="intro">
+            <p>Привет, нас зовут Дмитрий Луценко и Евгения Омельченко и мы</p>
+            <h1>Front end разработчики</h1>
+            <p>создание современных web-приложений</p>
+        </div><!--intro-->
 
-		<div class="content">
-			<div class="slider1">
-				<ul class="bxslider">
-					<li class="slide1">
-						<div class="inner">
-							<div class="title">Запоминайте моменты</div>
-							<div class="title2">Цифровая фотопечать от 1 дня</div>
-							<a href="#" class="btn btn2">Перейти в каталог</a>
-						</div>
-					</li>
-					<li class="slide1">
-						<div class="inner">
-							<div class="title">Запоминайте моменты</div>
-							<div class="title2">Цифровая фотопечать от 1 дня</div>
-							<a href="#" class="btn btn2">Перейти в каталог</a>
-						</div>
-					</li>
-					<li class="slide1">
-						<div class="inner">
-							<div class="title">Запоминайте моменты</div>
-							<div class="title2">Цифровая фотопечать от 1 дня</div>
-							<a href="#" class="btn btn2">Перейти в каталог</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="padding1 inner">
-				<div class="title3">Каталог продукции</div>
-				<div class="in-row blocks1">
-					<a class="fancybox" href="images/img1-1.png">
-						<div class="img">
-							<img src="images/img1-1.png" alt="">
-						</div>
-						<div class="title4">Фотопечать</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-2.png">
-						<div class="img">
-							<img src="images/img1-2.png" alt="">
-						</div>
-						<div class="title4">Сувениры</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-3.png">
-						<div class="img">
-							<img src="images/img1-3.png" alt="">
-						</div>
-						<div class="title4">Фотокники</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-4.png" class="no-margin">
-						<div class="img align-right">
-							<img src="images/img1-4.png" alt="">
-						</div>
-						<div class="title4">Фотокалендари</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-5.png">
-						<div class="img">
-							<img src="images/img1-5.png" alt="">
-						</div>
-						<div class="title4">Интерьер</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-6.png">
-						<div class="img">
-							<img src="images/img1-6.png" alt="">
-						</div>
-						<div class="title4">АЛьбомы, рамки</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-8.png">
-						<div class="img">
-							<img src="images/img1-7.png" alt="">
-						</div>
-						<div class="title4">Бюро переводов</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-					<a class="fancybox" href="images/img1-8.png" class="no-margin">
-						<div class="img">
-							<img src="images/img1-8.png" alt="">
-						</div>
-						<div class="title4">Фото на документы</div>
-						<p>Фотопеча́ть — процесс получения позитивного фотографического изображения с негатива.</p>
-					</a>
-				</div>
-				<div class="align-center">
-					<a href="#" class="btn btn2 btn2-1">Показать все</a>
-				</div>
-			</div>
-			<div class="padding2 bg1">
-				<div class="inner">
-					<div class="title3">Почему мы</div>
-					<div class="in-row blocks2">
-						<div class="in-row">
-							<div class="img">
-								<img src="images/icon2-1.png" alt="">
-							</div>
-							<div class="col2">
-								<div>Твёрдая обложка</div>
-								<p>Будьте уверены что ваши фотографии не помнуться. Удобно держать в руках!</p>
-							</div>
-						</div>
-						<div class="in-row">
-							<div class="img">
-								<img src="images/icon2-2.png" alt="">
-							</div>
-							<div class="col2">
-								<div>Изготовим за 2 дня</div>
-								<p>Срок изготовления любой нашей продукции не более 2 дней</p>
-							</div>
-						</div>
-						<div class="in-row no-margin">
-							<div class="img">
-								<img src="images/icon2-3.png" alt="">
-							</div>
-							<div class="col2">
-								<div>Доставка по всей России</div>
-								<p>Где бы вы не находились вы сможете порадовать себя и своих близкиз напечатанной продукцией.</p>
-							</div>
-						</div>
-					</div>
-					<div class="in-row blocks2">
-						<div class="in-row mb0">
-							<div class="img">
-								<img src="images/icon2-4.png" alt="">
-							</div>
-							<div class="col2">
-								<div>Быстро</div>
-								<p>Оформление не займет много времени. 5 минут и заказ готов к печати.</p>
-							</div>
-						</div>
-						<div class="in-row mb0">
-							<div class="img">
-								<img src="images/icon2-5.png" alt="">
-							</div>
-							<div class="col2">
-								<div>Просто</div>
-								<p>Лёгкая система редактирования и форматирования. От вас требуется только добавить фотографии.</p>
-							</div>
-						</div>
-						<div class="in-row no-margin mb0">
-							<div class="img">
-								<img src="images/icon2-6.png" alt="">
-							</div>
-							<div class="col2">
-								<div>Удобно</div>
-								<p>Всё на одной странице сайта. Оформите заказ всего в несколько кликов.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="padding1 bg2">
-				<div class="inner">
-					<div class="title3">Отзывы</div>
-					<div class="in-row blocks3">
-						<div>
-							<div class="rate rate3"></div>
-							<p>Вы просто высылаете нам фотографию, а на выходе получаете определенным образом стилизованную картину, которая заставит вас посмотреть на это изображение под совершено другим углом.</p>
-							<p class="color2">Анна Иванова, 25 сентября 2015</p>
-						</div>
-						<div>
-							<div class="rate rate5"></div>
-							<p>Вы просто высылаете нам фотографию, а на выходе получаете определенным образом стилизованную картину, которая заставит вас посмотреть на это изображение под совершено другим углом.</p>
-							<p class="color2">Анна Иванова, 25 сентября 2015</p>
-						</div>
-						<div class="no-margin">
-							<div class="rate rate1"></div>
-							<p>Вы просто высылаете нам фотографию, а на выходе получаете определенным образом стилизованную картину, которая заставит вас посмотреть на это изображение под совершено другим углом.</p>
-							<p class="color2">Анна Иванова, 25 сентября 2015</p>
-						</div>
-					</div>
-					<div class="align-center">
-						<a href="#" class="btn btn2 btn2-1">Все отзывы</a>
-					</div>
-				</div>
-			</div>
-			<div class="padding3 slider2">
-				<div class="inner">
-					<div class="owl-carousel">
-						<div>
-							<img src="images/logo1.png" alt="">
-						</div>
-						<div>
-							<img src="images/logo2.png" alt="">
-						</div>
-						<div>
-							<img src="images/logo3.png" alt="">
-						</div>
-						<div>
-							<img src="images/logo4.png" alt="">
-						</div>
-						<div>
-							<img src="images/logo5.png" alt="">
-						</div>
-						<div>
-							<img src="images/logo6.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- .content -->
+        <a href="#portfolio">
+            <div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+            </div>
+        </a>
 
-	</div>
-	<!-- .wrapper -->
+    </section><!--home-->
 
-	<div class="footer">
-		<div class="inner clearfix">
-			<div class="fll">
-				<div class="in-row-mid">
-					<span>Мы принимаем:</span>
-					<div class="in-row-mid">
-						<img src="images/pay1.png" alt="">
-						<img src="images/pay2.png" alt="">
-						<img src="images/pay3.png" alt="">
-						<img src="images/pay4.png" alt="">
-					</div>
-				</div>
-				<p>© 2013 - 2016. Все права защищены.</p>
-			</div>
-			<div class="flr">
-				<img src="images/counter.png" alt="">
-			</div>
-		</div>
-	</div>
-	<!-- .footer -->
-</div>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="container">
+                <ul class="top-menu">
+                    <li><a href="#home" data-translation="0">Главная</a></li>
+                    <li><a href="#portfolio">Наши работы</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div><!-- .container -->
+        </nav>
+        <nav id="m-menu-btn-wrapper" class="Fixed">
+            <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </nav>
+        <nav id="m-menu"> <!-- mobile menu -->
+            <ul>
+                <li><a href="#home" data-translation="0">Главная</a></li>
+                <li><a href="#portfolio">Наши работы</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav><!-- mobile menu -->
+    </header>
 
-<!--Scripts-->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Наши работы</h2>
+
+            <div class="slider">
+                <div class="slider__block">
+                    <h3>Meeting.lv</h3>
+                    <img src="images/meeting_slide.png" alt="Meeting.lv" data-jslghtbx>
+                    <p><a href="http://www.meeting.lv" target="_blank">meeting.lv</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Taxi</h3>
+                    <img src="images/taxi_slide.png" alt="Taxi" data-jslghtbx>
+                    <p><a href="https://github.com/Lutsman/Taxi" target="_blank">GitHub</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Меховое Ателье "Соболиный иней"</h3>
+                    <img src="images/atelier_slide.png" alt="Меховое Ателье" data-jslghtbx>
+                    <p><a href="https://github.com/Lutsman/Atelier" target="_blank">https://github.com/Lutsman/Atelier</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>New-Castle Metals</h3>
+                    <img src="images/newcastle_slide.png" alt="New-Castle Metals" data-jslghtbx>
+                    <p><a href="http://newcastlemetals.com" target="_blank">newcastlemetals.com</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Салон красоты "БиОЛа"</h3>
+                    <img src="images/biola_slide.png" alt="Салон красоты" data-jslghtbx>
+                    <p><a href="https://github.com/Lutsman/Biola" target="_blank">https://github.com/Lutsman/Biola</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Ship & Locomotive Supply</h3>
+                    <img src="images/ships_&_trains_slide.png" alt="Ship & Locomotive Supply" data-jslghtbx>
+                    <p><a href="http://gears.com.ua" target="_blank">gears.com.ua</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Страница 404 для Еврострой</h3>
+                    <img src="images/404_slide.png" alt="Страница 404" data-jslghtbx>
+                    <p><a href="http://eustroy.ru/404" target="_blank">eustroy.ru/404</a></p>
+                </div>
+
+            </div><!--slider-->
+
+        </div><!-- .container -->
+    </section><!--portfolio-->
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Навыки</h2>
+
+            <div>
+                <div class="skill__block">
+                    <p class="title">HTML 5</p>
+                    <span data-percent="90" class="chart easyPieChart">
+                        <span class="percent">90%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">CSS 3</p>
+                    <span data-percent="90" class="chart easyPieChart">
+                        <span class="percent">90%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">SASS / SCSS</p>
+                    <span data-percent="75" class="chart easyPieChart">
+                        <span class="percent">75%</span>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="skill__block">
+                    <p class="title">JavaScript</p>
+                    <span data-percent="85" class="chart easyPieChart">
+                        <span class="percent">85%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">JQuery</p>
+                    <span data-percent="70" class="chart easyPieChart">
+                        <span class="percent">70%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">Photoshop</p>
+                    <span data-percent="50" class="chart easyPieChart">
+                        <span class="percent">50%</span>
+                    </span>
+                </div>
+            </div>
+
+        </div><!-- .container -->
+    </section><!--skills-->
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+
+            <figure>
+                <img src="images/dima.png" alt="Дмитрий фото">
+                <figcaption class="title">Дмитрий Луценко</figcaption>
+            </figure>
+            <figure>
+                <img src="images/jenya.png" alt="Евгения фото">
+                <figcaption class="title">Евгения Омельченко</figcaption>
+            </figure>
+            <div class="about__content">
+                <p class="about__intro">Здравствуйте. Меня зовут Дмитрий Луценко, мою спутницу жизни Евгения Омельченко.</p>
+                <p>Мы любим красивые веб сайты, а также путешествовать, бывать в новых местах, часто ездить. Поэтому
+                    решили заниматься front end разработкой. Последние полтора года мы занимаемся версткой сайтов из
+                    PSD, PNG, скетчей.</p>
+                <p>Знаем HTML5, CSS3, Sass, Js, jQuery, понимаем ООП,  знаем о ES6.</p>
+                <p>С примерами наших работ вы можете ознакомиться в разделе <a class="link" href="#portfolio">портфолио</a> или на <a class="link" href="https://github.com/Lutsman">GitHub</a>.</p>
+            </div>
+            <div class="about__info">
+                <p class="title">Прошли курсы:</p>
+                <ul>
+                    <li class="courses"><a class="link" target="_blank" href="http://www.codecademy.com">www.codecademy.com</a>
+                        <ul>
+                            <li>HTML & CSS</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                        </ul>
+                    </li>
+                    <li class="courses"><a class="link" target="_blank" href="http://www.specialist.ru">www.specialist.ru</a>
+                        <ul>
+                            <li>Adobe Photoshop CS6</li>
+                        </ul>
+                    </li>
+                    <li class="courses"><a class="link" target="_blank" href="http://learn.javascript.ru">learn.javascript.ru</a>
+                        <ul>
+                            <li>JavaScript <a href="#" data-jslghtbx="images/certificate_JS.jpg">(Сертификат)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!-- .container -->
+    </section><!--about-->
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+
+            <form id="contacts-form" method="post" action="mail/mailer.php">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="email" name="email" placeholder="Почта*" required="">
+                <textarea name="message" cols="30" rows="10" placeholder="Сообщение*" required=""></textarea>
+                <input type="submit">
+
+                <div class="pend-block hidden">
+                    <img src="service_img/Intersection.gif" alt="loader_gif">
+                    <p>Отправляем...</p>
+                </div>
+                <div class="succ-block hidden">
+                    <p>Отправили!</p>
+                </div>
+                <div class="err-block hidden">
+                    <p>Что-то пошло не так...</p>
+                </div>
+
+            </form>
+
+            <div class="contacts__footer">
+                <p class="contacts__title">Дмитрий Луценко</p>
+                <span><a class="skype" href="skype:goa_season?chat"><img src="images/chatbutton_32px.png"></a></span>
+                <span id="dima-mail">
+                    Email:
+                    <noscript>
+                        <!-- This message is displayed if the browser has javascript disabled. -->
+                        &#51;&#51;&#51;&#51;&#51;&#51;&#121; (at) &#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
+                    </noscript>
+                    <a href="mailto:333333y@gmail.com">333333y@gmail.com</a>
+                </span>
+            </div>
+            <div class="contacts__footer">
+                <p class="contacts__title">Евгения Омельченко</p>
+                <span><a class="skype" href="skype:aruna000?chat"><img src="images/chatbutton_32px.png"></a></span>
+                <span id="jenya-mail">
+                    Email:
+                    <noscript>
+                        <!-- This message is displayed if the browser has javascript disabled. -->
+                        &#109;&#121;&#114;&#117;&#97;&#108;&#97; (at) &#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
+                    </noscript>
+                    <a href="mailto:myruala@gmail.com">myruala@gmail.com</a>
+                </span>
+            </div>
+
+        </div><!-- .container -->
+    </section><!--about-->
+
+    <footer>
+        <div class="container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=100001367379881" class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/Lutsman" class="social-icon"><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <p class="copyright">&copy; 2015 Дмитрий Луценко, Евгения Омельченко</p>
+        </div><!-- .container -->
+    </footer>
+
+</div><!--page-wrap-->
+
+<!-- Javascript files -->
 <script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/pgwslideshow.min.js"></script>
-<script src="js/fancySelect.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fs.stepper.min.js"></script>
-<script src="js/script.js"></script>
-
+<script src="js/jquery.easypiechart.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.mmenu.min.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
