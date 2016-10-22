@@ -345,6 +345,9 @@ footer {
  Sections
  ---------------------------------------------- */
 .pageheader {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
   height: 445px;
   border-bottom: 1px solid #fff;
   overflow: hidden; }
