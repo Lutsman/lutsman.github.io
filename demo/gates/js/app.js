@@ -572,10 +572,7 @@ $(document).ready(function () {
             autoplaySpeed: 7000,
             speed: 1000,
             arrows: false,
-            //fade: true,
-            dots: true//,
-            //prevArrow: '<span class="slick-prev"></span>',
-            //nextArrow: '<span class="slick-next"></span>'
+            dots: true//
         });
     })();
 

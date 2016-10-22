@@ -470,7 +470,7 @@ footer {
 
 .order-form {
   width: 338px;
-  height: 391px;
+  height: 410px;
   background-color: #fff; }
   .order-form form p:last-child {
     margin-top: 15px;
@@ -865,6 +865,7 @@ footer {
 /*order-price-list*/
 .order-price-list {
   position: relative;
+  width: 100%;
   min-height: 144px;
   padding: 20px 0;
   z-index: 5; }
@@ -1078,6 +1079,12 @@ footer {
   font-weight: 700;
   color: #ff8b1b; }
 
+.feedback-slider .slide {
+  display: none; }
+
+.feedback-slider.slick-initialized .slide {
+  display: block; }
+
 /*consultation*/
 .consultation {
   min-height: 384px;
@@ -1214,19 +1221,24 @@ footer {
 /*portfolio*/
 .portfolio-slider {
   width: 100%; }
-  .portfolio-slider .slide > div {
-    position: relative;
-    font-size: 0;
-    cursor: pointer; }
-    .portfolio-slider .slide > div:hover .hover-img {
-      visibility: visible;
-      opacity: 1; }
-  .portfolio-slider .slide .hover-img {
-    width: 100%;
-    height: 100%;
-    margin-left: 0;
-    top: 0;
-    left: 0; }
+  .portfolio-slider .slide {
+    display: none; }
+    .portfolio-slider .slide > div {
+      position: relative;
+      font-size: 0;
+      cursor: pointer; }
+      .portfolio-slider .slide > div:hover .hover-img {
+        visibility: visible;
+        opacity: 1; }
+    .portfolio-slider .slide .hover-img {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      top: 0;
+      left: 0; }
+
+.portfolio-slider.slick-initialized .slide {
+  display: block; }
 
 .portfolio {
   min-height: 575px; }
@@ -1309,11 +1321,11 @@ footer {
     text-align: left;
     background-color: #f5f0ea;
     z-index: 5; }
-    .contact-us h2 p {
-      display: inline;
+    .contact-us h2 .big {
       font-size: 72px;
-      line-height: 50px; }
-      .contact-us h2 p:last-child {
+      line-height: 50px;
+      color: inherit; }
+      .contact-us h2 .big:last-child {
         font-size: 60px;
         line-height: 70px; }
   .contact-us .order-form {
@@ -2141,6 +2153,10 @@ Placeholder
   header span {
     font-size: 18px; }
 
+  .pageheader {
+    background: url("../images/bg_tablet_1.jpg") no-repeat;
+    background-size: cover; }
+
   .top-menu .desctop-nav {
     display: none; }
   .top-menu .mobile-nav {
@@ -2170,7 +2186,8 @@ Placeholder
     .description__block .block-6, .description__block .block-7, .description__block .block-8 {
       left: 235px; }
     .description__block .block-7 {
-      top: 380px; }
+      left: 73px;
+      top: 570px; }
     .description__block .block-8 {
       top: 445px; }
     .description__block .block-9 {
@@ -2615,6 +2632,10 @@ Placeholder
   header span {
     font-size: 16px; }
 
+  .pageheader {
+    background: url("../images/bg_mobile_1.jpg") no-repeat;
+    background-size: cover; }
+
   .logo {
     width: 150px;
     font-size: 23px;
@@ -2634,8 +2655,11 @@ Placeholder
     .order-call .order-call-btn {
       width: 100%; }
 
-  .pageheader .order-form {
+  .order-form {
     width: 100%;
+    height: auto; }
+
+  .pageheader .order-form {
     margin-right: 0; }
 
   .pageheader-form-icon {
@@ -2643,6 +2667,7 @@ Placeholder
 
   .form__block {
     width: 100%;
+    height: auto;
     margin: 20px 0 15px; }
 
   .order-price-list .form__block {
@@ -2701,6 +2726,9 @@ Placeholder
   .thanks-page .pageheader {
     min-height: 730px;
     padding-bottom: 330px;
-    margin-bottom: -330px; } }
+    margin-bottom: -330px; }
+
+  .privacy-policy h2 {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -542,7 +542,7 @@ footer {
 }
 .order-form {
   width: 338px;
-  height: 391px;
+  height: 410px;
   background-color: #fff;
   form p:last-child {
     margin-top: 15px;
@@ -1019,6 +1019,7 @@ footer {
 /*order-price-list*/
 .order-price-list {
   position: relative;
+  width: 100%;
   min-height: 144px;
   padding: 20px 0;
   z-index: 5;
@@ -1276,9 +1277,15 @@ footer {
   font-weight: 700;
   color: $main-color;
 }
+.feedback-slider .slide {
+  display: none;
+}
 
+.feedback-slider.slick-initialized .slide {
+  display: block;
+}
 
-/*consultation*/
+  /*consultation*/
 .consultation {
   min-height: 384px;
   position: relative;
@@ -1461,6 +1468,7 @@ footer {
   width: 100%;
 
   .slide {
+    display: none;
     &>div {
       position: relative;
       font-size: 0;
@@ -1479,6 +1487,12 @@ footer {
       top: 0;
       left: 0;
     }
+  }
+}
+
+.portfolio-slider.slick-initialized {
+  .slide {
+    display: block;
   }
 }
 
@@ -1578,10 +1592,10 @@ footer {
     text-align: left;
     background-color: $bg-color;
     z-index: 5;
-    p {
-      display: inline;
+    .big {
       font-size: 72px;
       line-height: 50px;
+      color: inherit;
       &:last-child {
         font-size: 60px;
         line-height: 70px;
@@ -2511,6 +2525,10 @@ Placeholder
   header span {
     font-size: 18px;
   }
+  .pageheader {
+    background: url("../images/bg_tablet_1.jpg") no-repeat;
+    background-size: cover;
+  }
   .top-menu{
     .desctop-nav {
       display: none;
@@ -2552,7 +2570,8 @@ Placeholder
       left: 235px;
     }
     .block-7 {
-      top: 380px;
+      left: 73px;
+      top: 570px;
     }
     .block-8 {
       top: 445px;
@@ -3091,6 +3110,10 @@ Placeholder
   header span {
     font-size: 16px;
   }
+  .pageheader {
+    background: url("../images/bg_mobile_1.jpg") no-repeat;
+    background-size: cover;
+  }
   .logo {
     width: 150px;
     font-size: 23px;
@@ -3114,8 +3137,11 @@ Placeholder
       width: 100%;
     }
   }
-  .pageheader .order-form {
+  .order-form {
     width: 100%;
+    height: auto;
+  }
+  .pageheader .order-form {
     margin-right: 0;
   }
   .pageheader-form-icon {
@@ -3123,6 +3149,7 @@ Placeholder
   }
   .form__block {
     width: 100%;
+    height: auto;
     margin: 20px 0 15px;
   }
   .order-price-list {
@@ -3198,6 +3225,11 @@ Placeholder
       min-height: 730px;
       padding-bottom: 330px;
       margin-bottom: -330px;
+    }
+  }
+  .privacy-policy {
+    h2 {
+      font-size: 14px;
     }
   }
 }

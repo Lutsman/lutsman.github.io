@@ -1,53 +1,6 @@
-/*
-@mixin user-select($user-select) {
-  -ms-user-select: $user-select;
-  -moz-user-select: $user-select;
-  -webkit-user-select: $user-select;
-  user-select: $user-select;
-}
-@mixin transform-origin($transform-origins...) {
-  -ms-transform-origin: $transform-origins;
-  -moz-transform-origin: $transform-origins;
-  -webkit-transform-origin: $transform-origins;
-  -o-transform-origin: $transform-origins;
-  transform-origin: $transform-origins;
-}
-@mixin column-count($column-count) {
-  -webkit-column-count: $column-count;
-  -moz-column-count: $column-count;
-  column-count: $column-count;
-}*/
 /* ----------------------------------------------
  Connect fonts
  ---------------------------------------------- */
-/* font-family: "U-Display-Light"; */
-/*@font-face {
-  font-family: "U-Display-Light";
-  src: url("fonts/U-Display-Light.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Geometria';
-  src: url("fonts/Geometria.eot");
-  src: url("fonts/Geometria.eot") format("embedded-opentype"), url("fonts/Geometria.woff") format("woff"), url("fonts/Geometria.ttf") format("truetype"), url("fonts/Geometria.svg#Geometria") format("svg");
-}*/
-/*
-@font-face {
-  font-family: 'MuseoSans900';
-  src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl_3.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'FedraSansProBookItalic';
-  src: url("fonts/Fedra-Sans-Pro-Book-Italic_17237.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-*/
 /*Import fonts from Google fonts */
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900&subset=cyrillic-ext";
 /* ----------------------------------------------
@@ -763,8 +716,8 @@ footer {
   position: fixed;
   width: 44px;
   height: 36px;
-  background-color: transparent;
-  border: 1px solid #000;
+  background-color: #feb41c;
+  border: 1px solid #feb41c;
   box-sizing: border-box;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -783,11 +736,12 @@ footer {
   cursor: pointer;
   z-index: 20; }
   #scrollUp:hover {
-    border-color: #feb41c;
-    background: #feb41c; }
-    #scrollUp:hover .upButton {
+    border-color: #b37901;
+    background: #b37901;
+    /*.upButton {
       border-top: 2px solid #fff;
-      border-left: 2px solid #fff; }
+      border-left: 2px solid #fff;
+    }*/ }
   #scrollUp .upButton {
     -webkit-transition: border 0.2s ease-in-out;
     -moz-transition: border 0.2s ease-in-out;
@@ -802,8 +756,8 @@ footer {
     display: block;
     width: 8px;
     height: 8px;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
     -ms-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -858,6 +812,10 @@ footer {
 .content__block {
   font-size: 16px;
   color: #3e3d3b; }
+  .content__block::after {
+    content: '';
+    display: table;
+    clear: both; }
   .content__block h1, .content__block h2, .content__block h3, .content__block h5 {
     margin-bottom: 10px; }
   .content__block p {
@@ -871,12 +829,12 @@ footer {
   font-weight: 300; }
 
 .big-img-block {
-  width: 985px;
+  /*width: 985px;*/
   border-top: 9px solid #375680;
   border-bottom: 4px solid #999; }
 
 .big-block {
-  width: 985px;
+  /*width: 985px;*/
   padding: 35px 115px 45px 40px; }
 
 .grey-block {
@@ -944,7 +902,7 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 985px;
+    width: 100%;
     height: 9px;
     background-color: #375680; }
   .blue-line-block h5 {
@@ -1000,7 +958,7 @@ footer {
     color: #375680; }
 
 .contact-us {
-  padding: 30px 0 40px; }
+  padding: 30px 0 0; }
   .contact-us::after {
     content: '';
     display: table;
@@ -1029,6 +987,9 @@ footer {
     margin: 0; }
     .contact-us .phone::before {
       background-position: -192px 0; }
+
+.map-block {
+  padding-top: 30px; }
 
 .map-wrap {
   position: relative;
@@ -1199,8 +1160,6 @@ footer {
     content: '';
     display: table;
     clear: both; }
-  .table-block + .contact-us {
-    padding-bottom: 0; }
 
 .table-line > div {
   float: left;
@@ -1768,9 +1727,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       margin: 0 -15px; }
 
   .pageheader-slider {
-    height: auto;
-    padding-bottom: 60px;
-    background-color: #4b5f6d; }
+    height: auto; }
     .pageheader-slider p {
       display: none; }
 

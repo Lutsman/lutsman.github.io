@@ -8,7 +8,7 @@
     <meta name="keywords" content="термопанели, termo, klinker">  <!--Ключевые слова-->
     <meta name="description" content="Клинкерные термопанели ЕЗСМ на основе пенополиуретана"> <!--Описание-->
 
-    <title>Title</title>
+    <title>Клинкерные термопанели ЕЗСМ</title>
 
     <!--Start Open Graph-->
     <meta property="og:locale" content="ru_RU">
@@ -19,10 +19,6 @@
     <meta property="og:image" content="http://"> <!--Ссылка на картинку, которая будет отображаться в посте-->
     <!--End Open Graph-->
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon_1.ico" type="image/x-icon">
-    <!--    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
-
     <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,400italic,300,300italic,500,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
@@ -30,11 +26,23 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/placeholder_polyfill.css">
 
+    <!--Plugins-->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.css">
+    <link rel="stylesheet" href="css/jquery.mmenu.themes.css">
+
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!--First loaded async sript-->
+    <script src="js/first-init.js" async></script>
 </head>
 
 <body class="thanks-page">
+
+<!--Yandex targets no script-->
+<noscript><div><img src="https://mc.yandex.ru/watch/39107765" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 <div class="page-wrap">
     <header>
         <div class="container">
@@ -152,8 +160,7 @@
 
             <!-- всплывающее окно Заказать звонок -->
             <div id="call-request" class="order-form">
-                <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
-                <form class="form" method="post" action="">
+                <form class="form" method="post" action="mail/mailer.php">
                     <h3>Заказать</h3>
                     <p>обратный звонок</p>
 
@@ -175,7 +182,7 @@
             <!-- всплывающее окно Заказать термопанели-->
             <div id="order-thermopanel" class="order-form">
                 <p class="close"><a href="javascript:void(0)" data-action="close">&times;</a></p>
-                <form class="form" method="post" action="">
+                <form class="form" method="post" action="mail/mailer.php">
                     <h3>Заказать</h3>
                     <p>термопанели</p>
 
@@ -199,6 +206,15 @@
 
 </div><!--page-wrap-->
 
-
+<!--Scripts-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.mmenu.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/app.js"></script>
+<!--[if lt IE 9]>
+<script src="js/placeholder_polyfill.jquery.min.combo.js"></script>
+<![endif]-->
 </body>
 </html>

@@ -13,18 +13,13 @@ $(document).ready(function () {
             var self = this;
             var setActiveLi = self.pageScrollListener.call(self);
 
+            self._staticMenuPosition = self.getCoords(self._menu).top;
+            self.toggleMenuPosition();
+            setActiveLi();
 
-            $(window).load(function () {
-                self._staticMenuPosition = self.getCoords(self._menu).top;
-                self.toggleMenuPosition();
-                setActiveLi();
-
-                $(window)
-                    .scroll(self.toggleMenuPosition.bind(self))
-                    .scroll(setActiveLi);
-            });
-
-
+            $(window)
+                .scroll(self.toggleMenuPosition.bind(self))
+                .scroll(setActiveLi);
         };
         FixedMenu.prototype.getCoords = function (elem) {
             var box = elem.getBoundingClientRect();
@@ -399,10 +394,10 @@ $(document).ready(function () {
 
         //init mask
         $('input[name="phone"]').mask("+7 (999) 999-99-99");
-        $('input[name="time"]').mask("99:99");
+        $('input[name^="time"]').mask("99:99");
 
         var anyForm = new FormController({
-            beforeSend: function () {
+            resolve: function () {
                 window.open('thanks.html', '_self');
             }
         });
@@ -450,6 +445,7 @@ $(document).ready(function () {
         /*page scroll*/
         (function(){
             var pageScroll = new ScrollToAnchor({
+                listenedBlock: document.getElementById('#top-menu'),
                 translation: '#top-menu'
             });
             pageScroll.init();
@@ -508,24 +504,20 @@ $(document).ready(function () {
         var winWidth = window.innerWidth;
         var firstScript = document.querySelectorAll('script')[0];
         var script = document.createElement('script');
-        var placemarks = {
-            0: {
-                coords: [55.3004,38.7311],
-                hintContent: 'ООО “Цемстройлогистика”, Вознесенск!'
-            },
-            1: {
-                coords: [55.3868,39.0220],
-                hintContent: 'ООО “Цемстройлогистика”, Егорьевск!'
-            }
-        };
+        var coords = [55.30239172, 38.72978195];
         var center = [];
-        var zoom = 10;
+        var zoom = false;
 
 
         if (winWidth > 992) {
-            center = [55.3383,38.55];
+            center = [55.30089800, 38.722];
+            zoom = 16;
+        } else if (winWidth < 992 && winWidth > 450) {
+            center = [55.30089800, 38.72666033];
+            zoom = 16;
         } else {
-            center = [55.3383,38.87];
+            center = [55.30089800, 38.72666033];
+            zoom = 15;
         }
 
         script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
@@ -544,19 +536,26 @@ $(document).ready(function () {
                 searchControlProvider: 'yandex#search'
             });
 
-            myMap.behaviors.disable('scrollZoom');
+            var currPlacemark = new ymaps.Placemark(coords,
+                {
+                    hintContent: 'Россия, Московская область, <br/> Воскресенск, Благодатная улица, <br/> 25 ООО Строй-Мастер +7925-869-77-70'
+                }, {
+                    preset:'islands#redDotIcon'
+                });
 
-            for (var currPlacemark in placemarks) {
-                myMap.geoObjects.add(new ymaps.Placemark(placemarks[currPlacemark].coords, {
-                    hintContent: placemarks[currPlacemark].hintContent
-                },
-                    {
-                    iconLayout: 'default#image',
-                    iconImageHref: 'images/map_baloon.png',
-                    iconImageSize: [22, 22],
-                    iconImageOffset: [-15, -30]
-                }));
-            }
+            /*линия*/
+            var myPolyline = new ymaps.Polyline(
+                [
+                    [55.30004719, 38.72523340], [55.29990028, 38.72961076], [55.29996149, 38.73074802], [55.30234863, 38.72980388]
+                ], {
+
+                }, {
+                    strokeWidth: 3
+                });
+
+            myMap.geoObjects.add(currPlacemark);
+            myMap.geoObjects.add(myPolyline);
+            myMap.behaviors.disable('scrollZoom');
         }
     })();
     
@@ -624,6 +623,7 @@ $(document).ready(function () {
                         href: href,
                         padding: [0, 0, 0, 0],
                         margin: [0, 0, 0, 0],
+                        maxWidth: '80%',
                         tpl: {
                             closeBtn: fancyCloseBtn
                         },
@@ -638,7 +638,9 @@ $(document).ready(function () {
                     $.fancybox.open({
                         href: href,
                         type: 'iframe',
+                        maxWidth: '80%',
                         maxHeight: '90%',
+                        //maxHeight: '90%',
                         padding: [0, 0, 0, 0],
                         margin: [0, 0, 0, 0],
                         tpl: {
@@ -660,6 +662,7 @@ $(document).ready(function () {
                         href: href,
                         padding: [0, 0, 0, 0],
                         margin: [0, 0, 0, 0],
+                        maxWidth: '80%',
                         tpl: {
                             closeBtn: fancyCloseBtn
                         },
@@ -686,20 +689,9 @@ $(document).ready(function () {
         $('.portfolio-slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
-            autoplay: true,
-            /*responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                }
-            ]*/
+            autoplay: true
         });
     })();
-
-
 
     /*BlockToggler*/
    (function(){
@@ -728,6 +720,9 @@ $(document).ready(function () {
 
         function setSameRowHeight() {
             var $table = $('.compare__table');
+
+            if (!$table.length) return;
+
             var $columns = $table.find('.table-column');
 
             for (var i = 1; i < $columns[0].children.length; i++) {
@@ -751,40 +746,41 @@ $(document).ready(function () {
         }
     })();
 
-
     /**
      *Animate
      */
     (function(){
         $(".scroll").each(function () {
-            var block = $(this);
-            $(window).bind({
-                scroll : function() {
-                    var top = block.offset().top;
-                    var bottom = block.height()+top;
-                    top = top - $(window).height();
-                    var scroll_top = $(this).scrollTop();
-                    if ((scroll_top > top) && (scroll_top < bottom)) {
-                        if (!block.hasClass("animated")) {
-                            block.addClass("animated");
-                        }
-                    }
-                },
-                load : function() {
-                    var top = block.offset().top;
-                    var bottom = block.height()+top;
-                    top = top - $(window).height();
-                    var scroll_top = $(this).scrollTop();
-                    if ((scroll_top > top) && (scroll_top < bottom)) {
-                        if (!block.hasClass("animated")) { // если забыли добавить анимацию, все же добавляем
-                            //block.addClass("animated");
-                        }
-                    } else {
-                        block.removeClass("animated");
-                    }
-                }
+            var block = this;
+
+            animateOnLoad(block);
+
+            $(window).on({
+                scroll : animateOnScroll.bind(this, block)
             });
         });
+
+        function animateOnScroll(block) {
+            var coords = block.getBoundingClientRect();
+            var clienHeight = document.documentElement.clientHeight;
+
+            if ((coords.bottom > 0 && coords.bottom <= clienHeight) || (coords.top > 0 && coords.top <= clienHeight)) {
+                if (!block.classList.contains("animated")) {
+                    block.classList.add("animated");
+                }
+            }
+        }
+
+        function animateOnLoad(block) {
+            var coords = block.getBoundingClientRect();
+            var clienHeight = document.documentElement.clientHeight;
+
+            if (coords.bottom < 0 || coords.bottom > clienHeight || coords.top < 0 || coords.bottom > clienHeight) {
+                if (block.classList.contains("animated")) {
+                    block.classList.remove("animated");
+                }
+            }
+        }
     })();
     
     

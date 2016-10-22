@@ -122,14 +122,11 @@ $(document).ready(function () {
         $('.pageheader-slider').slick({
             autoplay: true,
             autoplaySpeed: 7000,
-            speed: 3000,
+            speed: 2000,
             fade: true,
             dots: true,
             prevArrow: '<span class="slick-prev"></span>',
-            nextArrow: '<span class="slick-next"></span>',
-            /*easing: 'ease-in',
-            vertical: true,
-            verticalSwiping: true*/
+            nextArrow: '<span class="slick-next"></span>'
         });
     })();
 
@@ -520,9 +517,7 @@ $(document).ready(function () {
                 padding: [0, 0, 0, 0],
                 margin: [0, 0, 0, 0],
                 nextEffect: 'fade',
-                prevEffect: 'fade',
-                maxHeight: '80%',
-                minHeight: '80%'
+                prevEffect: 'fade'
             });
         }
 

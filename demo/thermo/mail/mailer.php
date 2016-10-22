@@ -22,6 +22,15 @@
         $phone = substr(htmlspecialchars(trim($_POST['phone'])), 0, 100);
         $mess .= '<b>Телефон клиента: </b>' . $phone . '<br>';
     }
+    if(isset($_POST['message'])) {
+        $customerMessage = substr(htmlspecialchars(trim($_POST['message'])), 0, 300);
+        $mess .= '<b>Телефон клиента: </b>' . $customerMessage . '<br>';
+    }
+    if(isset($_POST['time-from']) && isset($_POST['time-to'])) {
+        $timeFrom = substr(htmlspecialchars(trim($_POST['time-from'])), 0, 5);
+        $timeTo = substr(htmlspecialchars(trim($_POST['time-to'])), 0, 5);
+        $mess .= '<b>Удобное время для клиента: </b> с: ' . $timeFrom . ' до: ' . $timeTo . '<br>';
+    }
     if(isset($_POST['subject'])) {
         $subject = substr(htmlspecialchars(trim($_POST['subject'])), 0, 200);
     }
@@ -32,15 +41,15 @@
     require 'class.phpmailer.php';
 
     $mail = new PHPMailer();
-    $mail->AddAddress('termo-panely@yandex.ru', 'info@termo-panely.ru');      	                // кому - адрес, Имя (например, 'email@ rek9.ru','Денис Герасимов')
+    $mail->AddAddress('termo-panely@yandex.ru, info@termo-panely.ru');      	                // кому - адрес, Имя (например, 'email@ rek9.ru','Денис Герасимов') termo-panely@yandex.ru, info@termo-panely.ru
     $mail->IsHTML(true);                        				// выставляем формат письма HTML 
     $mail->CharSet = "UTF-8";                   				// кодировка
-	$mail->From = "termo-panely@info.ru";					        	// email, с которого отправиться письмо
+	$mail->From = "info@termo-panely.ru";					        	// email, с которого отправиться письмо
 	$mail->FromName = "Фасадные термопанели";					    // откого письмо
     $mail->Body = $mess;
     $mail->Subject = $subject;
 
-    // отправляем наше письмо		
+    // отправляем наше письмо
 	
 	if ($mail->Send()) header('Location: ../');                 // в поле Location можно настроить переадресацию
 	else { die ('Mailer Error: ' . $mail->ErrorInfo); }
