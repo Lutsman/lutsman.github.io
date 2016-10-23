@@ -7,9 +7,9 @@ function init() {
     /*Loading scripts and css*/
     (function(){
         /*adding scipts*/
-        addScript('js/first-load.min.js', document.head);
+        /*addScript('js/first-load.min.js', document.head);
         addScript('js/jquery-1.11.1.min.js', 'js/jquery.fancybox.pack.js', 'js/jquery.mmenu.min.js', 'js/slick.min.js',
-            'js/jquery.maskedinput.min.js', 'js/app.min.js', 'js/placeholder_polyfill.jquery.min.combo.js');
+            'js/jquery.maskedinput.min.js', 'js/app.min.js', 'js/placeholder_polyfill.jquery.min.combo.js');*/
 
         /*adding css*/
         addCss('https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,400italic,300,300italic,500,500italic&subset=latin,cyrillic',
