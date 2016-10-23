@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", ready);
+//document.addEventListener("DOMContentLoaded", ready);
 
+init();
 
-function ready() {
+function init() {
 
     /*Loading scripts and css*/
     (function(){
@@ -11,9 +12,9 @@ function ready() {
             'js/jquery.maskedinput.min.js', 'js/app.min.js', 'js/placeholder_polyfill.jquery.min.combo.js');
 
         /*adding css*/
-        addCss('css/normalize.min.css', 'css/jquery.fancybox.min.css',
-            'css/jquery.mmenu.min.css', 'css/jquery.mmenu.themes.min.css', 'css/slick.min.css', 'css/slick-theme.min.css',
-            'css/styles.min.css', 'css/placeholder_polyfill.min.css', document.head);
+        addCss('https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,400italic,300,300italic,500,500italic&subset=latin,cyrillic',
+            'css/normalize.min.css', 'css/jquery.fancybox.min.css', 'css/jquery.mmenu.min.css', 'css/jquery.mmenu.themes.min.css',
+            'css/slick.min.css', 'css/slick-theme.min.css', 'css/styles.min.css', 'css/placeholder_polyfill.min.css', document.head);
 
 
         function addScript() { // args: str, [parentEl (DOM element), nextSibling (DOM element)]
