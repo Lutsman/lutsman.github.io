@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("./../service_img/img_slick/ajax-loader.gif") center no-repeat; }
+  background: #fff url("./../images/img_lib/slick/ajax-loader.gif") center no-repeat; }
 
 /* Icons */
 @font-face {
