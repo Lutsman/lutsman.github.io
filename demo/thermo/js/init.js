@@ -26,9 +26,16 @@ function init() {
         nextSibling = nextSibling || null;
 
         var tag = createTagFunc(tagArr[currIndex]);
+        var tagAddedEvent = this.createEvent('tagAdded', tag, tagArr[currIndex]);
+        var tagLoadedEvent = this.createEvent('tagLoaded', tag, tagArr[currIndex]);
 
         tag = parentEl.insertBefore(tag, nextSibling);
-        tag.addEventListener('load', this.loadTagRecur.bind(this, createTagFunc, tagArr, currIndex + 1, parentEl, nextSibling));
+        tag.dispatchEvent(tagAddedEvent);
+
+        tag.addEventListener('load', function () {
+            tag.dispatchEvent(tagLoadedEvent);
+            this.loadTagRecur(createTagFunc, tagArr, currIndex + 1, parentEl, nextSibling);
+        }.bind(this));
     };
     Loader.prototype.addCss = function(links, parentEl, nextSibling) {
         parentEl = parentEl || document.body;
@@ -36,8 +43,13 @@ function init() {
 
         for(var i = 0; i < links.length; i++) {
             var link = this.createCss(links[i]);
+            var linkAddedEvent = this.createEvent('linkAdded', link, links[i]);
+            var linkLoadedEvent = this.createEvent('linkLoaded', link, links[i]);
 
             parentEl.insertBefore(link, nextSibling);
+            link.dispatchEvent(linkAddedEvent);
+
+            link.addEventListener('load', link.dispatchEvent.bind(this, linkLoadedEvent));
         }
     };
     Loader.prototype.createCss = function(href) {
@@ -47,6 +59,17 @@ function init() {
 
         return link;
     };
+    Loader.prototype.createEvent = function (eventName, elem, src) {
+        var elemLoaded = new CustomEvent(eventName, {
+            bubbles: true,
+            detail: {
+                el: elem,
+                src: src
+            }
+        });
+
+        return elemLoaded;
+    }
 
     /*Loading scripts and css*/
     (function(){
