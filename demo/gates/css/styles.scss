@@ -61,7 +61,8 @@
  ---------------------------------------------- */
 
 /*Import fonts from Google fonts */
-@import 'https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Fira+Sans:300,300i,400,400i,500,500i,700,700i&subset=cyrillic';
+@import 'https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic';
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i&subset=cyrillic';
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic';
 
 // color and fonts variable //
@@ -174,6 +175,7 @@ h1 {
   margin: 0;
   font-size: 35px;
   font-weight: 700;
+  line-height: 40px;
 }
 h2 {
   font-size: 30px;
@@ -288,7 +290,7 @@ input {
 /* ---------------------------------------------- */
 
 a, .btn {
-  @include transition(all 0.2s ease-in-out 0s);
+  @include transition(all 0.2s ease-in-out);
 }
 
 /* ----------------------------------------------
@@ -516,7 +518,7 @@ footer {
   min-height: 135px;
   padding: 35px 0;
   font-size: 14px;
- /* font-weight: 300;*/
+  /* font-weight: 300;*/
   line-height: 20px;
   background-color: #e8e8e8;
   border-top: 3px solid #c4c4c4;
@@ -661,7 +663,7 @@ footer {
     font-weight: 300;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.6);
-    @include transition(all 0.2s ease-in-out 0s);
+    @include transition(all 0.2s ease-in-out);
     &::before {
       content: '';
       display: block;
@@ -928,7 +930,7 @@ footer {
     background-color: #f6f5f5;
     border-right: 1px solid #e7e7e7;
     border-left: 1px solid #e7e7e7;
-    @include transition(all 0.2s ease-in-out 0s);
+    @include transition(all 0.2s ease-in-out);
     &:hover {
       color: #fff;
       background-color: #36a2fd;
@@ -1001,7 +1003,7 @@ footer {
       width: 100%;
       height: 100%;
       background-color: rgba(6, 121, 218, 0.6);
-      @include transition(all 0.2s ease-in-out 0s);
+      @include transition(all 0.2s ease-in-out);
     }
     &:hover::before {
       visibility: visible;
@@ -1433,6 +1435,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .content {
     width: 100%;
   }
+  .bread-crumbs {
+    display: none;
+  }
   .text-box {
     h2 {
       font-size: 22px;
@@ -1539,24 +1544,11 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .big-title {
     font-size: 35px;
   }
-  .header-middle-bg {
+  .header-middle-bg, .header-right-bg {
     display: none;
   }
-  .header-left-bg, .header-right-bg {
+  .header-left-bg {
     width: 100%;
-    height: 50%;
-  }
-  .header-right-bg {
-    top: 50%;
-  }
-  header {
-    text-align: center;
-    .logo, .phone {
-      float: none;
-    }
-    .phone {
-      display: inline-block;
-    }
   }
   .text-box {
     display: none;
