@@ -520,5 +520,12 @@ $(document).ready(function(){
             autoplay: true
         });
     })();
+
+    /*lighbox*/
+    (function(){
+        var lightBox = new Lightbox();
+
+        lightBox.load();
+    })();
 });
 
