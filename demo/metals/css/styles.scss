@@ -639,40 +639,50 @@ footer {
     color: $main-color-blue;
   }
 }
+.round-counter {
+  ul {
+    counter-reset: item;
+    li {
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      &::before {
+        content: counter(item);
+        counter-increment: item;
+        font-size: 28px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 45px;
+        top: 0;
+        left: -24px;
+        width: 47px;
+        height: 47px;
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid $main-color-orange;
+        box-sizing: border-box;
+        @include border-radius(50%);
+      }
+    }
+  }
+}
+
 .scheme-work__list {
   margin-left: 23px;
   border-left: 1px solid #bdbcbb;
   li {
-    position: relative;
-    padding-left: 36px;
     margin-bottom: 34px;
     &:last-child {
       left: -1px;
       padding-left: 37px;
       margin-bottom: 0;
       background-color: #fff;
-      span {
-        left: -23px;
-      }
       p {
         margin-bottom: 0;
       }
     }
-    span {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: -24px;
-      width: 47px;
-      height: 47px;
-      font-size: 28px;
-      font-weight: 300;
-      text-align: center;
-      line-height: 45px;
-      background-color: #fff;
-      border: 1px solid $main-color-orange;
-      @include border-radius(50%);
-    }
+
     p {
       margin-bottom: 19px;
       line-height: 21px;
