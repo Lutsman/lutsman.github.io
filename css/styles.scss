@@ -385,13 +385,6 @@ footer .container {
     color: #4285f4;
     text-align: center;
   }
-  img {
-    cursor: pointer;
-    @include filter(grayscale(100%));
-    &:hover {
-      @include filter(none);
-    }
-  }
 }
 
 /* ----------------------------------------------

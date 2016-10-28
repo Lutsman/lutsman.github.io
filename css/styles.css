@@ -347,13 +347,6 @@ footer .container {
     font-size: 20px;
     color: #4285f4;
     text-align: center; }
-  .slider__block img {
-    cursor: pointer;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); }
-    .slider__block img:hover {
-      -webkit-filter: none;
-      filter: none; }
 
 /* ----------------------------------------------
  Skills
