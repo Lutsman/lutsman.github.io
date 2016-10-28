@@ -512,7 +512,10 @@ $(document).ready(function(){
 
         var profileForm = new FormController({
             beforeSend: function (data, form) {
-                form.submit();
+                $.post(
+                    form.action,
+                    $.param(data)
+                );
             }
         });
         profileForm.init();
