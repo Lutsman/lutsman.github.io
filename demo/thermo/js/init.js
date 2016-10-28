@@ -43,12 +43,19 @@
         for(var i = 0; i < links.length; i++) {
             var link = this.createCss(links[i]);
             var linkAddedEvent = this.createEvent('linkAdded', link, links[i]);
-            var linkLoadedEvent = this.createEvent('linkLoaded', link, links[i]);
+            //var linkLoadedEvent = this.createEvent('linkLoaded', link, links[i]);
+            var triggeredEl = link;
 
             parentEl.insertBefore(link, nextSibling);
-            link.dispatchEvent(linkAddedEvent);
 
-            link.addEventListener('load', link.dispatchEvent.bind(this, linkLoadedEvent));
+
+            if (link.closest('head')) { //если линк в хеде, на нем нельзя генерировать ивент
+                triggeredEl = document.body;
+            }
+
+            triggeredEl.dispatchEvent(linkAddedEvent);
+
+            //link.addEventListener('load', triggeredEl.dispatchEvent.bind(this, linkLoadedEvent));
         }
     };
     Loader.prototype.createCss = function(href) {
