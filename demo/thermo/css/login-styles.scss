@@ -266,7 +266,7 @@ textarea {
 /* ---------------------------------------------- */
 
 a, .btn {
-  @include transition(all 0.2s ease-in-out 0s);
+  @include transition(all 0.2s ease-in-out);
 }
 
 /* ----------------------------------------------
@@ -416,12 +416,12 @@ header{
 }
 
 .pageheader {
-  background: url("../images/bg_1.jpg") no-repeat;
+  background: url("images/bg_1.jpg") no-repeat;
   background-size: cover;
 }
 
 .icon {
-  background: url("../images/sprite.png") no-repeat;
+  background: url("images/sprite.png") no-repeat;
 }
 
 .phone-icon {
@@ -470,7 +470,7 @@ header{
     font-size: 18px;
   }
   .pageheader {
-    background: url("../images/bg_tablet_1.jpg") no-repeat;
+    background: url("images/bg_tablet_1.jpg") no-repeat;
     background-size: cover;
   }
   .top-menu{
@@ -501,7 +501,7 @@ header{
     font-size: 16px;
   }
   .pageheader {
-    background: url("../images/bg_mobile_1.jpg") no-repeat;
+    background: url("images/bg_mobile_1.jpg") no-repeat;
     background-size: cover;
   }
   .logo {

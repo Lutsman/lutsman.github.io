@@ -75,7 +75,6 @@
         var loader = new Loader();
 
         /*adding scipts*/
-        var firstLoadScript = ['js/first-load.min.js'];
         var scriptArr = [
             'js/jquery-1.11.1.min.js',
             'js/jquery.fancybox.pack.js',
@@ -86,7 +85,6 @@
             'js/placeholder_polyfill.jquery.min.combo.js'
         ];
 
-        loader.addScript(firstLoadScript, document.head);
         loader.addScript(scriptArr);
 
         /*adding css*/
