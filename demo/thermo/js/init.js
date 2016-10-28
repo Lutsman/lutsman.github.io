@@ -3,6 +3,9 @@
 
 (function(){
     /*Loader class*/
+
+    // default adding SCRIPT to BODY
+    // default adding CSS to HEAD
     function Loader() {}
     Loader.prototype.addScript = function(links, parentEl, nextSibling) { // args: array, [parentEl (DOM element), nextSibling (DOM element)]
         var index = 0;
@@ -37,25 +40,25 @@
         }.bind(this));
     };
     Loader.prototype.addCss = function(links, parentEl, nextSibling) {
-        parentEl = parentEl || document.body;
+        parentEl = parentEl || document.head;
         nextSibling = nextSibling || null;
 
         for(var i = 0; i < links.length; i++) {
             var link = this.createCss(links[i]);
             var linkAddedEvent = this.createEvent('linkAdded', link, links[i]);
-            //var linkLoadedEvent = this.createEvent('linkLoaded', link, links[i]);
+            var linkLoadedEvent = this.createEvent('linkLoaded', link, links[i]);
             var triggeredEl = link;
 
             parentEl.insertBefore(link, nextSibling);
 
 
-            if (link.closest('head')) { //если линк в хеде, на нем нельзя генерировать ивент
+            if (link.closest('head')) { //if link in HEAD, not possible to trigger event on it
                 triggeredEl = document.body;
+            } else {
+                link.addEventListener('load', link.dispatchEvent.bind(this, linkLoadedEvent)); // if link situated not in head we can get loading event
             }
 
             triggeredEl.dispatchEvent(linkAddedEvent);
-
-            //link.addEventListener('load', triggeredEl.dispatchEvent.bind(this, linkLoadedEvent));
         }
     };
     Loader.prototype.createCss = function(href) {
