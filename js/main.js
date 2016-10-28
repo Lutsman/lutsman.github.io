@@ -437,9 +437,8 @@ $(document).ready(function(){
 
             this.showPending(form);
 
-            self.hidePending(form, self.showSuccess.bind(self, form));
-
-            /*$.ajax({
+            /*
+            $.ajax({
                 type: form.method,
                 url: form.action,
                 data: $.param(formData),
@@ -512,12 +511,16 @@ $(document).ready(function(){
 
         var profileForm = new FormController({
             beforeSend: function (data, form) {
+                var self = this;
+
                 $.post(
                     form.action,
                     $.param(data)
-                );
-
-                this.resetForms(form);
+                )
+                    .always(function () {
+                        self.hidePending(form, self.showSuccess.bind(self, form));
+                        this.resetForms(form);
+                    });
             }
         });
         profileForm.init();
