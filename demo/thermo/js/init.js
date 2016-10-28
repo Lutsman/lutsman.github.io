@@ -176,8 +176,6 @@ function init(){
 
     /*if IE 9 loading placeholders polyfill*/
     document.body.addEventListener('tagLoaded', function (e) {
-        console.log('IE version ' + loader.detectIE());
-
         if (loader.detectIE() !== 9) return;
 
         var compareSrc = 'js/jquery-1.11.1.min.js';
