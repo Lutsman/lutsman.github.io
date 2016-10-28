@@ -437,7 +437,9 @@ $(document).ready(function(){
 
             this.showPending(form);
 
-            $.ajax({
+            self.hidePending(form, self.showSuccess.bind(self, form));
+
+            /*$.ajax({
                 type: form.method,
                 url: form.action,
                 data: $.param(formData),
@@ -464,12 +466,12 @@ $(document).ready(function(){
 
                     //console.log(response);
                     //throw new Error(response.statusText);
-                    console.log(response);
+                    //console.log(response);
                     self.hidePending(form, self.showError.bind(self, form));
                     self.resetForms(form);
 
                 }
-            });
+            });*/
         };
         FormController.prototype.showError = function (form) {
             var $errBlock = $('.err-block', $(form));
@@ -508,7 +510,11 @@ $(document).ready(function(){
         };
 
 
-        var profileForm = new FormController({});
+        var profileForm = new FormController({
+            beforeSend: function (data, form) {
+                form.submit();
+            }
+        });
         profileForm.init();
     })();
 
