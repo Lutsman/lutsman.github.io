@@ -1,8 +1,7 @@
 //document.addEventListener("DOMContentLoaded", ready);
 
-init();
 
-function init() {
+(function(){
     /*Loader class*/
     function Loader() {}
     Loader.prototype.addScript = function(links, parentEl, nextSibling) { // args: array, [parentEl (DOM element), nextSibling (DOM element)]
@@ -69,7 +68,7 @@ function init() {
         });
 
         return elemLoaded;
-    }
+    };
 
     /*Loading scripts and css*/
     (function(){
@@ -104,53 +103,5 @@ function init() {
         ];
 
         loader.addCss(cssArr, document.head);
-
-
-        /*function addScript(links, parentEl, nextSibling) { // args: array, [parentEl (DOM element), nextSibling (DOM element)]
-            var index = 0;
-            parentEl = parentEl || document.body;
-            nextSibling = nextSibling || null;
-
-            loadTag(createScript, links, index, parentEl, nextSibling);
-        }
-
-        function createScript (src) {
-            var script = document.createElement('script');
-            script.src = src;
-
-            return script;
-        }
-
-        function loadTag(createTagFunc, tagArr, currIndex, parentEl, nextSibling) {
-            if (currIndex >= tagArr.length) return;
-
-            currIndex = currIndex || 0;
-            parentEl = parentEl || document.body;
-            nextSibling = nextSibling || null;
-
-            var tag = createTagFunc(tagArr[currIndex]);
-
-            tag = parentEl.insertBefore(tag, nextSibling);
-            tag.addEventListener('load', loadTag.bind(this, createTagFunc, tagArr, currIndex + 1, parentEl, nextSibling));
-        }
-
-        function addCss(links, parentEl, nextSibling) {
-            parentEl = parentEl || document.body;
-            nextSibling = nextSibling || null;
-
-            for(var i = 0; i < links.length - offset; i++) {
-                var link = createCss(links[i]);
-
-                parentEl.insertBefore(link, nextSibling);
-            }
-        }
-
-        function createCss (href) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = href;
-
-            return link;
-        }*/
     })();
-};
+})();
