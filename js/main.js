@@ -516,6 +516,8 @@ $(document).ready(function(){
                     form.action,
                     $.param(data)
                 );
+
+                this.resetForms(form);
             }
         });
         profileForm.init();
