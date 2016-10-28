@@ -332,6 +332,10 @@ footer .container {
   overflow: hidden; }
   .slider h3 {
     padding-bottom: 20px; }
+  .slider > div + div {
+    display: none; }
+  .slider.slick-initialized > div + div {
+    display: block; }
 
 .slider__block {
   height: 555px;

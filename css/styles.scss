@@ -369,6 +369,12 @@ footer .container {
   h3 {
     padding-bottom: 20px;
   }
+  > div + div {
+    display: none;
+  }
+  &.slick-initialized > div + div {
+    display: block;
+  }
 }
 .slider__block {
   height: 555px;
