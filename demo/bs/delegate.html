@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="parentElement">
+	<button class="firstButton">firstButton</button>
+	<button class="secondButton">secondButton</button>
+</div>
+
+<script>
+	document.body.querySelector('.parentElement').addEventListener('click', function (e) {
+		var target = e.target;
+		var firstButton = target.closest('.firstButton');
+		var secondButton = target.closest('.secondButton');
+
+		if (firstButton) {
+			e.preventDefault();
+
+			alert('firstButton'); //do something
+
+			return;
+		}
+
+		if (secondButton) {
+			e.preventDefault();
+
+			alert('secondButton');  //do something
+
+			return;
+		}
+	});
+</script>
+</body>
+</html>
