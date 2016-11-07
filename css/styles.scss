@@ -160,7 +160,7 @@ img {
 /* ---------------------------------------------- */
 
 a, img {
-  @include transition(all 0.2s ease-in-out 0s);
+  @include transition(all 0.2s ease-in-out);
 }
 
 /* ---------------------------------------------- /*
@@ -531,7 +531,7 @@ input[type="submit"] {
   text-transform: uppercase;
   background-color: $linksNav;
   border: none;
-  @include transition(all 0.2s ease-in-out 0s);
+  @include transition(all 0.2s ease-in-out);
   &:hover {
     background-color: $hoverLinks;
   }
