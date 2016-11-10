@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,7 @@
 
     <!--Favicon-->
     <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
 
     <!--For improved cross-browser rendering-->
     <link rel="stylesheet" href="css/normalize.css">
@@ -29,487 +29,695 @@
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!--<div id="maket"></div>-->
-    
-    <section class="pageheader">
-        <header>
-            <div>
-                <div class="container">
-                    <nav class="top-menu-1">
-                        <a href="#">Магазины</a>
-                        <a href="#">Прокаты</a>
-                        <a href="#">Акции и предложения</a>
-                        <a href="#">Контакты</a>
-                    </nav>
-                    
-                    <div class="user-data">
-                       <span>0</span>
-                        <a href="#">Вход</a>
-                    </div>
-                   
-                </div><!--container-->
-            </div>
-            
-            <div>
-                <div class="container">
-                   <a href="/" class="logo"></a>
-                   
-                    <nav class="top-menu-2">
-                        <a href="#">Прокат</a>
-                        <a href="#">Продажа</a>
-                        <a href="#">События</a>
-                        <a href="#">Статьи</a>
-                        <a href="#">Интерактивная карта </a>
-                    </nav>
-                    
-                
-                    <a href="#" class="add-offer">+ Добавить предложение</a>
-           
-                </div><!--container-->
-            </div>
-            
-        </header>
-        
-        <div class="container">
-            <h1>Поиск прогулочной техники в прокат по всему миру</h1>
-            
-             <form class="search-form" method="get" action="/">
-                <ul>
-                    <li><a href="#">В прокат</a></li>
-                    <li><a href="#">Велосипед</a></li>
-                    <li><a href="#">Горный</a></li>
-                </ul>
-        
-                <input placeholder="в Ростове-на-Дону         " required="" name="q" type="text">
-                <button type="submit">Найти</button>
-                
-            </form>  
-            
-        </div><!--container-->
-    </section>
-    
-    <section class="category">
-        <div class="container">
-         
-            <div class="category-big bicycle-bg">
-                <h2>Велосипеды</h2>  
-                <ul>
-                    <li><a href="#">Шоссейные <span>234</span></a></li>
-                    <li><a href="#">Горные <span>438</span></a></li>
-                    <li><a href="#">Детские <span>127</span></a></li>
-                </ul> 
-                <ul>
-                    <li><a href="#">Хардтейлы <span>320</span></a></li>
-                    <li><a href="#">Двухподвесы <span>139</span></a></li>
-                    <li><a href="#">Фэтбайки <span>29</span></a></li>
-                </ul>   
-                <ul>
-                    <li><a href="#">Электробайки <span>38</span></a></li>
-                    <li><a href="#">Складыващиеся <span>110</span></a></li>
-                </ul>            
-            </div>
-            <div class="category-big winter-equip-bg">
-               <h2>Зимняя техника</h2>
-                <ul>
-                    <li><a href="#">Сноуборды <span>234</span></a></li>
-                    <li><a href="#">Лыжи <span>438</span></a></li>
-                    <li><a href="#">Санки <span>127</span></a></li>
-                </ul> 
-                <ul>
-                    <li><a href="#">Снегокаты <span>320</span></a></li>
-                    <li><a href="#">Ледянки <span>139</span></a></li>
-                </ul>     
-            </div>
+<body ng-app="mainPage">
+<!--<div id="maket"></div>-->
 
-            <div class="category-small giroskuter-bg">
-               <h2>Гироскутеры</h2>
-                <ul>
-                    <li><a href="#">Шоссейные <span>120</span></a></li>
-                    <li><a href="#">Детские <span>435</span></a></li>
-                    <li><a href="#">Внедорожные <span>139</span></a></li>
-                </ul>   
-                <ul>
-                    <li><a href="#">Скоростные <span>29</span></a></li>
-                </ul>   
-            </div>
-            <div class="category-small kick-scooter-bg">
-               <h2>Самокаты</h2>
-                <ul>
-                    <li><a href="#">Городские <span>120</span></a></li>
-                    <li><a href="#">Внедорожные <span>435</span></a></li>
-                    <li><a href="#">Трюковые <span>139</span></a></li>
-                </ul>   
-                <ul>
-                    <li><a href="#">Детские <span>29</span></a></li>
-                </ul>   
-            </div>
-            <div class="category-small rollers-bg">
-               <h2>Роликовые коньки</h2>
-                <ul>
-                    <li><a href="#">Детские <span>120</span></a></li>
-                    <li><a href="#">Профессиональные <span>435</span></a></li>
-                    <li><a href="#">Трюковые <span>139</span></a></li>
-                </ul>   
-            </div>
-
-            <div class="category-big travel-equip-bg">
-               <h2>Аксессуары и туристическое оборудование</h2>
-                <ul>
-                    <li><a href="#">Экшн-камеры <span>120</span></a></li>
-                    <li><a href="#">Защитное снаряжение <span>435</span></a></li>
-                    <li><a href="#">Палатки <span>139</span></a></li>
-                </ul>   
-                <ul>
-                    <li><a href="#">Спальные мешки <span>120</span></a></li>
-                    <li><a href="#">Рюкзаки туристические <span>435</span></a></li>
-                    <li><a href="#">Другое <span>139</span></a></li>
-                </ul>   
-            </div>
-            <div class="category-big map-bg">
-                <a href="#">
-                    <h2>Поиск на карте</h2>
-                    <p>Ищите прокат или продажу техники для отдыха в своем городе на интерактивной карте.</p>
-                    <p>Собираетесь в отпуск? OnProkat знает все о прокате велосипедов, гироскутеров и другой техники по всей России!</p>
-                </a>
-            </div>
-            
-        </div><!--container-->
-    </section>
-    
-    <section class="content">
-        <div class="container">
-            <div class="content__block">
-                <h2>Самое популярное</h2>
-                
-                <div class="goods-nav">
-                    <p>ПРОКАТ</p>
-                    <ul class="goods-menu">
-                        <li class="active"><a href="#">Велосипеды</a></li>
-                        <li><a href="#">Гироскутеры</a></li>
-                        <li><a href="#">Самокаты</a></li>
-                        <li><a href="#">Аксессуары</a></li>
-                    </ul>
-                    <a href="#">Как сюда попасть?</a>
-                </div>
-                <div class="link-box">
-                    <div>
-                        <a href="#">
-                            <img src="img/goods_photo_1.jpg" alt="img">
-                            <p class="price">400 &#8381;</p>
-                            <p>Велосипед двухподвес GT FURY</p>
-                            <p class="place">ул. Пушкинская, 2а</p>
-                            <p>
-                                <span class="look">199</span>
-                                <span class="comment">15</span>
-                                <span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img src="img/goods_photo_2.jpg" alt="img">
-                            <p class="price">150 &#8381;</p>
-                            <p>Детский велокат COMMENCAL EL CAMINO</p>
-                            <p class="place">пр-т Шолохова, 112</p>
-                            <p>
-                                <span class="look">199</span>
-                                <span class="comment">15</span>
-                                <span class="company-logo">
-                                    <img src="img/trader_logo_2.png" alt="company-logo">
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img src="img/goods_photo_3.jpg" alt="img">
-                            <p class="price">350 &#8381;</p>
-                            <p>Велосипед двухподвес TREK REMENDY</p>
-                            <p class="place">пр-т Шолохова, 112</p>
-                            <p>
-                                <span class="look">199</span>
-                                <span class="comment">15</span>
-                                <span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="goods-nav">
-                    <p>ПРОДАЖА</p>
-                    <ul class="goods-menu">
-                        <li><a href="#">Велосипеды</a></li>
-                        <li  class="active"><a href="#">Гироскутеры</a></li>
-                        <li><a href="#">Самокаты</a></li>
-                    </ul>
-                    <a href="#">Как сюда попасть?</a>
-                </div>
-                <div class="link-box">
-                    <div>
-                        <a href="#">
-                            <img src="img/goods_photo_4.jpg" alt="img">
-                            <p class="price">25 900 &#8381;</p>
-                            <p>Гироскутер SMART BALANCE GRAFFITI</p>
-                            <p class="place">ул. Пушкинская, 2а</p>
-                            <p>
-                                <span class="look">199</span>
-                                <span class="comment">15</span>
-                                <span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img src="img/goods_photo_5.jpg" alt="img">
-                            <p class="price">38 900 &#8381;</p>
-                            <p>Гироцикл SPEED WAY</p>
-                            <p class="place">ул. Пушкинская, 2а</p>
-                            <p>
-                                <span class="look">199</span>
-                                <span class="comment">15</span>
-                                <span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img src="img/goods_photo_6.jpg" alt="img">
-                            <p class="price">79 900 &#8381;</p>
-                            <p>Гироскутер XIAOMI DESERT</p>
-                            <p class="place">ул. Пушкинская, 2а</p>
-                            <p>
-                                <span class="look">199</span>
-                                <span class="comment">15</span>
-                                <span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                
-                <h2>События и статьи</h2>
-                
-                 <div class="link-box">
-                     <div class="big-link">
-                         <a href="#">
-                             <img src="img/events_photo_1.jpg" alt="img">
-                             <p class="title">Red Bull Rampage 2016</p>
-                             <p>16 сентября 2016</p>
-                             <p>Мы расскажем тебе о самом важном и крутом событии в мире даунхилла. Расскажем как это было.</p>
-                             <p>
-                                 <span class="look">10155</span>
-                                 <span class="comment">55</span>
-                                 <span class="like">155</span>
-                                 <span class="calendar-icon"></span>
-                             </p>
-                         </a>
-                     </div>
-                     <div>
-                         <a href="#">
-                             <img src="img/events_photo_2.jpg" alt="img">
-                             <p class="title">Выбираем велосипед</p>
-                             <p>Мы поможем тебе выбрать свой велосипед с первого раза. Расскажем, что нужно знать.</p>
-                             <p>
-                                 <span class="look">10155</span>
-                                 <span class="comment">55</span>
-                                 <span class="like">155</span>
-                                 <span class="list-icon"></span>
-                             </p>
-                         </a>
-                     </div>
-                </div>
-                
-            </div>
-            
-            <aside class="sidebar">
-                <div>
-                    <h3>Прокаты</h3>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_1.png" alt="company">
-                        <p>100% СПОРТА <span>123 предложения</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                  
-                    <a class="more" href="#">Все прокаты</a>
-                </div>
-                
-                <div>
-                    <h3>Магазины</h3>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_1.png" alt="company">
-                        <p>100% СПОРТА <span>123 предложения</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                  
-                    <a class="more" href="#">Все магазины</a>
-                </div>
-                
-                <div>
-                    <h3>Акции и предложения</h3>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_1.png" alt="company">
-                        <p>100% СПОРТА <span>123 предложения</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_1.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                    <a href="#">
-                        <img src="img/trader_banner_logo_2.png" alt="company">
-                        <p>BikeCenter <span>55 предложений</span></p>
-                    </a>
-                  
-                    <a class="more" href="#">Все акции и предложения</a>
-                </div>
-                
-            </aside>
-        </div><!--container-->
-    </section>
-    
-    <section class="user-opening">
-        <div class="container">
-           <div class="diamond-icon">
-               <h3>Новые клиенты</h3>
-               <p>Премиум-размещение увеличивает количество звонков в 5 раз</p>
-               <a href="#" class="btn">Купить премиум</a>
-           </div>
-           <div class="page-icon">
-               <h3>Добавляйте предложения</h3>
-               <p>Добавляйте новые предложения быстро и удобно</p>
-               <a href="#" class="btn">Добавить объявление</a>
-           </div>
-           <div class="point-icon">
-               <h3>Найдите на карте</h3>
-               <p>Ищите предложения рядом с домом, парком или друзьями</p>
-               <a href="#" class="btn">Найти на карте</a>
-           </div>
-            
-        </div><!--container-->
-    </section>
-    
-    <section class="pagefooter">
-        <div class="container">
-            <h3>Поиск техники для отдыха на onProkat </h3>
-            <p>Взять в прокат или купить технику для отдыха — задача несложная, если знать, где искать и с чего начать поиски. Чтобы взять на прокат или купить технику для отдыха, не нужно никуда ехать и ждать в очереди. Достаточно найти в нашей базе подходящие для вас предложения. Не забудьте оформить подписку на новые предложения по результатам поиска, чтобы оперативно получать все самые свежие и актуальные новости о прокате или продаже техники для отдыха по всему миру.</p>
-            <p>Если вы решили взять на прокат или купить велосипед, гироскутер ли другую технику для отдыха, то onProkat  поможет вам! onProkat — это самый удобный сайт для поиска техники для отдыха по адресу или по карте, с учётом всех интересующих вас параметров. На onProkat.ru — тысячи актуальных объявлений о прокате или продаже техники для отдыха по всему миру, ежедневно на сайте появляются новые предложения. Объявления содержат описания техники, информацию о прокате или магазине, фотографии, стоимость, контакты проката или магазина.</p>
-            
-            <div class="regions">
-                <ul>
-                    <li><a href="#">Москва</a></li>
-                    <li><a href="#">Санкт-Петербург</a></li>
-                    <li><a href="#">Башкортостан</a></li>
-                    <li><a href="#">Белгородская область</a></li>
-                    <li><a href="#">Брянская область</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Ивановская область</a></li>
-                    <li><a href="#">Иркутская область</a></li>
-                    <li><a href="#">Калининградская область</a></li>
-                    <li><a href="#">Калужская область</a></li>
-                    <li><a href="#">Карелия</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Крым</a></li>
-                    <li><a href="#">Липецкая область</a></li>
-                    <li><a href="#">Марий Эл</a></li>
-                    <li><a href="#">Нижегородская область</a></li>
-                    <li><a href="#">Новгородская область</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Пензенская область</a></li>
-                    <li><a href="#">Пермский край</a></li>
-                    <li><a href="#">Псковская область</a></li>
-                    <li><a href="#">Ростовская область</a></li>
-                    <li><a href="#">Рязанская область</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Смоленская область</a></li>
-                    <li><a href="#">Ставрапольский край</a></li>
-                    <li><a href="#">Татарстан</a></li>
-                    <li><a href="#">Тверская область</a></li>
-                    <li><a href="#">Тульская область</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Ханты-Мансийский АО</a></li>
-                    <li><a href="#">Челябинская область</a></li>
-                    <li><a href="#">Ямало-Ненецкий АО</a></li>
-                    <li><a href="#">Ярославская область</a></li>
-                </ul>
-            </div>
-            <a href="#" class="show-more"><span>Показать все регионы</span></a>
-            
-            <p class="info-us">onProkat — база данных о прокате и продаже техники для отдыха. Использование сайта, размещение предложений, означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой конфиденциальности</a> onProkat. Оплачивая услуги на сайте, вы принимаете <a href="#">Лицензионное соглашение</a>.</p>
-            
-        </div><!--container-->
-        
-        <div class="footer-nav">
+<section class="pageheader">
+    <header>
+        <div>
             <div class="container">
-                <nav class="footer-menu">
-                    <a href="#">Справочный центр</a>
-                    <a href="#">Тарифы и цены</a>
+                <nav class="top-menu-1">
+                    <a href="#">Магазины</a>
+                    <a href="#">Прокаты</a>
+                    <a href="#">Акции и предложения</a>
                     <a href="#">Контакты</a>
-                    <a href="#">Реклама на сайте</a>
-                    <a href="#">Продвижение объявлений</a>
-                    <a href="#">Премиум-размещение</a>
-                    <a href="#">Спецпредложения</a>
-                    <a href="#">Поиск на карте</a>
-                    <a href="#">Карта сайта</a>
                 </nav>
+
+                <div class="user-data">
+                    <span>0</span>
+                    <a href="#">Вход</a>
+                </div>
+
             </div><!--container-->
         </div>
-        
-        <footer>
+
+        <div>
             <div class="container">
-                <p>© 2016 onProkat - Поиск прогулочной техники в прокат во всем мире</p>
-                <div>
-                    <ul class="choose-lang">
-                        <li class="active"><a href="#">Русский</a></li>
-                        <li><a href="#">English</a></li>
-                    </ul>
-                    <ul class="coose-currency">
-                        <li class="active"><a href="#">RUB</a></li>
-                        <li><a href="#">USD</a></li>
-                    </ul>
-                </div>
+                <a href="/" class="logo"></a>
+
+                <nav class="top-menu-2">
+                    <a href="#">Прокат</a>
+                    <a href="#">Продажа</a>
+                    <a href="#">События</a>
+                    <a href="#">Статьи</a>
+                    <a href="#">Интерактивная карта </a>
+                </nav>
+
+
+                <a href="#" class="add-offer">+ Добавить предложение</a>
+
             </div><!--container-->
-        </footer>
-    </section>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <h1>Поиск прогулочной техники в прокат по всему миру</h1>
+
+        <!--<form class="search-form" method="get" action="/search">
+			<ul>
+				<li><a href="#">В прокат</a></li>
+				<li><a href="#">Велосипед</a></li>
+				<li><a href="#">Горный</a></li>
+			</ul>
+
+			<input placeholder="в Ростове-на-Дону         " required="" name="q" type="text">
+			<button type="submit">Найти</button>
+
+		</form>-->
+        <search-form></search-form>
+
+    </div><!--container-->
+</section>
+
+<section class="category">
+    <div class="container">
+
+        <div class="category-big bicycle-bg">
+            <h2>Велосипеды</h2>
+            <ul>
+                <li><a href="#">Шоссейные <span>234</span></a></li>
+                <li><a href="#">Горные <span>438</span></a></li>
+                <li><a href="#">Детские <span>127</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Хардтейлы <span>320</span></a></li>
+                <li><a href="#">Двухподвесы <span>139</span></a></li>
+                <li><a href="#">Фэтбайки <span>29</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Электробайки <span>38</span></a></li>
+                <li><a href="#">Складыващиеся <span>110</span></a></li>
+            </ul>
+        </div>
+        <div class="category-big winter-equip-bg">
+            <h2>Зимняя техника</h2>
+            <ul>
+                <li><a href="#">Сноуборды <span>234</span></a></li>
+                <li><a href="#">Лыжи <span>438</span></a></li>
+                <li><a href="#">Санки <span>127</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Снегокаты <span>320</span></a></li>
+                <li><a href="#">Ледянки <span>139</span></a></li>
+            </ul>
+        </div>
+
+        <div class="category-small giroskuter-bg">
+            <h2>Гироскутеры</h2>
+            <ul>
+                <li><a href="#">Шоссейные <span>120</span></a></li>
+                <li><a href="#">Детские <span>435</span></a></li>
+                <li><a href="#">Внедорожные <span>139</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Скоростные <span>29</span></a></li>
+            </ul>
+        </div>
+        <div class="category-small kick-scooter-bg">
+            <h2>Самокаты</h2>
+            <ul>
+                <li><a href="#">Городские <span>120</span></a></li>
+                <li><a href="#">Внедорожные <span>435</span></a></li>
+                <li><a href="#">Трюковые <span>139</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Детские <span>29</span></a></li>
+            </ul>
+        </div>
+        <div class="category-small rollers-bg">
+            <h2>Роликовые коньки</h2>
+            <ul>
+                <li><a href="#">Детские <span>120</span></a></li>
+                <li><a href="#">Профессиональные <span>435</span></a></li>
+                <li><a href="#">Трюковые <span>139</span></a></li>
+            </ul>
+        </div>
+
+        <div class="category-big travel-equip-bg">
+            <h2>Аксессуары и туристическое оборудование</h2>
+            <ul>
+                <li><a href="#">Экшн-камеры <span>120</span></a></li>
+                <li><a href="#">Защитное снаряжение <span>435</span></a></li>
+                <li><a href="#">Палатки <span>139</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Спальные мешки <span>120</span></a></li>
+                <li><a href="#">Рюкзаки туристические <span>435</span></a></li>
+                <li><a href="#">Другое <span>139</span></a></li>
+            </ul>
+        </div>
+        <div class="category-big map-bg">
+            <a href="#">
+                <h2>Поиск на карте</h2>
+                <p>Ищите прокат или продажу техники для отдыха в своем городе на интерактивной карте.</p>
+                <p>Собираетесь в отпуск? OnProkat знает все о прокате велосипедов, гироскутеров и другой техники по всей России!</p>
+            </a>
+        </div>
+
+    </div><!--container-->
+</section>
+
+<section class="content">
+    <div class="container">
+        <div class="content__block">
+            <h2>Самое популярное</h2>
+            <!--
+			<div class="goods-nav">
+				<p>ПРОКАТ</p>
+				<ul class="goods-menu">
+					<li><a href="#">Велосипеды</a></li>
+					<li><a href="#">Гироскутеры</a></li>
+					<li><a href="#">Самокаты</a></li>
+					<li><a href="#">Аксессуары</a></li>
+				</ul>
+				<a href="#">Как сюда попасть?</a>
+			</div>
+			<div class="link-box">
+				<div>
+					<a href="#">
+						<img src="img/goods_photo_1.jpg" alt="img">
+						<p class="price">400 &#8381;</p>
+						<p>Велосипед двухподвес GT FURY</p>
+						<p class="place">ул. Пушкинская, 2а</p>
+						<p>
+							<span class="look">199</span>
+							<span class="comment">15</span>
+							<span class="company-logo">
+									<img src="img/trader_logo_1.png" alt="company-logo">
+								</span>
+						</p>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+						<img src="img/goods_photo_2.jpg" alt="img">
+						<p class="price">150 &#8381;</p>
+						<p>Детский велокат COMMENCAL EL CAMINO</p>
+						<p class="place">пр-т Шолохова, 112</p>
+						<p>
+							<span class="look">199</span>
+							<span class="comment">15</span>
+							<span class="company-logo">
+									<img src="img/trader_logo_2.png" alt="company-logo">
+								</span>
+						</p>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+						<img src="img/goods_photo_3.jpg" alt="img">
+						<p class="price">350 &#8381;</p>
+						<p>Велосипед двухподвес TREK REMENDY</p>
+						<p class="place">пр-т Шолохова, 112</p>
+						<p>
+							<span class="look">199</span>
+							<span class="comment">15</span>
+							<span class="company-logo">
+									<img src="img/trader_logo_1.png" alt="company-logo">
+								</span>
+						</p>
+					</a>
+				</div>
+			</div>-->
+            <goods-block></goods-block>
+            <div class="goods-nav">
+                <p>ПРОДАЖА</p>
+                <ul class="goods-menu">
+                    <li><a href="#">Велосипеды</a></li>
+                    <li><a href="#">Гироскутеры</a></li>
+                    <li><a href="#">Самокаты</a></li>
+                </ul>
+                <a href="#">Как сюда попасть?</a>
+            </div>
+            <div class="link-box">
+                <div>
+                    <a href="#">
+                        <img src="img/goods_photo_4.jpg" alt="img">
+                        <p class="price">25 900 &#8381;</p>
+                        <p>Гироскутер SMART BALANCE GRAFFITI</p>
+                        <p class="place">ул. Пушкинская, 2а</p>
+                        <p>
+                            <span class="look">199</span>
+                            <span class="comment">15</span>
+                            <span class="company-logo">
+                                    <img src="img/trader_logo_1.png" alt="company-logo">
+                                </span>
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="img/goods_photo_5.jpg" alt="img">
+                        <p class="price">38 900 &#8381;</p>
+                        <p>Гироцикл SPEED WAY</p>
+                        <p class="place">ул. Пушкинская, 2а</p>
+                        <p>
+                            <span class="look">199</span>
+                            <span class="comment">15</span>
+                            <span class="company-logo">
+                                    <img src="img/trader_logo_1.png" alt="company-logo">
+                                </span>
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="img/goods_photo_6.jpg" alt="img">
+                        <p class="price">79 900 &#8381;</p>
+                        <p>Гироскутер XIAOMI DESERT</p>
+                        <p class="place">ул. Пушкинская, 2а</p>
+                        <p>
+                            <span class="look">199</span>
+                            <span class="comment">15</span>
+                            <span class="company-logo">
+                                    <img src="img/trader_logo_1.png" alt="company-logo">
+                                </span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <h2>События и статьи</h2>
+
+            <div class="link-box">
+                <div class="big-link">
+                    <a href="#">
+                        <img src="img/events_photo_1.jpg" alt="img">
+                        <p class="title">Red Bull Rampage 2016</p>
+                        <p>16 сентября 2016</p>
+                        <p>Мы расскажем тебе о самом важном и крутом событии в мире даунхилла. Расскажем как это было.</p>
+                        <p>
+                            <span class="look">10155</span>
+                            <span class="comment">55</span>
+                            <span class="like">155</span>
+                            <span class="calendar-icon"></span>
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="img/events_photo_2.jpg" alt="img">
+                        <p class="title">Выбираем велосипед</p>
+                        <p>Мы поможем тебе выбрать свой велосипед с первого раза. Расскажем, что нужно знать.</p>
+                        <p>
+                            <span class="look">10155</span>
+                            <span class="comment">55</span>
+                            <span class="like">155</span>
+                            <span class="list-icon"></span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="sidebar">
+            <div>
+                <h3>Прокаты</h3>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>100% СПОРТА <span>123 предложения</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+
+                <a class="more" href="#">Все прокаты</a>
+            </div>
+
+            <div>
+                <h3>Магазины</h3>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>100% СПОРТА <span>123 предложения</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+
+                <a class="more" href="#">Все магазины</a>
+            </div>
+
+            <div>
+                <h3>Акции и предложения</h3>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>100% СПОРТА <span>123 предложения</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+
+                <a class="more" href="#">Все акции и предложения</a>
+            </div>
+
+        </aside>
+    </div><!--container-->
+</section>
+
+<section class="user-opening">
+    <div class="container">
+        <div class="diamond-icon">
+            <h3>Новые клиенты</h3>
+            <p>Премиум-размещение увеличивает количество звонков в 5 раз</p>
+            <a href="#" class="buy-premium-btn">Купить премиум</a>
+        </div>
+        <div class="page-icon">
+            <h3>Добавляйте предложения</h3>
+            <p>Добавляйте новые предложения быстро и удобно</p>
+            <a href="#" class="add-proposal-btn">Добавить объявление</a>
+        </div>
+        <div class="point-icon">
+            <h3>Найдите на карте</h3>
+            <p>Ищите предложения рядом с домом, парком или друзьями</p>
+            <a href="#" class="find-on-map-btn">Найти на карте</a>
+        </div>
+
+    </div><!--container-->
+</section>
+
+<section class="pagefooter">
+    <div class="container">
+        <h3>Поиск техники для отдыха на onProkat </h3>
+        <p>Взять в прокат или купить технику для отдыха — задача несложная, если знать, где искать и с чего начать поиски. Чтобы взять на прокат или купить технику для отдыха, не нужно никуда ехать и
+            ждать в очереди. Достаточно найти в нашей базе подходящие для вас предложения. Не забудьте оформить подписку на новые предложения по результатам поиска, чтобы оперативно получать все самые
+            свежие и актуальные новости о прокате или продаже техники для отдыха по всему миру.</p>
+        <p>Если вы решили взять на прокат или купить велосипед, гироскутер ли другую технику для отдыха, то onProkat поможет вам! onProkat — это самый удобный сайт для поиска техники для отдыха по
+            адресу или по карте, с учётом всех интересующих вас параметров. На onProkat.ru — тысячи актуальных объявлений о прокате или продаже техники для отдыха по всему миру, ежедневно на сайте
+            появляются новые предложения. Объявления содержат описания техники, информацию о прокате или магазине, фотографии, стоимость, контакты проката или магазина.</p>
+
+        <div class="regions">
+            <ul>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Санкт-Петербург</a></li>
+                <li><a href="#">Башкортостан</a></li>
+                <li><a href="#">Белгородская область</a></li>
+                <li><a href="#">Брянская область</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Ивановская область</a></li>
+                <li><a href="#">Иркутская область</a></li>
+                <li><a href="#">Калининградская область</a></li>
+                <li><a href="#">Калужская область</a></li>
+                <li><a href="#">Карелия</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Крым</a></li>
+                <li><a href="#">Липецкая область</a></li>
+                <li><a href="#">Марий Эл</a></li>
+                <li><a href="#">Нижегородская область</a></li>
+                <li><a href="#">Новгородская область</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Пензенская область</a></li>
+                <li><a href="#">Пермский край</a></li>
+                <li><a href="#">Псковская область</a></li>
+                <li><a href="#">Ростовская область</a></li>
+                <li><a href="#">Рязанская область</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Смоленская область</a></li>
+                <li><a href="#">Ставрапольский край</a></li>
+                <li><a href="#">Татарстан</a></li>
+                <li><a href="#">Тверская область</a></li>
+                <li><a href="#">Тульская область</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Ханты-Мансийский АО</a></li>
+                <li><a href="#">Челябинская область</a></li>
+                <li><a href="#">Ямало-Ненецкий АО</a></li>
+                <li><a href="#">Ярославская область</a></li>
+            </ul>
+        </div>
+        <a href="#" class="show-more"><span>Показать все регионы</span></a>
+
+        <p class="info-us">onProkat — база данных о прокате и продаже техники для отдыха. Использование сайта, размещение предложений, означает согласие с <a href="#">Пользовательским соглашением</a>
+            и <a href="#">Политикой конфиденциальности</a> onProkat. Оплачивая услуги на сайте, вы принимаете <a href="#">Лицензионное соглашение</a>.</p>
+
+    </div><!--container-->
+
+    <div class="footer-nav">
+        <div class="container">
+            <nav class="footer-menu">
+                <a href="#">Справочный центр</a>
+                <a href="#">Тарифы и цены</a>
+                <a href="#">Контакты</a>
+                <a href="#">Реклама на сайте</a>
+                <a href="#">Продвижение объявлений</a>
+                <a href="#">Премиум-размещение</a>
+                <a href="#">Спецпредложения</a>
+                <a href="#">Поиск на карте</a>
+                <a href="#">Карта сайта</a>
+            </nav>
+        </div><!--container-->
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2016 onProkat - Поиск прогулочной техники в прокат во всем мире</p>
+            <div>
+                <ul class="choose-lang">
+                    <li class="active"><a href="#">Русский</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+                <ul class="coose-currency">
+                    <li class="active"><a href="#">RUB</a></li>
+                    <li><a href="#">USD</a></li>
+                </ul>
+            </div>
+        </div><!--container-->
+    </footer>
+</section>
+
+<div class="container"></div><!--container-->
+
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script>
+    angular.module('mainPage', [])
+        .service('searchFormData', function() {
+            this.selectsData = [
+                {
+                    options: [
+                        {
+                            name: 'В прокат',
+                            id: 1
+                        },
+                        {
+                            name: 'В подарок',
+                            id: 2
+                        },
+                        {
+                            name: 'На продажу',
+                            id: 3
+                        }
+                    ]
+                },
+                {
+                    options: [
+                        {
+                            name: 'Велосипед',
+                            id: 1
+                        },
+                        {
+                            name: 'Самокат',
+                            id: 2
+                        },
+                        {
+                            name: 'Пепелац',
+                            id: 3
+                        }
+                    ]
+                },
+                {
+                    options: [
+                        {
+                            name: 'Горный',
+                            id: 1
+                        },
+                        {
+                            name: 'Норный',
+                            id: 2
+                        },
+                        {
+                            name: 'Амфибия',
+                            id: 3
+                        }
+                    ]
+                }
+            ];
+            this.searchData = [
+                {
+                    name: 'в Москве',
+                    id: 1
+                },
+                {
+                    name: 'в Питере',
+                    id: 2
+                },
+                {
+                    name: 'в Баку',
+                    id: 3
+                },
+                {
+                    name: 'в Ростове',
+                    id: 4
+                },
+                {
+                    name: 'в Магадане',
+                    id: 5
+                }
+            ];
+        })
+        .service('goodsData', function () {
+
+        })
+        .component('mainPage', {
+            template: '',
+            controller: function (searchFormData, goodsData) {
+
+            }
+        })
+        .component('searchForm', {
+            template: `<form class="search-form">
+							<ul>
+								<li ng-repeat="select in $ctrl.selects">
+									<custom-select select-data="select" selected-option="$ctrl.selectedArr[$index]"></custom-select>
+								</li>
+							</ul>
+							<input ng-model="$ctrl.searchKeyword" ng-change="$ctrl.searchSelected = false" placeholder="в Ростове-на-Дону" required="" name="q" type="text">
+							<ul ng-if="!!$ctrl.searchKeyword && !$ctrl.searchSelected" class="search__autocomplete">
+								<li ng-repeat="field in $ctrl.searchPotentialFields | filter:$ctrl.searchKeyword" ng-click="$ctrl.setSearch(field.name)">
+									<span>{{field.name}}</span>
+								</li>
+							</ul>
+							<button type="submit">Найти</button>
+						</form>`,
+            controller: function(searchFormData) {
+                this.selects = searchFormData.selectsData;
+                this.selectedArr = this.selects.map((item) => {
+                        return item.options[0];
+            });
+                this.searchKeyword = '';
+                this.searchSelected = false;
+                this.searchPotentialFields = searchFormData.searchData;
+                this.setSearch = (name) => {
+                    this.searchKeyword = name;
+                    this.searchSelected = true;
+                };
+            }
+        })
+        .component('customSelect', {
+            bindings: {
+                selectData: '<',
+                selectedOption: "="
+            },
+            template: `<a href="javascript:void(0)" ng-click="$ctrl.isOpen = !$ctrl.isOpen">{{$ctrl.selectedOption.name}}</a>
+						<ul ng-if="$ctrl.isOpen">
+							<li ng-repeat="option in $ctrl.selectData.options" ng-click="$ctrl.setSelection(option)">{{option.name}}</li>
+						</ul>`,
+            controller: function() {
+                this.isOpen = false;
+                this.setSelection = function (newSelect) {
+                    this.selectedOption = newSelect;
+                    this.isOpen = false;
+                };
+            }
+        })
+        .component('goodsBlock', {
+            template: `<div class="goods-nav">
+							<p>ПРОКАТ</p>
+							<ul class="goods-menu">
+								<li><a href="#">Велосипеды</a></li>
+								<li><a href="#">Гироскутеры</a></li>
+								<li><a href="#">Самокаты</a></li>
+								<li><a href="#">Аксессуары</a></li>
+							</ul>
+							<a href="#">Как сюда попасть?</a>
+						</div>
+						<div class="link-box">
+							<div>
+								<a href="#">
+									<img src="img/goods_photo_1.jpg" alt="img">
+									<p class="price">400 &#8381;</p>
+									<p>Велосипед двухподвес GT FURY</p>
+									<p class="place">ул. Пушкинская, 2а</p>
+									<p>
+										<span class="look">199</span>
+										<span class="comment">15</span>
+										<span class="company-logo">
+												<img src="img/trader_logo_1.png" alt="company-logo">
+											</span>
+									</p>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<img src="img/goods_photo_2.jpg" alt="img">
+									<p class="price">150 &#8381;</p>
+									<p>Детский велокат COMMENCAL EL CAMINO</p>
+									<p class="place">пр-т Шолохова, 112</p>
+									<p>
+										<span class="look">199</span>
+										<span class="comment">15</span>
+										<span class="company-logo">
+												<img src="img/trader_logo_2.png" alt="company-logo">
+											</span>
+									</p>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<img src="img/goods_photo_3.jpg" alt="img">
+									<p class="price">350 &#8381;</p>
+									<p>Велосипед двухподвес TREK REMENDY</p>
+									<p class="place">пр-т Шолохова, 112</p>
+									<p>
+										<span class="look">199</span>
+										<span class="comment">15</span>
+										<span class="company-logo">
+												<img src="img/trader_logo_1.png" alt="company-logo">
+											</span>
+									</p>
+								</a>
+							</div>
+						</div>`,
+            controller: function (goodsData) {
+
+            }
+        });
+
+
+</script>
+
 
 </body>
 </html>
