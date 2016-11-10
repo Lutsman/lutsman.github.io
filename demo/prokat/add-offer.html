@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="">  <!--Ключевые слова-->
+    <meta name="description" content=""> <!--Описание-->
+
+    <title>onProkat</title>
+
+    <!--Start Open Graph-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">   <!--Заголовок-->
+    <meta property="og:description" content=""> <!--Краткое описание, которое выводится при формировании превью ссылки-->
+    <meta property="og:url" content="http://"> <!--Ссылка на страницу сайта-->
+    <meta property="og:image" content="http://"> <!--Ссылка на картинку, которая будет отображаться в посте-->
+    <!--End Open Graph-->
+
+    <!--Favicon-->
+    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>-->
+
+    <!--For improved cross-browser rendering-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="maket3"></div>
+
+<header>
+    <div>
+        <div class="container">
+            <nav class="top-menu-1">
+                <a href="#">Магазины</a>
+                <a href="#">Прокаты</a>
+                <a href="#">Акции и предложения</a>
+                <a href="#">Контакты</a>
+            </nav>
+
+            <div class="user-data">
+                <span>0</span>
+                <a href="#">Вход</a>
+            </div>
+
+        </div><!--container-->
+    </div>
+
+    <div>
+        <div class="container">
+            <a href="/" class="logo"></a>
+
+            <nav class="top-menu-2">
+                <a href="#">Прокат</a>
+                <a href="#">Продажа</a>
+                <a href="#">События</a>
+                <a href="#">Статьи</a>
+                <a href="#">Интерактивная карта </a>
+            </nav>
+
+
+            <a href="#" class="add-offer">+ Добавить предложение</a>
+
+        </div><!--container-->
+    </div>
+
+</header>
+
+<section class="content add-offer-content">
+    <div class="container">
+        <div class="content__block">
+            <div>
+                <h2>Новое предложение</h2>
+                <a class="xml-download" href="#">XML - загрузка предложений</a>
+            </div>
+
+            <form class="category-form new-offer-form" method="get" action="/">
+                <div class="title-block">
+                    <h4>Тип предложения</h4>
+                    <a href="#">Правила размещения</a>
+                </div>
+                <div>
+                    <div>
+                        <p class="title">Тип сделки</p>
+                        <ul>
+                            <li class="active"><a href="#"><span>В прокат</span></a></li>
+                            <li><a href="#"><span>Купить</span></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="title">Категория</p>
+                        <ul>
+                            <li class="active"><a href="#"><span>Велосипед</span></a></li>
+                            <li><a href="#"><span>Гироскутер</span></a></li>
+                            <li><a href="#"><span>Самокат</span></a></li>
+                            <li><a href="#"><span>Роликовые коньки</span></a></li>
+                            <li><a href="#"><span>Аксессуары и оборудование</span></a></li>
+                            <li><a href="#"><span>Зимняя техника</span></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="title">Тип</p>
+                        <ul>
+                            <li><a href="#"><span>Шоссейный</span></a></li>
+                            <li class="active"><a href="#"><span>Горный</span></a></li>
+                            <li><a href="#"><span>Детский</span></a></li>
+                            <li><a href="#"><span>Хардтейл</span></a></li>
+                            <li><a href="#"><span>Двухподвес</span></a></li>
+                            <li><a href="#"><span>Фэтбайк</span></a></li>
+                            <li><a href="#"><span>Электро</span></a></li>
+                            <li><a href="#"><span>Компактный</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="title-block">
+                    <h4>Адрес</h4>
+                    <a href="#">Проблема с вводом адреса?</a>
+                </div>
+                <div class="map-block">
+                    <input name="adress" placeholder="Россия, Москва Ленина 154" required="" type="text">
+                    <div class="map"></div>
+                    <div>
+                        <div>
+                            <label for="metro-name">Ближайшее метро (если есть)</label>
+                            <input id="metro-name" type="text" name="name" placeholder="Домодедовская">
+                        </div>
+                       <div>
+                           <label for="metro-time">До метро, мин</label>
+                           <input id="metro-time" type="time" name="time" placeholder="9">
+                       </div>
+                        <ul class="way">
+                            <li><a href="#">пешком</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="title-block">
+                    <h4>О товаре</h4>
+                </div>
+                <div class="about">
+                    <div>
+                        <label for="name">Название</label>
+                        <input id="name" type="text" name="name" placeholder="">
+                    </div>
+                    <div>
+                        <label for="year">Год выпуска</label>
+                        <input id="year" type="text" name="year" placeholder="">
+                    </div>
+                    <div>
+                        <label for="size">Размер</label>
+                        <input id="size" type="text" name="size" placeholder="">
+                    </div>
+                    <div>
+                        <label for="suspension">Ход подвески</label>
+                        <input id="suspension" type="text" name="suspension" placeholder="">
+                    </div>
+                    <div>
+                        <label for="wheel">Колеса</label>
+                        <input id="wheel" type="text" name="wheel" placeholder="">
+                    </div>
+                    <div>
+                        <label for="color"><i class="icon icon-human"></i>Цвет</label>
+                        <input id="color" type="text" name="color" placeholder="">
+                    </div>
+                    <div>
+                        <label for="manufacturer">Производитель</label>
+                        <input id="manufacturer" type="text" name="manufacturer" placeholder="">
+                    </div>
+                </div>
+                <div class="title-block">
+                    <h4>Фотографии</h4>
+                </div>
+                <div class="photo">
+                    <p>Не допускаются к размещению фотографии содержащие водяные знаки, рекламные баннеры.
+                        Мы принимаем только качественные фотографии в формате JPG, PNG и GIF.
+                        Максимальный размер одной фотографии 5мб</p>
+                    <input type="file" name="file">
+                    <h4>Описание</h4>
+                    <textarea id="description" name="description" placeholder="" required=""></textarea>
+                </div>
+                <div class="title-block">
+                    <h4>Цена и условия</h4>
+                    <a href="#">Правила заполнения</a>
+                </div>
+                
+                
+
+
+
+               
+                <div class="search-criterion">
+                    <p>Показать:</p>
+                    <input id="form-radio1" name="radio" value="1" type="radio">
+                    <label class="radio-label" for="form-radio1">сначала дешевые</label>
+                    <input id="form-radio2" name="radio" value="2" type="radio">
+                    <label class="radio-label" for="form-radio2">сначала дорогие</label>
+                    <input id="form-radio3" name="radio" value="3" checked="checked" type="radio">
+                    <label class="radio-label" for="form-radio3">по-популярности</label>
+                </div>
+
+                <button type="submit">Показать 159404 предложения</button>
+                <button type="reset">Очистить условия поиска</button>
+
+                <a href="#" class="close">скрыть</a>
+
+            </form>
+
+        </div>
+
+        <aside class="sidebar">
+
+        </aside>
+    </div><!--container-->
+</section>
+
+<section class="pagefooter">
+    <div class="container">
+        <p class="info-us">onProkat — база данных о прокате и продаже техники для отдыха. Использование сайта, размещение предложений, означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой конфиденциальности</a> onProkat. Оплачивая услуги на сайте, вы принимаете <a href="#">Лицензионное соглашение</a>.</p>
+
+    </div><!--container-->
+
+    <div class="footer-nav">
+        <div class="container">
+            <nav class="footer-menu">
+                <a href="#">Справочный центр</a>
+                <a href="#">Тарифы и цены</a>
+                <a href="#">Контакты</a>
+                <a href="#">Реклама на сайте</a>
+                <a href="#">Продвижение объявлений</a>
+                <a href="#">Премиум-размещение</a>
+                <a href="#">Спецпредложения</a>
+                <a href="#">Поиск на карте</a>
+                <a href="#">Карта сайта</a>
+            </nav>
+        </div><!--container-->
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2016 onProkat - Поиск прогулочной техники в прокат во всем мире</p>
+            <div>
+                <ul class="choose-lang">
+                    <li class="active"><a href="#">Русский</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+                <ul class="coose-currency">
+                    <li class="active"><a href="#">RUB</a></li>
+                    <li><a href="#">USD</a></li>
+                </ul>
+            </div>
+        </div><!--container-->
+    </footer>
+</section>
+
+
+
+<div class="container"></div><!--container-->
+
+
+
+
+
+</body>
+</html>
