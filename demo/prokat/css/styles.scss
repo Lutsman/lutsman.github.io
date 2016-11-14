@@ -4,6 +4,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'head';
+@import 'js'; 
 
 #maket {
     position: absolute;
@@ -515,7 +516,57 @@ footer {
     .more {
         margin-top: 15px;
         font: 13px $lato-semibold;
-        color: #d35c60;
+        color: #f15c60;
+    }
+}
+
+.sidebar-menu {
+    margin-top: 30px;
+    font-family: $lato-semibold;
+    a {
+        display: inline;
+        margin: 0;
+        line-height: 25px;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-bottom-color: rgba(211, 92, 96, 0.9);
+        }
+    }
+    .active a {
+        border-bottom-color: rgba(211, 92, 96, 0.9);
+    }
+}
+.support-links {
+    margin-top: 280px !important;
+    a {
+        display: inline;
+        margin: 0;
+        font-family: $lato-semibold;
+        line-height: 25px;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-bottom-color: rgba(211, 92, 96, 0.9);
+        }
+    }
+    .reset {
+        display: block;
+        width: 182px;
+        height: 29px;
+        margin-bottom: 10px;
+        font: 16px $lato;
+        color: #fff;
+        line-height: 27px;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: #656565;
+        border: 1px solid #656565;
+        @include border-radius(3px);
+        @include transition(all 0.2s ease-in-out);
+        cursor: pointer;
+        &:hover {
+            color: #656565;
+            background-color: #fff;
+        }
     }
 }
 
@@ -699,6 +750,7 @@ footer {
 
 .search-conditions {
     padding: 38px 0 0;
+    margin-bottom: 30px;
     background-color: #fff;
     h2 {
         margin-bottom: 10px;
@@ -727,7 +779,7 @@ footer {
     background-color: #fff;
      border-top: 1px solid #f4f4f4;
     > div {
-        ul, > div {
+        .category-list, .choose-price {
             float: left;
         }
     }
@@ -740,27 +792,7 @@ footer {
     ul {
         margin-bottom: 22px;
     }
-    li {
-        float: left;
-        + li {
-            margin-left: 10px;
-        }
-        a {
-            display: inline-block;
-            padding: 5px 22px;
-            @include border-radius(3px);
-            span {
-                border-bottom: 1px dashed #b5b5b5;
-            }
-            &:hover {
-                color: #fff;
-                background-color: #f15c60;
-                span {
-                    border-bottom-color: transparent;
-                }
-            }
-        }
-    }
+
     button {
         float: left;
         width: 257px;
@@ -776,13 +808,6 @@ footer {
         margin-left: 12px;
         color: #d35c60;
         background-color: #fff;
-    }
-    .active a {
-        color: #fff;
-        background-color: #f15c60;
-        span {
-            border-bottom-color: transparent;
-        }
     }
     .number-offers {
         float: right;
@@ -856,6 +881,36 @@ footer {
         @include transform(translate3d(-50%, 0, 0));
     }
 }
+.category-list {
+    li {
+        float: left;
+        + li {
+            margin-left: 10px;
+        }
+        a {
+            display: inline-block;
+            padding: 5px 22px;
+            @include border-radius(3px);
+            span {
+                border-bottom: 1px dashed #b5b5b5;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #f15c60;
+                span {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+    .active a {
+        color: #fff;
+        background-color: #f15c60;
+        span {
+            border-bottom-color: transparent;
+        }
+    }
+}
 
 .choose-price {
     margin-left: 155px;
@@ -881,7 +936,7 @@ footer {
     }
 }
 .top-line {
-    margin: 17px 0 20px;
+    margin: 0 0 20px;
     letter-spacing: 0.5px;
     span {
         margin-right: 5px;
@@ -1024,6 +1079,7 @@ footer {
         }
     }
 }
+
 .banner {
     height: 402px;
     margin: 12px 0;
@@ -1107,7 +1163,7 @@ footer {
 }
 
 .add-offer-content {
-    padding: 28px 0;
+    padding: 28px 0 0;
     h2 {
         float: left;
     }
@@ -1121,12 +1177,14 @@ footer {
         border-bottom-color: transparent;
     }
 }
+
 .new-offer-form {
     padding: 0;
     border: 1px solid #d1d1d1;
     @include border-radius(3px);
     h4 {
         margin-bottom: 20px;
+        color: #000;
     }
     .title {
         float: left;
@@ -1134,33 +1192,33 @@ footer {
         margin-right: 20px;
         line-height: 29px;
     }
-    ul {
-        float: right;
-        width: 720px;
-    }
     li {
         margin: 0 5px 5px;
         + li {
             margin-left: 5px;
         }
     }
+    .category-list {
+        width: 720px;
+    }
     > div {
-        padding: 0 30px 5px;
+        padding: 30px;
         border-bottom: 1px solid #d1d1d1;
         &:last-of-type {
             border-bottom: none;
         }
+        > div:last-of-type .category-list {
+            margin-bottom: 0;
+        }
     }
     .title-block {
-        padding-top: 30px;
-        border-bottom: none;
         h4 {
             float: left;
-            + a {
-                float: right;
-                font-size: 13px;
-                color: #f15c60;
-            }
+        }
+        a {
+            float: right;
+            font-size: 13px;
+            color: #f15c60;
         }
     }
     input {
@@ -1169,17 +1227,17 @@ footer {
         color: #000;
     }
     .map-block {
-        padding-bottom: 30px;
         > input {
             width: 100%;
         }
         label {
             display: block;
+            width: auto;
             font-size: 13px;
             color: #656565;
             line-height: 25px;
         }
-        > div > div {
+        > div:not(.map) > div {
             float: left;
             margin-right: 10px;
         }
@@ -1191,11 +1249,13 @@ footer {
                 width: 90px;
             }
         }
+        .dropdown {
+            float: left;
+            width: 136px;
+            margin: 25px 0 0;
+        }
     }
-    .way {
-        float: left;
-        width: 136px;
-        margin: 25px 0 0;
+    .dropdown {
         li {
             margin: 0;
         }
@@ -1206,9 +1266,8 @@ footer {
             width: 136px;
             height: 29px;
             padding: 0 30px 0 10px;
-            color: #000 !important;
+            color: #000;
             line-height: 27px;
-            background-color: #fff !important;
             border: 1px solid #b5b5b5;
             @include border-radius(3px);
             &::after {
@@ -1226,13 +1285,12 @@ footer {
             }
         }
     }
+    label {
+        display: inline-block;
+        width: 120px;
+        letter-spacing: normal;
+    }
     .about {
-        padding-bottom: 30px;
-        label {
-            display: inline-block;
-            width: 120px;
-            letter-spacing: normal;
-        }
         input {
             width: 85px;
         }
@@ -1246,8 +1304,83 @@ footer {
             width: 205px;
         }
         > div {
-            float: none;
             margin-bottom: 10px;
+        }
+    }
+    .photo {
+        p {
+            font-size: 13px;
+            letter-spacing: normal;
+            span {
+                display: block;
+            }
+        }
+        .file-upload {
+            width: 100%;
+            height: 205px;
+            margin: 25px 0;
+            text-align: center;
+            border: 1px dashed #b5b5b5;
+            input[type="file"]{
+                display: none;
+            }
+            label {
+                display: inline-block;
+                width: 253px;
+            }
+            .btn {
+                width: 100%;
+                height: 29px;
+                font-size: 13px;
+                color: #f15c60;
+                letter-spacing: normal;
+                line-height: 27px;
+                text-align: center;
+                text-transform: uppercase;
+                border: 1px solid #f15c60;
+                cursor: pointer;
+            }
+        }
+        .file-upload-icon {
+            width: 92px;
+            height: 74px;
+            margin: 40px auto 30px;
+            background-image: url("../img/sprite.png");
+            background-position: -384px -128px;
+        }
+        textarea {
+            width: 853px;
+            height: 205px;
+            padding: 10px;
+            border: 1px solid #b5b5b5;
+            @include border-radius(3px);
+        }
+    }
+    .price-conditions {
+        > div {
+            margin-bottom: 10px;
+        }
+        input {
+            width: 183px;
+        }
+        .dropdown {
+            display: inline-block;
+            a {
+                width: 73px;
+                margin-left: -5px;
+                @include border-radius(0 3px 3px 0);
+            }
+        }
+    }
+    button.submit-all {
+        float: right;
+        width: 248px;
+        margin-bottom: 10px;
+        color: #f15c60;
+        background-color: #fff;
+        &:hover {
+            color: #fff;
+            background-color: #f15c60;
         }
     }
 }
@@ -1256,6 +1389,91 @@ footer {
     height: 370px;
     margin: 15px 0;
     background-image: url("../img/map_bg.jpg");
+}
+.add-phone {
+    p {
+        margin-bottom: 5px;
+        &:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+    span {
+        display: block;
+        font: 18px $lato-light;
+        color: #000;
+    }
+    input {
+        padding: 0 5px;
+        margin-left: 5px;
+        border-color: #d1d1d1;
+    }
+    input[name="phone-part-1"] {
+        width: 43px;
+    }
+    input[name="phone-part-2"] {
+        width: 97px;
+    }
+    button {
+        float: none;
+        width: 102px;
+        margin-left: 5px;
+    }
+    .dropdown {
+        float: left;
+        margin-right: 5px;
+    }
+}
+
+.choose-rate {
+    margin: 30px 0 70px;
+    font-size: 12px;
+    color: #000;
+    line-height: 17px;
+    letter-spacing: normal;
+    > div {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 32%;
+        height: 240px;
+        padding: 15px;
+        border: 1px solid #b5b5b5;
+        @include border-radius(3px);
+        @include transition(all 0.2s ease-in-out);
+        + div {
+            margin-left: 2%;
+        }
+        &:hover {
+            @include box-shadow(0 0 9.5px 1.5px rgba(80, 80, 80, 0.6));
+        }
+    }
+    .title-rate {
+        position: relative;
+        z-index: 2;
+        padding: 20px 30px 30px 95px;
+        font: 18px $lato-semibold;
+        line-height: 25px;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    .btn {
+        position: absolute;
+        z-index: 2;
+        left: 15px;
+        bottom: 18px;
+        width: 102px;
+        height: 29px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 29px;
+        text-align: center;
+        background-color: #f15c60;
+        border-color: #f15c60;
+        &:hover {
+            color: #f15c60;
+            background-color: #fff;
+        }
+    }
 }
 
 
@@ -1316,7 +1534,7 @@ footer {
     background-position: -64px -64px;
 }
 
-.diamond-icon, .page-icon, .point-icon {
+.diamond-icon, .page-icon, .point-icon, .currency-icon, .diamond-big-icon, .top3-icon {
     &::before {
         content: '';
         display: block;
@@ -1346,6 +1564,25 @@ footer {
     width: 50px;
     height: 70px;
     background-position: -256px -128px;
+}
+
+.currency-icon::before {
+    left: 0;
+    width: 52px;
+    height: 65px;
+    background-position: 0 -256px;
+}
+.diamond-big-icon::before {
+    left: 0;
+    width: 85px;
+    height: 65px;
+    background-position: -128px -256px;
+}
+.top3-icon::before {
+    left: 0;
+    width: 66px;
+    height: 66px;
+    background-position: -256px -256px;
 }
 
 /* ----------------------------------------------

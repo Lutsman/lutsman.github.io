@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="maket3"></div>
+<!--<div id="maket3"></div>-->
 
 <header>
     <div>
@@ -79,21 +79,21 @@
             </div>
 
             <form class="category-form new-offer-form" method="get" action="/">
-                <div class="title-block">
-                    <h4>Тип предложения</h4>
-                    <a href="#">Правила размещения</a>
-                </div>
-                <div>
+                <div id="type-offer">
+                    <div class="title-block">
+                        <h4>Тип предложения</h4>
+                        <a href="#">Правила размещения</a>
+                    </div>
                     <div>
                         <p class="title">Тип сделки</p>
-                        <ul>
+                        <ul class="category-list">
                             <li class="active"><a href="#"><span>В прокат</span></a></li>
                             <li><a href="#"><span>Купить</span></a></li>
                         </ul>
                     </div>
                     <div>
                         <p class="title">Категория</p>
-                        <ul>
+                        <ul class="category-list">
                             <li class="active"><a href="#"><span>Велосипед</span></a></li>
                             <li><a href="#"><span>Гироскутер</span></a></li>
                             <li><a href="#"><span>Самокат</span></a></li>
@@ -104,7 +104,7 @@
                     </div>
                     <div>
                         <p class="title">Тип</p>
-                        <ul>
+                        <ul class="category-list">
                             <li><a href="#"><span>Шоссейный</span></a></li>
                             <li class="active"><a href="#"><span>Горный</span></a></li>
                             <li><a href="#"><span>Детский</span></a></li>
@@ -117,101 +117,169 @@
                     </div>
                 </div>
 
-                <div class="title-block">
-                    <h4>Адрес</h4>
-                    <a href="#">Проблема с вводом адреса?</a>
-                </div>
-                <div class="map-block">
-                    <input name="adress" placeholder="Россия, Москва Ленина 154" required="" type="text">
-                    <div class="map"></div>
-                    <div>
+                <div id="adress">
+                    <div class="title-block">
+                        <h4>Адрес</h4>
+                        <a href="#">Проблема с вводом адреса?</a>
+                    </div>
+                    <div class="map-block">
+                        <input name="adress" placeholder="Россия, Москва Ленина 154" required="" type="text">
+                        <div class="map"></div>
                         <div>
-                            <label for="metro-name">Ближайшее метро (если есть)</label>
-                            <input id="metro-name" type="text" name="name" placeholder="Домодедовская">
+                            <div>
+                                <label for="metro-name">Ближайшее метро (если есть)</label>
+                                <input id="metro-name" type="text" name="name" placeholder="Домодедовская">
+                            </div>
+                            <div>
+                                <label for="metro-time">До метро, мин</label>
+                                <input id="metro-time" type="time" name="time" placeholder="9">
+                            </div>
+                            <ul class="dropdown">
+                                <li><a href="#">пешком</a></li>
+                            </ul>
                         </div>
-                       <div>
-                           <label for="metro-time">До метро, мин</label>
-                           <input id="metro-time" type="time" name="time" placeholder="9">
-                       </div>
-                        <ul class="way">
-                            <li><a href="#">пешком</a></li>
-                        </ul>
                     </div>
                 </div>
-                <div class="title-block">
+
+                <div id="about">
                     <h4>О товаре</h4>
+                    <div class="about">
+                        <div>
+                            <label for="name">Название</label>
+                            <input id="name" type="text" name="name" placeholder="">
+                        </div>
+                        <div>
+                            <label for="year">Год выпуска</label>
+                            <input id="year" type="text" name="year" placeholder="">
+                        </div>
+                        <div>
+                            <label for="size">Размер</label>
+                            <input id="size" type="text" name="size" placeholder="">
+                        </div>
+                        <div>
+                            <label for="suspension">Ход подвески</label>
+                            <input id="suspension" type="text" name="suspension" placeholder="">
+                        </div>
+                        <div>
+                            <label for="wheel">Колеса</label>
+                            <input id="wheel" type="text" name="wheel" placeholder="">
+                        </div>
+                        <div>
+                            <label for="color"><i class="icon icon-human"></i>Цвет</label>
+                            <input id="color" type="text" name="color" placeholder="">
+                        </div>
+                        <div>
+                            <label for="manufacturer">Производитель</label>
+                            <input id="manufacturer" type="text" name="manufacturer" placeholder="">
+                        </div>
+                    </div>
                 </div>
-                <div class="about">
-                    <div>
-                        <label for="name">Название</label>
-                        <input id="name" type="text" name="name" placeholder="">
-                    </div>
-                    <div>
-                        <label for="year">Год выпуска</label>
-                        <input id="year" type="text" name="year" placeholder="">
-                    </div>
-                    <div>
-                        <label for="size">Размер</label>
-                        <input id="size" type="text" name="size" placeholder="">
-                    </div>
-                    <div>
-                        <label for="suspension">Ход подвески</label>
-                        <input id="suspension" type="text" name="suspension" placeholder="">
-                    </div>
-                    <div>
-                        <label for="wheel">Колеса</label>
-                        <input id="wheel" type="text" name="wheel" placeholder="">
-                    </div>
-                    <div>
-                        <label for="color"><i class="icon icon-human"></i>Цвет</label>
-                        <input id="color" type="text" name="color" placeholder="">
-                    </div>
-                    <div>
-                        <label for="manufacturer">Производитель</label>
-                        <input id="manufacturer" type="text" name="manufacturer" placeholder="">
-                    </div>
-                </div>
-                <div class="title-block">
+
+                <div id="photo">
                     <h4>Фотографии</h4>
-                </div>
-                <div class="photo">
-                    <p>Не допускаются к размещению фотографии содержащие водяные знаки, рекламные баннеры.
-                        Мы принимаем только качественные фотографии в формате JPG, PNG и GIF.
-                        Максимальный размер одной фотографии 5мб</p>
-                    <input type="file" name="file">
-                    <h4>Описание</h4>
-                    <textarea id="description" name="description" placeholder="" required=""></textarea>
-                </div>
-                <div class="title-block">
-                    <h4>Цена и условия</h4>
-                    <a href="#">Правила заполнения</a>
-                </div>
-                
-                
-
-
-
-               
-                <div class="search-criterion">
-                    <p>Показать:</p>
-                    <input id="form-radio1" name="radio" value="1" type="radio">
-                    <label class="radio-label" for="form-radio1">сначала дешевые</label>
-                    <input id="form-radio2" name="radio" value="2" type="radio">
-                    <label class="radio-label" for="form-radio2">сначала дорогие</label>
-                    <input id="form-radio3" name="radio" value="3" checked="checked" type="radio">
-                    <label class="radio-label" for="form-radio3">по-популярности</label>
+                    <div class="photo">
+                        <p>
+                            <span>Не допускаются к размещению фотографии содержащие водяные знаки, рекламные баннеры.</span>
+                            <span> Мы принимаем только качественные фотографии в формате JPG, PNG и GIF.</span>
+                            <span>Максимальный размер одной фотографии 5мб</span>
+                        </p>
+                        <div class="file-upload">
+                            <div class="file-upload-icon"></div>
+                            <label>
+                                <span class="btn">выберите файлы на компьютере</span>
+                                <input type="file" name="file">
+                            </label>
+                        </div>
+                        <h4>Описание</h4>
+                        <textarea id="description" name="description" placeholder="" required=""></textarea>
+                    </div>
                 </div>
 
-                <button type="submit">Показать 159404 предложения</button>
-                <button type="reset">Очистить условия поиска</button>
+                <div id="price-conditions">
+                    <div class="title-block">
+                        <h4>Цена и условия</h4>
+                        <a href="#">Правила заполнения</a>
+                    </div>
+                    <div class="price-conditions">
+                        <div>
+                            <label for="price">Цена</label>
+                            <input id="price" type="text" name="price" placeholder="">
+                            <ul class="dropdown">
+                                <li><a href="#">&#8381;</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <label for="deposit">Залог</label>
+                            <input id="deposit" type="text" name="deposit" placeholder="">
+                        </div>
+                    </div>
+                </div>
 
-                <a href="#" class="close">скрыть</a>
+                <div id="contact">
+                    <h4>Контактная информация</h4>
+                    <div class="add-phone">
+                        <p>
+                            Основной
+                            <span>+7 (989) 536-00-35</span>
+                        </p>
+                        <p>Добавить телефон</p>
+                        <ul class="dropdown">
+                            <li><a href="#">+7, Россия</a></li>
+                        </ul>
+                        <input type="tel" name="phone-part-1" placeholder="989" required>
+                        <input type="tel" name="phone-part-2" placeholder="536-00-35" required>
+                        <button type="submit">Добавить</button>
+                    </div>
+                </div>
+
+                <div id="rate">
+                    <h4>Выберите тариф</h4>
+                    <div class="choose-rate">
+                        <div>
+                            <p class="title-rate currency-icon">бесплатно</p>
+                            <p>Вы можете опубликовать объявления на некоммерческом тарифном плане. Для этого вам
+                                необходимо подтвердить мобильный телефон и пройти идентификацию в личном кабинете.</p>
+                            <a href="#" class="btn">Выбрать</a>
+                        </div>
+                        <div>
+                            <p class="title-rate diamond-big-icon">премиум</p>
+                            <p>Ваше предложение вызывает больше доверия клиентов и показывает серьёзность ваших намерений.
+                                Ускоряет продажу и сдачу в прокат в среднем в 1,5‑2 раза.</p>
+                            <a href="#" class="btn">Выбрать</a>
+                        </div>
+                        <div>
+                            <p class="title-rate top3-icon">топ-3</p>
+                            <p>Ваше предложение увидят одним из первых! Вы получаете в 5 раз больше звонков, а значит,
+                                многократно увеличиваете скорость сделки.</p>
+                            <a href="#" class="btn">Выбрать</a>
+                        </div>
+                    </div>
+                    <button class="submit-all" type="submit">Добавить предложение</button>
+                </div>
 
             </form>
 
         </div>
 
         <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#type-offer">Тип предложения</a></li>
+                <li><a href="#adress">Адрес</a></li>
+                <li><a href="#about">О товаре</a></li>
+                <li><a href="#photo">Фотографии</a></li>
+                <li><a href="#price-conditions">Описание</a></li>
+                <li><a href="#">Цена и условия</a></li>
+                <li><a href="#contact">Контактная информация</a></li>
+                <li><a href="#rate">Тариф</a></li>
+            </ul>
+
+            <div class="support-links">
+                <span class="reset">очистить форму</span>
+                <a href="#">Онлайн-поддержка</a>
+                <a href="#">Условия размещения</a>
+            </div>
+
+
 
         </aside>
     </div><!--container-->
