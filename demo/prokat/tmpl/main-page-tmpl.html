@@ -1,0 +1,290 @@
+<!--<div id="maket"></div>-->
+
+<section class="pageheader">
+
+
+	<div class="container">
+		<h1>Поиск прогулочной техники в прокат по всему миру</h1>
+
+		<search-form></search-form> <!--Search-form component-->
+	</div><!--container-->
+</section>
+
+<section class="category">
+	<div class="container">
+
+		<div class="category-big bicycle-bg">
+			<h2>Велосипеды</h2>
+			<ul>
+				<li><a href="#">Шоссейные <span>234</span></a></li>
+				<li><a href="#">Горные <span>438</span></a></li>
+				<li><a href="#">Детские <span>127</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Хардтейлы <span>320</span></a></li>
+				<li><a href="#">Двухподвесы <span>139</span></a></li>
+				<li><a href="#">Фэтбайки <span>29</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Электробайки <span>38</span></a></li>
+				<li><a href="#">Складыващиеся <span>110</span></a></li>
+			</ul>
+		</div>
+		<div class="category-big winter-equip-bg">
+			<h2>Зимняя техника</h2>
+			<ul>
+				<li><a href="#">Сноуборды <span>234</span></a></li>
+				<li><a href="#">Лыжи <span>438</span></a></li>
+				<li><a href="#">Санки <span>127</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Снегокаты <span>320</span></a></li>
+				<li><a href="#">Ледянки <span>139</span></a></li>
+			</ul>
+		</div>
+
+		<div class="category-small giroskuter-bg">
+			<h2>Гироскутеры</h2>
+			<ul>
+				<li><a href="#">Шоссейные <span>120</span></a></li>
+				<li><a href="#">Детские <span>435</span></a></li>
+				<li><a href="#">Внедорожные <span>139</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Скоростные <span>29</span></a></li>
+			</ul>
+		</div>
+		<div class="category-small kick-scooter-bg">
+			<h2>Самокаты</h2>
+			<ul>
+				<li><a href="#">Городские <span>120</span></a></li>
+				<li><a href="#">Внедорожные <span>435</span></a></li>
+				<li><a href="#">Трюковые <span>139</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Детские <span>29</span></a></li>
+			</ul>
+		</div>
+		<div class="category-small rollers-bg">
+			<h2>Роликовые коньки</h2>
+			<ul>
+				<li><a href="#">Детские <span>120</span></a></li>
+				<li><a href="#">Профессиональные <span>435</span></a></li>
+				<li><a href="#">Трюковые <span>139</span></a></li>
+			</ul>
+		</div>
+
+		<div class="category-big travel-equip-bg">
+			<h2>Аксессуары и туристическое оборудование</h2>
+			<ul>
+				<li><a href="#">Экшн-камеры <span>120</span></a></li>
+				<li><a href="#">Защитное снаряжение <span>435</span></a></li>
+				<li><a href="#">Палатки <span>139</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Спальные мешки <span>120</span></a></li>
+				<li><a href="#">Рюкзаки туристические <span>435</span></a></li>
+				<li><a href="#">Другое <span>139</span></a></li>
+			</ul>
+		</div>
+		<div class="category-big map-bg">
+			<a href="#">
+				<h2>Поиск на карте</h2>
+				<p>Ищите прокат или продажу техники для отдыха в своем городе на интерактивной карте.</p>
+				<p>Собираетесь в отпуск? OnProkat знает все о прокате велосипедов, гироскутеров и другой техники по всей России!</p>
+			</a>
+		</div>
+
+	</div><!--container-->
+</section>
+
+<section class="content">
+	<div class="container">
+        <h2>Самое популярное</h2>
+
+        <div>
+            <goods-block goods-data="$ctrl.rentData"></goods-block>
+            <div class="offers-box">
+                <h3>Прокаты</h3>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>100% СПОРТА <span>123 предложения</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+
+                <a class="more" href="#">Все прокаты</a>
+            </div>
+        </div>
+
+        <div>
+            <goods-block goods-data="$ctrl.sellData"></goods-block>
+            <div class="offers-box">
+                <h3>Магазины</h3>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>100% СПОРТА <span>123 предложения</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+
+                <a class="more" href="#">Все магазины</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="goods-block">
+                <h2>События и статьи</h2>
+                <div class="link-box">
+                    <div class="big-link">
+                        <a href="#">
+                            <img src="img/events_photo_1.jpg" alt="img">
+                            <p class="title">Red Bull Rampage 2016</p>
+                            <p>16 сентября 2016</p>
+                            <p>Мы расскажем тебе о самом важном и крутом событии в мире даунхилла. Расскажем как это было.</p>
+                            <p>
+                                <span class="look">10155</span>
+                                <span class="comment">55</span>
+                                <span class="like">155</span>
+                                <span class="calendar-icon"></span>
+                            </p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="img/events_photo_2.jpg" alt="img">
+                            <p class="title">Выбираем велосипед</p>
+                            <p>Мы поможем тебе выбрать свой велосипед с первого раза. Расскажем, что нужно знать.</p>
+                            <p>
+                                <span class="look">10155</span>
+                                <span class="comment">55</span>
+                                <span class="like">155</span>
+                                <span class="list-icon"></span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="offers-box">
+                <h3>Акции и предложения</h3>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>100% СПОРТА <span>123 предложения</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_1.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+                <a href="#">
+                    <img src="img/trader_banner_logo_2.png" alt="company">
+                    <p>BikeCenter <span>55 предложений</span></p>
+                </a>
+
+                <a class="more" href="#">Все акции и предложения</a>
+            </div>
+        </div>
+
+	</div><!--container-->
+</section>
+
+<section class="user-opening">
+	<div class="container">
+		<div class="diamond-icon">
+			<h3>Новые клиенты</h3>
+			<p>Премиум-размещение увеличивает количество звонков в 5 раз</p>
+			<a href="#" class="btn">Купить премиум</a>
+		</div>
+		<div class="page-icon">
+			<h3>Добавляйте предложения</h3>
+			<p>Добавляйте новые предложения быстро и удобно</p>
+			<a href="#" class="btn">Добавить объявление</a>
+		</div>
+		<div class="point-icon">
+			<h3>Найдите на карте</h3>
+			<p>Ищите предложения рядом с домом, парком или друзьями</p>
+			<a href="#" class="btn">Найти на карте</a>
+		</div>
+
+	</div><!--container-->
+</section>
+
+<section class="pagefooter">
+	<div class="container">
+		<h3>Поиск техники для отдыха на onProkat </h3>
+		<p>Взять в прокат или купить технику для отдыха — задача несложная, если знать, где искать и с чего начать поиски. Чтобы взять на прокат или купить технику для отдыха, не нужно никуда ехать и
+			ждать в очереди. Достаточно найти в нашей базе подходящие для вас предложения. Не забудьте оформить подписку на новые предложения по результатам поиска, чтобы оперативно получать все самые
+			свежие и актуальные новости о прокате или продаже техники для отдыха по всему миру.</p>
+		<p>Если вы решили взять на прокат или купить велосипед, гироскутер ли другую технику для отдыха, то onProkat поможет вам! onProkat — это самый удобный сайт для поиска техники для отдыха по
+			адресу или по карте, с учётом всех интересующих вас параметров. На onProkat.ru — тысячи актуальных объявлений о прокате или продаже техники для отдыха по всему миру, ежедневно на сайте
+			появляются новые предложения. Объявления содержат описания техники, информацию о прокате или магазине, фотографии, стоимость, контакты проката или магазина.</p>
+
+		<div class="regions">
+			<ul>
+				<li><a href="#">Москва</a></li>
+				<li><a href="#">Санкт-Петербург</a></li>
+				<li><a href="#">Башкортостан</a></li>
+				<li><a href="#">Белгородская область</a></li>
+				<li><a href="#">Брянская область</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Ивановская область</a></li>
+				<li><a href="#">Иркутская область</a></li>
+				<li><a href="#">Калининградская область</a></li>
+				<li><a href="#">Калужская область</a></li>
+				<li><a href="#">Карелия</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Крым</a></li>
+				<li><a href="#">Липецкая область</a></li>
+				<li><a href="#">Марий Эл</a></li>
+				<li><a href="#">Нижегородская область</a></li>
+				<li><a href="#">Новгородская область</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Пензенская область</a></li>
+				<li><a href="#">Пермский край</a></li>
+				<li><a href="#">Псковская область</a></li>
+				<li><a href="#">Ростовская область</a></li>
+				<li><a href="#">Рязанская область</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Смоленская область</a></li>
+				<li><a href="#">Ставрапольский край</a></li>
+				<li><a href="#">Татарстан</a></li>
+				<li><a href="#">Тверская область</a></li>
+				<li><a href="#">Тульская область</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Ханты-Мансийский АО</a></li>
+				<li><a href="#">Челябинская область</a></li>
+				<li><a href="#">Ямало-Ненецкий АО</a></li>
+				<li><a href="#">Ярославская область</a></li>
+			</ul>
+		</div>
+		<a href="#" class="show-more"><span>Показать все регионы</span></a>
+	</div>
+</section>

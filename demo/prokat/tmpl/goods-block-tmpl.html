@@ -1,0 +1,27 @@
+<div class="goods-nav">
+	<p>{{$ctrl.goodsData.title.toUpperCase()}}</p>
+	<ul class="goods-menu">
+		<li ng-repeat="goodsGroup in $ctrl.goodsData.goodsArr" ng-click="$ctrl.activeGroup = goodsGroup"
+			ng-class="{'active': $ctrl.activeGroup === goodsGroup}">
+			{{goodsGroup.groupName}}
+		</li>
+	</ul>
+	<a href="#">Как сюда попасть?</a>
+</div>
+<div ng-repeat="goodsGroup in $ctrl.goodsData.goodsArr" ng-if="$ctrl.activeGroup === goodsGroup" class="link-box">
+	<div ng-repeat="goodsCard in goodsGroup.groupArr">
+		<a href="javascript:void(0)">
+			<img ng-src="{{goodsCard.img}}" alt="{{goodsCard.imgTitle}}">
+			<p class="price">{{goodsCard.price}} &#8381;</p>
+			<p>{{goodsCard.name}}</p>
+			<p class="place">{{goodsCard.adress}}</p>
+			<p>
+				<span class="look">{{goodsCard.lookCount}}</span>
+				<span class="comment">{{goodsCard.commentsCount}}</span>
+				<span class="company-logo">
+					<img ng-src="{{goodsCard.traderImg}}" alt="{{goodsCard.traderTitle}}">
+				</span>
+			</p>
+		</a>
+	</div>
+</div>
