@@ -1,4 +1,0 @@
-<a href="javascript:void(0)" ng-class="{'active': $ctrl.isOpen}" ng-click="$ctrl.isOpen = !$ctrl.isOpen">{{$ctrl.selectedOption.name}}</a>
-<ul ng-if="$ctrl.isOpen">
-	<li ng-repeat="option in $ctrl.options" ng-if="$ctrl.selectedOption !== option" ng-click="$ctrl.setSelection(option)">{{option.name}}</li>
-</ul>

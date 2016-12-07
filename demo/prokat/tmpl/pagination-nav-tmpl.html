@@ -1,8 +1,0 @@
-<div class="pages-list">
-	<ul>
-		<li ng-if="$ctrl.startPos" ng-click="$ctrl.prev()"><a href="javascript:void(0)">...</a></li>
-		<li ng-repeat="page in $ctrl.repeater track by $index" ng-click="$ctrl.setCurrPage($index)" ng-class="{'active': $index === $ctrl.currPage}"><span>{{page}}</span></li>
-		<li ng-if="$ctrl.startPos + $ctrl.pageLimit <= $ctrl.pageCount" ng-click="$ctrl.next()"><a href="javascript:void(0)">...</a></li>
-	</ul>
-	<a href="#" class="btn">Распечатать все предложения</a>
-</div>
