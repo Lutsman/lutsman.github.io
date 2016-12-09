@@ -871,7 +871,11 @@ nav a {
     -moz-transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -o-transform: rotate(135deg);
-    transform: rotate(135deg); }
+    transform: rotate(135deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
 
 .search-form__select ul {
   width: 100%;
@@ -2085,4 +2089,4 @@ Pop up
   z-index: 99;
 }*/
 
-/*# sourceMappingURL=style.efde48b42111f0231313.css.map*/
+/*# sourceMappingURL=style.c6fd01fd0015186c6fec.css.map*/
