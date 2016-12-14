@@ -363,6 +363,7 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+@charset "UTF-8";
 @font-face {
   font-family: 'PF DIN Display Pro';
   src: url(//lutsman.github.io/demo/prokat/resources/fonts/pfdindisplaypro-med.a4948cf83446d3d5cdb4bc57d80d02a2.ttf) format("truetype");
@@ -480,6 +481,14 @@ section, .container {
 .container {
   width: 1220px;
   margin: 0 auto; }
+
+.container__white {
+  padding: 20px 45px;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -613,18 +622,11 @@ search-advance .close {
   search-advance .close.ng-hide {
     opacity: 0; }
 
-category-goods-info:first-of-type .goods-info {
-  border-color: #d1d1d1; }
-
-category-goods-info:nth-of-type(5n+2) .goods-info {
-  background-color: #effdff;
-  border-color: #d1d1d1; }
-
-category-goods-info:nth-of-type(5n+3) .goods-info {
-  background-color: #fed493; }
-
-category-goods-info:nth-of-type(5n+4) .goods-info {
-  background-color: #ffc96e; }
+category-goods-info .goods-info__prem {
+  background-color: #fed493;
+  border-color: #ffb000; }
+  category-goods-info .goods-info__prem:hover {
+    background-color: #ffc96e; }
 
 #maket {
   position: absolute;
@@ -705,6 +707,7 @@ category-goods-info:nth-of-type(5n+4) .goods-info {
     box-shadow: none; }
 
 header {
+  font-family: "LatoWebLight";
   color: #fff;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -820,7 +823,6 @@ nav a {
   z-index: 2;
   width: 1000px;
   margin: 0 auto;
-  overflow: hidden;
   -moz-border-radius: 5px 3px 3px 5px;
   -webkit-border-radius: 5px 3px 3px 5px;
   border-radius: 5px 3px 3px 5px; }
@@ -909,6 +911,8 @@ nav a {
   color: #898989;
   letter-spacing: 0.5px; }
   .search__autocomplete > ul {
+    position: absolute;
+    width: 100%;
     float: none;
     max-width: 275px;
     /*padding-bottom: 10px;*/
@@ -1361,7 +1365,7 @@ footer {
     color: #485663;
     border: 2px solid #485663; }
   .user-opening .diamond-icon .btn {
-    color: #c54349;
+    color: #f15c60;
     border-color: #f15c60; }
 
 .search-conditions {
@@ -1417,7 +1421,9 @@ footer {
     background-color: #fff; }
   .category-form .number-offers {
     float: right; }
-  .category-form .adress {
+  .category-form .search__autocomplete {
+    float: none; }
+  .category-form .adress input {
     width: 488px;
     height: 41px;
     padding: 10px;
@@ -1541,22 +1547,18 @@ footer {
   font: 14px "LatoWebThin";
   letter-spacing: 0.4px;
   background-color: #fff;
-  border: 1px solid #ffb000;
+  border: 1px solid #d1d1d1;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
-  /* &:first-of-type {
-        border-color: #d1d1d1;
-    }
-    &:nth-of-type(5n+2) {
-        background-color: #effdff;
-    }
-    &:nth-of-type(5n+3) {
-        background-color: #fed493;
-    }
-    &:nth-of-type(5n+4) {
-        background-color: #ffc96e;
-    }*/ }
+  border-radius: 3px; }
+  .goods-info:hover {
+    background-color: #effdff; }
+  .goods-info .goods-info__contacts {
+    position: relative; }
+  .goods-info .goods-info__phone {
+    position: absolute;
+    top: 180%;
+    left: 39px; }
   .goods-info h5 {
     margin: 12px 0 6px; }
   .goods-info p {
@@ -1678,7 +1680,8 @@ footer {
     position: relative;
     z-index: 2;
     float: left;
-    margin-right: 12px; }
+    margin-right: 12px;
+    cursor: pointer; }
     .pages-list li a {
       position: relative;
       z-index: 2; }
@@ -1789,6 +1792,11 @@ footer {
     float: left;
     width: 136px;
     margin: 25px 0 0; }
+  .new-offer-form .map {
+    width: 853px;
+    height: 370px;
+    margin: 15px 0;
+    background-image: url(//lutsman.github.io/demo/prokat/resources/img/map_bgf14f9c63a63718539904a5bd70526278.jpg); }
   .new-offer-form .dropdown li {
     margin: 0; }
   .new-offer-form .dropdown a {
@@ -1897,12 +1905,6 @@ footer {
       color: #fff;
       background-color: #f15c60; }
 
-.map {
-  width: 853px;
-  height: 370px;
-  margin: 15px 0;
-  background-image: url(//lutsman.github.io/demo/prokat/resources/img/map_bgf14f9c63a63718539904a5bd70526278.jpg); }
-
 .add-phone p {
   margin-bottom: 5px; }
   .add-phone p:first-of-type {
@@ -1985,6 +1987,198 @@ footer {
       color: #f15c60;
       background-color: #fff; }
 
+.product {
+  padding-bottom: 30px;
+  font-size: 14px; }
+  .product > div {
+    float: left;
+    width: 520px; }
+    .product > div:last-of-type {
+      float: right; }
+  .product h4 {
+    margin-bottom: 10px; }
+
+.product__category {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+  font-size: 16px; }
+
+.product__grey {
+  color: #656565; }
+
+.product__about {
+  text-align: justify;
+  line-height: 18px; }
+
+.product__price {
+  margin: 25px 0;
+  font-size: 18px; }
+
+.product__info {
+  margin-bottom: 25px;
+  line-height: 20px; }
+  .product__info ul {
+    width: 340px; }
+    .product__info ul span {
+      display: block;
+      float: left;
+      width: 45%; }
+      .product__info ul span + span {
+        margin-left: 10%; }
+
+.booking__block {
+  height: 101px;
+  margin-top: 25px;
+  border: 1px solid #b4b4b4;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .booking__block > div {
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding: 25px 20px; }
+    .booking__block > div + div {
+      width: 75%;
+      border-left: 1px solid #b4b4b4; }
+  .booking__block .booking-btn {
+    margin: 4px auto 0; }
+    .booking__block .booking-btn + p {
+      font: 13px "LatoWebLight";
+      color: #010101;
+      text-align: center;
+      line-height: 25px; }
+      .booking__block .booking-btn + p a {
+        font: 13px "LatoWebLight";
+        border-bottom: 1px dashed #000; }
+        .booking__block .booking-btn + p a:hover {
+          border-bottom-color: transparent; }
+
+.booking__logo {
+  line-height: 49px; }
+  .booking__logo img {
+    vertical-align: middle; }
+
+.product__statistics {
+  margin-bottom: 20px;
+  font-size: 12px; }
+  .product__statistics span + span {
+    margin-left: 15px; }
+  .product__statistics .visits {
+    color: #56697a;
+    text-decoration: underline; }
+  .product__statistics .accent {
+    color: #d35c60;
+    text-decoration: underline; }
+  .product__statistics .fire-icon {
+    position: relative;
+    z-index: 2;
+    padding-left: 13px; }
+  .product__statistics .diamond-small-icon {
+    position: relative;
+    z-index: 2;
+    padding-left: 22px; }
+
+.product__slider .slide {
+  height: 346px; }
+
+.product__slider .slide-control {
+  margin: 5px 0 20px; }
+  .product__slider .slide-control span {
+    display: block;
+    float: left;
+    width: 112px;
+    height: 76px;
+    cursor: pointer; }
+    .product__slider .slide-control span + span {
+      margin-left: 24px; }
+
+.product__banner {
+  position: relative;
+  z-index: 2;
+  height: 101px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  border: 1px solid #b4b4b4; }
+  .product__banner:last-of-type {
+    margin-bottom: 0; }
+  .product__banner img {
+    float: left;
+    width: 124px;
+    margin-right: 10px; }
+  .product__banner p {
+    margin-bottom: 5px; }
+    .product__banner p:first-of-type {
+      margin-bottom: 10px; }
+  .product__banner span {
+    font-size: 14px; }
+  .product__banner::after {
+    content: '\420\415\41A\41B\410\41C\410';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    color: #8f8f8f; }
+
+.product__map {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 20px;
+  background-image: url(//lutsman.github.io/demo/prokat/resources/img/product_mapade189dbc061ecaeaee6e9ccd65724da.jpg);
+  background-size: cover; }
+
+.product__social {
+  margin-bottom: 30px;
+  line-height: 41px; }
+  .product__social span {
+    display: inline-block;
+    vertical-align: top;
+    font: 14px "LatoWebThin";
+    line-height: 41px; }
+  .product__social a {
+    display: inline-block;
+    width: 41px;
+    height: 41px;
+    margin-left: 10px;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  .product__social .vk {
+    background-color: #4d76a1; }
+  .product__social .fb {
+    background-color: #3b5998; }
+  .product__social .tw {
+    background-color: #55acee; }
+
+.product__more {
+  font: 12px "LatoWebLight"; }
+  .product__more > div {
+    float: left;
+    width: 180px;
+    margin-bottom: 10px; }
+    .product__more > div + div {
+      margin-left: 57px; }
+    .product__more > div p {
+      margin-bottom: 5px; }
+  .product__more img {
+    margin-bottom: 10px; }
+
+.product__more__title {
+  margin-bottom: 15px;
+  font-size: 16px; }
+
+.product__more__goods-title {
+  color: #56697a; }
+
+.product__more__price {
+  font-size: 14px; }
+
 /* ----------------------------------------------
  Colors Backgrounds
  ---------------------------------------------- */
@@ -2030,7 +2224,7 @@ footer {
 .list-icon {
   background-position: -64px -64px; }
 
-.diamond-icon::before, .page-icon::before, .point-icon::before, .currency-icon::before, .diamond-big-icon::before, .top3-icon::before {
+.diamond-icon::before, .page-icon::before, .point-icon::before, .currency-icon::before, .diamond-big-icon::before, .top3-icon::before, .heart-icon::before, .fire-icon::before, .diamond-small-icon::before {
   content: '';
   display: block;
   position: absolute;
@@ -2074,6 +2268,25 @@ footer {
   height: 66px;
   background-position: -256px -256px; }
 
+.heart-icon::before {
+  top: 2px;
+  left: -25px;
+  width: 15px;
+  height: 14px;
+  background-position: 0px 0px; }
+
+.fire-icon::before {
+  left: 0;
+  width: 10px;
+  height: 14px;
+  background-position: 0px 0px; }
+
+.diamond-small-icon::before {
+  left: 0;
+  width: 19px;
+  height: 14px;
+  background-position: 0px 0px; }
+
 /* ----------------------------------------------
 Pop up
 ---------------------------------------------- */
@@ -2089,4 +2302,4 @@ Pop up
   z-index: 99;
 }*/
 
-/*# sourceMappingURL=style.c6fd01fd0015186c6fec.css.map*/
+/*# sourceMappingURL=styles.css.map*/
