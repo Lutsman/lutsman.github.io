@@ -876,7 +876,8 @@ nav a {
   color: #fff;
   background-image: url(/demo/prokat/resources/img/bg_headercd93849b7948baa98d506e5604e87494.jpg);
   background-size: cover;
-  background-position: center bottom; }
+  background-position: center bottom;
+  z-index: 3; }
   .pageheader h1 {
     margin: 162px 0 23px 120px;
     letter-spacing: 1px;
@@ -976,15 +977,9 @@ nav a {
   .search-form__select ul li {
     float: none;
     padding: 0 25px;
-    line-height: 21px;
+    line-height: 24px;
     font-size: 17px;
-    color: #898989;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .search-form__select ul li:hover {
-      padding-left: 20px; }
+    color: #898989; }
 
 .search-form__select .active {
   -moz-border-radius: 0 !important;
@@ -1034,12 +1029,10 @@ nav a {
     float: none;
     padding: 0 25px;
     cursor: pointer;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .search__autocomplete li:hover {
-      padding-left: 20px; }
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 24px; }
     .search__autocomplete li span {
       font-family: "LatoWebThin"; }
   .search__autocomplete input {
@@ -1393,7 +1386,7 @@ footer {
       box-shadow: 0 0 9.5px 1.5px rgba(81, 81, 81, 0.6); }
   .link-box p {
     padding: 0 20px; }
-  .link-box .link-box__link-info {
+  .link-box .link-box__link-info-absolute {
     position: absolute;
     z-index: 2;
     bottom: 15px;
@@ -1413,7 +1406,8 @@ footer {
     position: relative;
     z-index: 2;
     padding-left: 40px;
-    margin-top: 22px; }
+    margin-top: 22px;
+    margin-bottom: 18px; }
     .link-box .place::before {
       content: '';
       display: block;
@@ -1509,6 +1503,8 @@ footer {
     margin-top: 15px;
     font: 13px "LatoWebSemibold";
     color: #f15c60; }
+    .offers-box .more:hover {
+      text-decoration: underline; }
 
 .user-opening {
   padding: 30px 0 40px;

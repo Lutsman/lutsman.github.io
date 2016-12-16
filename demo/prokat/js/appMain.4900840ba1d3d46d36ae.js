@@ -75,9 +75,13 @@
 
 	__webpack_require__(3);
 
-	var _searchAdvanceData = __webpack_require__(5);
+	var _goodsData = __webpack_require__(153);
 
-	var _searchAdvanceData2 = _interopRequireDefault(_searchAdvanceData);
+	var _goodsData2 = _interopRequireDefault(_goodsData);
+
+	var _searchFormData = __webpack_require__(9);
+
+	var _searchFormData2 = _interopRequireDefault(_searchFormData);
 
 	var _selectData = __webpack_require__(7);
 
@@ -87,9 +91,25 @@
 
 	var _navData2 = _interopRequireDefault(_navData);
 
-	var _searchFormData = __webpack_require__(9);
+	var _mainPage = __webpack_require__(154);
 
-	var _searchFormData2 = _interopRequireDefault(_searchFormData);
+	var _mainPage2 = _interopRequireDefault(_mainPage);
+
+	var _searchForm = __webpack_require__(156);
+
+	var _searchForm2 = _interopRequireDefault(_searchForm);
+
+	var _autocomplete = __webpack_require__(98);
+
+	var _autocomplete2 = _interopRequireDefault(_autocomplete);
+
+	var _customSelect = __webpack_require__(33);
+
+	var _customSelect2 = _interopRequireDefault(_customSelect);
+
+	var _goodsBlock = __webpack_require__(158);
+
+	var _goodsBlock2 = _interopRequireDefault(_goodsBlock);
 
 	var _navbar = __webpack_require__(10);
 
@@ -99,53 +119,13 @@
 
 	var _pagefooter2 = _interopRequireDefault(_pagefooter);
 
-	var _customSelect = __webpack_require__(33);
-
-	var _customSelect2 = _interopRequireDefault(_customSelect);
-
-	var _category = __webpack_require__(35);
-
-	var _category2 = _interopRequireDefault(_category);
-
-	var _searchAdvance = __webpack_require__(37);
-
-	var _searchAdvance2 = _interopRequireDefault(_searchAdvance);
-
-	var _banner = __webpack_require__(92);
-
-	var _banner2 = _interopRequireDefault(_banner);
-
-	var _categoryGoodsInfo = __webpack_require__(94);
-
-	var _categoryGoodsInfo2 = _interopRequireDefault(_categoryGoodsInfo);
-
-	var _paginationNav = __webpack_require__(96);
-
-	var _paginationNav2 = _interopRequireDefault(_paginationNav);
-
-	var _autocomplete = __webpack_require__(98);
-
-	var _autocomplete2 = _interopRequireDefault(_autocomplete);
-
-	var _range = __webpack_require__(100);
-
-	var _range2 = _interopRequireDefault(_range);
-
-	var _sort = __webpack_require__(101);
-
-	var _sort2 = _interopRequireDefault(_sort);
-
-	var _minMax = __webpack_require__(102);
-
-	var _minMax2 = _interopRequireDefault(_minMax);
-
 	__webpack_require__(103);
 
 	__webpack_require__(107);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_angular2.default.module('categoryPage', ['ngAnimate']).service('selectData', _selectData2.default).service('navData', _navData2.default).service('searchAdvanceData', _searchAdvanceData2.default).service('searchFormData', _searchFormData2.default).filter('range', _range2.default).filter('sort', _sort2.default).filter('minMax', _minMax2.default).component('category', _category2.default).component('paginationNav', _paginationNav2.default).component('searchAdvance', _searchAdvance2.default).component('autocomplete', _autocomplete2.default).component('categoryGoodsInfo', _categoryGoodsInfo2.default).component('banner', _banner2.default).component('navbar', _navbar2.default).component('pagefooter', _pagefooter2.default).component('customSelect', _customSelect2.default);
+	_angular2.default.module('mainPage', ['ngAnimate']).service('searchFormData', _searchFormData2.default).service('goodsData', _goodsData2.default).service('selectData', _selectData2.default).service('navData', _navData2.default).component('mainPage', _mainPage2.default).component('searchForm', _searchForm2.default).component('autocomplete', _autocomplete2.default).component('customSelect', _customSelect2.default).component('goodsBlock', _goodsBlock2.default).component('navbar', _navbar2.default).component('pagefooter', _pagefooter2.default);
 
 /***/ },
 /* 1 */
@@ -36082,618 +36062,7 @@
 
 
 /***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SearchAdvanceData = function SearchAdvanceData() {
-	    (0, _classCallCheck3.default)(this, SearchAdvanceData);
-
-	    this.fieldsData = {
-	        title: 'Прокат велосипедов в Ростове-на-Дону',
-	        maxPrice: undefined,
-	        minPrice: undefined,
-	        trackers: [{
-	            title: 'сначала дешевые',
-	            name: 'price',
-	            reverse: false,
-	            id: 0,
-	            active: false
-	        }, {
-	            title: 'сначала дорогие',
-	            name: 'price',
-	            reverse: true,
-	            id: 1,
-	            active: false
-	        }, {
-	            title: 'по-популярности',
-	            name: 'rate',
-	            reverse: false,
-	            id: 2,
-	            active: true
-	        }],
-	        categories: [{
-	            name: '',
-	            title: 'В прокат',
-	            active: true,
-	            id: 0,
-	            subCat: [{
-	                name: '',
-	                title: 'Велосипед',
-	                active: true,
-	                id: 0,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-1',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: true,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Гироскутер',
-	                active: false,
-	                id: 1,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-2',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Самокат',
-	                active: false,
-	                id: 2,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-3',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Роликовые коньки',
-	                active: false,
-	                id: 3,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-4',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Аксессуары и оборудование',
-	                active: false,
-	                id: 4,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-5',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Зимняя техника',
-	                active: false,
-	                id: 5,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-6',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }]
-	        }, {
-	            name: '',
-	            title: 'Купить',
-	            active: false,
-	            id: 1,
-	            subCat: [{
-	                name: '',
-	                title: 'Велосипед',
-	                active: true,
-	                id: 0,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-1',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: true,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Гироскутер',
-	                active: false,
-	                id: 1,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-2',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Самокат',
-	                active: false,
-	                id: 2,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-3',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Роликовые коньки',
-	                active: false,
-	                id: 3,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-4',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Аксессуары и оборудование',
-	                active: false,
-	                id: 4,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-5',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }, {
-	                name: '',
-	                title: 'Зимняя техника',
-	                active: false,
-	                id: 5,
-	                subCat: [{
-	                    name: '',
-	                    title: 'Шоссейный-6',
-	                    active: false,
-	                    id: 0
-	                }, {
-	                    name: '',
-	                    title: 'Горный',
-	                    active: false,
-	                    id: 1
-	                }, {
-	                    name: '',
-	                    title: 'Детский',
-	                    active: false,
-	                    id: 2
-	                }, {
-	                    name: '',
-	                    title: 'Хардтейл',
-	                    active: false,
-	                    id: 3
-	                }, {
-	                    name: '',
-	                    title: 'Двухподвес',
-	                    active: false,
-	                    id: 4
-	                }, {
-	                    name: '',
-	                    title: 'Фэтбайк',
-	                    active: false,
-	                    id: 5
-	                }, {
-	                    name: '',
-	                    title: 'Электро',
-	                    active: false,
-	                    id: 6
-	                }, {
-	                    name: '',
-	                    title: 'Компактный',
-	                    active: false,
-	                    id: 7
-	                }]
-	            }]
-	        }]
-	    };
-	};
-
-	exports.default = SearchAdvanceData;
-
-/***/ },
+/* 5 */,
 /* 6 */
 /***/ function(module, exports) {
 
@@ -37590,1610 +36959,69 @@
 	module.exports = "<a href=\"javascript:void(0)\" ng-class=\"{'active': $ctrl.isOpen}\" ng-click=\"$ctrl.isOpen = !$ctrl.isOpen\">{{$ctrl.selectedOption.name}}</a>\r\n<ul ng-if=\"$ctrl.isOpen\">\r\n\t<li ng-repeat=\"option in $ctrl.options\" ng-if=\"$ctrl.selectedOption !== option\" ng-click=\"$ctrl.setSelection(option)\">{{option.name}}</li>\r\n</ul>"
 
 /***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(11);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var CategoryController = function () {
-	    function CategoryController() {
-	        (0, _classCallCheck3.default)(this, CategoryController);
-
-	        var self = this;
-
-	        this.dataGoods = [{
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 355,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 4.3,
-	            premium: true
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 400,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 2
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 500,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 5
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 700,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 1,
-	            premium: true
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 25,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 2.2
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 355,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 3.3
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 171,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 4.2
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 314,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 1.5
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 275,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 3
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 366,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 2.7
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 555,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 4.3
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 576,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 4.9
-	        }, {
-	            img: 'img/goods_catalog_preview_1.jpg',
-	            traderImg: 'img/trader_logo_3.png',
-	            name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	            price: 1000,
-	            currency: '₽',
-	            description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	            addTime: 'Добавлено 2 часа назад',
-	            rate: 0.1
-	        }];
-	        /*this.tracker = {
-	         name: 'price',
-	         reverse: false
-	         };*/
-
-	        this.dataPagination = {
-	            goodsPerPage: 8,
-	            currPage: 0,
-	            pageLimit: 10,
-	            get goodsCount() {
-	                //let result = Object.keys(self.dataGoodsTemp).length;
-	                var result = self.minMaxFilter(self.dataGoods, self.min, self.max).length;
-	                //console.log(result);
-	                //self.dataSearch.currGoodsCount;
-	                this.tempCount = result;
-	                this.pageCount = Math.ceil(this.tempCount / this.goodsPerPage);
-
-	                return result;
-	            }
-	            /*get pageCount() {
-	                return Math.ceil(this.goodsCount / this.goodsPerPage);
-	            }*/
-	        };
-	    }
-
-	    (0, _createClass3.default)(CategoryController, [{
-	        key: 'minMaxFilter',
-	        value: function minMaxFilter(input, min, max) {
-	            if (!input) return [];
-
-	            //console.log(input);
-	            //console.log(min);
-	            //console.log(max);
-
-	            var filteredArr = input.filter(function (item) {
-	                var result = true;
-
-	                if (min > 0 && max > min) {
-	                    result = item.price >= min && item.price <= max;
-	                } else if (min > 0) {
-	                    result = item.price >= min;
-	                } else if (max > 0) {
-	                    result = item.price <= max;
-	                }
-
-	                return result;
-	            });
-
-	            return filteredArr;
-	        }
-	    }, {
-	        key: 'getGoods',
-	        value: function getGoods() {
-	            console.log('get goods');
-	            console.log(this);
-	        }
-	    }]);
-	    return CategoryController;
-	}();
-
-	var categoryComponent = {
-	    template: __webpack_require__(36),
-	    controller: CategoryController
-	};
-
-	exports.default = categoryComponent;
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-	module.exports = "<navbar></navbar>\r\n<search-advance items-count=\"$ctrl.dataPagination.goodsCount\"\r\n\t\t\t\ttracker=\"$ctrl.tracker\"\r\n\t\t\t\tget-items=\"$ctrl.getGoods\"\r\n\t\t\t\tmin-price=\"$ctrl.min\"\r\n\t\t\t\tmax-price=\"$ctrl.max\"\r\n></search-advance>\r\n\r\n<section class=\"content\">\r\n\t<div class=\"container\">\r\n\t\t<p class=\"top-line\">\r\n\t\t\t<span>{{$ctrl.dataPagination.goodsCount}}</span> предложений\r\n\t\t\t<a href=\"#\">на карте</a>\r\n\t\t\t<a class=\"active\" href=\"#\">список</a>\r\n\t\t</p>\r\n\r\n\t\t<category-goods-info ng-repeat=\"good in $ctrl.dataGoods\r\n\t\t|minMax :$ctrl.min :$ctrl.max\r\n\t\t|sort :$ctrl.tracker.name :$ctrl.tracker.reverse\r\n\t\t|range :($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage):($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 4)\"\r\n\t\t\t\t\t\t\t data=\"good\"></category-goods-info>\r\n\r\n\t\t<banner></banner>\r\n\r\n\t\t<category-goods-info ng-repeat=\"good in $ctrl.dataGoods\r\n\t\t|minMax :$ctrl.min :$ctrl.max\r\n\t\t|sort :$ctrl.tracker.name :$ctrl.tracker.reverse\r\n\t\t|range :($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 4):($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 8)\"\r\n\t\t\t\t\t\t\t data=\"good\"></category-goods-info>\r\n\r\n\t\t<pagination-nav curr-page=\"$ctrl.dataPagination.currPage\"\r\n\t\t\t\t\t\tpage-count=\"$ctrl.dataPagination.pageCount\"\r\n\t\t\t\t\t\tpage-limit=\"$ctrl.dataPagination.pageLimit\"></pagination-nav>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"pagefooter\">\r\n\t<div class=\"container\">\r\n\t\t<div class=\"regions\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Москва</a></li>\r\n\t\t\t\t<li><a href=\"#\">Санкт-Петербург</a></li>\r\n\t\t\t\t<li><a href=\"#\">Башкортостан</a></li>\r\n\t\t\t\t<li><a href=\"#\">Белгородская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Брянская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Ивановская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Иркутская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Калининградская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Калужская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Карелия</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Крым</a></li>\r\n\t\t\t\t<li><a href=\"#\">Липецкая область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Марий Эл</a></li>\r\n\t\t\t\t<li><a href=\"#\">Нижегородская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Новгородская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Пензенская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Пермский край</a></li>\r\n\t\t\t\t<li><a href=\"#\">Псковская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ростовская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Рязанская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Смоленская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ставрапольский край</a></li>\r\n\t\t\t\t<li><a href=\"#\">Татарстан</a></li>\r\n\t\t\t\t<li><a href=\"#\">Тверская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Тульская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Ханты-Мансийский АО</a></li>\r\n\t\t\t\t<li><a href=\"#\">Челябинская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ямало-Ненецкий АО</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ярославская область</a></li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t\t<a href=\"#\" class=\"show-more\"><span>Показать все регионы</span></a>\r\n\t</div>\r\n</section>"
-
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _typeof2 = __webpack_require__(38);
-
-	var _typeof3 = _interopRequireDefault(_typeof2);
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(11);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SearchAdvanceController = function () {
-	    function SearchAdvanceController(searchAdvanceData, searchFormData) {
-	        (0, _classCallCheck3.default)(this, SearchAdvanceController);
-
-	        this.fieldsData = searchAdvanceData.fieldsData;
-	        this.showSearch = false;
-	        this.searchAutocomplete = {
-	            value: '',
-	            placeholder: 'Город, район, адрес',
-	            getSimilarValue: function getSimilarValue(value) {
-	                console.log(value);
-
-	                return searchFormData.searchData;
-	            }
-	        };
-	        this.init();
-	    }
-
-	    (0, _createClass3.default)(SearchAdvanceController, [{
-	        key: 'init',
-	        value: function init() {
-	            this.initCat();
-	            this.minPrice = this.fieldsData.minPrice;
-	            this.maxPrice = this.fieldsData.maxPrice;
-	            this.adress = '';
-
-	            for (var key in this.fieldsData.trackers) {
-	                if (this.fieldsData.trackers[key].active) {
-	                    this.tracker = this.fieldsData.trackers[key];
-	                }
-	            }
-
-	            //console.log(this.tracker);
-	        }
-	    }, {
-	        key: 'initCat',
-	        value: function initCat() {
-	            var activeCatGroup = this.fieldsData.categories;
-	            this.activeCatGroup = [];
-	            this.activeCats = [];
-
-	            do {
-	                this.activeCatGroup.push(activeCatGroup);
-	                this.activeCats.push(this.getActiveCat(activeCatGroup));
-	                activeCatGroup = this.activeCats[this.activeCats.length - 1].subCat;
-	            } while (activeCatGroup);
-
-	            //console.log(this.activeCats);
-	            //console.log(this.activeCatGroup);
-	        }
-	    }, {
-	        key: 'reInitActiveCat',
-	        value: function reInitActiveCat(newActiveCat, index) {
-	            var i = index + 1;
-	            this.activeCats[index] = newActiveCat;
-
-	            for (i; i < this.activeCatGroup.length; i++) {
-	                this.activeCatGroup[i] = this.activeCats[i - 1].subCat;
-	                this.activeCats[i] = this.activeCatGroup[i][0];
-	            }
-	        }
-	    }, {
-	        key: 'getActiveCat',
-	        value: function getActiveCat(obj) {
-	            if ((typeof obj === 'undefined' ? 'undefined' : (0, _typeof3.default)(obj)) === 'object' && !Array.isArray(obj) && obj !== null) {
-	                for (var key in obj) {
-	                    if (!obj[key].active) continue;
-
-	                    return obj[key];
-	                }
-	            } else if (Array.isArray(obj)) {
-	                for (var i = 0; i < obj.length; i++) {
-	                    if (!obj[i].active) continue;
-
-	                    return obj[i];
-	                }
-	            }
-
-	            return obj[0];
-	        }
-	    }, {
-	        key: 'setActiveCat',
-	        value: function setActiveCat(newActiveCat, index, toggle) {
-	            if (this.activeCats[index] === newActiveCat) return;
-
-	            this.reInitActiveCat(newActiveCat, index);
-
-	            this.toggle = toggle; // unused
-	        }
-	    }, {
-	        key: 'searchRender',
-	        value: function searchRender() {
-	            //this.getItems();
-	        }
-	    }, {
-	        key: 'resetForm',
-	        value: function resetForm() {
-	            this.init();
-	        }
-	    }]);
-	    return SearchAdvanceController;
-	}();
-
-	var searchAdvanceComponent = {
-	    template: __webpack_require__(91),
-	    bindings: {
-	        tracker: '=',
-	        itemsCount: '<',
-	        getItems: '@',
-	        minPrice: '=',
-	        maxPrice: '='
-	    },
-	    controller: SearchAdvanceController
-	};
-
-	exports.default = searchAdvanceComponent;
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	exports.__esModule = true;
-
-	var _iterator = __webpack_require__(39);
-
-	var _iterator2 = _interopRequireDefault(_iterator);
-
-	var _symbol = __webpack_require__(75);
-
-	var _symbol2 = _interopRequireDefault(_symbol);
-
-	var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
-	  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
-	} : function (obj) {
-	  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
-	};
-
-/***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(40), __esModule: true };
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(41);
-	__webpack_require__(70);
-	module.exports = __webpack_require__(74).f('iterator');
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $at  = __webpack_require__(42)(true);
-
-	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(45)(String, 'String', function(iterated){
-	  this._t = String(iterated); // target
-	  this._i = 0;                // next index
-	// 21.1.5.2.1 %StringIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , index = this._i
-	    , point;
-	  if(index >= O.length)return {value: undefined, done: true};
-	  point = $at(O, index);
-	  this._i += point.length;
-	  return {value: point, done: false};
-	});
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(43)
-	  , defined   = __webpack_require__(44);
-	// true  -> String#at
-	// false -> String#codePointAt
-	module.exports = function(TO_STRING){
-	  return function(that, pos){
-	    var s = String(defined(that))
-	      , i = toInteger(pos)
-	      , l = s.length
-	      , a, b;
-	    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
-	    a = s.charCodeAt(i);
-	    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-	      ? TO_STRING ? s.charAt(i) : a
-	      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-	  };
-	};
-
-/***/ },
-/* 43 */
-/***/ function(module, exports) {
-
-	// 7.1.4 ToInteger
-	var ceil  = Math.ceil
-	  , floor = Math.floor;
-	module.exports = function(it){
-	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-	};
-
-/***/ },
-/* 44 */
-/***/ function(module, exports) {
-
-	// 7.2.1 RequireObjectCoercible(argument)
-	module.exports = function(it){
-	  if(it == undefined)throw TypeError("Can't call method on  " + it);
-	  return it;
-	};
-
-/***/ },
-/* 45 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var LIBRARY        = __webpack_require__(46)
-	  , $export        = __webpack_require__(15)
-	  , redefine       = __webpack_require__(47)
-	  , hide           = __webpack_require__(20)
-	  , has            = __webpack_require__(48)
-	  , Iterators      = __webpack_require__(49)
-	  , $iterCreate    = __webpack_require__(50)
-	  , setToStringTag = __webpack_require__(66)
-	  , getPrototypeOf = __webpack_require__(68)
-	  , ITERATOR       = __webpack_require__(67)('iterator')
-	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
-	  , FF_ITERATOR    = '@@iterator'
-	  , KEYS           = 'keys'
-	  , VALUES         = 'values';
-
-	var returnThis = function(){ return this; };
-
-	module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
-	  $iterCreate(Constructor, NAME, next);
-	  var getMethod = function(kind){
-	    if(!BUGGY && kind in proto)return proto[kind];
-	    switch(kind){
-	      case KEYS: return function keys(){ return new Constructor(this, kind); };
-	      case VALUES: return function values(){ return new Constructor(this, kind); };
-	    } return function entries(){ return new Constructor(this, kind); };
-	  };
-	  var TAG        = NAME + ' Iterator'
-	    , DEF_VALUES = DEFAULT == VALUES
-	    , VALUES_BUG = false
-	    , proto      = Base.prototype
-	    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
-	    , $default   = $native || getMethod(DEFAULT)
-	    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
-	    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
-	    , methods, key, IteratorPrototype;
-	  // Fix native
-	  if($anyNative){
-	    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
-	    if(IteratorPrototype !== Object.prototype){
-	      // Set @@toStringTag to native iterators
-	      setToStringTag(IteratorPrototype, TAG, true);
-	      // fix for some old engines
-	      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
-	    }
-	  }
-	  // fix Array#{values, @@iterator}.name in V8 / FF
-	  if(DEF_VALUES && $native && $native.name !== VALUES){
-	    VALUES_BUG = true;
-	    $default = function values(){ return $native.call(this); };
-	  }
-	  // Define iterator
-	  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
-	    hide(proto, ITERATOR, $default);
-	  }
-	  // Plug for library
-	  Iterators[NAME] = $default;
-	  Iterators[TAG]  = returnThis;
-	  if(DEFAULT){
-	    methods = {
-	      values:  DEF_VALUES ? $default : getMethod(VALUES),
-	      keys:    IS_SET     ? $default : getMethod(KEYS),
-	      entries: $entries
-	    };
-	    if(FORCED)for(key in methods){
-	      if(!(key in proto))redefine(proto, key, methods[key]);
-	    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-	  }
-	  return methods;
-	};
-
-/***/ },
-/* 46 */
-/***/ function(module, exports) {
-
-	module.exports = true;
-
-/***/ },
-/* 47 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(20);
-
-/***/ },
-/* 48 */
-/***/ function(module, exports) {
-
-	var hasOwnProperty = {}.hasOwnProperty;
-	module.exports = function(it, key){
-	  return hasOwnProperty.call(it, key);
-	};
-
-/***/ },
-/* 49 */
-/***/ function(module, exports) {
-
-	module.exports = {};
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var create         = __webpack_require__(51)
-	  , descriptor     = __webpack_require__(29)
-	  , setToStringTag = __webpack_require__(66)
-	  , IteratorPrototype = {};
-
-	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(20)(IteratorPrototype, __webpack_require__(67)('iterator'), function(){ return this; });
-
-	module.exports = function(Constructor, NAME, next){
-	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
-	  setToStringTag(Constructor, NAME + ' Iterator');
-	};
-
-/***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(22)
-	  , dPs         = __webpack_require__(52)
-	  , enumBugKeys = __webpack_require__(64)
-	  , IE_PROTO    = __webpack_require__(61)('IE_PROTO')
-	  , Empty       = function(){ /* empty */ }
-	  , PROTOTYPE   = 'prototype';
-
-	// Create object with fake `null` prototype: use iframe Object with cleared prototype
-	var createDict = function(){
-	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = __webpack_require__(27)('iframe')
-	    , i      = enumBugKeys.length
-	    , lt     = '<'
-	    , gt     = '>'
-	    , iframeDocument;
-	  iframe.style.display = 'none';
-	  __webpack_require__(65).appendChild(iframe);
-	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-	  // createDict = iframe.contentWindow.Object;
-	  // html.removeChild(iframe);
-	  iframeDocument = iframe.contentWindow.document;
-	  iframeDocument.open();
-	  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-	  iframeDocument.close();
-	  createDict = iframeDocument.F;
-	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
-	  return createDict();
-	};
-
-	module.exports = Object.create || function create(O, Properties){
-	  var result;
-	  if(O !== null){
-	    Empty[PROTOTYPE] = anObject(O);
-	    result = new Empty;
-	    Empty[PROTOTYPE] = null;
-	    // add "__proto__" for Object.getPrototypeOf polyfill
-	    result[IE_PROTO] = O;
-	  } else result = createDict();
-	  return Properties === undefined ? result : dPs(result, Properties);
-	};
-
-
-/***/ },
-/* 52 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP       = __webpack_require__(21)
-	  , anObject = __webpack_require__(22)
-	  , getKeys  = __webpack_require__(53);
-
-	module.exports = __webpack_require__(25) ? Object.defineProperties : function defineProperties(O, Properties){
-	  anObject(O);
-	  var keys   = getKeys(Properties)
-	    , length = keys.length
-	    , i = 0
-	    , P;
-	  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
-	  return O;
-	};
-
-/***/ },
-/* 53 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(54)
-	  , enumBugKeys = __webpack_require__(64);
-
-	module.exports = Object.keys || function keys(O){
-	  return $keys(O, enumBugKeys);
-	};
-
-/***/ },
-/* 54 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var has          = __webpack_require__(48)
-	  , toIObject    = __webpack_require__(55)
-	  , arrayIndexOf = __webpack_require__(58)(false)
-	  , IE_PROTO     = __webpack_require__(61)('IE_PROTO');
-
-	module.exports = function(object, names){
-	  var O      = toIObject(object)
-	    , i      = 0
-	    , result = []
-	    , key;
-	  for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
-	  // Don't enum bug & hidden keys
-	  while(names.length > i)if(has(O, key = names[i++])){
-	    ~arrayIndexOf(result, key) || result.push(key);
-	  }
-	  return result;
-	};
-
-/***/ },
-/* 55 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(56)
-	  , defined = __webpack_require__(44);
-	module.exports = function(it){
-	  return IObject(defined(it));
-	};
-
-/***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(57);
-	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-	  return cof(it) == 'String' ? it.split('') : Object(it);
-	};
-
-/***/ },
-/* 57 */
-/***/ function(module, exports) {
-
-	var toString = {}.toString;
-
-	module.exports = function(it){
-	  return toString.call(it).slice(8, -1);
-	};
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// false -> Array#indexOf
-	// true  -> Array#includes
-	var toIObject = __webpack_require__(55)
-	  , toLength  = __webpack_require__(59)
-	  , toIndex   = __webpack_require__(60);
-	module.exports = function(IS_INCLUDES){
-	  return function($this, el, fromIndex){
-	    var O      = toIObject($this)
-	      , length = toLength(O.length)
-	      , index  = toIndex(fromIndex, length)
-	      , value;
-	    // Array#includes uses SameValueZero equality algorithm
-	    if(IS_INCLUDES && el != el)while(length > index){
-	      value = O[index++];
-	      if(value != value)return true;
-	    // Array#toIndex ignores holes, Array#includes - not
-	    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
-	      if(O[index] === el)return IS_INCLUDES || index || 0;
-	    } return !IS_INCLUDES && -1;
-	  };
-	};
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(43)
-	  , min       = Math.min;
-	module.exports = function(it){
-	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-	};
-
-/***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(43)
-	  , max       = Math.max
-	  , min       = Math.min;
-	module.exports = function(index, length){
-	  index = toInteger(index);
-	  return index < 0 ? max(index + length, 0) : min(index, length);
-	};
-
-/***/ },
-/* 61 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var shared = __webpack_require__(62)('keys')
-	  , uid    = __webpack_require__(63);
-	module.exports = function(key){
-	  return shared[key] || (shared[key] = uid(key));
-	};
-
-/***/ },
-/* 62 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global = __webpack_require__(16)
-	  , SHARED = '__core-js_shared__'
-	  , store  = global[SHARED] || (global[SHARED] = {});
-	module.exports = function(key){
-	  return store[key] || (store[key] = {});
-	};
-
-/***/ },
-/* 63 */
-/***/ function(module, exports) {
-
-	var id = 0
-	  , px = Math.random();
-	module.exports = function(key){
-	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-	};
-
-/***/ },
-/* 64 */
-/***/ function(module, exports) {
-
-	// IE 8- don't enum bug keys
-	module.exports = (
-	  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-	).split(',');
-
-/***/ },
-/* 65 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(16).document && document.documentElement;
-
-/***/ },
-/* 66 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var def = __webpack_require__(21).f
-	  , has = __webpack_require__(48)
-	  , TAG = __webpack_require__(67)('toStringTag');
-
-	module.exports = function(it, tag, stat){
-	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
-	};
-
-/***/ },
-/* 67 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var store      = __webpack_require__(62)('wks')
-	  , uid        = __webpack_require__(63)
-	  , Symbol     = __webpack_require__(16).Symbol
-	  , USE_SYMBOL = typeof Symbol == 'function';
-
-	var $exports = module.exports = function(name){
-	  return store[name] || (store[name] =
-	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-	};
-
-	$exports.store = store;
-
-/***/ },
-/* 68 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(48)
-	  , toObject    = __webpack_require__(69)
-	  , IE_PROTO    = __webpack_require__(61)('IE_PROTO')
-	  , ObjectProto = Object.prototype;
-
-	module.exports = Object.getPrototypeOf || function(O){
-	  O = toObject(O);
-	  if(has(O, IE_PROTO))return O[IE_PROTO];
-	  if(typeof O.constructor == 'function' && O instanceof O.constructor){
-	    return O.constructor.prototype;
-	  } return O instanceof Object ? ObjectProto : null;
-	};
-
-/***/ },
-/* 69 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(44);
-	module.exports = function(it){
-	  return Object(defined(it));
-	};
-
-/***/ },
-/* 70 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(71);
-	var global        = __webpack_require__(16)
-	  , hide          = __webpack_require__(20)
-	  , Iterators     = __webpack_require__(49)
-	  , TO_STRING_TAG = __webpack_require__(67)('toStringTag');
-
-	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
-	  var NAME       = collections[i]
-	    , Collection = global[NAME]
-	    , proto      = Collection && Collection.prototype;
-	  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
-	  Iterators[NAME] = Iterators.Array;
-	}
-
-/***/ },
-/* 71 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var addToUnscopables = __webpack_require__(72)
-	  , step             = __webpack_require__(73)
-	  , Iterators        = __webpack_require__(49)
-	  , toIObject        = __webpack_require__(55);
-
-	// 22.1.3.4 Array.prototype.entries()
-	// 22.1.3.13 Array.prototype.keys()
-	// 22.1.3.29 Array.prototype.values()
-	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(45)(Array, 'Array', function(iterated, kind){
-	  this._t = toIObject(iterated); // target
-	  this._i = 0;                   // next index
-	  this._k = kind;                // kind
-	// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , kind  = this._k
-	    , index = this._i++;
-	  if(!O || index >= O.length){
-	    this._t = undefined;
-	    return step(1);
-	  }
-	  if(kind == 'keys'  )return step(0, index);
-	  if(kind == 'values')return step(0, O[index]);
-	  return step(0, [index, O[index]]);
-	}, 'values');
-
-	// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
-	Iterators.Arguments = Iterators.Array;
-
-	addToUnscopables('keys');
-	addToUnscopables('values');
-	addToUnscopables('entries');
-
-/***/ },
-/* 72 */
-/***/ function(module, exports) {
-
-	module.exports = function(){ /* empty */ };
-
-/***/ },
-/* 73 */
-/***/ function(module, exports) {
-
-	module.exports = function(done, value){
-	  return {value: value, done: !!done};
-	};
-
-/***/ },
-/* 74 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports.f = __webpack_require__(67);
-
-/***/ },
-/* 75 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(76), __esModule: true };
-
-/***/ },
-/* 76 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(77);
-	__webpack_require__(88);
-	__webpack_require__(89);
-	__webpack_require__(90);
-	module.exports = __webpack_require__(17).Symbol;
-
-/***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// ECMAScript 6 symbols shim
-	var global         = __webpack_require__(16)
-	  , has            = __webpack_require__(48)
-	  , DESCRIPTORS    = __webpack_require__(25)
-	  , $export        = __webpack_require__(15)
-	  , redefine       = __webpack_require__(47)
-	  , META           = __webpack_require__(78).KEY
-	  , $fails         = __webpack_require__(26)
-	  , shared         = __webpack_require__(62)
-	  , setToStringTag = __webpack_require__(66)
-	  , uid            = __webpack_require__(63)
-	  , wks            = __webpack_require__(67)
-	  , wksExt         = __webpack_require__(74)
-	  , wksDefine      = __webpack_require__(79)
-	  , keyOf          = __webpack_require__(80)
-	  , enumKeys       = __webpack_require__(81)
-	  , isArray        = __webpack_require__(84)
-	  , anObject       = __webpack_require__(22)
-	  , toIObject      = __webpack_require__(55)
-	  , toPrimitive    = __webpack_require__(28)
-	  , createDesc     = __webpack_require__(29)
-	  , _create        = __webpack_require__(51)
-	  , gOPNExt        = __webpack_require__(85)
-	  , $GOPD          = __webpack_require__(87)
-	  , $DP            = __webpack_require__(21)
-	  , $keys          = __webpack_require__(53)
-	  , gOPD           = $GOPD.f
-	  , dP             = $DP.f
-	  , gOPN           = gOPNExt.f
-	  , $Symbol        = global.Symbol
-	  , $JSON          = global.JSON
-	  , _stringify     = $JSON && $JSON.stringify
-	  , PROTOTYPE      = 'prototype'
-	  , HIDDEN         = wks('_hidden')
-	  , TO_PRIMITIVE   = wks('toPrimitive')
-	  , isEnum         = {}.propertyIsEnumerable
-	  , SymbolRegistry = shared('symbol-registry')
-	  , AllSymbols     = shared('symbols')
-	  , OPSymbols      = shared('op-symbols')
-	  , ObjectProto    = Object[PROTOTYPE]
-	  , USE_NATIVE     = typeof $Symbol == 'function'
-	  , QObject        = global.QObject;
-	// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-	var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
-
-	// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-	var setSymbolDesc = DESCRIPTORS && $fails(function(){
-	  return _create(dP({}, 'a', {
-	    get: function(){ return dP(this, 'a', {value: 7}).a; }
-	  })).a != 7;
-	}) ? function(it, key, D){
-	  var protoDesc = gOPD(ObjectProto, key);
-	  if(protoDesc)delete ObjectProto[key];
-	  dP(it, key, D);
-	  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
-	} : dP;
-
-	var wrap = function(tag){
-	  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
-	  sym._k = tag;
-	  return sym;
-	};
-
-	var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
-	  return typeof it == 'symbol';
-	} : function(it){
-	  return it instanceof $Symbol;
-	};
-
-	var $defineProperty = function defineProperty(it, key, D){
-	  if(it === ObjectProto)$defineProperty(OPSymbols, key, D);
-	  anObject(it);
-	  key = toPrimitive(key, true);
-	  anObject(D);
-	  if(has(AllSymbols, key)){
-	    if(!D.enumerable){
-	      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
-	      it[HIDDEN][key] = true;
-	    } else {
-	      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
-	      D = _create(D, {enumerable: createDesc(0, false)});
-	    } return setSymbolDesc(it, key, D);
-	  } return dP(it, key, D);
-	};
-	var $defineProperties = function defineProperties(it, P){
-	  anObject(it);
-	  var keys = enumKeys(P = toIObject(P))
-	    , i    = 0
-	    , l = keys.length
-	    , key;
-	  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
-	  return it;
-	};
-	var $create = function create(it, P){
-	  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-	};
-	var $propertyIsEnumerable = function propertyIsEnumerable(key){
-	  var E = isEnum.call(this, key = toPrimitive(key, true));
-	  if(this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return false;
-	  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
-	};
-	var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
-	  it  = toIObject(it);
-	  key = toPrimitive(key, true);
-	  if(it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return;
-	  var D = gOPD(it, key);
-	  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
-	  return D;
-	};
-	var $getOwnPropertyNames = function getOwnPropertyNames(it){
-	  var names  = gOPN(toIObject(it))
-	    , result = []
-	    , i      = 0
-	    , key;
-	  while(names.length > i){
-	    if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
-	  } return result;
-	};
-	var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
-	  var IS_OP  = it === ObjectProto
-	    , names  = gOPN(IS_OP ? OPSymbols : toIObject(it))
-	    , result = []
-	    , i      = 0
-	    , key;
-	  while(names.length > i){
-	    if(has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true))result.push(AllSymbols[key]);
-	  } return result;
-	};
-
-	// 19.4.1.1 Symbol([description])
-	if(!USE_NATIVE){
-	  $Symbol = function Symbol(){
-	    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
-	    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
-	    var $set = function(value){
-	      if(this === ObjectProto)$set.call(OPSymbols, value);
-	      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
-	      setSymbolDesc(this, tag, createDesc(1, value));
-	    };
-	    if(DESCRIPTORS && setter)setSymbolDesc(ObjectProto, tag, {configurable: true, set: $set});
-	    return wrap(tag);
-	  };
-	  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
-	    return this._k;
-	  });
-
-	  $GOPD.f = $getOwnPropertyDescriptor;
-	  $DP.f   = $defineProperty;
-	  __webpack_require__(86).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(83).f  = $propertyIsEnumerable;
-	  __webpack_require__(82).f = $getOwnPropertySymbols;
-
-	  if(DESCRIPTORS && !__webpack_require__(46)){
-	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-	  }
-
-	  wksExt.f = function(name){
-	    return wrap(wks(name));
-	  }
-	}
-
-	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
-
-	for(var symbols = (
-	  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-	  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-	).split(','), i = 0; symbols.length > i; )wks(symbols[i++]);
-
-	for(var symbols = $keys(wks.store), i = 0; symbols.length > i; )wksDefine(symbols[i++]);
-
-	$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
-	  // 19.4.2.1 Symbol.for(key)
-	  'for': function(key){
-	    return has(SymbolRegistry, key += '')
-	      ? SymbolRegistry[key]
-	      : SymbolRegistry[key] = $Symbol(key);
-	  },
-	  // 19.4.2.5 Symbol.keyFor(sym)
-	  keyFor: function keyFor(key){
-	    if(isSymbol(key))return keyOf(SymbolRegistry, key);
-	    throw TypeError(key + ' is not a symbol!');
-	  },
-	  useSetter: function(){ setter = true; },
-	  useSimple: function(){ setter = false; }
-	});
-
-	$export($export.S + $export.F * !USE_NATIVE, 'Object', {
-	  // 19.1.2.2 Object.create(O [, Properties])
-	  create: $create,
-	  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-	  defineProperty: $defineProperty,
-	  // 19.1.2.3 Object.defineProperties(O, Properties)
-	  defineProperties: $defineProperties,
-	  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-	  // 19.1.2.7 Object.getOwnPropertyNames(O)
-	  getOwnPropertyNames: $getOwnPropertyNames,
-	  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-	  getOwnPropertySymbols: $getOwnPropertySymbols
-	});
-
-	// 24.3.2 JSON.stringify(value [, replacer [, space]])
-	$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
-	  var S = $Symbol();
-	  // MS Edge converts symbol values to JSON as {}
-	  // WebKit converts symbol values to JSON as null
-	  // V8 throws on boxed symbols
-	  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
-	})), 'JSON', {
-	  stringify: function stringify(it){
-	    if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
-	    var args = [it]
-	      , i    = 1
-	      , replacer, $replacer;
-	    while(arguments.length > i)args.push(arguments[i++]);
-	    replacer = args[1];
-	    if(typeof replacer == 'function')$replacer = replacer;
-	    if($replacer || !isArray(replacer))replacer = function(key, value){
-	      if($replacer)value = $replacer.call(this, key, value);
-	      if(!isSymbol(value))return value;
-	    };
-	    args[1] = replacer;
-	    return _stringify.apply($JSON, args);
-	  }
-	});
-
-	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(20)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-	// 19.4.3.5 Symbol.prototype[@@toStringTag]
-	setToStringTag($Symbol, 'Symbol');
-	// 20.2.1.9 Math[@@toStringTag]
-	setToStringTag(Math, 'Math', true);
-	// 24.3.3 JSON[@@toStringTag]
-	setToStringTag(global.JSON, 'JSON', true);
-
-/***/ },
-/* 78 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var META     = __webpack_require__(63)('meta')
-	  , isObject = __webpack_require__(23)
-	  , has      = __webpack_require__(48)
-	  , setDesc  = __webpack_require__(21).f
-	  , id       = 0;
-	var isExtensible = Object.isExtensible || function(){
-	  return true;
-	};
-	var FREEZE = !__webpack_require__(26)(function(){
-	  return isExtensible(Object.preventExtensions({}));
-	});
-	var setMeta = function(it){
-	  setDesc(it, META, {value: {
-	    i: 'O' + ++id, // object ID
-	    w: {}          // weak collections IDs
-	  }});
-	};
-	var fastKey = function(it, create){
-	  // return primitive with prefix
-	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-	  if(!has(it, META)){
-	    // can't set metadata to uncaught frozen object
-	    if(!isExtensible(it))return 'F';
-	    // not necessary to add metadata
-	    if(!create)return 'E';
-	    // add missing metadata
-	    setMeta(it);
-	  // return object ID
-	  } return it[META].i;
-	};
-	var getWeak = function(it, create){
-	  if(!has(it, META)){
-	    // can't set metadata to uncaught frozen object
-	    if(!isExtensible(it))return true;
-	    // not necessary to add metadata
-	    if(!create)return false;
-	    // add missing metadata
-	    setMeta(it);
-	  // return hash weak collections IDs
-	  } return it[META].w;
-	};
-	// add metadata on freeze-family methods calling
-	var onFreeze = function(it){
-	  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
-	  return it;
-	};
-	var meta = module.exports = {
-	  KEY:      META,
-	  NEED:     false,
-	  fastKey:  fastKey,
-	  getWeak:  getWeak,
-	  onFreeze: onFreeze
-	};
-
-/***/ },
-/* 79 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global         = __webpack_require__(16)
-	  , core           = __webpack_require__(17)
-	  , LIBRARY        = __webpack_require__(46)
-	  , wksExt         = __webpack_require__(74)
-	  , defineProperty = __webpack_require__(21).f;
-	module.exports = function(name){
-	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
-	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
-	};
-
-/***/ },
-/* 80 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var getKeys   = __webpack_require__(53)
-	  , toIObject = __webpack_require__(55);
-	module.exports = function(object, el){
-	  var O      = toIObject(object)
-	    , keys   = getKeys(O)
-	    , length = keys.length
-	    , index  = 0
-	    , key;
-	  while(length > index)if(O[key = keys[index++]] === el)return key;
-	};
-
-/***/ },
-/* 81 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(53)
-	  , gOPS    = __webpack_require__(82)
-	  , pIE     = __webpack_require__(83);
-	module.exports = function(it){
-	  var result     = getKeys(it)
-	    , getSymbols = gOPS.f;
-	  if(getSymbols){
-	    var symbols = getSymbols(it)
-	      , isEnum  = pIE.f
-	      , i       = 0
-	      , key;
-	    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
-	  } return result;
-	};
-
-/***/ },
-/* 82 */
-/***/ function(module, exports) {
-
-	exports.f = Object.getOwnPropertySymbols;
-
-/***/ },
-/* 83 */
-/***/ function(module, exports) {
-
-	exports.f = {}.propertyIsEnumerable;
-
-/***/ },
-/* 84 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(57);
-	module.exports = Array.isArray || function isArray(arg){
-	  return cof(arg) == 'Array';
-	};
-
-/***/ },
-/* 85 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(55)
-	  , gOPN      = __webpack_require__(86).f
-	  , toString  = {}.toString;
-
-	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-	  ? Object.getOwnPropertyNames(window) : [];
-
-	var getWindowNames = function(it){
-	  try {
-	    return gOPN(it);
-	  } catch(e){
-	    return windowNames.slice();
-	  }
-	};
-
-	module.exports.f = function getOwnPropertyNames(it){
-	  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-	};
-
-
-/***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(54)
-	  , hiddenKeys = __webpack_require__(64).concat('length', 'prototype');
-
-	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
-	  return $keys(O, hiddenKeys);
-	};
-
-/***/ },
-/* 87 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pIE            = __webpack_require__(83)
-	  , createDesc     = __webpack_require__(29)
-	  , toIObject      = __webpack_require__(55)
-	  , toPrimitive    = __webpack_require__(28)
-	  , has            = __webpack_require__(48)
-	  , IE8_DOM_DEFINE = __webpack_require__(24)
-	  , gOPD           = Object.getOwnPropertyDescriptor;
-
-	exports.f = __webpack_require__(25) ? gOPD : function getOwnPropertyDescriptor(O, P){
-	  O = toIObject(O);
-	  P = toPrimitive(P, true);
-	  if(IE8_DOM_DEFINE)try {
-	    return gOPD(O, P);
-	  } catch(e){ /* empty */ }
-	  if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
-	};
-
-/***/ },
-/* 88 */
-/***/ function(module, exports) {
-
-	
-
-/***/ },
-/* 89 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(79)('asyncIterator');
-
-/***/ },
-/* 90 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(79)('observable');
-
-/***/ },
-/* 91 */
-/***/ function(module, exports) {
-
-	module.exports = "<section class=\"search-conditions\">\r\n\t<div class=\"container\">\r\n\t\t<div>\r\n\t\t\t<h2>{{$ctrl.fieldsData.title}}</h2>\r\n\t\t\t<a ng-click=\"$ctrl.showSearch = !$ctrl.showSearch\" href=\"javascript:void(0)\" class=\"btn\">Изменить условия поиска</a>\r\n\t\t\t<a href=\"javascript:void(0)\" class=\"btn\">Подписаться на предложения</a>\r\n\t\t</div>\r\n\r\n\t\t<form ng-show=\"$ctrl.showSearch\" class=\"category-form\" novalidate>\r\n\t\t\t<div>\r\n\t\t\t\t<ul class=\"category-list\">\r\n\t\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCats[0] === cat}\" ng-repeat=\"cat in $ctrl.activeCatGroup[0]\" ng-click=\"$ctrl.setActiveCat(cat, 0)\">\r\n\t\t\t\t\t\t<span>{{cat.title}}</span>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<div class=\"choose-price\">\r\n\t\t\t\t\t<p>Цена:</p>\r\n\t\t\t\t\t<input ng-model=\"$ctrl.minPrice\" name=\"min-price\" type=\"number\" placeholder=\"от\">\r\n\t\t\t\t\t<input ng-model=\"$ctrl.maxPrice\" name=\"max-price\" type=\"number\" placeholder=\"до\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"number-offers\">\r\n\t\t\t\t\t<p>Предложений:\r\n\t\t\t\t\t\t<span>{{$ctrl.itemsCount}}</span>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<ul class=\"category-list\">\r\n\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCats[1] === cat}\" ng-repeat=\"cat in $ctrl.activeCatGroup[1]\" ng-click=\"$ctrl.setActiveCat(cat, 1, true)\">\r\n\t\t\t\t\t<span>{{cat.title}}</span>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t<!--<ul class=\"category-list\">\r\n\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCat2 === cat2}\" ng-repeat=\"cat2 in $ctrl.activeCat1.subCat\" ng-click=\"$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)\">\r\n\t\t\t\t\t<span>{{cat2.title}}</span>\r\n\t\t\t\t\t&lt;!&ndash;<input ng-model=\"$ctrl.activeCat2\" id=\"{{'form-cat2-index' + $index}}\" type=\"radio\" value=\"{{cat2}}\" >\r\n\t\t\t\t\t<label class=\"radio-label\" for=\"{{'form-cat2-index' + $index}}\">{{cat2.name}}</label>&ndash;&gt;\r\n\t\t\t\t</li>\r\n\t\t\t\t&lt;!&ndash;<li class=\"active\"><a href=\"#\"><span>Велосипед</span></a></li>\r\n\t\t\t\t<li><a href=\"#\"><span>Гироскутер</span></a></li>\r\n\t\t\t\t<li><a href=\"#\"><span>Самокат</span></a></li>\r\n\t\t\t\t<li><a href=\"#\"><span>Роликовые коньки</span></a></li>\r\n\t\t\t\t<li><a href=\"#\"><span>Аксессуары и оборудование</span></a></li>\r\n\t\t\t\t<li><a href=\"#\"><span>Зимняя техника</span></a></li>&ndash;&gt;\r\n\t\t\t</ul>-->\r\n\t\t\t<ul class=\"category-list\">\r\n\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCats[2] === cat}\" ng-repeat=\"cat in $ctrl.activeCatGroup[2]\" ng-click=\"$ctrl.setActiveCat(cat, 2, true)\">\r\n\t\t\t\t\t<span>{{cat.title}}</span>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\r\n\t\t\t<!--<input ng-model=\"$ctrl.adress\" class=\"adress\" name=\"adress\" placeholder=\"Город, район, адрес\" required=\"\" type=\"text\">-->\r\n\t\t\t<autocomplete value=\"$ctrl.searchAutocomplete.value\"\r\n\t\t\t\t\t\t  get-similar-value=\"$ctrl.searchAutocomplete.getSimilarValue\"\r\n\t\t\t\t\t\t  placeholder=\"$ctrl.placeholder\"\r\n\t\t\t\t\t\t  class=\"search__autocomplete adress\"></autocomplete>\r\n\t\t\t<div class=\"search-criterion\">\r\n\t\t\t\t<p>Показать:</p>\r\n\t\t\t\t<input ng-repeat-start=\"tracker in $ctrl.fieldsData.trackers track by tracker.id\"\r\n\t\t\t\t\t   ng-model=\"$ctrl.tracker\"\r\n\t\t\t\t\t   id=\"{{'form-radio' + $index}}\"\r\n\t\t\t\t\t   name=\"radio\"\r\n\t\t\t\t\t   ng-value=\"tracker\"\r\n\t\t\t\t\t   type=\"radio\"\r\n\t\t\t\t\t   ng-checked=\"$ctrl.tracker === tracker\">\r\n\t\t\t\t<label  ng-repeat-end class=\"radio-label\" for=\"{{'form-radio' + $index}}\">{{tracker.title}}</label>\r\n\r\n\r\n\t\t\t\t<!--<input ng-model=\"$ctrl.tracker\" id=\"form-radio1\" name=\"radio\" value=\"1\" type=\"radio\">\r\n\t\t\t\t<label class=\"radio-label\" for=\"form-radio1\">сначала дешевые</label>\r\n\t\t\t\t<input ng-model=\"$ctrl.tracker\" id=\"form-radio2\" name=\"radio\" value=\"2\" type=\"radio\">\r\n\t\t\t\t<label class=\"radio-label\" for=\"form-radio2\">сначала дорогие</label>\r\n\t\t\t\t<input ng-model=\"$ctrl.tracker\" id=\"form-radio3\" name=\"radio\" value=\"3\" checked=\"checked\" type=\"radio\">\r\n\t\t\t\t<label class=\"radio-label\" for=\"form-radio3\">по-популярности</label>-->\r\n\t\t\t</div>\r\n\r\n\t\t\t<button ng-click=\"$ctrl.searchRender()\" type=\"submit\">Показать {{$ctrl.goodsCount}} предложения</button>\r\n\t\t\t<button ng-click=\"$ctrl.resetForm()\" type=\"reset\">Очистить условия поиска</button>\r\n\r\n\t\t</form>\r\n\r\n\t\t<a ng-show=\"$ctrl.showSearch\" ng-click=\"$ctrl.showSearch = false\" href=\"javascript:void(0)\" class=\"close\">скрыть</a>\r\n\r\n\t</div><!--container-->\r\n</section>"
-
-/***/ },
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var BannerController = function BannerController() {
-	    (0, _classCallCheck3.default)(this, BannerController);
-
-	    this.data = {
-	        img: 'img/banner_1.jpg',
-	        href: ''
-	    };
-	};
-
-	var bannerComponent = {
-	    template: __webpack_require__(93),
-	    bindings: {
-	        data: '<?'
-	    },
-	    controller: BannerController
-	};
-
-	exports.default = bannerComponent;
-
-/***/ },
-/* 93 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"banner\">\r\n\t<img ng-src=\"{{$ctrl.data.img}}\" alt=\"banner\">\r\n\t<a ng-href=\"{{$ctrl.data.href}}\" class=\"close\"></a>\r\n</div>"
-
-/***/ },
-/* 94 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var CategoryGoodsInfoController = function CategoryGoodsInfoController() {
-	    (0, _classCallCheck3.default)(this, CategoryGoodsInfoController);
-
-	    /*this.data = {
-	     img: 'img/goods_catalog_preview_1.jpg',
-	     traderImg: 'img/trader_logo_3.png',
-	     name: 'Горный профессиональный велосипед двухподвес GT FURY',
-	     price: '400',
-	     currency: '&#8381;',
-	     description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
-	     addTime: 'Добавлено 2 часа назад',
-	     rate: 5
-	     };*/
-	    this.langServiceData = {
-	        more: 'Подробнее',
-	        bookmarks: 'В закладки',
-	        showMap: 'показать на карте',
-	        complain: 'пожаловаться',
-	        booking: 'Забронировать',
-	        or: 'или',
-	        showRoom: 'показать номер'
-	    };
-	};
-
-	var categoryGoodsInfoComponent = {
-	    template: __webpack_require__(95),
-	    bindings: {
-	        data: '<'
-
-	    },
-	    controller: CategoryGoodsInfoController
-	};
-
-	exports.default = categoryGoodsInfoComponent;
-
-/***/ },
-/* 95 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"goods-info\" ng-class=\"{'goods-info__prem': $ctrl.data.premium}\">\r\n\t<img ng-src=\"{{$ctrl.data.img}}\" alt=\"goods\">\r\n\t<div>\r\n\t\t<h5>{{$ctrl.data.name}}</h5>\r\n\t\t<p class=\"adress\">{{$ctrl.data.adress}}</p>\r\n\t\t<p class=\"price\">{{$ctrl.data.price}} {{$ctrl.data.currency}}</p>\r\n\t\t<p>{{$ctrl.data.description}}</p>\r\n\t\t<a class=\"more\" href=\"#\">{{$ctrl.langServiceData.more}}</a>\r\n\t\t<a class=\"bookmarks\" href=\"#\">{{$ctrl.langServiceData.bookmarks}}</a>\r\n\t\t<a href=\"#\" class=\"show-map-btn\">{{$ctrl.langServiceData.showMap}}</a>\r\n\t\t<a href=\"#\" class=\"complain-btn\">{{$ctrl.langServiceData.complain}}</a>\r\n\t</div>\r\n\t<div>\r\n\t\t<a href=\"#\" class=\"booking-btn\">{{$ctrl.langServiceData.booking}}</a>\r\n\t\t<p class=\"goods-info__contacts\">{{$ctrl.langServiceData.or}}\r\n\t\t\t<a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.showRoom}}</a>\r\n\t\t\t<span class=\"goods-info__phone\" ng-show=\"$ctrl.showTel\">+38(099)-546-78-79</span>\r\n\t\t</p>\r\n\r\n\t\t<img ng-src=\"{{$ctrl.data.traderImg}}\" alt=\"company-logo\">\r\n\t\t<p class=\"add-time\">{{$ctrl.data.addTime}}</p>\r\n\t</div>\r\n</div>"
-
-/***/ },
-/* 96 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(11);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var PaginationNavController = function () {
-	    function PaginationNavController() {
-	        (0, _classCallCheck3.default)(this, PaginationNavController);
-
-	        this.startPos = this.getStartPos();
-	        this.repeater = this.getRepeaterArr();
-	    }
-
-	    (0, _createClass3.default)(PaginationNavController, [{
-	        key: 'setCurrPage',
-	        value: function setCurrPage(index) {
-	            this.currPage = index;
-	            this.repeater = this.getRepeaterArr();
-	        }
-	    }, {
-	        key: 'getStartPos',
-	        value: function getStartPos() {
-	            return Math.floor(this.currPage / this.pageLimit) * this.pageLimit;
-	        }
-	    }, {
-	        key: 'prev',
-	        value: function prev() {
-	            this.startPos -= this.pageLimit;
-	            this.repeater = this.getRepeaterArr();
-	        }
-	    }, {
-	        key: 'next',
-	        value: function next() {
-	            this.startPos += this.pageLimit;
-	            this.repeater = this.getRepeaterArr();
-	        }
-	    }, {
-	        key: 'getRepeaterArr',
-	        value: function getRepeaterArr() {
-	            if (this.startPos >= this.pageCount) {
-	                this.startPos = this.pageCount - this.pageCount % this.pageLimit;
-	            } else if (this.startPos < 0) {
-	                this.startPos = 0;
-	            }
-
-	            var arr = [];
-	            var i = this.startPos;
-	            var length = i + this.pageLimit > this.pageCount ? this.pageCount : i + this.pageLimit;
-
-	            for (i; i < length; i++) {
-	                arr[i] = i + 1;
-	            }
-	            //this.startPos = i;
-
-	            //console.log(arr);
-
-	            return arr;
-	        }
-	    }]);
-	    return PaginationNavController;
-	}();
-
-	var paginationNavComponent = {
-	    template: __webpack_require__(97),
-	    bindings: {
-	        currPage: '=',
-	        pageCount: '<',
-	        pageLimit: '<'
-
-	    },
-	    controller: PaginationNavController
-	};
-
-	exports.default = paginationNavComponent;
-
-/***/ },
-/* 97 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"pages-list\">\r\n\t<ul>\r\n\t\t<li ng-if=\"$ctrl.startPos\" ng-click=\"$ctrl.prev()\"><a href=\"javascript:void(0)\">...</a></li>\r\n\t\t<li ng-repeat=\"page in $ctrl.repeater track by $index\" ng-click=\"$ctrl.setCurrPage($index)\" ng-class=\"{'active': $index === $ctrl.currPage}\"><span>{{page}}</span></li>\r\n\t\t<li ng-if=\"$ctrl.startPos + $ctrl.pageLimit <= $ctrl.pageCount\" ng-click=\"$ctrl.next()\"><a href=\"javascript:void(0)\">...</a></li>\r\n\t</ul>\r\n\t<a href=\"#\" class=\"btn\">Распечатать все предложения</a>\r\n</div>"
-
-/***/ },
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
 /* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -39255,95 +37083,12 @@
 /* 99 */
 /***/ function(module, exports) {
 
-	module.exports = "<input ng-model=\"$ctrl.value\" ng-change=\"$ctrl.onValueChange()\" placeholder=\"в Ростове-на-Дону\" autocomplete=\"off\" required=\"\" name=\"q\" type=\"text\">\r\n<ul ng-if=\"!!$ctrl.value && !$ctrl.isSelected\">\r\n\t<li ng-repeat=\"field in $ctrl.similarValues | filter:$ctrl.value\" ng-click=\"$ctrl.setValue(field.name)\">\r\n\t\t{{field.name + ','}} <br> <span>Сыктвтыктарскобурятская область</span>\r\n\t</li>\r\n</ul>"
+	module.exports = "<input ng-model=\"$ctrl.value\" ng-change=\"$ctrl.onValueChange()\" placeholder=\"в Ростове-на-Дону\" autocomplete=\"off\" required=\"\" name=\"q\" type=\"text\">\r\n<ul ng-if=\"!!$ctrl.value && !$ctrl.isSelected\">\r\n\t<li ng-repeat=\"field in $ctrl.similarValues | filter:$ctrl.value\" ng-click=\"$ctrl.setValue(field.name)\">\r\n\t\t{{field.name + ','}} <span>Московская область</span>\r\n\t</li>\r\n</ul>"
 
 /***/ },
-/* 100 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var rangeFilter = function rangeFilter() {
-	    return function (input, from, to) {
-	        if (!input) return [];
-
-	        return input.slice(from, to);
-	    };
-	};
-
-	exports.default = rangeFilter;
-
-/***/ },
-/* 101 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var sortFilter = function sortFilter() {
-	    return function (input, key, fromLowToHight) {
-	        if (!input) return [];
-	        if (!key) return input;
-
-	        return input.sort(function (a, b) {
-	            if (fromLowToHight) {
-	                if (a[key] > b[key]) return 1;
-	                if (a[key] < b[key]) return -1;
-	            } else {
-	                if (a[key] < b[key]) return 1;
-	                if (a[key] > b[key]) return -1;
-	            }
-	        });
-	    };
-	};
-
-	exports.default = sortFilter;
-
-/***/ },
-/* 102 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var minMaxFilter = function minMaxFilter() {
-	    return function (input, min, max) {
-	        if (!input) return [];
-
-	        return input.filter(function (item) {
-	            var result = true;
-
-	            if (min > 0 && max > min) {
-	                result = item.price >= min && item.price <= max;
-	            } else if (min > 0) {
-	                result = item.price >= min;
-	            } else if (max > 0) {
-	                result = item.price <= max;
-	            }
-
-	            /* if (isFinite(min) && isFinite(max)) {
-	                 result = item.price >= min && item.price <= max;
-	             } else if (isFinite(min)) {
-	                 result = item.price >= min;
-	             } else if (isFinite(max)) {
-	                 result = item.price <= max;
-	             }*/
-
-	            return result;
-	        });
-	    };
-	};
-
-	exports.default = minMaxFilter;
-
-/***/ },
+/* 100 */,
+/* 101 */,
+/* 102 */,
 /* 103 */
 /***/ function(module, exports) {
 
@@ -39354,6 +37099,645 @@
 /* 105 */,
 /* 106 */,
 /* 107 */
-103
+103,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var GoodsData = function GoodsData() {
+	    (0, _classCallCheck3.default)(this, GoodsData);
+
+	    this.rentData = {
+	        title: 'прокат',
+	        goodsArr: [{
+	            groupName: 'Велосипеды',
+	            groupArr: [{
+	                name: 'Велосипед двухподвес GT FURY',
+	                img: 'img/goods_photo_1.jpg',
+	                imgTitle: 'Велосипед двухподвес GT FURY',
+	                price: 400,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 199,
+	                commentsCount: 15,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Детский велокат COMMENCAL EL CAMINO',
+	                img: 'img/goods_photo_2.jpg',
+	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
+	                price: 150,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 300,
+	                commentsCount: 40,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }, {
+	                name: 'Велосипед двухподвес TREK REMENDY',
+	                img: 'img/goods_photo_3.jpg',
+	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
+	                price: 350,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 400,
+	                commentsCount: 60,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }]
+	        }, {
+	            groupName: 'Гироскутеры',
+	            groupArr: [{
+	                name: 'Гироскутер SMART BALANCE GRAFFITI',
+	                img: 'img/goods_photo_4.jpg',
+	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
+	                price: 25900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 100,
+	                commentsCount: 17,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Гироцикл SPEED WAY',
+	                img: 'img/goods_photo_5.jpg',
+	                imgTitle: 'Гироцикл SPEED WAY',
+	                price: 38900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 247,
+	                commentsCount: 33,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Гироскутер XIAOMI DESERT',
+	                img: 'img/goods_photo_6.jpg',
+	                imgTitle: 'Гироскутер XIAOMI DESERT',
+	                price: 79900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 143,
+	                commentsCount: 22,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }]
+	        }, {
+	            groupName: 'Самокаты',
+	            groupArr: [{
+	                name: 'Детский велокат COMMENCAL EL CAMINO',
+	                img: 'img/goods_photo_2.jpg',
+	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
+	                price: 150,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 300,
+	                commentsCount: 40,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }, {
+	                name: 'Велосипед двухподвес TREK REMENDY',
+	                img: 'img/goods_photo_3.jpg',
+	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
+	                price: 350,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 400,
+	                commentsCount: 60,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Велосипед двухподвес GT FURY',
+	                img: 'img/goods_photo_1.jpg',
+	                imgTitle: 'Велосипед двухподвес GT FURY',
+	                price: 400,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 199,
+	                commentsCount: 15,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }]
+	        }, {
+	            groupName: 'Аксессуары',
+	            groupArr: [{
+	                name: 'Гироскутер XIAOMI DESERT',
+	                img: 'img/goods_photo_6.jpg',
+	                imgTitle: 'Гироскутер XIAOMI DESERT',
+	                price: 79900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 143,
+	                commentsCount: 22,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }, {
+	                name: 'Гироскутер SMART BALANCE GRAFFITI',
+	                img: 'img/goods_photo_4.jpg',
+	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
+	                price: 25900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 100,
+	                commentsCount: 17,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Гироцикл SPEED WAY',
+	                img: 'img/goods_photo_5.jpg',
+	                imgTitle: 'Гироцикл SPEED WAY',
+	                price: 38900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 247,
+	                commentsCount: 33,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }]
+	        }]
+	    };
+	    this.sellData = {
+	        title: 'продажа',
+	        goodsArr: [{
+	            groupName: 'Велосипеды',
+	            groupArr: [{
+	                name: 'Велосипед двухподвес GT FURY',
+	                img: 'img/goods_photo_1.jpg',
+	                imgTitle: 'Велосипед двухподвес GT FURY',
+	                price: 400,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 199,
+	                commentsCount: 15,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Детский велокат COMMENCAL EL CAMINO',
+	                img: 'img/goods_photo_2.jpg',
+	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
+	                price: 150,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 300,
+	                commentsCount: 40,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }, {
+	                name: 'Велосипед двухподвес TREK REMENDY',
+	                img: 'img/goods_photo_3.jpg',
+	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
+	                price: 350,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 400,
+	                commentsCount: 60,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }]
+	        }, {
+	            groupName: 'Гироскутеры',
+	            groupArr: [{
+	                name: 'Гироскутер SMART BALANCE GRAFFITI',
+	                img: 'img/goods_photo_4.jpg',
+	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
+	                price: 25900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 100,
+	                commentsCount: 17,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Гироцикл SPEED WAY',
+	                img: 'img/goods_photo_5.jpg',
+	                imgTitle: 'Гироцикл SPEED WAY',
+	                price: 38900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 247,
+	                commentsCount: 33,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Гироскутер XIAOMI DESERT',
+	                img: 'img/goods_photo_6.jpg',
+	                imgTitle: 'Гироскутер XIAOMI DESERT',
+	                price: 79900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 143,
+	                commentsCount: 22,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }],
+	            active: true
+	        }, {
+	            groupName: 'Самокаты',
+	            groupArr: [{
+	                name: 'Детский велокат COMMENCAL EL CAMINO',
+	                img: 'img/goods_photo_2.jpg',
+	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
+	                price: 150,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 300,
+	                commentsCount: 40,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }, {
+	                name: 'Велосипед двухподвес TREK REMENDY',
+	                img: 'img/goods_photo_3.jpg',
+	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
+	                price: 350,
+	                adress: 'пр-т Шолохова, 112',
+	                lookCount: 400,
+	                commentsCount: 60,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Велосипед двухподвес GT FURY',
+	                img: 'img/goods_photo_1.jpg',
+	                imgTitle: 'Велосипед двухподвес GT FURY',
+	                price: 400,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 199,
+	                commentsCount: 15,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }]
+	        }, {
+	            groupName: 'Аксессуары',
+	            groupArr: [{
+	                name: 'Гироскутер XIAOMI DESERT',
+	                img: 'img/goods_photo_6.jpg',
+	                imgTitle: 'Гироскутер XIAOMI DESERT',
+	                price: 79900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 143,
+	                commentsCount: 22,
+	                traderImg: 'img/trader_logo_2.png',
+	                traderTitle: 'bikecenter'
+	            }, {
+	                name: 'Гироскутер SMART BALANCE GRAFFITI',
+	                img: 'img/goods_photo_4.jpg',
+	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
+	                price: 25900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 100,
+	                commentsCount: 17,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }, {
+	                name: 'Гироцикл SPEED WAY',
+	                img: 'img/goods_photo_5.jpg',
+	                imgTitle: 'Гироцикл SPEED WAY',
+	                price: 38900,
+	                adress: 'ул. Пушкинская, 2а',
+	                lookCount: 247,
+	                commentsCount: 33,
+	                traderImg: 'img/trader_logo_1.png',
+	                traderTitle: '100% Спорта'
+	            }]
+	        }]
+	    };
+	};
+
+	exports.default = GoodsData;
+
+/***/ },
+/* 154 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MainPageController = function MainPageController(goodsData) {
+	    (0, _classCallCheck3.default)(this, MainPageController);
+
+	    this.rentData = goodsData.rentData;
+	    this.sellData = goodsData.sellData;
+	    this.isHiddenNav = false;
+	};
+
+	var mainPageComponent = {
+	    template: __webpack_require__(155),
+	    controller: MainPageController
+	};
+
+	exports.default = mainPageComponent;
+
+/***/ },
+/* 155 */
+/***/ function(module, exports) {
+
+	module.exports = "<!--<div id=\"maket\"></div>-->\r\n<navbar is-hidden=\"$ctrl.isHiddenNav\" class=\"navbar\" ng-class=\"{'hidden': $ctrl.isHiddenNav}\" ></navbar>\r\n<section class=\"pageheader\">\r\n\r\n\r\n\t<div class=\"container\">\r\n\t\t<h1>Поиск прогулочной техники в прокат по всему миру</h1>\r\n\r\n\t\t<search-form></search-form> <!--Search-form component-->\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"category\">\r\n\t<div class=\"container\">\r\n\r\n\t\t<div class=\"category-small bicycle-bg\">\r\n\t\t\t<h2>Велосипеды</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Шоссейные <span>234</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Горные <span>438</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Детские <span>127</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Хардтейлы <span>320</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Двухподвесы <span>139</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Фэтбайки <span>29</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Электробайки <span>38</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Складыващиеся <span>110</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_1.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\t\t<div class=\"category-small giroskuter-bg\">\r\n\t\t\t<h2>Гироскутеры</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Шоссейные <span>120</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Детские <span>435</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Внедорожные <span>139</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Скоростные <span>29</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_2.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\t\t<div class=\"category-small winter-equip-bg\">\r\n\t\t\t<h2>Зимняя техника</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Сноуборды <span>234</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Лыжи <span>438</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Санки <span>127</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Снегокаты <span>320</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Ледянки <span>139</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_3.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"category-big travel-equip-bg\">\r\n\t\t\t<h2>Аксессуары и туристическое оборудование</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Экшн-камеры <span>120</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Защитное снаряжение <span>435</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Палатки <span>139</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Спальные мешки <span>120</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Рюкзаки туристические <span>435</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Другое <span>139</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_4.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"content\">\r\n\t<div class=\"container\">\r\n        <h2>Самое популярное</h2>\r\n\r\n        <div>\r\n            <goods-block goods-data=\"$ctrl.rentData\"></goods-block>\r\n            <div class=\"offers-box\">\r\n                <h3>Прокаты</h3>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>100% СПОРТА <span>123 предложения</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n\r\n                <a class=\"more\" href=\"#\">Все прокаты</a>\r\n            </div>\r\n        </div>\r\n\r\n        <div>\r\n            <goods-block goods-data=\"$ctrl.sellData\"></goods-block>\r\n            <div class=\"offers-box\">\r\n                <h3>Магазины</h3>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>100% СПОРТА <span>123 предложения</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n\r\n                <a class=\"more\" href=\"#\">Все магазины</a>\r\n            </div>\r\n        </div>\r\n\r\n        <div>\r\n            <div class=\"goods-block\">\r\n                <h2>События и статьи</h2>\r\n                <div class=\"link-box\">\r\n                    <div class=\"big-link\">\r\n                        <a href=\"#\">\r\n                            <img src=\"img/events_photo_1.jpg\" alt=\"img\">\r\n                            <p class=\"title\">Red Bull Rampage 2016</p>\r\n                            <p>16 сентября 2016</p>\r\n                            <p>Мы расскажем тебе о самом важном и крутом событии в мире даунхилла. Расскажем как это было.</p>\r\n                            <div class=\"link-box__link-info-absolute\">\r\n                                <span class=\"look\">10155</span>\r\n                                <span class=\"comment\">55</span>\r\n                                <span class=\"like\">155</span>\r\n                                <span class=\"calendar-icon\"></span>\r\n                            </div>\r\n                        </a>\r\n                    </div>\r\n                    <div>\r\n                        <a href=\"#\">\r\n                            <img src=\"img/events_photo_2.jpg\" alt=\"img\">\r\n                            <p class=\"title\">Выбираем велосипед</p>\r\n                            <p>Мы поможем тебе выбрать свой велосипед с первого раза. Расскажем, что нужно знать.</p>\r\n                            <div class=\"link-box__link-info-absolute\">\r\n                                <span class=\"look\">10155</span>\r\n                                <span class=\"comment\">55</span>\r\n                                <span class=\"like\">155</span>\r\n                                <span class=\"list-icon\"></span>\r\n                            </div>\r\n                        </a>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"offers-box\">\r\n                <h3>Акции и предложения</h3>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>100% СПОРТА <span>123 предложения</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n\r\n                <a class=\"more\" href=\"#\">Все акции и предложения</a>\r\n            </div>\r\n        </div>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"user-opening\">\r\n\t<div class=\"container\">\r\n\t\t<div class=\"diamond-icon\">\r\n\t\t\t<h3>Новые клиенты</h3>\r\n\t\t\t<p>Премиум-размещение увеличивает количество звонков в 5 раз</p>\r\n\t\t\t<a href=\"#\" class=\"btn\">Купить премиум</a>\r\n\t\t</div>\r\n\t\t<div class=\"page-icon\">\r\n\t\t\t<h3>Добавляйте предложения</h3>\r\n\t\t\t<p>Добавляйте новые предложения быстро и удобно</p>\r\n\t\t\t<a href=\"#\" class=\"btn\">Добавить объявление</a>\r\n\t\t</div>\r\n\t\t<div class=\"point-icon\">\r\n\t\t\t<h3>Найдите на карте</h3>\r\n\t\t\t<p>Ищите предложения рядом с домом, парком или друзьями</p>\r\n\t\t\t<a href=\"#\" class=\"btn\">Найти на карте</a>\r\n\t\t</div>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"pagefooter\">\r\n\t<div class=\"container\">\r\n\t\t<h3>Поиск техники для отдыха на onProkat </h3>\r\n\t\t<p>Взять в прокат или купить технику для отдыха — задача несложная, если знать, где искать и с чего начать поиски. Чтобы взять на прокат или купить технику для отдыха, не нужно никуда ехать и\r\n\t\t\tждать в очереди. Достаточно найти в нашей базе подходящие для вас предложения. Не забудьте оформить подписку на новые предложения по результатам поиска, чтобы оперативно получать все самые\r\n\t\t\tсвежие и актуальные новости о прокате или продаже техники для отдыха по всему миру.</p>\r\n\t\t<p>Если вы решили взять на прокат или купить велосипед, гироскутер ли другую технику для отдыха, то onProkat поможет вам! onProkat — это самый удобный сайт для поиска техники для отдыха по\r\n\t\t\tадресу или по карте, с учётом всех интересующих вас параметров. На onProkat.ru — тысячи актуальных объявлений о прокате или продаже техники для отдыха по всему миру, ежедневно на сайте\r\n\t\t\tпоявляются новые предложения. Объявления содержат описания техники, информацию о прокате или магазине, фотографии, стоимость, контакты проката или магазина.</p>\r\n\r\n\t\t<div class=\"regions\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Москва</a></li>\r\n\t\t\t\t<li><a href=\"#\">Санкт-Петербург</a></li>\r\n\t\t\t\t<li><a href=\"#\">Башкортостан</a></li>\r\n\t\t\t\t<li><a href=\"#\">Белгородская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Брянская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Ивановская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Иркутская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Калининградская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Калужская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Карелия</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Крым</a></li>\r\n\t\t\t\t<li><a href=\"#\">Липецкая область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Марий Эл</a></li>\r\n\t\t\t\t<li><a href=\"#\">Нижегородская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Новгородская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Пензенская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Пермский край</a></li>\r\n\t\t\t\t<li><a href=\"#\">Псковская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ростовская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Рязанская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Смоленская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ставрапольский край</a></li>\r\n\t\t\t\t<li><a href=\"#\">Татарстан</a></li>\r\n\t\t\t\t<li><a href=\"#\">Тверская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Тульская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Ханты-Мансийский АО</a></li>\r\n\t\t\t\t<li><a href=\"#\">Челябинская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ямало-Ненецкий АО</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ярославская область</a></li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t\t<a href=\"#\" class=\"show-more\"><span>Показать все регионы</span></a>\r\n\t</div>\r\n</section>"
+
+/***/ },
+/* 156 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(11);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/*class SearchAutocomplete {
+	 constructor (searchFormData) {
+	 this.value = '';
+	 }
+
+	 getSimilarValue (value) {
+	 console.log(value);
+	 //let val = value;
+	 //val.json.stringify;
+
+	 return this.searchFormData.searchData;
+	 }
+	 }*/
+
+	var SearchFormController = function () {
+	    function SearchFormController(searchFormData) {
+	        (0, _classCallCheck3.default)(this, SearchFormController);
+
+	        this.selects = searchFormData.selectsData;
+	        this.activeSelects = [];
+	        this.activeSelectGroup = [];
+	        this.searchAutocomplete = {
+	            value: '',
+	            placeholder: 'В Ростове-на-Дону',
+	            getSimilarValue: function getSimilarValue(value) {
+	                console.log(value);
+
+	                return searchFormData.searchData;
+	            }
+	        };
+
+	        /*Object.defineProperty(this, "selectsArr", {
+	            get: (() => {
+	                var counter = 0;
+	                return () => {
+	                    //console.log(this.selectIsChanged);
+	                    //console.log(counter);
+	                    if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
+	                        this.reInitActiveSelectGroups();
+	                        counter++;
+	                    } else {
+	                        this.selectIsChanged = false;
+	                        counter = 0;
+	                    }
+	                      return this.activeSelectGroup;
+	                }
+	            })()
+	        });*/
+
+	        this.initActiveSelects();
+	    }
+
+	    (0, _createClass3.default)(SearchFormController, [{
+	        key: 'initActiveSelects',
+	        value: function initActiveSelects() {
+	            var activeSelectGroup = this.selects;
+
+	            do {
+	                this.activeSelectGroup.push(activeSelectGroup);
+	                this.activeSelects.push(activeSelectGroup[0]);
+	                activeSelectGroup = activeSelectGroup[0].subCat;
+	            } while (activeSelectGroup);
+	        }
+	    }, {
+	        key: 'reInitActiveSelectGroups',
+	        value: function reInitActiveSelectGroups(newActiveSelect, index) {
+	            var i = index + 1;
+	            this.activeSelects[index] = newActiveSelect;
+
+	            for (i; i < this.activeSelectGroup.length; i++) {
+	                this.activeSelectGroup[i] = this.activeSelects[i - 1].subCat;
+	                this.activeSelects[i] = this.activeSelectGroup[i][0];
+	            }
+	        }
+	    }, {
+	        key: 'search',
+	        value: function search() {}
+	    }]);
+	    return SearchFormController;
+	}();
+
+	var searchFormComponent = {
+	    template: __webpack_require__(157),
+	    controller: SearchFormController
+	};
+
+	exports.default = searchFormComponent;
+
+	/*
+	.component('searchForm', {
+	    template: require('./../../tmpl/search-form-tmpl.html'),
+	    controller: function(searchFormData) {
+	        this.selects = searchFormData.selectsData;
+	        this.activeSelects = [];
+	        this.activeSelectGroup = [];
+	        this.selectIsChanged = false;
+	        this.searchAutocomplete = {
+	            value: '',
+	            getSimilarValue: (value) => {
+	                console.log(value);
+	                //let val = value;
+	                //val.json.stringify;
+
+	                return searchFormData.searchData;
+	            }
+	        };
+	        Object.defineProperty(this, "selectExperimental", {
+	            get: (() => {
+	                var counter = 0;
+	                return () => {
+	                    //console.log(this.selectIsChanged);
+	                    //console.log(counter);
+	                    if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
+	                        this.reInitActiveSelectGroups();
+	                        counter++;
+	                    } else {
+	                        this.selectIsChanged = false;
+	                        counter = 0;
+	                    }
+
+	                    return this.activeSelectGroup;
+	                }
+	            })()
+	        });
+	        this.initActiveSelects();
+
+
+	        this.initActiveSelects = () => {
+	            let selectsCount = 3;
+	            let activeSelectGroup = this.selects;
+	            //let firstActive = this.selects[0];
+
+	            for (let i = 0; i < selectsCount; i++) {
+	                this.activeSelectGroup.push(activeSelectGroup);
+	                this.activeSelects.push(activeSelectGroup[0]);
+	                activeSelectGroup = activeSelectGroup[0].subCat;
+	            }
+	        };
+	        this.reInitActiveSelectGroups = () => {
+	            for (let i = 1; i < this.activeSelectGroup.length; i++) {
+	                let cachedGroup = this.activeSelectGroup[i];
+
+	                //console.log(cachedGroup);
+	                this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
+	                //console.log(this.activeSelects[i-1]);
+	                //console.log(this.activeSelectGroup[i]);
+
+	                if ( cachedGroup !== this.activeSelectGroup[i]) {
+	                    this.activeSelects[i] = this.activeSelectGroup[i][0];
+	                }
+
+	                /!*console.log(this.activeSelectGroup[i][0]);*!/
+	            }
+	            /!*console.log(this.activeSelectGroup);
+	             console.log(this.activeSelects);*!/
+	        };
+	        this.onSelect = () => {
+	            this.selectIsChanged = true;
+	        };
+	        this.getActiveSelectGroups = (() => {
+	            let init = false;
+	            return () => {
+	                init ? this.reInitActiveSelectGroups() : init = true;
+
+	                return this.activeSelectGroup;
+	            }
+	        })();
+	        this.search = () => {
+
+	        };
+
+	    }
+	})*/
+
+/***/ },
+/* 157 */
+/***/ function(module, exports) {
+
+	module.exports = "<form class=\"search-form\" novalidate>\r\n\t<ul>\r\n\t\t<li ng-repeat=\"selectGroup in $ctrl.activeSelectGroup\">\r\n\t\t\t<custom-select class=\"search-form__select\"\r\n\t\t\t\t\t\t   options=\"selectGroup\"\r\n\t\t\t\t\t\t   selected-option=\"$ctrl.activeSelects[$index]\"\r\n\t\t\t\t\t\t   custom-func=\"$ctrl.reInitActiveSelectGroups(newActiveSelect, index)\"\r\n\t\t\t\t\t\t   index=\"$index\"\r\n\t\t\t></custom-select>\r\n\t\t</li>\r\n\t</ul>\r\n\t<autocomplete value=\"$ctrl.searchAutocomplete.value\"\r\n\t\t\t\t  get-similar-value=\"$ctrl.searchAutocomplete.getSimilarValue\"\r\n\t\t\t\t  placeholder=\"$ctrl.placeholder\"\r\n\t\t\t\t  class=\"search__autocomplete\"></autocomplete>\r\n\t<!--<div class=\"search__autocomplete\">\r\n\t\t<input ng-model=\"$ctrl.searchKeyword\" ng-change=\"$ctrl.searchSelected = false\" placeholder=\"в Ростове-на-Дону\" required=\"\" name=\"q\" type=\"text\">\r\n\t\t<ul ng-if=\"!!$ctrl.searchKeyword && !$ctrl.searchSelected\">\r\n\t\t\t<li ng-repeat=\"field in $ctrl.searchPotentialFields | filter:$ctrl.searchKeyword\" ng-click=\"$ctrl.setSearch(field.name)\">\r\n\t\t\t\t<span>{{field.name}}</span>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n\t</div>-->\r\n\t<button type=\"submit\" ng-click=\"$ctrl.search()\">Найти</button>\r\n</form>"
+
+/***/ },
+/* 158 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(11);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var GoodsBlockController = function () {
+	    function GoodsBlockController() {
+	        (0, _classCallCheck3.default)(this, GoodsBlockController);
+
+	        //this.goodsData = goodsData.rentData;
+	        this.activeGroup = this.getActiveGroup();
+	    }
+
+	    (0, _createClass3.default)(GoodsBlockController, [{
+	        key: 'getActiveGroup',
+	        value: function getActiveGroup() {
+	            var arr = this.goodsData.goodsArr;
+
+	            for (var i = 0; i < arr.length; i++) {
+	                if (!arr[i].active) continue;
+
+	                return arr[i];
+	            }
+
+	            return arr[0];
+	        }
+	    }]);
+	    return GoodsBlockController;
+	}();
+
+	var goodsBlockComponent = {
+	    bindings: {
+	        goodsData: '<'
+	    },
+	    template: __webpack_require__(159),
+	    controller: GoodsBlockController
+	};
+
+	exports.default = goodsBlockComponent;
+
+/***/ },
+/* 159 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"goods-nav\">\r\n\t<p>{{$ctrl.goodsData.title.toUpperCase()}}</p>\r\n\t<ul class=\"goods-menu\">\r\n\t\t<li ng-repeat=\"goodsGroup in $ctrl.goodsData.goodsArr\" ng-click=\"$ctrl.activeGroup = goodsGroup\"\r\n\t\t\tng-class=\"{'active': $ctrl.activeGroup === goodsGroup}\">\r\n\t\t\t{{goodsGroup.groupName}}\r\n\t\t</li>\r\n\t</ul>\r\n\t<a href=\"#\">Как сюда попасть?</a>\r\n</div>\r\n<div ng-repeat=\"goodsGroup in $ctrl.goodsData.goodsArr\" ng-if=\"$ctrl.activeGroup === goodsGroup\" class=\"link-box\">\r\n\t<div ng-repeat=\"goodsCard in goodsGroup.groupArr\">\r\n\t\t<a href=\"javascript:void(0)\">\r\n\t\t\t<img ng-src=\"{{goodsCard.img}}\" alt=\"{{goodsCard.imgTitle}}\">\r\n\t\t\t<p class=\"price\">{{goodsCard.price}} &#8381;</p>\r\n\t\t\t<p>{{goodsCard.name}}</p>\r\n\t\t\t<p class=\"place\">{{goodsCard.adress}}</p>\r\n\t\t\t<p>\r\n\t\t\t\t<span class=\"look\">{{goodsCard.lookCount}}</span>\r\n\t\t\t\t<span class=\"comment\">{{goodsCard.commentsCount}}</span>\r\n\t\t\t\t<span class=\"company-logo\">\r\n\t\t\t\t\t<img ng-src=\"{{goodsCard.traderImg}}\" alt=\"{{goodsCard.traderTitle}}\">\r\n\t\t\t\t</span>\r\n\t\t\t</p>\r\n\t\t</a>\r\n\t</div>\r\n</div>"
+
+/***/ }
 /******/ ])));
-//# sourceMappingURL=appCat.75ddb20820cef6d5cdb6.js.map
+//# sourceMappingURL=appMain.4900840ba1d3d46d36ae.js.map
