@@ -923,7 +923,7 @@ nav a {
 .search-form__select > a {
   height: 62px;
   padding: 20px 40px 20px 25px;
-  font-size: 20px;
+  font-size: 18px;
   color: #898989;
   line-height: 22px;
   background-color: rgba(255, 255, 255, 0.95);
@@ -979,7 +979,13 @@ nav a {
     padding: 0 25px;
     line-height: 24px;
     font-size: 17px;
-    color: #898989; }
+    color: #898989;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .search-form__select ul li:hover {
+      color: #3d3d3d; }
 
 .search-form__select .active {
   -moz-border-radius: 0 !important;
@@ -997,7 +1003,7 @@ nav a {
   position: relative;
   z-index: 2;
   float: left;
-  font-size: 20px;
+  font-size: 18px;
   color: #898989;
   letter-spacing: 0.5px; }
   .search__autocomplete > ul {
@@ -1007,7 +1013,7 @@ nav a {
     left: 0;
     width: 100%;
     max-width: 275px;
-    padding: 10px 0;
+    padding: 0;
     font-size: 17px;
     background-color: rgba(255, 255, 255, 0.95);
     -moz-border-radius: 0 0 5px 5px;
@@ -1025,6 +1031,10 @@ nav a {
       -moz-box-shadow: 0 0 13px rgba(81, 81, 81, 0.41);
       -webkit-box-shadow: 0 0 13px rgba(81, 81, 81, 0.41);
       box-shadow: 0 0 13px rgba(81, 81, 81, 0.41); }
+    .search__autocomplete > ul li:first-child {
+      margin-top: 10px; }
+    .search__autocomplete > ul li:last-child {
+      margin-bottom: 10px; }
   .search__autocomplete li {
     float: none;
     padding: 0 25px;
@@ -1032,7 +1042,13 @@ nav a {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    line-height: 24px; }
+    line-height: 24px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .search__autocomplete li:hover, .search__autocomplete li:hover span {
+      color: #3d3d3d; }
     .search__autocomplete li span {
       font-family: "LatoWebThin"; }
   .search__autocomplete input {
