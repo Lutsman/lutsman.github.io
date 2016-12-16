@@ -37463,7 +37463,7 @@
 /* 30 */
 /***/ function(module, exports) {
 
-	module.exports = "<header>\r\n\t<div class=\"header__top-line\" ng-hide=\"$ctrl.isHiddenApp\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<p>Наше приложение onProkat, делает выбор техники\r\n\t\t\t\tдля отдыха простой и удобной.</p>\r\n\t\t\t<a href=\"#\"><img src=\"img/google-play-btn.jpg\" alt=\"Google Play\"></a>\r\n\t\t\t<a href=\"#\"><img src=\"img/app-store-btn.jpg\" alt=\"App Store\"></a>\r\n\t\t\t<span class=\"close-btn\" ng-click=\"$ctrl.isHiddenApp = true\"></span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"header__nav-1\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<nav class=\"top-menu-1\">\r\n\t\t\t\t<!--<span ng-click=\"$ctrl.isHiddenApp = false\">Open</span>-->\r\n\t\t\t\t<a href=\"#\">Магазины</a>\r\n\t\t\t\t<a href=\"#\">Прокаты</a>\r\n\t\t\t\t<a href=\"#\">Акции и предложения</a>\r\n\t\t\t\t<a href=\"#\">Контакты</a>\r\n\t\t\t</nav>\r\n\r\n\t\t\t<div class=\"user-data\">\r\n\t\t\t\t<span>0</span>\r\n\t\t\t\t<a href=\"#\">Вход</a>\r\n\t\t\t</div>\r\n\r\n\t\t</div><!--container-->\r\n\t</div>\r\n\r\n\t<div class=\"header__nav-2\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<a href=\"/\" class=\"logo\"></a>\r\n\r\n\t\t\t<nav class=\"top-menu-2\">\r\n\t\t\t\t<a href=\"#\">Прокат</a>\r\n\t\t\t\t<a href=\"#\">Продажа</a>\r\n\t\t\t\t<a href=\"#\">События</a>\r\n\t\t\t\t<a href=\"#\">Статьи</a>\r\n\t\t\t\t<a href=\"#\">Интерактивная карта </a>\r\n\t\t\t</nav>\r\n\r\n\r\n\t\t\t<a href=\"#\" class=\"add-offer\">+ Добавить предложение</a>\r\n\r\n\t\t</div><!--container-->\r\n\t</div>\r\n\r\n</header>"
+	module.exports = "<header>\r\n\t<div class=\"header__top-line\" ng-hide=\"$ctrl.isHiddenApp\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<p>Наше приложение onProkat, делает выбор техники\r\n\t\t\t\tдля отдыха простой и удобной.</p>\r\n\t\t\t<a href=\"#\"><img src=\"img/google-play-btn.png\" alt=\"Google Play\"></a>\r\n\t\t\t<a href=\"#\"><img src=\"img/app-store-btn.png\" alt=\"App Store\"></a>\r\n\t\t\t<span class=\"close-btn\" ng-click=\"$ctrl.isHiddenApp = true\"></span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"header__nav-1\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<nav class=\"top-menu-1\">\r\n\t\t\t\t<!--<span ng-click=\"$ctrl.isHiddenApp = false\">Open</span>-->\r\n\t\t\t\t<a href=\"#\">Магазины</a>\r\n\t\t\t\t<a href=\"#\">Прокаты</a>\r\n\t\t\t\t<a href=\"#\">Акции и предложения</a>\r\n\t\t\t\t<a href=\"#\">Контакты</a>\r\n\t\t\t</nav>\r\n\r\n\t\t\t<div class=\"user-data\">\r\n\t\t\t\t<span>0</span>\r\n\t\t\t\t<a href=\"#\">Вход</a>\r\n\t\t\t</div>\r\n\r\n\t\t</div><!--container-->\r\n\t</div>\r\n\r\n\t<div class=\"header__nav-2\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<a href=\"/\" class=\"logo\"></a>\r\n\r\n\t\t\t<nav class=\"top-menu-2\">\r\n\t\t\t\t<a href=\"#\">Прокат</a>\r\n\t\t\t\t<a href=\"#\">Продажа</a>\r\n\t\t\t\t<a href=\"#\">События</a>\r\n\t\t\t\t<a href=\"#\">Статьи</a>\r\n\t\t\t\t<a href=\"#\">Интерактивная карта </a>\r\n\t\t\t</nav>\r\n\r\n\r\n\t\t\t<a href=\"#\" class=\"add-offer\">+ Добавить предложение</a>\r\n\r\n\t\t</div><!--container-->\r\n\t</div>\r\n\r\n</header>"
 
 /***/ },
 /* 31 */
@@ -39255,7 +39255,7 @@
 /* 99 */
 /***/ function(module, exports) {
 
-	module.exports = "<input ng-model=\"$ctrl.value\" ng-change=\"$ctrl.onValueChange()\" placeholder=\"{{$ctrl.placeholder}}\" autocomplete=\"off\" required=\"\" name=\"q\" type=\"text\">\r\n<ul ng-if=\"!!$ctrl.value && !$ctrl.isSelected\">\r\n\t<li ng-repeat=\"field in $ctrl.similarValues | filter:$ctrl.value\" ng-click=\"$ctrl.setValue(field.name)\">\r\n\t\t<span>{{field.name}}</span>\r\n\t</li>\r\n</ul>"
+	module.exports = "<input ng-model=\"$ctrl.value\" ng-change=\"$ctrl.onValueChange()\" placeholder=\"в Ростове-на-Дону\" autocomplete=\"off\" required=\"\" name=\"q\" type=\"text\">\r\n<ul ng-if=\"!!$ctrl.value && !$ctrl.isSelected\">\r\n\t<li ng-repeat=\"field in $ctrl.similarValues | filter:$ctrl.value\" ng-click=\"$ctrl.setValue(field.name)\">\r\n\t\t<span>{{field.name}}</span>\r\n\t</li>\r\n</ul>"
 
 /***/ },
 /* 100 */
@@ -39356,4 +39356,4 @@
 /* 107 */
 103
 /******/ ])));
-//# sourceMappingURL=appCat.44f2b28b27d5c84d1e3b.js.map
+//# sourceMappingURL=appCat.8a8a98ff9a5c54c68163.js.map
