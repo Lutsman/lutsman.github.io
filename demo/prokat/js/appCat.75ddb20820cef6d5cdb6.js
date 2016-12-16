@@ -39255,7 +39255,7 @@
 /* 99 */
 /***/ function(module, exports) {
 
-	module.exports = "<input ng-model=\"$ctrl.value\" ng-change=\"$ctrl.onValueChange()\" placeholder=\"в Ростове-на-Дону\" autocomplete=\"off\" required=\"\" name=\"q\" type=\"text\">\r\n<ul ng-if=\"!!$ctrl.value && !$ctrl.isSelected\">\r\n\t<li ng-repeat=\"field in $ctrl.similarValues | filter:$ctrl.value\" ng-click=\"$ctrl.setValue(field.name)\">\r\n\t\t<span>{{field.name}}</span>\r\n\t</li>\r\n</ul>"
+	module.exports = "<input ng-model=\"$ctrl.value\" ng-change=\"$ctrl.onValueChange()\" placeholder=\"в Ростове-на-Дону\" autocomplete=\"off\" required=\"\" name=\"q\" type=\"text\">\r\n<ul ng-if=\"!!$ctrl.value && !$ctrl.isSelected\">\r\n\t<li ng-repeat=\"field in $ctrl.similarValues | filter:$ctrl.value\" ng-click=\"$ctrl.setValue(field.name)\">\r\n\t\t{{field.name + ','}} <br> <span>Сыктвтыктарскобурятская область</span>\r\n\t</li>\r\n</ul>"
 
 /***/ },
 /* 100 */
@@ -39356,4 +39356,4 @@
 /* 107 */
 103
 /******/ ])));
-//# sourceMappingURL=appCat.14243de578d07b2ca220.js.map
+//# sourceMappingURL=appCat.75ddb20820cef6d5cdb6.js.map

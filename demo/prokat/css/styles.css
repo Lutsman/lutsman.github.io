@@ -978,7 +978,13 @@ nav a {
     padding: 0 25px;
     line-height: 21px;
     font-size: 17px;
-    color: #898989; }
+    color: #898989;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .search-form__select ul li:hover {
+      padding-left: 20px; }
 
 .search-form__select .active {
   -moz-border-radius: 0 !important;
@@ -1026,7 +1032,16 @@ nav a {
       box-shadow: 0 0 13px rgba(81, 81, 81, 0.41); }
   .search__autocomplete li {
     float: none;
-    padding: 0 25px; }
+    padding: 0 25px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .search__autocomplete li:hover {
+      padding-left: 20px; }
+    .search__autocomplete li span {
+      font-family: "LatoWebThin"; }
   .search__autocomplete input {
     position: relative;
     z-index: 3;
