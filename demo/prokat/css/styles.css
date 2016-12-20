@@ -580,20 +580,26 @@ goods-block {
   float: left;
   width: 75%; }
 
-goods-block .ng-enter {
-  opacity: 0;
-  transition: all linear 0.5s; }
-
-goods-block .ng-enter.ng-enter-active {
-  opacity: 1; }
-
 search-advance form {
   max-height: 300px;
   transition: all linear 0.2s;
   overflow: hidden; }
+  search-advance form .ng-enter {
+    opacity: 0;
+    /*transition: all linear 0.5s;*/ }
+  search-advance form .ng-enter.ng-enter-active {
+    opacity: 1; }
   search-advance form.ng-hide {
     max-height: 0;
     padding: 0; }
+  search-advance form .category-list .ng-enter {
+    opacity: 0;
+    transition: all linear 0.2s; }
+  search-advance form .category-list .ng-enter.ng-enter-active {
+    opacity: 1; }
+  search-advance form .category-list .ng-leave {
+    transition: none;
+    opacity: 0; }
 
 search-advance .close {
   display: block;
@@ -623,6 +629,10 @@ category-goods-info .goods-info__prem {
   border-color: #ffb000; }
   category-goods-info .goods-info__prem:hover {
     background-color: #ffc96e; }
+
+.goods-info__contacts .ng-animate {
+  transition: none;
+  opacity: 0; }
 
 @keyframes slideUp {
   from {
@@ -876,8 +886,7 @@ nav a {
   color: #fff;
   background-image: url(/demo/prokat/resources/img/bg_headercd93849b7948baa98d506e5604e87494.jpg);
   background-size: cover;
-  background-position: center bottom;
-  z-index: 3; }
+  background-position: center bottom; }
   .pageheader h1 {
     margin: 162px 0 23px 120px;
     letter-spacing: 1px;
@@ -923,7 +932,7 @@ nav a {
 .search-form__select > a {
   height: 62px;
   padding: 20px 40px 20px 25px;
-  font-size: 18px;
+  font-size: 20px;
   color: #898989;
   line-height: 22px;
   background-color: rgba(255, 255, 255, 0.95);
@@ -977,15 +986,9 @@ nav a {
   .search-form__select ul li {
     float: none;
     padding: 0 25px;
-    line-height: 24px;
+    line-height: 21px;
     font-size: 17px;
-    color: #898989;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .search-form__select ul li:hover {
-      color: #3d3d3d; }
+    color: #898989; }
 
 .search-form__select .active {
   -moz-border-radius: 0 !important;
@@ -1003,7 +1006,7 @@ nav a {
   position: relative;
   z-index: 2;
   float: left;
-  font-size: 18px;
+  font-size: 20px;
   color: #898989;
   letter-spacing: 0.5px; }
   .search__autocomplete > ul {
@@ -1013,7 +1016,7 @@ nav a {
     left: 0;
     width: 100%;
     max-width: 275px;
-    padding: 0;
+    padding: 10px 0;
     font-size: 17px;
     background-color: rgba(255, 255, 255, 0.95);
     -moz-border-radius: 0 0 5px 5px;
@@ -1031,26 +1034,10 @@ nav a {
       -moz-box-shadow: 0 0 13px rgba(81, 81, 81, 0.41);
       -webkit-box-shadow: 0 0 13px rgba(81, 81, 81, 0.41);
       box-shadow: 0 0 13px rgba(81, 81, 81, 0.41); }
-    .search__autocomplete > ul li:first-child {
-      margin-top: 10px; }
-    .search__autocomplete > ul li:last-child {
-      margin-bottom: 10px; }
   .search__autocomplete li {
     float: none;
     padding: 0 25px;
-    cursor: pointer;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-height: 24px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .search__autocomplete li:hover, .search__autocomplete li:hover span {
-      color: #3d3d3d; }
-    .search__autocomplete li span {
-      font-family: "LatoWebThin"; }
+    cursor: pointer; }
   .search__autocomplete input {
     position: relative;
     z-index: 3;
@@ -1402,7 +1389,7 @@ footer {
       box-shadow: 0 0 9.5px 1.5px rgba(81, 81, 81, 0.6); }
   .link-box p {
     padding: 0 20px; }
-  .link-box .link-box__link-info-absolute {
+  .link-box .link-box__link-info {
     position: absolute;
     z-index: 2;
     bottom: 15px;
@@ -1422,8 +1409,7 @@ footer {
     position: relative;
     z-index: 2;
     padding-left: 40px;
-    margin-top: 22px;
-    margin-bottom: 18px; }
+    margin-top: 22px; }
     .link-box .place::before {
       content: '';
       display: block;
@@ -1519,8 +1505,6 @@ footer {
     margin-top: 15px;
     font: 13px "LatoWebSemibold";
     color: #f15c60; }
-    .offers-box .more:hover {
-      text-decoration: underline; }
 
 .user-opening {
   padding: 30px 0 40px;
@@ -1735,9 +1719,13 @@ footer {
   .goods-info .goods-info__contacts {
     position: relative; }
   .goods-info .goods-info__phone {
+    display: block;
     position: absolute;
     top: 180%;
-    left: 39px; }
+    left: 0;
+    width: 100%; }
+    .goods-info .goods-info__phone a {
+      border-bottom: none !important; }
   .goods-info h5 {
     margin: 12px 0 6px; }
   .goods-info p {
