@@ -1726,19 +1726,33 @@ footer {
     width: 100%; }
     .goods-info .goods-info__phone a {
       border-bottom: none !important; }
+  .goods-info .goods-info__links, .goods-info .add-time {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 30px;
+    width: 100%; }
   .goods-info h5 {
     margin: 12px 0 6px; }
   .goods-info p {
     margin-bottom: 17px; }
   .goods-info a {
     font: 16px "LatoWeb"; }
+  .goods-info .btn {
+    font-size: 14px;
+    padding: 2px 10px;
+    width: 145px;
+    text-align: center; }
   .goods-info > img {
     float: left;
     max-width: 350px;
     margin-right: 40px; }
   .goods-info > div {
+    position: relative;
+    z-index: 2;
     float: left;
-    width: 590px; }
+    width: 590px;
+    height: 220px; }
     .goods-info > div:last-of-type {
       width: 203px;
       margin-left: 15px; }
@@ -1760,7 +1774,8 @@ footer {
     z-index: 2;
     padding-left: 20px;
     margin: 0 10px;
-    color: #ce4a4e; }
+    color: #ce4a4e;
+    line-height: 16px; }
     .goods-info .bookmarks::before {
       content: '';
       display: block;
@@ -1786,11 +1801,11 @@ footer {
         .goods-info .booking-btn + p a:hover {
           border-bottom-color: transparent; }
   .goods-info .add-time {
-    position: relative;
-    z-index: 2;
+    margin-bottom: 0;
     font: 12px "LatoWebLight";
     text-align: right;
-    letter-spacing: 0.5px; }
+    letter-spacing: 0.5px;
+    line-height: 23px; }
     .goods-info .add-time::before, .goods-info .add-time::after {
       content: '';
       display: block;
@@ -1811,9 +1826,54 @@ footer {
       background-position: -448px 0; }
 
 .banner {
+  position: relative;
+  z-index: 2;
   height: 402px;
   margin: 12px 0;
   border: 1px solid #f4f4f4; }
+  .banner .close {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(153, 153, 153, 0.8);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer; }
+    .banner .close:hover {
+      background-color: #999999; }
+    .banner .close::after, .banner .close::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-top: 3px solid #fff;
+      border-right: 3px solid #fff; }
+    .banner .close::before {
+      left: 6px;
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .banner .close::after {
+      right: 6px;
+      -ms-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg); }
 
 .pages-list {
   height: 122px;
