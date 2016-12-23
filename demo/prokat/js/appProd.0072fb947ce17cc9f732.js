@@ -77,6 +77,8 @@
 
 	__webpack_require__(165);
 
+	__webpack_require__(166);
+
 	var _selectData = __webpack_require__(7);
 
 	var _selectData2 = _interopRequireDefault(_selectData);
@@ -97,7 +99,7 @@
 
 	var _categoryGoodsData2 = _interopRequireDefault(_categoryGoodsData);
 
-	var _product = __webpack_require__(166);
+	var _product = __webpack_require__(167);
 
 	var _product2 = _interopRequireDefault(_product);
 
@@ -121,13 +123,21 @@
 
 	var _pagefooter2 = _interopRequireDefault(_pagefooter);
 
+	var _prodOffer = __webpack_require__(169);
+
+	var _prodOffer2 = _interopRequireDefault(_prodOffer);
+
+	var _motion = __webpack_require__(171);
+
+	var _motion2 = _interopRequireDefault(_motion);
+
 	__webpack_require__(103);
 
 	__webpack_require__(107);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_angular2.default.module('product', ['ngAnimate', 'ngMap']).service('selectData', _selectData2.default).service('navData', _navData2.default).service('searchAdvanceData', _searchAdvanceData2.default).service('searchFormData', _searchFormData2.default).service('catGoodsData', _categoryGoodsData2.default).component('product', _product2.default).component('navbar', _navbar2.default).component('searchAdvance', _searchAdvance2.default).component('autocomplete', _autocomplete2.default).component('customSelect', _customSelect2.default).component('pagefooter', _pagefooter2.default);
+	_angular2.default.module('product', ['ngAnimate', 'ngMap', 'socialLinks']).service('selectData', _selectData2.default).service('navData', _navData2.default).service('searchAdvanceData', _searchAdvanceData2.default).service('searchFormData', _searchFormData2.default).service('catGoodsData', _categoryGoodsData2.default).component('product', _product2.default).component('navbar', _navbar2.default).component('searchAdvance', _searchAdvance2.default).component('autocomplete', _autocomplete2.default).component('customSelect', _customSelect2.default).component('pagefooter', _pagefooter2.default).component('prodOffer', _prodOffer2.default).component('motion', _motion2.default);
 
 /***/ },
 /* 1 */
@@ -43039,6 +43049,175 @@
 
 /***/ },
 /* 166 */
+/***/ function(module, exports) {
+
+	(function() {
+	  var sharedScopeDefinition;
+
+	  sharedScopeDefinition = {
+	    handler: '&customHandler',
+	    socialWidth: '@',
+	    socialHeight: '@'
+	  };
+
+	  angular.module('socialLinks', []).factory('socialLinker', [
+	    '$window', '$location', function($window, $location) {
+	      return function(urlFactory) {
+	        return function(scope, element, attrs) {
+	          var getCurrentUrl, handler, popupWinAttrs;
+	          popupWinAttrs = "status=no, width=" + (scope.socialWidth || 640) + ", height=" + (scope.socialHeight || 480) + ", resizable=yes, toolbar=no, menubar=no, scrollbars=no, location=no, directories=no";
+	          getCurrentUrl = function() {
+	            return attrs.customUrl || $location.absUrl();
+	          };
+	          attrs.$observe('customUrl', function() {
+	            var url;
+	            url = urlFactory(scope, getCurrentUrl());
+	            if (element[0].nodeName === 'A' && ((attrs.href == null) || attrs.href === '')) {
+	              return element.attr('href', url);
+	            }
+	          });
+	          element.attr('rel', 'nofollow');
+	          handler = function(e) {
+	            var url, win;
+	            e.preventDefault();
+	            url = urlFactory(scope, getCurrentUrl());
+	            return win = $window.open(url, 'popupwindow', popupWinAttrs).focus();
+	          };
+	          if (attrs.customHandler != null) {
+	            element.on('click', handler = function(event) {
+	              var url;
+	              url = urlFactory(scope, getCurrentUrl());
+	              element.attr('href', url);
+	              return scope.handler({
+	                $event: event,
+	                $url: url
+	              });
+	            });
+	          } else {
+	            element.on('click', handler);
+	          }
+	          return scope.$on('$destroy', function() {
+	            return element.off('click', handler);
+	          });
+	        };
+	      };
+	    }
+	  ]).directive('socialFacebook', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          var shareUrl;
+	          shareUrl = ["https://facebook.com/sharer.php?"];
+	          shareUrl.push("u=" + (encodeURIComponent(url)));
+	          return shareUrl.join('');
+	        })
+	      };
+	    }
+	  ]).directive('socialTwitter', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: angular.extend({
+	          status: '@status'
+	        }, sharedScopeDefinition),
+	        link: linker(function(scope, url) {
+	          scope.status || (scope.status = "Check this out! - " + url);
+	          return "https://twitter.com/intent/tweet?text=" + (encodeURIComponent(scope.status));
+	        })
+	      };
+	    }
+	  ]).directive('socialGplus', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://plus.google.com/share?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialPinterest', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: angular.extend({
+	          media: '@media',
+	          description: '@description'
+	        }, sharedScopeDefinition),
+	        link: linker(function(scope, url) {
+	          return "http://pinterest.com/pin/create/button/?url=" + (encodeURIComponent(url)) + "&amp;media=" + (encodeURIComponent(scope.media)) + "&amp;description=" + (encodeURIComponent(scope.description));
+	        })
+	      };
+	    }
+	  ]).directive('socialStumbleupon', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://stumbleupon.com/submit?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialLinkedin', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://linkedin.com/shareArticle?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialReddit', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://www.reddit.com/submit?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialVk', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "http://vkontakte.ru/share.php?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialOk', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialXing', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://www.xing.com/spi/shares/new?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]);
+
+	}).call(this);
+
+
+/***/ },
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43121,18 +43300,82 @@
 	}();
 
 	var ProductComponent = {
-	    template: __webpack_require__(167),
+	    template: __webpack_require__(168),
 	    controller: ProductController
 	};
 
 	exports.default = ProductComponent;
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports) {
 
-	module.exports = "<navbar is-hidden-app=\"$ctrl.isHiddenAppNav\"></navbar>\r\n<search-advance></search-advance>\r\n\r\n    <section class=\"content\">\r\n        <div class=\"container container__white\">\r\n            <div class=\"product\">\r\n                <div>\r\n                    <p class=\"product__category heart-icon\">В прокат</p>\r\n                    <h4>Горный профессиональный велосипед двухподвес GT FURY</h4>\r\n                    <p class=\"product__grey\">г. Ростов-на-Дону, пр-т. Космонавтов, 17/1</p>\r\n                    <p class=\"product__price\">400 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n\r\n                    <div class=\"product__info\">\r\n                        <p># Общая информация:</p>\r\n                        <ul>\r\n                            <li><span>Тип техники:</span> <span>Велосипед</span></li>\r\n                            <li><span>Направление:</span> <span>Горный</span></li>\r\n                            <li><span>Цвет:</span> <span>Синий</span></li>\r\n                            <li><span>Размер:</span> <span>S</span></li>\r\n                            <li><span>Колеса:</span> <span>26’’</span></li>\r\n                            <li><span>Вилка:</span> <span>180 мм</span></li>\r\n                            <li><span>Аммортизатор:</span> <span>80 мм</span></li>\r\n                            <li><span>Кол-во скоростей:</span> <span>13</span></li>\r\n                            <li><span>Тормоза:</span> <span>Дисковые</span></li>\r\n                            <li><span>Система:</span> <span>С успокоителем</span></li>\r\n                            <li><span>Наличие:</span> <span>Есть</span></li>\r\n                        </ul>\r\n\r\n                    </div>\r\n\r\n                    <p class=\"product__grey product__about\">С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на\r\n                        даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен\r\n                        отступать перед большими трамплинами и самым сложным уклоном или рельефом... геометрия рамы и\r\n                        подвеска Fury Expert, проверенные и уже побеждавшие в каньонах Юты, превращают гравитацию из\r\n                        вашего соперника в партнера. Каждый компонент этого байка предназначен для бескомпромиссного и\r\n                        продолжительного катания в больших горах. С Fury Expert вы станете быстрее, храбрее, и счастливее.</p>\r\n\r\n                    <div class=\"booking__block\">\r\n                        <div class=\"booking__logo\">\r\n                            <img src=\"img/trader_logo_1.png\" alt=\"company logo\">\r\n                        </div>\r\n                        <div class=\"booking\">\r\n                            <a href=\"#\" class=\"booking-btn\">{{$ctrl.langServiceData.booking}}</a>\r\n                            <p class=\"booking__contacts\">\r\n                                <span ng-show=\"!$ctrl.showTel\">{{$ctrl.langServiceData.or}}</span>\r\n                                <a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" ng-show=\"!$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.showTel}}</a>\r\n                                <a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" ng-show=\"$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.hideTel}}</a>\r\n                                <span class=\"booking__phone\" ng-show=\"$ctrl.showTel\"><a href=\"tel:+7234567890\">+7234567890</a></span>\r\n                            </p>\r\n\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n\r\n                <div>\r\n                    <div class=\"product__statistics\">\r\n                        <span class=\"visits\">Просмотров: всего 5520, за сегодня 213</span>\r\n                        <span class=\"accent fire-icon\">Выделение</span>\r\n                        <span class=\"accent diamond-small-icon\">Премиум</span>\r\n                        <span>сегодня, 11:00</span>\r\n                    </div>\r\n\r\n                    <div class=\"product__slider\">\r\n                        <div class=\"slide\">\r\n                            <img ng-repeat=\"slide in $ctrl.sliderData\" ng-if=\"$ctrl.activeSlide === slide\" ng-src=\"{{slide.slide.src}}\" alt=\"img\">\r\n                        </div>\r\n\r\n\r\n                        <div class=\"slide-control\" >\r\n                            <span ng-repeat=\"slide in $ctrl.sliderData\" ng-click=\"$ctrl.setActiveSlide(slide)\"><img ng-src=\"{{slide.thumb.src}}\" alt=\"slide-control\"></span>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                    <div class=\"product__banner\">\r\n                        <img src=\"img/product_banner.jpg\" alt=\"img\">\r\n                        <p>Рама GT FURY ELITE</p>\r\n                        <p>В сентябре выгода до 15000 руб. только у нас. Количество ограничено!</p>\r\n                        <p>Тел.: <span>(495) 241-87-96</span></p>\r\n                    </div>\r\n                    <div class=\"product__banner\">\r\n                        <img src=\"img/product_banner.jpg\" alt=\"img\">\r\n                        <p>Рама GT FURY ELITE</p>\r\n                        <p>В сентябре выгода до 15000 руб. только у нас. Количество ограничено!</p>\r\n                        <p>Тел.: (<span>(495) 241-87-96</span></p>\r\n                    </div>\r\n\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <!--<div class=\"product__map\"></div>-->\r\n            <div map-lazy-load=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3hC07zDykGfQWp4D3xBuwpVX8nU2s9M\">\r\n                <ng-map center=\"[40.74, -74.18]\" class=\"product__map\">\r\n                    <marker position=\"[40.74, -74.18]\"></marker>\r\n                </ng-map>\r\n            </div>\r\n\r\n            <div class=\"product__social\">\r\n                <p>\r\n                    <span>Поделиться в</span>\r\n                    <a href=\"#\" class=\"vk\"><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>\r\n                    <a href=\"#\" class=\"fb\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a>\r\n                    <a href=\"#\" class=\"tw\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>\r\n                </p>\r\n            </div>\r\n\r\n            <div class=\"product__more\">\r\n                <p class=\"product__more__title\">Похожие предложения</p>\r\n\r\n                <div>\r\n                    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n                    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n                    <p>ул. Пушкинская 25А</p>\r\n                    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n                </div>\r\n                <div>\r\n                    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n                    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n                    <p>ул. Пушкинская 25А</p>\r\n                    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n                </div>\r\n                <div>\r\n                    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n                    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n                    <p>ул. Пушкинская 25А</p>\r\n                    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n                </div>\r\n                <div>\r\n                    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n                    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n                    <p>ул. Пушкинская 25А</p>\r\n                    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n                </div>\r\n                <div>\r\n                    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n                    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n                    <p>ул. Пушкинская 25А</p>\r\n                    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div><!--container-->\r\n    </section>\r\n\r\n    <section class=\"pagefooter\">\r\n        <div class=\"container\">\r\n            <div class=\"regions\">\r\n                <ul>\r\n                    <li><a href=\"#\">Москва</a></li>\r\n                    <li><a href=\"#\">Санкт-Петербург</a></li>\r\n                    <li><a href=\"#\">Башкортостан</a></li>\r\n                    <li><a href=\"#\">Белгородская область</a></li>\r\n                    <li><a href=\"#\">Брянская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Ивановская область</a></li>\r\n                    <li><a href=\"#\">Иркутская область</a></li>\r\n                    <li><a href=\"#\">Калининградская область</a></li>\r\n                    <li><a href=\"#\">Калужская область</a></li>\r\n                    <li><a href=\"#\">Карелия</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Крым</a></li>\r\n                    <li><a href=\"#\">Липецкая область</a></li>\r\n                    <li><a href=\"#\">Марий Эл</a></li>\r\n                    <li><a href=\"#\">Нижегородская область</a></li>\r\n                    <li><a href=\"#\">Новгородская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Пензенская область</a></li>\r\n                    <li><a href=\"#\">Пермский край</a></li>\r\n                    <li><a href=\"#\">Псковская область</a></li>\r\n                    <li><a href=\"#\">Ростовская область</a></li>\r\n                    <li><a href=\"#\">Рязанская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Смоленская область</a></li>\r\n                    <li><a href=\"#\">Ставрапольский край</a></li>\r\n                    <li><a href=\"#\">Татарстан</a></li>\r\n                    <li><a href=\"#\">Тверская область</a></li>\r\n                    <li><a href=\"#\">Тульская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Ханты-Мансийский АО</a></li>\r\n                    <li><a href=\"#\">Челябинская область</a></li>\r\n                    <li><a href=\"#\">Ямало-Ненецкий АО</a></li>\r\n                    <li><a href=\"#\">Ярославская область</a></li>\r\n                </ul>\r\n            </div>\r\n            <a href=\"#\" class=\"show-more\"><span>Показать все регионы</span></a>\r\n        </div>\r\n    </section>"
+	module.exports = "<navbar is-hidden-app=\"$ctrl.isHiddenAppNav\"></navbar>\r\n<search-advance></search-advance>\r\n\r\n    <section class=\"content\">\r\n        <div class=\"container container__white\">\r\n            <div class=\"product\">\r\n                <div>\r\n                    <p class=\"product__category heart-icon\">В прокат</p>\r\n                    <h4>Горный профессиональный велосипед двухподвес GT FURY</h4>\r\n                    <p class=\"product__grey\">г. Ростов-на-Дону, пр-т. Космонавтов, 17/1</p>\r\n                    <p class=\"product__price\">400 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n\r\n                    <div class=\"product__info\">\r\n                        <p># Общая информация:</p>\r\n                        <ul>\r\n                            <li><span>Тип техники:</span> <span>Велосипед</span></li>\r\n                            <li><span>Направление:</span> <span>Горный</span></li>\r\n                            <li><span>Цвет:</span> <span>Синий</span></li>\r\n                            <li><span>Размер:</span> <span>S</span></li>\r\n                            <li><span>Колеса:</span> <span>26’’</span></li>\r\n                            <li><span>Вилка:</span> <span>180 мм</span></li>\r\n                            <li><span>Аммортизатор:</span> <span>80 мм</span></li>\r\n                            <li><span>Кол-во скоростей:</span> <span>13</span></li>\r\n                            <li><span>Тормоза:</span> <span>Дисковые</span></li>\r\n                            <li><span>Система:</span> <span>С успокоителем</span></li>\r\n                            <li><span>Наличие:</span> <span>Есть</span></li>\r\n                        </ul>\r\n\r\n                    </div>\r\n\r\n                    <p class=\"product__grey product__about\">С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на\r\n                        даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен\r\n                        отступать перед большими трамплинами и самым сложным уклоном или рельефом... геометрия рамы и\r\n                        подвеска Fury Expert, проверенные и уже побеждавшие в каньонах Юты, превращают гравитацию из\r\n                        вашего соперника в партнера. Каждый компонент этого байка предназначен для бескомпромиссного и\r\n                        продолжительного катания в больших горах. С Fury Expert вы станете быстрее, храбрее, и счастливее.</p>\r\n\r\n                    <div class=\"booking__block\">\r\n                        <div class=\"booking__logo\">\r\n                            <img src=\"img/trader_logo_1.png\" alt=\"company logo\">\r\n                        </div>\r\n                        <div class=\"booking\">\r\n                            <a href=\"#\" class=\"booking-btn\">{{$ctrl.langServiceData.booking}}</a>\r\n                            <p class=\"booking__contacts\">\r\n                                <span ng-show=\"!$ctrl.showTel\">{{$ctrl.langServiceData.or}}</span>\r\n                                <a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" ng-show=\"!$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.showTel}}</a>\r\n                                <a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" ng-show=\"$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.hideTel}}</a>\r\n                                <span class=\"booking__phone\" ng-show=\"$ctrl.showTel\"><a href=\"tel:+7234567890\">+7234567890</a></span>\r\n                            </p>\r\n\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n\r\n                <div>\r\n                    <div class=\"product__statistics\">\r\n                        <span class=\"visits\">Просмотров: всего 5520, за сегодня 213</span>\r\n                        <span class=\"accent fire-icon\">Выделение</span>\r\n                        <span class=\"accent diamond-small-icon\">Премиум</span>\r\n                        <span>сегодня, 11:00</span>\r\n                    </div>\r\n\r\n                    <div class=\"product__slider\">\r\n                        <div class=\"slide\">\r\n                            <img ng-repeat=\"slide in $ctrl.sliderData\" ng-if=\"$ctrl.activeSlide === slide\" ng-src=\"{{slide.slide.src}}\" alt=\"img\">\r\n                        </div>\r\n\r\n\r\n                        <div class=\"slide-control\" >\r\n                            <span ng-repeat=\"slide in $ctrl.sliderData\" ng-click=\"$ctrl.setActiveSlide(slide)\"><img ng-src=\"{{slide.thumb.src}}\" alt=\"slide-control\"></span>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                    <motion ng-repeat=\"motion in [0,1]\" class=\"product__banner\"></motion>\r\n\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <!--<div class=\"product__map\"></div>-->\r\n            <div map-lazy-load=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3hC07zDykGfQWp4D3xBuwpVX8nU2s9M\">\r\n                <ng-map center=\"[40.74, -74.18]\" class=\"product__map\">\r\n                    <marker position=\"[40.74, -74.18]\"></marker>\r\n                </ng-map>\r\n            </div>\r\n\r\n            <div class=\"product__social\">\r\n                <p>\r\n                    <span>Поделиться в</span>\r\n                    <a href=\"\" class=\"vk\" social-vk><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>\r\n                    <a href=\"\" class=\"fb\" social-facebook><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a>\r\n                    <a href=\"\" class=\"tw\" social-twitter><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>\r\n                </p>\r\n            </div>\r\n\r\n            <div class=\"product__more\">\r\n                <p class=\"product__more__title\">Похожие предложения</p>\r\n\r\n                <prod-offer ng-repeat=\"offer in [0,1,2,3,4]\" class=\"product__more__offer\"></prod-offer>\r\n            </div>\r\n\r\n        </div><!--container-->\r\n    </section>\r\n\r\n    <section class=\"pagefooter\">\r\n        <div class=\"container\">\r\n            <div class=\"regions\">\r\n                <ul>\r\n                    <li><a href=\"#\">Москва</a></li>\r\n                    <li><a href=\"#\">Санкт-Петербург</a></li>\r\n                    <li><a href=\"#\">Башкортостан</a></li>\r\n                    <li><a href=\"#\">Белгородская область</a></li>\r\n                    <li><a href=\"#\">Брянская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Ивановская область</a></li>\r\n                    <li><a href=\"#\">Иркутская область</a></li>\r\n                    <li><a href=\"#\">Калининградская область</a></li>\r\n                    <li><a href=\"#\">Калужская область</a></li>\r\n                    <li><a href=\"#\">Карелия</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Крым</a></li>\r\n                    <li><a href=\"#\">Липецкая область</a></li>\r\n                    <li><a href=\"#\">Марий Эл</a></li>\r\n                    <li><a href=\"#\">Нижегородская область</a></li>\r\n                    <li><a href=\"#\">Новгородская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Пензенская область</a></li>\r\n                    <li><a href=\"#\">Пермский край</a></li>\r\n                    <li><a href=\"#\">Псковская область</a></li>\r\n                    <li><a href=\"#\">Ростовская область</a></li>\r\n                    <li><a href=\"#\">Рязанская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Смоленская область</a></li>\r\n                    <li><a href=\"#\">Ставрапольский край</a></li>\r\n                    <li><a href=\"#\">Татарстан</a></li>\r\n                    <li><a href=\"#\">Тверская область</a></li>\r\n                    <li><a href=\"#\">Тульская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Ханты-Мансийский АО</a></li>\r\n                    <li><a href=\"#\">Челябинская область</a></li>\r\n                    <li><a href=\"#\">Ямало-Ненецкий АО</a></li>\r\n                    <li><a href=\"#\">Ярославская область</a></li>\r\n                </ul>\r\n            </div>\r\n            <a href=\"#\" class=\"show-more\"><span>Показать все регионы</span></a>\r\n        </div>\r\n    </section>"
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProdOfferController = function ProdOfferController() {
+	    (0, _classCallCheck3.default)(this, ProdOfferController);
+	};
+
+	var prodOfferComponent = {
+	    template: __webpack_require__(170),
+	    controller: ProdOfferController
+	};
+	exports.default = prodOfferComponent;
+
+/***/ },
+/* 170 */
+/***/ function(module, exports) {
+
+	module.exports = "<a href=\"#\">\r\n    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n</a>\r\n<a href=\"#\">\r\n    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n    <p>ул. Пушкинская 25А</p>\r\n    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n</a>\r\n"
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MotionController = function MotionController() {
+	    (0, _classCallCheck3.default)(this, MotionController);
+	};
+
+	var motionComponent = {
+	    template: __webpack_require__(172),
+	    controller: MotionController
+	};
+	exports.default = motionComponent;
+
+/***/ },
+/* 172 */
+/***/ function(module, exports) {
+
+	module.exports = "<a href=\"#\">\r\n    <img src=\"img/product_banner.jpg\" alt=\"img\">\r\n</a>\r\n<a href=\"#\">\r\n    <p>Рама GT FURY ELITE</p>\r\n    <p>В сентябре выгода до 15000 руб. только у нас. Количество ограничено!</p>\r\n    <p>Тел.: <span>(495) 241-87-96</span></p>\r\n</a>"
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=appProd.aca67b0da3727926c59b.js.map
+//# sourceMappingURL=appProd.0072fb947ce17cc9f732.js.map
