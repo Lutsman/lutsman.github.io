@@ -2446,11 +2446,33 @@ footer {
         border-bottom: 1px dashed #000; }
         .booking__block .booking-btn + p a:hover {
           border-bottom-color: transparent; }
+        .booking__block .booking-btn + p a.ng-hide-remove {
+          animation: fade-in 0.2s linear; }
+        .booking__block .booking-btn + p a.ng-hide-add {
+          display: none; }
 
 .booking__logo {
   line-height: 49px; }
   .booking__logo img {
     vertical-align: middle; }
+
+.booking__contacts {
+  position: relative;
+  z-index: 2; }
+
+.booking__phone {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  top: 80%;
+  left: 0;
+  width: 100%; }
+  .booking__phone a {
+    border-bottom: none !important; }
+  .booking__phone.ng-hide-remove {
+    animation: fade-in 0.2s linear; }
+  .booking__phone.ng-hide-add {
+    display: none; }
 
 .product__statistics {
   margin-bottom: 20px;
