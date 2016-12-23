@@ -2473,7 +2473,19 @@ footer {
     padding-left: 22px; }
 
 .product__slider .slide {
-  height: 346px; }
+  position: relative;
+  z-index: 2;
+  height: 346px;
+  overflow: hidden; }
+  .product__slider .slide img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0; }
+    .product__slider .slide img.ng-enter {
+      animation: fade-in 0.3s linear; }
+    .product__slider .slide img.ng-leave {
+      animation: fade-out 0.3s linear; }
 
 .product__slider .slide-control {
   margin: 5px 0 20px; }
