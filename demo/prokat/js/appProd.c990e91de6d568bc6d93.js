@@ -75,13 +75,9 @@
 
 	__webpack_require__(3);
 
-	var _goodsData = __webpack_require__(158);
+	__webpack_require__(165);
 
-	var _goodsData2 = _interopRequireDefault(_goodsData);
-
-	var _searchFormData = __webpack_require__(9);
-
-	var _searchFormData2 = _interopRequireDefault(_searchFormData);
+	__webpack_require__(166);
 
 	var _selectData = __webpack_require__(7);
 
@@ -91,13 +87,29 @@
 
 	var _navData2 = _interopRequireDefault(_navData);
 
-	var _mainPage = __webpack_require__(159);
+	var _searchAdvanceData = __webpack_require__(5);
 
-	var _mainPage2 = _interopRequireDefault(_mainPage);
+	var _searchAdvanceData2 = _interopRequireDefault(_searchAdvanceData);
 
-	var _searchForm = __webpack_require__(161);
+	var _searchFormData = __webpack_require__(9);
 
-	var _searchForm2 = _interopRequireDefault(_searchForm);
+	var _searchFormData2 = _interopRequireDefault(_searchFormData);
+
+	var _categoryGoodsData = __webpack_require__(10);
+
+	var _categoryGoodsData2 = _interopRequireDefault(_categoryGoodsData);
+
+	var _product = __webpack_require__(167);
+
+	var _product2 = _interopRequireDefault(_product);
+
+	var _navbar = __webpack_require__(11);
+
+	var _navbar2 = _interopRequireDefault(_navbar);
+
+	var _searchAdvance = __webpack_require__(38);
+
+	var _searchAdvance2 = _interopRequireDefault(_searchAdvance);
 
 	var _autocomplete = __webpack_require__(99);
 
@@ -107,17 +119,17 @@
 
 	var _customSelect2 = _interopRequireDefault(_customSelect);
 
-	var _goodsBlock = __webpack_require__(163);
-
-	var _goodsBlock2 = _interopRequireDefault(_goodsBlock);
-
-	var _navbar = __webpack_require__(11);
-
-	var _navbar2 = _interopRequireDefault(_navbar);
-
 	var _pagefooter = __webpack_require__(32);
 
 	var _pagefooter2 = _interopRequireDefault(_pagefooter);
+
+	var _prodOffer = __webpack_require__(169);
+
+	var _prodOffer2 = _interopRequireDefault(_prodOffer);
+
+	var _motion = __webpack_require__(171);
+
+	var _motion2 = _interopRequireDefault(_motion);
 
 	__webpack_require__(103);
 
@@ -125,7 +137,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_angular2.default.module('mainPage', ['ngAnimate']).service('searchFormData', _searchFormData2.default).service('goodsData', _goodsData2.default).service('selectData', _selectData2.default).service('navData', _navData2.default).component('mainPage', _mainPage2.default).component('searchForm', _searchForm2.default).component('autocomplete', _autocomplete2.default).component('customSelect', _customSelect2.default).component('goodsBlock', _goodsBlock2.default).component('navbar', _navbar2.default).component('pagefooter', _pagefooter2.default);
+	_angular2.default.module('product', ['ngAnimate', 'ngMap', 'socialLinks']).service('selectData', _selectData2.default).service('navData', _navData2.default).service('searchAdvanceData', _searchAdvanceData2.default).service('searchFormData', _searchFormData2.default).service('catGoodsData', _categoryGoodsData2.default).component('product', _product2.default).component('navbar', _navbar2.default).component('searchAdvance', _searchAdvance2.default).component('autocomplete', _autocomplete2.default).component('customSelect', _customSelect2.default).component('pagefooter', _pagefooter2.default).component('prodOffer', _prodOffer2.default).component('motion', _motion2.default);
 
 /***/ },
 /* 1 */
@@ -36678,7 +36690,618 @@
 
 
 /***/ },
-/* 5 */,
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SearchAdvanceData = function SearchAdvanceData() {
+	    (0, _classCallCheck3.default)(this, SearchAdvanceData);
+
+	    this.fieldsData = {
+	        title: 'Прокат велосипедов в Ростове-на-Дону',
+	        maxPrice: undefined,
+	        minPrice: undefined,
+	        sorters: [{
+	            title: 'сначала дешевые',
+	            name: 'price',
+	            reverse: false,
+	            id: 0,
+	            active: false
+	        }, {
+	            title: 'сначала дорогие',
+	            name: 'price',
+	            reverse: true,
+	            id: 1,
+	            active: false
+	        }, {
+	            title: 'по-популярности',
+	            name: 'rate',
+	            reverse: false,
+	            id: 2,
+	            active: true
+	        }],
+	        categories: [{
+	            name: '',
+	            title: 'В прокат',
+	            active: true,
+	            id: 0,
+	            subCat: [{
+	                name: '',
+	                title: 'Велосипед',
+	                active: true,
+	                id: 0,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-1',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: true,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Гироскутер',
+	                active: false,
+	                id: 1,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-2',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Самокат',
+	                active: false,
+	                id: 2,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-3',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Роликовые коньки',
+	                active: false,
+	                id: 3,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-4',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Аксессуары и оборудование',
+	                active: false,
+	                id: 4,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-5',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Зимняя техника',
+	                active: false,
+	                id: 5,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-6',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }]
+	        }, {
+	            name: '',
+	            title: 'Купить',
+	            active: false,
+	            id: 1,
+	            subCat: [{
+	                name: '',
+	                title: 'Велосипед',
+	                active: true,
+	                id: 0,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-1',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: true,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Гироскутер',
+	                active: false,
+	                id: 1,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-2',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Самокат',
+	                active: false,
+	                id: 2,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-3',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Роликовые коньки',
+	                active: false,
+	                id: 3,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-4',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Аксессуары и оборудование',
+	                active: false,
+	                id: 4,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-5',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }, {
+	                name: '',
+	                title: 'Зимняя техника',
+	                active: false,
+	                id: 5,
+	                subCat: [{
+	                    name: '',
+	                    title: 'Шоссейный-6',
+	                    active: false,
+	                    id: 0
+	                }, {
+	                    name: '',
+	                    title: 'Горный',
+	                    active: false,
+	                    id: 1
+	                }, {
+	                    name: '',
+	                    title: 'Детский',
+	                    active: false,
+	                    id: 2
+	                }, {
+	                    name: '',
+	                    title: 'Хардтейл',
+	                    active: false,
+	                    id: 3
+	                }, {
+	                    name: '',
+	                    title: 'Двухподвес',
+	                    active: false,
+	                    id: 4
+	                }, {
+	                    name: '',
+	                    title: 'Фэтбайк',
+	                    active: false,
+	                    id: 5
+	                }, {
+	                    name: '',
+	                    title: 'Электро',
+	                    active: false,
+	                    id: 6
+	                }, {
+	                    name: '',
+	                    title: 'Компактный',
+	                    active: false,
+	                    id: 7
+	                }]
+	            }]
+	        }]
+	    };
+	};
+
+	exports.default = SearchAdvanceData;
+
+/***/ },
 /* 6 */
 /***/ function(module, exports) {
 
@@ -37034,7 +37657,149 @@
 	exports.default = SearchFormData;
 
 /***/ },
-/* 10 */,
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var CatGoodsData = function CatGoodsData() {
+	    (0, _classCallCheck3.default)(this, CatGoodsData);
+
+	    this.dataGoods = [{
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 355,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 4.3,
+	        premium: true
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 400,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 2
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 500,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 5
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 700,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 1,
+	        premium: true
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 25,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 2.2
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 355,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 3.3
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 171,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 4.2
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 314,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 1.5
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 275,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 3
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 366,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 2.7
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 555,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 4.3
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 576,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 4.9
+	    }, {
+	        img: 'img/goods_catalog_preview_1.jpg',
+	        traderImg: 'img/trader_logo_3.png',
+	        name: 'Горный профессиональный велосипед двухподвес GT FURY',
+	        price: 1000,
+	        currency: '₽',
+	        description: 'С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен отступать перед большими трамплинами и самым сложным уклоном.',
+	        addTime: 'Добавлено 2 часа назад',
+	        rate: 0.1
+	    }];
+	};
+
+	exports.default = CatGoodsData;
+
+/***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -37573,61 +38338,1259 @@
 /***/ },
 /* 36 */,
 /* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _typeof2 = __webpack_require__(39);
+
+	var _typeof3 = _interopRequireDefault(_typeof2);
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(12);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SearchAdvanceController = function () {
+	    function SearchAdvanceController(searchAdvanceData, searchFormData, catGoodsData) {
+	        var _this = this;
+
+	        (0, _classCallCheck3.default)(this, SearchAdvanceController);
+
+	        this.searchAdvanceData = searchAdvanceData;
+	        this.searchFormData = searchFormData;
+	        this.catGoodsData = catGoodsData;
+	        this.fieldsData = this.searchAdvanceData.fieldsData;
+	        this.showSearch = false;
+	        this.searchAutocomplete = {
+	            value: '',
+	            placeholder: 'Город, район, адрес',
+	            getSimilarValue: function getSimilarValue(value) {
+	                console.log(value);
+
+	                return _this.searchFormData.searchData;
+	            }
+	        };
+
+	        this.init();
+
+	        //console.log(this.searchAutocomplete.holder);
+	        //console.log(this.fieldsData.sorters);
+	    }
+
+	    (0, _createClass3.default)(SearchAdvanceController, [{
+	        key: 'init',
+	        value: function init() {
+	            this.adress = '';
+	            this.minPrice = this.fieldsData.minPrice;
+	            this.maxPrice = this.fieldsData.maxPrice;
+
+	            this.initCat();
+	            this.getItems();
+
+	            this.items = this.newItems;
+	            this.itemsCount = this.currItemsCount;
+
+	            for (var key in this.fieldsData.sorters) {
+	                if (this.fieldsData.sorters[key].active) {
+	                    this.sorter = this.currSorter = this.fieldsData.sorters[key];
+	                }
+	            }
+
+	            //console.log(this.tracker);
+	        }
+	    }, {
+	        key: 'initCat',
+	        value: function initCat() {
+	            var activeCatGroup = this.fieldsData.categories;
+	            this.activeCatGroup = [];
+	            this.activeCats = [];
+
+	            do {
+	                this.activeCatGroup.push(activeCatGroup);
+	                this.activeCats.push(this.getActiveCat(activeCatGroup));
+	                activeCatGroup = this.activeCats[this.activeCats.length - 1].subCat;
+	            } while (activeCatGroup);
+
+	            //console.log(this.activeCats);
+	            //console.log(this.activeCatGroup);
+	        }
+	    }, {
+	        key: 'reInitActiveCat',
+	        value: function reInitActiveCat(newActiveCat, index) {
+	            var i = index + 1;
+	            this.activeCats[index] = newActiveCat;
+
+	            for (i; i < this.activeCatGroup.length; i++) {
+	                this.activeCatGroup[i] = this.activeCats[i - 1].subCat;
+	                this.activeCats[i] = this.activeCatGroup[i][0];
+	            }
+	        }
+	    }, {
+	        key: 'getActiveCat',
+	        value: function getActiveCat(obj) {
+	            if ((typeof obj === 'undefined' ? 'undefined' : (0, _typeof3.default)(obj)) === 'object' && !Array.isArray(obj) && obj !== null) {
+	                for (var key in obj) {
+	                    if (!obj[key].active) continue;
+
+	                    return obj[key];
+	                }
+	            } else if (Array.isArray(obj)) {
+	                for (var i = 0; i < obj.length; i++) {
+	                    if (!obj[i].active) continue;
+
+	                    return obj[i];
+	                }
+	            }
+
+	            return obj[0];
+	        }
+	    }, {
+	        key: 'setActiveCat',
+	        value: function setActiveCat(newActiveCat, index, toggle) {
+	            if (this.activeCats[index] === newActiveCat) return;
+
+	            this.reInitActiveCat(newActiveCat, index);
+
+	            this.toggle = toggle; // unused
+	        }
+	    }, {
+	        key: 'searchRender',
+	        value: function searchRender() {
+	            //this.getItems(); //then need promise
+
+	            this.items = this.minMaxFilteredItems;
+	            this.itemsCount = this.currItemsCount;
+	            this.sorter = this.currSorter;
+
+	            this.showSearch = false;
+	        }
+	    }, {
+	        key: 'resetForm',
+	        value: function resetForm() {
+	            this.init();
+	        }
+	    }, {
+	        key: 'getItems',
+	        value: function getItems() {
+	            console.log('get items');
+	            this.newItems = this.catGoodsData.dataGoods;
+	            this.setMinMax();
+	        }
+	    }, {
+	        key: 'setMinMax',
+	        value: function setMinMax() {
+	            this.minMaxFilteredItems = this.getMinMax();
+	            this.currItemsCount = this.minMaxFilteredItems.length;
+	            console.log(this.currItemsCount);
+	        }
+	    }, {
+	        key: 'getMinMax',
+	        value: function getMinMax() {
+	            return this.minMaxFilter(this.newItems, this.minPrice, this.maxPrice);
+	        }
+	    }, {
+	        key: 'minMaxFilter',
+	        value: function minMaxFilter(input, min, max) {
+	            if (!input) return [];
+
+	            min = min || 0;
+	            max = max || 0;
+	            //console.log(input);
+	            //console.log(min);
+	            //console.log(max);
+
+	            return input.filter(function (item) {
+	                var result = true;
+
+	                if (min > 0 && max > min) {
+	                    result = item.price >= min && item.price <= max;
+	                } else if (min > 0) {
+	                    result = item.price >= min;
+	                } else if (max > 0) {
+	                    result = item.price <= max;
+	                }
+
+	                return result;
+	            });
+	        }
+	    }]);
+	    return SearchAdvanceController;
+	}();
+
+	var searchAdvanceComponent = {
+	    template: __webpack_require__(92),
+	    bindings: {
+	        sorter: '=?',
+	        itemsCount: '=?',
+	        items: '=?'
+	    },
+	    controller: SearchAdvanceController
+	};
+
+	exports.default = searchAdvanceComponent;
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	exports.__esModule = true;
+
+	var _iterator = __webpack_require__(40);
+
+	var _iterator2 = _interopRequireDefault(_iterator);
+
+	var _symbol = __webpack_require__(76);
+
+	var _symbol2 = _interopRequireDefault(_symbol);
+
+	var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
+	  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
+	} : function (obj) {
+	  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+	};
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(41), __esModule: true };
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(42);
+	__webpack_require__(71);
+	module.exports = __webpack_require__(75).f('iterator');
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $at  = __webpack_require__(43)(true);
+
+	// 21.1.3.27 String.prototype[@@iterator]()
+	__webpack_require__(46)(String, 'String', function(iterated){
+	  this._t = String(iterated); // target
+	  this._i = 0;                // next index
+	// 21.1.5.2.1 %StringIteratorPrototype%.next()
+	}, function(){
+	  var O     = this._t
+	    , index = this._i
+	    , point;
+	  if(index >= O.length)return {value: undefined, done: true};
+	  point = $at(O, index);
+	  this._i += point.length;
+	  return {value: point, done: false};
+	});
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var toInteger = __webpack_require__(44)
+	  , defined   = __webpack_require__(45);
+	// true  -> String#at
+	// false -> String#codePointAt
+	module.exports = function(TO_STRING){
+	  return function(that, pos){
+	    var s = String(defined(that))
+	      , i = toInteger(pos)
+	      , l = s.length
+	      , a, b;
+	    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
+	    a = s.charCodeAt(i);
+	    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+	      ? TO_STRING ? s.charAt(i) : a
+	      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+	  };
+	};
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	// 7.1.4 ToInteger
+	var ceil  = Math.ceil
+	  , floor = Math.floor;
+	module.exports = function(it){
+	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+	};
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	// 7.2.1 RequireObjectCoercible(argument)
+	module.exports = function(it){
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
+	  return it;
+	};
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var LIBRARY        = __webpack_require__(47)
+	  , $export        = __webpack_require__(16)
+	  , redefine       = __webpack_require__(48)
+	  , hide           = __webpack_require__(21)
+	  , has            = __webpack_require__(49)
+	  , Iterators      = __webpack_require__(50)
+	  , $iterCreate    = __webpack_require__(51)
+	  , setToStringTag = __webpack_require__(67)
+	  , getPrototypeOf = __webpack_require__(69)
+	  , ITERATOR       = __webpack_require__(68)('iterator')
+	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
+	  , FF_ITERATOR    = '@@iterator'
+	  , KEYS           = 'keys'
+	  , VALUES         = 'values';
+
+	var returnThis = function(){ return this; };
+
+	module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
+	  $iterCreate(Constructor, NAME, next);
+	  var getMethod = function(kind){
+	    if(!BUGGY && kind in proto)return proto[kind];
+	    switch(kind){
+	      case KEYS: return function keys(){ return new Constructor(this, kind); };
+	      case VALUES: return function values(){ return new Constructor(this, kind); };
+	    } return function entries(){ return new Constructor(this, kind); };
+	  };
+	  var TAG        = NAME + ' Iterator'
+	    , DEF_VALUES = DEFAULT == VALUES
+	    , VALUES_BUG = false
+	    , proto      = Base.prototype
+	    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
+	    , $default   = $native || getMethod(DEFAULT)
+	    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
+	    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
+	    , methods, key, IteratorPrototype;
+	  // Fix native
+	  if($anyNative){
+	    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
+	    if(IteratorPrototype !== Object.prototype){
+	      // Set @@toStringTag to native iterators
+	      setToStringTag(IteratorPrototype, TAG, true);
+	      // fix for some old engines
+	      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
+	    }
+	  }
+	  // fix Array#{values, @@iterator}.name in V8 / FF
+	  if(DEF_VALUES && $native && $native.name !== VALUES){
+	    VALUES_BUG = true;
+	    $default = function values(){ return $native.call(this); };
+	  }
+	  // Define iterator
+	  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
+	    hide(proto, ITERATOR, $default);
+	  }
+	  // Plug for library
+	  Iterators[NAME] = $default;
+	  Iterators[TAG]  = returnThis;
+	  if(DEFAULT){
+	    methods = {
+	      values:  DEF_VALUES ? $default : getMethod(VALUES),
+	      keys:    IS_SET     ? $default : getMethod(KEYS),
+	      entries: $entries
+	    };
+	    if(FORCED)for(key in methods){
+	      if(!(key in proto))redefine(proto, key, methods[key]);
+	    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+	  }
+	  return methods;
+	};
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	module.exports = true;
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(21);
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+	var hasOwnProperty = {}.hasOwnProperty;
+	module.exports = function(it, key){
+	  return hasOwnProperty.call(it, key);
+	};
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+	module.exports = {};
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var create         = __webpack_require__(52)
+	  , descriptor     = __webpack_require__(30)
+	  , setToStringTag = __webpack_require__(67)
+	  , IteratorPrototype = {};
+
+	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+	__webpack_require__(21)(IteratorPrototype, __webpack_require__(68)('iterator'), function(){ return this; });
+
+	module.exports = function(Constructor, NAME, next){
+	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
+	  setToStringTag(Constructor, NAME + ' Iterator');
+	};
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+	var anObject    = __webpack_require__(23)
+	  , dPs         = __webpack_require__(53)
+	  , enumBugKeys = __webpack_require__(65)
+	  , IE_PROTO    = __webpack_require__(62)('IE_PROTO')
+	  , Empty       = function(){ /* empty */ }
+	  , PROTOTYPE   = 'prototype';
+
+	// Create object with fake `null` prototype: use iframe Object with cleared prototype
+	var createDict = function(){
+	  // Thrash, waste and sodomy: IE GC bug
+	  var iframe = __webpack_require__(28)('iframe')
+	    , i      = enumBugKeys.length
+	    , lt     = '<'
+	    , gt     = '>'
+	    , iframeDocument;
+	  iframe.style.display = 'none';
+	  __webpack_require__(66).appendChild(iframe);
+	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+	  // createDict = iframe.contentWindow.Object;
+	  // html.removeChild(iframe);
+	  iframeDocument = iframe.contentWindow.document;
+	  iframeDocument.open();
+	  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+	  iframeDocument.close();
+	  createDict = iframeDocument.F;
+	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
+	  return createDict();
+	};
+
+	module.exports = Object.create || function create(O, Properties){
+	  var result;
+	  if(O !== null){
+	    Empty[PROTOTYPE] = anObject(O);
+	    result = new Empty;
+	    Empty[PROTOTYPE] = null;
+	    // add "__proto__" for Object.getPrototypeOf polyfill
+	    result[IE_PROTO] = O;
+	  } else result = createDict();
+	  return Properties === undefined ? result : dPs(result, Properties);
+	};
+
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var dP       = __webpack_require__(22)
+	  , anObject = __webpack_require__(23)
+	  , getKeys  = __webpack_require__(54);
+
+	module.exports = __webpack_require__(26) ? Object.defineProperties : function defineProperties(O, Properties){
+	  anObject(O);
+	  var keys   = getKeys(Properties)
+	    , length = keys.length
+	    , i = 0
+	    , P;
+	  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
+	  return O;
+	};
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+	var $keys       = __webpack_require__(55)
+	  , enumBugKeys = __webpack_require__(65);
+
+	module.exports = Object.keys || function keys(O){
+	  return $keys(O, enumBugKeys);
+	};
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var has          = __webpack_require__(49)
+	  , toIObject    = __webpack_require__(56)
+	  , arrayIndexOf = __webpack_require__(59)(false)
+	  , IE_PROTO     = __webpack_require__(62)('IE_PROTO');
+
+	module.exports = function(object, names){
+	  var O      = toIObject(object)
+	    , i      = 0
+	    , result = []
+	    , key;
+	  for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
+	  // Don't enum bug & hidden keys
+	  while(names.length > i)if(has(O, key = names[i++])){
+	    ~arrayIndexOf(result, key) || result.push(key);
+	  }
+	  return result;
+	};
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// to indexed object, toObject with fallback for non-array-like ES3 strings
+	var IObject = __webpack_require__(57)
+	  , defined = __webpack_require__(45);
+	module.exports = function(it){
+	  return IObject(defined(it));
+	};
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// fallback for non-array-like ES3 and non-enumerable old V8 strings
+	var cof = __webpack_require__(58);
+	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+	  return cof(it) == 'String' ? it.split('') : Object(it);
+	};
+
+/***/ },
+/* 58 */
+/***/ function(module, exports) {
+
+	var toString = {}.toString;
+
+	module.exports = function(it){
+	  return toString.call(it).slice(8, -1);
+	};
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// false -> Array#indexOf
+	// true  -> Array#includes
+	var toIObject = __webpack_require__(56)
+	  , toLength  = __webpack_require__(60)
+	  , toIndex   = __webpack_require__(61);
+	module.exports = function(IS_INCLUDES){
+	  return function($this, el, fromIndex){
+	    var O      = toIObject($this)
+	      , length = toLength(O.length)
+	      , index  = toIndex(fromIndex, length)
+	      , value;
+	    // Array#includes uses SameValueZero equality algorithm
+	    if(IS_INCLUDES && el != el)while(length > index){
+	      value = O[index++];
+	      if(value != value)return true;
+	    // Array#toIndex ignores holes, Array#includes - not
+	    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
+	      if(O[index] === el)return IS_INCLUDES || index || 0;
+	    } return !IS_INCLUDES && -1;
+	  };
+	};
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.15 ToLength
+	var toInteger = __webpack_require__(44)
+	  , min       = Math.min;
+	module.exports = function(it){
+	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+	};
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var toInteger = __webpack_require__(44)
+	  , max       = Math.max
+	  , min       = Math.min;
+	module.exports = function(index, length){
+	  index = toInteger(index);
+	  return index < 0 ? max(index + length, 0) : min(index, length);
+	};
+
+/***/ },
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var shared = __webpack_require__(63)('keys')
+	  , uid    = __webpack_require__(64);
+	module.exports = function(key){
+	  return shared[key] || (shared[key] = uid(key));
+	};
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global = __webpack_require__(17)
+	  , SHARED = '__core-js_shared__'
+	  , store  = global[SHARED] || (global[SHARED] = {});
+	module.exports = function(key){
+	  return store[key] || (store[key] = {});
+	};
+
+/***/ },
+/* 64 */
+/***/ function(module, exports) {
+
+	var id = 0
+	  , px = Math.random();
+	module.exports = function(key){
+	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+	};
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
+	// IE 8- don't enum bug keys
+	module.exports = (
+	  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+	).split(',');
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(17).document && document.documentElement;
+
+/***/ },
+/* 67 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var def = __webpack_require__(22).f
+	  , has = __webpack_require__(49)
+	  , TAG = __webpack_require__(68)('toStringTag');
+
+	module.exports = function(it, tag, stat){
+	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
+	};
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var store      = __webpack_require__(63)('wks')
+	  , uid        = __webpack_require__(64)
+	  , Symbol     = __webpack_require__(17).Symbol
+	  , USE_SYMBOL = typeof Symbol == 'function';
+
+	var $exports = module.exports = function(name){
+	  return store[name] || (store[name] =
+	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+	};
+
+	$exports.store = store;
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+	var has         = __webpack_require__(49)
+	  , toObject    = __webpack_require__(70)
+	  , IE_PROTO    = __webpack_require__(62)('IE_PROTO')
+	  , ObjectProto = Object.prototype;
+
+	module.exports = Object.getPrototypeOf || function(O){
+	  O = toObject(O);
+	  if(has(O, IE_PROTO))return O[IE_PROTO];
+	  if(typeof O.constructor == 'function' && O instanceof O.constructor){
+	    return O.constructor.prototype;
+	  } return O instanceof Object ? ObjectProto : null;
+	};
+
+/***/ },
+/* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.13 ToObject(argument)
+	var defined = __webpack_require__(45);
+	module.exports = function(it){
+	  return Object(defined(it));
+	};
+
+/***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(72);
+	var global        = __webpack_require__(17)
+	  , hide          = __webpack_require__(21)
+	  , Iterators     = __webpack_require__(50)
+	  , TO_STRING_TAG = __webpack_require__(68)('toStringTag');
+
+	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
+	  var NAME       = collections[i]
+	    , Collection = global[NAME]
+	    , proto      = Collection && Collection.prototype;
+	  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
+	  Iterators[NAME] = Iterators.Array;
+	}
+
+/***/ },
+/* 72 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var addToUnscopables = __webpack_require__(73)
+	  , step             = __webpack_require__(74)
+	  , Iterators        = __webpack_require__(50)
+	  , toIObject        = __webpack_require__(56);
+
+	// 22.1.3.4 Array.prototype.entries()
+	// 22.1.3.13 Array.prototype.keys()
+	// 22.1.3.29 Array.prototype.values()
+	// 22.1.3.30 Array.prototype[@@iterator]()
+	module.exports = __webpack_require__(46)(Array, 'Array', function(iterated, kind){
+	  this._t = toIObject(iterated); // target
+	  this._i = 0;                   // next index
+	  this._k = kind;                // kind
+	// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+	}, function(){
+	  var O     = this._t
+	    , kind  = this._k
+	    , index = this._i++;
+	  if(!O || index >= O.length){
+	    this._t = undefined;
+	    return step(1);
+	  }
+	  if(kind == 'keys'  )return step(0, index);
+	  if(kind == 'values')return step(0, O[index]);
+	  return step(0, [index, O[index]]);
+	}, 'values');
+
+	// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+	Iterators.Arguments = Iterators.Array;
+
+	addToUnscopables('keys');
+	addToUnscopables('values');
+	addToUnscopables('entries');
+
+/***/ },
+/* 73 */
+/***/ function(module, exports) {
+
+	module.exports = function(){ /* empty */ };
+
+/***/ },
+/* 74 */
+/***/ function(module, exports) {
+
+	module.exports = function(done, value){
+	  return {value: value, done: !!done};
+	};
+
+/***/ },
+/* 75 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports.f = __webpack_require__(68);
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(77), __esModule: true };
+
+/***/ },
+/* 77 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(78);
+	__webpack_require__(89);
+	__webpack_require__(90);
+	__webpack_require__(91);
+	module.exports = __webpack_require__(18).Symbol;
+
+/***/ },
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// ECMAScript 6 symbols shim
+	var global         = __webpack_require__(17)
+	  , has            = __webpack_require__(49)
+	  , DESCRIPTORS    = __webpack_require__(26)
+	  , $export        = __webpack_require__(16)
+	  , redefine       = __webpack_require__(48)
+	  , META           = __webpack_require__(79).KEY
+	  , $fails         = __webpack_require__(27)
+	  , shared         = __webpack_require__(63)
+	  , setToStringTag = __webpack_require__(67)
+	  , uid            = __webpack_require__(64)
+	  , wks            = __webpack_require__(68)
+	  , wksExt         = __webpack_require__(75)
+	  , wksDefine      = __webpack_require__(80)
+	  , keyOf          = __webpack_require__(81)
+	  , enumKeys       = __webpack_require__(82)
+	  , isArray        = __webpack_require__(85)
+	  , anObject       = __webpack_require__(23)
+	  , toIObject      = __webpack_require__(56)
+	  , toPrimitive    = __webpack_require__(29)
+	  , createDesc     = __webpack_require__(30)
+	  , _create        = __webpack_require__(52)
+	  , gOPNExt        = __webpack_require__(86)
+	  , $GOPD          = __webpack_require__(88)
+	  , $DP            = __webpack_require__(22)
+	  , $keys          = __webpack_require__(54)
+	  , gOPD           = $GOPD.f
+	  , dP             = $DP.f
+	  , gOPN           = gOPNExt.f
+	  , $Symbol        = global.Symbol
+	  , $JSON          = global.JSON
+	  , _stringify     = $JSON && $JSON.stringify
+	  , PROTOTYPE      = 'prototype'
+	  , HIDDEN         = wks('_hidden')
+	  , TO_PRIMITIVE   = wks('toPrimitive')
+	  , isEnum         = {}.propertyIsEnumerable
+	  , SymbolRegistry = shared('symbol-registry')
+	  , AllSymbols     = shared('symbols')
+	  , OPSymbols      = shared('op-symbols')
+	  , ObjectProto    = Object[PROTOTYPE]
+	  , USE_NATIVE     = typeof $Symbol == 'function'
+	  , QObject        = global.QObject;
+	// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
+	var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
+
+	// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+	var setSymbolDesc = DESCRIPTORS && $fails(function(){
+	  return _create(dP({}, 'a', {
+	    get: function(){ return dP(this, 'a', {value: 7}).a; }
+	  })).a != 7;
+	}) ? function(it, key, D){
+	  var protoDesc = gOPD(ObjectProto, key);
+	  if(protoDesc)delete ObjectProto[key];
+	  dP(it, key, D);
+	  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
+	} : dP;
+
+	var wrap = function(tag){
+	  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
+	  sym._k = tag;
+	  return sym;
+	};
+
+	var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
+	  return typeof it == 'symbol';
+	} : function(it){
+	  return it instanceof $Symbol;
+	};
+
+	var $defineProperty = function defineProperty(it, key, D){
+	  if(it === ObjectProto)$defineProperty(OPSymbols, key, D);
+	  anObject(it);
+	  key = toPrimitive(key, true);
+	  anObject(D);
+	  if(has(AllSymbols, key)){
+	    if(!D.enumerable){
+	      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
+	      it[HIDDEN][key] = true;
+	    } else {
+	      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
+	      D = _create(D, {enumerable: createDesc(0, false)});
+	    } return setSymbolDesc(it, key, D);
+	  } return dP(it, key, D);
+	};
+	var $defineProperties = function defineProperties(it, P){
+	  anObject(it);
+	  var keys = enumKeys(P = toIObject(P))
+	    , i    = 0
+	    , l = keys.length
+	    , key;
+	  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
+	  return it;
+	};
+	var $create = function create(it, P){
+	  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+	};
+	var $propertyIsEnumerable = function propertyIsEnumerable(key){
+	  var E = isEnum.call(this, key = toPrimitive(key, true));
+	  if(this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return false;
+	  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
+	};
+	var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
+	  it  = toIObject(it);
+	  key = toPrimitive(key, true);
+	  if(it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return;
+	  var D = gOPD(it, key);
+	  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
+	  return D;
+	};
+	var $getOwnPropertyNames = function getOwnPropertyNames(it){
+	  var names  = gOPN(toIObject(it))
+	    , result = []
+	    , i      = 0
+	    , key;
+	  while(names.length > i){
+	    if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
+	  } return result;
+	};
+	var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
+	  var IS_OP  = it === ObjectProto
+	    , names  = gOPN(IS_OP ? OPSymbols : toIObject(it))
+	    , result = []
+	    , i      = 0
+	    , key;
+	  while(names.length > i){
+	    if(has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true))result.push(AllSymbols[key]);
+	  } return result;
+	};
+
+	// 19.4.1.1 Symbol([description])
+	if(!USE_NATIVE){
+	  $Symbol = function Symbol(){
+	    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
+	    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
+	    var $set = function(value){
+	      if(this === ObjectProto)$set.call(OPSymbols, value);
+	      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
+	      setSymbolDesc(this, tag, createDesc(1, value));
+	    };
+	    if(DESCRIPTORS && setter)setSymbolDesc(ObjectProto, tag, {configurable: true, set: $set});
+	    return wrap(tag);
+	  };
+	  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
+	    return this._k;
+	  });
+
+	  $GOPD.f = $getOwnPropertyDescriptor;
+	  $DP.f   = $defineProperty;
+	  __webpack_require__(87).f = gOPNExt.f = $getOwnPropertyNames;
+	  __webpack_require__(84).f  = $propertyIsEnumerable;
+	  __webpack_require__(83).f = $getOwnPropertySymbols;
+
+	  if(DESCRIPTORS && !__webpack_require__(47)){
+	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+	  }
+
+	  wksExt.f = function(name){
+	    return wrap(wks(name));
+	  }
+	}
+
+	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
+
+	for(var symbols = (
+	  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+	  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
+	).split(','), i = 0; symbols.length > i; )wks(symbols[i++]);
+
+	for(var symbols = $keys(wks.store), i = 0; symbols.length > i; )wksDefine(symbols[i++]);
+
+	$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
+	  // 19.4.2.1 Symbol.for(key)
+	  'for': function(key){
+	    return has(SymbolRegistry, key += '')
+	      ? SymbolRegistry[key]
+	      : SymbolRegistry[key] = $Symbol(key);
+	  },
+	  // 19.4.2.5 Symbol.keyFor(sym)
+	  keyFor: function keyFor(key){
+	    if(isSymbol(key))return keyOf(SymbolRegistry, key);
+	    throw TypeError(key + ' is not a symbol!');
+	  },
+	  useSetter: function(){ setter = true; },
+	  useSimple: function(){ setter = false; }
+	});
+
+	$export($export.S + $export.F * !USE_NATIVE, 'Object', {
+	  // 19.1.2.2 Object.create(O [, Properties])
+	  create: $create,
+	  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+	  defineProperty: $defineProperty,
+	  // 19.1.2.3 Object.defineProperties(O, Properties)
+	  defineProperties: $defineProperties,
+	  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+	  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+	  // 19.1.2.7 Object.getOwnPropertyNames(O)
+	  getOwnPropertyNames: $getOwnPropertyNames,
+	  // 19.1.2.8 Object.getOwnPropertySymbols(O)
+	  getOwnPropertySymbols: $getOwnPropertySymbols
+	});
+
+	// 24.3.2 JSON.stringify(value [, replacer [, space]])
+	$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
+	  var S = $Symbol();
+	  // MS Edge converts symbol values to JSON as {}
+	  // WebKit converts symbol values to JSON as null
+	  // V8 throws on boxed symbols
+	  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
+	})), 'JSON', {
+	  stringify: function stringify(it){
+	    if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
+	    var args = [it]
+	      , i    = 1
+	      , replacer, $replacer;
+	    while(arguments.length > i)args.push(arguments[i++]);
+	    replacer = args[1];
+	    if(typeof replacer == 'function')$replacer = replacer;
+	    if($replacer || !isArray(replacer))replacer = function(key, value){
+	      if($replacer)value = $replacer.call(this, key, value);
+	      if(!isSymbol(value))return value;
+	    };
+	    args[1] = replacer;
+	    return _stringify.apply($JSON, args);
+	  }
+	});
+
+	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(21)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+	// 19.4.3.5 Symbol.prototype[@@toStringTag]
+	setToStringTag($Symbol, 'Symbol');
+	// 20.2.1.9 Math[@@toStringTag]
+	setToStringTag(Math, 'Math', true);
+	// 24.3.3 JSON[@@toStringTag]
+	setToStringTag(global.JSON, 'JSON', true);
+
+/***/ },
+/* 79 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var META     = __webpack_require__(64)('meta')
+	  , isObject = __webpack_require__(24)
+	  , has      = __webpack_require__(49)
+	  , setDesc  = __webpack_require__(22).f
+	  , id       = 0;
+	var isExtensible = Object.isExtensible || function(){
+	  return true;
+	};
+	var FREEZE = !__webpack_require__(27)(function(){
+	  return isExtensible(Object.preventExtensions({}));
+	});
+	var setMeta = function(it){
+	  setDesc(it, META, {value: {
+	    i: 'O' + ++id, // object ID
+	    w: {}          // weak collections IDs
+	  }});
+	};
+	var fastKey = function(it, create){
+	  // return primitive with prefix
+	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+	  if(!has(it, META)){
+	    // can't set metadata to uncaught frozen object
+	    if(!isExtensible(it))return 'F';
+	    // not necessary to add metadata
+	    if(!create)return 'E';
+	    // add missing metadata
+	    setMeta(it);
+	  // return object ID
+	  } return it[META].i;
+	};
+	var getWeak = function(it, create){
+	  if(!has(it, META)){
+	    // can't set metadata to uncaught frozen object
+	    if(!isExtensible(it))return true;
+	    // not necessary to add metadata
+	    if(!create)return false;
+	    // add missing metadata
+	    setMeta(it);
+	  // return hash weak collections IDs
+	  } return it[META].w;
+	};
+	// add metadata on freeze-family methods calling
+	var onFreeze = function(it){
+	  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
+	  return it;
+	};
+	var meta = module.exports = {
+	  KEY:      META,
+	  NEED:     false,
+	  fastKey:  fastKey,
+	  getWeak:  getWeak,
+	  onFreeze: onFreeze
+	};
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global         = __webpack_require__(17)
+	  , core           = __webpack_require__(18)
+	  , LIBRARY        = __webpack_require__(47)
+	  , wksExt         = __webpack_require__(75)
+	  , defineProperty = __webpack_require__(22).f;
+	module.exports = function(name){
+	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
+	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
+	};
+
+/***/ },
+/* 81 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var getKeys   = __webpack_require__(54)
+	  , toIObject = __webpack_require__(56);
+	module.exports = function(object, el){
+	  var O      = toIObject(object)
+	    , keys   = getKeys(O)
+	    , length = keys.length
+	    , index  = 0
+	    , key;
+	  while(length > index)if(O[key = keys[index++]] === el)return key;
+	};
+
+/***/ },
+/* 82 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// all enumerable object keys, includes symbols
+	var getKeys = __webpack_require__(54)
+	  , gOPS    = __webpack_require__(83)
+	  , pIE     = __webpack_require__(84);
+	module.exports = function(it){
+	  var result     = getKeys(it)
+	    , getSymbols = gOPS.f;
+	  if(getSymbols){
+	    var symbols = getSymbols(it)
+	      , isEnum  = pIE.f
+	      , i       = 0
+	      , key;
+	    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
+	  } return result;
+	};
+
+/***/ },
+/* 83 */
+/***/ function(module, exports) {
+
+	exports.f = Object.getOwnPropertySymbols;
+
+/***/ },
+/* 84 */
+/***/ function(module, exports) {
+
+	exports.f = {}.propertyIsEnumerable;
+
+/***/ },
+/* 85 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.2.2 IsArray(argument)
+	var cof = __webpack_require__(58);
+	module.exports = Array.isArray || function isArray(arg){
+	  return cof(arg) == 'Array';
+	};
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+	var toIObject = __webpack_require__(56)
+	  , gOPN      = __webpack_require__(87).f
+	  , toString  = {}.toString;
+
+	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
+	  ? Object.getOwnPropertyNames(window) : [];
+
+	var getWindowNames = function(it){
+	  try {
+	    return gOPN(it);
+	  } catch(e){
+	    return windowNames.slice();
+	  }
+	};
+
+	module.exports.f = function getOwnPropertyNames(it){
+	  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
+	};
+
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+	var $keys      = __webpack_require__(55)
+	  , hiddenKeys = __webpack_require__(65).concat('length', 'prototype');
+
+	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
+	  return $keys(O, hiddenKeys);
+	};
+
+/***/ },
+/* 88 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var pIE            = __webpack_require__(84)
+	  , createDesc     = __webpack_require__(30)
+	  , toIObject      = __webpack_require__(56)
+	  , toPrimitive    = __webpack_require__(29)
+	  , has            = __webpack_require__(49)
+	  , IE8_DOM_DEFINE = __webpack_require__(25)
+	  , gOPD           = Object.getOwnPropertyDescriptor;
+
+	exports.f = __webpack_require__(26) ? gOPD : function getOwnPropertyDescriptor(O, P){
+	  O = toIObject(O);
+	  P = toPrimitive(P, true);
+	  if(IE8_DOM_DEFINE)try {
+	    return gOPD(O, P);
+	  } catch(e){ /* empty */ }
+	  if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
+	};
+
+/***/ },
+/* 89 */
+/***/ function(module, exports) {
+
+	
+
+/***/ },
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(80)('asyncIterator');
+
+/***/ },
+/* 91 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(80)('observable');
+
+/***/ },
+/* 92 */
+/***/ function(module, exports) {
+
+	module.exports = "<section class=\"search-conditions\">\r\n\t<div class=\"container\">\r\n\t\t<div>\r\n\t\t\t<h2>{{$ctrl.fieldsData.title}}</h2>\r\n\t\t\t<a ng-click=\"$ctrl.showSearch = !$ctrl.showSearch\" href=\"javascript:void(0)\" class=\"btn\">Изменить условия поиска</a>\r\n\t\t\t<a href=\"javascript:void(0)\" class=\"btn\">Подписаться на предложения</a>\r\n\t\t</div>\r\n\r\n\t\t<form ng-show=\"$ctrl.showSearch\" class=\"category-form\" novalidate>\r\n\t\t\t<div>\r\n\t\t\t\t<ul class=\"category-list\">\r\n\t\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCats[0] === cat}\" ng-repeat=\"cat in $ctrl.activeCatGroup[0]\" ng-click=\"$ctrl.setActiveCat(cat, 0); $ctrl.getItems()\">\r\n\t\t\t\t\t\t<span>{{cat.title}}</span>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<div class=\"choose-price\">\r\n\t\t\t\t\t<p>Цена:</p>\r\n\t\t\t\t\t<input ng-model=\"$ctrl.minPrice\" ng-change=\"$ctrl.setMinMax()\" name=\"min-price\" type=\"number\" placeholder=\"от\">\r\n\t\t\t\t\t<input ng-model=\"$ctrl.maxPrice\" ng-change=\"$ctrl.setMinMax()\" name=\"max-price\" type=\"number\" placeholder=\"до\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"number-offers\">\r\n\t\t\t\t\t<p>Предложений:\r\n\t\t\t\t\t\t<span>{{$ctrl.currItemsCount}}</span>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<ul class=\"category-list\">\r\n\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCats[1] === cat}\" ng-repeat=\"cat in $ctrl.activeCatGroup[1]\" ng-click=\"$ctrl.setActiveCat(cat, 1, true); $ctrl.getItems()\">\r\n\t\t\t\t\t<span>{{cat.title}}</span>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t<ul class=\"category-list\">\r\n\t\t\t\t<li ng-class=\"{'active': $ctrl.activeCats[2] === cat}\" ng-repeat=\"cat in $ctrl.activeCatGroup[2]\" ng-click=\"$ctrl.setActiveCat(cat, 2, true); $ctrl.getItems()\">\r\n\t\t\t\t\t<span>{{cat.title}}</span>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\r\n\t\t\t<!--<input ng-model=\"$ctrl.adress\" class=\"adress\" name=\"adress\" placeholder=\"Город, район, адрес\" required=\"\" type=\"text\">-->\r\n\t\t\t<autocomplete value=\"$ctrl.searchAutocomplete.value\"\r\n\t\t\t\t\t\t  get-similar-value=\"$ctrl.searchAutocomplete.getSimilarValue\"\r\n\t\t\t\t\t\t  holder=\"$ctrl.searchAutocomplete.placeholder\"\r\n\t\t\t\t\t\t  on-change=\"$ctrl.getItems()\"\r\n\t\t\t\t\t\t  class=\"search__autocomplete adress\"></autocomplete>\r\n\t\t\t<div class=\"search-criterion\">\r\n\t\t\t\t<p>Показать:</p>\r\n\t\t\t\t<input ng-repeat-start=\"sorter in $ctrl.fieldsData.sorters track by sorter.id\"\r\n\t\t\t\t\t   ng-model=\"$ctrl.currSorter\"\r\n\t\t\t\t\t   id=\"{{'form-radio' + $index}}\"\r\n\t\t\t\t\t   name=\"radio\"\r\n\t\t\t\t\t   ng-value=\"sorter\"\r\n\t\t\t\t\t   type=\"radio\"\r\n\t\t\t\t\t   ng-checked=\"$ctrl.currSorter === sorter\">\r\n\t\t\t\t<label  ng-repeat-end class=\"radio-label\" for=\"{{'form-radio' + $index}}\">{{sorter.title}}</label>\r\n\t\t\t</div>\r\n\r\n\t\t\t<button ng-click=\"$ctrl.searchRender()\" type=\"submit\">Показать {{$ctrl.currItemsCount}} предложения</button>\r\n\t\t\t<button ng-click=\"$ctrl.resetForm()\" type=\"reset\">Очистить условия поиска</button>\r\n\r\n\t\t</form>\r\n\r\n\t\t<a ng-show=\"$ctrl.showSearch\" ng-click=\"$ctrl.showSearch = false\" href=\"javascript:void(0)\" class=\"close\">скрыть</a>\r\n\r\n\t</div><!--container-->\r\n</section>"
+
+/***/ },
 /* 93 */,
 /* 94 */,
 /* 95 */,
@@ -37769,524 +39732,3492 @@
 /* 155 */,
 /* 156 */,
 /* 157 */,
-/* 158 */
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	(function(root, factory) {
+	if (true) {
+	module.exports = factory(__webpack_require__(1));
+	} else if (typeof define === "function" && define.amd) {
+	define(['angular'], factory);
+	} else{
+	factory(root.angular);
+	}
+	}(this, function(angular) {
+	/**
+	 * AngularJS Google Maps Ver. 1.17.7
+	 *
+	 * The MIT License (MIT)
+	 * 
+	 * Copyright (c) 2014, 2015, 1016 Allen Kim
+	 * 
+	 * Permission is hereby granted, free of charge, to any person obtaining a copy of
+	 * this software and associated documentation files (the "Software"), to deal in
+	 * the Software without restriction, including without limitation the rights to
+	 * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+	 * the Software, and to permit persons to whom the Software is furnished to do so,
+	 * subject to the following conditions:
+	 * 
+	 * The above copyright notice and this permission notice shall be included in all
+	 * copies or substantial portions of the Software.
+	 * 
+	 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+	 * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+	 * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+	 * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+	 * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	 */
+	angular.module('ngMap', []);
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	/**
+	 * @ngdoc controller
+	 * @name MapController
+	 */
+	(function() {
+	  'use strict';
+	  var Attr2MapOptions;
 
-	var _classCallCheck2 = __webpack_require__(6);
+	  var __MapController = function(
+	      $scope, $element, $attrs, $parse, _Attr2MapOptions_, NgMap, NgMapPool
+	    ) {
+	    Attr2MapOptions = _Attr2MapOptions_;
+	    var vm = this;
 
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+	    vm.mapOptions; /** @memberof __MapController */
+	    vm.mapEvents;  /** @memberof __MapController */
+	    vm.eventListeners;  /** @memberof __MapController */
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	    /**
+	     * Add an object to the collection of group
+	     * @memberof __MapController
+	     * @function addObject
+	     * @param groupName the name of collection that object belongs to
+	     * @param obj  an object to add into a collection, i.e. marker, shape
+	     */
+	    vm.addObject = function(groupName, obj) {
+	      if (vm.map) {
+	        vm.map[groupName] = vm.map[groupName] || {};
+	        var len = Object.keys(vm.map[groupName]).length;
+	        vm.map[groupName][obj.id || len] = obj;
 
-	var GoodsData = function GoodsData() {
-	    (0, _classCallCheck3.default)(this, GoodsData);
-
-	    this.rentData = {
-	        title: 'прокат',
-	        goodsArr: [{
-	            groupName: 'Велосипеды',
-	            groupArr: [{
-	                name: 'Велосипед двухподвес GT FURY',
-	                img: 'img/goods_photo_1.jpg',
-	                imgTitle: 'Велосипед двухподвес GT FURY',
-	                price: 400,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 199,
-	                commentsCount: 15,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Детский велокат COMMENCAL EL CAMINO',
-	                img: 'img/goods_photo_2.jpg',
-	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
-	                price: 150,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 300,
-	                commentsCount: 40,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }, {
-	                name: 'Велосипед двухподвес TREK REMENDY',
-	                img: 'img/goods_photo_3.jpg',
-	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
-	                price: 350,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 400,
-	                commentsCount: 60,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }]
-	        }, {
-	            groupName: 'Гироскутеры',
-	            groupArr: [{
-	                name: 'Гироскутер SMART BALANCE GRAFFITI',
-	                img: 'img/goods_photo_4.jpg',
-	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
-	                price: 25900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 100,
-	                commentsCount: 17,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Гироцикл SPEED WAY',
-	                img: 'img/goods_photo_5.jpg',
-	                imgTitle: 'Гироцикл SPEED WAY',
-	                price: 38900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 247,
-	                commentsCount: 33,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Гироскутер XIAOMI DESERT',
-	                img: 'img/goods_photo_6.jpg',
-	                imgTitle: 'Гироскутер XIAOMI DESERT',
-	                price: 79900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 143,
-	                commentsCount: 22,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }]
-	        }, {
-	            groupName: 'Самокаты',
-	            groupArr: [{
-	                name: 'Детский велокат COMMENCAL EL CAMINO',
-	                img: 'img/goods_photo_2.jpg',
-	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
-	                price: 150,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 300,
-	                commentsCount: 40,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }, {
-	                name: 'Велосипед двухподвес TREK REMENDY',
-	                img: 'img/goods_photo_3.jpg',
-	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
-	                price: 350,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 400,
-	                commentsCount: 60,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Велосипед двухподвес GT FURY',
-	                img: 'img/goods_photo_1.jpg',
-	                imgTitle: 'Велосипед двухподвес GT FURY',
-	                price: 400,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 199,
-	                commentsCount: 15,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }]
-	        }, {
-	            groupName: 'Аксессуары',
-	            groupArr: [{
-	                name: 'Гироскутер XIAOMI DESERT',
-	                img: 'img/goods_photo_6.jpg',
-	                imgTitle: 'Гироскутер XIAOMI DESERT',
-	                price: 79900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 143,
-	                commentsCount: 22,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }, {
-	                name: 'Гироскутер SMART BALANCE GRAFFITI',
-	                img: 'img/goods_photo_4.jpg',
-	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
-	                price: 25900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 100,
-	                commentsCount: 17,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Гироцикл SPEED WAY',
-	                img: 'img/goods_photo_5.jpg',
-	                imgTitle: 'Гироцикл SPEED WAY',
-	                price: 38900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 247,
-	                commentsCount: 33,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }]
-	        }]
+	        if (vm.map instanceof google.maps.Map) {
+	          //infoWindow.setMap works like infoWindow.open
+	          if (groupName != "infoWindows" && obj.setMap) {
+	            obj.setMap && obj.setMap(vm.map);
+	          }
+	          if (obj.centered && obj.position) {
+	            vm.map.setCenter(obj.position);
+	          }
+	          (groupName == 'markers') && vm.objectChanged('markers');
+	          (groupName == 'customMarkers') && vm.objectChanged('customMarkers');
+	        }
+	      }
 	    };
-	    this.sellData = {
-	        title: 'продажа',
-	        goodsArr: [{
-	            groupName: 'Велосипеды',
-	            groupArr: [{
-	                name: 'Велосипед двухподвес GT FURY',
-	                img: 'img/goods_photo_1.jpg',
-	                imgTitle: 'Велосипед двухподвес GT FURY',
-	                price: 400,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 199,
-	                commentsCount: 15,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Детский велокат COMMENCAL EL CAMINO',
-	                img: 'img/goods_photo_2.jpg',
-	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
-	                price: 150,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 300,
-	                commentsCount: 40,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }, {
-	                name: 'Велосипед двухподвес TREK REMENDY',
-	                img: 'img/goods_photo_3.jpg',
-	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
-	                price: 350,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 400,
-	                commentsCount: 60,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }]
-	        }, {
-	            groupName: 'Гироскутеры',
-	            groupArr: [{
-	                name: 'Гироскутер SMART BALANCE GRAFFITI',
-	                img: 'img/goods_photo_4.jpg',
-	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
-	                price: 25900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 100,
-	                commentsCount: 17,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Гироцикл SPEED WAY',
-	                img: 'img/goods_photo_5.jpg',
-	                imgTitle: 'Гироцикл SPEED WAY',
-	                price: 38900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 247,
-	                commentsCount: 33,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Гироскутер XIAOMI DESERT',
-	                img: 'img/goods_photo_6.jpg',
-	                imgTitle: 'Гироскутер XIAOMI DESERT',
-	                price: 79900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 143,
-	                commentsCount: 22,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }],
-	            active: true
-	        }, {
-	            groupName: 'Самокаты',
-	            groupArr: [{
-	                name: 'Детский велокат COMMENCAL EL CAMINO',
-	                img: 'img/goods_photo_2.jpg',
-	                imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
-	                price: 150,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 300,
-	                commentsCount: 40,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }, {
-	                name: 'Велосипед двухподвес TREK REMENDY',
-	                img: 'img/goods_photo_3.jpg',
-	                imgTitle: 'Велосипед двухподвес TREK REMENDY',
-	                price: 350,
-	                adress: 'пр-т Шолохова, 112',
-	                lookCount: 400,
-	                commentsCount: 60,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Велосипед двухподвес GT FURY',
-	                img: 'img/goods_photo_1.jpg',
-	                imgTitle: 'Велосипед двухподвес GT FURY',
-	                price: 400,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 199,
-	                commentsCount: 15,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }]
-	        }, {
-	            groupName: 'Аксессуары',
-	            groupArr: [{
-	                name: 'Гироскутер XIAOMI DESERT',
-	                img: 'img/goods_photo_6.jpg',
-	                imgTitle: 'Гироскутер XIAOMI DESERT',
-	                price: 79900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 143,
-	                commentsCount: 22,
-	                traderImg: 'img/trader_logo_2.png',
-	                traderTitle: 'bikecenter'
-	            }, {
-	                name: 'Гироскутер SMART BALANCE GRAFFITI',
-	                img: 'img/goods_photo_4.jpg',
-	                imgTitle: 'Гироскутер SMART BALANCE GRAFFITI',
-	                price: 25900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 100,
-	                commentsCount: 17,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }, {
-	                name: 'Гироцикл SPEED WAY',
-	                img: 'img/goods_photo_5.jpg',
-	                imgTitle: 'Гироцикл SPEED WAY',
-	                price: 38900,
-	                adress: 'ул. Пушкинская, 2а',
-	                lookCount: 247,
-	                commentsCount: 33,
-	                traderImg: 'img/trader_logo_1.png',
-	                traderTitle: '100% Спорта'
-	            }]
-	        }]
+
+	    /**
+	     * Delete an object from the collection and remove from map
+	     * @memberof __MapController
+	     * @function deleteObject
+	     * @param {Array} objs the collection of objects. i.e., map.markers
+	     * @param {Object} obj the object to be removed. i.e., marker
+	     */
+	    vm.deleteObject = function(groupName, obj) {
+	      /* delete from group */
+	      if (obj.map) {
+	        var objs = obj.map[groupName];
+	        for (var name in objs) {
+	          if (objs[name] === obj) {
+	            void 0;
+	            google.maps.event.clearInstanceListeners(obj);
+	            delete objs[name];
+	          }
+	        }
+
+	        /* delete from map */
+	        obj.map && obj.setMap && obj.setMap(null);
+
+	        (groupName == 'markers') && vm.objectChanged('markers');
+	        (groupName == 'customMarkers') && vm.objectChanged('customMarkers');
+	      }
 	    };
-	};
 
-	exports.default = GoodsData;
+	    /**
+	     * @memberof __MapController
+	     * @function observeAttrSetObj
+	     * @param {Hash} orgAttrs attributes before its initialization
+	     * @param {Hash} attrs    attributes after its initialization
+	     * @param {Object} obj    map object that an action is to be done
+	     * @description watch changes of attribute values and
+	     * do appropriate action based on attribute name
+	     */
+	    vm.observeAttrSetObj = function(orgAttrs, attrs, obj) {
+	      if (attrs.noWatcher) {
+	        return false;
+	      }
+	      var attrsToObserve = Attr2MapOptions.getAttrsToObserve(orgAttrs);
+	      for (var i=0; i<attrsToObserve.length; i++) {
+	        var attrName = attrsToObserve[i];
+	        attrs.$observe(attrName, NgMap.observeAndSet(attrName, obj));
+	      }
+	    };
 
-/***/ },
-/* 159 */
-/***/ function(module, exports, __webpack_require__) {
+	    /**
+	     * @memberof __MapController
+	     * @function zoomToIncludeMarkers
+	     */
+	    vm.zoomToIncludeMarkers = function() {
+	      // Only fit to bounds if we have any markers
+	      // object.keys is supported in all major browsers (IE9+)
+	      if ((vm.map.markers != null && Object.keys(vm.map.markers).length > 0) || (vm.map.customMarkers != null && Object.keys(vm.map.customMarkers).length > 0)) {
+	        var bounds = new google.maps.LatLngBounds();
+	        for (var k1 in vm.map.markers) {
+	          bounds.extend(vm.map.markers[k1].getPosition());
+	        }
+	        for (var k2 in vm.map.customMarkers) {
+	          bounds.extend(vm.map.customMarkers[k2].getPosition());
+	        }
+	    	  if (vm.mapOptions.maximumZoom) {
+	    		  vm.enableMaximumZoomCheck = true; //enable zoom check after resizing for markers
+	    	  }
+	        vm.map.fitBounds(bounds);
+	      }
+	    };
 
-	'use strict';
+	    /**
+	     * @memberof __MapController
+	     * @function objectChanged
+	     * @param {String} group name of group e.g., markers
+	     */
+	    vm.objectChanged = function(group) {
+	      if ( vm.map &&
+	        (group == 'markers' || group == 'customMarkers') &&
+	        vm.map.zoomToIncludeMarkers == 'auto'
+	      ) {
+	        vm.zoomToIncludeMarkers();
+	      }
+	    };
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	    /**
+	     * @memberof __MapController
+	     * @function initializeMap
+	     * @description
+	     *  . initialize Google map on <div> tag
+	     *  . set map options, events, and observers
+	     *  . reset zoom to include all (custom)markers
+	     */
+	    vm.initializeMap = function() {
+	      var mapOptions = vm.mapOptions,
+	          mapEvents = vm.mapEvents;
 
-	var _classCallCheck2 = __webpack_require__(6);
+	      var lazyInitMap = vm.map; //prepared for lazy init
+	      vm.map = NgMapPool.getMapInstance($element[0]);
+	      NgMap.setStyle($element[0]);
 
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+	      // set objects for lazyInit
+	      if (lazyInitMap) {
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	        /**
+	         * rebuild mapOptions for lazyInit
+	         * because attributes values might have been changed
+	         */
+	        var filtered = Attr2MapOptions.filter($attrs);
+	        var options = Attr2MapOptions.getOptions(filtered);
+	        var controlOptions = Attr2MapOptions.getControlOptions(filtered);
+	        mapOptions = angular.extend(options, controlOptions);
+	        void 0;
 
-	var MainPageController = function MainPageController(goodsData) {
-	    (0, _classCallCheck3.default)(this, MainPageController);
-
-	    this.rentData = goodsData.rentData;
-	    this.sellData = goodsData.sellData;
-	    this.isHiddenNav = false;
-
-	    //console.log(this.rentData);
-	};
-
-	var mainPageComponent = {
-	    template: __webpack_require__(160),
-	    controller: MainPageController
-	};
-
-	exports.default = mainPageComponent;
-
-/***/ },
-/* 160 */
-/***/ function(module, exports) {
-
-	module.exports = "<!--<div id=\"maket\"></div>-->\r\n<navbar is-hidden=\"$ctrl.isHiddenNav\" class=\"navbar\" ng-class=\"{'hidden': $ctrl.isHiddenNav}\" ></navbar>\r\n<section class=\"pageheader\">\r\n\r\n\r\n\t<div class=\"container\">\r\n\t\t<h1>Поиск прогулочной техники в прокат по всему миру</h1>\r\n\r\n\t\t<search-form></search-form> <!--Search-form component-->\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"category\">\r\n\t<div class=\"container\">\r\n\r\n\t\t<div class=\"category-small bicycle-bg\">\r\n\t\t\t<h2>Велосипеды</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Шоссейные <span>234</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Горные <span>438</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Детские <span>127</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Хардтейлы <span>320</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Двухподвесы <span>139</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Фэтбайки <span>29</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Электробайки <span>38</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Складыващиеся <span>110</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_1.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\t\t<div class=\"category-small giroskuter-bg\">\r\n\t\t\t<h2>Гироскутеры</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Шоссейные <span>120</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Детские <span>435</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Внедорожные <span>139</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Скоростные <span>29</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_2.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\t\t<div class=\"category-small winter-equip-bg\">\r\n\t\t\t<h2>Зимняя техника</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Сноуборды <span>234</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Лыжи <span>438</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Санки <span>127</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Снегокаты <span>320</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Ледянки <span>139</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_3.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"category-big travel-equip-bg\">\r\n\t\t\t<h2>Аксессуары и туристическое оборудование</h2>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Экшн-камеры <span>120</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Защитное снаряжение <span>435</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Палатки <span>139</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Спальные мешки <span>120</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Рюкзаки туристические <span>435</span></a></li>\r\n\t\t\t\t<li><a href=\"#\">Другое <span>139</span></a></li>\r\n\t\t\t</ul>\r\n\t\t\t<div class=\"category__sponsor\"><span>Спонсор категории -</span> <a href=\"#\"><img src=\"img/sponsor_4.jpg\" alt=\"\"></a></div>\r\n\t\t</div>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"content\">\r\n\t<div class=\"container\">\r\n        <h2>Самое популярное</h2>\r\n\r\n        <div>\r\n            <goods-block goods-data=\"$ctrl.rentData\"></goods-block>\r\n            <div class=\"offers-box\">\r\n                <h3>Прокаты</h3>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>100% СПОРТА <span>123 предложения</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n\r\n                <a class=\"more\" href=\"#\">Все прокаты</a>\r\n            </div>\r\n        </div>\r\n\r\n        <div>\r\n            <goods-block goods-data=\"$ctrl.sellData\"></goods-block>\r\n            <div class=\"offers-box\">\r\n                <h3>Магазины</h3>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>100% СПОРТА <span>123 предложения</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n\r\n                <a class=\"more\" href=\"#\">Все магазины</a>\r\n            </div>\r\n        </div>\r\n\r\n        <div>\r\n            <div class=\"goods-block\">\r\n                <h2>События и статьи</h2>\r\n                <div class=\"link-box\">\r\n                    <div class=\"big-link\">\r\n                        <a href=\"#\">\r\n                            <img src=\"img/events_photo_1.jpg\" alt=\"img\">\r\n                            <p class=\"title\">Red Bull Rampage 2016</p>\r\n                            <p>16 сентября 2016</p>\r\n                            <p>Мы расскажем тебе о самом важном и крутом событии в мире даунхилла. Расскажем как это было.</p>\r\n                            <div class=\"link-box__link-info\">\r\n                                <span class=\"look\">10155</span>\r\n                                <span class=\"comment\">55</span>\r\n                                <span class=\"like\">155</span>\r\n                                <span class=\"calendar-icon\"></span>\r\n                            </div>\r\n                        </a>\r\n                    </div>\r\n                    <div>\r\n                        <a href=\"#\">\r\n                            <img src=\"img/events_photo_2.jpg\" alt=\"img\">\r\n                            <p class=\"title\">Выбираем велосипед</p>\r\n                            <p>Мы поможем тебе выбрать свой велосипед с первого раза. Расскажем, что нужно знать.</p>\r\n                            <div class=\"link-box__link-info\">\r\n                                <span class=\"look\">10155</span>\r\n                                <span class=\"comment\">55</span>\r\n                                <span class=\"like\">155</span>\r\n                                <span class=\"list-icon\"></span>\r\n                            </div>\r\n                        </a>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"offers-box\">\r\n                <h3>Акции и предложения</h3>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>100% СПОРТА <span>123 предложения</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_1.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n                <a href=\"#\">\r\n                    <img src=\"img/trader_banner_logo_2.png\" alt=\"company\">\r\n                    <p>BikeCenter <span>55 предложений</span></p>\r\n                </a>\r\n\r\n                <a class=\"more\" href=\"#\">Все акции и предложения</a>\r\n            </div>\r\n        </div>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"user-opening\">\r\n\t<div class=\"container\">\r\n\t\t<div class=\"diamond-icon\">\r\n\t\t\t<h3>Новые клиенты</h3>\r\n\t\t\t<p>Премиум-размещение увеличивает количество звонков в 5 раз</p>\r\n\t\t\t<a href=\"#\" class=\"btn\">Купить премиум</a>\r\n\t\t</div>\r\n\t\t<div class=\"page-icon\">\r\n\t\t\t<h3>Добавляйте предложения</h3>\r\n\t\t\t<p>Добавляйте новые предложения быстро и удобно</p>\r\n\t\t\t<a href=\"#\" class=\"btn\">Добавить объявление</a>\r\n\t\t</div>\r\n\t\t<div class=\"point-icon\">\r\n\t\t\t<h3>Найдите на карте</h3>\r\n\t\t\t<p>Ищите предложения рядом с домом, парком или друзьями</p>\r\n\t\t\t<a href=\"#\" class=\"btn\">Найти на карте</a>\r\n\t\t</div>\r\n\r\n\t</div><!--container-->\r\n</section>\r\n\r\n<section class=\"pagefooter\">\r\n\t<div class=\"container\">\r\n\t\t<h3>Поиск техники для отдыха на onProkat </h3>\r\n\t\t<p>Взять в прокат или купить технику для отдыха — задача несложная, если знать, где искать и с чего начать поиски. Чтобы взять на прокат или купить технику для отдыха, не нужно никуда ехать и\r\n\t\t\tждать в очереди. Достаточно найти в нашей базе подходящие для вас предложения. Не забудьте оформить подписку на новые предложения по результатам поиска, чтобы оперативно получать все самые\r\n\t\t\tсвежие и актуальные новости о прокате или продаже техники для отдыха по всему миру.</p>\r\n\t\t<p>Если вы решили взять на прокат или купить велосипед, гироскутер ли другую технику для отдыха, то onProkat поможет вам! onProkat — это самый удобный сайт для поиска техники для отдыха по\r\n\t\t\tадресу или по карте, с учётом всех интересующих вас параметров. На onProkat.ru — тысячи актуальных объявлений о прокате или продаже техники для отдыха по всему миру, ежедневно на сайте\r\n\t\t\tпоявляются новые предложения. Объявления содержат описания техники, информацию о прокате или магазине, фотографии, стоимость, контакты проката или магазина.</p>\r\n\r\n\t\t<div class=\"regions\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Москва</a></li>\r\n\t\t\t\t<li><a href=\"#\">Санкт-Петербург</a></li>\r\n\t\t\t\t<li><a href=\"#\">Башкортостан</a></li>\r\n\t\t\t\t<li><a href=\"#\">Белгородская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Брянская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Ивановская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Иркутская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Калининградская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Калужская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Карелия</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Крым</a></li>\r\n\t\t\t\t<li><a href=\"#\">Липецкая область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Марий Эл</a></li>\r\n\t\t\t\t<li><a href=\"#\">Нижегородская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Новгородская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Пензенская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Пермский край</a></li>\r\n\t\t\t\t<li><a href=\"#\">Псковская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ростовская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Рязанская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Смоленская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ставрапольский край</a></li>\r\n\t\t\t\t<li><a href=\"#\">Татарстан</a></li>\r\n\t\t\t\t<li><a href=\"#\">Тверская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Тульская область</a></li>\r\n\t\t\t</ul>\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a href=\"#\">Ханты-Мансийский АО</a></li>\r\n\t\t\t\t<li><a href=\"#\">Челябинская область</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ямало-Ненецкий АО</a></li>\r\n\t\t\t\t<li><a href=\"#\">Ярославская область</a></li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t\t<a href=\"#\" class=\"show-more\"><span>Показать все регионы</span></a>\r\n\t</div>\r\n</section>"
-
-/***/ },
-/* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _classCallCheck2 = __webpack_require__(6);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(12);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/*class SearchAutocomplete {
-	 constructor (searchFormData) {
-	 this.value = '';
-	 }
-
-	 getSimilarValue (value) {
-	 console.log(value);
-	 //let val = value;
-	 //val.json.stringify;
-
-	 return this.searchFormData.searchData;
-	 }
-	 }*/
-
-	var SearchFormController = function () {
-	    function SearchFormController(searchFormData) {
-	        (0, _classCallCheck3.default)(this, SearchFormController);
-
-	        this.selects = searchFormData.selectsData;
-	        this.activeSelects = [];
-	        this.activeSelectGroup = [];
-	        this.searchAutocomplete = {
-	            value: '',
-	            placeholder: 'В Ростове-на-Дону',
-	            getSimilarValue: function getSimilarValue(value) {
-	                console.log(value);
-
-	                return searchFormData.searchData;
+	        for (var group in lazyInitMap) {
+	          var groupMembers = lazyInitMap[group]; //e.g. markers
+	          if (typeof groupMembers == 'object') {
+	            for (var id in groupMembers) {
+	              vm.addObject(group, groupMembers[id]);
 	            }
-	        };
+	          }
+	        }
+	        vm.map.showInfoWindow = vm.showInfoWindow;
+	        vm.map.hideInfoWindow = vm.hideInfoWindow;
+	      }
 
-	        this.initActiveSelects();
+	      // set options
+	      mapOptions.zoom = mapOptions.zoom || 15;
+	      var center = mapOptions.center;
+	      if (!mapOptions.center ||
+	        ((typeof center === 'string') && center.match(/\{\{.*\}\}/))
+	      ) {
+	        mapOptions.center = new google.maps.LatLng(0, 0);
+	      } else if( (typeof center === 'string') && center.match(/[0-9.-]*,[0-9.-]*/) ){
+	           mapOptions.center = new google.maps.LatLng(center);
+	      } else if (!(center instanceof google.maps.LatLng)) {
+	        var geoCenter = mapOptions.center;
+	        delete mapOptions.center;
+	        NgMap.getGeoLocation(geoCenter, mapOptions.geoLocationOptions).
+	          then(function (latlng) {
+	            vm.map.setCenter(latlng);
+	            var geoCallback = mapOptions.geoCallback;
+	            geoCallback && $parse(geoCallback)($scope);
+	          }, function () {
+	            if (mapOptions.geoFallbackCenter) {
+	              vm.map.setCenter(mapOptions.geoFallbackCenter);
+	            }
+	          });
+	      }
+	      vm.map.setOptions(mapOptions);
+
+	      // set events
+	      for (var eventName in mapEvents) {
+	        var event = mapEvents[eventName];
+	        var listener = google.maps.event.addListener(vm.map, eventName, event);
+	        vm.eventListeners[eventName] = listener;
+	      }
+
+	      // set observers
+	      vm.observeAttrSetObj(orgAttrs, $attrs, vm.map);
+	      vm.singleInfoWindow = mapOptions.singleInfoWindow;
+
+	      google.maps.event.trigger(vm.map, 'resize');
+
+	      google.maps.event.addListenerOnce(vm.map, "idle", function () {
+	        NgMap.addMap(vm);
+	        if (mapOptions.zoomToIncludeMarkers) {
+	          vm.zoomToIncludeMarkers();
+	        }
+	        //TODO: it's for backward compatibiliy. will be removed
+	        $scope.map = vm.map;
+	        $scope.$emit('mapInitialized', vm.map);
+
+	        //callback
+	        if ($attrs.mapInitialized) {
+	          $parse($attrs.mapInitialized)($scope, {map: vm.map});
+	        }
+	      });
+		  
+		  //add maximum zoom listeners if zoom-to-include-markers and and maximum-zoom are valid attributes
+		  if (mapOptions.zoomToIncludeMarkers && mapOptions.maximumZoom) {
+		    google.maps.event.addListener(vm.map, 'zoom_changed', function() {
+	          if (vm.enableMaximumZoomCheck == true) {
+				vm.enableMaximumZoomCheck = false;
+		        google.maps.event.addListenerOnce(vm.map, 'bounds_changed', function() { 
+			      vm.map.setZoom(Math.min(mapOptions.maximumZoom, vm.map.getZoom())); 
+			    });
+		  	  }
+		    });
+		  }
+	    };
+
+	    $scope.google = google; //used by $scope.eval to avoid eval()
+
+	    /**
+	     * get map options and events
+	     */
+	    var orgAttrs = Attr2MapOptions.orgAttributes($element);
+	    var filtered = Attr2MapOptions.filter($attrs);
+	    var options = Attr2MapOptions.getOptions(filtered, {scope: $scope});
+	    var controlOptions = Attr2MapOptions.getControlOptions(filtered);
+	    var mapOptions = angular.extend(options, controlOptions);
+	    var mapEvents = Attr2MapOptions.getEvents($scope, filtered);
+	    void 0;
+	    Object.keys(mapEvents).length && void 0;
+
+	    vm.mapOptions = mapOptions;
+	    vm.mapEvents = mapEvents;
+	    vm.eventListeners = {};
+
+	    if (options.lazyInit) { // allows controlled initialization
+	      // parse angular expression for dynamic ids
+	      if (!!$attrs.id && 
+	      	  // starts with, at position 0
+		  $attrs.id.indexOf("{{", 0) === 0 &&
+		  // ends with
+		  $attrs.id.indexOf("}}", $attrs.id.length - "}}".length) !== -1) {
+	        var idExpression = $attrs.id.slice(2,-2);
+	        var mapId = $parse(idExpression)($scope);
+	      } else {
+	        var mapId = $attrs.id;
+	      }
+	      vm.map = {id: mapId}; //set empty, not real, map
+	      NgMap.addMap(vm);
+	    } else {
+	      vm.initializeMap();
 	    }
 
-	    (0, _createClass3.default)(SearchFormController, [{
-	        key: 'initActiveSelects',
-	        value: function initActiveSelects() {
-	            var activeSelectGroup = this.selects;
+	    //Trigger Resize
+	    if(options.triggerResize) {
+	      google.maps.event.trigger(vm.map, 'resize');
+	    }
 
-	            do {
-	                this.activeSelectGroup.push(activeSelectGroup);
-	                this.activeSelects.push(activeSelectGroup[0]);
-	                activeSelectGroup = activeSelectGroup[0].subCat;
-	            } while (activeSelectGroup);
-	        }
-	    }, {
-	        key: 'reInitActiveSelectGroups',
-	        value: function reInitActiveSelectGroups(newActiveSelect, index) {
-	            var i = index + 1;
-	            this.activeSelects[index] = newActiveSelect;
+	    $element.bind('$destroy', function() {
+	      NgMapPool.returnMapInstance(vm.map);
+	      NgMap.deleteMap(vm);
+	    });
+	  }; // __MapController
 
-	            for (i; i < this.activeSelectGroup.length; i++) {
-	                this.activeSelectGroup[i] = this.activeSelects[i - 1].subCat;
-	                this.activeSelects[i] = this.activeSelectGroup[i][0];
-	            }
-	        }
-	    }, {
-	        key: 'search',
-	        value: function search() {}
-	    }]);
-	    return SearchFormController;
-	}();
+	  __MapController.$inject = [
+	    '$scope', '$element', '$attrs', '$parse', 'Attr2MapOptions', 'NgMap', 'NgMapPool'
+	  ];
+	  angular.module('ngMap').controller('__MapController', __MapController);
+	})();
 
-	var searchFormComponent = {
-	    template: __webpack_require__(162),
-	    controller: SearchFormController
-	};
+	/**
+	 * @ngdoc directive
+	 * @name bicycling-layer
+	 * @param Attr2Options {service}
+	 *   convert html attribute to Gogole map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 *
+	 *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
+	 *     <bicycling-layer></bicycling-layer>
+	 *    </map>
+	 */
+	(function() {
+	  'use strict';
+	  var parser;
 
-	exports.default = searchFormComponent;
+	  var linkFunc = function(scope, element, attrs, mapController) {
+	    mapController = mapController[0]||mapController[1];
+	    var orgAttrs = parser.orgAttributes(element);
+	    var filtered = parser.filter(attrs);
+	    var options = parser.getOptions(filtered, {scope: scope});
+	    var events = parser.getEvents(scope, filtered);
 
-	/*
-	.component('searchForm', {
-	    template: require('./../../tmpl/search-form-tmpl.html'),
-	    controller: function(searchFormData) {
-	        this.selects = searchFormData.selectsData;
-	        this.activeSelects = [];
-	        this.activeSelectGroup = [];
-	        this.selectIsChanged = false;
-	        this.searchAutocomplete = {
-	            value: '',
-	            getSimilarValue: (value) => {
-	                console.log(value);
-	                //let val = value;
-	                //val.json.stringify;
+	    void 0;
 
-	                return searchFormData.searchData;
-	            }
+	    var layer = getLayer(options, events);
+	    mapController.addObject('bicyclingLayers', layer);
+	    mapController.observeAttrSetObj(orgAttrs, attrs, layer);  //observers
+	    element.bind('$destroy', function() {
+	      mapController.deleteObject('bicyclingLayers', layer);
+	    });
+	  };
+
+	  var getLayer = function(options, events) {
+	    var layer = new google.maps.BicyclingLayer(options);
+	    for (var eventName in events) {
+	      google.maps.event.addListener(layer, eventName, events[eventName]);
+	    }
+	    return layer;
+	  };
+
+	  var bicyclingLayer= function(Attr2MapOptions) {
+	    parser = Attr2MapOptions;
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      link: linkFunc
+	     };
+	  };
+	  bicyclingLayer.$inject = ['Attr2MapOptions'];
+
+	  angular.module('ngMap').directive('bicyclingLayer', bicyclingLayer);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name custom-control
+	 * @param Attr2Options {service} convert html attribute to Gogole map api options
+	 * @param $compile {service} AngularJS $compile service
+	 * @description
+	 *   Build custom control and set to the map with position
+	 *
+	 *   Requires:  map directive
+	 *
+	 *   Restrict To:  Element
+	 *
+	 * @attr {String} position position of this control
+	 *        i.e. TOP_RIGHT
+	 * @attr {Number} index index of the control
+	 * @example
+	 *
+	 * Example:
+	 *  <map center="41.850033,-87.6500523" zoom="3">
+	 *    <custom-control id="home" position="TOP_LEFT" index="1">
+	 *      <div style="background-color: white;">
+	 *        <b>Home</b>
+	 *      </div>
+	 *    </custom-control>
+	 *  </map>
+	 *
+	 */
+	(function() {
+	  'use strict';
+	  var parser, $compile, NgMap;
+
+	  var linkFunc = function(scope, element, attrs, mapController) {
+	    mapController = mapController[0]||mapController[1];
+	    var filtered = parser.filter(attrs);
+	    var options = parser.getOptions(filtered, {scope: scope});
+	    var events = parser.getEvents(scope, filtered);
+
+	    /**
+	     * build a custom control element
+	     */
+	    var customControlEl = element[0].parentElement.removeChild(element[0]);
+	    $compile(customControlEl.innerHTML.trim())(scope);
+
+	    /**
+	     * set events
+	     */
+	    for (var eventName in events) {
+	      google.maps.event.addDomListener(customControlEl, eventName, events[eventName]);
+	    }
+
+	    mapController.addObject('customControls', customControlEl);
+	    var position = options.position;
+	    mapController.map.controls[google.maps.ControlPosition[position]].push(customControlEl);
+
+	    element.bind('$destroy', function() {
+	      mapController.deleteObject('customControls', customControlEl);
+	    });
+	  };
+
+	  var customControl =  function(Attr2MapOptions, _$compile_, _NgMap_)  {
+	    parser = Attr2MapOptions, $compile = _$compile_, NgMap = _NgMap_;
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      link: linkFunc
+	    }; // return
+	  };
+	  customControl.$inject = ['Attr2MapOptions', '$compile', 'NgMap'];
+
+	  angular.module('ngMap').directive('customControl', customControl);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @memberof ngmap
+	 * @name custom-marker
+	 * @param Attr2Options {service} convert html attribute to Gogole map api options
+	 * @param $timeout {service} AngularJS $timeout
+	 * @description
+	 *   Marker with html
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @attr {String} position required, position on map
+	 * @attr {Number} z-index optional
+	 * @attr {Boolean} visible optional
+	 * @example
+	 *
+	 * Example:
+	 *   <map center="41.850033,-87.6500523" zoom="3">
+	 *     <custom-marker position="41.850033,-87.6500523">
+	 *       <div>
+	 *         <b>Home</b>
+	 *       </div>
+	 *     </custom-marker>
+	 *   </map>
+	 *
+	 */
+	/* global document */
+	(function() {
+	  'use strict';
+	  var parser, $timeout, $compile, NgMap;
+
+	  var CustomMarker = function(options) {
+	    options = options || {};
+
+	    this.el = document.createElement('div');
+	    this.el.style.display = 'inline-block';
+	    this.el.style.visibility = "hidden";
+	    this.visible = true;
+	    for (var key in options) { /* jshint ignore:line */
+	     this[key] = options[key];
+	    }
+	  };
+
+	  var setCustomMarker = function() {
+
+	    CustomMarker.prototype = new google.maps.OverlayView();
+
+	    CustomMarker.prototype.setContent = function(html, scope) {
+	      this.el.innerHTML = html;
+	      this.el.style.position = 'absolute';
+	      if (scope) {
+	        $compile(angular.element(this.el).contents())(scope);
+	      }
+	    };
+
+	    CustomMarker.prototype.getDraggable = function() {
+	      return this.draggable;
+	    };
+
+	    CustomMarker.prototype.setDraggable = function(draggable) {
+	      this.draggable = draggable;
+	    };
+
+	    CustomMarker.prototype.getPosition = function() {
+	      return this.position;
+	    };
+
+	    CustomMarker.prototype.setPosition = function(position) {
+	      position && (this.position = position); /* jshint ignore:line */
+
+	      if (this.getProjection() && typeof this.position.lng == 'function') {
+	        var _this = this;
+	        var setPosition = function() {
+	          var posPixel = _this.getProjection().fromLatLngToDivPixel(_this.position);
+	          var x = Math.round(posPixel.x - (_this.el.offsetWidth/2));
+	          var y = Math.round(posPixel.y - _this.el.offsetHeight - 10); // 10px for anchor
+	          _this.el.style.left = x + "px";
+	          _this.el.style.top = y + "px";
+	          _this.el.style.visibility = "visible";
 	        };
-	        Object.defineProperty(this, "selectExperimental", {
-	            get: (() => {
-	                var counter = 0;
-	                return () => {
-	                    //console.log(this.selectIsChanged);
-	                    //console.log(counter);
-	                    if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
-	                        this.reInitActiveSelectGroups();
-	                        counter++;
-	                    } else {
-	                        this.selectIsChanged = false;
-	                        counter = 0;
-	                    }
+	        if (_this.el.offsetWidth && _this.el.offsetHeight) { 
+	          setPosition();
+	        } else {
+	          //delayed left/top calculation when width/height are not set instantly
+	          $timeout(setPosition, 300);
+	        }
+	      }
+	    };
 
-	                    return this.activeSelectGroup;
+	    CustomMarker.prototype.setZIndex = function(zIndex) {
+	      zIndex && (this.zIndex = zIndex); /* jshint ignore:line */
+	      this.el.style.zIndex = this.zIndex;
+	    };
+
+	    CustomMarker.prototype.getVisible = function() {
+	      return this.visible;
+	    };
+
+	    CustomMarker.prototype.setVisible = function(visible) {
+	      this.el.style.display = visible ? 'inline-block' : 'none';
+	      this.visible = visible;
+	    };
+
+	    CustomMarker.prototype.addClass = function(className) {
+	      var classNames = this.el.className.trim().split(' ');
+	      (classNames.indexOf(className) == -1) && classNames.push(className); /* jshint ignore:line */
+	      this.el.className = classNames.join(' ');
+	    };
+
+	    CustomMarker.prototype.removeClass = function(className) {
+	      var classNames = this.el.className.split(' ');
+	      var index = classNames.indexOf(className);
+	      (index > -1) && classNames.splice(index, 1); /* jshint ignore:line */
+	      this.el.className = classNames.join(' ');
+	    };
+
+	    CustomMarker.prototype.onAdd = function() {
+	      this.getPanes().overlayMouseTarget.appendChild(this.el);
+	    };
+
+	    CustomMarker.prototype.draw = function() {
+	      this.setPosition();
+	      this.setZIndex(this.zIndex);
+	      this.setVisible(this.visible);
+	    };
+
+	    CustomMarker.prototype.onRemove = function() {
+	      this.el.parentNode.removeChild(this.el);
+	      //this.el = null;
+	    };
+	  };
+
+	  var linkFunc = function(orgHtml, varsToWatch) {
+	    //console.log('orgHtml', orgHtml, 'varsToWatch', varsToWatch);
+
+	    return function(scope, element, attrs, mapController) {
+	      mapController = mapController[0]||mapController[1];
+	      var orgAttrs = parser.orgAttributes(element);
+
+	      var filtered = parser.filter(attrs);
+	      var options = parser.getOptions(filtered, {scope: scope});
+	      var events = parser.getEvents(scope, filtered);
+
+	      /**
+	       * build a custom marker element
+	       */
+	      element[0].style.display = 'none';
+	      void 0;
+	      var customMarker = new CustomMarker(options);
+
+	      $timeout(function() { //apply contents, class, and location after it is compiled
+
+	        scope.$watch('[' + varsToWatch.join(',') + ']', function() {
+	          customMarker.setContent(orgHtml, scope);
+	        }, true);
+
+	        customMarker.setContent(element[0].innerHTML, scope);
+	        var classNames = element[0].firstElementChild.className;
+	        customMarker.addClass('custom-marker');
+	        customMarker.addClass(classNames);
+	        void 0;
+
+	        if (!(options.position instanceof google.maps.LatLng)) {
+	          NgMap.getGeoLocation(options.position).then(
+	                function(latlng) {
+	                  customMarker.setPosition(latlng);
 	                }
-	            })()
+	          );
+	        }
+
+	      });
+
+	      void 0;
+	      for (var eventName in events) { /* jshint ignore:line */
+	        google.maps.event.addDomListener(
+	          customMarker.el, eventName, events[eventName]);
+	      }
+	      mapController.addObject('customMarkers', customMarker);
+
+	      //set observers
+	      mapController.observeAttrSetObj(orgAttrs, attrs, customMarker);
+
+	      element.bind('$destroy', function() {
+	        //Is it required to remove event listeners when DOM is removed?
+	        mapController.deleteObject('customMarkers', customMarker);
+	      });
+
+	    }; // linkFunc
+	  };
+
+
+	  var customMarkerDirective = function(
+	      _$timeout_, _$compile_, Attr2MapOptions, _NgMap_
+	    )  {
+	    parser = Attr2MapOptions;
+	    $timeout = _$timeout_;
+	    $compile = _$compile_;
+	    NgMap = _NgMap_;
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      compile: function(element) {
+	        setCustomMarker();
+	        element[0].style.display ='none';
+	        var orgHtml = element.html();
+	        var matches = orgHtml.match(/{{([^}]+)}}/g);
+	        var varsToWatch = [];
+	        //filter out that contains '::', 'this.'
+	        (matches || []).forEach(function(match) {
+	          var toWatch = match.replace('{{','').replace('}}','');
+	          if (match.indexOf('::') == -1 &&
+	            match.indexOf('this.') == -1 &&
+	            varsToWatch.indexOf(toWatch) == -1) {
+	            varsToWatch.push(match.replace('{{','').replace('}}',''));
+	          }
 	        });
-	        this.initActiveSelects();
 
+	        return linkFunc(orgHtml, varsToWatch);
+	      }
+	    }; // return
+	  };// function
+	  customMarkerDirective.$inject =
+	    ['$timeout', '$compile', 'Attr2MapOptions', 'NgMap'];
 
-	        this.initActiveSelects = () => {
-	            let selectsCount = 3;
-	            let activeSelectGroup = this.selects;
-	            //let firstActive = this.selects[0];
+	  angular.module('ngMap').directive('customMarker', customMarkerDirective);
+	})();
 
-	            for (let i = 0; i < selectsCount; i++) {
-	                this.activeSelectGroup.push(activeSelectGroup);
-	                this.activeSelects.push(activeSelectGroup[0]);
-	                activeSelectGroup = activeSelectGroup[0].subCat;
+	/**
+	 * @ngdoc directive
+	 * @name directions
+	 * @description
+	 *   Enable directions on map.
+	 *   e.g., origin, destination, draggable, waypoints, etc
+	 *
+	 *   Requires:  map directive
+	 *
+	 *   Restrict To:  Element
+	 *
+	 * @attr {String} DirectionsRendererOptions
+	 *   [Any DirectionsRendererOptions](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions)
+	 * @attr {String} DirectionsRequestOptions
+	 *   [Any DirectionsRequest options](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
+	 * @example
+	 *  <map zoom="14" center="37.7699298, -122.4469157">
+	 *    <directions
+	 *      draggable="true"
+	 *      panel="directions-panel"
+	 *      travel-mode="{{travelMode}}"
+	 *      waypoints="[{location:'kingston', stopover:true}]"
+	 *      origin="{{origin}}"
+	 *      destination="{{destination}}">
+	 *    </directions>
+	 *  </map>
+	 */
+	/* global document */
+	(function() {
+	  'use strict';
+	  var NgMap, $timeout, NavigatorGeolocation;
+
+	  var getDirectionsRenderer = function(options, events) {
+	    if (options.panel) {
+	      options.panel = document.getElementById(options.panel) ||
+	        document.querySelector(options.panel);
+	    }
+	    var renderer = new google.maps.DirectionsRenderer(options);
+	    for (var eventName in events) {
+	      google.maps.event.addListener(renderer, eventName, events[eventName]);
+	    }
+	    return renderer;
+	  };
+
+	  var updateRoute = function(renderer, options) {
+	    var directionsService = new google.maps.DirectionsService();
+
+	    /* filter out valid keys only for DirectionsRequest object*/
+	    var request = options;
+	    request.travelMode = request.travelMode || 'DRIVING';
+	    var validKeys = [
+	      'origin', 'destination', 'travelMode', 'transitOptions', 'unitSystem',
+	      'durationInTraffic', 'waypoints', 'optimizeWaypoints', 
+	      'provideRouteAlternatives', 'avoidHighways', 'avoidTolls', 'region'
+	    ];
+	    for(var key in request){
+	      (validKeys.indexOf(key) === -1) && (delete request[key]);
+	    }
+
+	    if(request.waypoints) {
+	      // Check fo valid values
+	      if(request.waypoints == "[]" || request.waypoints === "") {
+	        delete request.waypoints;
+	      }
+	    }
+
+	    var showDirections = function(request) {
+	      directionsService.route(request, function(response, status) {
+	        if (status == google.maps.DirectionsStatus.OK) {
+	          $timeout(function() {
+	            renderer.setDirections(response);
+	          });
+	        }
+	      });
+	    };
+
+	    if (request.origin && request.destination) {
+	      if (request.origin == 'current-location') {
+	        NavigatorGeolocation.getCurrentPosition().then(function(ll) {
+	          request.origin = new google.maps.LatLng(ll.coords.latitude, ll.coords.longitude);
+	          showDirections(request);
+	        });
+	      } else if (request.destination == 'current-location') {
+	        NavigatorGeolocation.getCurrentPosition().then(function(ll) {
+	          request.destination = new google.maps.LatLng(ll.coords.latitude, ll.coords.longitude);
+	          showDirections(request);
+	        });
+	      } else {
+	        showDirections(request);
+	      }
+	    }
+	  };
+
+	  var directions = function(
+	      Attr2MapOptions, _$timeout_, _NavigatorGeolocation_, _NgMap_) {
+	    var parser = Attr2MapOptions;
+	    NgMap = _NgMap_;
+	    $timeout = _$timeout_;
+	    NavigatorGeolocation = _NavigatorGeolocation_;
+
+	    var linkFunc = function(scope, element, attrs, mapController) {
+	      mapController = mapController[0]||mapController[1];
+
+	      var orgAttrs = parser.orgAttributes(element);
+	      var filtered = parser.filter(attrs);
+	      var options = parser.getOptions(filtered, {scope: scope});
+	      var events = parser.getEvents(scope, filtered);
+	      var attrsToObserve = parser.getAttrsToObserve(orgAttrs);
+
+	      var renderer = getDirectionsRenderer(options, events);
+	      mapController.addObject('directionsRenderers', renderer);
+
+	      attrsToObserve.forEach(function(attrName) {
+	        (function(attrName) {
+	          attrs.$observe(attrName, function(val) {
+	            if (attrName == 'panel') {
+	              $timeout(function(){
+	                var panel =
+	                  document.getElementById(val) || document.querySelector(val);
+	                void 0;
+	                panel && renderer.setPanel(panel);
+	              });
+	            } else if (options[attrName] !== val) { //apply only if changed
+	              var optionValue = parser.toOptionValue(val, {key: attrName});
+	              void 0;
+	              options[attrName] = optionValue;
+	              updateRoute(renderer, options);
 	            }
+	          });
+	        })(attrName);
+	      });
+
+	      NgMap.getMap().then(function() {
+	        updateRoute(renderer, options);
+	      });
+	      element.bind('$destroy', function() {
+	        mapController.deleteObject('directionsRenderers', renderer);
+	      });
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      link: linkFunc
+	    };
+	  }; // var directions
+	  directions.$inject =
+	    ['Attr2MapOptions', '$timeout', 'NavigatorGeolocation', 'NgMap'];
+
+	  angular.module('ngMap').directive('directions', directions);
+	})();
+
+
+	/**
+	 * @ngdoc directive
+	 * @name drawing-manager
+	 * @param Attr2Options {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *
+	 *  <map zoom="13" center="37.774546, -122.433523" map-type-id="SATELLITE">
+	 *    <drawing-manager
+	 *      on-overlaycomplete="onMapOverlayCompleted()"
+	 *      position="ControlPosition.TOP_CENTER"
+	 *      drawingModes="POLYGON,CIRCLE"
+	 *      drawingControl="true"
+	 *      circleOptions="fillColor: '#FFFF00';fillOpacity: 1;strokeWeight: 5;clickable: false;zIndex: 1;editable: true;" >
+	 *    </drawing-manager>
+	 *  </map>
+	 *
+	 *  TODO: Add remove button.
+	 *  currently, for our solution, we have the shapes/markers in our own
+	 *  controller, and we use some css classes to change the shape button
+	 *  to a remove button (<div>X</div>) and have the remove operation in our own controller.
+	 */
+	(function() {
+	  'use strict';
+	  angular.module('ngMap').directive('drawingManager', [
+	    'Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var controlOptions = parser.getControlOptions(filtered);
+	        var events = parser.getEvents(scope, filtered);
+
+	        /**
+	         * set options
+	         */
+	        var drawingManager = new google.maps.drawing.DrawingManager({
+	          drawingMode: options.drawingmode,
+	          drawingControl: options.drawingcontrol,
+	          drawingControlOptions: controlOptions.drawingControlOptions,
+	          circleOptions:options.circleoptions,
+	          markerOptions:options.markeroptions,
+	          polygonOptions:options.polygonoptions,
+	          polylineOptions:options.polylineoptions,
+	          rectangleOptions:options.rectangleoptions
+	        });
+
+	        //Observers
+	        attrs.$observe('drawingControlOptions', function (newValue) {
+	          drawingManager.drawingControlOptions = parser.getControlOptions({drawingControlOptions: newValue}).drawingControlOptions;
+	          drawingManager.setDrawingMode(null);
+	          drawingManager.setMap(mapController.map);
+	        });
+
+
+	        /**
+	         * set events
+	         */
+	        for (var eventName in events) {
+	          google.maps.event.addListener(drawingManager, eventName, events[eventName]);
+	        }
+
+	        mapController.addObject('mapDrawingManager', drawingManager);
+
+	        element.bind('$destroy', function() {
+	          mapController.deleteObject('mapDrawingManager', drawingManager);
+	        });
+	      }
+	    }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name dynamic-maps-engine-layer
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *   <map zoom="14" center="[59.322506, 18.010025]">
+	 *     <dynamic-maps-engine-layer
+	 *       layer-id="06673056454046135537-08896501997766553811">
+	 *     </dynamic-maps-engine-layer>
+	 *    </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('dynamicMapsEngineLayer', [
+	    'Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    var getDynamicMapsEngineLayer = function(options, events) {
+	      var layer = new google.maps.visualization.DynamicMapsEngineLayer(options);
+
+	      for (var eventName in events) {
+	        google.maps.event.addListener(layer, eventName, events[eventName]);
+	      }
+
+	      return layer;
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered, events);
+
+	        var layer = getDynamicMapsEngineLayer(options, events);
+	        mapController.addObject('mapsEngineLayers', layer);
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name fusion-tables-layer
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *   <map zoom="11" center="41.850033, -87.6500523">
+	 *     <fusion-tables-layer query="{
+	 *       select: 'Geocodable address',
+	 *       from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
+	 *     </fusion-tables-layer>
+	 *   </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('fusionTablesLayer', [
+	    'Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    var getLayer = function(options, events) {
+	      var layer = new google.maps.FusionTablesLayer(options);
+
+	      for (var eventName in events) {
+	        google.maps.event.addListener(layer, eventName, events[eventName]);
+	      }
+
+	      return layer;
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered, events);
+	        void 0;
+
+	        var layer = getLayer(options, events);
+	        mapController.addObject('fusionTablesLayers', layer);
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name heatmap-layer
+	 * @param Attr2Options {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 *
+	 * <map zoom="11" center="[41.875696,-87.624207]">
+	 *   <heatmap-layer data="taxiData"></heatmap-layer>
+	 * </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('heatmapLayer', [
+	    'Attr2MapOptions', '$window', function(Attr2MapOptions, $window) {
+	    var parser = Attr2MapOptions;
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var filtered = parser.filter(attrs);
+
+	        /**
+	         * set options
+	         */
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        options.data = $window[attrs.data] || scope[attrs.data];
+	        if (options.data instanceof Array) {
+	          options.data = new google.maps.MVCArray(options.data);
+	        } else {
+	          throw "invalid heatmap data";
+	        }
+	        var layer = new google.maps.visualization.HeatmapLayer(options);
+
+	        /**
+	         * set events
+	         */
+	        var events = parser.getEvents(scope, filtered);
+	        void 0;
+
+	        mapController.addObject('heatmapLayers', layer);
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name info-window
+	 * @param Attr2MapOptions {service}
+	 *   convert html attribute to Gogole map api options
+	 * @param $compile {service} $compile service
+	 * @description
+	 *  Defines infoWindow and provides compile method
+	 *
+	 *  Requires:  map directive
+	 *
+	 *  Restrict To:  Element
+	 *
+	 *  NOTE: this directive should **NOT** be used with `ng-repeat`
+	 *  because InfoWindow itself is a template, and a template must be
+	 *  reused by each marker, thus, should not be redefined repeatedly
+	 *  by `ng-repeat`.
+	 *
+	 * @attr {Boolean} visible
+	 *   Indicates to show it when map is initialized
+	 * @attr {Boolean} visible-on-marker
+	 *   Indicates to show it on a marker when map is initialized
+	 * @attr {Expression} geo-callback
+	 *   if position is an address, the expression is will be performed
+	 *   when geo-lookup is successful. e.g., geo-callback="showDetail()"
+	 * @attr {String} &lt;InfoWindowOption> Any InfoWindow options,
+	 *   https://developers.google.com/maps/documentation/javascript/reference?csw=1#InfoWindowOptions
+	 * @attr {String} &lt;InfoWindowEvent> Any InfoWindow events,
+	 *   https://developers.google.com/maps/documentation/javascript/reference
+	 * @example
+	 * Usage:
+	 *   <map MAP_ATTRIBUTES>
+	 *    <info-window id="foo" ANY_OPTIONS ANY_EVENTS"></info-window>
+	 *   </map>
+	 *
+	 * Example:
+	 *  <map center="41.850033,-87.6500523" zoom="3">
+	 *    <info-window id="1" position="41.850033,-87.6500523" >
+	 *      <div ng-non-bindable>
+	 *        Chicago, IL<br/>
+	 *        LatLng: {{chicago.lat()}}, {{chicago.lng()}}, <br/>
+	 *        World Coordinate: {{worldCoordinate.x}}, {{worldCoordinate.y}}, <br/>
+	 *        Pixel Coordinate: {{pixelCoordinate.x}}, {{pixelCoordinate.y}}, <br/>
+	 *        Tile Coordinate: {{tileCoordinate.x}}, {{tileCoordinate.y}} at Zoom Level {{map.getZoom()}}
+	 *      </div>
+	 *    </info-window>
+	 *  </map>
+	 */
+	/* global google */
+	(function() {
+	  'use strict';
+
+	  var infoWindow = function(Attr2MapOptions, $compile, $q, $templateRequest, $timeout, $parse, NgMap)  {
+	    var parser = Attr2MapOptions;
+
+	    var getInfoWindow = function(options, events, element) {
+	      var infoWindow;
+
+	      /**
+	       * set options
+	       */
+	      if (options.position && !(options.position instanceof google.maps.LatLng)) {
+	        delete options.position;
+	      }
+	      infoWindow = new google.maps.InfoWindow(options);
+
+	      /**
+	       * set events
+	       */
+	      for (var eventName in events) {
+	        if (eventName) {
+	          google.maps.event.addListener(infoWindow, eventName, events[eventName]);
+	        }
+	      }
+
+	      /**
+	       * set template and template-related functions
+	       * it must have a container element with ng-non-bindable
+	       */
+	      var templatePromise = $q(function(resolve) {
+	        if (angular.isString(element)) {
+	          $templateRequest(element).then(function (requestedTemplate) {
+	            resolve(angular.element(requestedTemplate).wrap('<div>').parent());
+	          }, function(message) {
+	            throw "info-window template request failed: " + message;
+	          });
+	        }
+	        else {
+	          resolve(element);
+	        }
+	      }).then(function(resolvedTemplate) {
+	        var template = resolvedTemplate.html().trim();
+	        if (angular.element(template).length != 1) {
+	          throw "info-window working as a template must have a container";
+	        }
+	        infoWindow.__template = template.replace(/\s?ng-non-bindable[='"]+/,"");
+	      });
+
+	      infoWindow.__open = function(map, scope, anchor) {
+	        templatePromise.then(function() {
+	          $timeout(function() {
+	            anchor && (scope.anchor = anchor);
+	            var el = $compile(infoWindow.__template)(scope);
+	            infoWindow.setContent(el[0]);
+	            scope.$apply();
+	            if (anchor && anchor.getPosition) {
+	              infoWindow.open(map, anchor);
+	            } else if (anchor && anchor instanceof google.maps.LatLng) {
+	              infoWindow.open(map);
+	              infoWindow.setPosition(anchor);
+	            } else {
+	              infoWindow.open(map);
+	            }
+	            var infoWindowContainerEl = infoWindow.content.parentElement.parentElement.parentElement;
+	            infoWindowContainerEl.className = "ng-map-info-window";
+	          });
+	        });
+	      };
+
+	      return infoWindow;
+	    };
+
+	    var linkFunc = function(scope, element, attrs, mapController) {
+	      mapController = mapController[0]||mapController[1];
+
+	      element.css('display','none');
+
+	      var orgAttrs = parser.orgAttributes(element);
+	      var filtered = parser.filter(attrs);
+	      var options = parser.getOptions(filtered, {scope: scope});
+	      var events = parser.getEvents(scope, filtered);
+
+	      var infoWindow = getInfoWindow(options, events, options.template || element);
+	      var address;
+	      if (options.position && !(options.position instanceof google.maps.LatLng)) {
+	        address = options.position;
+	      }
+	      if (address) {
+	        NgMap.getGeoLocation(address).then(function(latlng) {
+	          infoWindow.setPosition(latlng);
+	          infoWindow.__open(mapController.map, scope, latlng);
+	          var geoCallback = attrs.geoCallback;
+	          geoCallback && $parse(geoCallback)(scope);
+	        });
+	      }
+
+	      mapController.addObject('infoWindows', infoWindow);
+	      mapController.observeAttrSetObj(orgAttrs, attrs, infoWindow);
+
+	      mapController.showInfoWindow =
+	      mapController.map.showInfoWindow = mapController.showInfoWindow ||
+	        function(p1, p2, p3) { //event, id, marker
+	          var id = typeof p1 == 'string' ? p1 : p2;
+	          var marker = typeof p1 == 'string' ? p2 : p3;
+	          if (typeof marker == 'string') {
+	            //Check if markers if defined to avoid odd 'undefined' errors
+	            if (typeof mapController.map.markers != "undefined"
+	                && typeof mapController.map.markers[marker] != "undefined") {
+	              marker = mapController.map.markers[marker];
+	            } else if (
+	                //additionally check if that marker is a custom marker
+	            typeof mapController.map.customMarkers
+	            && typeof mapController.map.customMarkers[marker] != "undefined") {
+	              marker = mapController.map.customMarkers[marker];
+	            } else {
+	              //Better error output if marker with that id is not defined
+	              throw new Error("Cant open info window for id " + marker + ". Marker or CustomMarker is not defined")
+	            }
+	          }
+
+	          var infoWindow = mapController.map.infoWindows[id];
+	          var anchor = marker ? marker : (this.getPosition ? this : null);
+	          infoWindow.__open(mapController.map, scope, anchor);
+	          if(mapController.singleInfoWindow) {
+	            if(mapController.lastInfoWindow) {
+	              scope.hideInfoWindow(mapController.lastInfoWindow);
+	            }
+	            mapController.lastInfoWindow = id;
+	          }
 	        };
-	        this.reInitActiveSelectGroups = () => {
-	            for (let i = 1; i < this.activeSelectGroup.length; i++) {
-	                let cachedGroup = this.activeSelectGroup[i];
 
-	                //console.log(cachedGroup);
-	                this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
-	                //console.log(this.activeSelects[i-1]);
-	                //console.log(this.activeSelectGroup[i]);
+	      mapController.hideInfoWindow =
+	      mapController.map.hideInfoWindow = mapController.hideInfoWindow ||
+	        function(p1, p2) {
+	          var id = typeof p1 == 'string' ? p1 : p2;
+	          var infoWindow = mapController.map.infoWindows[id];
+	          infoWindow.close();
+	        };
 
-	                if ( cachedGroup !== this.activeSelectGroup[i]) {
-	                    this.activeSelects[i] = this.activeSelectGroup[i][0];
+	      //TODO DEPRECATED
+	      scope.showInfoWindow = mapController.map.showInfoWindow;
+	      scope.hideInfoWindow = mapController.map.hideInfoWindow;
+
+	      var map = infoWindow.mapId ? {id:infoWindow.mapId} : 0;
+	      NgMap.getMap(map).then(function(map) {
+	        infoWindow.visible && infoWindow.__open(map, scope);
+	        if (infoWindow.visibleOnMarker) {
+	          var markerId = infoWindow.visibleOnMarker;
+	          infoWindow.__open(map, scope, map.markers[markerId]);
+	        }
+	      });
+
+	    }; //link
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      link: linkFunc
+	    };
+
+	  }; // infoWindow
+	  infoWindow.$inject =
+	    ['Attr2MapOptions', '$compile', '$q', '$templateRequest', '$timeout', '$parse', 'NgMap'];
+
+	  angular.module('ngMap').directive('infoWindow', infoWindow);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name kml-layer
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   renders Kml layer on a map
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @attr {Url} url url of the kml layer
+	 * @attr {KmlLayerOptions} KmlLayerOptions
+	 *   (https://developers.google.com/maps/documentation/javascript/reference#KmlLayerOptions) 
+	 * @attr {String} &lt;KmlLayerEvent> Any KmlLayer events,
+	 *   https://developers.google.com/maps/documentation/javascript/reference
+	 * @example
+	 * Usage:
+	 *   <map MAP_ATTRIBUTES>
+	 *    <kml-layer ANY_KML_LAYER ANY_KML_LAYER_EVENTS"></kml-layer>
+	 *   </map>
+	 *
+	 * Example:
+	 *
+	 * <map zoom="11" center="[41.875696,-87.624207]">
+	 *   <kml-layer url="https://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml" >
+	 *   </kml-layer>
+	 * </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('kmlLayer', [
+	    'Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    var getKmlLayer = function(options, events) {
+	      var kmlLayer = new google.maps.KmlLayer(options);
+	      for (var eventName in events) {
+	        google.maps.event.addListener(kmlLayer, eventName, events[eventName]);
+	      }
+	      return kmlLayer;
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var orgAttrs = parser.orgAttributes(element);
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered);
+	        void 0;
+
+	        var kmlLayer = getKmlLayer(options, events);
+	        mapController.addObject('kmlLayers', kmlLayer);
+	        mapController.observeAttrSetObj(orgAttrs, attrs, kmlLayer);  //observers
+	        element.bind('$destroy', function() {
+	          mapController.deleteObject('kmlLayers', kmlLayer);
+	        });
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name map-data
+	 * @param Attr2MapOptions {service}
+	 *   convert html attribute to Gogole map api options
+	 * @description
+	 *   set map data
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @wn {String} method-name, run map.data[method-name] with attribute value
+	 * @example
+	 * Example:
+	 *
+	 *  <map zoom="11" center="[41.875696,-87.624207]">
+	 *    <map-data load-geo-json="https://storage.googleapis.com/maps-devrel/google.json"></map-data>
+	 *   </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('mapData', [
+	    'Attr2MapOptions', 'NgMap', function(Attr2MapOptions, NgMap) {
+	    var parser = Attr2MapOptions;
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs) {
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered, events);
+
+	        void 0;
+	        NgMap.getMap().then(function(map) {
+	          //options
+	          for (var key in options) {
+	            var val = options[key];
+	            if (typeof scope[val] === "function") {
+	              map.data[key](scope[val]);
+	            } else {
+	              map.data[key](val);
+	            }
+	          }
+
+	          //events
+	          for (var eventName in events) {
+	            map.data.addListener(eventName, events[eventName]);
+	          }
+	        });
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name map-lazy-load
+	 * @param Attr2Options {service} convert html attribute to Gogole map api options
+	 * @description
+	 *  Requires: Delay the initialization of map directive
+	 *    until the map is ready to be rendered
+	 *  Restrict To: Attribute
+	 *
+	 * @attr {String} map-lazy-load
+	 *    Maps api script source file location.
+	 *    Example:
+	 *      'https://maps.google.com/maps/api/js'
+	 * @attr {String} map-lazy-load-params
+	 *   Maps api script source file location via angular scope variable.
+	 *   Also requires the map-lazy-load attribute to be present in the directive.
+	 *   Example: In your controller, set
+	 *     $scope.googleMapsURL = 'https://maps.google.com/maps/api/js?v=3.20&client=XXXXXenter-api-key-hereXXXX'
+	 *
+	 * @example
+	 * Example:
+	 *
+	 *   <div map-lazy-load="http://maps.google.com/maps/api/js">
+	 *     <map center="Brampton" zoom="10">
+	 *       <marker position="Brampton"></marker>
+	 *     </map>
+	 *   </div>
+	 *
+	 *   <div map-lazy-load="http://maps.google.com/maps/api/js"
+	 *        map-lazy-load-params="{{googleMapsUrl}}">
+	 *     <map center="Brampton" zoom="10">
+	 *       <marker position="Brampton"></marker>
+	 *     </map>
+	 *   </div>
+	 */
+	/* global window, document */
+	(function() {
+	  'use strict';
+	  var $timeout, $compile, src, savedHtml = [], elements = [];
+
+	  var preLinkFunc = function(scope, element, attrs) {
+	    var mapsUrl = attrs.mapLazyLoadParams || attrs.mapLazyLoad;
+
+	    if(window.google === undefined || window.google.maps === undefined) {
+	      elements.push({
+	        scope: scope,
+	        element: element,
+	        savedHtml: savedHtml[elements.length],
+	      });
+
+	      window.lazyLoadCallback = function() {
+	        void 0;
+	        $timeout(function() { /* give some time to load */
+	          elements.forEach(function(elm) {
+	              elm.element.html(elm.savedHtml);
+	              $compile(elm.element.contents())(elm.scope);
+	          });
+	        }, 100);
+	      };
+
+	      var scriptEl = document.createElement('script');
+	      void 0;
+
+	      scriptEl.src = mapsUrl +
+	        (mapsUrl.indexOf('?') > -1 ? '&' : '?') +
+	        'callback=lazyLoadCallback';
+
+	        if (!document.querySelector('script[src="' + scriptEl.src + '"]')) {
+	          document.body.appendChild(scriptEl);
+	        }
+	    } else {
+	      element.html(savedHtml);
+	      $compile(element.contents())(scope);
+	    }
+	  };
+
+	  var compileFunc = function(tElement, tAttrs) {
+
+	    (!tAttrs.mapLazyLoad) && void 0;
+	    savedHtml.push(tElement.html());
+	    src = tAttrs.mapLazyLoad;
+
+	    /**
+	     * if already loaded, stop processing it
+	     */
+	    if(window.google !== undefined && window.google.maps !== undefined) {
+	      return false;
+	    }
+
+	    tElement.html('');  // will compile again after script is loaded
+
+	    return {
+	      pre: preLinkFunc
+	    };
+	  };
+
+	  var mapLazyLoad = function(_$compile_, _$timeout_) {
+	    $compile = _$compile_, $timeout = _$timeout_;
+	    return {
+	      compile: compileFunc
+	    };
+	  };
+	  mapLazyLoad.$inject = ['$compile','$timeout'];
+
+	  angular.module('ngMap').directive('mapLazyLoad', mapLazyLoad);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name map-type
+	 * @param Attr2MapOptions {service} 
+	 *   convert html attribute to Google map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *
+	 *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
+	 *     <map-type name="coordinate" object="coordinateMapType"></map-type>
+	 *   </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('mapType', ['$parse', 'NgMap',
+	    function($parse, NgMap) {
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var mapTypeName = attrs.name, mapTypeObject;
+	        if (!mapTypeName) {
+	          throw "invalid map-type name";
+	        }
+	        mapTypeObject = $parse(attrs.object)(scope);
+	        if (!mapTypeObject) {
+	          throw "invalid map-type object";
+	        }
+
+	        NgMap.getMap().then(function(map) {
+	          map.mapTypes.set(mapTypeName, mapTypeObject);
+	        });
+	        mapController.addObject('mapTypes', mapTypeObject);
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @memberof ngMap
+	 * @name ng-map
+	 * @param Attr2Options {service}
+	 *  convert html attribute to Gogole map api options
+	 * @description
+	 * Implementation of {@link __MapController}
+	 * Initialize a Google map within a `<div>` tag
+	 *   with given options and register events
+	 *
+	 * @attr {Expression} map-initialized
+	 *   callback function when map is initialized
+	 *   e.g., map-initialized="mycallback(map)"
+	 * @attr {Expression} geo-callback if center is an address or current location,
+	 *   the expression is will be executed when geo-lookup is successful.
+	 *   e.g., geo-callback="showMyStoreInfo()"
+	 * @attr {Array} geo-fallback-center
+	 *   The center of map incase geolocation failed. i.e. [0,0]
+	 * @attr {Object} geo-location-options
+	 *  The navigator geolocation options.
+	 *  e.g., { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }.
+	 *  If none specified, { timeout: 5000 }.
+	 *  If timeout not specified, timeout: 5000 added
+	 * @attr {Boolean} zoom-to-include-markers
+	 *  When true, map boundary will be changed automatially
+	 *  to include all markers when initialized
+	 * @attr {Boolean} default-style
+	 *  When false, the default styling,
+	 *  `display:block;height:300px`, will be ignored.
+	 * @attr {String} &lt;MapOption> Any Google map options,
+	 *  https://developers.google.com/maps/documentation/javascript/reference?csw=1#MapOptions
+	 * @attr {String} &lt;MapEvent> Any Google map events,
+	 *  https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/map_events.html
+	 * @attr {Boolean} single-info-window
+	 *  When true the map will only display one info window at the time,
+	 *  if not set or false,
+	 *  everytime an info window is open it will be displayed with the othe one.
+	 * @attr {Boolean} trigger-resize
+	 *  Default to false.  Set to true to trigger resize of the map.  Needs to be done anytime you resize the map
+	 * @example
+	 * Usage:
+	 *   <map MAP_OPTIONS_OR_MAP_EVENTS ..>
+	 *     ... Any children directives
+	 *   </map>
+	 *
+	 * Example:
+	 *   <map center="[40.74, -74.18]" on-click="doThat()">
+	 *   </map>
+	 *
+	 *   <map geo-fallback-center="[40.74, -74.18]" zoom-to-inlude-markers="true">
+	 *   </map>
+	 */
+	(function () {
+	  'use strict';
+
+	  var mapDirective = function () {
+	    return {
+	      restrict: 'AE',
+	      controller: '__MapController',
+	      controllerAs: 'ngmap'
+	    };
+	  };
+
+	  angular.module('ngMap').directive('map', [mapDirective]);
+	  angular.module('ngMap').directive('ngMap', [mapDirective]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name maps-engine-layer
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *  <map zoom="14" center="[59.322506, 18.010025]">
+	 *    <maps-engine-layer layer-id="06673056454046135537-08896501997766553811">
+	 *    </maps-engine-layer>
+	 *  </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('mapsEngineLayer', ['Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    var getMapsEngineLayer = function(options, events) {
+	      var layer = new google.maps.visualization.MapsEngineLayer(options);
+
+	      for (var eventName in events) {
+	        google.maps.event.addListener(layer, eventName, events[eventName]);
+	      }
+
+	      return layer;
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered, events);
+	        void 0;
+
+	        var layer = getMapsEngineLayer(options, events);
+	        mapController.addObject('mapsEngineLayers', layer);
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name marker
+	 * @param Attr2Options {service} convert html attribute to Gogole map api options
+	 * @param NavigatorGeolocation It is used to find the current location
+	 * @description
+	 *  Draw a Google map marker on a map with given options and register events
+	 *
+	 *  Requires:  map directive
+	 *
+	 *  Restrict To:  Element
+	 *
+	 * @attr {String} position address, 'current', or [latitude, longitude]
+	 *  example:
+	 *    '1600 Pennsylvania Ave, 20500  Washingtion DC',
+	 *    'current position',
+	 *    '[40.74, -74.18]'
+	 * @attr {Boolean} centered if set, map will be centered with this marker
+	 * @attr {Expression} geo-callback if position is an address,
+	 *   the expression is will be performed when geo-lookup is successful.
+	 *   e.g., geo-callback="showStoreInfo()"
+	 * @attr {Boolean} no-watcher if true, no attribute observer is added.
+	 *   Useful for many ng-repeat
+	 * @attr {String} &lt;MarkerOption>
+	 *   [Any Marker options](https://developers.google.com/maps/documentation/javascript/reference?csw=1#MarkerOptions)
+	 * @attr {String} &lt;MapEvent>
+	 *   [Any Marker events](https://developers.google.com/maps/documentation/javascript/reference)
+	 * @example
+	 * Usage:
+	 *   <map MAP_ATTRIBUTES>
+	 *    <marker ANY_MARKER_OPTIONS ANY_MARKER_EVENTS"></MARKER>
+	 *   </map>
+	 *
+	 * Example:
+	 *   <map center="[40.74, -74.18]">
+	 *    <marker position="[40.74, -74.18]" on-click="myfunc()"></div>
+	 *   </map>
+	 *
+	 *   <map center="the cn tower">
+	 *    <marker position="the cn tower" on-click="myfunc()"></div>
+	 *   </map>
+	 */
+	/* global google */
+	(function() {
+	  'use strict';
+	  var parser, $parse, NgMap;
+
+	  var getMarker = function(options, events) {
+	    var marker;
+
+	    if (NgMap.defaultOptions.marker) {
+	      for (var key in NgMap.defaultOptions.marker) {
+	        if (typeof options[key] == 'undefined') {
+	          void 0;
+	          options[key] = NgMap.defaultOptions.marker[key];
+	        }
+	      }
+	    }
+
+	    if (!(options.position instanceof google.maps.LatLng)) {
+	      options.position = new google.maps.LatLng(0,0);
+	    }
+	    marker = new google.maps.Marker(options);
+
+	    /**
+	     * set events
+	     */
+	    if (Object.keys(events).length > 0) {
+	      void 0;
+	    }
+	    for (var eventName in events) {
+	      if (eventName) {
+	        google.maps.event.addListener(marker, eventName, events[eventName]);
+	      }
+	    }
+
+	    return marker;
+	  };
+
+	  var linkFunc = function(scope, element, attrs, mapController) {
+	    mapController = mapController[0]||mapController[1];
+
+	    var orgAttrs = parser.orgAttributes(element);
+	    var filtered = parser.filter(attrs);
+	    var markerOptions = parser.getOptions(filtered, scope, {scope: scope});
+	    var markerEvents = parser.getEvents(scope, filtered);
+	    void 0;
+
+	    var address;
+	    if (!(markerOptions.position instanceof google.maps.LatLng)) {
+	      address = markerOptions.position;
+	    }
+	    var marker = getMarker(markerOptions, markerEvents);
+	    mapController.addObject('markers', marker);
+	    if (address) {
+	      NgMap.getGeoLocation(address).then(function(latlng) {
+	        marker.setPosition(latlng);
+	        markerOptions.centered && marker.map.setCenter(latlng);
+	        var geoCallback = attrs.geoCallback;
+	        geoCallback && $parse(geoCallback)(scope);
+	      });
+	    }
+
+	    //set observers
+	    mapController.observeAttrSetObj(orgAttrs, attrs, marker); /* observers */
+
+	    element.bind('$destroy', function() {
+	      mapController.deleteObject('markers', marker);
+	    });
+	  };
+
+	  var marker = function(Attr2MapOptions, _$parse_, _NgMap_) {
+	    parser = Attr2MapOptions;
+	    $parse = _$parse_;
+	    NgMap = _NgMap_;
+
+	    return {
+	      restrict: 'E',
+	      require: ['^?map','?^ngMap'],
+	      link: linkFunc
+	    };
+	  };
+
+	  marker.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
+	  angular.module('ngMap').directive('marker', marker);
+
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name overlay-map-type
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @param $window {service}
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *
+	 * <map zoom="13" center="34.04924594193164, -118.24104309082031">
+	 *   <overlay-map-type index="0" object="coordinateMapType"></map-type>
+	 * </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('overlayMapType', [
+	    'NgMap', function(NgMap) {
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var initMethod = attrs.initMethod || "insertAt";
+	        var overlayMapTypeObject = scope[attrs.object];
+
+	        NgMap.getMap().then(function(map) {
+	          if (initMethod == "insertAt") {
+	            var index = parseInt(attrs.index, 10);
+	            map.overlayMapTypes.insertAt(index, overlayMapTypeObject);
+	          } else if (initMethod == "push") {
+	            map.overlayMapTypes.push(overlayMapTypeObject);
+	          }
+	        });
+	        mapController.addObject('overlayMapTypes', overlayMapTypeObject);
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name places-auto-complete
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Provides address auto complete feature to an input element
+	 *   Requires: input tag
+	 *   Restrict To: Attribute
+	 *
+	 * @attr {AutoCompleteOptions}
+	 *   [Any AutocompleteOptions](https://developers.google.com/maps/documentation/javascript/3.exp/reference#AutocompleteOptions)
+	 *
+	 * @example
+	 * Example:
+	 *   <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+	 *   <input places-auto-complete types="['geocode']" on-place-changed="myCallback(place)" component-restrictions="{country:'au'}"/>
+	 */
+	/* global google */
+	(function() {
+	  'use strict';
+
+	  var placesAutoComplete = function(Attr2MapOptions, $timeout) {
+	    var parser = Attr2MapOptions;
+
+	    var linkFunc = function(scope, element, attrs, ngModelCtrl) {
+	      if (attrs.placesAutoComplete ==='false') {
+	        return false;
+	      }
+	      var filtered = parser.filter(attrs);
+	      var options = parser.getOptions(filtered, {scope: scope});
+	      var events = parser.getEvents(scope, filtered);
+	      var autocomplete = new google.maps.places.Autocomplete(element[0], options);
+	      for (var eventName in events) {
+	        google.maps.event.addListener(autocomplete, eventName, events[eventName]);
+	      }
+
+	      var updateModel = function() {
+	        $timeout(function(){
+	          ngModelCtrl && ngModelCtrl.$setViewValue(element.val());
+	        },100);
+	      };
+	      google.maps.event.addListener(autocomplete, 'place_changed', updateModel);
+	      element[0].addEventListener('change', updateModel);
+
+	      attrs.$observe('types', function(val) {
+	        if (val) {
+	          var optionValue = parser.toOptionValue(val, {key: 'types'});
+	          autocomplete.setTypes(optionValue);
+	        }
+	      });
+		  
+		  attrs.$observe('componentRestrictions', function (val) {
+			 if (val) {
+			   autocomplete.setComponentRestrictions(scope.$eval(val));
+			 }
+		   });
+	    };
+		
+	    return {
+	      restrict: 'A',
+	      require: '?ngModel',
+	      link: linkFunc
+	    };
+	  };
+
+	  placesAutoComplete.$inject = ['Attr2MapOptions', '$timeout'];
+	  angular.module('ngMap').directive('placesAutoComplete', placesAutoComplete);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name shape
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Initialize a Google map shape in map with given options and register events
+	 *   The shapes are:
+	 *     . circle
+	 *     . polygon
+	 *     . polyline
+	 *     . rectangle
+	 *     . groundOverlay(or image)
+	 *
+	 *   Requires:  map directive
+	 *
+	 *   Restrict To:  Element
+	 *
+	 * @attr {Boolean} centered if set, map will be centered with this marker
+	 * @attr {Expression} geo-callback if shape is a circle and the center is
+	 *   an address, the expression is will be performed when geo-lookup
+	 *   is successful. e.g., geo-callback="showDetail()"
+	 * @attr {String} &lt;OPTIONS>
+	 *   For circle, [any circle options](https://developers.google.com/maps/documentation/javascript/reference#CircleOptions)
+	 *   For polygon, [any polygon options](https://developers.google.com/maps/documentation/javascript/reference#PolygonOptions)
+	 *   For polyline, [any polyline options](https://developers.google.com/maps/documentation/javascript/reference#PolylineOptions)
+	 *   For rectangle, [any rectangle options](https://developers.google.com/maps/documentation/javascript/reference#RectangleOptions)
+	 *   For image, [any groundOverlay options](https://developers.google.com/maps/documentation/javascript/reference#GroundOverlayOptions)
+	 * @attr {String} &lt;MapEvent> [Any Shape events](https://developers.google.com/maps/documentation/javascript/reference)
+	 * @example
+	 * Usage:
+	 *   <map MAP_ATTRIBUTES>
+	 *    <shape name=SHAPE_NAME ANY_SHAPE_OPTIONS ANY_SHAPE_EVENTS"></MARKER>
+	 *   </map>
+	 *
+	 * Example:
+	 *
+	 *   <map zoom="11" center="[40.74, -74.18]">
+	 *     <shape id="polyline" name="polyline" geodesic="true"
+	 *       stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2"
+	 *       path="[[40.74,-74.18],[40.64,-74.10],[40.54,-74.05],[40.44,-74]]" >
+	 *     </shape>
+	 *   </map>
+	 *
+	 *   <map zoom="11" center="[40.74, -74.18]">
+	 *     <shape id="polygon" name="polygon" stroke-color="#FF0000"
+	 *       stroke-opacity="1.0" stroke-weight="2"
+	 *       paths="[[40.74,-74.18],[40.64,-74.18],[40.84,-74.08],[40.74,-74.18]]" >
+	 *     </shape>
+	 *   </map>
+	 *
+	 *   <map zoom="11" center="[40.74, -74.18]">
+	 *     <shape id="rectangle" name="rectangle" stroke-color='#FF0000'
+	 *       stroke-opacity="0.8" stroke-weight="2"
+	 *       bounds="[[40.74,-74.18], [40.78,-74.14]]" editable="true" >
+	 *     </shape>
+	 *   </map>
+	 *
+	 *   <map zoom="11" center="[40.74, -74.18]">
+	 *     <shape id="circle" name="circle" stroke-color='#FF0000'
+	 *       stroke-opacity="0.8"stroke-weight="2"
+	 *       center="[40.70,-74.14]" radius="4000" editable="true" >
+	 *     </shape>
+	 *   </map>
+	 *
+	 *   <map zoom="11" center="[40.74, -74.18]">
+	 *     <shape id="image" name="image"
+	 *       url="https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"
+	 *       bounds="[[40.71,-74.22],[40.77,-74.12]]" opacity="0.7"
+	 *       clickable="true">
+	 *     </shape>
+	 *   </map>
+	 *
+	 *  For full-working example, please visit
+	 *    [shape example](https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/shape.html)
+	 */
+	/* global google */
+	(function() {
+	  'use strict';
+
+	  var getShape = function(options, events) {
+	    var shape;
+
+	    var shapeName = options.name;
+	    delete options.name;  //remove name bcoz it's not for options
+	    void 0;
+
+	    /**
+	     * set options
+	     */
+	    switch(shapeName) {
+	      case "circle":
+	        if (!(options.center instanceof google.maps.LatLng)) {
+	          options.center = new google.maps.LatLng(0,0);
+	        } 
+	        shape = new google.maps.Circle(options);
+	        break;
+	      case "polygon":
+	        shape = new google.maps.Polygon(options);
+	        break;
+	      case "polyline":
+	        shape = new google.maps.Polyline(options);
+	        break;
+	      case "rectangle":
+	        shape = new google.maps.Rectangle(options);
+	        break;
+	      case "groundOverlay":
+	      case "image":
+	        var url = options.url;
+	        var opts = {opacity: options.opacity, clickable: options.clickable, id:options.id};
+	        shape = new google.maps.GroundOverlay(url, options.bounds, opts);
+	        break;
+	    }
+
+	    /**
+	     * set events
+	     */
+	    for (var eventName in events) {
+	      if (events[eventName]) {
+	        google.maps.event.addListener(shape, eventName, events[eventName]);
+	      }
+	    }
+	    return shape;
+	  };
+
+	  var shape = function(Attr2MapOptions, $parse, NgMap) {
+	    var parser = Attr2MapOptions;
+
+	    var linkFunc = function(scope, element, attrs, mapController) {
+	      mapController = mapController[0]||mapController[1];
+
+	      var orgAttrs = parser.orgAttributes(element);
+	      var filtered = parser.filter(attrs);
+	      var shapeOptions = parser.getOptions(filtered, {scope: scope});
+	      var shapeEvents = parser.getEvents(scope, filtered);
+
+	      var address, shapeType;
+	      shapeType = shapeOptions.name;
+	      if (!(shapeOptions.center instanceof google.maps.LatLng)) {
+	        address = shapeOptions.center;
+	      }
+	      var shape = getShape(shapeOptions, shapeEvents);
+	      mapController.addObject('shapes', shape);
+
+	      if (address && shapeType == 'circle') {
+	        NgMap.getGeoLocation(address).then(function(latlng) {
+	          shape.setCenter(latlng);
+	          shape.centered && shape.map.setCenter(latlng);
+	          var geoCallback = attrs.geoCallback;
+	          geoCallback && $parse(geoCallback)(scope);
+	        });
+	      }
+
+	      //set observers
+	      mapController.observeAttrSetObj(orgAttrs, attrs, shape);
+	      element.bind('$destroy', function() {
+	        mapController.deleteObject('shapes', shape);
+	      });
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      link: linkFunc
+	     }; // return
+	  };
+	  shape.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
+
+	  angular.module('ngMap').directive('shape', shape);
+
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name streetview-panorama
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @attr container Optional, id or css selector, if given, streetview will be in the given html element
+	 * @attr {String} &lt;StreetViewPanoramaOption>
+	 *   [Any Google StreetViewPanorama options](https://developers.google.com/maps/documentation/javascript/reference?csw=1#StreetViewPanoramaOptions)
+	 * @attr {String} &lt;StreetViewPanoramaEvent>
+	 *   [Any Google StreetViewPanorama events](https://developers.google.com/maps/documentation/javascript/reference#StreetViewPanorama)
+	 *
+	 * @example
+	 *   <map zoom="11" center="[40.688738,-74.043871]" >
+	 *     <street-view-panorama
+	 *       click-to-go="true"
+	 *       disable-default-ui="true"
+	 *       disable-double-click-zoom="true"
+	 *       enable-close-button="true"
+	 *       pano="my-pano"
+	 *       position="40.688738,-74.043871"
+	 *       pov="{heading:0, pitch: 90}"
+	 *       scrollwheel="false"
+	 *       visible="true">
+	 *     </street-view-panorama>
+	 *   </map>
+	 */
+	/* global google, document */
+	(function() {
+	  'use strict';
+
+	  var streetViewPanorama = function(Attr2MapOptions, NgMap) {
+	    var parser = Attr2MapOptions;
+
+	    var getStreetViewPanorama = function(map, options, events) {
+	      var svp, container;
+	      if (options.container) {
+	        container = document.getElementById(options.container);
+	        container = container || document.querySelector(options.container);
+	      }
+	      if (container) {
+	        svp = new google.maps.StreetViewPanorama(container, options);
+	      } else {
+	        svp = map.getStreetView();
+	        svp.setOptions(options);
+	      }
+
+	      for (var eventName in events) {
+	        eventName &&
+	          google.maps.event.addListener(svp, eventName, events[eventName]);
+	      }
+	      return svp;
+	    };
+
+	    var linkFunc = function(scope, element, attrs) {
+	      var filtered = parser.filter(attrs);
+	      var options = parser.getOptions(filtered, {scope: scope});
+	      var controlOptions = parser.getControlOptions(filtered);
+	      var svpOptions = angular.extend(options, controlOptions);
+
+	      var svpEvents = parser.getEvents(scope, filtered);
+	      void 0;
+
+	      NgMap.getMap().then(function(map) {
+	        var svp = getStreetViewPanorama(map, svpOptions, svpEvents);
+
+	        map.setStreetView(svp);
+	        (!svp.getPosition()) && svp.setPosition(map.getCenter());
+	        google.maps.event.addListener(svp, 'position_changed', function() {
+	          if (svp.getPosition() !== map.getCenter()) {
+	            map.setCenter(svp.getPosition());
+	          }
+	        });
+	        //needed for geo-callback
+	        var listener =
+	          google.maps.event.addListener(map, 'center_changed', function() {
+	            svp.setPosition(map.getCenter());
+	            google.maps.event.removeListener(listener);
+	          });
+	      });
+
+	    }; //link
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+	      link: linkFunc
+	    };
+
+	  };
+	  streetViewPanorama.$inject = ['Attr2MapOptions', 'NgMap'];
+
+	  angular.module('ngMap').directive('streetViewPanorama', streetViewPanorama);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name traffic-layer
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *
+	 *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
+	 *     <traffic-layer></traffic-layer>
+	 *    </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('trafficLayer', [
+	    'Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    var getLayer = function(options, events) {
+	      var layer = new google.maps.TrafficLayer(options);
+	      for (var eventName in events) {
+	        google.maps.event.addListener(layer, eventName, events[eventName]);
+	      }
+	      return layer;
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var orgAttrs = parser.orgAttributes(element);
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered);
+	        void 0;
+
+	        var layer = getLayer(options, events);
+	        mapController.addObject('trafficLayers', layer);
+	        mapController.observeAttrSetObj(orgAttrs, attrs, layer);  //observers
+	        element.bind('$destroy', function() {
+	          mapController.deleteObject('trafficLayers', layer);
+	        });
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc directive
+	 * @name transit-layer
+	 * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+	 * @description
+	 *   Requires:  map directive
+	 *   Restrict To:  Element
+	 *
+	 * @example
+	 * Example:
+	 *
+	 *  <map zoom="13" center="34.04924594193164, -118.24104309082031">
+	 *    <transit-layer></transit-layer>
+	 *  </map>
+	 */
+	(function() {
+	  'use strict';
+
+	  angular.module('ngMap').directive('transitLayer', [
+	    'Attr2MapOptions', function(Attr2MapOptions) {
+	    var parser = Attr2MapOptions;
+
+	    var getLayer = function(options, events) {
+	      var layer = new google.maps.TransitLayer(options);
+	      for (var eventName in events) {
+	        google.maps.event.addListener(layer, eventName, events[eventName]);
+	      }
+	      return layer;
+	    };
+
+	    return {
+	      restrict: 'E',
+	      require: ['?^map','?^ngMap'],
+
+	      link: function(scope, element, attrs, mapController) {
+	        mapController = mapController[0]||mapController[1];
+
+	        var orgAttrs = parser.orgAttributes(element);
+	        var filtered = parser.filter(attrs);
+	        var options = parser.getOptions(filtered, {scope: scope});
+	        var events = parser.getEvents(scope, filtered);
+	        void 0;
+
+	        var layer = getLayer(options, events);
+	        mapController.addObject('transitLayers', layer);
+	        mapController.observeAttrSetObj(orgAttrs, attrs, layer);  //observers
+	        element.bind('$destroy', function() {
+	          mapController.deleteObject('transitLayers', layer);
+	        });
+	      }
+	     }; // return
+	  }]);
+	})();
+
+	/**
+	 * @ngdoc filter
+	 * @name camel-case
+	 * @description
+	 *   Converts string to camel cased
+	 */
+	(function() {
+	  'use strict';
+
+	  var SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
+	  var MOZ_HACK_REGEXP = /^moz([A-Z])/;
+
+	  var camelCaseFilter = function() {
+	    return function(name) {
+	      return name.
+	        replace(SPECIAL_CHARS_REGEXP,
+	          function(_, separator, letter, offset) {
+	            return offset ? letter.toUpperCase() : letter;
+	        }).
+	        replace(MOZ_HACK_REGEXP, 'Moz$1');
+	    };
+	  };
+
+	  angular.module('ngMap').filter('camelCase', camelCaseFilter);
+	})();
+
+	/**
+	 * @ngdoc filter
+	 * @name jsonize
+	 * @description
+	 *   Converts json-like string to json string
+	 */
+	(function() {
+	  'use strict';
+
+	  var jsonizeFilter = function() {
+	    return function(str) {
+	      try {       // if parsable already, return as it is
+	        JSON.parse(str);
+	        return str;
+	      } catch(e) { // if not parsable, change little
+	        return str
+	          // wrap keys without quote with valid double quote
+	          .replace(/([\$\w]+)\s*:/g,
+	            function(_, $1) {
+	              return '"'+$1+'":';
+	            }
+	          )
+	          // replacing single quote wrapped ones to double quote
+	          .replace(/'([^']+)'/g,
+	            function(_, $1) {
+	              return '"'+$1+'"';
+	            }
+	          );
+	      }
+	    };
+	  };
+
+	  angular.module('ngMap').filter('jsonize', jsonizeFilter);
+	})();
+
+	/**
+	 * @ngdoc service
+	 * @name Attr2MapOptions
+	 * @description
+	 *   Converts tag attributes to options used by google api v3 objects
+	 */
+	/* global google */
+	(function() {
+	  'use strict';
+
+	  //i.e. "2015-08-12T06:12:40.858Z"
+	  var isoDateRE =
+	    /^(\d{4}\-\d\d\-\d\d([tT][\d:\.]*)?)([zZ]|([+\-])(\d\d):?(\d\d))?$/;
+
+	  var Attr2MapOptions = function(
+	      $parse, $timeout, $log, NavigatorGeolocation, GeoCoder,
+	      camelCaseFilter, jsonizeFilter
+	    ) {
+
+	    /**
+	     * Returns the attributes of an element as hash
+	     * @memberof Attr2MapOptions
+	     * @param {HTMLElement} el html element
+	     * @returns {Hash} attributes
+	     */
+	    var orgAttributes = function(el) {
+	      (el.length > 0) && (el = el[0]);
+	      var orgAttributes = {};
+	      for (var i=0; i<el.attributes.length; i++) {
+	        var attr = el.attributes[i];
+	        orgAttributes[attr.name] = attr.value;
+	      }
+	      return orgAttributes;
+	    };
+
+	    var getJSON = function(input) {
+	      var re =/^[\+\-]?[0-9\.]+,[ ]*\ ?[\+\-]?[0-9\.]+$/; //lat,lng
+	      if (input.match(re)) {
+	        input = "["+input+"]";
+	      }
+	      return JSON.parse(jsonizeFilter(input));
+	    };
+
+	    var getLatLng = function(input) {
+	      var output = input;
+	      if (input[0].constructor == Array) { // [[1,2],[3,4]]
+	        output = input.map(function(el) {
+	          return new google.maps.LatLng(el[0], el[1]);
+	        });
+	      } else if(!isNaN(parseFloat(input[0])) && isFinite(input[0])) {
+	        output = new google.maps.LatLng(output[0], output[1]);
+	      }
+	      return output;
+	    };
+
+	    var toOptionValue = function(input, options) {
+	      var output;
+	      try { // 1. Number?
+	        output = getNumber(input);
+	      } catch(err) {
+	        try { // 2. JSON?
+	          var output = getJSON(input);
+	          if (output instanceof Array) {
+	            // [{a:1}] : not lat/lng ones
+	            if (output[0].constructor == Object) {
+	              output = output;
+	            } else { // [[1,2],[3,4]] or [1,2]
+	              output = getLatLng(output);
+	            }
+	          }
+	          // JSON is an object (not array or null)
+	          else if (output === Object(output)) {
+	            // check for nested hashes and convert to Google API options
+	            var newOptions = options;
+	            newOptions.doNotConverStringToNumber = true;
+	            output = getOptions(output, newOptions);
+	          }
+	        } catch(err2) {
+	          // 3. Google Map Object function Expression. i.e. LatLng(80,-49)
+	          if (input.match(/^[A-Z][a-zA-Z0-9]+\(.*\)$/)) {
+	            try {
+	              var exp = "new google.maps."+input;
+	              output = eval(exp); /* jshint ignore:line */
+	            } catch(e) {
+	              output = input;
+	            }
+	          // 4. Google Map Object constant Expression. i.e. MayTypeId.HYBRID
+	          } else if (input.match(/^([A-Z][a-zA-Z0-9]+)\.([A-Z]+)$/)) {
+	            try {
+	              var matches = input.match(/^([A-Z][a-zA-Z0-9]+)\.([A-Z]+)$/);
+	              output = google.maps[matches[1]][matches[2]];
+	            } catch(e) {
+	              output = input;
+	            }
+	          // 5. Google Map Object constant Expression. i.e. HYBRID
+	          } else if (input.match(/^[A-Z]+$/)) {
+	            try {
+	              var capitalizedKey = options.key.charAt(0).toUpperCase() +
+	                options.key.slice(1);
+	              if (options.key.match(/temperatureUnit|windSpeedUnit|labelColor/)) {
+	                capitalizedKey = capitalizedKey.replace(/s$/,"");
+	                output = google.maps.weather[capitalizedKey][input];
+	              } else {
+	                output = google.maps[capitalizedKey][input];
+	              }
+	            } catch(e) {
+	              output = input;
+	            }
+	          // 6. Date Object as ISO String
+	          } else if (input.match(isoDateRE)) {
+	            try {
+	              output = new Date(input);
+	            } catch(e) {
+	              output = input;
+	            }
+	          // 7. evaluate dynamically bound values
+	          } else if (input.match(/^{/) && options.scope) {
+	            try {
+	              var expr = input.replace(/{{/,'').replace(/}}/g,'');
+	              output = options.scope.$eval(expr);
+	            } catch (err) {
+	              output = input;
+	            }
+	          } else {
+	            output = input;
+	          }
+	        } // catch(err2)
+	      } // catch(err)
+
+	      // convert output more for center and position
+	      if (
+	        (options.key == 'center' || options.key == 'position') &&
+	        output instanceof Array
+	      ) {
+	        output = new google.maps.LatLng(output[0], output[1]);
+	      }
+
+	      // convert output more for shape bounds
+	      if (options.key == 'bounds' && output instanceof Array) {
+	        output = new google.maps.LatLngBounds(output[0], output[1]);
+	      }
+
+	      // convert output more for shape icons
+	      if (options.key == 'icons' && output instanceof Array) {
+
+	        for (var i=0; i<output.length; i++) {
+	          var el = output[i];
+	          if (el.icon.path.match(/^[A-Z_]+$/)) {
+	            el.icon.path =  google.maps.SymbolPath[el.icon.path];
+	          }
+	        }
+	      }
+
+	      // convert output more for marker icon
+	      if (options.key == 'icon' && output instanceof Object) {
+	        if ((""+output.path).match(/^[A-Z_]+$/)) {
+	          output.path = google.maps.SymbolPath[output.path];
+	        }
+	        for (var key in output) { //jshint ignore:line
+	          var arr = output[key];
+	          if (key == "anchor" || key == "origin" || key == "labelOrigin") {
+	            output[key] = new google.maps.Point(arr[0], arr[1]);
+	          } else if (key == "size" || key == "scaledSize") {
+	            output[key] = new google.maps.Size(arr[0], arr[1]);
+	          }
+	        }
+	      }
+
+	      return output;
+	    };
+
+	    var getAttrsToObserve = function(attrs) {
+	      var attrsToObserve = [];
+
+	      if (!attrs.noWatcher) {
+	        for (var attrName in attrs) { //jshint ignore:line
+	          var attrValue = attrs[attrName];
+	          if (attrValue && attrValue.match(/\{\{.*\}\}/)) { // if attr value is {{..}}
+	            attrsToObserve.push(camelCaseFilter(attrName));
+	          }
+	        }
+	      }
+
+	      return attrsToObserve;
+	    };
+
+	    /**
+	     * filters attributes by skipping angularjs methods $.. $$..
+	     * @memberof Attr2MapOptions
+	     * @param {Hash} attrs tag attributes
+	     * @returns {Hash} filterd attributes
+	     */
+	    var filter = function(attrs) {
+	      var options = {};
+	      for(var key in attrs) {
+	        if (key.match(/^\$/) || key.match(/^ng[A-Z]/)) {
+	          void(0);
+	        } else {
+	          options[key] = attrs[key];
+	        }
+	      }
+	      return options;
+	    };
+
+	    /**
+	     * converts attributes hash to Google Maps API v3 options
+	     * ```
+	     *  . converts numbers to number
+	     *  . converts class-like string to google maps instance
+	     *    i.e. `LatLng(1,1)` to `new google.maps.LatLng(1,1)`
+	     *  . converts constant-like string to google maps constant
+	     *    i.e. `MapTypeId.HYBRID` to `google.maps.MapTypeId.HYBRID`
+	     *    i.e. `HYBRID"` to `google.maps.MapTypeId.HYBRID`
+	     * ```
+	     * @memberof Attr2MapOptions
+	     * @param {Hash} attrs tag attributes
+	     * @param {Hash} options
+	     * @returns {Hash} options converted attributess
+	     */
+	    var getOptions = function(attrs, params) {
+	      params = params || {};
+	      var options = {};
+	      for(var key in attrs) {
+	        if (attrs[key] || attrs[key] === 0) {
+	          if (key.match(/^on[A-Z]/)) { //skip events, i.e. on-click
+	            continue;
+	          } else if (key.match(/ControlOptions$/)) { // skip controlOptions
+	            continue;
+	          } else {
+	            // nested conversions need to be typechecked
+	            // (non-strings are fully converted)
+	            if (typeof attrs[key] !== 'string') {
+	              options[key] = attrs[key];
+	            } else {
+	              if (params.doNotConverStringToNumber &&
+	                attrs[key].match(/^[0-9]+$/)
+	              ) {
+	                options[key] = attrs[key];
+	              } else {
+	                options[key] = toOptionValue(attrs[key], {key: key, scope: params.scope});
+	              }
+	            }
+	          }
+	        } // if (attrs[key])
+	      } // for(var key in attrs)
+	      return options;
+	    };
+
+	    /**
+	     * converts attributes hash to scope-specific event function 
+	     * @memberof Attr2MapOptions
+	     * @param {scope} scope angularjs scope
+	     * @param {Hash} attrs tag attributes
+	     * @returns {Hash} events converted events
+	     */
+	    var getEvents = function(scope, attrs) {
+	      var events = {};
+	      var toLowercaseFunc = function($1){
+	        return "_"+$1.toLowerCase();
+	      };
+	      var EventFunc = function(attrValue) {
+	        // funcName(argsStr)
+	        var matches = attrValue.match(/([^\(]+)\(([^\)]*)\)/);
+	        var funcName = matches[1];
+	        var argsStr = matches[2].replace(/event[ ,]*/,'');  //remove string 'event'
+	        var argsExpr = $parse("["+argsStr+"]"); //for perf when triggering event
+	        return function(event) {
+	          var args = argsExpr(scope); //get args here to pass updated model values
+	          function index(obj,i) {return obj[i];}
+	          var f = funcName.split('.').reduce(index, scope);
+	          f && f.apply(this, [event].concat(args));
+	          $timeout( function() {
+	            scope.$apply();
+	          });
+	        };
+	      };
+
+	      for(var key in attrs) {
+	        if (attrs[key]) {
+	          if (!key.match(/^on[A-Z]/)) { //skip if not events
+	            continue;
+	          }
+
+	          //get event name as underscored. i.e. zoom_changed
+	          var eventName = key.replace(/^on/,'');
+	          eventName = eventName.charAt(0).toLowerCase() + eventName.slice(1);
+	          eventName = eventName.replace(/([A-Z])/g, toLowercaseFunc);
+
+	          var attrValue = attrs[key];
+	          events[eventName] = new EventFunc(attrValue);
+	        }
+	      }
+	      return events;
+	    };
+
+	    /**
+	     * control means map controls, i.e streetview, pan, etc, not a general control
+	     * @memberof Attr2MapOptions
+	     * @param {Hash} filtered filtered tag attributes
+	     * @returns {Hash} Google Map options
+	     */
+	    var getControlOptions = function(filtered) {
+	      var controlOptions = {};
+	      if (typeof filtered != 'object') {
+	        return false;
+	      }
+
+	      for (var attr in filtered) {
+	        if (filtered[attr]) {
+	          if (!attr.match(/(.*)ControlOptions$/)) {
+	            continue; // if not controlOptions, skip it
+	          }
+
+	          //change invalid json to valid one, i.e. {foo:1} to {"foo": 1}
+	          var orgValue = filtered[attr];
+	          var newValue = orgValue.replace(/'/g, '"');
+	          newValue = newValue.replace(/([^"]+)|("[^"]+")/g, function($0, $1, $2) {
+	            if ($1) {
+	              return $1.replace(/([a-zA-Z0-9]+?):/g, '"$1":');
+	            } else {
+	              return $2;
+	            }
+	          });
+	          try {
+	            var options = JSON.parse(newValue);
+	            for (var key in options) { //assign the right values
+	              if (options[key]) {
+	                var value = options[key];
+	                if (typeof value === 'string') {
+	                  value = value.toUpperCase();
+	                } else if (key === "mapTypeIds") {
+	                  value = value.map( function(str) {
+	                    if (str.match(/^[A-Z]+$/)) { // if constant
+	                      return google.maps.MapTypeId[str.toUpperCase()];
+	                    } else { // else, custom map-type
+	                      return str;
+	                    }
+	                  });
 	                }
 
-	                /!*console.log(this.activeSelectGroup[i][0]);*!/
+	                if (key === "style") {
+	                  var str = attr.charAt(0).toUpperCase() + attr.slice(1);
+	                  var objName = str.replace(/Options$/,'')+"Style";
+	                  options[key] = google.maps[objName][value];
+	                } else if (key === "position") {
+	                  options[key] = google.maps.ControlPosition[value];
+	                } else {
+	                  options[key] = value;
+	                }
+	              }
 	            }
-	            /!*console.log(this.activeSelectGroup);
-	             console.log(this.activeSelects);*!/
-	        };
-	        this.onSelect = () => {
-	            this.selectIsChanged = true;
-	        };
-	        this.getActiveSelectGroups = (() => {
-	            let init = false;
-	            return () => {
-	                init ? this.reInitActiveSelectGroups() : init = true;
+	            controlOptions[attr] = options;
+	          } catch (e) {
+	            void 0;
+	          }
+	        }
+	      } // for
 
-	                return this.activeSelectGroup;
-	            }
-	        })();
-	        this.search = () => {
+	      return controlOptions;
+	    };
 
-	        };
+	    return {
+	      filter: filter,
+	      getOptions: getOptions,
+	      getEvents: getEvents,
+	      getControlOptions: getControlOptions,
+	      toOptionValue: toOptionValue,
+	      getAttrsToObserve: getAttrsToObserve,
+	      orgAttributes: orgAttributes
+	    }; // return
 
+	  };
+	  Attr2MapOptions.$inject= [
+	    '$parse', '$timeout', '$log', 'NavigatorGeolocation', 'GeoCoder',
+	    'camelCaseFilter', 'jsonizeFilter'
+	  ];
+
+	  angular.module('ngMap').service('Attr2MapOptions', Attr2MapOptions);
+	})();
+
+	/**
+	 * @ngdoc service
+	 * @name GeoCoder
+	 * @description
+	 *   Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+	 *   service for Google Geocoder service
+	 */
+	(function() {
+	  'use strict';
+	  var $q;
+	  /**
+	   * @memberof GeoCoder
+	   * @param {Hash} options
+	   *   https://developers.google.com/maps/documentation/geocoding/#geocoding
+	   * @example
+	   * ```
+	   *   GeoCoder.geocode({address: 'the cn tower'}).then(function(result) {
+	   *     //... do something with result
+	   *   });
+	   * ```
+	   * @returns {HttpPromise} Future object
+	   */
+	  var geocodeFunc = function(options) {
+	    var deferred = $q.defer();
+	    var geocoder = new google.maps.Geocoder();
+	    geocoder.geocode(options, function (results, status) {
+	      if (status == google.maps.GeocoderStatus.OK) {
+	        deferred.resolve(results);
+	      } else {
+	        deferred.reject(status);
+	      }
+	    });
+	    return deferred.promise;
+	  };
+
+	  var GeoCoder = function(_$q_) {
+	    $q = _$q_;
+	    return {
+	      geocode : geocodeFunc
+	    };
+	  };
+	  GeoCoder.$inject = ['$q'];
+
+	  angular.module('ngMap').service('GeoCoder', GeoCoder);
+	})();
+
+	/**
+	 * @ngdoc service
+	 * @name NavigatorGeolocation
+	 * @description
+	 *  Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+	 *  service for navigator.geolocation methods
+	 */
+	/* global google */
+	(function() {
+	  'use strict';
+	  var $q;
+
+	  /**
+	   * @memberof NavigatorGeolocation
+	   * @param {Object} geoLocationOptions the navigator geolocations options.
+	   *  i.e. { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }.
+	   *  If none specified, { timeout: 5000 }. 
+	   *  If timeout not specified, timeout: 5000 added
+	   * @param {function} success success callback function
+	   * @param {function} failure failure callback function
+	   * @example
+	   * ```
+	   *  NavigatorGeolocation.getCurrentPosition()
+	   *    .then(function(position) {
+	   *      var lat = position.coords.latitude, lng = position.coords.longitude;
+	   *      .. do something lat and lng
+	   *    });
+	   * ```
+	   * @returns {HttpPromise} Future object
+	   */
+	  var getCurrentPosition = function(geoLocationOptions) {
+	    var deferred = $q.defer();
+	    if (navigator.geolocation) {
+
+	      if (geoLocationOptions === undefined) {
+	        geoLocationOptions = { timeout: 5000 };
+	      }
+	      else if (geoLocationOptions.timeout === undefined) {
+	        geoLocationOptions.timeout = 5000;
+	      }
+
+	      navigator.geolocation.getCurrentPosition(
+	        function(position) {
+	          deferred.resolve(position);
+	        }, function(evt) {
+	          void 0;
+	          deferred.reject(evt);
+	        },
+	        geoLocationOptions
+	      );
+	    } else {
+	      deferred.reject("Browser Geolocation service failed.");
 	    }
-	})*/
+	    return deferred.promise;
+	  };
+
+	  var NavigatorGeolocation = function(_$q_) {
+	    $q = _$q_;
+	    return {
+	      getCurrentPosition: getCurrentPosition
+	    };
+	  };
+	  NavigatorGeolocation.$inject = ['$q'];
+
+	  angular.module('ngMap').
+	    service('NavigatorGeolocation', NavigatorGeolocation);
+	})();
+
+	/**
+	 * @ngdoc factory
+	 * @name NgMapPool
+	 * @description
+	 *   Provide map instance to avoid memory leak
+	 */
+	(function() {
+	  'use strict';
+	  /**
+	   * @memberof NgMapPool
+	   * @desc map instance pool
+	   */
+	  var mapInstances = [];
+	  var $window, $document, $timeout;
+
+	  var add = function(el) {
+	    var mapDiv = $document.createElement("div");
+	    mapDiv.style.width = "100%";
+	    mapDiv.style.height = "100%";
+	    el.appendChild(mapDiv);
+	    var map = new $window.google.maps.Map(mapDiv, {});
+	    mapInstances.push(map);
+	    return map;
+	  };
+
+	  var findById = function(el, id) {
+	    var notInUseMap;
+	    for (var i=0; i<mapInstances.length; i++) {
+	      var map = mapInstances[i];
+	      if (map.id == id && !map.inUse) {
+	        var mapDiv = map.getDiv();
+	        el.appendChild(mapDiv);
+	        notInUseMap = map;
+	        break;
+	      }
+	    }
+	    return notInUseMap;
+	  };
+
+	  var findUnused = function(el) { //jshint ignore:line
+	    var notInUseMap;
+	    for (var i=0; i<mapInstances.length; i++) {
+	      var map = mapInstances[i];
+	      if (map.id) {
+	        continue;
+	      }
+	      if (!map.inUse) {
+	        var mapDiv = map.getDiv();
+	        el.appendChild(mapDiv);
+	        notInUseMap = map;
+	        break;
+	      }
+	    }
+	    return notInUseMap;
+	  };
+
+	  /**
+	   * @memberof NgMapPool
+	   * @function getMapInstance
+	   * @param {HtmlElement} el map container element
+	   * @return map instance for the given element
+	   */
+	  var getMapInstance = function(el) {
+	    var map = findById(el, el.id) || findUnused(el);
+	    if (!map) {
+	      map = add(el);
+	    } else {
+	      /* firing map idle event, which is used by map controller */
+	      $timeout(function() {
+	        google.maps.event.trigger(map, 'idle');
+	      }, 100);
+	    }
+	    map.inUse = true;
+	    return map;
+	  };
+
+	  /**
+	   * @memberof NgMapPool
+	   * @function returnMapInstance
+	   * @param {Map} an instance of google.maps.Map
+	   * @desc sets the flag inUse of the given map instance to false, so that it 
+	   * can be reused later
+	   */
+	  var returnMapInstance = function(map) {
+	    map.inUse = false;
+	  };
+	  
+	  /**
+	   * @memberof NgMapPool
+	   * @function resetMapInstances
+	   * @desc resets mapInstance array
+	   */
+	  var resetMapInstances = function() {
+	    for(var i = 0;i < mapInstances.length;i++) {
+	        mapInstances[i] = null;
+	    }
+	    mapInstances = [];
+	  };
+
+	  var NgMapPool = function(_$document_, _$window_, _$timeout_) {
+	    $document = _$document_[0], $window = _$window_, $timeout = _$timeout_;
+
+	    return {
+		  mapInstances: mapInstances,
+	      resetMapInstances: resetMapInstances,
+	      getMapInstance: getMapInstance,
+	      returnMapInstance: returnMapInstance
+	    };
+	  };
+	  NgMapPool.$inject = [ '$document', '$window', '$timeout'];
+
+	  angular.module('ngMap').factory('NgMapPool', NgMapPool);
+
+	})();
+
+	/**
+	 * @ngdoc provider
+	 * @name NgMap
+	 * @description
+	 *  common utility service for ng-map
+	 */
+	(function() {
+	  'use strict';
+	  var $window, $document, $q;
+	  var NavigatorGeolocation, Attr2MapOptions, GeoCoder, camelCaseFilter;
+
+	  var mapControllers = {};
+
+	  var getStyle = function(el, styleProp) {
+	    var y;
+	    if (el.currentStyle) {
+	      y = el.currentStyle[styleProp];
+	    } else if ($window.getComputedStyle) {
+	      y = $document.defaultView.
+	        getComputedStyle(el, null).
+	        getPropertyValue(styleProp);
+	    }
+	    return y;
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function initMap
+	   * @param id optional, id of the map. default 0
+	   */
+	  var initMap = function(id) {
+	    var ctrl = mapControllers[id || 0];
+	    if (!(ctrl.map instanceof google.maps.Map)) {
+	      ctrl.initializeMap();
+	      return ctrl.map;
+	    } else {
+	      void 0;
+	    }
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function getMap
+	   * @param {String} optional, id e.g., 'foo'
+	   * @returns promise
+	   */
+	  var getMap = function(id) {
+	    id = typeof id === 'object' ? id.id : id;
+	    id = id || 0;
+
+	    var deferred = $q.defer();
+	    var timeout = 2000;
+
+	    function waitForMap(timeElapsed){
+	      if(mapControllers[id]){
+	        deferred.resolve(mapControllers[id].map);
+	      } else if (timeElapsed > timeout) {
+	        deferred.reject('could not find map');
+	      } else {
+	        $window.setTimeout( function(){
+	          waitForMap(timeElapsed+100);
+	        }, 100);
+	      }
+	    }
+	    waitForMap(0);
+
+	    return deferred.promise;
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function addMap
+	   * @param mapController {__MapContoller} a map controller
+	   * @returns promise
+	   */
+	  var addMap = function(mapCtrl) {
+	    if (mapCtrl.map) {
+	      var len = Object.keys(mapControllers).length;
+	      mapControllers[mapCtrl.map.id || len] = mapCtrl;
+	    }
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function deleteMap
+	   * @param mapController {__MapContoller} a map controller
+	   */
+	  var deleteMap = function(mapCtrl) {
+	    var len = Object.keys(mapControllers).length - 1;
+	    var mapId = mapCtrl.map.id || len;
+	    if (mapCtrl.map) {
+	      for (var eventName in mapCtrl.eventListeners) {
+	        void 0;
+	        var listener = mapCtrl.eventListeners[eventName];
+	        google.maps.event.removeListener(listener);
+	      }
+	      if (mapCtrl.map.controls) {
+	        mapCtrl.map.controls.forEach(function(ctrl) {
+	          ctrl.clear();
+	        });
+	      }
+	    }
+
+	    //Remove Heatmap Layers
+	    if (mapCtrl.map.heatmapLayers) {
+	      Object.keys(mapCtrl.map.heatmapLayers).forEach(function (layer) {
+	        mapCtrl.deleteObject('heatmapLayers', mapCtrl.map.heatmapLayers[layer]);
+	      });
+	    }
+
+	    delete mapControllers[mapId];
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function getGeoLocation
+	   * @param {String} address
+	   * @param {Hash} options geo options
+	   * @returns promise
+	   */
+	  var getGeoLocation = function(string, options) {
+	    var deferred = $q.defer();
+	    if (!string || string.match(/^current/i)) { // current location
+	      NavigatorGeolocation.getCurrentPosition(options).then(
+	        function(position) {
+	          var lat = position.coords.latitude;
+	          var lng = position.coords.longitude;
+	          var latLng = new google.maps.LatLng(lat,lng);
+	          deferred.resolve(latLng);
+	        },
+	        function(error) {
+	          deferred.reject(error);
+	        }
+	      );
+	    } else {
+	      GeoCoder.geocode({address: string}).then(
+	        function(results) {
+	          deferred.resolve(results[0].geometry.location);
+	        },
+	        function(error) {
+	          deferred.reject(error);
+	        }
+	      );
+	      // var geocoder = new google.maps.Geocoder();
+	      // geocoder.geocode(options, function (results, status) {
+	      //   if (status == google.maps.GeocoderStatus.OK) {
+	      //     deferred.resolve(results);
+	      //   } else {
+	      //     deferred.reject(status);
+	      //   }
+	      // });
+	    }
+
+	    return deferred.promise;
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function observeAndSet
+	   * @param {String} attrName attribute name
+	   * @param {Object} object A Google maps object to be changed
+	   * @returns attribue observe function
+	   */
+	  var observeAndSet = function(attrName, object) {
+	    void 0;
+	    return function(val) {
+	      if (val) {
+	        var setMethod = camelCaseFilter('set-'+attrName);
+	        var optionValue = Attr2MapOptions.toOptionValue(val, {key: attrName});
+	        if (object[setMethod]) { //if set method does exist
+	          void 0;
+	          /* if an location is being observed */
+	          if (attrName.match(/center|position/) &&
+	            typeof optionValue == 'string') {
+	            getGeoLocation(optionValue).then(function(latlng) {
+	              object[setMethod](latlng);
+	            });
+	          } else {
+	            object[setMethod](optionValue);
+	          }
+	        }
+	      }
+	    };
+	  };
+
+	  /**
+	   * @memberof NgMap
+	   * @function setStyle
+	   * @param {HtmlElement} map contriner element
+	   * @desc set display, width, height of map container element
+	   */
+	  var setStyle = function(el) {
+	    //if style is not given to the map element, set display and height
+	    var defaultStyle = el.getAttribute('default-style');
+	    if (defaultStyle == "true") {
+	      el.style.display = 'block';
+	      el.style.height = '300px';
+	    } else {
+	      if (getStyle(el, 'display') != "block") {
+	        el.style.display = 'block';
+	      }
+	      if (getStyle(el, 'height').match(/^(0|auto)/)) {
+	        el.style.height = '300px';
+	      }
+	    }
+	  };
+
+	  angular.module('ngMap').provider('NgMap', function() {
+	    var defaultOptions = {};
+
+	    /**
+	     * @memberof NgMap
+	     * @function setDefaultOptions
+	     * @param {Hash} options
+	     * @example
+	     *  app.config(function(NgMapProvider) {
+	     *    NgMapProvider.setDefaultOptions({
+	     *      marker: {
+	     *        optimized: false
+	     *      }
+	     *    });
+	     *  });
+	     */
+	    this.setDefaultOptions = function(options) {
+	      defaultOptions = options;
+	    };
+
+	    var NgMap = function(
+	        _$window_, _$document_, _$q_,
+	        _NavigatorGeolocation_, _Attr2MapOptions_,
+	        _GeoCoder_, _camelCaseFilter_
+	      ) {
+	      $window = _$window_;
+	      $document = _$document_[0];
+	      $q = _$q_;
+	      NavigatorGeolocation = _NavigatorGeolocation_;
+	      Attr2MapOptions = _Attr2MapOptions_;
+	      GeoCoder = _GeoCoder_;
+	      camelCaseFilter = _camelCaseFilter_;
+
+	      return {
+	        defaultOptions: defaultOptions,
+	        addMap: addMap,
+	        deleteMap: deleteMap,
+	        getMap: getMap,
+	        initMap: initMap,
+	        setStyle: setStyle,
+	        getGeoLocation: getGeoLocation,
+	        observeAndSet: observeAndSet
+	      };
+	    };
+	    NgMap.$inject = [
+	      '$window', '$document', '$q',
+	      'NavigatorGeolocation', 'Attr2MapOptions',
+	      'GeoCoder', 'camelCaseFilter'
+	    ];
+
+	    this.$get = NgMap;
+	  });
+	})();
+
+	/**
+	 * @ngdoc service
+	 * @name StreetView
+	 * @description
+	 *  Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+	 *  service for [Google StreetViewService]
+	 *  (https://developers.google.com/maps/documentation/javascript/streetview)
+	 */
+	(function() {
+	  'use strict';
+	  var $q;
+
+	  /**
+	   * Retrieves panorama id from the given map (and or position)
+	   * @memberof StreetView
+	   * @param {map} map Google map instance
+	   * @param {LatLng} latlng Google LatLng instance
+	   *   default: the center of the map
+	   * @example
+	   *   StreetView.getPanorama(map).then(function(panoId) {
+	   *     $scope.panoId = panoId;
+	   *   });
+	   * @returns {HttpPromise} Future object
+	   */
+	  var getPanorama = function(map, latlng) {
+	    latlng = latlng || map.getCenter();
+	    var deferred = $q.defer();
+	    var svs = new google.maps.StreetViewService();
+	    svs.getPanoramaByLocation( (latlng||map.getCenter), 100,
+	      function (data, status) {
+	        // if streetView available
+	        if (status === google.maps.StreetViewStatus.OK) {
+	          deferred.resolve(data.location.pano);
+	        } else {
+	          // no street view available in this range, or some error occurred
+	          deferred.resolve(false);
+	          //deferred.reject('Geocoder failed due to: '+ status);
+	        }
+	      }
+	    );
+	    return deferred.promise;
+	  };
+
+	  /**
+	   * Set panorama view on the given map with the panorama id
+	   * @memberof StreetView
+	   * @param {map} map Google map instance
+	   * @param {String} panoId Panorama id fro getPanorama method
+	   * @example
+	   *   StreetView.setPanorama(map, panoId);
+	   */
+	  var setPanorama = function(map, panoId) {
+	    var svp = new google.maps.StreetViewPanorama(
+	      map.getDiv(), {enableCloseButton: true}
+	    );
+	    svp.setPano(panoId);
+	  };
+
+	  var StreetView = function(_$q_) {
+	    $q = _$q_;
+
+	    return {
+	      getPanorama: getPanorama,
+	      setPanorama: setPanorama
+	    };
+	  };
+	  StreetView.$inject = ['$q'];
+
+	  angular.module('ngMap').service('StreetView', StreetView);
+	})();
+
+	return 'ngMap';
+	}));
 
 /***/ },
-/* 162 */
+/* 166 */
 /***/ function(module, exports) {
 
-	module.exports = "<form class=\"search-form\" novalidate>\r\n\t<ul>\r\n\t\t<li ng-repeat=\"selectGroup in $ctrl.activeSelectGroup\">\r\n\t\t\t<custom-select class=\"search-form__select\"\r\n\t\t\t\t\t\t   options=\"selectGroup\"\r\n\t\t\t\t\t\t   selected-option=\"$ctrl.activeSelects[$index]\"\r\n\t\t\t\t\t\t   custom-func=\"$ctrl.reInitActiveSelectGroups(newActiveSelect, index)\"\r\n\t\t\t\t\t\t   index=\"$index\"\r\n\t\t\t></custom-select>\r\n\t\t</li>\r\n\t</ul>\r\n\t<autocomplete value=\"$ctrl.searchAutocomplete.value\"\r\n\t\t\t\t  get-similar-value=\"$ctrl.searchAutocomplete.getSimilarValue\"\r\n\t\t\t\t  holder=\"$ctrl.searchAutocomplete.placeholder\"\r\n\t\t\t\t  class=\"search__autocomplete\"></autocomplete>\r\n\t<button type=\"submit\" ng-click=\"$ctrl.search()\">Найти</button>\r\n</form>"
+	(function() {
+	  var sharedScopeDefinition;
+
+	  sharedScopeDefinition = {
+	    handler: '&customHandler',
+	    socialWidth: '@',
+	    socialHeight: '@'
+	  };
+
+	  angular.module('socialLinks', []).factory('socialLinker', [
+	    '$window', '$location', function($window, $location) {
+	      return function(urlFactory) {
+	        return function(scope, element, attrs) {
+	          var getCurrentUrl, handler, popupWinAttrs;
+	          popupWinAttrs = "status=no, width=" + (scope.socialWidth || 640) + ", height=" + (scope.socialHeight || 480) + ", resizable=yes, toolbar=no, menubar=no, scrollbars=no, location=no, directories=no";
+	          getCurrentUrl = function() {
+	            return attrs.customUrl || $location.absUrl();
+	          };
+	          attrs.$observe('customUrl', function() {
+	            var url;
+	            url = urlFactory(scope, getCurrentUrl());
+	            if (element[0].nodeName === 'A' && ((attrs.href == null) || attrs.href === '')) {
+	              return element.attr('href', url);
+	            }
+	          });
+	          element.attr('rel', 'nofollow');
+	          handler = function(e) {
+	            var url, win;
+	            e.preventDefault();
+	            url = urlFactory(scope, getCurrentUrl());
+	            return win = $window.open(url, 'popupwindow', popupWinAttrs).focus();
+	          };
+	          if (attrs.customHandler != null) {
+	            element.on('click', handler = function(event) {
+	              var url;
+	              url = urlFactory(scope, getCurrentUrl());
+	              element.attr('href', url);
+	              return scope.handler({
+	                $event: event,
+	                $url: url
+	              });
+	            });
+	          } else {
+	            element.on('click', handler);
+	          }
+	          return scope.$on('$destroy', function() {
+	            return element.off('click', handler);
+	          });
+	        };
+	      };
+	    }
+	  ]).directive('socialFacebook', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          var shareUrl;
+	          shareUrl = ["https://facebook.com/sharer.php?"];
+	          shareUrl.push("u=" + (encodeURIComponent(url)));
+	          return shareUrl.join('');
+	        })
+	      };
+	    }
+	  ]).directive('socialTwitter', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: angular.extend({
+	          status: '@status'
+	        }, sharedScopeDefinition),
+	        link: linker(function(scope, url) {
+	          scope.status || (scope.status = "Check this out! - " + url);
+	          return "https://twitter.com/intent/tweet?text=" + (encodeURIComponent(scope.status));
+	        })
+	      };
+	    }
+	  ]).directive('socialGplus', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://plus.google.com/share?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialPinterest', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: angular.extend({
+	          media: '@media',
+	          description: '@description'
+	        }, sharedScopeDefinition),
+	        link: linker(function(scope, url) {
+	          return "http://pinterest.com/pin/create/button/?url=" + (encodeURIComponent(url)) + "&amp;media=" + (encodeURIComponent(scope.media)) + "&amp;description=" + (encodeURIComponent(scope.description));
+	        })
+	      };
+	    }
+	  ]).directive('socialStumbleupon', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://stumbleupon.com/submit?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialLinkedin', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://linkedin.com/shareArticle?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialReddit', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://www.reddit.com/submit?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialVk', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "http://vkontakte.ru/share.php?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialOk', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]).directive('socialXing', [
+	    'socialLinker', function(linker) {
+	      return {
+	        restrict: 'ACEM',
+	        scope: sharedScopeDefinition,
+	        link: linker(function(scope, url) {
+	          return "https://www.xing.com/spi/shares/new?url=" + (encodeURIComponent(url));
+	        })
+	      };
+	    }
+	  ]);
+
+	}).call(this);
+
 
 /***/ },
-/* 163 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38305,47 +43236,146 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var GoodsBlockController = function () {
-	    function GoodsBlockController() {
-	        (0, _classCallCheck3.default)(this, GoodsBlockController);
+	var ProductController = function () {
+	    function ProductController(NgMap) {
+	        (0, _classCallCheck3.default)(this, ProductController);
 
-	        //this.goodsData = goodsData.rentData;
-	        this.activeGroup = this.getActiveGroup();
+	        this.isHiddenAppNav = true;
+	        this.ngMap = NgMap;
+	        this.langServiceData = {
+	            more: 'Подробнее',
+	            bookmarks: 'В закладки',
+	            showMap: 'показать на карте',
+	            complain: 'пожаловаться',
+	            booking: 'Забронировать',
+	            or: 'или',
+	            showTel: 'показать номер',
+	            hideTel: 'скрыть номер'
+	        };
+
+	        this.sliderData = [{
+	            id: 0,
+	            slide: {
+	                src: 'img/product_slide_img.jpg'
+	            },
+	            thumb: {
+	                src: 'img/product_slider_control.jpg'
+	            }
+	        }, {
+	            id: 1,
+	            slide: {
+	                src: 'img/product_slider_control.jpg'
+	            },
+	            thumb: {
+	                src: 'img/product_slider_control.jpg'
+	            }
+	        }, {
+	            id: 2,
+	            slide: {
+	                src: 'img/product_slide_img.jpg'
+	            },
+	            thumb: {
+	                src: 'img/product_slider_control.jpg'
+	            }
+	        }, {
+	            id: 3,
+	            slide: {
+	                src: 'img/product_slider_control.jpg'
+	            },
+	            thumb: {
+	                src: 'img/product_slider_control.jpg'
+	            }
+	        }];
+
+	        this.activeSlide = this.sliderData[0];
 	    }
 
-	    (0, _createClass3.default)(GoodsBlockController, [{
-	        key: 'getActiveGroup',
-	        value: function getActiveGroup() {
-	            var arr = this.goodsData.goodsArr;
-
-	            for (var i = 0; i < arr.length; i++) {
-	                if (!arr[i].active) continue;
-
-	                return arr[i];
-	            }
-
-	            return arr[0];
+	    (0, _createClass3.default)(ProductController, [{
+	        key: 'setActiveSlide',
+	        value: function setActiveSlide(slide) {
+	            this.activeSlide = slide;
 	        }
 	    }]);
-	    return GoodsBlockController;
+	    return ProductController;
 	}();
 
-	var goodsBlockComponent = {
-	    bindings: {
-	        goodsData: '<'
-	    },
-	    template: __webpack_require__(164),
-	    controller: GoodsBlockController
+	var ProductComponent = {
+	    template: __webpack_require__(168),
+	    controller: ProductController
 	};
 
-	exports.default = goodsBlockComponent;
+	exports.default = ProductComponent;
 
 /***/ },
-/* 164 */
+/* 168 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"goods-nav\">\r\n\t<p>{{$ctrl.goodsData.title.toUpperCase()}}</p>\r\n\t<ul class=\"goods-menu\">\r\n\t\t<li ng-repeat=\"goodsGroup in $ctrl.goodsData.goodsArr\" ng-click=\"$ctrl.activeGroup = goodsGroup\"\r\n\t\t\tng-class=\"{'active': $ctrl.activeGroup === goodsGroup}\">\r\n\t\t\t{{goodsGroup.groupName}}\r\n\t\t</li>\r\n\t</ul>\r\n\t<a href=\"#\">Как сюда попасть?</a>\r\n</div>\r\n<div ng-repeat=\"goodsGroup in $ctrl.goodsData.goodsArr\" ng-if=\"$ctrl.activeGroup === goodsGroup\" class=\"link-box\">\r\n\t<div ng-repeat=\"goodsCard in goodsGroup.groupArr\">\r\n\t\t<a href=\"javascript:void(0)\">\r\n\t\t\t<img ng-src=\"{{goodsCard.img}}\" alt=\"{{goodsCard.imgTitle}}\">\r\n\t\t\t<p class=\"price\">{{goodsCard.price}} &#8381;</p>\r\n\t\t\t<p>{{goodsCard.name}}</p>\r\n\t\t\t<p class=\"place\">{{goodsCard.adress}}</p>\r\n\t\t\t<p>\r\n\t\t\t\t<span class=\"look\">{{goodsCard.lookCount}}</span>\r\n\t\t\t\t<span class=\"comment\">{{goodsCard.commentsCount}}</span>\r\n\t\t\t\t<span class=\"company-logo\">\r\n\t\t\t\t\t<img ng-src=\"{{goodsCard.traderImg}}\" alt=\"{{goodsCard.traderTitle}}\">\r\n\t\t\t\t</span>\r\n\t\t\t</p>\r\n\t\t</a>\r\n\t</div>\r\n</div>"
+	module.exports = "<navbar is-hidden-app=\"$ctrl.isHiddenAppNav\"></navbar>\r\n<search-advance></search-advance>\r\n\r\n    <section class=\"content\">\r\n        <div class=\"container container__white\">\r\n            <div class=\"product\">\r\n                <div>\r\n                    <p class=\"product__category heart-icon\">В прокат</p>\r\n                    <h4>Горный профессиональный велосипед двухподвес GT FURY</h4>\r\n                    <p class=\"product__grey\">г. Ростов-на-Дону, пр-т. Космонавтов, 17/1</p>\r\n                    <p class=\"product__price\">400 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n\r\n                    <div class=\"product__info\">\r\n                        <p># Общая информация:</p>\r\n                        <ul>\r\n                            <li><span>Тип техники:</span> <span>Велосипед</span></li>\r\n                            <li><span>Направление:</span> <span>Горный</span></li>\r\n                            <li><span>Цвет:</span> <span>Синий</span></li>\r\n                            <li><span>Размер:</span> <span>S</span></li>\r\n                            <li><span>Колеса:</span> <span>26’’</span></li>\r\n                            <li><span>Вилка:</span> <span>180 мм</span></li>\r\n                            <li><span>Аммортизатор:</span> <span>80 мм</span></li>\r\n                            <li><span>Кол-во скоростей:</span> <span>13</span></li>\r\n                            <li><span>Тормоза:</span> <span>Дисковые</span></li>\r\n                            <li><span>Система:</span> <span>С успокоителем</span></li>\r\n                            <li><span>Наличие:</span> <span>Есть</span></li>\r\n                        </ul>\r\n\r\n                    </div>\r\n\r\n                    <p class=\"product__grey product__about\">С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на\r\n                        даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен\r\n                        отступать перед большими трамплинами и самым сложным уклоном или рельефом... геометрия рамы и\r\n                        подвеска Fury Expert, проверенные и уже побеждавшие в каньонах Юты, превращают гравитацию из\r\n                        вашего соперника в партнера. Каждый компонент этого байка предназначен для бескомпромиссного и\r\n                        продолжительного катания в больших горах. С Fury Expert вы станете быстрее, храбрее, и счастливее.</p>\r\n\r\n                    <div class=\"booking__block\">\r\n                        <div class=\"booking__logo\">\r\n                            <img src=\"img/trader_logo_1.png\" alt=\"company logo\">\r\n                        </div>\r\n                        <div class=\"booking\">\r\n                            <a href=\"#\" class=\"booking-btn\">{{$ctrl.langServiceData.booking}}</a>\r\n                            <p class=\"booking__contacts\">\r\n                                <span ng-show=\"!$ctrl.showTel\">{{$ctrl.langServiceData.or}}</span>\r\n                                <a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" ng-show=\"!$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.showTel}}</a>\r\n                                <a ng-click=\"$ctrl.showTel = !$ctrl.showTel\" ng-show=\"$ctrl.showTel\" href=\"javascript:void(0)\">{{$ctrl.langServiceData.hideTel}}</a>\r\n                                <span class=\"booking__phone\" ng-show=\"$ctrl.showTel\"><a href=\"tel:+7234567890\">+7234567890</a></span>\r\n                            </p>\r\n\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n\r\n                <div>\r\n                    <div class=\"product__statistics\">\r\n                        <span class=\"visits\">Просмотров: всего 5520, за сегодня 213</span>\r\n                        <span class=\"accent fire-icon\">Выделение</span>\r\n                        <span class=\"accent diamond-small-icon\">Премиум</span>\r\n                        <span>сегодня, 11:00</span>\r\n                    </div>\r\n\r\n                    <div class=\"product__slider\">\r\n                        <div class=\"slide\">\r\n                            <img ng-repeat=\"slide in $ctrl.sliderData\" ng-if=\"$ctrl.activeSlide === slide\" ng-src=\"{{slide.slide.src}}\" alt=\"img\">\r\n                        </div>\r\n\r\n\r\n                        <div class=\"slide-control\" >\r\n                            <span ng-repeat=\"slide in $ctrl.sliderData\" ng-click=\"$ctrl.setActiveSlide(slide)\"><img ng-src=\"{{slide.thumb.src}}\" alt=\"slide-control\"></span>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                    <motion ng-repeat=\"motion in [0,1]\" class=\"product__banner\"></motion>\r\n\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <!--<div class=\"product__map\"></div>-->\r\n            <div map-lazy-load=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3hC07zDykGfQWp4D3xBuwpVX8nU2s9M\">\r\n                <ng-map center=\"[40.74, -74.18]\" class=\"product__map\">\r\n                    <marker position=\"[40.74, -74.18]\"></marker>\r\n                </ng-map>\r\n            </div>\r\n\r\n            <div class=\"product__social\">\r\n                <p>\r\n                    <span>Поделиться в</span>\r\n                    <a href=\"\" class=\"vk\" social-vk><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>\r\n                    <a href=\"\" class=\"fb\" social-facebook><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a>\r\n                    <a href=\"\" class=\"tw\" social-twitter><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>\r\n                </p>\r\n            </div>\r\n\r\n            <div class=\"product__more\">\r\n                <p class=\"product__more__title\">Похожие предложения</p>\r\n\r\n                <prod-offer ng-repeat=\"offer in [0,1,2,3,4]\" class=\"product__more__offer\"></prod-offer>\r\n            </div>\r\n\r\n        </div><!--container-->\r\n    </section>\r\n\r\n    <section class=\"pagefooter\">\r\n        <div class=\"container\">\r\n            <div class=\"regions\">\r\n                <ul>\r\n                    <li><a href=\"#\">Москва</a></li>\r\n                    <li><a href=\"#\">Санкт-Петербург</a></li>\r\n                    <li><a href=\"#\">Башкортостан</a></li>\r\n                    <li><a href=\"#\">Белгородская область</a></li>\r\n                    <li><a href=\"#\">Брянская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Ивановская область</a></li>\r\n                    <li><a href=\"#\">Иркутская область</a></li>\r\n                    <li><a href=\"#\">Калининградская область</a></li>\r\n                    <li><a href=\"#\">Калужская область</a></li>\r\n                    <li><a href=\"#\">Карелия</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Крым</a></li>\r\n                    <li><a href=\"#\">Липецкая область</a></li>\r\n                    <li><a href=\"#\">Марий Эл</a></li>\r\n                    <li><a href=\"#\">Нижегородская область</a></li>\r\n                    <li><a href=\"#\">Новгородская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Пензенская область</a></li>\r\n                    <li><a href=\"#\">Пермский край</a></li>\r\n                    <li><a href=\"#\">Псковская область</a></li>\r\n                    <li><a href=\"#\">Ростовская область</a></li>\r\n                    <li><a href=\"#\">Рязанская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Смоленская область</a></li>\r\n                    <li><a href=\"#\">Ставрапольский край</a></li>\r\n                    <li><a href=\"#\">Татарстан</a></li>\r\n                    <li><a href=\"#\">Тверская область</a></li>\r\n                    <li><a href=\"#\">Тульская область</a></li>\r\n                </ul>\r\n                <ul>\r\n                    <li><a href=\"#\">Ханты-Мансийский АО</a></li>\r\n                    <li><a href=\"#\">Челябинская область</a></li>\r\n                    <li><a href=\"#\">Ямало-Ненецкий АО</a></li>\r\n                    <li><a href=\"#\">Ярославская область</a></li>\r\n                </ul>\r\n            </div>\r\n            <a href=\"#\" class=\"show-more\"><span>Показать все регионы</span></a>\r\n        </div>\r\n    </section>"
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProdOfferController = function ProdOfferController() {
+	    (0, _classCallCheck3.default)(this, ProdOfferController);
+	};
+
+	var prodOfferComponent = {
+	    template: __webpack_require__(170),
+	    controller: ProdOfferController
+	};
+	exports.default = prodOfferComponent;
+
+/***/ },
+/* 170 */
+/***/ function(module, exports) {
+
+	module.exports = "<a href=\"#\">\r\n    <img src=\"img/product_more.jpg\" alt=\"img\">\r\n</a>\r\n<a href=\"#\">\r\n    <p class=\"product__more__goods-title\">Велосипед GT FURY ELITE</p>\r\n    <p>ул. Пушкинская 25А</p>\r\n    <p class=\"product__more__price\">350 <i class=\"fa fa-rub\" aria-hidden=\"true\"></i></p>\r\n</a>\r\n"
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(6);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MotionController = function MotionController() {
+	    (0, _classCallCheck3.default)(this, MotionController);
+	};
+
+	var motionComponent = {
+	    template: __webpack_require__(172),
+	    controller: MotionController
+	};
+	exports.default = motionComponent;
+
+/***/ },
+/* 172 */
+/***/ function(module, exports) {
+
+	module.exports = "<a href=\"#\">\r\n    <img src=\"img/product_banner.jpg\" alt=\"img\">\r\n</a>\r\n<a href=\"#\">\r\n    <p>Рама GT FURY ELITE</p>\r\n    <p>В сентябре выгода до 15000 руб. только у нас. Количество ограничено!</p>\r\n    <p>Тел.: <span>(495) 241-87-96</span></p>\r\n</a>"
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=appMain.f3acc35553bf8beee85f.js.map
+//# sourceMappingURL=appProd.c990e91de6d568bc6d93.js.map
