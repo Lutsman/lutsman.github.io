@@ -499,6 +499,10 @@ section, .container {
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0; }
+
 /* ----------------------------------------------
  Fonts Paragrahps
  ---------------------------------------------- */
@@ -1870,6 +1874,9 @@ footer {
   border-radius: 3px; }
   .goods-info:hover {
     background-color: #effdff; }
+    .goods-info:hover .hidden {
+      visibility: visible;
+      opacity: 1; }
   .goods-info .goods-info__contacts {
     position: relative; }
   .goods-info .goods-info__phone {
