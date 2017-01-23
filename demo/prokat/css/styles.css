@@ -436,6 +436,15 @@ textarea {
   font-style: normal;
   font-weight: normal; }
 
+/* Webfont: Lato-BoldItalic */
+@font-face {
+  font-family: 'LatoWebBoldItalic';
+  src: url(/demo/prokat/resources/fonts/Lato-BoldItalic.7b48d663230528ecb6dbf730251bbe44.eot);
+  /* IE9 Compat Modes */
+  src: url(/demo/prokat/resources/fonts/Lato-BoldItalic.7b48d663230528ecb6dbf730251bbe44.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-BoldItalic.0b6bb6725576b072c5d0b02ecdd1900d.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-BoldItalic.9c7e4e9eb485b4a121c760e61bc3707c.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-BoldItalic.71e8fd8ecaf5b352d6bee317985c2ee8.ttf) format("truetype");
+  font-style: italic;
+  font-weight: normal; }
+
 /* Webfont: Lato-Heavy */
 @font-face {
   font-family: 'LatoWebHeavy';
@@ -489,6 +498,10 @@ section, .container {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
+
+.hidden {
+  visibility: hidden;
+  opacity: 0; }
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -580,20 +593,19 @@ goods-block {
   float: left;
   width: 75%; }
 
-goods-block .ng-enter {
-  opacity: 0;
-  transition: all linear 0.5s; }
-
-goods-block .ng-enter.ng-enter-active {
-  opacity: 1; }
-
-search-advance form {
-  max-height: 300px;
-  transition: all linear 0.2s;
+search-advance form.ng-hide-remove {
+  animation: search-advance-show 0.2s linear;
   overflow: hidden; }
-  search-advance form.ng-hide {
-    max-height: 0;
-    padding: 0; }
+
+search-advance form.ng-hide-add {
+  animation: search-advance-hide 0.2s linear;
+  overflow: hidden; }
+
+search-advance form .category-list .ng-enter {
+  animation: fade-in 0.2s linear; }
+
+search-advance form .category-list .ng-leave {
+  display: none; }
 
 search-advance .close {
   display: block;
@@ -615,8 +627,10 @@ search-advance .close {
   -webkit-transform: translate3d(-50%, 0, 0);
   -o-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0); }
-  search-advance .close.ng-hide {
-    opacity: 0; }
+  search-advance .close.ng-hide-remove {
+    animation: fade-in 0.2s linear; }
+  search-advance .close.ng-hide-add {
+    animation: fade-out 0.2s linear; }
 
 category-goods-info .goods-info__prem {
   background-color: #fed493;
@@ -624,11 +638,57 @@ category-goods-info .goods-info__prem {
   category-goods-info .goods-info__prem:hover {
     background-color: #ffc96e; }
 
-@keyframes slideUp {
+.goods-info__contacts .ng-animate {
+  transition: none;
+  opacity: 0; }
+
+articles {
+  display: block; }
+  articles .content {
+    padding: 25px 0 0; }
+  articles .offers-box {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 75px; }
+    articles .offers-box:last-of-type {
+      margin-bottom: 0; }
+
+articles-block {
+  display: block;
+  margin-bottom: 23px; }
+  articles-block .link-box {
+    margin-bottom: 6px; }
+
+/*search-advance slide*/
+@keyframes search-advance-show {
   from {
-    height: 70px; }
+    max-height: 0;
+    padding: 0; }
   to {
-    height: 0; } }
+    max-height: 300px;
+    padding: 19px 0; } }
+
+@keyframes search-advance-hide {
+  from {
+    max-height: 300px;
+    padding: 19px 0; }
+  to {
+    max-height: 0;
+    padding: 0; } }
+
+/*fade*/
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 
 #maket {
   position: absolute;
@@ -680,6 +740,21 @@ category-goods-info .goods-info__prem {
   text-align: center;
   background-color: #008adf;
   border: 2px solid #008adf;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .booking-btn:hover {
+    background-color: rgba(0, 138, 223, 0.66);
+    border-color: rgba(0, 138, 223, 0); }
+
+.load-more-btn {
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #b7b7b7;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
@@ -815,7 +890,7 @@ nav a {
       opacity: 0;
       width: 100%;
       height: 3px;
-      background-color: #c45a5f;
+      background-color: #eb3c55;
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       -o-transition: all 0.2s ease-in-out;
@@ -826,7 +901,7 @@ nav a {
 
 .user-data {
   float: right;
-  margin-top: 14px;
+  margin-top: 12px;
   font-size: 14px;
   letter-spacing: 0.2px; }
   .user-data span, .user-data a {
@@ -845,6 +920,7 @@ nav a {
     margin-left: 25px; }
     .user-data span::before {
       left: -20px;
+      margin-top: 1px;
       width: 15px;
       height: 14px;
       background-position: 0 0; }
@@ -853,6 +929,7 @@ nav a {
     .user-data a::before {
       left: -19px;
       width: 14px;
+      margin-top: 1px;
       height: 14px;
       background-position: -64px 0; }
 
@@ -876,12 +953,50 @@ nav a {
   color: #fff;
   background-image: url(/demo/prokat/resources/img/bg_headercd93849b7948baa98d506e5604e87494.jpg);
   background-size: cover;
-  background-position: center bottom;
-  z-index: 3; }
+  background-position: center bottom; }
   .pageheader h1 {
     margin: 162px 0 23px 120px;
     letter-spacing: 1px;
-    text-shadow: -6px 0.7px 9.5px rgba(81, 81, 81, 0.6); }
+    text-shadow: 0 0.7px 9.5px rgba(0, 0, 0, 0.6); }
+  .pageheader .search__autocomplete ul {
+    max-width: 275px; }
+
+.articles__pageheader {
+  height: 590px;
+  background-image: url(/demo/prokat/resources/img/articles-pageheader52e4c6aea66b78ccb89fb5c35d737c33.jpg); }
+
+.articles__title {
+  width: 590px;
+  margin: 130px auto 0;
+  font: 38px "PF DIN Display Pro Bold";
+  line-height: 38px;
+  text-align: center;
+  text-shadow: -6px 1px 10px rgba(81, 81, 81, 0.6); }
+  .articles__title h1 {
+    margin: 0;
+    font: 59px "PF DIN Display Pro Bold";
+    line-height: 60px;
+    text-shadow: -6px 1px 10px rgba(81, 81, 81, 0.6); }
+  .articles__title .read-more {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    font: 18px "LatoWebBoldItalic";
+    text-align: center; }
+    .articles__title .read-more::before, .articles__title .read-more::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 35%;
+      height: 3px;
+      margin-top: -1px;
+      background-color: #fff; }
+    .articles__title .read-more::before {
+      left: 0; }
+    .articles__title .read-more::after {
+      right: 0; }
 
 .search-form {
   position: relative;
@@ -912,9 +1027,15 @@ nav a {
     font: 25px "LatoWebSemibold";
     color: #fff;
     background-color: #f6870d;
-    -moz-border-radius: 0 3px 3px 0;
-    -webkit-border-radius: 0 3px 3px 0;
-    border-radius: 0 3px 3px 0; }
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .search-form button:hover {
+      background-color: #d0720b; }
   .search-form > ul li:first-of-type .search-form__select > a {
     -moz-border-radius: 5px 0 0 5px;
     -webkit-border-radius: 5px 0 0 5px;
@@ -922,12 +1043,13 @@ nav a {
 
 .search-form__select > a {
   height: 62px;
+  font-family: "LatoWebThin";
   padding: 20px 40px 20px 25px;
   font-size: 18px;
   color: #898989;
   line-height: 22px;
   background-color: rgba(255, 255, 255, 0.95);
-  border-right: 4px solid rgba(182, 182, 182, 0.35); }
+  border-right: 1px solid rgba(182, 182, 182, 0.35); }
   .search-form__select > a::before {
     content: '';
     display: block;
@@ -976,6 +1098,7 @@ nav a {
     box-shadow: 0 0 13px rgba(81, 81, 81, 0.41); }
   .search-form__select ul li {
     float: none;
+    font-family: "LatoWebThin";
     padding: 0 25px;
     line-height: 24px;
     font-size: 17px;
@@ -985,7 +1108,7 @@ nav a {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
     .search-form__select ul li:hover {
-      color: #3d3d3d; }
+      color: #464545; }
 
 .search-form__select .active {
   -moz-border-radius: 0 !important;
@@ -1012,9 +1135,9 @@ nav a {
     top: 100%;
     left: 0;
     width: 100%;
-    max-width: 275px;
     padding: 0;
     font-size: 17px;
+    font-family: "LatoWebThin";
     background-color: rgba(255, 255, 255, 0.95);
     -moz-border-radius: 0 0 5px 5px;
     -webkit-border-radius: 0 0 5px 5px;
@@ -1047,12 +1170,13 @@ nav a {
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
-    .search__autocomplete li:hover, .search__autocomplete li:hover span {
-      color: #3d3d3d; }
     .search__autocomplete li span {
       font-family: "LatoWebThin"; }
+    .search__autocomplete li:hover, .search__autocomplete li:hover span {
+      color: #3d3d3d; }
   .search__autocomplete input {
     position: relative;
+    font-family: "LatoWebThin";
     z-index: 3;
     width: 460px;
     height: 62px;
@@ -1080,7 +1204,7 @@ nav a {
 footer {
   height: 89px;
   padding: 30px 0 25px;
-  font-family: "LatoWebLight";
+  font-family: "LatoWebThin";
   color: #fff;
   background-color: #384856;
   -moz-box-shadow: -6px 0.7px 9.5px 1.5px rgba(81, 81, 81, 0.6);
@@ -1143,13 +1267,14 @@ footer {
 
 .pagefooter {
   padding-top: 35px;
-  font-family: "PF DIN Display Pro Light"; }
+  font-family: "LatoWebThin";
+  font-size: 15px;
+  color: #737373; }
   .pagefooter h3 {
-    font-family: "LatoWebBold";
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    font-family: "LatoWebBold"; }
   .pagefooter p {
-    margin-bottom: 30px;
-    font-weight: 300; }
+    margin-bottom: 30px; }
   .pagefooter .info-us {
     margin: 55px 0 45px; }
 
@@ -1180,8 +1305,8 @@ footer {
     right: 0;
     width: 6px;
     height: 6px;
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
+    border-top: 1px solid #737373;
+    border-right: 1px solid #737373;
     -ms-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
@@ -1204,13 +1329,12 @@ footer {
   border-bottom: 1px solid #e7e7e7; }
 
 .footer-menu {
-  margin-top: 16px;
-  color: #737373; }
+  margin-top: 16px; }
   .footer-menu a {
     margin: 0 8px 0 9px;
-    text-decoration: underline; }
+    text-decoration: none; }
     .footer-menu a:hover {
-      text-decoration: none; }
+      text-decoration: underline; }
     .footer-menu a:last-of-type {
       margin-right: 0; }
 
@@ -1219,10 +1343,10 @@ footer {
  ---------------------------------------------- */
 .category {
   padding-top: 30px;
-  font: 18px "LatoWebBold";
+  font: 18px "LatoWebLight";
   color: #fff;
   letter-spacing: 0.5px;
-  line-height: 20px;
+  line-height: 18px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); }
   .category h2 {
     margin-bottom: 25px;
@@ -1231,6 +1355,9 @@ footer {
     margin-bottom: 7px; }
     .category li span {
       margin-left: 5px; }
+    .category li:hover {
+      color: #eb3c55;
+      margin-bottom: 7px; }
 
 .category-big, .category-small {
   position: relative;
@@ -1345,11 +1472,11 @@ footer {
   .goods-nav > a {
     float: right;
     font: 13px "LatoWebSemibold";
-    color: #f15c60;
-    -webkit-transition: all 5s ease-in-out;
-    -moz-transition: all 5s ease-in-out;
-    -o-transition: all 5s ease-in-out;
-    transition: all 5s ease-in-out; }
+    color: #eb3c55;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
     .goods-nav > a:hover {
       text-decoration: underline; }
 
@@ -1364,22 +1491,26 @@ footer {
     border-bottom: 2px solid transparent; }
     .goods-menu li.active, .goods-menu li:hover {
       color: #000;
-      border-bottom-color: rgba(211, 92, 96, 0.9); }
+      border-bottom-color: #eb3c55; }
     .goods-menu li + li {
       margin-left: 6px; }
 
 .link-box {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   font: 14px "PF DIN Display Pro Light"; }
   .link-box > div {
     float: left;
     width: 302px;
     position: relative;
-    z-index: 2; }
-    .link-box > div + div {
-      margin-left: 4px; }
+    z-index: 2;
+    margin-right: 4px;
+    margin-bottom: 5px; }
+    .link-box > div:nth-of-type(3n) {
+      margin-right: 0; }
   .link-box .big-link {
     width: 608px; }
+    .link-box .big-link + div {
+      margin-right: 0; }
     .link-box .big-link p:last-of-type {
       margin-top: 13px; }
     .link-box .big-link p:nth-of-type(3) {
@@ -1402,7 +1533,7 @@ footer {
       box-shadow: 0 0 9.5px 1.5px rgba(81, 81, 81, 0.6); }
   .link-box p {
     padding: 0 20px; }
-  .link-box .link-box__link-info-absolute {
+  .link-box .link-box__link-info {
     position: absolute;
     z-index: 2;
     bottom: 15px;
@@ -1431,41 +1562,43 @@ footer {
       z-index: 2;
       top: 0;
       left: 20px;
-      width: 15px;
-      height: 19px;
+      width: 16px;
+      height: 20px;
       background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
-      background-position: -256px 0; }
-  .link-box .look {
+      background-position: -256px 1px; }
+  .link-box .look, .link-box .comment, .link-box .like {
+    display: inline-block;
     position: relative;
     z-index: 2;
-    padding-left: 26px;
-    margin-right: 15px; }
-    .link-box .look::before {
+    margin-right: 15px;
+    line-height: 16px; }
+    .link-box .look::before, .link-box .comment::before, .link-box .like::before {
       content: '';
       display: block;
       position: absolute;
       z-index: 2;
       top: 0;
       left: 0;
-      width: 22px;
-      height: 14px;
-      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
-      background-position: -320px 0; }
+      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
+  .link-box .look {
+    padding-left: 26px; }
+    .link-box .look::before {
+      top: 1px;
+      width: 23px;
+      height: 16px;
+      background-position: -319px 0; }
   .link-box .comment {
-    position: relative;
-    z-index: 2;
     padding-left: 20px; }
     .link-box .comment::before {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
       width: 16px;
       height: 14px;
-      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
       background-position: -192px 0; }
+  .link-box .like {
+    padding-left: 18px; }
+    .link-box .like::before {
+      width: 14px;
+      height: 14px;
+      background-position: -128px 0; }
   .link-box .company-logo {
     display: block;
     float: right;
@@ -1480,6 +1613,11 @@ footer {
     padding-top: 0;
     margin-bottom: 7px;
     line-height: 30px; }
+  .goods-block .ng-enter {
+    opacity: 0;
+    transition: all linear 0.5s; }
+  .goods-block .ng-enter.ng-enter-active {
+    opacity: 1; }
 
 .offers-box {
   float: left;
@@ -1518,7 +1656,7 @@ footer {
   .offers-box .more {
     margin-top: 15px;
     font: 13px "LatoWebSemibold";
-    color: #f15c60; }
+    color: #eb3c55; }
     .offers-box .more:hover {
       text-decoration: underline; }
 
@@ -1543,22 +1681,33 @@ footer {
     margin-top: 15px;
     color: #485663;
     border: 2px solid #485663; }
+    .user-opening .btn:hover {
+      padding: 3px 7px;
+      margin-top: 15px;
+      color: #eb3c55;
+      border: 2px solid #eb3c55; }
   .user-opening .diamond-icon .btn {
-    color: #f15c60;
-    border-color: #f15c60; }
+    color: #eb3c55;
+    border-color: #eb3c55; }
 
 .search-conditions {
   padding: 38px 0 0;
   margin-bottom: 30px;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 3; }
   .search-conditions h2 {
     margin-bottom: 10px;
-    letter-spacing: 0.5px; }
+    letter-spacing: 0.5px;
+    font-family: "LatoWeb"; }
   .search-conditions .btn {
     padding: 6px 5px;
     color: #56697a;
     letter-spacing: 0.5px;
-    border-color: #4c697c; }
+    border: 2px solid #485663;
+    font-size: 15px; }
+    .search-conditions .btn:hover {
+      color: rgba(72, 86, 99, 0.72);
+      border-color: rgba(72, 86, 99, 0.72); }
     .search-conditions .btn + .btn {
       margin-left: 10px; }
   .search-conditions .container > div:first-of-type {
@@ -1592,28 +1741,38 @@ footer {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
   .category-form button[type="submit"] {
+    font-size: 14px;
     color: #fff;
-    background-color: #f15c60; }
+    background-color: #eb3c55; }
+    .category-form button[type="submit"]:hover {
+      background-color: rgba(235, 60, 85, 0.73); }
   .category-form button[type="reset"] {
     margin-left: 12px;
-    color: #d35c60;
+    font-size: 14px;
+    color: #eb3c55;
     background-color: #fff; }
   .category-form .number-offers {
-    float: right; }
+    float: right;
+    font-size: 14px; }
   .category-form .search__autocomplete {
-    float: none; }
+    float: none;
+    display: inline-block;
+    margin-bottom: 32px; }
   .category-form .adress input {
     width: 488px;
-    height: 41px;
-    padding: 10px;
-    margin-bottom: 32px;
-    color: #c8c8c8; }
+    height: 29px;
+    padding: 0 10px;
+    color: #c8c8c8;
+    font-family: "LatoWebLight";
+    font-size: 14px; }
   .category-form .search-criterion {
     float: right;
     padding: 10px 5px 10px 0; }
     .category-form .search-criterion p {
       float: left;
-      margin-right: 15px; }
+      margin-right: 9px;
+      font: 14px "LatoWebLight";
+      line-height: 20px; }
   .category-form input[type="radio"] {
     display: none; }
     .category-form input[type="radio"]:checked + .radio-label::after {
@@ -1625,7 +1784,8 @@ footer {
     z-index: 2;
     padding-left: 33px;
     margin-left: 10px;
-    line-height: 21px;
+    line-height: 16px;
+    font: 14px "LatoWebLight";
     cursor: pointer; }
     .category-form .radio-label::before, .category-form .radio-label::after {
       content: '';
@@ -1633,8 +1793,8 @@ footer {
       position: absolute;
       top: 0;
       left: 0;
-      width: 21px;
-      height: 21px;
+      width: 17px;
+      height: 17px;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%;
@@ -1645,8 +1805,8 @@ footer {
       background-color: #fff;
       border: 1px solid #b5b5b5; }
     .category-form .radio-label::after {
-      background-color: #f15c60;
-      border: 1px solid #f15c60;
+      background-color: #eb3c55;
+      border: 1px solid #eb3c55;
       opacity: 0;
       visibility: hidden;
       -webkit-transition: all 0.2s ease-in-out 0s;
@@ -1659,6 +1819,7 @@ footer {
   display: inline-block;
   height: 29px;
   padding: 0 22px;
+  font: 14px "LatoWebLight";
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1672,7 +1833,7 @@ footer {
     border-bottom: 1px dashed #b5b5b5; }
   .category-list li:hover {
     color: #fff;
-    background-color: #f15c60; }
+    background-color: rgba(171, 171, 171, 0.35); }
     .category-list li:hover span {
       border-bottom-color: transparent; }
   .category-list li + li {
@@ -1680,12 +1841,13 @@ footer {
 
 .category-list .active {
   color: #fff;
-  background-color: #f15c60; }
+  background-color: #ababab; }
   .category-list .active span {
     border-bottom-color: transparent; }
 
 .choose-price {
-  margin-left: 155px; }
+  margin-left: 155px;
+  font: 14px "LatoWebLight"; }
   .choose-price input {
     width: 135px;
     height: 29px;
@@ -1707,10 +1869,10 @@ footer {
 
 .top-line {
   margin: 0 0 20px;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  font-family: "LatoWebLight"; }
   .top-line span {
-    margin-right: 5px;
-    font-family: "LatoWebBold"; }
+    margin-right: 5px; }
   .top-line a {
     float: right;
     margin-left: 20px;
@@ -1718,7 +1880,7 @@ footer {
     .top-line a:hover {
       border-bottom-color: rgba(211, 92, 96, 0.9); }
   .top-line .active {
-    border-bottom-color: rgba(211, 92, 96, 0.9); }
+    border-bottom-color: #eb3c55; }
 
 .goods-info {
   height: 242px;
@@ -1732,25 +1894,64 @@ footer {
   border-radius: 3px; }
   .goods-info:hover {
     background-color: #effdff; }
+    .goods-info:hover .hidden {
+      visibility: visible;
+      opacity: 1; }
   .goods-info .goods-info__contacts {
     position: relative; }
   .goods-info .goods-info__phone {
+    display: block;
     position: absolute;
     top: 180%;
-    left: 39px; }
+    left: 0;
+    width: 100%; }
+    .goods-info .goods-info__phone a {
+      border-bottom: none !important; }
+  .goods-info .goods-info__links, .goods-info .add-time {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 30px;
+    width: 100%; }
   .goods-info h5 {
-    margin: 12px 0 6px; }
+    margin: 12px 0 6px;
+    font: 16px "LatoWeb"; }
   .goods-info p {
-    margin-bottom: 17px; }
+    margin-bottom: 17px;
+    font: 13px "LatoWebLight"; }
   .goods-info a {
     font: 16px "LatoWeb"; }
+  .goods-info .btn {
+    font-size: 13px;
+    padding: 2px 10px;
+    width: 134px;
+    text-align: center;
+    font-family: "LatoWebLight";
+    margin-left: 13px;
+    color: rgba(84, 84, 84, 0.62);
+    border: 1px solid rgba(84, 84, 84, 0.62);
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    border-radius: 13px; }
+    .goods-info .btn:hover {
+      color: #545454;
+      border-color: #545454; }
+  .goods-info .btn-red {
+    color: rgba(235, 60, 85, 0.48);
+    border-color: rgba(235, 60, 85, 0.48); }
+    .goods-info .btn-red:hover {
+      color: #eb3c55;
+      border-color: #eb3c55; }
   .goods-info > img {
     float: left;
     max-width: 350px;
     margin-right: 40px; }
   .goods-info > div {
+    position: relative;
+    z-index: 2;
     float: left;
-    width: 590px; }
+    width: 590px;
+    height: 220px; }
     .goods-info > div:last-of-type {
       width: 203px;
       margin-left: 15px; }
@@ -1766,13 +1967,15 @@ footer {
     font: 16px "LatoWebSemibold"; }
   .goods-info .more {
     margin: 0 10px;
-    color: #2b87db; }
+    color: #008adf; }
   .goods-info .bookmarks {
     position: relative;
     z-index: 2;
+    display: inline-block;
     padding-left: 20px;
     margin: 0 10px;
-    color: #ce4a4e; }
+    color: #eb3c55;
+    line-height: 16px; }
     .goods-info .bookmarks::before {
       content: '';
       display: block;
@@ -1793,16 +1996,16 @@ footer {
       color: #010101;
       text-align: center; }
       .goods-info .booking-btn + p a {
-        font: 13px "LatoWebLight";
+        font-size: 13px;
         border-bottom: 1px dashed #000; }
         .goods-info .booking-btn + p a:hover {
           border-bottom-color: transparent; }
   .goods-info .add-time {
-    position: relative;
-    z-index: 2;
+    margin-bottom: 0;
     font: 12px "LatoWebLight";
     text-align: right;
-    letter-spacing: 0.5px; }
+    letter-spacing: 0.5px;
+    line-height: 23px; }
     .goods-info .add-time::before, .goods-info .add-time::after {
       content: '';
       display: block;
@@ -1823,9 +2026,65 @@ footer {
       background-position: -448px 0; }
 
 .banner {
+  position: relative;
+  z-index: 2;
   height: 402px;
   margin: 12px 0;
-  border: 1px solid #f4f4f4; }
+  border: 1px solid #f4f4f4;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .banner.ng-leave {
+    height: 402px;
+    margin: 12px 0; }
+  .banner.ng-leave-active {
+    height: 0;
+    margin: 0; }
+  .banner .close {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(153, 153, 153, 0.8);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer; }
+    .banner .close:hover {
+      background-color: #999999; }
+    .banner .close::after, .banner .close::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-top: 3px solid #fff;
+      border-right: 3px solid #fff; }
+    .banner .close::before {
+      left: 6px;
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .banner .close::after {
+      right: 6px;
+      -ms-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg); }
 
 .pages-list {
   height: 122px;
@@ -1889,7 +2148,7 @@ footer {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(211, 92, 96, 0.9);
+    background-color: #eb3c55;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -1897,10 +2156,15 @@ footer {
   .pages-list .btn {
     padding: 0 3px;
     margin-left: 42px;
-    font-size: 14px;
-    color: #000;
+    font-size: 13px;
+    color: rgba(84, 84, 84, 0.62);
     line-height: 24px;
-    letter-spacing: 0.4px; }
+    letter-spacing: 0.4px;
+    border-color: rgba(84, 84, 84, 0.62);
+    cursor: pointer; }
+    .pages-list .btn:hover {
+      color: #545454;
+      border-color: #545454; }
 
 .add-offer-content {
   padding: 28px 0 0; }
@@ -2233,11 +2497,33 @@ footer {
         border-bottom: 1px dashed #000; }
         .booking__block .booking-btn + p a:hover {
           border-bottom-color: transparent; }
+        .booking__block .booking-btn + p a.ng-hide-remove {
+          animation: fade-in 0.2s linear; }
+        .booking__block .booking-btn + p a.ng-hide-add {
+          display: none; }
 
 .booking__logo {
   line-height: 49px; }
   .booking__logo img {
     vertical-align: middle; }
+
+.booking__contacts {
+  position: relative;
+  z-index: 2; }
+
+.booking__phone {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  top: 80%;
+  left: 0;
+  width: 100%; }
+  .booking__phone a {
+    border-bottom: none !important; }
+  .booking__phone.ng-hide-remove {
+    animation: fade-in 0.2s linear; }
+  .booking__phone.ng-hide-add {
+    display: none; }
 
 .product__statistics {
   margin-bottom: 20px;
@@ -2260,7 +2546,19 @@ footer {
     padding-left: 22px; }
 
 .product__slider .slide {
-  height: 346px; }
+  position: relative;
+  z-index: 2;
+  height: 346px;
+  overflow: hidden; }
+  .product__slider .slide img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0; }
+    .product__slider .slide img.ng-enter {
+      animation: fade-in 0.3s linear; }
+    .product__slider .slide img.ng-leave {
+      animation: fade-out 0.3s linear; }
 
 .product__slider .slide-control {
   margin: 5px 0 20px; }
@@ -2276,6 +2574,7 @@ footer {
 .product__banner {
   position: relative;
   z-index: 2;
+  display: block;
   height: 101px;
   padding: 10px;
   margin-bottom: 20px;
@@ -2304,7 +2603,7 @@ footer {
 
 .product__map {
   width: 100%;
-  height: 450px;
+  height: 450px !important;
   margin-bottom: 20px;
   background-image: url(/demo/prokat/resources/img/product_mapade189dbc061ecaeaee6e9ccd65724da.jpg);
   background-size: cover; }
@@ -2322,7 +2621,7 @@ footer {
     width: 41px;
     height: 41px;
     margin-left: 10px;
-    font-size: 26px;
+    font-size: 21px;
     color: #fff;
     text-align: center;
     -moz-border-radius: 50%;
@@ -2337,13 +2636,13 @@ footer {
 
 .product__more {
   font: 12px "LatoWebLight"; }
-  .product__more > div {
+  .product__more .product__more__offer {
     float: left;
     width: 180px;
     margin-bottom: 10px; }
-    .product__more > div + div {
+    .product__more .product__more__offer + .product__more__offer {
       margin-left: 56px; }
-    .product__more > div p {
+    .product__more .product__more__offer p {
       margin-bottom: 5px; }
   .product__more img {
     margin-bottom: 10px; }
