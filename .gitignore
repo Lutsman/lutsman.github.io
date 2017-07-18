@@ -1,4 +1,4 @@
 /.idea/
 *Thumbs.db
-.idea/jsLibraryMappings.xml
-.idea/vcs.xml
+/node_modules/
+/dist/

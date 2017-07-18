@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/slick.min.css">
+    <link rel="stylesheet" href="/css/slick-theme.min.css">
+    <link rel="stylesheet" href="/css/jquery.mmenu.min.css">
+    <link rel="stylesheet" href="/css/jquery.mmenu.themes.min.css">
+    <link rel="stylesheet" href="/css/lightbox.min.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="/css/styles.min.css">
+
+    <!--Script-->
+    <script src="/js/firstLoad.min.js" async></script>
+</head>
+<body>
+
+<div class="page-wrap">
+    <section id="home" class="home screen-height">
+        <div class="home-overlay"></div> <!-- Накладываем на фоновую картинку затемнение и текстуру -->
+        <div class="intro">
+            <p>Привет, нас зовут Дмитрий Луценко и Евгения Омельченко и мы</p>
+            <h1>Front end разработчики</h1>
+            <p>создание современных web-приложений</p>
+        </div><!--intro-->
+
+        <a href="#portfolio">
+            <div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+            </div>
+        </a>
+
+    </section><!--home-->
+
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="container">
+                <ul class="top-menu">
+                    <li><a href="#home" data-translation="0">Главная</a></li>
+                    <li><a href="#portfolio">Наши работы</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div><!-- .container -->
+        </nav>
+        <nav id="m-menu-btn-wrapper" class="Fixed">
+            <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </nav>
+        <nav id="m-menu"> <!-- mobile menu -->
+            <ul>
+                <li><a href="#home" data-translation="0">Главная</a></li>
+                <li><a href="#portfolio">Наши работы</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav><!-- mobile menu -->
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Наши работы</h2>
+
+            <div class="slider">
+                <div class="slider__block">
+                    <h3>Клинкерные термопанели</h3>
+                    <img src="/images/thermo_slide.jpg" alt="Клинкерные термопанели">
+                    <p><a href="http://lookmyportfolio.com.ua/demo/thermo/index.html" target="_blank">lookmyportfolio.com.ua/demo/thermo</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Прием цветных металлов</h3>
+                    <img src="/images/metals_slide.jpg" alt="Прием цветных металлов">
+                    <p><a href="http://lookmyportfolio.com.ua/demo/metals/index.html" target="_blank">lookmyportfolio.com.ua/demo/metals</a></p>
+                </div>
+                <div class="slider__block">
+                    <h3>Продажа ворот</h3>
+                    <img src="/images/gates_slide.jpg" alt="Продажа ворот">
+                    <p><a href="http://lookmyportfolio.com.ua/demo/gates/index.html" target="_blank">lookmyportfolio.com.ua/demo/gates</a></p>
+                </div>
+				<div class="slider__block">
+					<h3>Меховое Ателье "Соболиный иней"</h3>
+					<img src="/images/atelier_slide.jpg" alt="Меховое Ателье">
+					<p><a href="http://lookmyportfolio.com.ua/demo/atelier/index.html" target="_blank">lookmyportfolio.com.ua/demo/atelier</a></p>
+				</div>
+				<div class="slider__block">
+					<h3>Салон красоты "БиОЛа"</h3>
+					<img src="/images/biola_slide.jpg" alt="Салон красоты">
+					<p><a href="http://lookmyportfolio.com.ua/demo/biola/index.html" target="_blank">lookmyportfolio.com.ua/demo/biola</a></p>
+				</div>
+                <div class="slider__block">
+                    <h3>Meeting.lv</h3>
+                    <img src="/images/meeting_slide.jpg" alt="Meeting.lv">
+                    <p><a href="http://www.meeting.lv" target="_blank">meeting.lv</a></p>
+                </div>
+            </div><!--slider-->
+
+        </div><!-- .container -->
+    </section><!--portfolio-->
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Навыки</h2>
+
+            <div>
+                <div class="skill__block">
+                    <p class="title">HTML 5</p>
+                    <span data-percent="90" class="chart easyPieChart">
+                        <span class="percent">90%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">CSS 3</p>
+                    <span data-percent="90" class="chart easyPieChart">
+                        <span class="percent">90%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">SASS / SCSS</p>
+                    <span data-percent="75" class="chart easyPieChart">
+                        <span class="percent">75%</span>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="skill__block">
+                    <p class="title">JavaScript</p>
+                    <span data-percent="85" class="chart easyPieChart">
+                        <span class="percent">85%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">JQuery</p>
+                    <span data-percent="70" class="chart easyPieChart">
+                        <span class="percent">70%</span>
+                    </span>
+                </div>
+                <div class="skill__block">
+                    <p class="title">Photoshop</p>
+                    <span data-percent="50" class="chart easyPieChart">
+                        <span class="percent">50%</span>
+                    </span>
+                </div>
+            </div>
+
+        </div><!-- .container -->
+    </section><!--skills-->
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+
+            <figure>
+                <img src="/images/dima.jpg" alt="Дмитрий фото">
+                <figcaption class="title">Дмитрий Луценко</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/jenya.jpg" alt="Евгения фото">
+                <figcaption class="title">Евгения Омельченко</figcaption>
+            </figure>
+            <div class="about__content">
+                <p class="about__intro">Здравствуйте. Меня зовут Дмитрий Луценко, мою спутницу жизни Евгения Омельченко.</p>
+                <p>Мы любим красивые веб сайты, а также путешествовать, бывать в новых местах, часто ездить. Поэтому
+                    решили заниматься front end разработкой. Последние полтора года мы занимаемся версткой сайтов из
+                    PSD, PNG, скетчей.</p>
+                <p>Знаем HTML5, CSS3, Sass, Js, jQuery, понимаем ООП,  знаем о ES6.</p>
+                <p>С примерами наших работ вы можете ознакомиться в разделе <a class="link" href="#portfolio">портфолио</a> или посмотреть исходники на <a class="link" href="https://github.com/Lutsman/lutsman.github.io">GitHub</a>.</p>
+            </div>
+            <div class="about__info">
+                <p class="title">Прошли курсы:</p>
+                <ul>
+                    <li class="courses"><a class="link" target="_blank" href="http://www.codecademy.com">www.codecademy.com</a>
+                        <ul>
+                            <li>HTML & CSS</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                        </ul>
+                    </li>
+                    <li class="courses"><a class="link" target="_blank" href="http://www.specialist.ru">www.specialist.ru</a>
+                        <ul>
+                            <li>Adobe Photoshop CS6</li>
+                        </ul>
+                    </li>
+                    <li class="courses"><a class="link" target="_blank" href="http://learn.javascript.ru">learn.javascript.ru</a>
+                        <ul>
+                            <li>JavaScript <a href="#" data-jslghtbx="images/certificate_JS.jpg">(Сертификат)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- .container -->
+    </section><!--about-->
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+
+            <form id="contacts-form" method="post" action="/mail/mailer.php">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="email" name="email" placeholder="Почта*" required="">
+                <textarea name="message" cols="30" rows="10" placeholder="Сообщение*" required=""></textarea>
+                <input type="submit">
+
+                <div class="pend-block hidden">
+                    <img src="/service_img/Intersection.gif" alt="loader_gif">
+                    <p>Отправляем...</p>
+                </div>
+                <div class="succ-block hidden">
+                    <p>Отправили!</p>
+                </div>
+                <div class="err-block hidden">
+                    <p>Что-то пошло не так...</p>
+                </div>
+
+            </form>
+
+            <div class="contacts__footer">
+                <p class="contacts__title">Дмитрий Луценко</p>
+                <span><a class="skype" href="skype:goa_season?chat"><img src="/images/chatbutton_32px.png"></a></span>
+                <span id="dima-mail">
+                    Email:
+                    <a href="mailto:333333y@gmail.com">333333y@gmail.com</a>
+                </span>
+            </div>
+            <div class="contacts__footer">
+                <p class="contacts__title">Евгения Омельченко</p>
+                <span><a class="skype" href="skype:aruna000?chat"><img src="/images/chatbutton_32px.png"></a></span>
+                <span id="jenya-mail">
+                    Email:
+                    <a href="mailto:myruala@gmail.com">myruala@gmail.com</a>
+                </span>
+            </div>
+
+        </div><!-- .container -->
+    </section><!--contacts-->
+
+    <footer>
+        <div class="container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=100001367379881" class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/Lutsman" class="social-icon"><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <p class="copyright">&copy; 2015 Дмитрий Луценко, Евгения Омельченко</p>
+        </div><!-- .container -->
+    </footer>
+
+</div><!--page-wrap-->
+
+<!-- Javascript files -->
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery.easypiechart.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/jquery.mmenu.min.js"></script>
+<script src="/js/lightbox.min.js"></script>
+<script src="/js/main.min.js"></script>
+</body>
+</html>
