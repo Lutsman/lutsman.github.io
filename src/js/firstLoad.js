@@ -94,8 +94,6 @@
     }
 })();
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     /*Home BG*/
     (function(){

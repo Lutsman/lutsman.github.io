@@ -1,156 +1,105 @@
-//document.addEventListener("DOMContentLoaded", ready);
 
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+(function(w){
+  "use strict";
+    /* exported loadCSS */
+  var loadCSS = function( href, before, media ){
+    // Arguments explained:
+    // `href` [REQUIRED] is the URL for your CSS file.
+    // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+    // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+    // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+    var doc = w.document;
+    var ss = doc.createElement( "link" );
+    var ref;
+    if( before ){
+      ref = before;
+    }
+    else {
+      var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+      ref = refs[ refs.length - 1];
+    }
+
+    var sheets = doc.styleSheets;
+    ss.rel = "stylesheet";
+    ss.href = href;
+    // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+    ss.media = "only x";
+
+    // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+    function ready( cb ){
+      if( doc.body ){
+        return cb();
+      }
+      setTimeout(function(){
+        ready( cb );
+      });
+    }
+    // Inject link
+    // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+    // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+    ready( function(){
+      ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+    });
+    // A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+    var onloadcssdefined = function( cb ){
+      var resolvedHref = ss.href;
+      var i = sheets.length;
+      while( i-- ){
+        if( sheets[ i ].href === resolvedHref ){
+          return cb();
+        }
+      }
+      setTimeout(function() {
+        onloadcssdefined( cb );
+      });
+    };
+
+    function loadCB(){
+      if( ss.addEventListener ){
+        ss.removeEventListener( "load", loadCB );
+      }
+      ss.media = media || "all";
+    }
+
+    // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+    if( ss.addEventListener ){
+      ss.addEventListener( "load", loadCB);
+    }
+    ss.onloadcssdefined = onloadcssdefined;
+    onloadcssdefined( loadCB );
+    return ss;
+  };
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ));
+
+//document.addEventListener("DOMContentLoaded", init);
 init();
 
 function init() {
-    /*Loader class*/
-    function Loader() {}
-    Loader.prototype.addScript = function(links, parentEl, nextSibling) { // args: array, [parentEl (DOM element), nextSibling (DOM element)]
-        var index = 0;
-        parentEl = parentEl || document.body;
-        nextSibling = nextSibling || null;
-
-        this.loadTagRecur(this.createScript, links, index, parentEl, nextSibling);
-    };
-    Loader.prototype.createScript = function(src) {
-        var script = document.createElement('script');
-        script.src = src;
-
-        return script;
-    };
-    Loader.prototype.loadTagRecur = function(createTagFunc, tagArr, currIndex, parentEl, nextSibling) {
-        if (currIndex >= tagArr.length) return;
-
-        currIndex = currIndex || 0;
-        parentEl = parentEl || document.body;
-        nextSibling = nextSibling || null;
-
-        var tag = createTagFunc(tagArr[currIndex]);
-        var tagAddedEvent = this.createEvent('tagAdded', tag, tagArr[currIndex]);
-        var tagLoadedEvent = this.createEvent('tagLoaded', tag, tagArr[currIndex]);
-
-        tag = parentEl.insertBefore(tag, nextSibling);
-        tag.dispatchEvent(tagAddedEvent);
-
-        tag.addEventListener('load', function () {
-            tag.dispatchEvent(tagLoadedEvent);
-            this.loadTagRecur(createTagFunc, tagArr, currIndex + 1, parentEl, nextSibling);
-        }.bind(this));
-    };
-    Loader.prototype.addCss = function(links, parentEl, nextSibling) {
-        parentEl = parentEl || document.body;
-        nextSibling = nextSibling || null;
-
-        for(var i = 0; i < links.length; i++) {
-            var link = this.createCss(links[i]);
-            var linkAddedEvent = this.createEvent('linkAdded', link, links[i]);
-            var linkLoadedEvent = this.createEvent('linkLoaded', link, links[i]);
-
-            parentEl.insertBefore(link, nextSibling);
-            link.dispatchEvent(linkAddedEvent);
-
-            link.addEventListener('load', link.dispatchEvent.bind(this, linkLoadedEvent));
-        }
-    };
-    Loader.prototype.createCss = function(href) {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-
-        return link;
-    };
-    Loader.prototype.createEvent = function (eventName, elem, src) {
-        var elemLoaded = new CustomEvent(eventName, {
-            bubbles: true,
-            detail: {
-                el: elem,
-                src: src
-            }
-        });
-
-        return elemLoaded;
-    }
-
     /*Loading scripts and css*/
     (function(){
-        var loader = new Loader();
-
-        /*adding scipts*/
-        var firstLoadScript = ['js/first-load.min.js'];
-        var scriptArr = [
-            'js/jquery-1.11.1.min.js',
-            'js/jquery.fancybox.pack.js',
-            'js/jquery.mmenu.min.js',
-            'js/slick.min.js',
-            'js/jquery.maskedinput.min.js',
-            'js/app.min.js',
-            'js/placeholder_polyfill.jquery.min.combo.js'
-        ];
-
-        loader.addScript(firstLoadScript, document.head);
-        loader.addScript(scriptArr);
+        if (!loadCSS) return;
 
         /*adding css*/
         var cssArr = [
             'https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,400italic,300,300italic,500,500italic&subset=latin,cyrillic',
             'css/normalize.min.css',
-            'css/jquery.fancybox.min.css',
             'css/jquery.mmenu.min.css',
             'css/jquery.mmenu.themes.min.css',
             'css/slick.min.css',
             'css/slick-theme.min.css',
-            'css/styles.min.css',
-            'css/placeholder_polyfill.min.css'
+            'css/styles.min.css'
         ];
 
-        loader.addCss(cssArr, document.head);
-
-
-        /*function addScript(links, parentEl, nextSibling) { // args: array, [parentEl (DOM element), nextSibling (DOM element)]
-            var index = 0;
-            parentEl = parentEl || document.body;
-            nextSibling = nextSibling || null;
-
-            loadTag(createScript, links, index, parentEl, nextSibling);
-        }
-
-        function createScript (src) {
-            var script = document.createElement('script');
-            script.src = src;
-
-            return script;
-        }
-
-        function loadTag(createTagFunc, tagArr, currIndex, parentEl, nextSibling) {
-            if (currIndex >= tagArr.length) return;
-
-            currIndex = currIndex || 0;
-            parentEl = parentEl || document.body;
-            nextSibling = nextSibling || null;
-
-            var tag = createTagFunc(tagArr[currIndex]);
-
-            tag = parentEl.insertBefore(tag, nextSibling);
-            tag.addEventListener('load', loadTag.bind(this, createTagFunc, tagArr, currIndex + 1, parentEl, nextSibling));
-        }
-
-        function addCss(links, parentEl, nextSibling) {
-            parentEl = parentEl || document.body;
-            nextSibling = nextSibling || null;
-
-            for(var i = 0; i < links.length - offset; i++) {
-                var link = createCss(links[i]);
-
-                parentEl.insertBefore(link, nextSibling);
-            }
-        }
-
-        function createCss (href) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = href;
-
-            return link;
-        }*/
+        cssArr.forEach(function (css) {
+          loadCSS(css, document.head.children[document.head.children.length - 1]);
+        });
     })();
 };

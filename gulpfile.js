@@ -23,6 +23,7 @@ const combiner = require('stream-combiner2').obj;
 const remember = require('gulp-remember');
 const sassInheritance = require('gulp-sass-multi-inheritance');
 const cached = require('gulp-cached');
+const critical = require('critical');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const pathNames = {
@@ -33,12 +34,25 @@ const pathNames = {
     cssFonts: ['dev/fonts/**/*.css'],
     sassLib: ['dev/css/*.scss', '!dev/css/themes/**/*.scss'],
     sassTheme: ['dev/css/themes/readyshop/**/*.scss'],
-    js: ['dev/js/**/*.js', '!dev/**/*.es6.js'],
+    js: ['src/js/**/*.js',],
     jsES6: ['dev/js/**/*.es6.js']
   }
 };
 const dest = 'dist';
 const base = "src";
+
+gulp.task('critical', (cb) => {
+  return critical.generate({
+          inline: true,
+          base: './',
+          css: ['src/css/normalize.min.css', 'src/css/styles.min.css'],
+          src: 'src/index.html',
+          dest: 'dist/index.html',
+          minify: true,
+          width: 1366,
+          height: 900
+        });
+});
 
 gulp.task('clean', () => {
   console.log(isDevelopment);
@@ -47,7 +61,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('lint', () => {
-  return gulp.src(pathNames.src.j)
+  return gulp.src(pathNames.src.js);
 });
 
 gulp.task('assets', () => {
@@ -140,6 +154,13 @@ gulp.task('js', () => {
     .pipe(eslint.failAfterError())
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     .pipe(gulpIf(!isDevelopment, uglify()))
+    .pipe(rename((path) => {
+      let pattern = '.min';
+
+      if (~path.basename.indexOf(pattern)) return;
+
+      path.basename += pattern;
+    }))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulp.dest(dest));
 });
