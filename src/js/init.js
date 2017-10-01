@@ -91,12 +91,12 @@ function init() {
         var cssArr = [
             'https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,400italic,300,300italic,500,500italic&subset=latin,cyrillic',
             'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
-            'css/normalize.min.css',
-            'css/jquery.mmenu.min.css',
-            'css/jquery.mmenu.themes.min.css',
-            'css/slick.min.css',
-            'css/slick-theme.min.css',
-            'css/styles.min.css'
+            'css/normalize.css',
+            'css/jquery.mmenu.css',
+            'css/jquery.mmenu.themes.css',
+            'css/slick.css',
+            'css/slick-theme.css',
+            'css/styles.css'
         ];
 
         cssArr.forEach(function (css) {

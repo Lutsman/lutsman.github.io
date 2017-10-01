@@ -522,10 +522,10 @@ $(document).ready(function(){
     })();
 
     /*lighbox*/
-    (function(){
+    /*(function(){
         var lightBox = new Lightbox();
 
         lightBox.load();
-    })();
+    })();*/
 });
 

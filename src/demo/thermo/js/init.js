@@ -162,7 +162,7 @@ function init(){
     /*adding css*/
     var cssArr = [
         'https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,400italic,300,300italic,500,500italic&subset=latin,cyrillic',
-        'css/normalize.min.css',
+        'css/normalize.css',
         'css/jquery.fancybox.min.css',
         'css/jquery.mmenu.min.css',
         'css/jquery.mmenu.themes.min.css',

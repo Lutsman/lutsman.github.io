@@ -28,7 +28,7 @@ const critical = require('critical');
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const pathNames = {
   src: {
-    assets: ['src/assets/fonts/**/*.*', 'src/assets/mail/**/*.*'],
+    assets: ['src/assets/fonts/**/*.*', 'src/assets/mail/**/*.*', 'src/index.html', 'src/mail/**/*.*'],
     img: ['src/assets/img/**/*.+(gif|png|jpg|jpeg)', 'src/assets/service_img/**/*.+(gif|png|jpg|jpeg)'],
     css: ['src/css/**/*.css'],
     sass: ['src/css/**/*.scss'],
@@ -37,7 +37,7 @@ const pathNames = {
     //sassLib: ['dev/css/*.scss', '!dev/css/themes/**/*.scss'],
     //sassTheme: ['dev/css/themes/readyshop/**/*.scss'],
     js: ['src/js/**/*.js',],
-    jsES6: ['dev/js/**/*.es6.js']
+    //jsES6: ['src/js/**/*.es6.js']
   }
 };
 const dest = 'dist';
@@ -52,16 +52,18 @@ gulp.task('clean', () => {
 gulp.task('critical', () => {
   return critical.generate({
           inline: true,
-          base: './',
+          base: './dist/',
           css: [
-            'src/css/normalize.min.css',
-            'src/css/styles.min.css',
-            'src/css/jquery.mmenu.min.css',
-            'src/css/jquery.mmenu.themes.min.css'
+            'dist/css/normalize.css',
+            'dist/css/styles.css',
+            'dist/css/jquery.mmenu.css',
+            'dist/css/jquery.mmenu.themes.css',
+            'dist/css/slick.css',
+            'dist/css/slick-theme.css',
           ],
-          src: 'src/index.html',
-          dest: 'dist/index.html',
-          minify: false,
+          src: 'index.html',
+          dest: 'index.html',
+          minify: true,
           include: [
             '#m-menu:not(.mm-menu)',
             '.mm-menu.mm-offcanvas'
@@ -126,9 +128,9 @@ gulp.task('css', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src(pathNames.src.sassLib, {base: base/*, since: gulp.lastRun('sass:lib')*/})
+  return gulp.src(pathNames.src.sass, {base: base/*, since: gulp.lastRun('sass:lib')*/})
     //.pipe(newer(dest))
-    //.pipe(debug({title: 'sass:lib'}))
+    .pipe(debug({title: 'sass:lib'}))
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     //.pipe(remember('sass:lib'))
     .pipe(sass().on('error', notify.onError()))
@@ -174,18 +176,18 @@ gulp.task('js', () => {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('js:ES6', () => {
+/*gulp.task('js:ES6', () => {
   return gulp.src(pathNames.src.jsES6, {base: base, since: gulp.lastRun('js:ES6')})
-    /*.pipe(newer({
+    /!*.pipe(newer({
       dest: dest,
       map: function (relative) {
         return relative.replace('.es6', '');
       }
-    }))*/
+    }))*!/
     //.pipe(debug({title: 'js:ES6'}))
-    /*.pipe(plumber({
+    /!*.pipe(plumber({
       errorHandler: notify.onError
-    }))*/
+    }))*!/
     //.pipe(debug({title: 'js:ES6:1'}))
     .pipe(eslint({
       configFile: 'eslint.json'
@@ -209,21 +211,21 @@ gulp.task('js:ES6', () => {
     }))
     //.pipe(debug({title: 'js:ES6:2'}))
     .pipe(gulp.dest(dest));
-});
+});*/
 
 //gulp.task('lint:js')
 
 gulp.task('watch', () => {
   gulp.watch(pathNames.src.assets, gulp.series('assets'));
 
-  gulp.watch(pathNames.src.cssLib, gulp.series('css:lib'));
-  gulp.watch(pathNames.src.cssFonts, gulp.series('css:fonts'));
+  gulp.watch(pathNames.src.css, gulp.series('css', 'critical'));
+  //gulp.watch(pathNames.src.cssFonts, gulp.series('css:fonts'));
 
-  gulp.watch('dev/css/**/*.scss', gulp.series('sass:lib'));
-  gulp.watch(pathNames.src.sassTheme, gulp.series('sass:theme'));
+  //gulp.watch('dev/css/**/*.scss', gulp.series('sass:lib'));
+  gulp.watch(pathNames.src.sass, gulp.series('sass', 'critical'));
 
   gulp.watch(pathNames.src.js, gulp.series('js'));
-  gulp.watch(pathNames.src.jsES6, gulp.series('js:ES6'));
+  //gulp.watch(pathNames.src.jsES6, gulp.series('js:ES6'));
 });
 
 /*gulp.task('build',
@@ -236,7 +238,7 @@ gulp.task('watch', () => {
   )
 );*/
 
-gulp.task('build', gulp.series('clean', 'assets', 'img', 'css:fonts', 'sass:theme', 'css:lib', 'sass:lib', 'js', 'js:ES6'));
+gulp.task('build', gulp.series('clean', 'assets', 'img', 'css', 'sass', 'js', 'critical'));
 
 gulp.task('default', gulp.series('build'));
 
