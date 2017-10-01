@@ -22,7 +22,7 @@ function Lightbox() {
         currGroup = false, // current group
         currThumbnail = false, // first clicked thumbnail
         currImage = {}, // currently shown image
-        currImages = [], // images belonging to current group
+        currImages = [], // img belonging to current group
         isOpen = false, // check if box is open
         animationEl, // reference to animation-element
         animationInt, // animation-interval
@@ -254,7 +254,7 @@ function Lightbox() {
     }
 
     /**
-     * Preloads next and prev images
+     * Preloads next and prev img
      */
     function preload() {
         if (!currGroup) {
@@ -332,7 +332,7 @@ function Lightbox() {
             nextBtn = document.createElement('span');
             addClass(nextBtn, 'jslghtbx-next');
 
-            // add custom images
+            // add custom img
             if (CTX.opt.nextImg) {
                 var nextBtnImg = document.createElement('img');
                 nextBtnImg.setAttribute('src', CTX.opt.nextImg);
@@ -352,7 +352,7 @@ function Lightbox() {
             prevBtn = document.createElement('span');
             addClass(prevBtn, 'jslghtbx-prev');
 
-            // add custom images
+            // add custom img
             if (CTX.opt.prevImg) {
                 var prevBtnImg = document.createElement('img');
                 prevBtnImg.setAttribute('src', CTX.opt.prevImg);
@@ -530,7 +530,7 @@ function Lightbox() {
         if (!el && !group) {
             return false;
         }
-        // save images from group
+        // save img from group
         currGroup = group || currGroup || getAttr(el, 'data-jslghtbx-group');
         if (currGroup) {
             currImages = getByGroup(currGroup);

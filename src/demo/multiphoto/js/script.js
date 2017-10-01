@@ -306,7 +306,7 @@ $(document).ready(function () {
 					hintContent: placemarks[currPlacemark].hintContent
 				}, {
 					iconLayout: 'default#image',
-					iconImageHref: 'images/baloon.png',
+					iconImageHref: 'img/baloon.png',
 					iconImageSize: [28, 40],
 					iconImageOffset: [-30, -50]
 				}));

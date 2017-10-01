@@ -1261,9 +1261,9 @@ class PHPMailer
     }
 
     /**
-     * Adds an embedded attachment.  This can include images, sounds, and
+     * Adds an embedded attachment.  This can include img, sounds, and
      * just about any other document.  Make sure to set the $type to an
-     * image type.  For JPEG images use "image/jpeg" and for GIF images
+     * image type.  For JPEG img use "image/jpeg" and for GIF img
      * use "image/gif".
      * @param string $path Path to the attachment.
      * @param string $cid Content ID of the attachment.  Use this to identify

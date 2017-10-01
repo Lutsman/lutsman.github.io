@@ -28,12 +28,14 @@ const critical = require('critical');
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const pathNames = {
   src: {
-    assets: ['src/**/*.+(eot|svg|ttf|woff|woff2)'],
-    img: ['src/**/*.+(gif|png|jpg|jpeg)'],
-    cssLib: ['dev/css/normalize.css'],
-    cssFonts: ['dev/fonts/**/*.css'],
-    sassLib: ['dev/css/*.scss', '!dev/css/themes/**/*.scss'],
-    sassTheme: ['dev/css/themes/readyshop/**/*.scss'],
+    assets: ['src/assets/fonts/**/*.*', 'src/assets/mail/**/*.*'],
+    img: ['src/assets/img/**/*.+(gif|png|jpg|jpeg)', 'src/assets/service_img/**/*.+(gif|png|jpg|jpeg)'],
+    css: ['src/css/**/*.css'],
+    sass: ['src/css/**/*.scss'],
+    //cssLib: ['dev/css/normalize.css'],
+    //cssFonts: ['dev/fonts/**/*.css'],
+    //sassLib: ['dev/css/*.scss', '!dev/css/themes/**/*.scss'],
+    //sassTheme: ['dev/css/themes/readyshop/**/*.scss'],
     js: ['src/js/**/*.js',],
     jsES6: ['dev/js/**/*.es6.js']
   }
@@ -41,23 +43,37 @@ const pathNames = {
 const dest = 'dist';
 const base = "src";
 
-gulp.task('critical', (cb) => {
-  return critical.generate({
-          inline: true,
-          base: './',
-          css: ['src/css/normalize.min.css', 'src/css/styles.min.css'],
-          src: 'src/index.html',
-          dest: 'dist/index.html',
-          minify: true,
-          width: 1366,
-          height: 900
-        });
-});
-
 gulp.task('clean', () => {
   console.log(isDevelopment);
   console.log(process.env.NODE_ENV);
   return del(dest);
+});
+
+gulp.task('critical', () => {
+  return critical.generate({
+          inline: true,
+          base: './',
+          css: [
+            'src/css/normalize.min.css',
+            'src/css/styles.min.css',
+            'src/css/jquery.mmenu.min.css',
+            'src/css/jquery.mmenu.themes.min.css'
+          ],
+          src: 'src/index.html',
+          dest: 'dist/index.html',
+          minify: false,
+          include: [
+            '#m-menu:not(.mm-menu)',
+            '.mm-menu.mm-offcanvas'
+          ],
+          dimensions: [{
+            width: 1366,
+            height: 900,
+          }, {
+            width: 700,
+            height: 500,
+          }]
+        });
 });
 
 gulp.task('lint', () => {
@@ -102,31 +118,24 @@ gulp.task('img', () => {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('css:lib', () => {
-  return gulp.src(pathNames.src.cssLib, {base: base, since: gulp.lastRun('css:lib')})
+gulp.task('css', () => {
+  return gulp.src(pathNames.src.css, {base: base, since: gulp.lastRun('css')})
     .pipe(newer(dest))
     .pipe(cleanCSS({rebaseTo: ''}))
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('css:fonts', () => {
-  return gulp.src(pathNames.src.cssFonts, {base: base, since: gulp.lastRun('css:fonts')})
-    .pipe(newer(dest))
-    .pipe(cleanCSS({rebaseTo: ''}))
-    .pipe(gulp.dest(dest));
-});
-
-gulp.task('sass:lib', () => {
+gulp.task('sass', () => {
   return gulp.src(pathNames.src.sassLib, {base: base/*, since: gulp.lastRun('sass:lib')*/})
     //.pipe(newer(dest))
-    .pipe(debug({title: 'sass:lib'}))
+    //.pipe(debug({title: 'sass:lib'}))
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     //.pipe(remember('sass:lib'))
     .pipe(sass().on('error', notify.onError()))
     .pipe(cleanCSS({rebaseTo: ''}))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-    .pipe(gulp.dest(dest))
-    .pipe(debug({title: 'sass:lib:output'}));
+    .pipe(gulp.dest(dest));
+    //.pipe(debug({title: 'sass:lib:output'}));
 });
 
 gulp.task('sass:theme', () => {
@@ -351,7 +360,7 @@ gulp.task('ftp', () => {
     parallel: 5,
     log: gutil.log
   });
-  let globs = 'dist/**/*.*';
+  let globs = ['dist/**/*.*', '!dist/bindex.html'];
 
   return gulp.src(globs, {base: dest, buffer: false})
     .pipe(conn.newer('/'))

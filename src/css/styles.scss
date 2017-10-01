@@ -324,7 +324,7 @@ footer .container {
 .home {
   position: relative;
   min-height: 100vh;
-  background: url("../images/cover.jpg") no-repeat fixed #222 50% 0;
+  background: url("../assets/img/cover.jpg") no-repeat fixed #222 50% 0;
   background-size: cover;
 }
 .home-overlay {
@@ -333,7 +333,7 @@ footer .container {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("../images/pattern.png") rgba(44, 62, 80, 0.3);
+  background: url("../assets/img/pattern.png") rgba(44, 62, 80, 0.3);
 }
 .intro {
   width: 100%;
