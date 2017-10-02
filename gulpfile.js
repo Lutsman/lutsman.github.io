@@ -37,6 +37,7 @@ const pathNames = {
 };
 const dest = 'dist';
 const base = "src";
+const ftpData = require('ftpData');
 
 gulp.task('clean', () => {
   console.log(isDevelopment);
@@ -202,9 +203,9 @@ gulp.task('js', () => {
 
 gulp.task('ftp', () => {
   let conn = ftp.create({
-    host: '192.185.226.145',
-    user: 'dimon@mrhummer.com',
-    pass: 'fDCHGDVbmwsh4Q5',
+    host: ftpData.host,
+    user: ftpData.user,
+    pass: ftpData.pass,
     parallel: 5,
     log: gutil.log
   });
