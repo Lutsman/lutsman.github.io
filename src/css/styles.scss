@@ -435,6 +435,7 @@ figure {
   padding-bottom: 20px;
   font-size: 18px;
   text-align: center;
+  margin: auto 0;
   > img {
     max-width: 200px;
     @include border-radius(50%);
