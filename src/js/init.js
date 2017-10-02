@@ -96,6 +96,7 @@ function init() {
             'css/jquery.mmenu.themes.css',
             'css/slick.css',
             'css/slick-theme.css',
+            'css/lightbox.css',
             'css/styles.css'
         ];
 

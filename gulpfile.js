@@ -10,6 +10,7 @@ const rename = require('gulp-rename');
 const debug = require('gulp-debug');
 const gutil = require( 'gulp-util' );
 const ftp = require( 'vinyl-ftp' );
+const ftpData = require('./ftpData');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const newer = require('gulp-newer');
@@ -28,7 +29,12 @@ const critical = require('critical').stream;
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const pathNames = {
   src: {
-    assets: ['src/assets/fonts/**/*.*', 'src/assets/mail/**/*.*', 'src/index.html', 'src/mail/**/*.*'],
+    assets: [
+      'src/assets/fonts/**/*.*',
+      'src/assets/mail/**/*.*',
+      'src/*.*',
+      'src/.htaccess'
+      ],
     img: ['src/assets/img/**/*.+(gif|png|jpg|jpeg)', 'src/assets/service_img/**/*.+(gif|png|jpg|jpeg)'],
     css: ['src/css/**/*.css'],
     sass: ['src/css/**/*.scss'],
@@ -37,7 +43,7 @@ const pathNames = {
 };
 const dest = 'dist';
 const base = "src";
-const ftpData = require('ftpData');
+
 
 gulp.task('clean', () => {
   console.log(isDevelopment);
@@ -190,13 +196,13 @@ gulp.task('js', () => {
     .pipe(eslint.failAfterError())
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     .pipe(gulpIf(!isDevelopment, uglify()))
-    .pipe(rename((path) => {
+    /*.pipe(rename((path) => {
       let pattern = '.min';
 
       if (~path.basename.indexOf(pattern)) return;
 
       path.basename += pattern;
-    }))
+    }))*/
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulp.dest(dest));
 });
@@ -217,7 +223,7 @@ gulp.task('ftp', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(pathNames.src.assets, gulp.series('assets'));
+  gulp.watch(pathNames.src.assets, gulp.series('assets', 'critical'));
 
   gulp.watch(pathNames.src.css, gulp.series('css', 'critical'));
   //gulp.watch(pathNames.src.cssFonts, gulp.series('css:fonts'));
