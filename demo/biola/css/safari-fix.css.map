@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,2BAA4B;EACxB,WAAW,EAAE,KAAK",
-"sources": ["safari-fix.scss"],
-"names": [],
-"file": "safari-fix.css"
-}
