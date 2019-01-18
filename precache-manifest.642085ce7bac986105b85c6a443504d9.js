@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/static/media/fontawesome-webfont.b06871f2.ttf"
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "d1474750708c3aab2744",
+    "revision": "57ccbc44b28721cdc3bd",
     "url": "/static/css/main.6958232e.chunk.css"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "d1474750708c3aab2744",
-    "url": "/static/js/main.d1474750.chunk.js"
+    "revision": "57ccbc44b28721cdc3bd",
+    "url": "/static/js/main.57ccbc44.chunk.js"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/static/media/invest-card.c8992644.png"
   },
   {
-    "revision": "cbfedbc11cc0b9ddd791d15f836a8338",
-    "url": "/static/media/reserve-card.cbfedbc1.png"
-  },
-  {
     "revision": "1e4b36a7929a4c33e918d6e14164687c",
     "url": "/static/media/diagnostics-card.1e4b36a7.png"
+  },
+  {
+    "revision": "cbfedbc11cc0b9ddd791d15f836a8338",
+    "url": "/static/media/reserve-card.cbfedbc1.png"
   },
   {
     "revision": "8294265d345f8053b19477f63141720d",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.5a39eddf.chunk.css"
   },
   {
-    "revision": "7fe9710be2b0003695604fe32554e835",
+    "revision": "3788abb05afeaefce4564719c585d1c1",
     "url": "/index.html"
   }
 ];
