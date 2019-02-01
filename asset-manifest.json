@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.0105cd85.chunk.css",
-  "main.js": "/static/js/main.c7f807a7.chunk.js",
-  "main.js.map": "/static/js/main.c7f807a7.chunk.js.map",
+  "main.js": "/static/js/main.38df09f8.chunk.js",
+  "main.js.map": "/static/js/main.38df09f8.chunk.js.map",
   "static/css/1.c2e02e04.chunk.css": "/static/css/1.c2e02e04.chunk.css",
   "static/js/1.400e7450.chunk.js": "/static/js/1.400e7450.chunk.js",
   "static/js/1.400e7450.chunk.js.map": "/static/js/1.400e7450.chunk.js.map",
@@ -11,9 +11,9 @@
   "static/media/icon-arrow.svg": "/static/media/icon-arrow.216b28df.svg",
   "static/media/btn-fingerprint.png": "/static/media/btn-fingerprint.8ac1c511.png",
   "static/media/illustration-budget-normal.png": "/static/media/illustration-budget-normal.a76eff60.png",
-  "static/css/1.c2e02e04.chunk.css.map": "/static/css/1.c2e02e04.chunk.css.map",
   "static/css/main.0105cd85.chunk.css.map": "/static/css/main.0105cd85.chunk.css.map",
+  "static/css/1.c2e02e04.chunk.css.map": "/static/css/1.c2e02e04.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.c326839000204cba01bf05b4980209d9.js": "/precache-manifest.c326839000204cba01bf05b4980209d9.js",
+  "precache-manifest.0d5568b80e82606accb6da921a7e0def.js": "/precache-manifest.0d5568b80e82606accb6da921a7e0def.js",
   "service-worker.js": "/service-worker.js"
 }
