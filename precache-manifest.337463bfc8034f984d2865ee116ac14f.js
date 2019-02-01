@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "38df09f8170b3e651b33",
-    "url": "/static/css/main.0105cd85.chunk.css"
+    "revision": "ed96122397914f19ca40",
+    "url": "/static/css/main.a1f19792.chunk.css"
   },
   {
     "revision": "9724af2fd30572f7485af3213d62f144",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "38df09f8170b3e651b33",
-    "url": "/static/js/main.38df09f8.chunk.js"
+    "revision": "ed96122397914f19ca40",
+    "url": "/static/js/main.ed961223.chunk.js"
   },
   {
     "revision": "b06871f281fee6b241d60582ae9369b9",
@@ -52,16 +52,16 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "0d331d1111bc6850d482d2464c2093c5",
-    "url": "/static/media/bg_light.0d331d11.png"
-  },
-  {
     "revision": "01c05d3687b8230fd424141b4762f026",
     "url": "/static/media/budget-card.01c05d36.png"
   },
   {
     "revision": "c89926447ced4d51c4c4e7a611d8fc05",
     "url": "/static/media/invest-card.c8992644.png"
+  },
+  {
+    "revision": "0d331d1111bc6850d482d2464c2093c5",
+    "url": "/static/media/bg_light.0d331d11.png"
   },
   {
     "revision": "1e4b36a7929a4c33e918d6e14164687c",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.c2e02e04.chunk.css"
   },
   {
-    "revision": "223ff8348a14f6db0a052685761ced31",
+    "revision": "47fb6ec3fb9125f271dff10cd7117e0a",
     "url": "/index.html"
   }
 ];
