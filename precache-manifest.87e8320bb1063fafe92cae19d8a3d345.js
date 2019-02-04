@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-bad.dd237b0a.png"
   },
   {
-    "revision": "38d963eb454490505997",
+    "revision": "6ae1de893a1f077ddcd4",
     "url": "/static/css/main.972fa32d.chunk.css"
   },
   {
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-normal.84bff8a4.png"
   },
   {
-    "revision": "38d963eb454490505997",
-    "url": "/static/js/main.38d963eb.chunk.js"
+    "revision": "6ae1de893a1f077ddcd4",
+    "url": "/static/js/main.6ae1de89.chunk.js"
   },
   {
     "revision": "8ac1c5113a5388711439dc949a2a258e",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.f3477ed9.chunk.css"
   },
   {
-    "revision": "762ac736266c5a702ee276b395d8c543",
+    "revision": "4403a022bd277860fc0997f303e3731f",
     "url": "/index.html"
   }
 ];
