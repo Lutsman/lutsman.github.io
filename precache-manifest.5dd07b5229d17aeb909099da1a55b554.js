@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
+    "revision": "dd237b0a16455d4a6a4fbc1282240c7d",
+    "url": "/static/media/illustration-investments-bad.dd237b0a.png"
   },
   {
-    "revision": "ed96122397914f19ca40",
-    "url": "/static/css/main.a1f19792.chunk.css"
+    "revision": "1ba95dba3284414812db",
+    "url": "/static/css/main.31bde39f.chunk.css"
   },
   {
     "revision": "9724af2fd30572f7485af3213d62f144",
     "url": "/static/media/btn-power-circles.9724af2f.png"
   },
   {
-    "revision": "400e7450e356bc998653",
-    "url": "/static/js/1.400e7450.chunk.js"
+    "revision": "310bc46aa9d796611b62",
+    "url": "/static/js/1.310bc46a.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -24,8 +24,40 @@ self.__precacheManifest = [
     "url": "/static/media/icon-arrow.216b28df.svg"
   },
   {
+    "revision": "4dc36f0cb0348fe0590dc1510a98000f",
+    "url": "/static/media/illustration-budget-good.4dc36f0c.png"
+  },
+  {
     "revision": "a76eff60fd035ff10efd5b8ae45760e0",
     "url": "/static/media/illustration-budget-normal.a76eff60.png"
+  },
+  {
+    "revision": "c8de6f9faeba542e39442f508a17edbb",
+    "url": "/static/media/illustration-budget-bad.c8de6f9f.png"
+  },
+  {
+    "revision": "f65e0c9613536f6d1c1860f84bcac0bc",
+    "url": "/static/media/illustration-safety-good.f65e0c96.png"
+  },
+  {
+    "revision": "2ea912f385d0cbef097ac4bfba200234",
+    "url": "/static/media/illustration-safety-normal.2ea912f3.png"
+  },
+  {
+    "revision": "2807c301f5467060f25ac008068f080f",
+    "url": "/static/media/illustration-safety-bad.2807c301.png"
+  },
+  {
+    "revision": "7dedb195a2ab201d7fee91dd762e21a5",
+    "url": "/static/media/illustration-investments-good.7dedb195.png"
+  },
+  {
+    "revision": "84bff8a422e41f6238cbe09670c649d5",
+    "url": "/static/media/illustration-investments-normal.84bff8a4.png"
+  },
+  {
+    "revision": "1ba95dba3284414812db",
+    "url": "/static/js/main.1ba95dba.chunk.js"
   },
   {
     "revision": "8ac1c5113a5388711439dc949a2a258e",
@@ -40,8 +72,8 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "ed96122397914f19ca40",
-    "url": "/static/js/main.ed961223.chunk.js"
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
     "revision": "b06871f281fee6b241d60582ae9369b9",
@@ -56,12 +88,12 @@ self.__precacheManifest = [
     "url": "/static/media/budget-card.01c05d36.png"
   },
   {
-    "revision": "c89926447ced4d51c4c4e7a611d8fc05",
-    "url": "/static/media/invest-card.c8992644.png"
-  },
-  {
     "revision": "0d331d1111bc6850d482d2464c2093c5",
     "url": "/static/media/bg_light.0d331d11.png"
+  },
+  {
+    "revision": "c89926447ced4d51c4c4e7a611d8fc05",
+    "url": "/static/media/invest-card.c8992644.png"
   },
   {
     "revision": "1e4b36a7929a4c33e918d6e14164687c",
@@ -76,11 +108,11 @@ self.__precacheManifest = [
     "url": "/static/media/insure-card.8294265d.png"
   },
   {
-    "revision": "400e7450e356bc998653",
-    "url": "/static/css/1.c2e02e04.chunk.css"
+    "revision": "310bc46aa9d796611b62",
+    "url": "/static/css/1.2fd16d89.chunk.css"
   },
   {
-    "revision": "47fb6ec3fb9125f271dff10cd7117e0a",
+    "revision": "b9192c1831cb3e7ff4c099fb6240b28a",
     "url": "/index.html"
   }
 ];
