@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-bad.dd237b0a.png"
   },
   {
-    "revision": "1ba95dba3284414812db",
-    "url": "/static/css/main.31bde39f.chunk.css"
+    "revision": "2697865915955472f489",
+    "url": "/static/css/main.38318f6d.chunk.css"
   },
   {
     "revision": "9724af2fd30572f7485af3213d62f144",
     "url": "/static/media/btn-power-circles.9724af2f.png"
   },
   {
-    "revision": "310bc46aa9d796611b62",
-    "url": "/static/js/1.310bc46a.chunk.js"
+    "revision": "81133cdfe1c6303991eb",
+    "url": "/static/js/1.81133cdf.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-normal.84bff8a4.png"
   },
   {
-    "revision": "1ba95dba3284414812db",
-    "url": "/static/js/main.1ba95dba.chunk.js"
+    "revision": "2697865915955472f489",
+    "url": "/static/js/main.26978659.chunk.js"
   },
   {
     "revision": "8ac1c5113a5388711439dc949a2a258e",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
-  },
-  {
     "revision": "b06871f281fee6b241d60582ae9369b9",
     "url": "/static/media/fontawesome-webfont.b06871f2.ttf"
+  },
+  {
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
@@ -96,23 +96,23 @@ self.__precacheManifest = [
     "url": "/static/media/invest-card.c8992644.png"
   },
   {
-    "revision": "1e4b36a7929a4c33e918d6e14164687c",
-    "url": "/static/media/diagnostics-card.1e4b36a7.png"
-  },
-  {
     "revision": "cbfedbc11cc0b9ddd791d15f836a8338",
     "url": "/static/media/reserve-card.cbfedbc1.png"
+  },
+  {
+    "revision": "1e4b36a7929a4c33e918d6e14164687c",
+    "url": "/static/media/diagnostics-card.1e4b36a7.png"
   },
   {
     "revision": "8294265d345f8053b19477f63141720d",
     "url": "/static/media/insure-card.8294265d.png"
   },
   {
-    "revision": "310bc46aa9d796611b62",
-    "url": "/static/css/1.2fd16d89.chunk.css"
+    "revision": "81133cdfe1c6303991eb",
+    "url": "/static/css/1.d6634721.chunk.css"
   },
   {
-    "revision": "b9192c1831cb3e7ff4c099fb6240b28a",
+    "revision": "4741df06385804f2346e2bba811c1c85",
     "url": "/index.html"
   }
 ];
