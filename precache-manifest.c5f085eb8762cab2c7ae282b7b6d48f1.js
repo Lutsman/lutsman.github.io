@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-bad.dd237b0a.png"
   },
   {
-    "revision": "6ae1de893a1f077ddcd4",
-    "url": "/static/css/main.972fa32d.chunk.css"
+    "revision": "45bd6ccab2ad70e4d33f",
+    "url": "/static/css/main.e1077b4b.chunk.css"
   },
   {
     "revision": "9724af2fd30572f7485af3213d62f144",
     "url": "/static/media/btn-power-circles.9724af2f.png"
   },
   {
-    "revision": "aee3d4e95f570ee17767",
-    "url": "/static/js/1.aee3d4e9.chunk.js"
+    "revision": "587cff2d603445511541",
+    "url": "/static/js/1.587cff2d.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-normal.84bff8a4.png"
   },
   {
-    "revision": "6ae1de893a1f077ddcd4",
-    "url": "/static/js/main.6ae1de89.chunk.js"
+    "revision": "45bd6ccab2ad70e4d33f",
+    "url": "/static/js/main.45bd6cca.chunk.js"
   },
   {
     "revision": "8ac1c5113a5388711439dc949a2a258e",
@@ -108,11 +108,11 @@ self.__precacheManifest = [
     "url": "/static/media/insure-card.8294265d.png"
   },
   {
-    "revision": "aee3d4e95f570ee17767",
+    "revision": "587cff2d603445511541",
     "url": "/static/css/1.f3477ed9.chunk.css"
   },
   {
-    "revision": "4403a022bd277860fc0997f303e3731f",
+    "revision": "9ff74027876f7fc4a9d0b4c5e0cf4354",
     "url": "/index.html"
   }
 ];

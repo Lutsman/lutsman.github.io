@@ -1,10 +1,10 @@
 {
-  "main.css": "/static/css/main.972fa32d.chunk.css",
-  "main.js": "/static/js/main.6ae1de89.chunk.js",
-  "main.js.map": "/static/js/main.6ae1de89.chunk.js.map",
+  "main.css": "/static/css/main.e1077b4b.chunk.css",
+  "main.js": "/static/js/main.45bd6cca.chunk.js",
+  "main.js.map": "/static/js/main.45bd6cca.chunk.js.map",
   "static/css/1.f3477ed9.chunk.css": "/static/css/1.f3477ed9.chunk.css",
-  "static/js/1.aee3d4e9.chunk.js": "/static/js/1.aee3d4e9.chunk.js",
-  "static/js/1.aee3d4e9.chunk.js.map": "/static/js/1.aee3d4e9.chunk.js.map",
+  "static/js/1.587cff2d.chunk.js": "/static/js/1.587cff2d.chunk.js",
+  "static/js/1.587cff2d.chunk.js.map": "/static/js/1.587cff2d.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/styles.scss": "/static/media/btn-power-circles.9724af2f.png",
@@ -19,9 +19,9 @@
   "static/media/illustration-investments-bad.png": "/static/media/illustration-investments-bad.dd237b0a.png",
   "static/media/btn-fingerprint.png": "/static/media/btn-fingerprint.8ac1c511.png",
   "static/media/illustration-budget-good.png": "/static/media/illustration-budget-good.4dc36f0c.png",
-  "static/css/main.972fa32d.chunk.css.map": "/static/css/main.972fa32d.chunk.css.map",
+  "static/css/main.e1077b4b.chunk.css.map": "/static/css/main.e1077b4b.chunk.css.map",
   "static/css/1.f3477ed9.chunk.css.map": "/static/css/1.f3477ed9.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.87e8320bb1063fafe92cae19d8a3d345.js": "/precache-manifest.87e8320bb1063fafe92cae19d8a3d345.js",
+  "precache-manifest.c5f085eb8762cab2c7ae282b7b6d48f1.js": "/precache-manifest.c5f085eb8762cab2c7ae282b7b6d48f1.js",
   "service-worker.js": "/service-worker.js"
 }
