@@ -1,1 +1,2303 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Inner</title><link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic" rel="stylesheet"><link href="/static/css/1.f3477ed9.chunk.css" rel="stylesheet"><link href="/static/css/main.e1077b4b.chunk.css" rel="stylesheet"></head><body><div id="root"></div><script>!function(l){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],f=0,i=[];f<n.length;f++)t=n[f],p[t]&&i.push(p[t][0]),p[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(l[r]=o[r]);for(s&&s(e);i.length;)i.shift()();return c.push.apply(c,u||[]),a()}function a(){for(var e,r=0;r<c.length;r++){for(var t=c[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==p[u]&&(n=!1)}n&&(c.splice(r--,1),e=f(f.s=t[0]))}return e}var t={},p={2:0},c=[];function f(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return l[e].call(r.exports,r,r.exports,f),r.l=!0,r.exports}f.m=l,f.c=t,f.d=function(e,r,t){f.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},f.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},f.t=function(r,e){if(1&e&&(r=f(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(f.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)f.d(t,n,function(e){return r[e]}.bind(null,n));return t},f.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return f.d(r,"a",r),r},f.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},f.p="/";var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;a()}([])</script><script src="/static/js/1.587cff2d.chunk.js"></script><script src="/static/js/main.45bd6cca.chunk.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoinLottery</title>
+
+    <!--Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
+
+    <!--FontAwesome-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <!--LineAwesome-->
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css"/>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>-->
+<link href="styles/styles.css" rel="stylesheet"></head>
+<body>
+<div class="uk-offcanvas-content">
+    <div class="uk-child-width-1-1 uk-height-viewport uk-flex uk-flex-wrap uk-flex-wrap-between">
+        <div>
+
+            <!--Header-->
+            <header class="tm-background-tertiary uk-position-relative">
+                <div class="uk-container">
+                    <nav uk-navbar>
+                        <div class="uk-navbar-left">
+
+                            <!--mobile menu toggle-->
+                            <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@m"
+                               uk-navbar-toggle-icon uk-toggle></a>
+
+                            <!--logo-->
+                            <a class="uk-navbar-item uk-logo" href="/">Coin<span>Lottery</span></a>
+
+                            <div class="uk-navbar-item uk-visible@s">
+                                <div class="tm-dropdown-button"><img src="/images/flag-ru.png" alt=""></div>
+                                    <div class="tm-dropdown" uk-dropdown="mode: click">
+                                        <a href="#"><img src="/images/flag-ru.png" alt=""></a>
+                                        <a href="#"><img src="/images/flag-ru.png" alt=""></a>
+                                    </div>
+                            </div>
+
+
+                            <!--navbar menu-->
+                            <ul class="uk-navbar-nav uk-margin-left uk-visible@m">
+                                <!--<li class="tm-nav"><a href="#">Все игры</a></li>-->
+                                <!--<li class="tm-nav"><a href="#">Мои игры</a></li>-->
+                                <li class="tm-nav"><a href="#">Смартконтакт</a></li>
+                                <li class="tm-nav"><a href="https://www.youtube.com">Видеоинструкция</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="uk-navbar-right">
+                            <div class="uk-navbar-item uk-visible@s">
+                                <div class="tm-button-group uk-button-group">
+                                    <button class="uk-active">
+                                        <i class="fa fa-moon-o"></i>
+                                    </button>
+                                    <button>
+                                        <i class="tm-la fa fa-sun-o"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--new-->
+                            <div class="uk-navbar-item uk-padding-remove-horizontal">
+                                <button type="button" class="tm-button-new uk-button uk-button-default">Создать новую
+                                    игру
+                                </button>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <div class="uk-child-width-expand@l uk-grid-small" uk-grid>
+                        <div uk-margin="margin: uk-margin-top">
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-central-head tm-block-padding uk-flex uk-flex-center">
+                                    <div>
+                                        <h4>Текущая игра</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <div class="uk-child-width-expand@m uk-grid-small uk-margin-bottom" uk-grid>
+                                        <div class="tm-side-limit uk-width-auto@m">
+                                            <div class="tm-padding-small-bottom uk-child-width-expand uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроки</h5>
+                                                    <div class="uk-margin-left">5/10</div>
+                                                </div>
+                                                <div class="uk-width-auto uk-text-center">
+                                                    <h5 class="uk-margin-auto-left">цифра</h5>
+                                                </div>
+                                            </div>
+
+                                            <ul class="tm-players-list">
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                            <div class="tm-players-count">
+                                                                2
+                                                            </div>
+                                                            <div class="tm-players-count">
+                                                                7
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="tm-padding-small-bottom uk-child-width-auto uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>ставка</h5>
+                                                    <div class="uk-margin-small-left">0.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5 class="uk-margin-auto-left">Макс выигрыш</h5>
+                                                    <div class="uk-margin-small-left">2.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-counter uk-background-primary uk-text-center uk-flex uk-flex-column uk-flex-between">
+                                                <img class="uk-margin-auto" src="/images/players-waiting.png" alt="">
+                                                <div class="tm-slidebar"></div>
+                                                <div class="tm-waiting-players uk-width-auto uk-margin-auto">Ожидаем
+                                                    игроков
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-action uk-background-primary">
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-bottom uk-margin-small-bottom" uk-grid>
+                                                    <div><h3>Ваша ставка:</h3></div>
+                                                    <div><h5>Выберите цифру (0-9)</h5></div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-center">
+                                                    <ul class="uk-pagination uk-width-auto">
+                                                        <li>
+                                                            <a href="">0</a>
+                                                            <span class="tm-other-bet">3</span>
+                                                        </li>
+                                                        <li class="uk-active">
+                                                            <a href="">1</a>
+                                                            <span class="tm-other-bet">1</span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">2</a>
+                                                            <span class="tm-other-bet">1</span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">3</a>
+                                                            <span class="tm-other-bet"></span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">4</a>
+                                                            <span class="tm-other-bet">4</span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">5</a>
+                                                            <span class="tm-other-bet"></span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">6</a>
+                                                            <span class="tm-other-bet"></span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">7</a>
+                                                            <span class="tm-other-bet"></span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">8</a>
+                                                            <span class="tm-other-bet">2</span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">9</a>
+                                                            <span class="tm-other-bet"></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tm-padding-small-vertical uk-child-width-auto@s uk-grid-small uk-flex-between uk-padding-remove-horizontal" uk-grid>
+                                                    <div>
+                                                        <h5>шанс на победу:</h5>
+                                                        <div>50/50</div>
+                                                    </div>
+                                                    <div>
+                                                        <h5>возможный выигрыш:</h5>
+                                                        <div>1,95 <span class="uk-text-uppercase">eth</span></div>
+                                                    </div>
+                                                </div>
+                                                <button class="tm-button-bet uk-button uk-button-primary uk-width-expand">
+                                                    Сделать ставку
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tm-block-footer">
+                                        <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                            <div class="uk-text-uppercase">
+                                                <a class="tm-link-alt" href="#">
+                                                    <i class="tm-la fa fa-reply"></i>
+                                                    Назад
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-middle" uk-grid>
+                                                    <h5>Поделитесь игрой с друзьями</h5>
+                                                    <ul class="tm-social-icons uk-navbar-nav uk-margin-small-left">
+                                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-central-head tm-block-padding uk-flex uk-flex-center">
+                                    <div>
+                                        <h4>Текущая игра</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <div class="uk-child-width-expand@m uk-grid-small uk-margin-bottom" uk-grid>
+                                        <div class="tm-side-limit uk-width-auto@m">
+                                            <div class="tm-padding-small-bottom uk-child-width-expand uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроки</h5>
+                                                    <div class="uk-margin-left">5/10</div>
+                                                </div>
+                                                <div class="uk-width-auto uk-text-center">
+                                                    <h5 class="uk-margin-auto-left">цифра</h5>
+                                                </div>
+                                            </div>
+
+                                            <ul class="tm-players-list">
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">Ваша ставка</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected tm-inprogress uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">Обработка ставки</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                <img src="/images/in-progress.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            Ожидаем игрока
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="tm-padding-small-bottom uk-child-width-auto uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>ставка</h5>
+                                                    <div class="uk-margin-small-left">0.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5 class="uk-margin-auto-left">Макс выигрыш</h5>
+                                                    <div class="uk-margin-small-left">2.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-hidden tm-game-counter tm-install-metamask uk-background-primary" >
+                                                <div class="uk-grid-small" data-uk-grid>
+                                                    <div class="uk-width-auto@s">
+                                                        <img src="/images/the-fox.png" alt="">
+                                                    </div>
+                                                    <div class="uk-width-expand@s uk-flex uk-flex-column uk-flex-around">
+                                                        <div>Пожалуйста переключите MetaMask на <b>mainnet</b> чтобы играть</div>
+                                                        <div class="uk-margin-small-top">
+                                                            <button class="uk-button uk-button-default">Установить</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-counter tm-install-metamask uk-background-primary" >
+                                                <div class="uk-grid-small" data-uk-grid>
+                                                    <div class="uk-width-auto@s">
+                                                        <img src="/images/the-fox.png" alt="">
+                                                    </div>
+                                                    <div class="uk-width-expand@s uk-flex uk-flex-column uk-flex-around">
+                                                        <div>Пожалуйста установите и войдите в MetaMask чтобы играть</div>
+                                                        <div class="uk-margin-small-top">
+                                                            <button class="uk-button uk-button-default">Установить</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-action uk-background-primary">
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-bottom uk-margin-small-bottom" uk-grid>
+                                                    <div><h3>Ваша ставка:</h3></div>
+                                                    <div><h5>Выберите цифру (0-9)</h5></div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-center">
+                                                    <ul class="uk-pagination uk-width-auto">
+                                                        <li><a href="">0</a></li>
+                                                        <li class="uk-active"><a href="">1</a></li>
+                                                        <li><a href="">2</a></li>
+                                                        <li><a href="">3</a></li>
+                                                        <li><a href="">4</a></li>
+                                                        <li><a href="">5</a></li>
+                                                        <li><a href="">6</a></li>
+                                                        <li><a href="">7</a></li>
+                                                        <li><a href="">8</a></li>
+                                                        <li><a href="">9</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tm-padding-small-vertical uk-child-width-auto@s uk-grid-small uk-flex-between uk-padding-remove-horizontal" uk-grid>
+                                                    <div>
+                                                        <h5>шанс на победу:</h5>
+                                                        <div>50/50</div>
+                                                    </div>
+                                                    <div>
+                                                        <h5>возможный выигрыш:</h5>
+                                                        <div>1,95 <span class="uk-text-uppercase">eth</span></div>
+                                                    </div>
+                                                </div>
+                                                <button class="tm-button-bet uk-button uk-button-primary uk-width-expand">
+                                                    Сделать ставку
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tm-block-footer">
+                                        <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                            <div class="uk-text-uppercase">
+                                                <a class="tm-link-alt" href="#">
+                                                    <i class="tm-la fa fa-reply"></i>
+                                                    Назад
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-middle" uk-grid>
+                                                    <h5>Поделитесь игрой с друзьями</h5>
+                                                    <ul class="tm-social-icons uk-navbar-nav uk-margin-small-left">
+                                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-central-head tm-block-padding uk-flex uk-flex-center">
+                                    <div>
+                                        <h4>Текущая игра</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <div class="uk-child-width-expand@m uk-grid-small uk-margin-bottom" uk-grid>
+                                        <div class="tm-side-limit uk-width-auto@m">
+                                            <div class="tm-padding-small-bottom uk-child-width-expand uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроки</h5>
+                                                    <div class="uk-margin-left">5/10</div>
+                                                </div>
+                                                <div class="uk-width-auto uk-text-center">
+                                                    <h5 class="uk-margin-auto-left">цифра</h5>
+                                                </div>
+                                            </div>
+
+                                            <ul class="tm-players-list">
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                5
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="tm-padding-small-bottom uk-child-width-auto uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>ставка</h5>
+                                                    <div class="uk-margin-small-left">0.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5 class="uk-margin-auto-left">Макс выигрыш</h5>
+                                                    <div class="uk-margin-small-left">2.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-counter uk-background-primary uk-text-center uk-flex uk-flex-column uk-flex-between">
+                                                <img class="uk-margin-auto" src="/images/computing-winner.png" alt="">
+                                                <div class="tm-slidebar"></div>
+                                                <div class="tm-waiting-players uk-width-auto uk-margin-auto">Определение победителя
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-action uk-background-primary">
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-bottom uk-margin-small-bottom" uk-grid>
+                                                    <div><h3>Ваша ставка:</h3></div>
+                                                    <div><h5>Выберите цифру (0-9)</h5></div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-center">
+                                                    <ul class="uk-pagination uk-width-auto">
+                                                        <li><a href="">0</a></li>
+                                                        <li class="uk-active"><a href="">1</a></li>
+                                                        <li><a href="">2</a></li>
+                                                        <li><a href="">3</a></li>
+                                                        <li><a href="">4</a></li>
+                                                        <li class="uk-active"><a href="">5</a></li>
+                                                        <li><a href="">6</a></li>
+                                                        <li><a href="">7</a></li>
+                                                        <li><a href="">8</a></li>
+                                                        <li><a href="">9</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tm-padding-small-vertical uk-child-width-auto@s uk-grid-small uk-flex-between uk-padding-remove-horizontal" uk-grid>
+                                                    <div>
+                                                        <h5>шанс на победу:</h5>
+                                                        <div>50/50</div>
+                                                    </div>
+                                                    <div>
+                                                        <h5>возможный выигрыш:</h5>
+                                                        <div>1,95 <span class="uk-text-uppercase">eth</span></div>
+                                                    </div>
+                                                </div>
+                                                <button class="tm-button-bet uk-button uk-button-primary uk-width-expand">
+                                                    Сделать ставку
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tm-block-footer">
+                                        <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                            <div class="uk-text-uppercase">
+                                                <a class="tm-link-alt" href="#">
+                                                    <i class="tm-la fa fa-reply"></i>
+                                                    Назад
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-middle" uk-grid>
+                                                    <h5>Поделитесь игрой с друзьями</h5>
+                                                    <ul class="tm-social-icons uk-navbar-nav uk-margin-small-left">
+                                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-central-head tm-block-padding uk-flex uk-flex-center">
+                                    <div>
+                                        <h4>Текущая игра</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <div class="uk-child-width-expand@m uk-grid-small uk-margin-bottom" uk-grid>
+                                        <div class="tm-side-limit uk-width-auto@m">
+                                            <div class="tm-padding-small-bottom uk-child-width-expand uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроки</h5>
+                                                    <div class="uk-margin-left">5/10</div>
+                                                </div>
+                                                <div class="uk-width-auto uk-text-center">
+                                                    <h5 class="uk-margin-auto-left">цифра</h5>
+                                                </div>
+                                            </div>
+
+                                            <ul class="tm-players-list">
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                5
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="tm-padding-small-bottom uk-child-width-auto uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>ставка</h5>
+                                                    <div class="uk-margin-small-left">0.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5 class="uk-margin-auto-left">Макс выигрыш</h5>
+                                                    <div class="uk-margin-small-left">2.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-counter uk-background-primary uk-text-center uk-flex uk-flex-column uk-flex-between">
+                                                <div class="uk-flex uk-flex-center uk-flex-middle uk-margin-bottom uk-margin-small-top">
+                                                    <div class="tm-win-number">5</div>
+                                                    <div class="tm-win-number">1</div>
+                                                    <div class="tm-win-number">4</div>
+                                                    <div class="tm-win-number">9</div>
+                                                </div>
+
+                                                <div class="tm-waiting-players uk-width-auto uk-margin-auto">Победители
+                                                </div>
+                                            </div>
+                                            <div class="tm-game-action uk-background-primary">
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-bottom uk-margin-small-bottom" uk-grid>
+                                                    <div><h3>Ваша ставка:</h3></div>
+                                                    <div><h5>Выберите цифру (0-9)</h5></div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-center">
+                                                    <ul class="uk-pagination uk-width-auto">
+                                                        <li><a href="">0</a></li>
+                                                        <li class="uk-active"><a href="">1</a></li>
+                                                        <li><a href="">2</a></li>
+                                                        <li><a href="">3</a></li>
+                                                        <li><a href="">4</a></li>
+                                                        <li class="uk-active"><a href="">5</a></li>
+                                                        <li><a href="">6</a></li>
+                                                        <li><a href="">7</a></li>
+                                                        <li><a href="">8</a></li>
+                                                        <li><a href="">9</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tm-padding-small-vertical uk-child-width-auto@s uk-grid-small uk-flex-between uk-padding-remove-horizontal" uk-grid>
+                                                    <div>
+                                                        <h5>шанс на победу:</h5>
+                                                        <div>50/50</div>
+                                                    </div>
+                                                    <div>
+                                                        <h5>возможный выигрыш:</h5>
+                                                        <div>1,95 <span class="uk-text-uppercase">eth</span></div>
+                                                    </div>
+                                                </div>
+                                                <button class="tm-button-bet uk-button uk-button-primary uk-width-expand">
+                                                    <i class="fa fa-plus-circle uk-margin-small-right" aria-hidden="true"></i> Ура! Вы выиграли <span class="uk-text-uppercase">0.95 eth</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tm-block-footer">
+                                        <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                            <div class="uk-text-uppercase">
+                                                <a class="tm-link-alt" href="#">
+                                                    <i class="tm-la fa fa-reply"></i>
+                                                    Назад
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-middle" uk-grid>
+                                                    <h5>Поделитесь игрой с друзьями</h5>
+                                                    <ul class="tm-social-icons uk-navbar-nav uk-margin-small-left">
+                                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-central-head tm-block-padding uk-flex uk-flex-center">
+                                    <div>
+                                        <h4>Текущая игра</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <div class="uk-child-width-expand@m uk-grid-small uk-margin-bottom" uk-grid>
+                                        <div class="tm-side-limit uk-width-auto@m">
+                                            <div class="tm-padding-small-bottom uk-child-width-expand uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроки</h5>
+                                                    <div class="uk-margin-left">5/10</div>
+                                                </div>
+                                                <div class="uk-width-auto uk-text-center">
+                                                    <h5 class="uk-margin-auto-left">цифра</h5>
+                                                </div>
+                                            </div>
+
+                                            <ul class="tm-players-list">
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                5
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="tm-padding-small-bottom uk-child-width-auto uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>ставка</h5>
+                                                    <div class="uk-margin-small-left">0.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5 class="uk-margin-auto-left">Макс выигрыш</h5>
+                                                    <div class="uk-margin-small-left">2.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-counter uk-background-primary uk-text-center uk-flex uk-flex-column uk-flex-between">
+                                                <div class="uk-flex uk-flex-center uk-flex-middle uk-margin-bottom uk-margin-small-top">
+                                                    <div class="tm-win-number">3</div>
+                                                    <div class="tm-win-number">8</div>
+                                                    <div class="tm-win-number">4</div>
+                                                    <div class="tm-win-number">9</div>
+                                                </div>
+
+                                                <div class="tm-waiting-players uk-width-auto uk-margin-auto">Победители
+                                                </div>
+                                            </div>
+                                            <div class="tm-game-action uk-background-primary">
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-bottom uk-margin-small-bottom" uk-grid>
+                                                    <div><h3>Ваша ставка:</h3></div>
+                                                    <div><h5>Выберите цифру (0-9)</h5></div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-center">
+                                                    <ul class="uk-pagination uk-width-auto">
+                                                        <li><a href="">0</a></li>
+                                                        <li class="uk-active"><a href="">1</a></li>
+                                                        <li><a href="">2</a></li>
+                                                        <li><a href="">3</a></li>
+                                                        <li><a href="">4</a></li>
+                                                        <li class="uk-active"><a href="">5</a></li>
+                                                        <li><a href="">6</a></li>
+                                                        <li><a href="">7</a></li>
+                                                        <li><a href="">8</a></li>
+                                                        <li><a href="">9</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tm-padding-small-vertical uk-child-width-auto@s uk-grid-small uk-flex-between uk-padding-remove-horizontal" uk-grid>
+                                                    <div>
+                                                        <h5>шанс на победу:</h5>
+                                                        <div>50/50</div>
+                                                    </div>
+                                                    <div>
+                                                        <h5>возможный выигрыш:</h5>
+                                                        <div>1,95 <span class="uk-text-uppercase">eth</span></div>
+                                                    </div>
+                                                </div>
+                                                <button class="tm-button-bet uk-button uk-button-secondary uk-width-expand">
+                                                    <i class="fa fa-minus-circle uk-margin-small-right" aria-hidden="true"></i> К сожалению, Вы не угадали
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tm-block-footer">
+                                        <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                            <div class="uk-text-uppercase">
+                                                <a class="tm-link-alt" href="#">
+                                                    <i class="tm-la fa fa-reply"></i>
+                                                    Назад
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-middle" uk-grid>
+                                                    <h5>Поделитесь игрой с друзьями</h5>
+                                                    <ul class="tm-social-icons uk-navbar-nav uk-margin-small-left">
+                                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-central-head tm-block-padding uk-flex uk-flex-center">
+                                    <div>
+                                        <h4>Текущая игра</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <div class="uk-child-width-expand@m uk-grid-small uk-margin-bottom" uk-grid>
+                                        <div class="tm-side-limit uk-width-auto@m">
+                                            <div class="tm-padding-small-bottom uk-child-width-expand uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроки</h5>
+                                                    <div class="uk-margin-left">5/10</div>
+                                                </div>
+                                                <div class="uk-width-auto uk-text-center">
+                                                    <h5 class="uk-margin-auto-left">цифра</h5>
+                                                </div>
+                                            </div>
+
+                                            <ul class="tm-players-list">
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected uk-active">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                5
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tm-connected">
+                                                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                                                        <div class="uk-width-4-5 uk-text-truncate">
+                                                            <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                        </div>
+                                                        <div class="uk-width-auto">
+                                                            <div class="tm-players-count">
+                                                                3
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="tm-padding-small-bottom uk-child-width-auto uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>ставка</h5>
+                                                    <div class="uk-margin-small-left">0.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5 class="uk-margin-auto-left">Макс выигрыш</h5>
+                                                    <div class="uk-margin-small-left">2.0569 <span class="uk-text-uppercase">eth</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tm-game-counter uk-background-primary uk-text-center uk-flex uk-flex-column uk-flex-between">
+                                                <div class="uk-flex uk-flex-center uk-flex-middle uk-margin-bottom uk-margin-small-top">
+                                                    <div class="tm-win-number">3</div>
+                                                    <div class="tm-win-number">8</div>
+                                                    <div class="tm-win-number">4</div>
+                                                    <div class="tm-win-number">9</div>
+                                                </div>
+
+                                                <div class="tm-waiting-players uk-width-auto uk-margin-auto">Победители
+                                                </div>
+                                            </div>
+                                            <div class="tm-game-action uk-background-primary">
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-bottom uk-margin-small-bottom" uk-grid>
+                                                    <div><h3>Ваша ставка:</h3></div>
+                                                    <div><h5>Выберите цифру (0-9)</h5></div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-center">
+                                                    <ul class="uk-pagination uk-width-auto">
+                                                        <li><a href="">0</a></li>
+                                                        <li class="uk-active"><a href="">1</a></li>
+                                                        <li><a href="">2</a></li>
+                                                        <li><a href="">3</a></li>
+                                                        <li><a href="">4</a></li>
+                                                        <li class="uk-active"><a href="">5</a></li>
+                                                        <li><a href="">6</a></li>
+                                                        <li><a href="">7</a></li>
+                                                        <li><a href="">8</a></li>
+                                                        <li><a href="">9</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tm-padding-small-vertical uk-child-width-auto@s uk-grid-small uk-flex-between uk-padding-remove-horizontal" uk-grid>
+                                                    <div>
+                                                        <h5>шанс на победу:</h5>
+                                                        <div>50/50</div>
+                                                    </div>
+                                                    <div>
+                                                        <h5>возможный выигрыш:</h5>
+                                                        <div>1,95 <span class="uk-text-uppercase">eth</span></div>
+                                                    </div>
+                                                </div>
+                                                <button class="tm-button-bet uk-button uk-button-default uk-width-expand">
+                                                    <i class="fa fa-check-circle uk-margin-small-right" aria-hidden="true"></i> Игра закончена
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tm-block-footer">
+                                        <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                            <div class="uk-text-uppercase">
+                                                <a class="tm-link-alt" href="#">
+                                                    <i class="tm-la fa fa-reply"></i>
+                                                    Назад
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <div class="uk-child-width-auto@s uk-grid-small uk-flex-middle" uk-grid>
+                                                    <h5>Поделитесь игрой с друзьями</h5>
+                                                    <ul class="tm-social-icons uk-navbar-nav uk-margin-small-left">
+                                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" tm-games-available uk-background-secondary">
+                                <div class="tm-background-tertiary tm-block-padding">
+                                    <div class="uk-child-width-auto@s uk-grid-small uk-flex-between uk-flex-middle" uk-grid>
+                                        <div>
+                                            <h4>Доступные игры</h4>
+                                        </div>
+                                        <div>
+                                            <div class="uk-flex uk-flex-middle">
+                                                <div class="tm-select">
+
+                                                    <div class="select-wrapper">
+                                                        <input name="gamers" value="" hidden />
+                                                        <div class="select-trigger">
+                                                            Игроки
+                                                        </div>
+                                                        <div class="select-dropdown" data-uk-dropdown="mode: click">
+                                                            <div class="select-option option-disabled option-selected" data-value="">
+                                                                Игроки
+                                                            </div>
+                                                            <div class="select-option" data-value="1">
+                                                                1
+                                                            </div>
+                                                            <div class="select-option" data-value="2">
+                                                                2
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tm-select">
+
+                                                    <div class="select-wrapper">
+                                                        <input name="bets" value="" hidden />
+                                                        <div class="select-trigger">
+                                                            Ставки
+                                                        </div>
+                                                        <div class="select-dropdown" data-uk-dropdown="mode: click">
+                                                            <div class="select-option option-disabled option-selected" data-value="">
+                                                                Ставки
+                                                            </div>
+                                                            <div class="select-option" data-value="1">
+                                                                1
+                                                            </div>
+                                                            <div class="select-option" data-value="2">
+                                                                2
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding">
+                                    <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-games-available uk-background-secondary">
+                                <div class="tm-background-tertiary tm-block-padding uk-flex uk-flex-center">
+                                    <h4>Все игры</h4>
+                                </div>
+                                <div class="tm-block-padding">
+                                    <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+                                        <div>
+                                            <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Доступно игр:</h5>
+                                                    <div class="uk-margin-small-left">150</div>
+                                                </div>
+                                                <div class="uk-flex uk-flex-middle">
+                                                    <h5>Игроков:</h5>
+                                                    <div class="uk-margin-small-left">654</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="uk-child-width-auto@s uk-grid-small uk-flex-right@m uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <h5>Общая сумма операций:</h5>
+                                                </div>
+
+                                                <div>1050.0569 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="uk-hidden tm-find-game">
+                                        <div class="uk-child-width-1-4@s uk-grid-small uk-flex-bottom uk-flex-between" uk-grid>
+                                            <div class="uk-width-1-4@m">
+                                                <h2>Подбор игр</h2>
+                                            </div>
+                                            <div>
+                                                <h6>Игроки</h6>
+                                                <div class="uk-flex">
+                                                    <input class="uk-margin-small-right" type="text" placeholder="от">
+                                                    <input type="text" placeholder="до">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6>Ставка eth</h6>
+                                                <div class="uk-flex">
+                                                    <input class="uk-margin-small-right" type="text " placeholder="от">
+                                                    <input type="text" placeholder="до">
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-auto uk-flex uk-flex-right">
+                                                <button class="tm-button-new-game uk-button">Найти</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-hidden uk-margin-bottom">
+                                        <i class="tm-la fa fa-info"></i>
+                                        Нету подходящей игры? <a class="tm-create uk-margin-small-left" href="#">Создайте новую</a>
+                                    </div>
+
+                                    <div class="tm-new-game">
+                                        <h2>Новая игра</h2>
+                                        <div class="uk-grid-small uk-grid-match" uk-grid>
+                                            <div class="uk-width-1-4@m">
+                                                <div class="tm-new-game-left uk-grid-small" uk-grid uk-margin>
+                                                    <div class="uk-width-1-2@s uk-width-1-1@m">
+                                                        <h4>Игроки</h4>
+                                                        <div>
+                                                            <input type="text" placeholder="10">
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-1-2@s uk-width-1-1@m">
+                                                        <h4>Ставка eth</h4>
+                                                        <div>
+                                                            <input type="text" placeholder="0,0569">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="uk-width-expand@m">
+                                                <div class="tm-new-game-right">
+                                                    <div class="uk-child-width-1-2@s uk-grid-small uk-margin-small-bottom" uk-grid>
+                                                        <div><h4>Ваша ставка:</h4></div>
+                                                        <div><h5>Выберите цифру (0-9)</h5></div>
+                                                    </div>
+                                                    <div class="uk-flex uk-flex-center">
+                                                        <ul class="uk-pagination uk-width-auto">
+                                                            <li><a href="">0</a></li>
+                                                            <li class="uk-active"><a href="">1</a></li>
+                                                            <li><a href="">2</a></li>
+                                                            <li><a href="">3</a></li>
+                                                            <li><a href="">4</a></li>
+                                                            <li class="uk-active"><a href="">5</a></li>
+                                                            <li><a href="">6</a></li>
+                                                            <li><a href="">7</a></li>
+                                                            <li><a href="">8</a></li>
+                                                            <li><a href="">9</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <button class="tm-button-new-game uk-button uk-width-expand uk-margin-small-top">
+                                                        Создать игру
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-margin-bottom">
+                                        <i class="tm-la fa fa-info"></i>
+                                        Игры с такими параметрами уже созданы, вы можете присоединиться к ним!
+                                    </div>
+
+                                    <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tm-game-available uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+                                                <div class="uk-width-1-2">
+                                                    0.0569 <span class="uk-text-uppercase">eth</span>
+                                                </div>
+                                                <div class="tm-icon">
+                                                    5/10
+                                                </div>
+                                                <button class="uk-button uk-button-primary uk-margin-left">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tm-left-panel uk-flex-first@l uk-width-1-2@s uk-width-medium@l" uk-margin="margin: uk-margin-top">
+                            <div class="tm-statistic uk-background-secondary">
+                                <div class="tm-background-tertiary tm-block-padding">
+                                    <h4>Моя Статистика Игр</h4>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <h5>
+                                        Всего игр сыграно
+                                    </h5>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <div class="uk-margin-small-right">
+                                            <i class="tm-la fa fa-pie-chart"></i>
+                                        </div>
+                                        <div class="uk-margin-small-right">
+                                            1052
+                                        </div>
+                                        <div class="tm-text-alt">
+                                            (<span class="tm-win">1000</span>/<span class="tm-lose">52</span>)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <h5>Итоговый баланс</h5>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <div class="uk-margin-small-right">
+                                            <i class="tm-la fa fa-money"></i>
+                                        </div>
+                                        <div>+100,4515<span class="uk-text-uppercase"><sup>eth</sup></span></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="uk-background-secondary">
+                                <div class="tm-background-tertiary tm-block-padding">
+                                    <h5>Как играть?</h5>
+                                </div>
+                                <div class="tm-block-padding-large">
+                                    <ol class="tm-ordered-list">
+                                        <li>Создайте или выберите в списке игру</li>
+                                        <li>Выбираете цифру <span>от 0 до 9</span></li>
+                                        <li>Сделайте ставку</li>
+                                        <li>Ожидайте окончания игры</li>
+                                        <li>Забираете выигрыш</li>
+                                    </ol>
+                                    <div class="tm-block-footer">
+                                        <a href="#" class="uk-flex uk-flex-middle">
+                                            <div class="uk-margin-small-right">
+                                                <i class="tm-la fa fa-comments"></i>
+                                            </div>
+                                            <div>
+                                                <div class="uk-text-large">Нужна помощь?</div>
+                                                <div class="uk-h5">
+                                                    Telegram поддержка
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tm-background-tertiary">
+                                <div class="tm-block-padding">
+                                    <h4>Сейчас играют</h4>
+                                </div>
+                                <div class="">
+                                    <ul class="tm-members-list ">
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="uk-width-3-5 uk-text-truncate">
+                                                    <a href="/">0x6C177545645ygdfgb6jfgjn6t65j235235b8</a>
+                                                </div>
+                                                <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tm-right-panel uk-width-1-2@s uk-width-small@l" uk-margin="margin: uk-margin-top">
+
+                            <div class="uk-background-secondary">
+                                <div class="tm-games-my tm-background-tertiary tm-block-padding ">
+                                    <h4>Мои игры</h4>
+                                </div>
+
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                                <div class="tm-game-my uk-flex uk-flex-between">
+                                    <div>0.0569 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 5/10</div>
+                                </div>
+                            </div>
+
+                            <div class="uk-background-secondary">
+                                <div class="tm-games-my tm-background-tertiary tm-block-padding">
+                                    <h4>Сыгранные</h4>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-lose">- 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                                <div class="tm-game-played uk-flex uk-flex-between">
+                                    <div class="tm-win">+ 0.069 <span class="uk-text-uppercase">eth</span></div>
+                                    <div class="tm-icon"> 10</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+        <footer class="tm-background-tertiary">
+            <div class="uk-container">
+                <nav class="uk-flex uk-flex-middle uk-flex-between@s uk-flex-center uk-flex-wrap">
+                    <div class="uk-width-auto uk-margin-small">
+                        <!--logo-->
+                        <a class="uk-navbar-item uk-logo" href="/">Coin<span>Lottery</span></a>
+                    </div>
+
+                    <div class="uk-flex uk-flex-wrap uk-flex-middle uk-flex-center uk-width-expand@s uk-margin-small" uk-margin>
+                        <div class="uk-width-auto">
+                            <h5>Реферальная ссылка</h5>
+                        </div>
+                        <div class="uk-margin-small-left uk-margin-small-right uk-width-auto">
+                            <input class="tm-input-footer" type="text" value="https://www.google.com/search?safe1321321321" readonly>
+                        </div>
+                        <div class="uk-width-auto">
+                            <button class="tm-button-footer uk-button uk-button-default">Копировать</button>
+                        </div>
+                    </div>
+
+                    <div class="uk-width-auto uk-margin-small">
+
+                        <!--navbar menu-->
+                        <ul class="uk-navbar-nav tm-social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Off-canvas -->
+    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-card uk-flex uk-flex-column uk-flex-center">
+
+                <ul class="uk-nav">
+                    <!--<li class="tm-nav"><a href="#">Все игры</a></li>-->
+                    <!--<li class="tm-nav"><a href="#">Мои игры</a></li>-->
+                    <li class="tm-nav"><a href="#">Смартконтакт</a></li>
+                    <li class="tm-nav"><a href="https://www.youtube.com">Видеоинструкция</a></li>
+                </ul>
+
+                <div class="uk-hidden@s uk-nav uk-margin-small">
+                    <div class="tm-dropdown-button"><img src="/images/flag-ru.png" alt=""></div>
+                    <div class="tm-dropdown" uk-dropdown="mode: click">
+                        <a href="#"><img src="/images/flag-ru.png" alt=""></a>
+                        <a href="#"><img src="/images/flag-ru.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="uk-hidden@s uk-nav">
+                    <div class="tm-button-group uk-button-group">
+                        <button class="uk-active">
+                            <i class="fa fa-moon-o"></i>
+                        </button>
+                        <button>
+                            <i class="tm-la fa fa-sun-o"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="scripts/bundle.a63c9a6b9dbb6dc98aea.js"></script></body>
+</html>
