@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-bad.dd237b0a.png"
   },
   {
-    "revision": "8b57fc3f266ba0d3f55a",
+    "revision": "22eb5ed306e773c0f339",
     "url": "/static/css/main.a7b3858a.chunk.css"
   },
   {
-    "revision": "9724af2fd30572f7485af3213d62f144",
-    "url": "/static/media/btn-power-circles.9724af2f.png"
+    "revision": "c89926447ced4d51c4c4e7a611d8fc05",
+    "url": "/static/media/invest-card.c8992644.png"
   },
   {
     "revision": "9e7eeba92deffb4cacaa",
@@ -56,63 +56,63 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-investments-normal.84bff8a4.png"
   },
   {
-    "revision": "8b57fc3f266ba0d3f55a",
-    "url": "/static/js/main.8b57fc3f.chunk.js"
+    "revision": "22eb5ed306e773c0f339",
+    "url": "/static/js/main.22eb5ed3.chunk.js"
   },
   {
     "revision": "8ac1c5113a5388711439dc949a2a258e",
     "url": "/static/media/btn-fingerprint.8ac1c511.png"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
-  },
-  {
-    "revision": "af7ae505a9eed503f8b8e6982036873e",
-    "url": "/static/media/fontawesome-webfont.af7ae505.woff2"
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/static/media/fontawesome-webfont.b06871f2.ttf"
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
     "url": "/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "0d331d1111bc6850d482d2464c2093c5",
-    "url": "/static/media/bg_light.0d331d11.png"
+    "revision": "af7ae505a9eed503f8b8e6982036873e",
+    "url": "/static/media/fontawesome-webfont.af7ae505.woff2"
   },
   {
-    "revision": "1e4b36a7929a4c33e918d6e14164687c",
-    "url": "/static/media/diagnostics-card.1e4b36a7.png"
+    "revision": "0d331d1111bc6850d482d2464c2093c5",
+    "url": "/static/media/bg_light.0d331d11.png"
   },
   {
     "revision": "01c05d3687b8230fd424141b4762f026",
     "url": "/static/media/budget-card.01c05d36.png"
   },
   {
+    "revision": "1e4b36a7929a4c33e918d6e14164687c",
+    "url": "/static/media/diagnostics-card.1e4b36a7.png"
+  },
+  {
     "revision": "cbfedbc11cc0b9ddd791d15f836a8338",
     "url": "/static/media/reserve-card.cbfedbc1.png"
+  },
+  {
+    "revision": "9724af2fd30572f7485af3213d62f144",
+    "url": "/static/media/btn-power-circles.9724af2f.png"
   },
   {
     "revision": "8294265d345f8053b19477f63141720d",
     "url": "/static/media/insure-card.8294265d.png"
   },
   {
-    "revision": "c89926447ced4d51c4c4e7a611d8fc05",
-    "url": "/static/media/invest-card.c8992644.png"
-  },
-  {
     "revision": "9e7eeba92deffb4cacaa",
     "url": "/static/css/1.ccd12ad7.chunk.css"
   },
   {
-    "revision": "370a8ba3499f29f53cd0312dd34c32d8",
+    "revision": "38da0622ad643c928600947b2134fdab",
     "url": "/index.html"
   }
 ];

@@ -1,13 +1,13 @@
 {
   "main.css": "/static/css/main.a7b3858a.chunk.css",
-  "main.js": "/static/js/main.8b57fc3f.chunk.js",
-  "main.js.map": "/static/js/main.8b57fc3f.chunk.js.map",
+  "main.js": "/static/js/main.22eb5ed3.chunk.js",
+  "main.js.map": "/static/js/main.22eb5ed3.chunk.js.map",
   "static/css/1.ccd12ad7.chunk.css": "/static/css/1.ccd12ad7.chunk.css",
   "static/js/1.9e7eeba9.chunk.js": "/static/js/1.9e7eeba9.chunk.js",
   "static/js/1.9e7eeba9.chunk.js.map": "/static/js/1.9e7eeba9.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/styles.scss": "/static/media/btn-power-circles.9724af2f.png",
+  "static/media/styles.scss": "/static/media/invest-card.c8992644.png",
   "static/media/icon-arrow.svg": "/static/media/icon-arrow.a6df9900.svg",
   "static/media/illustration-budget-normal.png": "/static/media/illustration-budget-normal.a76eff60.png",
   "static/media/illustration-budget-bad.png": "/static/media/illustration-budget-bad.c8de6f9f.png",
@@ -22,6 +22,6 @@
   "static/css/main.a7b3858a.chunk.css.map": "/static/css/main.a7b3858a.chunk.css.map",
   "static/css/1.ccd12ad7.chunk.css.map": "/static/css/1.ccd12ad7.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.20b8982ede3fb6c10abf1126240773f6.js": "/precache-manifest.20b8982ede3fb6c10abf1126240773f6.js",
+  "precache-manifest.2d222c66d0d7da087822450d8c13e9bc.js": "/precache-manifest.2d222c66d0d7da087822450d8c13e9bc.js",
   "service-worker.js": "/service-worker.js"
 }
